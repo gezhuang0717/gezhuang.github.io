@@ -1,0 +1,5 @@
+-r requirements.txt
+pytest==9.1.1
+python-docx==1.2.0
+pypdf==6.19.0
+pymupdf==1.28.2

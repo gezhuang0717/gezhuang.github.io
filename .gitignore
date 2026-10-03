@@ -26,3 +26,4 @@ builds/
 
 # Manuals stay on the local PSSD only (privacy)
 docs/
+public-gate-report.json

@@ -1,0 +1,4 @@
+{{ range hugo.Data.facilities.facilities.facilities }}
+{{ $page := dict "path" .id "title" (or (index .name "en") .name.en) "params" (dict "facility_id" .id "facility_record" . "showDate" false) "content" (dict "mediaType" "text/markdown" "value" "{{< facility-detail >}}") }}
+{{ $.AddPage $page }}
+{{ end }}

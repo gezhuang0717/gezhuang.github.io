@@ -1,0 +1,17 @@
+{
+  "source_counts": {
+    "iaea-cyclotron": 1285,
+    "iaea-rrdb": 867,
+    "official": 5,
+    "nupecc-ssf2010": 25,
+    "nupecc-ssf2017": 17
+  },
+  "source_records": 2199,
+  "assigned_records": 2199,
+  "unexplained_source_loss": 0,
+  "facilities_programs": 2159,
+  "machines": 2152,
+  "confirmed_campuses": 5,
+  "unresolved_campus_associations": 2154,
+  "note": "Facility/program counts include historical reactors and unresolved source-reported facilities. Campus IDs marked provisional are not confirmed campuses."
+}

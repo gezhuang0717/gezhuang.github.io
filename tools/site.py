@@ -601,7 +601,8 @@ def gen_congo_like(cfg: dict, theme: str):
               "enableSearch = false",
               f'zgRainbow = {toml_value(cfg.get("rainbow", True))}',
               "[header]", '  layout = "hybrid"' if theme == "congo" else '  layout = "fixed-fill-blur"',
-              "[footer]", "  showCopyright = true", "  showThemeAttribution = true", "  showAppearanceSwitcher = true",
+              "[footer]", "  showCopyright = true", "  showThemeAttribution = true", "  showAppearanceSwitcher = false",  # day/night lives in the top bar (layouts/_partials/zg/top-controls.html)
+             
               "[homepage]", f'  layout = {toml_value(tcfg.get("homepage_layout", "profile"))}',
               f'  showRecent = {toml_value(theme == "blowfish")}']
     if theme == "blowfish":

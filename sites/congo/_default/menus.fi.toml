@@ -17,18 +17,22 @@
   pageRef = "daily"
   weight = 40
 [[main]]
+  name = "Labra"
+  pageRef = "lab"
+  weight = 50
+[[main]]
   name = "Projektit"
   pageRef = "projects"
-  weight = 50
+  weight = 60
 [[main]]
   name = "Ryhmä"
   pageRef = "group"
-  weight = 60
+  weight = 70
 [[main]]
   name = "Blogi"
   pageRef = "posts"
-  weight = 70
+  weight = 80
 [[main]]
   name = "CV"
   pageRef = "cv"
-  weight = 80
+  weight = 90

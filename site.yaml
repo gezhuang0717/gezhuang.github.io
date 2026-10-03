@@ -66,6 +66,7 @@ menu:
   - {page: publications, label: {en: Publications, zh: 论文,   fi: Julkaisut,  de: Publikationen, ja: 論文}}
   - {page: talks,        label: {en: Talks,        zh: 报告,   fi: Esitelmät,  de: Vorträge,      ja: 講演}}
   - {page: daily,        label: {en: Daily,        zh: 每日,   fi: Päivittäin, de: Täglich,       ja: デイリー}}
+  - {page: lab,          label: {en: Lab,          zh: 实验室, fi: Labra,      de: Labor,         ja: ラボ}}
   - {page: projects,     label: {en: Projects,     zh: 项目,   fi: Projektit,  de: Projekte,      ja: プロジェクト}}
   - {page: group,        label: {en: Group,        zh: 团队,   fi: Ryhmä,      de: Gruppe,        ja: グループ}}
   - {page: posts,        label: {en: Blog,         zh: 博客,   fi: Blogi,      de: Blog,          ja: ブログ}}

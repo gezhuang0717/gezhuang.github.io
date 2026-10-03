@@ -17,18 +17,22 @@
   pageRef = "daily"
   weight = 40
 [[main]]
+  name = "Lab"
+  pageRef = "lab"
+  weight = 50
+[[main]]
   name = "Projects"
   pageRef = "projects"
-  weight = 50
+  weight = 60
 [[main]]
   name = "Group"
   pageRef = "group"
-  weight = 60
+  weight = 70
 [[main]]
   name = "Blog"
   pageRef = "posts"
-  weight = 70
+  weight = 80
 [[main]]
   name = "CV"
   pageRef = "cv"
-  weight = 80
+  weight = 90

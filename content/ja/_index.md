@@ -13,4 +13,6 @@ description: "ユヴァスキュラ大学 フィンランド・アカデミー�
 
 **連絡先：** zhuang.z.ge@jyu.fi
 
+{{< nuclide-of-the-day >}}
+
 {{< gallery home="true" >}}

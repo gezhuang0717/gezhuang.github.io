@@ -10,7 +10,7 @@ zgRainbow = true
 [footer]
   showCopyright = true
   showThemeAttribution = true
-  showAppearanceSwitcher = true
+  showAppearanceSwitcher = false
 [homepage]
   layout = "profile"
   showRecent = true

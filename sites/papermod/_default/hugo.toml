@@ -74,21 +74,25 @@ enableRobotsTXT = true
     pageRef = "daily"
     weight = 40
   [[languages.en.menu.main]]
+    name = "Lab"
+    pageRef = "lab"
+    weight = 50
+  [[languages.en.menu.main]]
     name = "Projects"
     pageRef = "projects"
-    weight = 50
+    weight = 60
   [[languages.en.menu.main]]
     name = "Group"
     pageRef = "group"
-    weight = 60
+    weight = 70
   [[languages.en.menu.main]]
     name = "Blog"
     pageRef = "posts"
-    weight = 70
+    weight = 80
   [[languages.en.menu.main]]
     name = "CV"
     pageRef = "cv"
-    weight = 80
+    weight = 90
 [languages.zh]
   label = "中文"
   locale = "zh-CN"
@@ -132,21 +136,25 @@ enableRobotsTXT = true
     pageRef = "daily"
     weight = 40
   [[languages.zh.menu.main]]
+    name = "实验室"
+    pageRef = "lab"
+    weight = 50
+  [[languages.zh.menu.main]]
     name = "项目"
     pageRef = "projects"
-    weight = 50
+    weight = 60
   [[languages.zh.menu.main]]
     name = "团队"
     pageRef = "group"
-    weight = 60
+    weight = 70
   [[languages.zh.menu.main]]
     name = "博客"
     pageRef = "posts"
-    weight = 70
+    weight = 80
   [[languages.zh.menu.main]]
     name = "简历"
     pageRef = "cv"
-    weight = 80
+    weight = 90
 [languages.fi]
   label = "Suomi"
   locale = "fi-FI"
@@ -190,21 +198,25 @@ enableRobotsTXT = true
     pageRef = "daily"
     weight = 40
   [[languages.fi.menu.main]]
+    name = "Labra"
+    pageRef = "lab"
+    weight = 50
+  [[languages.fi.menu.main]]
     name = "Projektit"
     pageRef = "projects"
-    weight = 50
+    weight = 60
   [[languages.fi.menu.main]]
     name = "Ryhmä"
     pageRef = "group"
-    weight = 60
+    weight = 70
   [[languages.fi.menu.main]]
     name = "Blogi"
     pageRef = "posts"
-    weight = 70
+    weight = 80
   [[languages.fi.menu.main]]
     name = "CV"
     pageRef = "cv"
-    weight = 80
+    weight = 90
 [languages.de]
   label = "Deutsch"
   locale = "de-DE"
@@ -248,21 +260,25 @@ enableRobotsTXT = true
     pageRef = "daily"
     weight = 40
   [[languages.de.menu.main]]
+    name = "Labor"
+    pageRef = "lab"
+    weight = 50
+  [[languages.de.menu.main]]
     name = "Projekte"
     pageRef = "projects"
-    weight = 50
+    weight = 60
   [[languages.de.menu.main]]
     name = "Gruppe"
     pageRef = "group"
-    weight = 60
+    weight = 70
   [[languages.de.menu.main]]
     name = "Blog"
     pageRef = "posts"
-    weight = 70
+    weight = 80
   [[languages.de.menu.main]]
     name = "Lebenslauf"
     pageRef = "cv"
-    weight = 80
+    weight = 90
 [languages.ja]
   label = "日本語"
   locale = "ja-JP"
@@ -306,18 +322,22 @@ enableRobotsTXT = true
     pageRef = "daily"
     weight = 40
   [[languages.ja.menu.main]]
+    name = "ラボ"
+    pageRef = "lab"
+    weight = 50
+  [[languages.ja.menu.main]]
     name = "プロジェクト"
     pageRef = "projects"
-    weight = 50
+    weight = 60
   [[languages.ja.menu.main]]
     name = "グループ"
     pageRef = "group"
-    weight = 60
+    weight = 70
   [[languages.ja.menu.main]]
     name = "ブログ"
     pageRef = "posts"
-    weight = 70
+    weight = 80
   [[languages.ja.menu.main]]
     name = "経歴"
     pageRef = "cv"
-    weight = 80
+    weight = 90

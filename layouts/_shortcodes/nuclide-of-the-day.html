@@ -1,0 +1,49 @@
+{{- /*
+  Homepage card: "Nuclide of the day" (data/nuclides.yaml) + local time in Jyväskylä.
+  Usage in content/<lang>/_index.md:   {{< nuclide-of-the-day >}}
+  One nuclide per calendar day (same for every visitor); "Another one" cycles.
+*/ -}}
+{{- $lang := .Page.Language.Lang -}}
+{{- $base := index (split $lang "-") 0 -}}
+{{- $items := slice -}}
+{{- range hugo.Data.nuclides.nuclides -}}
+  {{- $fact := or (index .fact $lang) (index .fact $base) .fact.en -}}
+  {{- $items = $items | append (dict "s" .sym "f" $fact) -}}
+{{- end -}}
+<div class="zg-cards">
+  <section class="zg-card zg-nod" aria-live="polite">
+    <div class="zg-card-label">⚛ {{ i18n "zg_nod" | default "Nuclide of the day" }}</div>
+    <div class="zg-nod-sym" id="zg-nod-sym"></div>
+    <p class="zg-nod-fact" id="zg-nod-fact"></p>
+    <button type="button" class="zg-btn" id="zg-nod-next">{{ i18n "zg_another" | default "Another one" }} ↻</button>
+  </section>
+  <section class="zg-card zg-clock">
+    <div class="zg-card-label">🕑 {{ i18n "zg_localtime" | default "Local time in Jyväskylä" }}</div>
+    <div class="zg-clock-time" id="zg-clock-time">--:--</div>
+    <p class="zg-clock-date" id="zg-clock-date"></p>
+    <p class="zg-clock-note" id="zg-clock-note"></p>
+  </section>
+</div>
+<script>
+(function () {
+  var items = {{ $items | jsonify | safeJS }}, lang = {{ .Page.Language.Locale | default $lang }};
+  var day = Math.floor((Date.now() - new Date().getTimezoneOffset() * 6e4) / 864e5), i = day % items.length;
+  var sym = document.getElementById("zg-nod-sym"), fact = document.getElementById("zg-nod-fact");
+  function show() { sym.textContent = items[i].s; fact.textContent = items[i].f; }
+  document.getElementById("zg-nod-next").addEventListener("click", function () { i = (i + 1) % items.length; show(); });
+  show();
+  var tz = "Europe/Helsinki", t = document.getElementById("zg-clock-time"), d = document.getElementById("zg-clock-date"), n = document.getElementById("zg-clock-note");
+  var notes = {{ dict "work" (i18n "zg_clock_work" | default "Probably at the lab or in the office.") "evening" (i18n "zg_clock_evening" | default "Evening in Finland — e-mail may wait until tomorrow.") "night" (i18n "zg_clock_night" | default "Night in Finland — ions keep orbiting, people sleep.") "weekend" (i18n "zg_clock_weekend" | default "Weekend in Finland — maybe at the lake or in the sauna.") | jsonify | safeJS }};
+  function tick() {
+    var now = new Date();
+    try {
+      t.textContent = now.toLocaleTimeString(lang, { timeZone: tz, hour: "2-digit", minute: "2-digit" });
+      d.textContent = now.toLocaleDateString(lang, { timeZone: tz, weekday: "long", day: "numeric", month: "long" });
+      var parts = new Intl.DateTimeFormat("en-GB", { timeZone: tz, hour: "numeric", hour12: false, weekday: "short" }).formatToParts(now);
+      var h = +parts.find(function (p) { return p.type === "hour"; }).value, wd = parts.find(function (p) { return p.type === "weekday"; }).value;
+      n.textContent = (wd === "Sat" || wd === "Sun") ? notes.weekend : (h >= 8 && h < 17) ? notes.work : (h >= 17 && h < 23) ? notes.evening : notes.night;
+    } catch (e) { t.textContent = now.toUTCString().slice(17, 22) + " UTC"; }
+  }
+  tick(); setInterval(tick, 30000);
+})();
+</script>

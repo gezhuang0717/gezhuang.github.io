@@ -13,4 +13,6 @@ Zu meiner Gruppe gehören zwei Postdocs und ein Doktorand; ich unterrichte den D
 
 **Kontakt:** zhuang.z.ge@jyu.fi
 
+{{< nuclide-of-the-day >}}
+
 {{< gallery home="true" >}}

@@ -1,0 +1,189 @@
+{{- /*
+  "Lab" page toys — {{< lab >}} in content/<lang>/lab.md
+    1. Penning-trap ion motion (animated, with a quadrupole "conversion" button)
+    2. Cyclotron-frequency calculator  ν_c = qB / (2π m_ion)
+    3. "Can I resolve them?" — required resolving power for two masses
+    4. Mass unit converter (u, keV/c², MeV/c², kg) + mass excess
+  Labels come from i18n/<lang>.yaml (keys zg_lab_*); English is the fallback.
+  Styles: .zg-lab in assets/css/extended/zg-rainbow.css
+*/ -}}
+<div class="zg-lab">
+
+<section class="zg-card zg-lab-sim">
+  <h2>{{ i18n "zg_lab_sim" | default "Ion motion in a Penning trap" }}</h2>
+  <p class="zg-muted">{{ i18n "zg_lab_sim_note" | default "A charged particle in a strong magnetic field plus a weak electric quadrupole field moves on two circles at once — the fast modified-cyclotron motion (ν₊) riding on the slow magnetron motion (ν₋) — while oscillating along the field axis (ν_z). The sum ν₊ + ν₋ = ν_c gives the mass." }}</p>
+  <div class="zg-sim-wrap">
+    <canvas id="zg-sim-top" width="420" height="420" aria-label="top view of the ion orbit"></canvas>
+    <canvas id="zg-sim-side" width="140" height="420" aria-label="side view, axial motion"></canvas>
+  </div>
+  <div class="zg-sim-controls">
+    <label>ν₊ / ν₋ <input type="range" id="zg-ratio" min="4" max="60" value="18"><output id="zg-ratio-o">18</output></label>
+    <label>r₊ <input type="range" id="zg-rp" min="0" max="100" value="25"><output id="zg-rp-o">25</output></label>
+    <label>r₋ <input type="range" id="zg-rm" min="0" max="100" value="70"><output id="zg-rm-o">70</output></label>
+    <label>{{ i18n "zg_lab_speed" | default "Speed" }} <input type="range" id="zg-speed" min="1" max="20" value="6"><output id="zg-speed-o">6</output></label>
+  </div>
+  <div class="zg-row">
+    <button type="button" class="zg-btn" id="zg-convert">{{ i18n "zg_lab_convert" | default "Quadrupole excitation at ν_c (π pulse)" }}</button>
+    <button type="button" class="zg-btn zg-btn-ghost" id="zg-clear">{{ i18n "zg_lab_clear" | default "Clear trail" }}</button>
+  </div>
+  <p class="zg-muted zg-small">{{ i18n "zg_lab_convert_note" | default "The π pulse converts magnetron motion into cyclotron motion — the trick behind TOF-ICR, where the converted ions gain radial energy and arrive earlier at the detector." }}</p>
+</section>
+
+<section class="zg-card">
+  <h2>{{ i18n "zg_lab_nuc" | default "Cyclotron-frequency calculator" }}</h2>
+  <div class="zg-form">
+    <label>{{ i18n "zg_lab_preset" | default "Preset" }}
+      <select id="zg-c-preset">
+        <option value="">—</option>
+        <option value="132.905451961">¹³³Cs⁺</option>
+        <option value="84.911789738">⁸⁵Rb⁺</option>
+        <option value="12">¹²C⁺</option>
+        <option value="99.9385">¹⁰⁰Sn⁺</option>
+        <option value="238.0507884">²³⁸U⁺</option>
+      </select></label>
+    <label>{{ i18n "zg_lab_mass" | default "Atomic mass (u)" }} <input type="number" id="zg-c-m" value="132.905451961" step="any"></label>
+    <label>{{ i18n "zg_lab_charge" | default "Charge state q" }} <input type="number" id="zg-c-q" value="1" min="1" step="1"></label>
+    <label>B (T) <input type="number" id="zg-c-b" value="7" step="any" min="0"></label>
+  </div>
+  <p class="zg-result" id="zg-c-out"></p>
+  <p class="zg-muted zg-small">ν_c = qB / (2π m<sub>ion</sub>), m<sub>ion</sub> = m<sub>atom</sub> − q·m<sub>e</sub> {{ i18n "zg_lab_nuc_note" | default "(electron binding energies neglected). JYFLTRAP runs at about 7 T." }}</p>
+</section>
+
+<section class="zg-card">
+  <h2>{{ i18n "zg_lab_res" | default "Can I resolve them?" }}</h2>
+  <div class="zg-form">
+    <label>m₁ (u) <input type="number" id="zg-r-m1" value="99.9385" step="any"></label>
+    <label>m₂ (u) <input type="number" id="zg-r-m2" value="99.9390" step="any"></label>
+  </div>
+  <p class="zg-result" id="zg-r-out"></p>
+  <ul class="zg-meter" id="zg-r-meter"></ul>
+  <p class="zg-muted zg-small">{{ i18n "zg_lab_res_note" | default "Typical resolving powers are order-of-magnitude guides; they depend on the ion, the cycle time and the device." }}</p>
+</section>
+
+<section class="zg-card">
+  <h2>{{ i18n "zg_lab_conv" | default "Mass unit converter" }}</h2>
+  <div class="zg-form">
+    <label>{{ i18n "zg_lab_value" | default "Value" }} <input type="number" id="zg-u-v" value="1" step="any"></label>
+    <label>{{ i18n "zg_lab_unit" | default "Unit" }}
+      <select id="zg-u-unit"><option value="u">u</option><option value="keV">keV/c²</option><option value="MeV">MeV/c²</option><option value="kg">kg</option></select></label>
+    <label>A ({{ i18n "zg_lab_optional" | default "optional" }}) <input type="number" id="zg-u-a" value="" step="1" min="1" placeholder="133"></label>
+  </div>
+  <table class="zg-table" id="zg-u-out"></table>
+  <p class="zg-muted zg-small">1 u = 931 494.102 42 keV/c² = 1.660 539 068 92 × 10⁻²⁷ kg (CODATA 2022). {{ i18n "zg_lab_me_note" | default "Mass excess = (m − A)·u." }}</p>
+</section>
+
+</div>
+<script>
+(function () {
+  var U_KEV = 931494.10242, U_KG = 1.66053906892e-27, ME_U = 5.485799090441e-4, E = 1.602176634e-19;
+  var $ = function (id) { return document.getElementById(id); };
+  var L = {{ dict
+      "fc" (i18n "zg_lab_fc" | default "Cyclotron frequency")
+      "dm" (i18n "zg_lab_dm" | default "Mass difference")
+      "rr" (i18n "zg_lab_rr" | default "Required resolving power m/Δm")
+      "yes" (i18n "zg_lab_yes" | default "resolvable")
+      "no" (i18n "zg_lab_no" | default "too close")
+      "same" (i18n "zg_lab_same" | default "Identical masses — nothing to resolve!")
+      "me" (i18n "zg_lab_me" | default "Mass excess")
+    | jsonify | safeJS }};
+  function fmt(x, d) { return Number(x).toLocaleString(undefined, { maximumFractionDigits: d }); }
+
+  /* ── 1. Penning trap simulator ─────────────────────────────────────────── */
+  var top = $("zg-sim-top"), side = $("zg-sim-side");
+  if (top && top.getContext) {
+    var gt = top.getContext("2d"), gs = side.getContext("2d"), trail = [], t = 0, pulse = null;
+    var ui = { ratio: $("zg-ratio"), rp: $("zg-rp"), rm: $("zg-rm"), speed: $("zg-speed") };
+    Object.keys(ui).forEach(function (k) { ui[k].addEventListener("input", function () { $("zg-" + k + "-o").textContent = ui[k].value; }); });
+    $("zg-clear").onclick = function () { trail = []; };
+    $("zg-convert").onclick = function () { pulse = { t0: t, rp0: +ui.rp.value, rm0: +ui.rm.value }; };
+    var css = getComputedStyle(document.documentElement);
+    function col(v, f) { return (css.getPropertyValue(v) || "").trim() || f; }
+    var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function draw() {
+      var W = top.width, H = top.height, cx = W / 2, cy = H / 2, R = W * 0.45;
+      var wm = 0.25, ratio = +ui.ratio.value, wp = wm * ratio, wz = Math.sqrt(2 * wm * wp);
+      var dt = 0.004 * (+ui.speed.value);
+      if (pulse) {
+        var f = Math.min(1, (t - pulse.t0) / 6), s = Math.sin(f * Math.PI / 2), c = Math.cos(f * Math.PI / 2);
+        var tot = Math.sqrt(pulse.rp0 * pulse.rp0 + pulse.rm0 * pulse.rm0);
+        ui.rp.value = Math.round(Math.sqrt(Math.pow(pulse.rp0 * c, 2) + Math.pow(pulse.rm0 * s, 2)));
+        ui.rm.value = Math.round(Math.sqrt(Math.max(0, tot * tot - ui.rp.value * ui.rp.value)));
+        $("zg-rp-o").textContent = ui.rp.value; $("zg-rm-o").textContent = ui.rm.value;
+        if (f >= 1) pulse = null;
+      }
+      var rp = +ui.rp.value / 100 * 0.45, rm = +ui.rm.value / 100 * 0.55;
+      var steps = reduce ? 1 : 6;
+      for (var k = 0; k < steps; k++) {
+        t += dt;
+        var x = cx + R * (rm * Math.cos(wm * t) + rp * Math.cos(wp * t));
+        var y = cy - R * (rm * Math.sin(wm * t) + rp * Math.sin(wp * t));
+        trail.push([x, y]); if (trail.length > 1600) trail.shift();
+      }
+      var ink = col("--zg-ink", "#1d2433"), line = col("--zg-line", "#e3e7ef");
+      gt.clearRect(0, 0, W, H);
+      gt.strokeStyle = line; gt.lineWidth = 1;
+      gt.beginPath(); gt.arc(cx, cy, R, 0, 6.283); gt.stroke();
+      gt.beginPath(); gt.moveTo(cx - 6, cy); gt.lineTo(cx + 6, cy); gt.moveTo(cx, cy - 6); gt.lineTo(cx, cy + 6); gt.stroke();
+      gt.fillStyle = col("--zg-muted", "#5c6577"); gt.font = "12px system-ui"; gt.fillText("B ⊙", 10, 18);
+      for (var j = 1; j < trail.length; j++) {
+        gt.strokeStyle = "hsla(" + (220 + 140 * j / trail.length) + ",80%,55%," + (0.15 + 0.85 * j / trail.length) + ")";
+        gt.beginPath(); gt.moveTo(trail[j - 1][0], trail[j - 1][1]); gt.lineTo(trail[j][0], trail[j][1]); gt.stroke();
+      }
+      var p = trail[trail.length - 1]; gt.fillStyle = "#e5484d"; gt.beginPath(); gt.arc(p[0], p[1], 5, 0, 6.283); gt.fill();
+      /* side view: electrodes + axial oscillation */
+      var SW = side.width, SH = side.height, z = Math.cos(wz * t) * SH * 0.3;
+      gs.clearRect(0, 0, SW, SH); gs.strokeStyle = ink; gs.lineWidth = 3;
+      gs.beginPath(); gs.moveTo(15, 20); gs.quadraticCurveTo(SW / 2, 70, SW - 15, 20); gs.stroke();
+      gs.beginPath(); gs.moveTo(15, SH - 20); gs.quadraticCurveTo(SW / 2, SH - 70, SW - 15, SH - 20); gs.stroke();
+      gs.strokeStyle = line; gs.lineWidth = 1; gs.beginPath(); gs.moveTo(SW / 2, 30); gs.lineTo(SW / 2, SH - 30); gs.stroke();
+      gs.fillStyle = "#e5484d"; gs.beginPath(); gs.arc(SW / 2 + (p[0] - cx) * 0.12, SH / 2 + z, 5, 0, 6.283); gs.fill();
+      gs.fillStyle = col("--zg-muted", "#5c6577"); gs.font = "12px system-ui"; gs.fillText("z", SW / 2 + 6, 44);
+      requestAnimationFrame(draw);
+    }
+    requestAnimationFrame(draw);
+  }
+
+  /* ── 2. cyclotron frequency ───────────────────────────────────────────── */
+  function nuc() {
+    var m = +$("zg-c-m").value, q = Math.max(1, Math.round(+$("zg-c-q").value || 1)), B = +$("zg-c-b").value;
+    var mion = (m - q * ME_U) * U_KG, f = q * E * B / (2 * Math.PI * mion);
+    var txt = !(m > 0) || !(B > 0) || !isFinite(f) ? "—" :
+      L.fc + ": <b>" + (f >= 1e6 ? fmt(f / 1e6, 6) + " MHz" : fmt(f / 1e3, 4) + " kHz") + "</b> &nbsp;·&nbsp; m/q = " + fmt(m / q, 4) + " u";
+    $("zg-c-out").innerHTML = txt;
+  }
+  $("zg-c-preset").onchange = function () { if (this.value) { $("zg-c-m").value = this.value; nuc(); } };
+  ["zg-c-m", "zg-c-q", "zg-c-b"].forEach(function (id) { $(id).addEventListener("input", nuc); });
+  nuc();
+
+  /* ── 3. resolving power ───────────────────────────────────────────────── */
+  var devices = [["MR-TOF", 1e5], ["TOF-ICR", 1e6], ["PI-ICR", 1e7]];
+  function res() {
+    var a = +$("zg-r-m1").value, b = +$("zg-r-m2").value, out = $("zg-r-out"), meter = $("zg-r-meter");
+    meter.innerHTML = "";
+    if (!(a > 0) || !(b > 0)) { out.textContent = "—"; return; }
+    var dm = Math.abs(a - b);
+    if (dm === 0) { out.textContent = L.same; return; }
+    var R = (a + b) / 2 / dm;
+    out.innerHTML = L.dm + ": <b>" + fmt(dm * U_KEV, 3) + " keV/c²</b> &nbsp;·&nbsp; " + L.rr + ": <b>" + (R < 1e4 ? fmt(R, 0) : R.toExponential(2)) + "</b>";
+    devices.forEach(function (d) {
+      var ok = d[1] >= R, li = document.createElement("li");
+      li.className = ok ? "ok" : "bad";
+      li.innerHTML = "<span>" + d[0] + "</span><span>~" + d[1].toExponential(0).replace("e+", "×10^") + "</span><span>" + (ok ? "✔ " + L.yes : "✘ " + L.no) + "</span>";
+      meter.appendChild(li);
+    });
+  }
+  ["zg-r-m1", "zg-r-m2"].forEach(function (id) { $(id).addEventListener("input", res); });
+  res();
+
+  /* ── 4. unit converter ────────────────────────────────────────────────── */
+  function conv() {
+    var v = +$("zg-u-v").value, unit = $("zg-u-unit").value, A = +$("zg-u-a").value;
+    var u = unit === "u" ? v : unit === "keV" ? v / U_KEV : unit === "MeV" ? v * 1e3 / U_KEV : v / U_KG;
+    var rows = [["u", fmt(u, 12)], ["keV/c²", fmt(u * U_KEV, 6)], ["MeV/c²", fmt(u * U_KEV / 1e3, 9)], ["kg", (u * U_KG).toExponential(9)]];
+    if (A > 0 && unit === "u") rows.push([L.me, fmt((u - A) * U_KEV, 4) + " keV"]);
+    $("zg-u-out").innerHTML = isFinite(u) ? rows.map(function (r) { return "<tr><th>" + r[0] + "</th><td>" + r[1] + "</td></tr>"; }).join("") : "";
+  }
+  ["zg-u-v", "zg-u-unit", "zg-u-a"].forEach(function (id) { $(id).addEventListener("input", conv); });
+  conv();
+})();
+</script>

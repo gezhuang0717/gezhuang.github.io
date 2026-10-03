@@ -13,4 +13,6 @@ My group has two postdocs and a PhD student, and I teach the PhD course *Lasers 
 
 **Contact:** zhuang.z.ge@jyu.fi
 
+{{< nuclide-of-the-day >}}
+
 {{< gallery home="true" >}}

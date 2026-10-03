@@ -1,0 +1,38 @@
+{{- /*
+  Top-bar controls shown on every page (desktop and mobile):
+    • language picker — jumps to the same page in the other language when it exists,
+      otherwise to that language's homepage
+    • day/night switch — the id starts with "appearance-switcher" so the theme's
+      appearance.js wires it up and remembers the choice
+  Styles: .zg-controls in assets/css/extended/zg-rainbow.css
+*/ -}}
+{{- $page := . -}}
+{{- $cur := .Language.Lang -}}
+<div class="zg-controls">
+  {{- if hugo.IsMultilingual }}
+  <details class="zg-lang">
+    <summary title="{{ i18n "zg_language" | default "Language" }}" aria-label="{{ i18n "zg_language" | default "Language" }}">
+      {{ partial "icon.html" "translate" }}<span class="zg-lang-cur">{{ .Language.Label }}</span>
+    </summary>
+    <ul class="zg-lang-menu">
+      {{- range hugo.Sites }}
+        {{- $lang := .Language.Lang -}}
+        {{- $href := .Home.RelPermalink -}}
+        {{- range $page.AllTranslations }}{{ if eq .Language.Lang $lang }}{{ $href = .RelPermalink }}{{ end }}{{ end }}
+        <li><a href="{{ $href }}" hreflang="{{ .Language.Lang }}" {{ if eq $lang $cur }}aria-current="true" class="is-current"{{ end }}>{{ .Language.Label }}</a></li>
+      {{- end }}
+    </ul>
+  </details>
+  {{- end }}
+  <button id="appearance-switcher-top" class="zg-mode" type="button" aria-label="{{ i18n "zg_daynight" | default "Day / night" }}">
+    <span class="dark:hidden" title="{{ i18n "footer.dark_appearance" }}">{{ partial "icon.html" "moon" }}</span>
+    <span class="hidden dark:inline" title="{{ i18n "footer.light_appearance" }}">{{ partial "icon.html" "sun" }}</span>
+  </button>
+</div>
+<script>
+  /* close the language menu when clicking elsewhere */
+  document.addEventListener("click", function (e) {
+    document.querySelectorAll("details.zg-lang[open]").forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute("open"); });
+  });
+</script>
+{{ partial "zg/fun.html" . }}

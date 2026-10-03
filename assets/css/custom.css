@@ -150,3 +150,62 @@ article h1, .post-title, .profile_inner h1, main h1 {
 @media (max-width: 640px) { .zg-gallery { grid-template-columns: minmax(0, 1fr); } }
 .zg-gallery > .zg-fig:not(.is-wide):last-child:nth-child(odd) { grid-column: 1 / -1; }
 .zg-gallery > .zg-fig:not(.is-wide):last-child:nth-child(odd) img { max-width: 520px; margin: 0 auto !important; display: block; }
+
+/* ── top bar: language picker + day/night switch (zg/top-controls.html) ── */
+.zg-controls { display: flex; align-items: center; gap: .35rem; margin-inline-end: 1rem; font-weight: 600; }
+@media (min-width: 640px) { .zg-controls { order: 99; margin-inline-end: 0; margin-inline-start: 1.6rem; } }
+.zg-lang { position: relative; }
+.zg-lang > summary, .zg-mode {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: .3rem;
+  padding: .3rem .55rem; border: 1px solid var(--zg-line); border-radius: 999px;
+  background: var(--zg-card); color: var(--zg-ink); font-size: .85rem; line-height: 1;
+  transition: border-color .15s, box-shadow .15s;
+}
+.zg-lang > summary::-webkit-details-marker { display: none; }
+.zg-lang > summary:hover, .zg-mode:hover, .zg-lang[open] > summary { border-color: var(--zg-blue); box-shadow: 0 0 0 3px color-mix(in srgb, var(--zg-blue) 18%, transparent); }
+.zg-lang > summary .icon, .zg-mode .icon { width: 1.05em; height: 1.05em; }
+.zg-mode { padding: .3rem .5rem; }
+.zg-lang-menu {
+  position: absolute; z-index: 60; inset-inline-end: 0; top: calc(100% + .4rem); min-width: 9rem;
+  margin: 0; padding: .3rem; list-style: none; background: var(--zg-card); border: 1px solid var(--zg-line);
+  border-radius: .7rem; box-shadow: 0 12px 30px rgba(0,0,0,.14);
+}
+.zg-lang-menu li { margin: 0; }
+.zg-lang-menu a { display: block; padding: .4rem .7rem; border-radius: .45rem; color: var(--zg-ink); text-decoration: none; font-weight: 500; }
+.zg-lang-menu a:hover { background: var(--zg-soft); }
+.zg-lang-menu a.is-current { background: color-mix(in srgb, var(--zg-blue) 14%, transparent); font-weight: 700; }
+.zg-lang-menu a.is-current::after { content: " ✓"; color: var(--zg-blue); }
+
+/* ── cards (homepage + Lab) ─────────────────────────────────────────────── */
+.zg-cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 1.6rem 0; text-align: start; }
+.zg-card { position: relative; background: var(--zg-card); border: 1px solid var(--zg-line); border-radius: 1rem; padding: 1.1rem 1.2rem; overflow: hidden; }
+.zg-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--zg-rainbow); }
+.zg-card-label { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--zg-muted); font-weight: 700; }
+.zg-nod-sym { font-size: 2.6rem; font-weight: 800; line-height: 1.2; margin: .3rem 0; background: var(--zg-rainbow); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.zg-nod-fact, .zg-clock-date, .zg-clock-note { margin: .2rem 0 .6rem; color: var(--zg-ink); font-size: .95rem; }
+.zg-clock-time { font-size: 2.6rem; font-weight: 800; line-height: 1.2; margin: .3rem 0; font-variant-numeric: tabular-nums; color: var(--zg-ink); }
+.zg-clock-note { color: var(--zg-muted); }
+.zg-btn { cursor: pointer; border: 0; border-radius: 999px; padding: .45rem .9rem; font-weight: 600; font-size: .85rem; color: #fff; background: linear-gradient(90deg, var(--zg-blue), var(--zg-violet)); }
+.zg-btn:hover { filter: brightness(1.1); }
+.zg-btn-ghost { background: transparent; color: var(--zg-ink); border: 1px solid var(--zg-line); }
+
+/* ── Lab page ───────────────────────────────────────────────────────────── */
+.zg-lab { display: grid; gap: 1.2rem; margin-top: 1.2rem; }
+.zg-lab h2 { margin-top: .2rem !important; }
+.zg-muted { color: var(--zg-muted); } .zg-small { font-size: .85rem; }
+.zg-sim-wrap { display: flex; gap: .8rem; justify-content: center; align-items: stretch; }
+.zg-sim-wrap canvas { background: var(--zg-soft); border-radius: .8rem; max-width: 100%; height: auto; }
+#zg-sim-top { width: min(420px, 72vw); aspect-ratio: 1; } #zg-sim-side { width: min(140px, 22vw); }
+.zg-sim-controls, .zg-form { display: grid; gap: .6rem 1rem; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); margin: .9rem 0; }
+.zg-sim-controls label, .zg-form label { display: flex; flex-direction: column; gap: .25rem; font-size: .85rem; font-weight: 600; color: var(--zg-muted); }
+.zg-sim-controls output { font-variant-numeric: tabular-nums; color: var(--zg-ink); }
+.zg-form input, .zg-form select { font: inherit; font-weight: 500; color: var(--zg-ink); background: var(--zg-soft); border: 1px solid var(--zg-line); border-radius: .5rem; padding: .4rem .55rem; }
+.zg-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+.zg-result { font-size: 1.05rem; color: var(--zg-ink); }
+.zg-meter { list-style: none; padding: 0; margin: .4rem 0; display: grid; gap: .35rem; }
+.zg-meter li { display: grid; grid-template-columns: 6rem 5rem 1fr; padding: .35rem .6rem; border-radius: .5rem; margin: 0; }
+.zg-meter li.ok { background: color-mix(in srgb, var(--zg-green) 16%, transparent); }
+.zg-meter li.bad { background: color-mix(in srgb, var(--zg-red) 14%, transparent); }
+.zg-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.zg-table th, .zg-table td { padding: .35rem .5rem; border-bottom: 1px solid var(--zg-line); text-align: start; }
+.zg-table th { width: 9rem; color: var(--zg-muted); font-weight: 600; }

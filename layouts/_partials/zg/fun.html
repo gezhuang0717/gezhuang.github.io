@@ -1,0 +1,59 @@
+{{- /*
+  Small site-wide extras, loaded once from zg/top-controls.html:
+    • a hello in the browser console for curious visitors
+    • easter egg: type "ion" anywhere (or the Konami code ↑↑↓↓←→←→BA) and
+      a few ions start orbiting in a Penning trap for ten seconds
+    • press "t" to jump back to the top
+*/ -}}
+<script>
+(function () {
+  if (window.__zgFun) return; window.__zgFun = true;
+  try {
+    console.log("%c⚛  Hello, curious physicist!", "font:700 16px system-ui;color:#3e63dd");
+    console.log("You found the console. Ions in a Penning trap move on three superimposed circles — try typing \"ion\" on the page.\nQuestions about traps, MR-TOF or positions: zhuang.z.ge@jyu.fi");
+  } catch (e) {}
+
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function trap() {
+    if (document.getElementById("zg-trap-egg")) return;
+    var c = document.createElement("canvas");
+    c.id = "zg-trap-egg"; c.setAttribute("aria-hidden", "true");
+    c.style.cssText = "position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:999";
+    document.body.appendChild(c);
+    var x = c.getContext("2d"), dpr = window.devicePixelRatio || 1;
+    function size() { c.width = innerWidth * dpr; c.height = innerHeight * dpr; }
+    size(); addEventListener("resize", size);
+    var cols = ["#e5484d", "#f76b15", "#f5b800", "#30a46c", "#0894b3", "#3e63dd", "#8e4ec6", "#d6409f"];
+    var ions = cols.map(function (col, i) {
+      return { col: col, rm: 0.18 + 0.03 * i, rp: 0.03 + 0.006 * i, wm: 0.6 + 0.05 * i, wp: 9 + i, ph: i * 0.8, trail: [] };
+    });
+    var t0 = performance.now(), dur = 10000;
+    (function frame(now) {
+      var t = (now - t0) / 1000, R = Math.min(c.width, c.height) / 2, cx = c.width / 2, cy = c.height / 2;
+      x.clearRect(0, 0, c.width, c.height);
+      var fade = Math.min(1, (dur - (now - t0)) / 1500);
+      x.globalAlpha = Math.max(0, fade);
+      ions.forEach(function (o) {
+        var px = cx + R * (o.rm * Math.cos(o.wm * t + o.ph) + o.rp * Math.cos(o.wp * t));
+        var py = cy + R * (o.rm * Math.sin(o.wm * t + o.ph) + o.rp * Math.sin(o.wp * t));
+        o.trail.push([px, py]); if (o.trail.length > 90) o.trail.shift();
+        x.strokeStyle = o.col; x.lineWidth = 1.5 * dpr; x.beginPath();
+        o.trail.forEach(function (p, k) { k ? x.lineTo(p[0], p[1]) : x.moveTo(p[0], p[1]); });
+        x.stroke(); x.fillStyle = o.col; x.beginPath(); x.arc(px, py, 4 * dpr, 0, 6.283); x.fill();
+      });
+      if (now - t0 < dur) requestAnimationFrame(frame); else c.remove();
+    })(t0);
+  }
+  window.zgTrap = trap;
+
+  var buf = "", konami = "ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,b,a", seq = [];
+  addEventListener("keydown", function (e) {
+    var tag = (e.target && e.target.tagName) || "";
+    if (/INPUT|TEXTAREA|SELECT/.test(tag) || e.target.isContentEditable || e.ctrlKey || e.metaKey || e.altKey) return;
+    seq.push(e.key); seq = seq.slice(-10);
+    buf = (buf + (e.key.length === 1 ? e.key.toLowerCase() : "")).slice(-3);
+    if (!reduce && (buf === "ion" || seq.join(",") === konami)) { buf = ""; seq = []; trap(); }
+    if (e.key === "t") { scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); }
+  });
+})();
+</script>

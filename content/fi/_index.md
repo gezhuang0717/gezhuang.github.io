@@ -13,4 +13,6 @@ Ryhmääni kuuluu kaksi tutkijatohtoria ja väitöskirjatutkija, ja opetan jatko
 
 **Yhteystiedot:** zhuang.z.ge@jyu.fi
 
+{{< nuclide-of-the-day >}}
+
 {{< gallery home="true" >}}

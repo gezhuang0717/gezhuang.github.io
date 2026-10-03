@@ -1,0 +1,829 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  10pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{DejaVu Serif}
+  \setmonofont[]{DejaVu Sans Mono}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Personal Website Manual},
+  pdfauthor={Zhuang Ge},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Personal Website Manual}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Install, edit, update and deploy
+https://gezhuang0717.github.io}
+\author{Zhuang Ge}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\hypertarget{what-you-have}{%
+\section{1. What you have}\label{what-you-have}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Item
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Live site & \url{https://gezhuang0717.github.io} \\
+Source repository &
+\url{https://github.com/gezhuang0717/gezhuang0717.github.io} \\
+Site generator & Hugo extended (version pinned to 0.167.0 in the deploy
+workflow) \\
+Themes & Congo (live), Blowfish, PaperMod, all installed as git
+submodules \\
+Deployment & GitHub Actions workflow
+\texttt{.github/workflows/hugo.yml}, runs on every push to
+\texttt{main} \\
+\end{longtable}
+
+How it works: you edit plain Markdown text files, push them to GitHub,
+and GitHub Actions builds the HTML with Hugo and publishes it to GitHub
+Pages about one minute later. Nothing needs to run on your computer
+except when you want to preview.
+
+You can edit in two ways:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{In the browser only} (no installation): edit files directly on
+  github.com. Section 4.
+\item
+  \textbf{On your Mac} (recommended for larger changes): clone, preview
+  locally, push. Sections 3 and 5.
+\end{itemize}
+
+\hypertarget{repository-layout}{%
+\subsection{1.1 Repository layout}\label{repository-layout}}
+
+\begin{verbatim}
+gezhuang0717.github.io/
+├── content/                 ← YOUR TEXT (shared by all themes)
+│   ├── _index.md            homepage bio and contact
+│   ├── research.md          research themes + first-author papers
+│   ├── publications.md      all publications
+│   ├── projects.md
+│   ├── talks.md
+│   ├── mentorship.md
+│   ├── cv.md
+│   └── posts/               blog posts, one file each
+├── assets/img/zhuang-ge.png profile picture (Congo, Blowfish)
+├── static/                  files copied as-is to the site
+│   └── img/zhuang-ge.png    profile picture (PaperMod)
+├── sites/                   ← LOOK AND MENUS, one folder per theme
+│   ├── congo/_default/      hugo.toml, params.toml, languages.en.toml, menus.en.toml
+│   ├── blowfish/_default/   same files
+│   └── papermod/_default/   hugo.toml (everything in one file)
+├── themes/                  theme code (git submodules, do not edit)
+├── .github/workflows/hugo.yml  build-and-deploy workflow
+├── docs/                    this manual and short guides
+├── setup.sh                 downloads the themes after cloning
+└── README.md
+\end{verbatim}
+
+Rule of thumb: \textbf{text lives in \texttt{content/}, appearance lives
+in \texttt{sites/\textless{}theme\textgreater{}/}}. You never need to
+touch \texttt{themes/}.
+
+\hypertarget{one-time-setup-on-your-mac}{%
+\section{2. One-time setup on your
+Mac}\label{one-time-setup-on-your-mac}}
+
+\hypertarget{install-the-tools}{%
+\subsection{2.1 Install the tools}\label{install-the-tools}}
+
+Open \textbf{Terminal} (Applications → Utilities → Terminal).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Install Homebrew if \texttt{brew\ -\/-version} reports ``command not
+  found''. Paste the install command shown on \url{https://brew.sh} and
+  follow the prompts.
+\item
+  Install Git and Hugo:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{brew}\NormalTok{ install git hugo}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Check the versions:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git} \AttributeTok{{-}{-}version}
+\ExtensionTok{hugo}\NormalTok{ version}
+\end{Highlighting}
+\end{Shaded}
+
+  The Hugo line must contain \texttt{+extended} and a version of at
+  least \textbf{0.163.0}.
+\end{enumerate}
+
+On Windows use \texttt{winget\ install\ Git.Git\ Hugo.Hugo.Extended}; on
+Linux install the \texttt{hugo\_extended\_*.deb} from
+\url{https://github.com/gohugoio/hugo/releases}.
+
+\hypertarget{connect-git-to-github}{%
+\subsection{2.2 Connect Git to GitHub}\label{connect-git-to-github}}
+
+Tell Git who you are (once per computer):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ config }\AttributeTok{{-}{-}global}\NormalTok{ user.name  }\StringTok{"Zhuang Ge"}
+\FunctionTok{git}\NormalTok{ config }\AttributeTok{{-}{-}global}\NormalTok{ user.email }\StringTok{"zhuang.z.ge@jyu.fi"}
+\end{Highlighting}
+\end{Shaded}
+
+GitHub no longer accepts your account password for \texttt{git\ push}.
+The simplest option is the GitHub CLI, which signs you in through the
+browser:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{brew}\NormalTok{ install gh}
+\ExtensionTok{gh}\NormalTok{ auth login        }\CommentTok{\# choose GitHub.com → HTTPS → Login with a web browser}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{download-the-site}{%
+\subsection{2.3 Download the site}\label{download-the-site}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd}\NormalTok{ \textasciitilde{}/Documents}
+\FunctionTok{git}\NormalTok{ clone }\AttributeTok{{-}{-}recursive}\NormalTok{ https://github.com/gezhuang0717/gezhuang0717.github.io}
+\BuiltInTok{cd}\NormalTok{ gezhuang0717.github.io}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{-\/-recursive} also downloads the three themes. If you forgot
+it, run \texttt{bash\ setup.sh}.
+
+\hypertarget{the-daily-workflow-on-your-mac}{%
+\section{3. The daily workflow on your
+Mac}\label{the-daily-workflow-on-your-mac}}
+
+Every change follows the same four steps.
+
+\textbf{Step 1 --- get the latest version} (important if you also edit
+on github.com):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd}\NormalTok{ \textasciitilde{}/Documents/gezhuang0717.github.io}
+\FunctionTok{git}\NormalTok{ pull}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Step 2 --- start the live preview:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{hugo}\NormalTok{ server }\AttributeTok{{-}{-}configDir}\NormalTok{ sites/congo }\AttributeTok{{-}{-}themesDir}\NormalTok{ themes}
+\end{Highlighting}
+\end{Shaded}
+
+Open \url{http://localhost:1313}. Leave this Terminal window running;
+the page reloads every time you save a file.
+
+\textbf{Step 3 --- edit} files in \texttt{content/} (or
+\texttt{sites/congo/\_default/}) with any plain-text editor.
+Recommended: Visual Studio Code (\url{https://code.visualstudio.com}),
+then \texttt{code\ .} opens the whole folder. Save and check the
+preview.
+
+\textbf{Step 4 --- publish.} Open a second Terminal window (the first is
+busy with the preview):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd}\NormalTok{ \textasciitilde{}/Documents/gezhuang0717.github.io}
+\FunctionTok{git}\NormalTok{ add .}
+\FunctionTok{git}\NormalTok{ commit }\AttributeTok{{-}m} \StringTok{"Add new PRC paper"}      \CommentTok{\# short description of the change}
+\FunctionTok{git}\NormalTok{ push}
+\end{Highlighting}
+\end{Shaded}
+
+Then watch \textbf{Actions} on GitHub
+(\url{https://github.com/gezhuang0717/gezhuang0717.github.io/actions}).
+When \emph{Deploy Hugo site} shows a green tick (about 1 minute), the
+live site is updated. Reload it with Cmd+Shift+R to bypass the browser
+cache.
+
+Stop the preview with \textbf{Ctrl+C}.
+
+\hypertarget{editing-without-installing-anything}{%
+\section{4. Editing without installing
+anything}\label{editing-without-installing-anything}}
+
+For a quick fix (a typo, one new paper):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Open \url{https://github.com/gezhuang0717/gezhuang0717.github.io}.
+\item
+  Click into \texttt{content/}, then the file,
+  e.g.~\texttt{publications.md}.
+\item
+  Click the \textbf{pencil icon} (Edit this file).
+\item
+  Make the change. Use the \textbf{Preview} tab to check the formatting.
+\item
+  Click \textbf{Commit changes\ldots{}}, write a short message, keep
+  ``Commit directly to the main branch'', and click \textbf{Commit
+  changes}.
+\item
+  The site rebuilds automatically; check the \textbf{Actions} tab for
+  the green tick.
+\end{enumerate}
+
+To upload a file (photo, CV PDF): open the folder on github.com, click
+\textbf{Add file → Upload files}, drag the file in, and commit.
+
+If you later work on your Mac again, run \texttt{git\ pull} first so you
+have these web edits.
+
+\hypertarget{how-to-change-things}{%
+\section{5. How to change things}\label{how-to-change-things}}
+
+\hypertarget{markdown-in-two-minutes}{%
+\subsection{5.1 Markdown in two minutes}\label{markdown-in-two-minutes}}
+
+Each content file starts with a header between two \texttt{-\/-\/-}
+lines. Keep it; change only \texttt{title} or \texttt{description} if
+needed.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Research"}
+\AnnotationTok{description:}\CommentTok{ "One{-}line summary shown in search results."}
+\AnnotationTok{showDate:}\CommentTok{ false}
+\CommentTok{{-}{-}{-}}
+
+\FunctionTok{\#\# Section heading}
+\FunctionTok{\#\#\# Sub{-}heading}
+\NormalTok{Normal paragraph with **bold**, *italic* and a }\CommentTok{[}\OtherTok{link}\CommentTok{](https://doi.org/...)}\NormalTok{.}
+
+\SpecialStringTok{{-} }\NormalTok{bullet item}
+\SpecialStringTok{{-} }\NormalTok{another item}
+
+\SpecialStringTok{1. }\NormalTok{numbered item}
+\SpecialStringTok{2. }\NormalTok{next item}
+\end{Highlighting}
+\end{Shaded}
+
+Isotopes: type the Unicode superscripts directly (¹⁰⁰Sn, ⁹⁷Tc, β⁻) or
+use HTML:
+\texttt{\textless{}sup\textgreater{}100\textless{}/sup\textgreater{}Sn}.
+
+\hypertarget{where-each-thing-lives}{%
+\subsection{5.2 Where each thing lives}\label{where-each-thing-lives}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+You want to change
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Edit this file
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Homepage text, contact line & \texttt{content/\_index.md} \\
+Research themes & \texttt{content/research.md} \\
+Publications & \texttt{content/publications.md} \\
+Projects / Talks / Mentorship / CV & \texttt{content/projects.md},
+\texttt{talks.md}, \texttt{mentorship.md}, \texttt{cv.md} \\
+Blog & \texttt{content/posts/*.md} \\
+Name, headline under the photo, social icons &
+\texttt{sites/congo/\_default/languages.en.toml} \\
+Menu (order, names, new items) &
+\texttt{sites/congo/\_default/menus.en.toml} \\
+Colours, homepage layout, header style &
+\texttt{sites/congo/\_default/params.toml} \\
+Site title, base settings & \texttt{sites/congo/\_default/hugo.toml} \\
+Profile photo & \texttt{assets/img/zhuang-ge.png} and
+\texttt{static/img/zhuang-ge.png} \\
+Which theme is live & \texttt{THEME:} in
+\texttt{.github/workflows/hugo.yml} \\
+\end{longtable}
+
+If you switch the live theme to Blowfish or PaperMod, edit the matching
+folder under \texttt{sites/} instead of \texttt{sites/congo/}.
+
+\hypertarget{add-a-new-publication}{%
+\subsection{5.3 Add a new publication}\label{add-a-new-publication}}
+
+Open \texttt{content/publications.md}. First-author papers are a
+numbered list, newest first. Insert the new line at the top and renumber
+(Markdown renumbers automatically if you simply start every line with
+\texttt{1.}):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\SpecialStringTok{1. }\NormalTok{**Z. Ge** *et al.*, Title of the paper, [Phys. Rev. C **115**, 012345 (2027)](https://doi.org/10.1103/xxxx) · }\CommentTok{[}\OtherTok{arXiv:2701.01234}\CommentTok{](https://arxiv.org/abs/2701.01234)}
+\end{Highlighting}
+\end{Shaded}
+
+For a co-authored paper add a bullet under the right year in
+\emph{Selected co-authored papers}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\SpecialStringTok{{-} }\NormalTok{A. Author, **Z. Ge** *et al.*, Title, [Journal **Vol**, Page (Year)](https://doi.org/...)}
+\end{Highlighting}
+\end{Shaded}
+
+If it belongs to a research theme, copy the same line under that heading
+in \texttt{content/research.md}.
+
+Tip: INSPIRE-HEP gives you the reference data. Search
+\texttt{fa\ Ge,\ Zhuang} on \url{https://inspirehep.net} for
+first-author papers.
+
+\hypertarget{add-a-talk}{%
+\subsection{5.4 Add a talk}\label{add-a-talk}}
+
+In \texttt{content/talks.md}, add at the top of \emph{Invited talks} or
+\emph{Contributed talks}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\SpecialStringTok{{-} }\NormalTok{**2027** — *Talk title*. Conference name, dates, City, Country (}\CommentTok{[}\OtherTok{slides}\CommentTok{](https://...)}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{replace-the-profile-picture}{%
+\subsection{5.5 Replace the profile
+picture}\label{replace-the-profile-picture}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Prepare a square photo, at least 400 × 400 pixels, saved as PNG named
+  \texttt{zhuang-ge.png}.
+\item
+  Replace both \texttt{assets/img/zhuang-ge.png} and
+  \texttt{static/img/zhuang-ge.png}.
+\item
+  To use a JPG instead, name it \texttt{zhuang-ge.jpg} and change
+  \texttt{image\ =\ "img/zhuang-ge.png"} in
+  \texttt{sites/congo/\_default/languages.en.toml} accordingly.
+\end{enumerate}
+
+\hypertarget{put-your-cv-pdf-online}{%
+\subsection{5.6 Put your CV PDF online}\label{put-your-cv-pdf-online}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Copy the PDF to \texttt{static/cv.pdf}.
+\item
+  In \texttt{sites/congo/\_default/menus.en.toml}, replace the CV block
+  with:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{[[main]]}
+  \DataTypeTok{name} \OperatorTok{=} \StringTok{"CV"}
+  \DataTypeTok{url} \OperatorTok{=} \StringTok{"/cv.pdf"}
+  \DataTypeTok{weight} \OperatorTok{=} \DecValTok{70}
+\end{Highlighting}
+\end{Shaded}
+\end{enumerate}
+
+The PDF is then at \url{https://gezhuang0717.github.io/cv.pdf}. To keep
+the HTML CV page as well, use \texttt{name\ =\ "CV\ (PDF)"} and a
+different weight instead of replacing the block.
+
+\hypertarget{write-a-blog-post}{%
+\subsection{5.7 Write a blog post}\label{write-a-blog-post}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{hugo}\NormalTok{ new content posts/low{-}q{-}decays.md }\AttributeTok{{-}{-}configDir}\NormalTok{ sites/congo }\AttributeTok{{-}{-}themesDir}\NormalTok{ themes}
+\end{Highlighting}
+\end{Shaded}
+
+This creates \texttt{content/posts/low-q-decays.md} with a header. Write
+the text below it and set \texttt{draft\ =\ false} (or delete the draft
+line), otherwise the post is hidden on the live site. Images: put them
+next to the post by turning it into a folder
+(\texttt{content/posts/low-q-decays/index.md} plus \texttt{figure.png})
+and reference them as \texttt{!{[}Caption{]}(figure.png)}.
+
+\hypertarget{add-a-new-page-and-menu-item}{%
+\subsection{5.8 Add a new page and menu
+item}\label{add-a-new-page-and-menu-item}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Create \texttt{content/teaching.md}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Teaching"}
+\AnnotationTok{showDate:}\CommentTok{ false}
+\CommentTok{{-}{-}{-}}
+\NormalTok{Text here.}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Add to \texttt{sites/congo/\_default/menus.en.toml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{[[main]]}
+  \DataTypeTok{name} \OperatorTok{=} \StringTok{"Teaching"}
+  \DataTypeTok{pageRef} \OperatorTok{=} \StringTok{"teaching"}
+  \DataTypeTok{weight} \OperatorTok{=} \DecValTok{45}
+\end{Highlighting}
+\end{Shaded}
+\end{enumerate}
+
+\texttt{weight} sets the order (smaller is further left). Existing
+weights are 10, 20, \ldots{} 70.
+
+\hypertarget{social-links-under-your-name}{%
+\subsection{5.9 Social links under your
+name}\label{social-links-under-your-name}}
+
+In \texttt{sites/congo/\_default/languages.en.toml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \DataTypeTok{links} \OperatorTok{=} \OperatorTok{[}
+    \OperatorTok{\{ }\DataTypeTok{email}\OperatorTok{ =} \StringTok{"mailto:zhuang.z.ge@jyu.fi"}\OperatorTok{ \},}
+    \OperatorTok{\{ }\DataTypeTok{orcid}\OperatorTok{ =} \StringTok{"https://orcid.org/0000{-}0001{-}8586{-}6134"}\OperatorTok{ \},}
+    \OperatorTok{\{ }\DataTypeTok{google{-}scholar}\OperatorTok{ =} \StringTok{"https://scholar.google.com/citations?user=YOUR\_ID"}\OperatorTok{ \},}
+    \OperatorTok{\{ }\DataTypeTok{researchgate}\OperatorTok{ =} \StringTok{"https://www.researchgate.net/profile/Zhuang{-}Ge"}\OperatorTok{ \},}
+    \OperatorTok{\{ }\DataTypeTok{linkedin}\OperatorTok{ =} \StringTok{"https://www.linkedin.com/in/zhuang{-}ge{-}847898202"}\OperatorTok{ \},}
+    \OperatorTok{\{ }\DataTypeTok{github}\OperatorTok{ =} \StringTok{"https://github.com/gezhuang0717"}\OperatorTok{ \},}
+    \OperatorTok{\{ }\DataTypeTok{link}\OperatorTok{ =} \StringTok{"https://www.jyu.fi/en/people/zhuang{-}ge"}\OperatorTok{ \},}
+  \OperatorTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+Order in the list is the order of the icons. Other icon names include
+\texttt{x-twitter}, \texttt{bluesky}, \texttt{mastodon},
+\texttt{youtube}, \texttt{weibo}.
+
+\hypertarget{colours-and-layout}{%
+\subsection{5.10 Colours and layout}\label{colours-and-layout}}
+
+In \texttt{sites/congo/\_default/params.toml}:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{colorScheme\ =\ "sapphire"}: alternatives \texttt{congo},
+  \texttt{avocado}, \texttt{cherry}, \texttt{fire}, \texttt{ocean},
+  \texttt{slate}.
+\item
+  \texttt{defaultAppearance\ =\ "light"} or \texttt{"dark"};
+  \texttt{autoSwitchAppearance\ =\ true} follows the visitor's system
+  setting.
+\item
+  \texttt{{[}homepage{]}\ layout\ =\ "profile"} (photo + bio) or
+  \texttt{"page"} (plain text). \texttt{showRecent\ =\ true} lists
+  recent blog posts under the bio.
+\end{itemize}
+
+Blowfish has more schemes (\texttt{ocean}, \texttt{forest},
+\texttt{fire}, \texttt{neon}, \texttt{noir}, \texttt{autumn},
+\texttt{princess}, \texttt{terminal}, \texttt{github}, \texttt{marvel},
+\texttt{one-light}, \texttt{slate}, \ldots) and homepage layouts
+(\texttt{profile}, \texttt{page}, \texttt{hero}, \texttt{card},
+\texttt{background}, \texttt{landing}).
+
+\hypertarget{switch-the-live-theme}{%
+\subsection{5.11 Switch the live theme}\label{switch-the-live-theme}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Preview the alternative first:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{hugo}\NormalTok{ server }\AttributeTok{{-}{-}configDir}\NormalTok{ sites/blowfish }\AttributeTok{{-}{-}themesDir}\NormalTok{ themes}
+\ExtensionTok{hugo}\NormalTok{ server }\AttributeTok{{-}{-}configDir}\NormalTok{ sites/papermod }\AttributeTok{{-}{-}themesDir}\NormalTok{ themes}
+\end{Highlighting}
+\end{Shaded}
+\item
+  In \texttt{.github/workflows/hugo.yml} change \texttt{THEME:\ congo}
+  to \texttt{blowfish} or \texttt{papermod}.
+\item
+  Commit and push.
+\end{enumerate}
+
+All content files stay the same; only the look changes.
+
+\hypertarget{custom-domain-optional}{%
+\subsection{5.12 Custom domain
+(optional)}\label{custom-domain-optional}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Buy a domain and create a DNS record: \texttt{CNAME} for
+  \texttt{www.yourdomain.org} → \texttt{gezhuang0717.github.io}.
+\item
+  Create \texttt{static/CNAME} with the single line
+  \texttt{www.yourdomain.org}, commit and push.
+\item
+  GitHub → repository \textbf{Settings → Pages → Custom domain}: enter
+  the domain and tick \textbf{Enforce HTTPS}.
+\end{enumerate}
+
+\hypertarget{keeping-the-software-up-to-date}{%
+\section{6. Keeping the software up to
+date}\label{keeping-the-software-up-to-date}}
+
+\hypertarget{update-the-themes}{%
+\subsection{6.1 Update the themes}\label{update-the-themes}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ submodule update }\AttributeTok{{-}{-}remote} \AttributeTok{{-}{-}merge}
+\ExtensionTok{hugo}\NormalTok{ server }\AttributeTok{{-}{-}configDir}\NormalTok{ sites/congo }\AttributeTok{{-}{-}themesDir}\NormalTok{ themes   }\CommentTok{\# check nothing broke}
+\FunctionTok{git}\NormalTok{ add themes}
+\FunctionTok{git}\NormalTok{ commit }\AttributeTok{{-}m} \StringTok{"Update themes"}
+\FunctionTok{git}\NormalTok{ push}
+\end{Highlighting}
+\end{Shaded}
+
+Theme updates occasionally rename a setting; if the preview shows an
+error, read the message, check the theme's documentation, or roll back
+with \texttt{git\ checkout\ themes}.
+
+\hypertarget{update-hugo}{%
+\subsection{6.2 Update Hugo}\label{update-hugo}}
+
+\begin{itemize}
+\tightlist
+\item
+  On your Mac: \texttt{brew\ upgrade\ hugo}.
+\item
+  On GitHub: change \texttt{HUGO\_VERSION:\ 0.167.0} in
+  \texttt{.github/workflows/hugo.yml} to the new version number from
+  \url{https://github.com/gohugoio/hugo/releases}.
+\end{itemize}
+
+Keep the two roughly in step so the preview matches the live site.
+
+\hypertarget{undoing-a-mistake}{%
+\section{7. Undoing a mistake}\label{undoing-a-mistake}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Not yet committed:}
+  \texttt{git\ checkout\ -\/-\ content/research.md} restores the last
+  committed version of that file; \texttt{git\ restore\ .} restores
+  everything.
+\item
+  \textbf{Committed and pushed:} find the commit with
+  \texttt{git\ log\ -\/-oneline}, then
+  \texttt{git\ revert\ \textless{}commit-id\textgreater{}} and
+  \texttt{git\ push}. This adds a new commit that undoes the old one;
+  history is never lost.
+\item
+  \textbf{On github.com:} open the file → \textbf{History} → pick an
+  older version → copy its text back.
+\end{itemize}
+
+\hypertarget{troubleshooting}{%
+\section{8. Troubleshooting}\label{troubleshooting}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Symptom
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cause and fix
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Actions run has a red cross & Click it, open the failed step and read
+the last lines. Most often a typo in a \texttt{.toml} file (missing
+quote or bracket) or Markdown header. Fix and push again. \\
+\texttt{TOCSS} / SCSS error locally & Standard Hugo installed instead of
+extended: \texttt{brew\ reinstall\ hugo} (Homebrew's Hugo is
+extended). \\
+Blank or unstyled page locally & Themes missing:
+\texttt{git\ submodule\ update\ -\/-init\ -\/-recursive}. \\
+\texttt{git\ push} rejected (``fetch first'') & Someone (you on
+github.com) changed the repository. Run \texttt{git\ pull}, then
+\texttt{git\ push}. \\
+\texttt{git\ push} asks for a password & Run \texttt{gh\ auth\ login},
+or use a personal access token. \\
+Changes not visible online & Wait for the green tick in Actions, then
+hard-reload (Cmd+Shift+R). \\
+New post missing online & \texttt{draft\ =\ true} in its header; set it
+to \texttt{false}. \\
+Pages shows a 404 & Settings → Pages → Source must be \textbf{GitHub
+Actions}. \\
+\end{longtable}
+
+\hypertarget{command-cheat-sheet}{%
+\section{9. Command cheat sheet}\label{command-cheat-sheet}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Task
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Command
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Get latest version & \texttt{git\ pull} \\
+Preview (Congo) &
+\texttt{hugo\ server\ -\/-configDir\ sites/congo\ -\/-themesDir\ themes} \\
+Preview (Blowfish) &
+\texttt{hugo\ server\ -\/-configDir\ sites/blowfish\ -\/-themesDir\ themes} \\
+Preview (PaperMod) &
+\texttt{hugo\ server\ -\/-configDir\ sites/papermod\ -\/-themesDir\ themes} \\
+New blog post &
+\texttt{hugo\ new\ content\ posts/NAME.md\ -\/-configDir\ sites/congo\ -\/-themesDir\ themes} \\
+See what changed & \texttt{git\ status} / \texttt{git\ diff} \\
+Publish &
+\texttt{git\ add\ .\ \&\&\ git\ commit\ -m\ "message"\ \&\&\ git\ push} \\
+Update themes &
+\texttt{git\ submodule\ update\ -\/-remote\ -\/-merge} \\
+Undo a pushed commit &
+\texttt{git\ revert\ \textless{}id\textgreater{}\ \&\&\ git\ push} \\
+\end{longtable}
+
+\hypertarget{references}{%
+\section{10. References}\label{references}}
+
+\begin{itemize}
+\tightlist
+\item
+  Hugo documentation: \url{https://gohugo.io/documentation/}
+\item
+  Congo theme documentation:
+  \url{https://jpanther.github.io/congo/docs/}
+\item
+  Blowfish theme documentation: \url{https://blowfish.page/docs/}
+\item
+  PaperMod wiki:
+  \url{https://github.com/adityatelange/hugo-PaperMod/wiki}
+\item
+  GitHub Pages documentation: \url{https://docs.github.com/en/pages}
+\item
+  Hosting Hugo on GitHub Pages:
+  \url{https://gohugo.io/host-and-deploy/host-on-github-pages/}
+\item
+  Markdown guide: \url{https://www.markdownguide.org/basic-syntax/}
+\item
+  Git handbook: \url{https://git-scm.com/book/en/v2}
+\end{itemize}
+
+\end{document}

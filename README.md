@@ -8,7 +8,9 @@ Personal academic site of Zhuang Ge, built with [Hugo](https://gohugo.io/). One 
 | [Blowfish](https://github.com/nunocoracao/blowfish) | `sites/blowfish` | Dark ocean scheme, gradient header, table of contents, recent posts |
 | [PaperMod](https://github.com/adityatelange/hugo-PaperMod) | `sites/papermod` | Minimal profile card with buttons, auto light/dark |
 
-Step-by-step manuals: [docs/INSTALL.md](docs/INSTALL.md) (installation and deployment) and [docs/EDITING.md](docs/EDITING.md) (changing content, menus, colours, themes).
+Full manual: [docs/MANUAL.md](docs/MANUAL.md) (also as [PDF](docs/MANUAL.pdf), [Word](docs/MANUAL.docx) and [LaTeX](docs/MANUAL.tex)). Short guides: [docs/INSTALL.md](docs/INSTALL.md), [docs/EDITING.md](docs/EDITING.md).
+
+Live site: <https://gezhuang0717.github.io>
 
 ## Structure
 
@@ -38,7 +40,7 @@ Open http://localhost:1313.
 
 ## Deploy to GitHub Pages
 
-1. Create a repository named `<username>.github.io` and push this folder to `main`.
+1. This repository is already connected: pushes to `main` deploy to https://gezhuang0717.github.io.
 2. Repository → Settings → Pages → Source: **GitHub Actions**.
 3. Every push rebuilds the site. To switch theme, change `THEME:` in `.github/workflows/hugo.yml`.
 

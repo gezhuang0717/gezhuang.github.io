@@ -1,31 +1,120 @@
-# ─────────────────────────────────────────────────────────────────────────────
-# Talks database — shown on the Talks page in every language.
-# kind: invited | contributed      date: YYYY-MM-DD or YYYY-MM (sorting)
-# title, event, place: text        url: optional link (indico, slides…)
-# Command-line helper: python3 tools/site.py talk-add --help
-# ─────────────────────────────────────────────────────────────────────────────
 talks:
-  - {kind: invited, date: "2025-10-12", title: "High-precision mass measurements with JYFLTRAP", event: "ISTROS 2025: Isospin, Structure, Reactions and energy Of Symmetry", place: "Bratislava, Slovakia", url: "https://istros.sav.sk"}
-  - {kind: invited, date: "2025-08-18", title: "Mass measurements of N ∼ Z nuclei", event: "Nuclear Masses in Astrophysics for the Next 25 Years", place: "Darmstadt, Germany", url: "https://indico.gsi.de/event/22417/timetable/#20250820"}
-  - {kind: invited, date: "2024-02-27", title: "Mass measurements of N = Z nuclei (from Zr to Ag)", event: "DESIR Workshop 2024", place: "GANIL, Caen, France", url: "https://indico.in2p3.fr/event/31364/"}
-  - {kind: invited, date: "2023-11-08", title: "Mass measurements of radioactive nuclei with modern techniques", event: "SPeCial4Young: SYSU-PKU Collider Physics Forum for Young Scientists", place: "Beijing, China", url: "https://indico.ihep.ac.cn/event/20843/"}
-  - {kind: invited, date: "2022-12-06", title: "Mass measurements of N = Z nuclei and the vicinity at the RIBF", event: "23rd RIKEN Program Advisory Committee for Nuclear-Physics Experiments at RIBF", place: "Saitama, Japan"}
-  - {kind: invited, date: "2022-09-19", title: "Mass measurements related to neutrino physics", event: "NUSTAR Collaboration Meeting 2022", place: "GSI, Darmstadt, Germany", url: "https://indico.gsi.de/event/12838/timetable/"}
-  - {kind: invited, date: "2021-10-14", title: "Mass measurements for low Q-value determination related to neutrino physics", event: "JYFLTRAP Collaboration Seminar", place: "NRC Kurchatov Institute, Moscow, Russia"}
-  - {kind: invited, date: "2019-11", title: "Mass measurements with storage ring at RIBF in RIKEN", event: "Seminar", place: "University of Jyväskylä, Finland"}
-  - {kind: contributed, date: "2026-09-14", title: "High-precision determination of low-Q-value β-decay energies with the JYFLTRAP double Penning trap", event: "9th International Conference on Trapped Charged Particles and Fundamental Physics (TCP 2026)", place: "Vale of Glamorgan, Wales, UK", url: "https://indico.cern.ch/event/1717022/"}
-  - {kind: contributed, date: "2026-06-01", title: "Presentation at ARIS 2026 (title to be added)", event: "5th International Conference on Advances in Radioactive Isotope Science (ARIS 2026)", place: "Fukushima, Japan", url: "https://indico.rcnp.osaka-u.ac.jp/event/2571"}
-  - {kind: contributed, date: "2025-09-21", title: "Mass measurements of exotic neutron-deficient nuclides at IGISOL", event: "European Nuclear Physics Conference (EuNPC 2025)", place: "Caen, France", url: "https://indico.in2p3.fr/event/30430/"}
-  - {kind: contributed, date: "2025-06-15", title: "Mass measurements of exotic neutron-deficient nuclides below ¹⁰⁰Sn at IGISOL and their astrophysical implications", event: "XVIII Nuclei in the Cosmos", place: "Girona, Spain", url: "https://indico.icc.ub.edu/event/341/"}
-  - {kind: contributed, date: "2024-06-09", title: "High-precision decay energy measurements of low Q-value beta decays with JYFLTRAP", event: "PLATAN 2024", place: "Jyväskylä, Finland", url: "https://indico.global/event/9991"}
-  - {kind: contributed, date: "2024-01-29", title: "Mass measurements of N = Z nuclei and the vicinity with Rare-RI Ring in RIKEN for the study of rp- and νp-processes", event: "WE-Heraeus Seminar: Nuclear Astrophysics with Ion Storage Rings", place: "Bad Honnef, Germany", url: "https://dpg-physik.de/veranstaltungen/2024/nuclear_astrophysics_with_ion_storage_rings"}
-  - {kind: contributed, date: "2023-10-27", title: "Complementary mass measurements of N ∼ Z isotopes at IGISOL and RIKEN", event: "JSPS Alumni Seminar (KEK-WNSC and JYFL-ACCLAB)", place: "Jyväskylä, Finland"}
-  - {kind: contributed, date: "2023-06-25", title: "Recent mass measurements of exotic neutron-deficient nuclides below ¹⁰⁰Sn at the FRS Ion Catcher and at JYFLTRAP", event: "PROCON 2023", place: "Warsaw, Poland", url: "https://procon2023.fuw.edu.pl/"}
-  - {kind: contributed, date: "2022-03-28", title: "Search for low Q-value beta decays for neutrino mass determination", event: "DPG Spring Meeting 2022 (Hadronic and Nuclear Physics)", place: "Mainz, Germany (online)", url: "https://www.dpg-verhandlungen.de/year/2022/conference/mainz/part/hk?lang=en"}
-  - {kind: contributed, date: "2021-09-13", title: "Search of beta decays with ultra-low Q value for neutrino mass determination", event: "Euroschool on Exotic Beams 2021", place: "Leuven, Belgium (online)", url: "https://lisa-itn.web.cern.ch/node/115"}
-  - {kind: contributed, date: "2021-03-24", title: "Search of beta decays with ultra-low Q value for neutrino mass determination", event: "Physics Days 2021, Finnish Physical Society", place: "Jyväskylä, Finland"}
-  - {kind: contributed, date: "2018-11-29", title: "Mass measurements of N = Z nuclei and the vicinity at the RIBF (No. 1)", event: "19th RIBF Program Advisory Committee", place: "Saitama, Japan"}
-  - {kind: contributed, date: "2018-07-16", title: "Plans of mass measurements at RIKEN RIBF", event: "Physics for Storage Rings Workshop", place: "IMP-CAS, Lanzhou, China"}
-  - {kind: contributed, date: "2017-04-03", title: "Development of large-area position-sensitive MCP detector at Rare RI Ring", event: "Physical Society of Japan meeting", place: "Osaka University, Japan"}
-  - {kind: contributed, date: "2016-08-19", title: "Mass as inputs in network calculation for modelling of the r-process", event: "3rd Astrophysical Nuclear Reaction Network School", place: "Schmitten, Germany", url: "https://indico.gsi.de/event/4596/"}
-  - {kind: contributed, date: "2016-03-06", title: "Mass measurements of short-lived nuclides at storage rings in Asia and their impacts on astrophysics", event: "Rußbach School on Nuclear Astrophysics", place: "Rußbach, Austria", url: "https://indico.ph.tum.de/event/3470/"}
+- kind: invited
+  date: '2025-10-12'
+  title: High-precision mass measurements with JYFLTRAP
+  event: 'ISTROS 2025: Isospin, Structure, Reactions and energy Of Symmetry'
+  place: Bratislava, Slovakia
+  url: https://istros.sav.sk
+  public_status: legacy_public_event_link
+- kind: invited
+  date: '2025-08-18'
+  title: Mass measurements of N ∼ Z nuclei
+  event: Nuclear Masses in Astrophysics for the Next 25 Years
+  place: Darmstadt, Germany
+  url: https://indico.gsi.de/event/22417/timetable/#20250820
+  public_status: legacy_public_event_link
+- kind: invited
+  date: '2024-02-27'
+  title: Mass measurements of N = Z nuclei (from Zr to Ag)
+  event: DESIR Workshop 2024
+  place: GANIL, Caen, France
+  url: https://indico.in2p3.fr/event/31364/
+  public_status: legacy_public_event_link
+- kind: invited
+  date: '2023-11-08'
+  title: Mass measurements of radioactive nuclei with modern techniques
+  event: 'SPeCial4Young: SYSU-PKU Collider Physics Forum for Young Scientists'
+  place: Beijing, China
+  url: https://indico.ihep.ac.cn/event/20843/
+  public_status: legacy_public_event_link
+- kind: invited
+  date: '2022-09-19'
+  title: Mass measurements related to neutrino physics
+  event: NUSTAR Collaboration Meeting 2022
+  place: GSI, Darmstadt, Germany
+  url: https://indico.gsi.de/event/12838/timetable/
+  public_status: legacy_public_event_link
+- kind: contributed
+  date: '2026-09-14'
+  title: High-precision determination of low-Q-value β-decay energies with the JYFLTRAP
+    double Penning trap
+  event: 9th International Conference on Trapped Charged Particles and Fundamental
+    Physics (TCP 2026)
+  place: Vale of Glamorgan, Wales, UK
+  url: https://indico.cern.ch/event/1717022/
+  public_status: legacy_public_event_link
+- kind: contributed
+  date: '2026-06-01'
+  title: Recent Advances and Precision Measurements with JYFLTRAP Double Penning Trap Mass Spectrometer
+  event: 5th International Conference on Advances in Radioactive Isotope Science (ARIS 2026)
+  place: Fukushima, Japan
+  url: https://indico.rcnp.osaka-u.ac.jp/event/2571
+  public_status: confirmed_by_owner_2026-10-03
+- kind: contributed
+  date: '2025-09-21'
+  title: Mass measurements of exotic neutron-deficient nuclides at IGISOL
+  event: European Nuclear Physics Conference (EuNPC 2025)
+  place: Caen, France
+  url: https://indico.in2p3.fr/event/30430/
+  public_status: legacy_public_event_link
+- kind: contributed
+  date: '2025-06-15'
+  title: Mass measurements of exotic neutron-deficient nuclides below ¹⁰⁰Sn at IGISOL
+    and their astrophysical implications
+  event: XVIII Nuclei in the Cosmos
+  place: Girona, Spain
+  url: https://indico.icc.ub.edu/event/341/
+  public_status: legacy_public_event_link
+- kind: contributed
+  date: '2024-06-09'
+  title: High-precision decay energy measurements of low Q-value beta decays with
+    JYFLTRAP
+  event: PLATAN 2024
+  place: Jyväskylä, Finland
+  url: https://indico.global/event/9991
+  public_status: legacy_public_event_link
+- kind: contributed
+  date: '2024-01-29'
+  title: Mass measurements of N = Z nuclei and the vicinity with Rare-RI Ring in RIKEN
+    for the study of rp- and νp-processes
+  event: 'WE-Heraeus Seminar: Nuclear Astrophysics with Ion Storage Rings'
+  place: Bad Honnef, Germany
+  url: https://dpg-physik.de/veranstaltungen/2024/nuclear_astrophysics_with_ion_storage_rings
+  public_status: legacy_public_event_link
+- kind: contributed
+  date: '2023-06-25'
+  title: Recent mass measurements of exotic neutron-deficient nuclides below ¹⁰⁰Sn
+    at the FRS Ion Catcher and at JYFLTRAP
+  event: PROCON 2023
+  place: Warsaw, Poland
+  url: https://procon2023.fuw.edu.pl/
+  public_status: legacy_public_event_link
+- kind: contributed
+  date: '2022-03-28'
+  title: Search for low Q-value beta decays for neutrino mass determination
+  event: DPG Spring Meeting 2022 (Hadronic and Nuclear Physics)
+  place: Mainz, Germany (online)
+  url: https://www.dpg-verhandlungen.de/year/2022/conference/mainz/part/hk?lang=en
+  public_status: legacy_public_event_link
+- kind: contributed
+  date: '2021-09-13'
+  title: Search of beta decays with ultra-low Q value for neutrino mass determination
+  event: Euroschool on Exotic Beams 2021
+  place: Leuven, Belgium (online)
+  url: https://lisa-itn.web.cern.ch/node/115
+  public_status: legacy_public_event_link
+- kind: contributed
+  date: '2016-08-19'
+  title: Mass as inputs in network calculation for modelling of the r-process
+  event: 3rd Astrophysical Nuclear Reaction Network School
+  place: Schmitten, Germany
+  url: https://indico.gsi.de/event/4596/
+  public_status: legacy_public_event_link
+- kind: contributed
+  date: '2016-03-06'
+  title: Mass measurements of short-lived nuclides at storage rings in Asia and their
+    impacts on astrophysics
+  event: Rußbach School on Nuclear Astrophysics
+  place: Rußbach, Austria
+  url: https://indico.ph.tum.de/event/3470/
+  public_status: legacy_public_event_link

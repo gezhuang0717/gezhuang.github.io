@@ -4,18 +4,25 @@ description: "グループメンバー、教育、編集活動。"
 showDate: false
 ---
 
-フィンランド研究評議会とユヴァスキュラ大学の支援を受け、IGISOL/JYFLTRAP で研究グループを率いています。
+**English fallback:** The October 2026 member update is awaiting translation.
 
-## メンバー
+I work at IGISOL/JYFLTRAP in the University of Jyväskylä Accelerator Laboratory.
 
-- **Brian Kootte 博士** — 博士研究員（[プロフィール](https://www.jyu.fi/en/people/brian-koote)）
-- **Marlom de Oliveira Ramalho 博士** — 博士研究員（[プロフィール](https://www.jyu.fi/en/people/marlom-de-oliveira-ramalho)）
-- **Miikka Winter** — 博士課程学生
+## Members and collaborators
 
-## 教育
+- **Dr. Brian Kootte** — Postdoctoral Researcher ([university profile](https://www.jyu.fi/en/people/brian-kootte)).
+- **Miikka Winter** — Doctoral Researcher ([university profile](https://www.jyu.fi/fi/henkilot/miikka-winter)).
 
-- **FYSS3552** — *Lasers and Traps in Nuclear Physics Studies*（ユヴァスキュラ大学 博士課程講義）
+## Former members and continuing collaborators
 
-## 編集活動
+- **Dr. Marlom Ramalho** — former JYFLTRAP/IGISOL postdoctoral researcher (2024); his [public profile](https://www.nucleonicinsight.com/about.html) lists a subsequent Oskar Huttunen Fellowship at the University of York.
 
-- *Sensors* 誌特集号 [Detectors & Sensors in Nuclear Physics and Nuclear Astrophysics](https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1) ゲストエディター
+## Teaching
+
+- **FYSS3552** — *Lasers and Traps in Nuclear Physics Studies*, University of Jyväskylä doctoral course.
+
+## Editorial work
+
+- Guest editor, *Sensors* special issue [Detectors and Sensors in Nuclear Physics and Nuclear Astrophysics](https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1).
+
+The member roles above were checked against public profiles on 3 October 2026. This selected list is not the full IGISOL staff directory; see the [IGISOL group](https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol).

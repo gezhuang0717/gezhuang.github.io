@@ -1,5 +1,5 @@
 ---
-title: "Talks"
+title: "Main talks"
 description: "Invited talks and conference presentations, with links to the meetings."
 showDate: false
 ---

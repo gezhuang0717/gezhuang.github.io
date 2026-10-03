@@ -23,3 +23,6 @@ runtime/
 cache/
 snapshots/
 builds/
+
+# Manuals stay on the local PSSD only (privacy)
+docs/

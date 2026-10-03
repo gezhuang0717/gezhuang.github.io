@@ -1,0 +1,24 @@
+{
+  "fetched": "2026-10-03T15:20:00Z",
+  "note": "Seed sample taken from the INSPIRE-HEP jobs API on 2026-10-03; later files are written automatically by tools/site.py fetch.",
+  "entries": [
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Tenure-Track Assistant Professor in Physics — Villanova U.",
+      "summary": "North America · deadline 2026-11-15 · categories include nucl-ex, nucl-th, physics.ins-det",
+      "url": "https://inspirehep.net/jobs/3209539",
+      "source": "INSPIRE-HEP Jobs",
+      "tags": ["nuclear"]
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Graduate Student Positions (M.S. / Ph.D.) in Physics — Sungkyunkwan U.",
+      "summary": "Asia · deadline 2026-11-26 · categories include nucl-ex, nucl-th",
+      "url": "https://inspirehep.net/jobs/3208711",
+      "source": "INSPIRE-HEP Jobs",
+      "tags": ["nuclear"]
+    }
+  ]
+}

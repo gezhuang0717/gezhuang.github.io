@@ -1,0 +1,30 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# GitLab Pages version of the same site (optional mirror).
+# Push this repository to a GitLab project; the site appears at
+#   https://<gitlab-user>.gitlab.io/<project>/   (Settings → Deploy → Pages)
+# A daily feed update can be added under Build → Pipeline schedules with the
+# variable FETCH=1.
+# ─────────────────────────────────────────────────────────────────────────────
+image: python:3.12-slim
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  HUGO_VERSION: "0.166.0"
+
+pages:
+  stage: deploy
+  script:
+    - apt-get update -qq && apt-get install -y -qq wget git > /dev/null
+    - wget -q -O /tmp/hugo.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+    - dpkg -i /tmp/hugo.deb
+    - pip install -q pyyaml
+    - if [ "$FETCH" = "1" ]; then python3 tools/site.py fetch || true; fi
+    - python3 tools/site.py check
+    - python3 tools/site.py config
+    - THEME=$(python3 -c "import yaml;print(yaml.safe_load(open('site.yaml'))['live_theme'])")
+    - hugo --gc --minify --configDir "sites/$THEME" --themesDir themes --baseURL "$CI_PAGES_URL/" -d public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

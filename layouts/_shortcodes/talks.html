@@ -1,0 +1,15 @@
+{{- /*
+  List talks from data/talks.yaml.   {{< talks kind="invited" >}}  or  kind="contributed"
+*/ -}}
+{{- $kind := .Get "kind" -}}
+{{- $list := slice -}}
+{{- range hugo.Data.talks.talks }}{{ if or (not $kind) (eq .kind $kind) }}{{ $list = $list | append . }}{{ end }}{{ end -}}
+<ul class="zg-talks">
+{{- range sort $list "date" "desc" }}
+  <li class="zg-talk">
+    <span class="zg-date">{{ substr (string .date) 0 4 }}</span>
+    <span class="zg-talk-body"><em>{{ .title | markdownify }}</em>.
+      {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .event }}</a>{{ else }}{{ .event }}{{ end }}{{ with .place }}, {{ . }}{{ end }}</span>
+  </li>
+{{- end }}
+</ul>

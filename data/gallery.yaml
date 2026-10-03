@@ -1,0 +1,109 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Image gallery (Research page; first `home: true` images also on the homepage).
+# Put files in static/img/gallery/ (WebP/PNG/JPG ≤ 2000 px wide, or MP4 video).
+# Image:  file: name.webp        Video: video: name.mp4 + poster: name-poster.webp
+# wide: true → spans the full row.  Order below = order on the page.
+# caption: one text per language (en zh fi de ja); missing languages fall back to en.
+# source: where the figure was published (shown under the caption, optional).
+# ─────────────────────────────────────────────────────────────────────────────
+images:
+- file: ion-trap-family.webp
+  home: true
+  wide: true
+  caption:
+    en: 'The family of ion and atom traps used for precision measurements: linear Paul trap, Penning trap, Orbitrap, magneto-optical trap and storage ring.'
+    zh: 用于精密测量的离子与原子阱家族：线性 Paul 阱、彭宁阱、轨道阱、磁光阱和储存环。
+    fi: 'Tarkkuusmittauksissa käytettyjen ioni- ja atomiloukkujen perhe: lineaarinen Paul-loukku, Penning-loukku, Orbitrap, magneto-optinen loukku ja varastorengas.'
+    de: 'Die Familie der Ionen- und Atomfallen für Präzisionsmessungen: lineare Paul-Falle, Penning-Falle, Orbitrap, magneto-optische Falle und Speicherring.'
+    ja: 精密測定に用いられるイオン・原子トラップ：線形パウルトラップ、ペニングトラップ、オービトラップ、磁気光学トラップ、蓄積リング。
+- video: paul-trap-potential.mp4
+  poster: paul-trap-potential-poster.webp
+  home: true
+  caption:
+    en: 'Rotating saddle-shaped potential of a Paul trap: the RF field confines an ion that would escape a static saddle.'
+    zh: Paul 阱中旋转的马鞍形势：射频场将离子约束在静态鞍点上本会逃逸的位置。
+    fi: 'Paul-loukun pyörivä satulapotentiaali: radiotaajuinen kenttä vangitsee ionin, joka karkaisi staattisesta satulasta.'
+    de: 'Rotierendes Sattelpotential einer Paul-Falle: das RF-Feld hält ein Ion fest, das aus einem statischen Sattel entweichen würde.'
+    ja: パウルトラップの回転する鞍型ポテンシャル：静的な鞍点からは逃げるイオンを高周波電場が閉じ込める。
+- file: jyfltrap-ion-flower.webp
+  home: true
+  caption:
+    en: '"An ion flow for you": an ion-position image recorded on the position-sensitive MCP detector at JYFLTRAP.'
+    zh: “送你一朵离子花”：在 JYFLTRAP 位置灵敏 MCP 探测器上记录的离子位置图像。
+    fi: '”Ionivirta sinulle”: JYFLTRAPin paikkaherkällä MCP-ilmaisimella tallennettu ionien paikkakuva.'
+    de: '„Ein Ionenfluss für dich“: Ionen-Ortsbild, aufgenommen mit dem ortsauflösenden MCP-Detektor an JYFLTRAP.'
+    ja: 「あなたにイオンの花を」：JYFLTRAP の位置検出型 MCP 検出器で記録したイオン位置画像。
+- file: mrtof-simion.webp
+  home: true
+  wide: true
+  caption:
+    en: SIMION ion-optics simulation of ion trajectories through a multi-reflection time-of-flight (MR-TOF) mass spectrometer.
+    zh: 多次反射飞行时间（MR-TOF）质谱仪中离子轨迹的 SIMION 离子光学模拟。
+    fi: SIMION-ionioptiikkasimulaatio ionien radoista monikertaheijastavassa lentoaikamassaspektrometrissä (MR-TOF).
+    de: SIMION-Simulation der Ionenbahnen in einem Multireflexions-Flugzeit-Massenspektrometer (MR-TOF).
+    ja: 多重反射飛行時間型（MR-TOF）質量分析器内のイオン軌道の SIMION シミュレーション。
+- video: paul-saddle.mp4
+  poster: paul-saddle-poster.webp
+  caption:
+    en: An ion (cyan) riding the oscillating saddle potential of a Paul trap.
+    zh: 离子（青色）在 Paul 阱振荡的鞍形势上运动。
+    fi: Ioni (syaani) Paul-loukun värähtelevällä satulapotentiaalilla.
+    de: Ein Ion (cyan) auf dem oszillierenden Sattelpotential einer Paul-Falle.
+    ja: パウルトラップの振動する鞍型ポテンシャル上のイオン（シアン）。
+- file: jyfltrap-3d-events.webp
+  caption:
+    en: '3D view of gated events at JYFLTRAP: detector position (x, y) and time of flight.'
+    zh: JYFLTRAP 门控事件的三维视图：探测器位置（x, y）与飞行时间。
+    fi: 'JYFLTRAPin valittujen tapahtumien 3D-näkymä: ilmaisinpaikka (x, y) ja lentoaika.'
+    de: '3D-Ansicht ausgewählter Ereignisse an JYFLTRAP: Detektorposition (x, y) und Flugzeit.'
+    ja: JYFLTRAP のゲート付きイベントの 3 次元表示：検出器位置（x, y）と飛行時間。
+- file: storage-ring-ims.webp
+  caption:
+    en: 'Isochronous mass spectrometry in a storage ring: ions with different m/q and velocity circulate on different orbits and are timed by a TOF detector.'
+    zh: 储存环等时性质谱：不同质荷比和速度的离子沿不同轨道运行，由飞行时间探测器计时。
+    fi: 'Isokroninen massaspektrometria varastorenkaassa: eri m/q-arvon ja nopeuden ionit kiertävät eri radoilla, ja TOF-ilmaisin ajoittaa ne.'
+    de: 'Isochrone Massenspektrometrie im Speicherring: Ionen mit unterschiedlichem m/q und Geschwindigkeit laufen auf verschiedenen Bahnen und werden von einem TOF-Detektor gemessen.'
+    ja: 蓄積リングでの等時性質量分析：m/q と速度の異なるイオンが異なる軌道を周回し、TOF 検出器で時間計測される。
+- file: mirror-mcp-detector.webp
+  caption:
+    en: Design of the electrostatic-mirror-type MCP timing detector developed for the Rare-RI Ring at RIKEN.
+    zh: 为 RIKEN Rare-RI Ring 研制的静电镜型 MCP 定时探测器设计图。
+    fi: RIKENin Rare-RI Ringille kehitetyn sähköstaattisen peili-MCP-ajoitusilmaisimen rakenne.
+    de: Konstruktion des elektrostatischen Spiegel-MCP-Zeitdetektors für den Rare-RI Ring am RIKEN.
+    ja: RIKEN 稀少 RI リング用に開発した静電ミラー型 MCP 時間検出器の設計図。
+  source: Z. Ge et al., JPS Conf. Proc. 35, 011023 (2021)
+  url: https://doi.org/10.7566/JPSCP.35.011023
+- file: beamline-cad.webp
+  wide: true
+  caption:
+    en: 3D CAD layout of a low-energy radioactive-ion beam line for precision-trap experiments.
+    zh: 用于精密离子阱实验的低能放射性离子束线三维 CAD 布局。
+    fi: Tarkkuusloukkukokeiden matalaenergisen radioaktiivisen ionisuihkulinjan 3D-CAD-malli.
+    de: 3D-CAD-Layout einer niederenergetischen Strahlführung für radioaktive Ionen und Präzisionsfallen-Experimente.
+    ja: 精密トラップ実験用の低エネルギー放射性イオンビームラインの 3 次元 CAD レイアウト。
+- file: mirror-mcp-timing.webp
+  caption:
+    en: 'Mirror-type MCP detector: test set-up, design, and timing resolution versus accelerating voltage (experiment and simulation).'
+    zh: 镜型 MCP 探测器：测试布局、结构设计以及时间分辨随加速电压的变化（实验与模拟）。
+    fi: 'Peili-MCP-ilmaisin: testijärjestely, rakenne ja aikaresoluutio kiihdytysjännitteen funktiona (koe ja simulaatio).'
+    de: 'Spiegel-MCP-Detektor: Testaufbau, Konstruktion und Zeitauflösung in Abhängigkeit der Beschleunigungsspannung (Experiment und Simulation).'
+    ja: ミラー型 MCP 検出器：試験配置、設計、加速電圧に対する時間分解能（実験とシミュレーション）。
+  source: Z. Ge et al., RIKEN Accel. Prog. Rep. 51, 152 (2018)
+  url: https://www.nishina.riken.jp/researcher/APR/APR051/pdf/152.pdf
+- video: network-light.mp4
+  poster: network-light-poster.webp
+  caption:
+    en: 'Nucleosynthesis network simulation: abundances (mass fraction) evolving on the chart of nuclides, light-element region.'
+    zh: 核合成网络模拟：核素图上丰度（质量分数）随时间的演化（轻核区）。
+    fi: 'Nukleosynteesiverkon simulaatio: runsauksien (massaosuus) kehitys nuklidikartalla, kevyiden ytimien alue.'
+    de: 'Simulation eines Nukleosynthese-Netzwerks: zeitliche Entwicklung der Häufigkeiten (Massenanteil) auf der Nuklidkarte, leichter Bereich.'
+    ja: 元素合成ネットワーク計算：核図表上の存在量（質量分率）の時間発展（軽い核の領域）。
+- video: network-heavy.mp4
+  poster: network-heavy-poster.webp
+  wide: true
+  caption:
+    en: 'Nucleosynthesis network simulation up to the heaviest elements: the reaction flow moves across the chart of nuclides.'
+    zh: 直至最重元素的核合成网络模拟：反应流在核素图上推进。
+    fi: 'Nukleosynteesiverkon simulaatio raskaimpiin alkuaineisiin asti: reaktiovirta etenee nuklidikartalla.'
+    de: 'Nukleosynthese-Netzwerk bis zu den schwersten Elementen: der Reaktionsfluss wandert über die Nuklidkarte.'
+    ja: 最も重い元素までの元素合成ネットワーク計算：反応の流れが核図表上を進む。

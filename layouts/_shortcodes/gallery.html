@@ -1,0 +1,24 @@
+{{- /*
+  Image / video gallery from data/gallery.yaml.
+  {{< gallery >}}             everything
+  {{< gallery home="true" >}} only items marked home: true
+*/ -}}
+{{- $short := index (split site.Language.Lang "-") 0 -}}
+{{- $onlyHome := eq (.Get "home") "true" -}}
+<div class="zg-gallery">
+{{- range hugo.Data.gallery.images }}
+  {{- $it := . -}}
+  {{- if or (not $onlyHome) $it.home }}
+  {{- $cap := index $it.caption $short | default $it.caption.en }}
+  <figure class="zg-fig{{ if $it.wide }} is-wide{{ end }}">
+    {{- if $it.video }}
+    <video src="{{ printf "img/gallery/%s" $it.video | absURL }}"{{ with $it.poster }} poster="{{ printf "img/gallery/%s" . | absURL }}"{{ end }} autoplay muted loop playsinline preload="metadata" aria-label="{{ $cap }}"></video>
+    {{- else }}
+    {{- $src := printf "img/gallery/%s" $it.file | absURL }}
+    <a href="{{ $src }}" target="_blank" rel="noopener"><img src="{{ $src }}" alt="{{ $cap }}" loading="lazy"></a>
+    {{- end }}
+    <figcaption>{{ $cap }}{{ with $it.source }} <span class="zg-fig-src">— {{ if $it.url }}<a href="{{ $it.url }}" target="_blank" rel="noopener">{{ . }}</a>{{ else }}{{ . }}{{ end }}</span>{{ end }}</figcaption>
+  </figure>
+  {{- end }}
+{{- end }}
+</div>

@@ -1,0 +1,134 @@
+{{- /*
+  Daily calendar: science logs, news, papers, jobs and events.
+  Data: data/daily/manual/YYYY-MM.yaml (written by hand or `tools/site.py add/batch`)
+        data/daily/auto/YYYY-MM-DD.json (written by `tools/site.py fetch` / the daily GitHub Action)
+  Usage in any page:  {{< daily-calendar >}}
+*/ -}}
+{{- $entries := slice -}}
+{{- with hugo.Data.daily -}}
+  {{- range $k, $v := .manual }}{{ range $v.entries }}{{ $entries = $entries | append (merge . (dict "origin" "manual")) }}{{ end }}{{ end -}}
+  {{- range $k, $v := .auto }}{{ range $v.entries }}{{ $entries = $entries | append (merge . (dict "origin" "auto")) }}{{ end }}{{ end -}}
+{{- end -}}
+{{- $entries = sort $entries "date" "desc" -}}
+{{- $types := slice "log" "news" "paper" "job" "event" -}}
+{{- $labels := dict -}}
+{{- range $types }}{{ $labels = merge $labels (dict . (i18n (printf "zg_type_%s" .))) }}{{ end -}}
+{{- $ui := dict
+    "today" (i18n "zg_today") "prev" (i18n "zg_prev") "next" (i18n "zg_next") "all" (i18n "zg_all")
+    "none" (i18n "zg_no_entries") "pick" (i18n "zg_pick_day") "search" (i18n "zg_search")
+    "on" (i18n "zg_entries_on") "source" (i18n "zg_source") "total" (i18n "zg_total")
+    "weekdays" (split (i18n "zg_weekdays") ",") "months" (split (i18n "zg_months") ",")
+    "types" $labels "lang" site.Language.Lang -}}
+<div class="zg-cal" id="zg-cal">
+  <div class="zg-cal-bar">
+    <button type="button" class="zg-btn" data-act="prev" aria-label="{{ i18n "zg_prev" }}">‹</button>
+    <h3 class="zg-cal-title" aria-live="polite">{{ i18n "zg_latest" }}</h3>
+    <button type="button" class="zg-btn" data-act="next" aria-label="{{ i18n "zg_next" }}">›</button>
+    <button type="button" class="zg-btn zg-today" data-act="today">{{ i18n "zg_today" }}</button>
+  </div>
+  <div class="zg-cal-filters" role="group">
+    <button type="button" class="zg-chip is-on" data-type="all">{{ i18n "zg_all" }}</button>
+    {{- range $types }}
+    <button type="button" class="zg-chip zg-t-{{ . }}" data-type="{{ . }}">{{ index $labels . }}</button>
+    {{- end }}
+    <input type="search" class="zg-search" id="zg-cal-search" placeholder="{{ i18n "zg_search" }}" aria-label="{{ i18n "zg_search" }}">
+  </div>
+  <div class="zg-cal-grid" hidden></div>
+  <div class="zg-cal-day">
+    <h4 class="zg-cal-dayhead">{{ i18n "zg_latest" }} · {{ len $entries }} {{ i18n "zg_total" }}</h4>
+    <ul class="zg-entries">
+      {{- range first 12 $entries }}
+      <li class="zg-entry zg-t-{{ .type }}">
+        <span class="zg-badge">{{ index $labels .type }}</span>
+        <span class="zg-entry-date">{{ .date }}</span>
+        {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>{{ else }}<strong>{{ .title }}</strong>{{ end }}
+        {{ with .summary }}<p>{{ . }}</p>{{ end }}
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+  <script type="application/json" class="zg-cal-data">{{ $entries | jsonify | safeJS }}</script>
+  <script type="application/json" class="zg-cal-ui">{{ $ui | jsonify | safeJS }}</script>
+</div>
+<script>
+(function () {
+  var root = document.getElementById("zg-cal");
+  if (!root) return;
+  var data = JSON.parse(root.querySelector(".zg-cal-data").textContent || "[]");
+  var ui = JSON.parse(root.querySelector(".zg-cal-ui").textContent || "{}");
+  var grid = root.querySelector(".zg-cal-grid");
+  var title = root.querySelector(".zg-cal-title");
+  var list = root.querySelector(".zg-entries");
+  var head = root.querySelector(".zg-cal-dayhead");
+  var search = root.querySelector(".zg-search");
+  var filter = "all", query = "";
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function iso(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]; }); }
+  function visible(e) {
+    if (filter !== "all" && e.type !== filter) return false;
+    if (!query) return true;
+    return (e.title + " " + (e.summary || "") + " " + (e.tags || []).join(" ") + " " + (e.source || "")).toLowerCase().indexOf(query) >= 0;
+  }
+  var byDay = {};
+  data.forEach(function (e) { (byDay[e.date] = byDay[e.date] || []).push(e); });
+  var todayIso = iso(new Date());
+  var start = byDay[todayIso] || !data.length ? todayIso : data[0].date;
+  var view = new Date(start.slice(0, 4), +start.slice(5, 7) - 1, 1);
+  var selected = start;
+  function renderGrid() {
+    var y = view.getFullYear(), m = view.getMonth();
+    title.textContent = (ui.months || [])[m] + " " + y;
+    var first = (new Date(y, m, 1).getDay() + 6) % 7;
+    var days = new Date(y, m + 1, 0).getDate();
+    var html = "";
+    (ui.weekdays || []).forEach(function (w) { html += '<div class="zg-wd">' + esc(w) + "</div>"; });
+    for (var i = 0; i < first; i++) html += '<div class="zg-cell is-empty"></div>';
+    for (var d = 1; d <= days; d++) {
+      var key = y + "-" + pad(m + 1) + "-" + pad(d);
+      var items = (byDay[key] || []).filter(visible);
+      var dots = "", seen = {};
+      items.forEach(function (e) { if (!seen[e.type]) { seen[e.type] = 1; dots += '<i class="zg-dot zg-t-' + esc(e.type) + '"></i>'; } });
+      var cls = "zg-cell" + (items.length ? " has" : "") + (key === todayIso ? " is-today" : "") + (key === selected ? " is-sel" : "");
+      html += '<button type="button" class="' + cls + '" data-day="' + key + '" aria-label="' + key + (items.length ? " (" + items.length + ")" : "") + '">' +
+              '<span class="zg-num">' + d + "</span>" + (items.length ? '<span class="zg-dots">' + dots + "</span>" : "") + "</button>";
+    }
+    grid.innerHTML = html;
+  }
+  function renderDay() {
+    var items = (byDay[selected] || []).filter(visible);
+    if (query && !items.length) {
+      items = data.filter(visible).slice(0, 30);
+      head.textContent = ui.search + " · " + items.length;
+    } else {
+      head.textContent = ui.on + " " + selected + " · " + items.length;
+    }
+    if (!items.length) { list.innerHTML = '<li class="zg-empty">' + esc(ui.none) + " " + esc(ui.pick) + "</li>"; return; }
+    list.innerHTML = items.map(function (e) {
+      var t = e.url ? '<a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.title) + "</a>" : "<strong>" + esc(e.title) + "</strong>";
+      var meta = [e.source ? ui.source + ": " + e.source : "", (e.tags || []).map(function (t) { return "#" + t; }).join(" ")].filter(Boolean).join(" · ");
+      return '<li class="zg-entry zg-t-' + esc(e.type) + '"><span class="zg-badge">' + esc((ui.types || {})[e.type] || e.type) + "</span>" +
+             '<span class="zg-entry-date">' + esc(e.date) + "</span> " + t +
+             (e.summary ? "<p>" + esc(e.summary) + "</p>" : "") + (meta ? '<small class="zg-meta">' + esc(meta) + "</small>" : "") + "</li>";
+    }).join("");
+  }
+  function render() { renderGrid(); renderDay(); }
+  root.addEventListener("click", function (ev) {
+    var b = ev.target.closest("button");
+    if (!b || !root.contains(b)) return;
+    if (b.dataset.day) { selected = b.dataset.day; render(); return; }
+    if (b.dataset.type) {
+      filter = b.dataset.type;
+      root.querySelectorAll(".zg-chip").forEach(function (c) { c.classList.toggle("is-on", c === b); });
+      render(); return;
+    }
+    if (b.dataset.act === "prev") view = new Date(view.getFullYear(), view.getMonth() - 1, 1);
+    if (b.dataset.act === "next") view = new Date(view.getFullYear(), view.getMonth() + 1, 1);
+    if (b.dataset.act === "today") { view = new Date(); view.setDate(1); selected = todayIso; }
+    render();
+  });
+  search.addEventListener("input", function () { query = search.value.trim().toLowerCase(); render(); });
+  grid.hidden = false;
+  render();
+})();
+</script>

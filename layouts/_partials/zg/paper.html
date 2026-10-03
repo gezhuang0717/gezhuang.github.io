@@ -1,0 +1,16 @@
+{{- /* One publication. Context: a paper map from data/publications.yaml */ -}}
+{{- $p := . -}}
+{{- $ref := "" -}}
+{{- with $p.journal }}{{ $ref = . }}{{ end -}}
+{{- with $p.volume }}{{ $ref = printf "%s <b>%s</b>" $ref . }}{{ end -}}
+{{- with $p.pages }}{{ $ref = printf "%s, %s" $ref . }}{{ end -}}
+{{- $ref = printf "%s (%v)" $ref $p.year -}}
+{{- $href := "" -}}
+{{- with $p.doi }}{{ $href = printf "https://doi.org/%s" . }}{{ else }}{{ with $p.url }}{{ $href = . }}{{ end }}{{ end -}}
+<li class="zg-paper">
+  <span class="zg-authors">{{ $p.authors | default "**Z. Ge** *et al.*" | markdownify }}</span>,
+  <span class="zg-title">{{ $p.title | markdownify }}</span>,
+  {{ if $href }}<a class="zg-ref" href="{{ $href }}" target="_blank" rel="noopener">{{ $ref | safeHTML }}</a>{{ else }}<span class="zg-ref">{{ $ref | safeHTML }}</span>{{ end -}}
+  {{- with $p.arxiv }} · <a class="zg-arxiv" href="https://arxiv.org/abs/{{ . }}" target="_blank" rel="noopener">arXiv:{{ . }}</a>{{ end -}}
+  {{- with $p.note }} <span class="zg-note">— {{ . | markdownify }}</span>{{ end }}
+</li>

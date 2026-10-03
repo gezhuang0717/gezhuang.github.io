@@ -1,0 +1,12 @@
+# Daily entries written by hand (one file per month: YYYY-MM.yaml).
+# Add with:  python3 tools/site.py add log "Title" --summary "…" --tags trap
+# or copy a block below.  Fields:
+#   date: YYYY-MM-DD    type: log | news | paper | job | event
+#   title (required), summary, url, source, tags (list), lang (optional)
+entries:
+  - date: "2026-10-03"
+    type: log
+    title: "Personal website relaunched with a daily calendar"
+    summary: "New multilingual site (EN/中文/FI/DE/日本語) with this calendar for science logs, news, papers and jobs in nuclear physics and ion-trap techniques."
+    url: "https://gezhuang0717.github.io/"
+    tags: [site]

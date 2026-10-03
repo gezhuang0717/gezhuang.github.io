@@ -1,0 +1,37 @@
+{{- /*
+  List papers from data/publications.yaml.
+  Parameters (all optional):
+    role      = first | corresponding | coauthor          (default: all roles)
+    theme     = nz | neutrino | isotope-shift | detectors (Research page groups)
+    highlight = only | exclude                            (co-authored highlights)
+    group     = year                                      (sub-heading per year)
+    numbered  = true                                      (numbered list)
+  Examples:  {{< pubs role="first" numbered="true" >}}
+             {{< pubs theme="neutrino" >}}
+             {{< pubs role="coauthor" highlight="exclude" group="year" >}}
+*/ -}}
+{{- $role := .Get "role" -}}
+{{- $theme := .Get "theme" -}}
+{{- $hl := .Get "highlight" -}}
+{{- $group := .Get "group" -}}
+{{- $numbered := eq (.Get "numbered") "true" -}}
+{{- $list := slice -}}
+{{- range hugo.Data.publications.papers -}}
+  {{- $ok := true -}}
+  {{- if and $role (ne .role $role) }}{{ $ok = false }}{{ end -}}
+  {{- if and $theme (not (in (.themes | default slice) $theme)) }}{{ $ok = false }}{{ end -}}
+  {{- if and (eq $hl "only") (not .highlight) }}{{ $ok = false }}{{ end -}}
+  {{- if and (eq $hl "exclude") .highlight }}{{ $ok = false }}{{ end -}}
+  {{- if $ok }}{{ $list = $list | append . }}{{ end -}}
+{{- end -}}
+{{- $list = sort $list "year" "desc" -}}
+{{- if eq $group "year" -}}
+  {{- $years := slice -}}{{- range $list }}{{ $years = $years | append .year }}{{ end -}}
+  {{- range sort (uniq $years) "value" "desc" -}}
+    {{- $y := . }}
+<h3 class="zg-year">{{ $y }}</h3>
+<ul class="zg-papers">{{ range where $list "year" $y }}{{ partial "zg/paper.html" . }}{{ end }}</ul>
+  {{- end -}}
+{{- else }}
+{{ if $numbered }}<ol class="zg-papers" reversed>{{ range $list }}{{ partial "zg/paper.html" . }}{{ end }}</ol>{{ else }}<ul class="zg-papers">{{ range $list }}{{ partial "zg/paper.html" . }}{{ end }}</ul>{{ end }}
+{{- end }}

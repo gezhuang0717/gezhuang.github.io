@@ -1,32 +1,77 @@
-# Builds the site with Hugo and deploys it to GitHub Pages on every push to main.
-# Change THEME to congo, blowfish or papermod to switch the look.
-name: Deploy Hugo site
+# ─────────────────────────────────────────────────────────────────────────────
+# Build and deploy https://gezhuang0717.github.io
+#  • every push to main            → check data, build, deploy
+#  • every day at 04:17 UTC        → fetch new papers/jobs/news (tools/feeds.yaml),
+#                                     commit them, build, deploy
+#  • Actions tab → "Run workflow"  → manual run; tick "fetch" to also fetch feeds
+# The live theme is read from site.yaml (live_theme).
+# ─────────────────────────────────────────────────────────────────────────────
+name: Build and deploy
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "17 4 * * *"
   workflow_dispatch:
+    inputs:
+      fetch:
+        description: "Fetch daily feeds before building"
+        type: boolean
+        default: false
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
   group: pages
   cancel-in-progress: false
 env:
-  HUGO_VERSION: 0.167.0
-  THEME: congo
+  HUGO_VERSION: 0.166.0
 jobs:
+  fetch:
+    if: github.event_name == 'schedule' || inputs.fetch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Fetch feeds
+        run: python3 tools/site.py fetch
+      - name: Validate
+        run: python3 tools/site.py check
+      - name: Commit new entries
+        run: |
+          git config user.name "daily-feeds-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/daily
+          if git diff --cached --quiet; then echo "No new entries"; else
+            git commit -m "Daily feeds $(date -u +%F)" && git push; fi
+
   build:
+    needs: fetch
+    if: always() && needs.fetch.result != 'failure'
     runs-on: ubuntu-latest
     steps:
       - name: Install Hugo extended
         run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          wget -q -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
           sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - uses: actions/checkout@v4
         with:
+          ref: main
           submodules: recursive
           fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Validate data and regenerate theme configs
+        run: |
+          python3 tools/site.py check
+          python3 tools/site.py config
+          echo "THEME=$(python3 -c "import yaml;print(yaml.safe_load(open('site.yaml'))['live_theme'])")" >> "$GITHUB_ENV"
       - id: pages
         uses: actions/configure-pages@v5
       - name: Build
@@ -34,12 +79,14 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+
   deploy:
+    needs: build
+    if: always() && needs.build.result == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4

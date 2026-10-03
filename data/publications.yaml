@@ -1,0 +1,438 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Publication database — the ONE place to edit papers.
+# Every language version of the site (and the React site, after
+# `python3 tools/site.py export-react`) reads this file.
+#
+# Fields (only title + year + role are required):
+#   role:      first | corresponding | coauthor
+#   year:      publication year (number)
+#   authors:   author string; Markdown allowed, **Z. Ge** is bolded
+#   title:     paper title (Unicode superscripts such as ¹⁰⁰Sn are fine)
+#   journal, volume, pages
+#   doi:       bare DOI, e.g. 10.1103/PhysRevC.103.065502  (link is built)
+#   arxiv:     bare arXiv id, e.g. 2103.08729
+#   url:       direct link when there is no DOI
+#   note:      short extra text shown after the reference (Markdown allowed)
+#   themes:    research themes this paper appears under on the Research page:
+#              nz | neutrino | isotope-shift | detectors
+#   highlight: true → listed under "Highlights" on the Publications page
+# Add a paper: copy a block, edit, keep newest first (order is not required;
+# lists are sorted by year automatically).
+# Command-line helpers: python3 tools/site.py pub-add --help
+#                       python3 tools/site.py pub-doi 10.1103/xxxx
+# ─────────────────────────────────────────────────────────────────────────────
+papers:
+  # ===== First-author =====
+  - role: first
+    year: 2026
+    authors: "**Z. Ge** *et al.*"
+    title: "Precise determination of electron-capture Q value of ¹¹³Sn decay related to electron neutrino mass measurements"
+    journal: "Phys. Rev. C"
+    volume: "114"
+    pages: "035501"
+    doi: "10.1103/bgj9-mzcq"
+    arxiv: "2604.03410"
+    note: "Q<sub>EC</sub> = 1039.25(19) keV"
+    themes: [neutrino]
+  - role: first
+    year: 2025
+    authors: "**Z. Ge** *et al.*"
+    title: "High-precision direct decay energy measurements of the electron-capture decay of ⁹⁷Tc"
+    journal: "Phys. Rev. C"
+    volume: "112"
+    pages: "035501"
+    doi: "10.1103/g393-xx1w"
+    arxiv: "2502.04490"
+    note: "Q<sub>EC</sub> = 324.82(21) keV"
+    themes: [neutrino]
+  - role: first
+    year: 2024
+    authors: "**Z. Ge**"
+    title: "Overview of high-performance timing and position-sensitive MCP detectors utilizing secondary electron emission for mass measurements of exotic nuclei at nuclear physics facilities"
+    journal: "Sensors"
+    volume: "24"
+    pages: "7261"
+    doi: "10.3390/s24227261"
+    note: "review"
+    themes: [detectors]
+  - role: first
+    year: 2024
+    authors: "**Z. Ge** *et al.*"
+    title: "High-precision measurements of the atomic mass and electron-capture decay Q value of ⁹⁵Tc"
+    journal: "Phys. Lett. B"
+    volume: "859"
+    pages: "139094"
+    doi: "10.1016/j.physletb.2024.139094"
+    arxiv: "2406.05273"
+    themes: [neutrino]
+  - role: first
+    year: 2024
+    authors: "**Z. Ge** *et al.*"
+    title: "High-precision measurement of the atomic mass of ⁸⁴Sr and implications to isotope shift studies"
+    journal: "Eur. Phys. J. A"
+    volume: "60"
+    pages: "147"
+    doi: "10.1140/epja/s10050-024-01359-7"
+    arxiv: "2404.02025"
+    themes: [isotope-shift]
+  - role: first
+    year: 2024
+    authors: "**Z. Ge** *et al.*"
+    title: "Direct high-precision measurement of the mass difference of ⁷⁷As–⁷⁷Se related to neutrino mass determination"
+    journal: "Eur. Phys. J. A"
+    volume: "60"
+    pages: "104"
+    doi: "10.1140/epja/s10050-024-01317-3"
+    arxiv: "2401.15242"
+    themes: [neutrino]
+  - role: first
+    year: 2024
+    authors: "**Z. Ge** *et al.*"
+    title: "High-precision mass measurements of neutron-deficient silver isotopes probe the robustness of the *N* = 50 shell closure"
+    journal: "Phys. Rev. Lett."
+    volume: "133"
+    pages: "132503"
+    doi: "10.1103/PhysRevLett.133.132503"
+    arxiv: "2401.07976"
+    themes: [nz]
+  - role: first
+    year: 2023
+    authors: "**Z. Ge** *et al.*"
+    title: "β⁻ decay Q-value measurement of ¹³⁶Cs and its implications for neutrino studies"
+    journal: "Phys. Rev. C"
+    volume: "108"
+    pages: "045502"
+    doi: "10.1103/PhysRevC.108.045502"
+    arxiv: "2306.04604"
+    themes: [neutrino]
+  - role: first
+    year: 2022
+    authors: "**Z. Ge** *et al.*"
+    title: "Direct determination of the atomic mass difference of the pairs ⁷⁶As–⁷⁶Se and ¹⁵⁵Tb–¹⁵⁵Gd rules out ⁷⁶As and ¹⁵⁵Tb as possible candidates for electron (anti)neutrino mass measurements"
+    journal: "Phys. Rev. C"
+    volume: "106"
+    pages: "015502"
+    doi: "10.1103/PhysRevC.106.015502"
+    arxiv: "2202.07656"
+    themes: [neutrino]
+  - role: first
+    year: 2022
+    authors: "**Z. Ge** *et al.*"
+    title: "High-precision electron-capture Q value measurement of ¹¹¹In for electron-neutrino mass determination"
+    journal: "Phys. Lett. B"
+    volume: "832"
+    pages: "137226"
+    doi: "10.1016/j.physletb.2022.137226"
+    arxiv: "2201.12573"
+    themes: [neutrino]
+  - role: first
+    year: 2021
+    authors: "**Z. Ge** *et al.*"
+    title: "¹⁵⁹Dy electron-capture: a new candidate for neutrino mass determination"
+    journal: "Phys. Rev. Lett."
+    volume: "127"
+    pages: "272301"
+    doi: "10.1103/PhysRevLett.127.272301"
+    arxiv: "2106.06626"
+    themes: [neutrino]
+  - role: first
+    year: 2021
+    authors: "**Z. Ge**"
+    title: "Development of a large-area timing and position-sensitive foil-MCP detector for mass measurements at the Rare-RI Ring in RIKEN"
+    journal: "arXiv preprint"
+    arxiv: "2106.08264"
+    themes: [detectors]
+  - role: first
+    year: 2021
+    authors: "**Z. Ge** *et al.*"
+    title: "Direct measurement of the mass difference of ⁷²As–⁷²Ge rules out ⁷²As as a promising β-decay candidate to determine the neutrino mass"
+    journal: "Phys. Rev. C"
+    volume: "103"
+    pages: "065502"
+    doi: "10.1103/PhysRevC.103.065502"
+    arxiv: "2103.08729"
+    themes: [neutrino]
+  - role: first
+    year: 2021
+    authors: "**Z. Ge** *et al.*"
+    title: "Development of mirror-type MCP detectors for mass measurements at the Rare-RI Ring"
+    journal: "JPS Conf. Proc."
+    volume: "35"
+    pages: "011023"
+    doi: "10.7566/JPSCP.35.011023"
+    themes: [detectors]
+  - role: first
+    year: 2019
+    authors: "**Z. Ge** *et al.*"
+    title: "Scheme of high-resolution identification and selection of secondary ions for mass measurements with the Rare-RI Ring"
+    journal: "Hyperfine Interact."
+    volume: "240"
+    pages: "92"
+    doi: "10.1007/s10751-019-1599-2"
+    themes: [detectors]
+  - role: first
+    year: 2019
+    authors: "**Z. Ge**, Q. Wang, M. Wang, T. Uesaka"
+    title: "Study of mass-measurement method for *N* = *Z* nuclei with isochronous mass spectrometry"
+    journal: "Nucl. Phys. Rev."
+    volume: "36"
+    pages: "294"
+    doi: "10.11804/NuclPhysRev.36.03.294"
+    themes: [nz]
+  - role: first
+    year: 2018
+    authors: "**Z. Ge** *et al.*"
+    title: "Timing performance of a mirror-type MCP detector for mass measurements at the Rare RI Ring"
+    journal: "RIKEN Accel. Prog. Rep."
+    volume: "51"
+    pages: "152"
+    url: "https://www.nishina.riken.jp/researcher/APR/APR051/pdf/152.pdf"
+    themes: [detectors]
+  - role: first
+    year: 2017
+    authors: "**Z. Ge** *et al.*"
+    title: "Simulation and design of a large-area position-sensitive TOF MCP detector at the Rare RI Ring"
+    journal: "RIKEN Accel. Prog. Rep."
+    volume: "50"
+    pages: "187"
+    url: "https://www.nishina.riken.jp/researcher/APR/APR050/pdf/contents.pdf"
+  - role: first
+    year: 2016
+    authors: "**Z. Ge** *et al.*"
+    title: "Online results for the injection ion optics of the Rare RI Ring"
+    journal: "RIKEN Accel. Prog. Rep."
+    volume: "49"
+    pages: "180"
+    url: "https://www.nishina.riken.jp/researcher/APR/APR049/pdf/180.pdf"
+
+  # ===== Corresponding author =====
+  - role: corresponding
+    year: 2022
+    authors: "M. Ramalho, **Z. Ge** *et al.*"
+    title: "Observation of an ultralow-Q-value electron-capture channel decaying to ⁷⁵As via a high-precision mass measurement"
+    journal: "Phys. Rev. C"
+    volume: "106"
+    pages: "015501"
+    doi: "10.1103/PhysRevC.106.015501"
+    arxiv: "2203.00457"
+    themes: [neutrino]
+  - role: corresponding
+    year: 2022
+    authors: "T. Eronen, **Z. Ge** *et al.*"
+    title: "High-precision measurement of a low Q value for allowed β⁻ decay of ¹³¹I related to neutrino mass determination"
+    journal: "Phys. Lett. B"
+    volume: "830"
+    pages: "137135"
+    doi: "10.1016/j.physletb.2022.137135"
+    themes: [neutrino]
+  - role: corresponding
+    year: 2019
+    authors: "J.-H. Liu, **Z. Ge** *et al.*"
+    title: "Electrostatic-lenses position-sensitive TOF MCP detector for beam diagnostics and new scheme for mass measurements at HIAF"
+    journal: "Nucl. Sci. Tech."
+    volume: "30"
+    pages: "152"
+    doi: "10.1007/s41365-019-0676-1"
+    arxiv: "2105.14551"
+    themes: [detectors]
+
+  # ===== Co-authored (selected) =====
+  - role: coauthor
+    highlight: true
+    year: 2022
+    authors: "M. Duer *et al.*"
+    title: "Observation of a correlated free four-neutron system"
+    journal: "Nature"
+    volume: "606"
+    pages: "678"
+    doi: "10.1038/s41586-022-04827-6"
+  - role: coauthor
+    highlight: true
+    year: 2023
+    authors: "P. Plattner *et al.*"
+    title: "Nuclear charge radius of ²⁶ᵐAl and its implication for V<sub>ud</sub> in the quark-mixing matrix"
+    journal: "Phys. Rev. Lett."
+    volume: "131"
+    pages: "222502"
+    doi: "10.1103/PhysRevLett.131.222502"
+  - role: coauthor
+    highlight: true
+    year: 2022
+    authors: "S. Geldhof *et al.*"
+    title: "Impact of nuclear deformation and pairing on the charge radii of palladium isotopes"
+    journal: "Phys. Rev. Lett."
+    volume: "128"
+    pages: "152501"
+    doi: "10.1103/PhysRevLett.128.152501"
+  - role: coauthor
+    highlight: true
+    year: 2022
+    authors: "G. G. Kiss *et al.*"
+    title: "Measuring the β-decay properties of neutron-rich exotic Pm, Sm, Eu, and Gd isotopes to constrain the nucleosynthesis yields in the rare-earth region"
+    journal: "Astrophys. J."
+    volume: "936"
+    pages: "107"
+    doi: "10.3847/1538-4357/ac80fc"
+  - role: coauthor
+    highlight: true
+    year: 2021
+    authors: "S. Hayakawa *et al.*"
+    title: "Constraining the primordial lithium abundance: new cross section measurement of the ⁷Be+n reactions updates the total ⁷Be destruction rate"
+    journal: "Astrophys. J. Lett."
+    volume: "915"
+    pages: "L13"
+    doi: "10.3847/2041-8213/ac061f"
+  - role: coauthor
+    highlight: true
+    year: 2022
+    authors: "H. F. Li, S. Naimi *et al.*"
+    title: "First application of mass measurements with the Rare-RI Ring reveals the solar r-process abundance trend at A = 122 and A = 123"
+    journal: "Phys. Rev. Lett."
+    volume: "128"
+    pages: "152701"
+    doi: "10.1103/PhysRevLett.128.152701"
+  - role: coauthor
+    year: 2026
+    authors: "M. Reiter *et al.*"
+    title: "A pathway towards decentralized studies of radioactive post-lead elements and their applications in BSM physics"
+    journal: "Nat. Commun."
+    doi: "10.1038/s41467-026-77082-2"
+  - role: coauthor
+    year: 2026
+    authors: "C. Lehr *et al.*"
+    title: "Dipole strength distribution of ⁸He and decay characteristics"
+    journal: "Phys. Rev. Lett."
+    volume: "136"
+    pages: "172501"
+    doi: "10.1103/vp3m-5rpp"
+  - role: coauthor
+    year: 2026
+    authors: "S. Ayet San Andrés *et al.* (Super-FRS Experiment Collaboration)"
+    title: "Direct mass measurement of ⁹¹Rh and ⁸⁹Ru and mid-shell trend of the one-proton separation energies for *N* = *Z* + 1 nuclei"
+    journal: "Phys. Rev. C"
+    volume: "114"
+    pages: "034311"
+    doi: "10.1103/lsp5-qntn"
+    themes: [nz]
+  - role: coauthor
+    year: 2026
+    authors: "M. Winter, **Z. Ge**, T. Eronen *et al.*"
+    title: "High-precision mass and β⁻ decay Q-value measurement of ¹²⁹Sb and its isomer"
+    journal: "Eur. Phys. J. A"
+    volume: "62"
+    pages: "123"
+    doi: "10.1140/epja/s10050-026-01883-8"
+  - role: coauthor
+    year: 2026
+    authors: "V. A. Virtanen *et al.*"
+    title: "High-resolution multi-reflection time-of-flight mass spectrometer for exotic nuclei at IGISOL"
+    journal: "Nucl. Instrum. Methods A"
+    volume: "1088"
+    pages: "171513"
+    doi: "10.1016/j.nima.2026.171513"
+    themes: [detectors]
+  - role: coauthor
+    year: 2025
+    authors: "J. Ruotsalainen *et al.*"
+    title: "Ultralow Q<sub>β</sub> value for the allowed decay of ¹¹⁰Ag<sup>m</sup> confirmed via mass measurements"
+    journal: "Phys. Rev. Lett."
+    volume: "134"
+    pages: "172501"
+    doi: "10.1103/PhysRevLett.134.172501"
+  - role: coauthor
+    year: 2025
+    authors: "A. Jaries *et al.*"
+    title: "Prominent bump in the two-neutron separation energies of neutron-rich lanthanum isotopes revealed by high-precision mass spectrometry"
+    journal: "Phys. Rev. Lett."
+    volume: "134"
+    pages: "042501"
+    doi: "10.1103/PhysRevLett.134.042501"
+  - role: coauthor
+    year: 2025
+    authors: "G. Kripkó-Koncz *et al.*"
+    title: "Direct mass measurement of ⁹³Pd and implications for the isomer structures in ⁹⁴Ag"
+    journal: "Phys. Rev. Research"
+    volume: "7"
+    pages: "L042022"
+    doi: "10.1103/mhhn-kmgx"
+    themes: [nz]
+  - role: coauthor
+    year: 2025
+    authors: "M. Stryjczyk *et al.*"
+    title: "Discovery of a new long-lived isomer in ¹¹⁴Rh via Penning-trap mass spectrometry"
+    journal: "Phys. Lett. B"
+    volume: "862"
+    pages: "139359"
+    doi: "10.1016/j.physletb.2025.139359"
+  - role: coauthor
+    year: 2025
+    authors: "S. Cannarozzo *et al.*"
+    title: "Disentangling the influence of excitation energy and compound nucleus angular momentum on fission fragment angular momentum"
+    journal: "Phys. Rev. C"
+    volume: "111"
+    pages: "L031601"
+    doi: "10.1103/PhysRevC.111.L031601"
+  - role: coauthor
+    year: 2025
+    authors: "V. A. Virtanen *et al.*"
+    title: "Miniaturised cooler-buncher for reduction of longitudinal emittance at IGISOL"
+    journal: "Nucl. Instrum. Methods A"
+    volume: "1072"
+    pages: "170186"
+    doi: "10.1016/j.nima.2024.170186"
+  - role: coauthor
+    year: 2025
+    authors: "Y. Abe *et al.*"
+    title: "Performance of a precise isochronous magnetic field over a wide momentum range in the Rare-RI Ring"
+    journal: "Nucl. Instrum. Methods A"
+    volume: "1072"
+    pages: "170083"
+    doi: "10.1016/j.nima.2024.170083"
+  - role: coauthor
+    year: 2024
+    authors: "O. Beliuskina *et al.*"
+    title: "Mass measurements in the ¹³²Sn region with the JYFLTRAP double Penning trap mass spectrometer"
+    journal: "Phys. Rev. C"
+    volume: "110"
+    pages: "034325"
+    doi: "10.1103/PhysRevC.110.034325"
+  - role: coauthor
+    year: 2024
+    authors: "M. Hukkanen *et al.*"
+    title: "Precision mass measurements in the zirconium region pin down the mass surface across the neutron midshell at *N* = 66"
+    journal: "Phys. Lett. B"
+    volume: "856"
+    pages: "138916"
+    doi: "10.1016/j.physletb.2024.138916"
+  - role: coauthor
+    year: 2024
+    authors: "J. Yu *et al.*"
+    title: "A laser ablation carbon cluster ion source for the FRS Ion Catcher"
+    journal: "Nucl. Instrum. Methods A"
+    volume: "1064"
+    pages: "169371"
+    doi: "10.1016/j.nima.2024.169371"
+  - role: coauthor
+    year: 2024
+    authors: "L. Varga *et al.*"
+    title: "Novel device to study double-alpha decay at the FRS Ion Catcher"
+    journal: "Nucl. Instrum. Methods A"
+    volume: "1063"
+    pages: "169252"
+    doi: "10.1016/j.nima.2024.169252"
+  - role: coauthor
+    year: 2022
+    authors: "D. A. Nesterenko *et al.*"
+    title: "High-precision Q-value measurement and nuclear matrix element calculations for the double-β decay of ⁹⁸Mo"
+    journal: "Eur. Phys. J. A"
+    volume: "58"
+    pages: "44"
+    doi: "10.1140/epja/s10050-022-00695-w"
+  - role: coauthor
+    year: 2021
+    authors: "D. A. Nesterenko, T. Eronen, **Z. Ge** *et al.*"
+    title: "Study of radial motion phase advance during motion excitations in a Penning trap and accuracy of JYFLTRAP mass spectrometer"
+    journal: "Eur. Phys. J. A"
+    volume: "57"
+    pages: "302"
+    doi: "10.1140/epja/s10050-021-00608-3"

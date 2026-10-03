@@ -1,0 +1,57 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Automatic daily sources for the Daily calendar.
+# `python3 tools/site.py fetch` (and the daily GitHub Action) reads this file.
+#
+# kind: arxiv         → arXiv API search (query syntax: https://info.arxiv.org/help/api/user-manual.html)
+#       inspire_jobs  → INSPIRE-HEP job board, filtered by arXiv categories
+#       rss           → any RSS 2.0 / RSS 1.0 / Atom news feed
+# type:    entry type shown in the calendar (paper | news | job | event | log)
+# include: keep an item only if title/summary contains one of these words
+# exclude: drop an item if it contains one of these words
+# days:    look back this many days     keep: at most this many new items per run
+# enabled: false → skip this source
+# Add a source: copy a block and change name/url/query.
+# ─────────────────────────────────────────────────────────────────────────────
+feeds:
+  - name: "arXiv — ion traps & mass spectrometry"
+    kind: arxiv
+    type: paper
+    query: '(cat:nucl-ex OR cat:physics.ins-det OR cat:physics.atom-ph) AND (abs:"Penning trap" OR abs:"ion trap" OR abs:"MR-TOF" OR abs:"multi-reflection" OR abs:"mass spectrometry" OR abs:"cooler-buncher")'
+    include: [trap, mass, time-of-flight, buncher, ion]
+    tags: [trap]
+    days: 4
+    max: 40
+    keep: 8
+
+  - name: "arXiv — nuclear masses, Q-values & astrophysics"
+    kind: arxiv
+    type: paper
+    query: '(cat:nucl-ex OR cat:nucl-th) AND (abs:"mass measurement" OR abs:"Q value" OR abs:"Q-value" OR abs:"neutrino mass" OR abs:"rp-process" OR abs:"r-process" OR abs:"isomer")'
+    tags: [nuclear]
+    days: 4
+    max: 40
+    keep: 8
+
+  - name: "INSPIRE-HEP Jobs — nuclear physics"
+    kind: inspire_jobs
+    query: "status:open"
+    categories: [nucl-ex, nucl-th, physics.ins-det]
+    tags: [nuclear]
+    days: 4
+    max: 100
+    keep: 10
+
+  - name: "APS Physics — news"
+    kind: rss
+    type: news
+    url: "https://feeds.aps.org/rss/recent/physics.xml"
+    include: [nucle, nuclear, isotope, neutrino, trap, ion, mass, atom, quantum, astrophys]
+    tags: [nuclear]
+    keep: 5
+
+  - name: "Phys.org — nuclear physics"
+    kind: rss
+    type: news
+    url: "https://phys.org/rss-feed/physics-news/nuclear-physics/"
+    tags: [nuclear]
+    keep: 5

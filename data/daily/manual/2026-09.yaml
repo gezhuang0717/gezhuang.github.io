@@ -1,0 +1,8 @@
+entries:
+  - date: "2026-09-10"
+    type: paper
+    title: "Published: Precise determination of electron-capture Q value of ¹¹³Sn decay (Phys. Rev. C 114, 035501)"
+    summary: "JYFLTRAP measurement of Q_EC = 1039.25(19) keV, an eightfold precision improvement over AME2020."
+    url: "https://doi.org/10.1103/bgj9-mzcq"
+    source: "Phys. Rev. C"
+    tags: [trap, neutrino, own-work]

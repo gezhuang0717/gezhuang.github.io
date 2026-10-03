@@ -4,7 +4,7 @@
 # title, event, place: text        url: optional link (indico, slides…)
 # Command-line helper: python3 tools/site.py talk-add --help
 # ─────────────────────────────────────────────────────────────────────────────
-talks:
+Main talks:
   - {kind: invited, date: "2025-10-12", title: "High-precision mass measurements with JYFLTRAP", event: "ISTROS 2025: Isospin, Structure, Reactions and energy Of Symmetry", place: "Bratislava, Slovakia", url: "https://istros.sav.sk"}
   - {kind: invited, date: "2025-08-18", title: "Mass measurements of N ∼ Z nuclei", event: "Nuclear Masses in Astrophysics for the Next 25 Years", place: "Darmstadt, Germany", url: "https://indico.gsi.de/event/22417/timetable/#20250820"}
   - {kind: invited, date: "2024-02-27", title: "Mass measurements of N = Z nuclei (from Zr to Ag)", event: "DESIR Workshop 2024", place: "GANIL, Caen, France", url: "https://indico.in2p3.fr/event/31364/"}

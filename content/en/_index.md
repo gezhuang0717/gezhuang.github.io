@@ -16,6 +16,8 @@ I teach the doctoral course *Lasers and Traps in Nuclear Physics Studies*. The w
 
 **Contact:** zhuang.z.ge@jyu.fi
 
+{{< nuclide-of-the-day >}}
+
 {{< gallery home="true" >}}
 
 

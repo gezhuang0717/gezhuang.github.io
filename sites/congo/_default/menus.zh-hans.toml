@@ -21,18 +21,22 @@
   pageRef = "daily"
   weight = 50
 [[main]]
+  name = "实验室"
+  pageRef = "lab"
+  weight = 60
+[[main]]
   name = "项目"
   pageRef = "projects"
-  weight = 60
+  weight = 70
 [[main]]
   name = "团队"
   pageRef = "group"
-  weight = 70
+  weight = 80
 [[main]]
   name = "博客"
   pageRef = "posts"
-  weight = 80
+  weight = 90
 [[main]]
   name = "简历"
   pageRef = "cv"
-  weight = 90
+  weight = 100

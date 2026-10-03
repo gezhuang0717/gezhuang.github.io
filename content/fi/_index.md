@@ -16,6 +16,8 @@ Olen väitellyt tohtoriksi Saitaman yliopistossa / RIKEN Nishina Centerissä (Ja
 
 **Yhteystiedot:** zhuang.z.ge@jyu.fi
 
+{{< nuclide-of-the-day >}}
+
 {{< gallery home="true" >}}
 
 

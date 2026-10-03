@@ -16,6 +16,8 @@ description: "芬兰于韦斯屈莱大学芬兰科学院研究员——利用彭
 
 **联系方式：** zhuang.z.ge@jyu.fi
 
+{{< nuclide-of-the-day >}}
+
 {{< gallery home="true" >}}
 
 

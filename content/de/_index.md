@@ -16,6 +16,8 @@ Ich wurde an der Universität Saitama / RIKEN Nishina Center (Japan) sowie an de
 
 **Kontakt:** zhuang.z.ge@jyu.fi
 
+{{< nuclide-of-the-day >}}
+
 {{< gallery home="true" >}}
 
 

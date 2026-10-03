@@ -83,6 +83,13 @@ menu:
     fi: Päivittäin
     de: Täglich
     ja: デイリー
+- page: lab
+  label:
+    en: Lab
+    zh: 实验室
+    fi: Labra
+    de: Labor
+    ja: ラボ
 - page: projects
   label:
     en: Projects

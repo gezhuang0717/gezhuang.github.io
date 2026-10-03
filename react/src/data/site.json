@@ -1,0 +1,1842 @@
+{
+  "schema_version": 1,
+  "generated": "2026-10-03T20:10:12+00:00",
+  "config": {
+    "live_theme": "congo",
+    "base_url": "https://gezhuang0717.github.io/",
+    "title": "Zhuang Ge",
+    "author": "Zhuang Ge",
+    "email": "zhuang.z.ge@jyu.fi",
+    "image": "img/zhuang-ge.png",
+    "links": [
+      {
+        "icon": "email",
+        "url": "mailto:zhuang.z.ge@jyu.fi"
+      },
+      {
+        "icon": "orcid",
+        "url": "https://orcid.org/0000-0001-8586-6134"
+      },
+      {
+        "icon": "researchgate",
+        "url": "https://www.researchgate.net/profile/Zhuang-Ge"
+      },
+      {
+        "icon": "linkedin",
+        "url": "https://www.linkedin.com/in/zhuang-ge-847898202"
+      },
+      {
+        "icon": "github",
+        "url": "https://github.com/gezhuang0717"
+      },
+      {
+        "icon": "link",
+        "url": "https://www.jyu.fi/en/people/zhuang-ge"
+      }
+    ],
+    "languages": [
+      {
+        "code": "en",
+        "name": "English",
+        "locale": "en-US",
+        "headline": "Academy Research Fellow · Penning traps & MR-TOF · University of Jyväskylä",
+        "bio": "Mass measurements of exotic nuclei with ion traps"
+      },
+      {
+        "code": "zh",
+        "name": "中文",
+        "locale": "zh-CN",
+        "theme_keys": {
+          "congo": "zh-hans",
+          "blowfish": "zh-cn",
+          "papermod": "zh"
+        },
+        "headline": "芬兰科学院研究员 · 彭宁阱与多次反射飞行时间质谱 · 于韦斯屈莱大学",
+        "bio": "利用离子阱精确测量奇特原子核质量"
+      },
+      {
+        "code": "fi",
+        "name": "Suomi",
+        "locale": "fi-FI",
+        "headline": "Akatemiatutkija · Penning-loukut ja MR-TOF · Jyväskylän yliopisto",
+        "bio": "Eksoottisten ytimien massamittaukset ioniloukuilla"
+      },
+      {
+        "code": "de",
+        "name": "Deutsch",
+        "locale": "de-DE",
+        "headline": "Academy Research Fellow · Penning-Fallen & MR-TOF · Universität Jyväskylä",
+        "bio": "Massenmessungen exotischer Kerne mit Ionenfallen"
+      },
+      {
+        "code": "ja",
+        "name": "日本語",
+        "locale": "ja-JP",
+        "headline": "フィンランド・アカデミー研究員 · ペニングトラップと MR-TOF · ユヴァスキュラ大学",
+        "bio": "イオントラップによるエキゾチック原子核の質量測定"
+      }
+    ],
+    "menu": [
+      {
+        "page": "research",
+        "label": {
+          "en": "Research",
+          "zh": "研究",
+          "fi": "Tutkimus",
+          "de": "Forschung",
+          "ja": "研究"
+        }
+      },
+      {
+        "page": "publications",
+        "label": {
+          "en": "Publications",
+          "zh": "论文",
+          "fi": "Julkaisut",
+          "de": "Publikationen",
+          "ja": "論文"
+        }
+      },
+      {
+        "page": "talks",
+        "label": {
+          "en": "Main talks",
+          "zh": "主要报告",
+          "fi": "Esitelmät",
+          "de": "Vorträge",
+          "ja": "講演"
+        }
+      },
+      {
+        "page": "facilities",
+        "label": {
+          "en": "Facilities",
+          "zh": "设施",
+          "fi": "Laitokset",
+          "de": "Anlagen",
+          "ja": "施設"
+        }
+      },
+      {
+        "page": "daily",
+        "label": {
+          "en": "Daily",
+          "zh": "每日",
+          "fi": "Päivittäin",
+          "de": "Täglich",
+          "ja": "デイリー"
+        }
+      },
+      {
+        "page": "projects",
+        "label": {
+          "en": "Projects",
+          "zh": "项目",
+          "fi": "Projektit",
+          "de": "Projekte",
+          "ja": "プロジェクト"
+        }
+      },
+      {
+        "page": "group",
+        "label": {
+          "en": "Group",
+          "zh": "团队",
+          "fi": "Ryhmä",
+          "de": "Gruppe",
+          "ja": "グループ"
+        }
+      },
+      {
+        "page": "posts",
+        "label": {
+          "en": "Blog",
+          "zh": "博客",
+          "fi": "Blogi",
+          "de": "Blog",
+          "ja": "ブログ"
+        }
+      },
+      {
+        "page": "cv",
+        "label": {
+          "en": "CV",
+          "zh": "简历",
+          "fi": "CV",
+          "de": "Lebenslauf",
+          "ja": "経歴"
+        }
+      }
+    ],
+    "themes": {
+      "congo": {
+        "colorScheme": "ocean",
+        "defaultAppearance": "light",
+        "autoSwitchAppearance": true,
+        "homepage_layout": "profile"
+      },
+      "blowfish": {
+        "colorScheme": "fire",
+        "defaultAppearance": "light",
+        "autoSwitchAppearance": true,
+        "homepage_layout": "profile"
+      },
+      "papermod": {
+        "defaultTheme": "auto"
+      }
+    },
+    "rainbow": true
+  },
+  "links": [
+    {
+      "icon": "email",
+      "url": "mailto:zhuang.z.ge@jyu.fi"
+    },
+    {
+      "icon": "orcid",
+      "url": "https://orcid.org/0000-0001-8586-6134"
+    },
+    {
+      "icon": "researchgate",
+      "url": "https://www.researchgate.net/profile/Zhuang-Ge"
+    },
+    {
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/in/zhuang-ge-847898202"
+    },
+    {
+      "icon": "github",
+      "url": "https://github.com/gezhuang0717"
+    },
+    {
+      "icon": "link",
+      "url": "https://www.jyu.fi/en/people/zhuang-ge"
+    }
+  ],
+  "papers": [
+    {
+      "role": "first",
+      "year": 2026,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "Precise determination of electron-capture Q value of ¹¹³Sn decay related to electron neutrino mass measurements",
+      "journal": "Phys. Rev. C",
+      "volume": "114",
+      "pages": "035501",
+      "doi": "10.1103/bgj9-mzcq",
+      "arxiv": "2604.03410",
+      "note": "Q<sub>EC</sub> = 1039.25(19) keV",
+      "themes": [
+        "neutrino"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/bgj9-mzcq",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Precise determination of electron-capture Q value of ¹¹³Sn decay related to electron neutrino mass measurements"
+    },
+    {
+      "role": "first",
+      "year": 2025,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "High-precision direct decay energy measurements of the electron-capture decay of ⁹⁷Tc",
+      "journal": "Phys. Rev. C",
+      "volume": "112",
+      "pages": "035501",
+      "doi": "10.1103/g393-xx1w",
+      "arxiv": "2502.04490",
+      "note": "Q<sub>EC</sub> = 324.82(21) keV",
+      "themes": [
+        "neutrino"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/g393-xx1w",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "High-precision direct decay energy measurements of the electron-capture decay of ⁹⁷Tc"
+    },
+    {
+      "role": "first",
+      "year": 2024,
+      "authors": "**Z. Ge**",
+      "title": "Overview of high-performance timing and position-sensitive MCP detectors utilizing secondary electron emission for mass measurements of exotic nuclei at nuclear physics facilities",
+      "journal": "Sensors",
+      "volume": "24",
+      "pages": "7261",
+      "doi": "10.3390/s24227261",
+      "note": "review",
+      "themes": [
+        "detectors"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.3390/s24227261",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Overview of high-performance timing and position-sensitive MCP detectors utilizing secondary electron emission for mass measurements of exotic nuclei at nuclear physics facilities"
+    },
+    {
+      "role": "first",
+      "year": 2024,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "High-precision measurements of the atomic mass and electron-capture decay Q value of ⁹⁵Tc",
+      "journal": "Phys. Lett. B",
+      "volume": "859",
+      "pages": "139094",
+      "doi": "10.1016/j.physletb.2024.139094",
+      "arxiv": "2406.05273",
+      "themes": [
+        "neutrino"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1016/j.physletb.2024.139094",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "High-precision measurements of the atomic mass and electron-capture decay Q value of ⁹⁵Tc"
+    },
+    {
+      "role": "first",
+      "year": 2024,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "High-precision measurement of the atomic mass of ⁸⁴Sr and implications to isotope shift studies",
+      "journal": "Eur. Phys. J. A",
+      "volume": "60",
+      "pages": "147",
+      "doi": "10.1140/epja/s10050-024-01359-7",
+      "arxiv": "2404.02025",
+      "themes": [
+        "isotope-shift"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1140/epja/s10050-024-01359-7",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "High-precision measurement of the atomic mass of ⁸⁴Sr and implications to isotope shift studies"
+    },
+    {
+      "role": "first",
+      "year": 2024,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "Direct high-precision measurement of the mass difference of ⁷⁷As–⁷⁷Se related to neutrino mass determination",
+      "journal": "Eur. Phys. J. A",
+      "volume": "60",
+      "pages": "104",
+      "doi": "10.1140/epja/s10050-024-01317-3",
+      "arxiv": "2401.15242",
+      "themes": [
+        "neutrino"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1140/epja/s10050-024-01317-3",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Direct high-precision measurement of the mass difference of ⁷⁷As–⁷⁷Se related to neutrino mass determination"
+    },
+    {
+      "role": "first",
+      "year": 2024,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "High-precision mass measurements of neutron-deficient silver isotopes probe the robustness of the *N* = 50 shell closure",
+      "journal": "Phys. Rev. Lett.",
+      "volume": "133",
+      "pages": "132503",
+      "doi": "10.1103/PhysRevLett.133.132503",
+      "arxiv": "2401.07976",
+      "themes": [
+        "nz"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevLett.133.132503",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "High-precision mass measurements of neutron-deficient silver isotopes probe the robustness of the <em>N</em> = 50 shell closure"
+    },
+    {
+      "role": "first",
+      "year": 2023,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "β⁻ decay Q-value measurement of ¹³⁶Cs and its implications for neutrino studies",
+      "journal": "Phys. Rev. C",
+      "volume": "108",
+      "pages": "045502",
+      "doi": "10.1103/PhysRevC.108.045502",
+      "arxiv": "2306.04604",
+      "themes": [
+        "neutrino"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevC.108.045502",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "β⁻ decay Q-value measurement of ¹³⁶Cs and its implications for neutrino studies"
+    },
+    {
+      "role": "first",
+      "year": 2022,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "Direct determination of the atomic mass difference of the pairs ⁷⁶As–⁷⁶Se and ¹⁵⁵Tb–¹⁵⁵Gd rules out ⁷⁶As and ¹⁵⁵Tb as possible candidates for electron (anti)neutrino mass measurements",
+      "journal": "Phys. Rev. C",
+      "volume": "106",
+      "pages": "015502",
+      "doi": "10.1103/PhysRevC.106.015502",
+      "arxiv": "2202.07656",
+      "themes": [
+        "neutrino"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevC.106.015502",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Direct determination of the atomic mass difference of the pairs ⁷⁶As–⁷⁶Se and ¹⁵⁵Tb–¹⁵⁵Gd rules out ⁷⁶As and ¹⁵⁵Tb as possible candidates for electron (anti)neutrino mass measurements"
+    },
+    {
+      "role": "first",
+      "year": 2022,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "High-precision electron-capture Q value measurement of ¹¹¹In for electron-neutrino mass determination",
+      "journal": "Phys. Lett. B",
+      "volume": "832",
+      "pages": "137226",
+      "doi": "10.1016/j.physletb.2022.137226",
+      "arxiv": "2201.12573",
+      "themes": [
+        "neutrino"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1016/j.physletb.2022.137226",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "High-precision electron-capture Q value measurement of ¹¹¹In for electron-neutrino mass determination"
+    },
+    {
+      "role": "first",
+      "year": 2021,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "¹⁵⁹Dy electron-capture: a new candidate for neutrino mass determination",
+      "journal": "Phys. Rev. Lett.",
+      "volume": "127",
+      "pages": "272301",
+      "doi": "10.1103/PhysRevLett.127.272301",
+      "arxiv": "2106.06626",
+      "themes": [
+        "neutrino"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevLett.127.272301",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "¹⁵⁹Dy electron-capture: a new candidate for neutrino mass determination"
+    },
+    {
+      "role": "first",
+      "year": 2021,
+      "authors": "**Z. Ge**",
+      "title": "Development of a large-area timing and position-sensitive foil-MCP detector for mass measurements at the Rare-RI Ring in RIKEN",
+      "journal": "arXiv preprint",
+      "arxiv": "2106.08264",
+      "themes": [
+        "detectors"
+      ],
+      "metadata_status": "public source without DOI",
+      "title_html": "Development of a large-area timing and position-sensitive foil-MCP detector for mass measurements at the Rare-RI Ring in RIKEN"
+    },
+    {
+      "role": "first",
+      "year": 2021,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "Direct measurement of the mass difference of ⁷²As–⁷²Ge rules out ⁷²As as a promising β-decay candidate to determine the neutrino mass",
+      "journal": "Phys. Rev. C",
+      "volume": "103",
+      "pages": "065502",
+      "doi": "10.1103/PhysRevC.103.065502",
+      "arxiv": "2103.08729",
+      "themes": [
+        "neutrino"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevC.103.065502",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Direct measurement of the mass difference of ⁷²As–⁷²Ge rules out ⁷²As as a promising β-decay candidate to determine the neutrino mass"
+    },
+    {
+      "role": "first",
+      "year": 2021,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "Development of mirror-type MCP detectors for mass measurements at the Rare-RI Ring",
+      "journal": "JPS Conf. Proc.",
+      "volume": "35",
+      "pages": "011023",
+      "doi": "10.7566/JPSCP.35.011023",
+      "themes": [
+        "detectors"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.7566/JPSCP.35.011023",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Development of mirror-type MCP detectors for mass measurements at the Rare-RI Ring"
+    },
+    {
+      "role": "first",
+      "year": 2019,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "Scheme of high-resolution identification and selection of secondary ions for mass measurements with the Rare-RI Ring",
+      "journal": "Hyperfine Interact.",
+      "volume": "240",
+      "pages": "92",
+      "doi": "10.1007/s10751-019-1599-2",
+      "themes": [
+        "detectors"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1007/s10751-019-1599-2",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Scheme of high-resolution identification and selection of secondary ions for mass measurements with the Rare-RI Ring"
+    },
+    {
+      "role": "first",
+      "year": 2019,
+      "authors": "**Z. Ge**, Q. Wang, M. Wang, T. Uesaka",
+      "title": "Study of mass-measurement method for *N* = *Z* nuclei with isochronous mass spectrometry",
+      "journal": "Nucl. Phys. Rev.",
+      "volume": "36",
+      "pages": "294",
+      "doi": "10.11804/NuclPhysRev.36.03.294",
+      "themes": [
+        "nz"
+      ],
+      "metadata_status": "Crossref not registered; publisher DOI citation retained",
+      "metadata_source": "Publisher cross-reference confirms title, year, volume and pages; Crossref record unavailable",
+      "metadata_url": "https://www.cpsjournals.cn/data/article/yzhwlpl/preview/pdf/10.11804/NuclPhysRev.41.2023CNPC23.pdf",
+      "title_html": "Study of mass-measurement method for <em>N</em> = <em>Z</em> nuclei with isochronous mass spectrometry"
+    },
+    {
+      "role": "first",
+      "year": 2018,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "Timing performance of a mirror-type MCP detector for mass measurements at the Rare RI Ring",
+      "journal": "RIKEN Accel. Prog. Rep.",
+      "volume": "51",
+      "pages": "152",
+      "url": "https://www.nishina.riken.jp/researcher/APR/APR051/pdf/152.pdf",
+      "themes": [
+        "detectors"
+      ],
+      "metadata_status": "public source without DOI",
+      "title_html": "Timing performance of a mirror-type MCP detector for mass measurements at the Rare RI Ring"
+    },
+    {
+      "role": "first",
+      "year": 2017,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "Simulation and design of a large-area position-sensitive TOF MCP detector at the Rare RI Ring",
+      "journal": "RIKEN Accel. Prog. Rep.",
+      "volume": "50",
+      "pages": "187",
+      "url": "https://www.nishina.riken.jp/researcher/APR/APR050/pdf/contents.pdf",
+      "metadata_status": "public source without DOI",
+      "title_html": "Simulation and design of a large-area position-sensitive TOF MCP detector at the Rare RI Ring"
+    },
+    {
+      "role": "first",
+      "year": 2016,
+      "authors": "**Z. Ge** *et al.*",
+      "title": "Online results for the injection ion optics of the Rare RI Ring",
+      "journal": "RIKEN Accel. Prog. Rep.",
+      "volume": "49",
+      "pages": "180",
+      "url": "https://www.nishina.riken.jp/researcher/APR/APR049/pdf/180.pdf",
+      "metadata_status": "public source without DOI",
+      "title_html": "Online results for the injection ion optics of the Rare RI Ring"
+    },
+    {
+      "role": "corresponding",
+      "year": 2022,
+      "authors": "M. Ramalho, **Z. Ge** *et al.*",
+      "title": "Observation of an ultralow-Q-value electron-capture channel decaying to ⁷⁵As via a high-precision mass measurement",
+      "journal": "Phys. Rev. C",
+      "volume": "106",
+      "pages": "015501",
+      "doi": "10.1103/PhysRevC.106.015501",
+      "arxiv": "2203.00457",
+      "themes": [
+        "neutrino"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevC.106.015501",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Observation of an ultralow-Q-value electron-capture channel decaying to ⁷⁵As via a high-precision mass measurement"
+    },
+    {
+      "role": "corresponding",
+      "year": 2022,
+      "authors": "T. Eronen, **Z. Ge** *et al.*",
+      "title": "High-precision measurement of a low Q value for allowed β⁻ decay of ¹³¹I related to neutrino mass determination",
+      "journal": "Phys. Lett. B",
+      "volume": "830",
+      "pages": "137135",
+      "doi": "10.1016/j.physletb.2022.137135",
+      "themes": [
+        "neutrino"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1016/j.physletb.2022.137135",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "High-precision measurement of a low Q value for allowed β⁻ decay of ¹³¹I related to neutrino mass determination"
+    },
+    {
+      "role": "corresponding",
+      "year": 2019,
+      "authors": "J.-H. Liu, **Z. Ge** *et al.*",
+      "title": "Electrostatic-lenses position-sensitive TOF MCP detector for beam diagnostics and new scheme for mass measurements at HIAF",
+      "journal": "Nucl. Sci. Tech.",
+      "volume": "30",
+      "pages": "152",
+      "doi": "10.1007/s41365-019-0676-1",
+      "arxiv": "2105.14551",
+      "themes": [
+        "detectors"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1007/s41365-019-0676-1",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Electrostatic-lenses position-sensitive TOF MCP detector for beam diagnostics and new scheme for mass measurements at HIAF"
+    },
+    {
+      "role": "coauthor",
+      "year": 2026,
+      "authors": "M. Reiter *et al.*",
+      "title": "A pathway towards decentralized studies of radioactive post-lead elements and their applications in BSM physics",
+      "journal": "Nat. Commun.",
+      "doi": "10.1038/s41467-026-77082-2",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1038/s41467-026-77082-2",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "A pathway towards decentralized studies of radioactive post-lead elements and their applications in BSM physics"
+    },
+    {
+      "role": "coauthor",
+      "year": 2026,
+      "authors": "C. Lehr *et al.*",
+      "title": "Dipole strength distribution of ⁸He and decay characteristics",
+      "journal": "Phys. Rev. Lett.",
+      "volume": "136",
+      "pages": "172501",
+      "doi": "10.1103/vp3m-5rpp",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/vp3m-5rpp",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Dipole strength distribution of ⁸He and decay characteristics"
+    },
+    {
+      "role": "coauthor",
+      "year": 2026,
+      "authors": "S. Ayet San Andrés *et al.* (Super-FRS Experiment Collaboration)",
+      "title": "Direct mass measurement of ⁹¹Rh and ⁸⁹Ru and mid-shell trend of the one-proton separation energies for *N* = *Z* + 1 nuclei",
+      "journal": "Phys. Rev. C",
+      "volume": "114",
+      "pages": "034311",
+      "doi": "10.1103/lsp5-qntn",
+      "themes": [
+        "nz"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/lsp5-qntn",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Direct mass measurement of ⁹¹Rh and ⁸⁹Ru and mid-shell trend of the one-proton separation energies for <em>N</em> = <em>Z</em> + 1 nuclei"
+    },
+    {
+      "role": "coauthor",
+      "year": 2026,
+      "authors": "M. Winter, **Z. Ge**, T. Eronen *et al.*",
+      "title": "High-precision mass and β⁻ decay Q-value measurement of ¹²⁹Sb and its isomer",
+      "journal": "Eur. Phys. J. A",
+      "volume": "62",
+      "pages": "123",
+      "doi": "10.1140/epja/s10050-026-01883-8",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1140/epja/s10050-026-01883-8",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "High-precision mass and β⁻ decay Q-value measurement of ¹²⁹Sb and its isomer"
+    },
+    {
+      "role": "coauthor",
+      "year": 2026,
+      "authors": "V. A. Virtanen *et al.*",
+      "title": "High-resolution multi-reflection time-of-flight mass spectrometer for exotic nuclei at IGISOL",
+      "journal": "Nucl. Instrum. Methods A",
+      "volume": "1088",
+      "pages": "171513",
+      "doi": "10.1016/j.nima.2026.171513",
+      "themes": [
+        "detectors"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1016/j.nima.2026.171513",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "High-resolution multi-reflection time-of-flight mass spectrometer for exotic nuclei at IGISOL"
+    },
+    {
+      "role": "coauthor",
+      "year": 2026,
+      "authors": "A. Shraier *et al.*",
+      "title": "Identification of MNT fragments produced by an energy-degraded ²³⁸U beam on a ²⁰⁹Bi target at the FRS Ion Catcher",
+      "journal": "Eur. Phys. J. A",
+      "volume": "62",
+      "pages": "138",
+      "doi": "10.1140/epja/s10050-026-01914-4",
+      "themes": [
+        "detectors"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "Crossref and University of Jyväskylä public author profile",
+      "identity_verified": "Z. Ge",
+      "title_html": "Identification of MNT fragments produced by an energy-degraded ²³⁸U beam on a ²⁰⁹Bi target at the FRS Ion Catcher"
+    },
+    {
+      "role": "coauthor",
+      "year": 2025,
+      "authors": "J. Ruotsalainen *et al.*",
+      "title": "Ultralow Q<sub>β</sub> value for the allowed decay of ¹¹⁰Ag<sup>m</sup> confirmed via mass measurements",
+      "journal": "Phys. Rev. Lett.",
+      "volume": "134",
+      "pages": "172501",
+      "doi": "10.1103/PhysRevLett.134.172501",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevLett.134.172501",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Ultralow Q<sub>β</sub> value for the allowed decay of ¹¹⁰Ag<sup>m</sup> confirmed via mass measurements"
+    },
+    {
+      "role": "coauthor",
+      "year": 2025,
+      "authors": "A. Jaries *et al.*",
+      "title": "Prominent bump in the two-neutron separation energies of neutron-rich lanthanum isotopes revealed by high-precision mass spectrometry",
+      "journal": "Phys. Rev. Lett.",
+      "volume": "134",
+      "pages": "042501",
+      "doi": "10.1103/PhysRevLett.134.042501",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevLett.134.042501",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Prominent bump in the two-neutron separation energies of neutron-rich lanthanum isotopes revealed by high-precision mass spectrometry"
+    },
+    {
+      "role": "coauthor",
+      "year": 2025,
+      "authors": "G. Kripkó-Koncz *et al.*",
+      "title": "Direct mass measurement of ⁹³Pd and implications for the isomer structures in ⁹⁴Ag",
+      "journal": "Phys. Rev. Research",
+      "volume": "7",
+      "pages": "L042022",
+      "doi": "10.1103/mhhn-kmgx",
+      "themes": [
+        "nz"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/mhhn-kmgx",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Direct mass measurement of ⁹³Pd and implications for the isomer structures in ⁹⁴Ag"
+    },
+    {
+      "role": "coauthor",
+      "year": 2025,
+      "authors": "M. Stryjczyk *et al.*",
+      "title": "Discovery of a new long-lived isomer in ¹¹⁴Rh via Penning-trap mass spectrometry",
+      "journal": "Phys. Lett. B",
+      "volume": "862",
+      "pages": "139359",
+      "doi": "10.1016/j.physletb.2025.139359",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1016/j.physletb.2025.139359",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Discovery of a new long-lived isomer in ¹¹⁴Rh via Penning-trap mass spectrometry"
+    },
+    {
+      "role": "coauthor",
+      "year": 2025,
+      "authors": "S. Cannarozzo *et al.*",
+      "title": "Disentangling the influence of excitation energy and compound nucleus angular momentum on fission fragment angular momentum",
+      "journal": "Phys. Rev. C",
+      "volume": "111",
+      "pages": "L031601",
+      "doi": "10.1103/PhysRevC.111.L031601",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevC.111.L031601",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Disentangling the influence of excitation energy and compound nucleus angular momentum on fission fragment angular momentum"
+    },
+    {
+      "role": "coauthor",
+      "year": 2025,
+      "authors": "V. A. Virtanen *et al.*",
+      "title": "Miniaturised cooler-buncher for reduction of longitudinal emittance at IGISOL",
+      "journal": "Nucl. Instrum. Methods A",
+      "volume": "1072",
+      "pages": "170186",
+      "doi": "10.1016/j.nima.2024.170186",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1016/j.nima.2024.170186",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Miniaturised cooler-buncher for reduction of longitudinal emittance at IGISOL"
+    },
+    {
+      "role": "coauthor",
+      "year": 2025,
+      "authors": "Y. Abe *et al.*",
+      "title": "Performance of a precise isochronous magnetic field over a wide momentum range in the Rare-RI Ring",
+      "journal": "Nucl. Instrum. Methods A",
+      "volume": "1072",
+      "pages": "170083",
+      "doi": "10.1016/j.nima.2024.170083",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1016/j.nima.2024.170083",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Performance of a precise isochronous magnetic field over a wide momentum range in the Rare-RI Ring"
+    },
+    {
+      "role": "coauthor",
+      "year": 2025,
+      "authors": "A. Mollaebrahimi *et al.*",
+      "title": "First observation of MNT isotope beams at the FRS Ion Catcher",
+      "journal": "Nuclear Physics A",
+      "volume": "1057",
+      "pages": "123041",
+      "doi": "10.1016/j.nuclphysa.2025.123041",
+      "themes": [
+        "detectors"
+      ],
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "Crossref and University of Jyväskylä public author profile",
+      "identity_verified": "Z. Ge",
+      "title_html": "First observation of MNT isotope beams at the FRS Ion Catcher"
+    },
+    {
+      "role": "coauthor",
+      "year": 2024,
+      "authors": "O. Beliuskina *et al.*",
+      "title": "Mass measurements in the ¹³²Sn region with the JYFLTRAP double Penning trap mass spectrometer",
+      "journal": "Phys. Rev. C",
+      "volume": "110",
+      "pages": "034325",
+      "doi": "10.1103/PhysRevC.110.034325",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevC.110.034325",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Mass measurements in the ¹³²Sn region with the JYFLTRAP double Penning trap mass spectrometer"
+    },
+    {
+      "role": "coauthor",
+      "year": 2024,
+      "authors": "M. Hukkanen *et al.*",
+      "title": "Precision mass measurements in the zirconium region pin down the mass surface across the neutron midshell at *N* = 66",
+      "journal": "Phys. Lett. B",
+      "volume": "856",
+      "pages": "138916",
+      "doi": "10.1016/j.physletb.2024.138916",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1016/j.physletb.2024.138916",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Precision mass measurements in the zirconium region pin down the mass surface across the neutron midshell at <em>N</em> = 66"
+    },
+    {
+      "role": "coauthor",
+      "year": 2024,
+      "authors": "J. Yu *et al.*",
+      "title": "A laser ablation carbon cluster ion source for the FRS Ion Catcher",
+      "journal": "Nucl. Instrum. Methods A",
+      "volume": "1064",
+      "pages": "169371",
+      "doi": "10.1016/j.nima.2024.169371",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1016/j.nima.2024.169371",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "A laser ablation carbon cluster ion source for the FRS Ion Catcher"
+    },
+    {
+      "role": "coauthor",
+      "year": 2024,
+      "authors": "L. Varga *et al.*",
+      "title": "Novel device to study double-alpha decay at the FRS Ion Catcher",
+      "journal": "Nucl. Instrum. Methods A",
+      "volume": "1063",
+      "pages": "169252",
+      "doi": "10.1016/j.nima.2024.169252",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1016/j.nima.2024.169252",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Novel device to study double-alpha decay at the FRS Ion Catcher"
+    },
+    {
+      "role": "coauthor",
+      "highlight": true,
+      "year": 2023,
+      "authors": "P. Plattner *et al.*",
+      "title": "Nuclear charge radius of ²⁶ᵐAl and its implication for V<sub>ud</sub> in the quark-mixing matrix",
+      "journal": "Phys. Rev. Lett.",
+      "volume": "131",
+      "pages": "222502",
+      "doi": "10.1103/PhysRevLett.131.222502",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevLett.131.222502",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Nuclear charge radius of ²⁶ᵐAl and its implication for V<sub>ud</sub> in the quark-mixing matrix"
+    },
+    {
+      "role": "coauthor",
+      "highlight": true,
+      "year": 2022,
+      "authors": "M. Duer *et al.*",
+      "title": "Observation of a correlated free four-neutron system",
+      "journal": "Nature",
+      "volume": "606",
+      "pages": "678",
+      "doi": "10.1038/s41586-022-04827-6",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1038/s41586-022-04827-6",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Observation of a correlated free four-neutron system"
+    },
+    {
+      "role": "coauthor",
+      "highlight": true,
+      "year": 2022,
+      "authors": "S. Geldhof *et al.*",
+      "title": "Impact of nuclear deformation and pairing on the charge radii of palladium isotopes",
+      "journal": "Phys. Rev. Lett.",
+      "volume": "128",
+      "pages": "152501",
+      "doi": "10.1103/PhysRevLett.128.152501",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevLett.128.152501",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Impact of nuclear deformation and pairing on the charge radii of palladium isotopes"
+    },
+    {
+      "role": "coauthor",
+      "highlight": true,
+      "year": 2022,
+      "authors": "G. G. Kiss *et al.*",
+      "title": "Measuring the β-decay properties of neutron-rich exotic Pm, Sm, Eu, and Gd isotopes to constrain the nucleosynthesis yields in the rare-earth region",
+      "journal": "Astrophys. J.",
+      "volume": "936",
+      "pages": "107",
+      "doi": "10.3847/1538-4357/ac80fc",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.3847/1538-4357/ac80fc",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Measuring the β-decay properties of neutron-rich exotic Pm, Sm, Eu, and Gd isotopes to constrain the nucleosynthesis yields in the rare-earth region"
+    },
+    {
+      "role": "coauthor",
+      "highlight": true,
+      "year": 2022,
+      "authors": "H. F. Li, S. Naimi *et al.*",
+      "title": "First application of mass measurements with the Rare-RI Ring reveals the solar r-process abundance trend at A = 122 and A = 123",
+      "journal": "Phys. Rev. Lett.",
+      "volume": "128",
+      "pages": "152701",
+      "doi": "10.1103/PhysRevLett.128.152701",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1103/PhysRevLett.128.152701",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "First application of mass measurements with the Rare-RI Ring reveals the solar r-process abundance trend at A = 122 and A = 123"
+    },
+    {
+      "role": "coauthor",
+      "year": 2022,
+      "authors": "D. A. Nesterenko *et al.*",
+      "title": "High-precision Q-value measurement and nuclear matrix element calculations for the double-β decay of ⁹⁸Mo",
+      "journal": "Eur. Phys. J. A",
+      "volume": "58",
+      "pages": "44",
+      "doi": "10.1140/epja/s10050-022-00695-w",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1140/epja/s10050-022-00695-w",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "High-precision Q-value measurement and nuclear matrix element calculations for the double-β decay of ⁹⁸Mo"
+    },
+    {
+      "role": "coauthor",
+      "highlight": true,
+      "year": 2021,
+      "authors": "S. Hayakawa *et al.*",
+      "title": "Constraining the primordial lithium abundance: new cross section measurement of the ⁷Be+n reactions updates the total ⁷Be destruction rate",
+      "journal": "Astrophys. J. Lett.",
+      "volume": "915",
+      "pages": "L13",
+      "doi": "10.3847/2041-8213/ac061f",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.3847/2041-8213/ac061f",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Constraining the primordial lithium abundance: new cross section measurement of the ⁷Be+n reactions updates the total ⁷Be destruction rate"
+    },
+    {
+      "role": "coauthor",
+      "year": 2021,
+      "authors": "D. A. Nesterenko, T. Eronen, **Z. Ge** *et al.*",
+      "title": "Study of radial motion phase advance during motion excitations in a Penning trap and accuracy of JYFLTRAP mass spectrometer",
+      "journal": "Eur. Phys. J. A",
+      "volume": "57",
+      "pages": "302",
+      "doi": "10.1140/epja/s10050-021-00608-3",
+      "metadata_verified": "2026-10-03",
+      "metadata_source": "https://api.crossref.org/works/10.1140/epja/s10050-021-00608-3",
+      "identity_verified": "Z. Ge in publisher DOI metadata",
+      "title_html": "Study of radial motion phase advance during motion excitations in a Penning trap and accuracy of JYFLTRAP mass spectrometer"
+    }
+  ],
+  "talks": [
+    {
+      "kind": "invited",
+      "date": "2025-10-12",
+      "title": "High-precision mass measurements with JYFLTRAP",
+      "event": "ISTROS 2025: Isospin, Structure, Reactions and energy Of Symmetry",
+      "place": "Bratislava, Slovakia",
+      "url": "https://istros.sav.sk",
+      "public_status": "legacy_public_event_link",
+      "title_html": "High-precision mass measurements with JYFLTRAP"
+    },
+    {
+      "kind": "invited",
+      "date": "2025-08-18",
+      "title": "Mass measurements of N ∼ Z nuclei",
+      "event": "Nuclear Masses in Astrophysics for the Next 25 Years",
+      "place": "Darmstadt, Germany",
+      "url": "https://indico.gsi.de/event/22417/timetable/#20250820",
+      "public_status": "legacy_public_event_link",
+      "title_html": "Mass measurements of N ∼ Z nuclei"
+    },
+    {
+      "kind": "invited",
+      "date": "2024-02-27",
+      "title": "Mass measurements of N = Z nuclei (from Zr to Ag)",
+      "event": "DESIR Workshop 2024",
+      "place": "GANIL, Caen, France",
+      "url": "https://indico.in2p3.fr/event/31364/",
+      "public_status": "legacy_public_event_link",
+      "title_html": "Mass measurements of N = Z nuclei (from Zr to Ag)"
+    },
+    {
+      "kind": "invited",
+      "date": "2023-11-08",
+      "title": "Mass measurements of radioactive nuclei with modern techniques",
+      "event": "SPeCial4Young: SYSU-PKU Collider Physics Forum for Young Scientists",
+      "place": "Beijing, China",
+      "url": "https://indico.ihep.ac.cn/event/20843/",
+      "public_status": "legacy_public_event_link",
+      "title_html": "Mass measurements of radioactive nuclei with modern techniques"
+    },
+    {
+      "kind": "invited",
+      "date": "2022-09-19",
+      "title": "Mass measurements related to neutrino physics",
+      "event": "NUSTAR Collaboration Meeting 2022",
+      "place": "GSI, Darmstadt, Germany",
+      "url": "https://indico.gsi.de/event/12838/timetable/",
+      "public_status": "legacy_public_event_link",
+      "title_html": "Mass measurements related to neutrino physics"
+    },
+    {
+      "kind": "contributed",
+      "date": "2026-09-14",
+      "title": "High-precision determination of low-Q-value β-decay energies with the JYFLTRAP double Penning trap",
+      "event": "9th International Conference on Trapped Charged Particles and Fundamental Physics (TCP 2026)",
+      "place": "Vale of Glamorgan, Wales, UK",
+      "url": "https://indico.cern.ch/event/1717022/",
+      "public_status": "legacy_public_event_link",
+      "title_html": "High-precision determination of low-Q-value β-decay energies with the JYFLTRAP double Penning trap"
+    },
+    {
+      "kind": "contributed",
+      "date": "2025-09-21",
+      "title": "Mass measurements of exotic neutron-deficient nuclides at IGISOL",
+      "event": "European Nuclear Physics Conference (EuNPC 2025)",
+      "place": "Caen, France",
+      "url": "https://indico.in2p3.fr/event/30430/",
+      "public_status": "legacy_public_event_link",
+      "title_html": "Mass measurements of exotic neutron-deficient nuclides at IGISOL"
+    },
+    {
+      "kind": "contributed",
+      "date": "2025-06-15",
+      "title": "Mass measurements of exotic neutron-deficient nuclides below ¹⁰⁰Sn at IGISOL and their astrophysical implications",
+      "event": "XVIII Nuclei in the Cosmos",
+      "place": "Girona, Spain",
+      "url": "https://indico.icc.ub.edu/event/341/",
+      "public_status": "legacy_public_event_link",
+      "title_html": "Mass measurements of exotic neutron-deficient nuclides below ¹⁰⁰Sn at IGISOL and their astrophysical implications"
+    },
+    {
+      "kind": "contributed",
+      "date": "2024-06-09",
+      "title": "High-precision decay energy measurements of low Q-value beta decays with JYFLTRAP",
+      "event": "PLATAN 2024",
+      "place": "Jyväskylä, Finland",
+      "url": "https://indico.global/event/9991",
+      "public_status": "legacy_public_event_link",
+      "title_html": "High-precision decay energy measurements of low Q-value beta decays with JYFLTRAP"
+    },
+    {
+      "kind": "contributed",
+      "date": "2024-01-29",
+      "title": "Mass measurements of N = Z nuclei and the vicinity with Rare-RI Ring in RIKEN for the study of rp- and νp-processes",
+      "event": "WE-Heraeus Seminar: Nuclear Astrophysics with Ion Storage Rings",
+      "place": "Bad Honnef, Germany",
+      "url": "https://dpg-physik.de/veranstaltungen/2024/nuclear_astrophysics_with_ion_storage_rings",
+      "public_status": "legacy_public_event_link",
+      "title_html": "Mass measurements of N = Z nuclei and the vicinity with Rare-RI Ring in RIKEN for the study of rp- and νp-processes"
+    },
+    {
+      "kind": "contributed",
+      "date": "2023-06-25",
+      "title": "Recent mass measurements of exotic neutron-deficient nuclides below ¹⁰⁰Sn at the FRS Ion Catcher and at JYFLTRAP",
+      "event": "PROCON 2023",
+      "place": "Warsaw, Poland",
+      "url": "https://procon2023.fuw.edu.pl/",
+      "public_status": "legacy_public_event_link",
+      "title_html": "Recent mass measurements of exotic neutron-deficient nuclides below ¹⁰⁰Sn at the FRS Ion Catcher and at JYFLTRAP"
+    },
+    {
+      "kind": "contributed",
+      "date": "2022-03-28",
+      "title": "Search for low Q-value beta decays for neutrino mass determination",
+      "event": "DPG Spring Meeting 2022 (Hadronic and Nuclear Physics)",
+      "place": "Mainz, Germany (online)",
+      "url": "https://www.dpg-verhandlungen.de/year/2022/conference/mainz/part/hk?lang=en",
+      "public_status": "legacy_public_event_link",
+      "title_html": "Search for low Q-value beta decays for neutrino mass determination"
+    },
+    {
+      "kind": "contributed",
+      "date": "2021-09-13",
+      "title": "Search of beta decays with ultra-low Q value for neutrino mass determination",
+      "event": "Euroschool on Exotic Beams 2021",
+      "place": "Leuven, Belgium (online)",
+      "url": "https://lisa-itn.web.cern.ch/node/115",
+      "public_status": "legacy_public_event_link",
+      "title_html": "Search of beta decays with ultra-low Q value for neutrino mass determination"
+    },
+    {
+      "kind": "contributed",
+      "date": "2016-08-19",
+      "title": "Mass as inputs in network calculation for modelling of the r-process",
+      "event": "3rd Astrophysical Nuclear Reaction Network School",
+      "place": "Schmitten, Germany",
+      "url": "https://indico.gsi.de/event/4596/",
+      "public_status": "legacy_public_event_link",
+      "title_html": "Mass as inputs in network calculation for modelling of the r-process"
+    },
+    {
+      "kind": "contributed",
+      "date": "2016-03-06",
+      "title": "Mass measurements of short-lived nuclides at storage rings in Asia and their impacts on astrophysics",
+      "event": "Rußbach School on Nuclear Astrophysics",
+      "place": "Rußbach, Austria",
+      "url": "https://indico.ph.tum.de/event/3470/",
+      "public_status": "legacy_public_event_link",
+      "title_html": "Mass measurements of short-lived nuclides at storage rings in Asia and their impacts on astrophysics"
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "了解 IGISOL / JYFLTRAP 研究项目",
+      "summary": "官方研究组介绍：精密质量测量、激光光谱与衰变研究。",
+      "url": "https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol",
+      "source": "University of Jyväskylä",
+      "lang": "zh",
+      "item_id": "igisol-public-overview",
+      "facility_ids": [
+        "igisol-jyfltrap"
+      ],
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "log",
+      "title": "Personal website relaunched with a daily calendar",
+      "summary": "New multilingual site (EN/中文/FI/DE/日本語) with this calendar for science logs, news, papers and jobs in nuclear physics and ion-trap techniques.",
+      "url": "https://gezhuang0717.github.io/",
+      "tags": [
+        "site"
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "ISOLDE 用户信息与公开通知",
+      "summary": "请查阅官方 ISOLDE 网站的公开征集、用户信息和活动；申请前需逐条核实截止日期。",
+      "url": "https://isolde.cern/",
+      "source": "CERN ISOLDE",
+      "lang": "zh",
+      "item_id": "isolde-public-overview",
+      "facility_ids": [
+        "cern-isolde"
+      ],
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "ISOLDE user information and public notices",
+      "summary": "Use the official ISOLDE site for public calls, user information and events; verify each deadline before applying.",
+      "url": "https://isolde.cern/",
+      "source": "CERN ISOLDE",
+      "lang": "en",
+      "item_id": "isolde-public-overview",
+      "facility_ids": [
+        "cern-isolde"
+      ],
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Explore the IGISOL / JYFLTRAP research program",
+      "summary": "Official research-group information on precision mass measurements, laser spectroscopy and decay studies.",
+      "url": "https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol",
+      "source": "University of Jyväskylä",
+      "lang": "en",
+      "item_id": "igisol-public-overview",
+      "facility_ids": [
+        "igisol-jyfltrap"
+      ],
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Tenure-Track Assistant Professor in Physics — Villanova U.",
+      "summary": "North America · deadline 2026-11-15 · categories include nucl-ex, nucl-th, physics.ins-det",
+      "url": "https://inspirehep.net/jobs/3209539",
+      "source": "INSPIRE-HEP Jobs",
+      "tags": [
+        "nuclear"
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Graduate Student Positions (M.S. / Ph.D.) in Physics — Sungkyunkwan U.",
+      "summary": "Asia · deadline 2026-11-26 · categories include nucl-ex, nucl-th",
+      "url": "https://inspirehep.net/jobs/3208711",
+      "source": "INSPIRE-HEP Jobs",
+      "tags": [
+        "nuclear"
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "type": "paper",
+      "title": "Quantitative Interleaved-Pulse Acquisition Extends the Range of Isotope-Ratio Measurements in ToF-SIMS",
+      "summary": "Anton V. Ievlev — Isotope ratios underpin tracer studies of transport in oxides, battery materials, and biological systems, yet time-of-flight secondary ion mass spectrometry (ToF-SIMS) struggles to quantify ratios whose members differ in intensity by orders of magnitude: a…",
+      "url": "https://arxiv.org/abs/2609.37413v1",
+      "source": "arXiv — ion traps & mass spectrometry",
+      "tags": [
+        "trap"
+      ],
+      "lang": "en",
+      "published": "2026-09-29",
+      "arxiv": "2609.37413v1",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "paper",
+      "title": "A magnetic-field insensitive gate set for trapped-ion nuclear spin qubits",
+      "summary": "Jonathan Paul Home et al. — We outline a complete set of operations for manipulating nuclear spin qubits of trapped-ions stored in high magnetic fields such as required for Penning trapping, where the nuclear and electron spins are largely decoupled due to the dominance of the…",
+      "url": "https://arxiv.org/abs/2609.37318v1",
+      "source": "arXiv — ion traps & mass spectrometry",
+      "tags": [
+        "trap"
+      ],
+      "lang": "en",
+      "published": "2026-09-29",
+      "arxiv": "2609.37318v1",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Post-Doc Research Associate — UNC, Chapel Hill",
+      "summary": "North America · deadline 2026-12-01 · POSTDOC. The Department of Physics and Astronomy at the University of North Carolina at Chapel Hill invites applications for a postdoctoral research position in theoretical nuclear and high-energy physics, with emphasis on lattice QCD. The…",
+      "url": "https://inspirehep.net/jobs/3210747",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "deadline": "2026-12-01",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "ICREA 2027 – ICCUB Expression of Interest — ICC, Barcelona U.",
+      "summary": "Europe · deadline 2026-11-01 · SENIOR. The Institute of Cosmos Sciences of the University of Barcelona (ICCUB), a Maria de Maeztu Unit of Excellence, is seeking outstanding established researchers interested in applying for an ICREA Senior position in the 2027 call. The 2027…",
+      "url": "https://inspirehep.net/jobs/3210713",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "deadline": "2026-11-01",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Postdoctoral Researcher in Deep Learning for Particle Physics: DRIFTS Project H/F — IRFU, Saclay",
+      "summary": "Europe · deadline 2026-10-20 · POSTDOC. Postdoctoral Researcher in Deep Learning for Particle Physics: DRIFTS Project H/F Institution: CEA Paris-Saclay, Irfu Location: Gif-sur-Yvette, France Contract: Fixed-term postdoctoral position, 24 months Starting date: 1 January 2027…",
+      "url": "https://inspirehep.net/jobs/3210712",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "deadline": "2026-10-20",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Call for nominations: MITP Senior Postdoctoral Fellowships — Mainz U.",
+      "summary": "Europe · deadline 2026-10-13 · POSTDOC. The Mainz Institute for Theoretical Physics (MITP) invites nominations for the MITP Senior Postdoctoral Fellowships in Theoretical Physics for the period 2027-2030. These 3-year positions target experienced postdoctoral researchers in the…",
+      "url": "https://inspirehep.net/jobs/3209381",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "deadline": "2026-10-13",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Tenure-Track Research Associate Professor Positions — Beijing, Inst. High Energy Phys.",
+      "summary": "Asia · deadline 2027-01-15 · JUNIOR. Tenure-Track Research Associate Professor Positions at Theoretical Physics Division of IHEP The Theoretical Physics Division of the Institute of High Energy Physics (IHEP), Chinese Academy of Sciences, invites applications for one or two…",
+      "url": "https://inspirehep.net/jobs/3208715",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "deadline": "2027-01-15",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Postdoctoral fellow positions — CCAST World Lab, Beijing",
+      "summary": "Asia · deadline 2026-12-31 · POSTDOC. Postdoctoral fellow positions at China Center of Advanced Science and Technology The China Center of Advanced Science and Technology (CCAST), which was founded by Professor Tsung-Dao Lee and the Chinese Academy of Sciences (CAS) in 1986 and…",
+      "url": "https://inspirehep.net/jobs/3208714",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "deadline": "2026-12-31",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "The Giant Permittivity of Nanoconfined Water",
+      "summary": "Author(s): Marric Stephens Researchers have proposed that long-range molecular dipole correlations alter water’s electrical properties when it’s confined in a gap a few nanometers wide. [Physics 19, s130] Published Thu Oct 01, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s130",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Simulating Particle Creation with Cold Atoms",
+      "summary": "Author(s): Michael Schirber Researchers observe atoms trapped in an optical lattice mimicking particles created in a strong electric field. [Physics 19, s131] Published Thu Oct 01, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s131",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "The Unexpected Ubiquity of the Phonon Thermal Hall Effect",
+      "summary": "Author(s): Kamran Behnia and Zengwei Zhu The discovery of a thermal version of the Hall effect in common semiconductors challenges our understanding of how magnetic fields and heat fluxes interact within solids. [Physics 19, 122] Published Wed Sep 30, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.122",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Quantum Light Reveals How Solvents Affect Molecules",
+      "summary": "Author(s): Ryan Wilkinson Pairs of photons provide a gentle way to measure the impact of a molecule’s environment on its ultrafast dynamics. [Physics 19, s117] Published Wed Sep 30, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s117",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Beware the Funnel: When Simplifying Dynamics Can Mislead",
+      "summary": "Author(s): Thomas Stemler and Michael Small Simplified models of systems with fast and slow dynamics can miss a narrow region of phase space—a “singular funnel”—leading to misleading predictions of the system’s behavior. [Physics 19, 128] Published Mon Sep 28, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.128",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-28",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Reading hidden topology in light, even when energy leaks away",
+      "summary": "When I explain topology to students, I start with a knot in a rope. You can stretch it, twist it or shake it, but the knot stays until you cut the rope. Physicists have found that some materials and devices carry similar \"knots\" in how waves move through them. These are…",
+      "url": "https://phys.org/news/2026-10-hidden-topology-energy-leaks.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-03",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Visible light does not speed up water evaporation, rigorous experiments suggest",
+      "summary": "In recent experiments involving hydrogels and water droplets, researchers have proposed that exposure to visible light could make water evaporate faster without heating it. However, direct evidence that light acts on water itself has proven elusive.",
+      "url": "https://phys.org/news/2026-10-visible-evaporation-rigorous.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-03",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Cooper pairs found above superconducting critical temperature in pair density waves",
+      "summary": "Physicists with the University of Illinois Urbana-Champaign's Grainger College of Engineering have identified a new form of superconducting behavior. Experiments on the metal uranium ditelluride reveal that Cooper pairs, the composite electron units responsible for…",
+      "url": "https://phys.org/news/2026-10-cooper-pairs-superconducting-critical-temperature.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-03",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Scientists discover first type I superconductor that breaks time-reversal symmetry",
+      "summary": "Superconductors are materials that conduct electricity with no resistance and expel magnetic fields when cooled to ultralow temperatures. And depending on their quantum structure, they can also showcase strange properties like magnetic levitation. But now things are getting a…",
+      "url": "https://phys.org/news/2026-10-scientists-superconductor-reversal-symmetry.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Q&A: How will quantum computers change society?",
+      "summary": "Once called a \"pipe dream,\" quantum computers are now approaching practical use. Companies and research institutes around the world are in fierce competition to develop this technology, which has the potential to rapidly perform some calculations that are extremely difficult…",
+      "url": "https://phys.org/news/2026-10-qa-quantum-society.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-09-10",
+      "type": "paper",
+      "title": "Published: Precise determination of electron-capture Q value of ¹¹³Sn decay (Phys. Rev. C 114, 035501)",
+      "summary": "JYFLTRAP measurement of Q_EC = 1039.25(19) keV, an eightfold precision improvement over AME2020.",
+      "url": "https://doi.org/10.1103/bgj9-mzcq",
+      "source": "Phys. Rev. C",
+      "tags": [
+        "trap",
+        "neutrino",
+        "own-work"
+      ]
+    }
+  ],
+  "pages": {
+    "en": {
+      "_index": {
+        "title": "Zhuang Ge",
+        "markdown": "I am an **Academy Research Fellow and Principal Investigator** at the Department of Physics, University of Jyväskylä, Finland. My field is **nuclear physics and nuclear astrophysics**: I measure the masses, Q-values and decays of exotic nuclei with ion traps.\n\nI work in the Exotic Nuclei and Beams (IGISOL) group with the JYFLTRAP Penning trap and multi-reflection time-of-flight (MR-TOF) mass spectrometry. As PI of the Academy Fellowship project [MASSPASS](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear), I lead mass measurements of exotic *N* = *Z* nuclei up to doubly magic ¹⁰⁰Sn at IGISOL and RIKEN.\n\nI received PhDs from Saitama University / RIKEN Nishina Center (Japan) and from the University of Chinese Academy of Sciences / Institute of Modern Physics. I have worked at the storage-ring facilities of RIKEN, GSI and IMP and at IGISOL — as a postdoctoral researcher at JYFLTRAP (2019–2021) and in the FRS/Super-FRS group at GSI (2021–2023) — before returning to Jyväskylä as Academy Research Fellow in 2023.\n\nI teach the doctoral course *Lasers and Traps in Nuclear Physics Studies*. The website lists selected public publications and main talks; see the [Group page](group/) for members and collaborators.\n\n**Contact:** zhuang.z.ge@jyu.fi\n\n{{< gallery home=\"true\" >}}\n\n\nMASSPASS runs from **1 September 2023 to 31 August 2027**, funded by the Research Council of Finland. Position and project information follow the [university profile](https://www.jyu.fi/en/people/zhuang-ge) and [project page](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear), checked on 3 October 2026.",
+        "html": "<p>I am an <strong>Academy Research Fellow and Principal Investigator</strong> at the Department of Physics, University of Jyväskylä, Finland. My field is <strong>nuclear physics and nuclear astrophysics</strong>: I measure the masses, Q-values and decays of exotic nuclei with ion traps.</p>\n<p>I work in the Exotic Nuclei and Beams (IGISOL) group with the JYFLTRAP Penning trap and multi-reflection time-of-flight (MR-TOF) mass spectrometry. As PI of the Academy Fellowship project <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">MASSPASS</a>, I lead mass measurements of exotic <em>N</em> = <em>Z</em> nuclei up to doubly magic ¹⁰⁰Sn at IGISOL and RIKEN.</p>\n<p>I received PhDs from Saitama University / RIKEN Nishina Center (Japan) and from the University of Chinese Academy of Sciences / Institute of Modern Physics. I have worked at the storage-ring facilities of RIKEN, GSI and IMP and at IGISOL — as a postdoctoral researcher at JYFLTRAP (2019–2021) and in the FRS/Super-FRS group at GSI (2021–2023) — before returning to Jyväskylä as Academy Research Fellow in 2023.</p>\n<p>I teach the doctoral course <em>Lasers and Traps in Nuclear Physics Studies</em>. The website lists selected public publications and main talks; see the <a href=\"group/\">Group page</a> for members and collaborators.</p>\n<p><strong>Contact:</strong> zhuang.z.ge@jyu.fi</p>\n<p>MASSPASS runs from <strong>1 September 2023 to 31 August 2027</strong>, funded by the Research Council of Finland. Position and project information follow the <a href=\"https://www.jyu.fi/en/people/zhuang-ge\">university profile</a> and <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">project page</a>, checked on 3 October 2026.</p>\n"
+      },
+      "group": {
+        "title": "Group",
+        "markdown": "I work at IGISOL/JYFLTRAP in the University of Jyväskylä Accelerator Laboratory.\n\n## Members and collaborators\n\n- **Dr. Brian Kootte** — Postdoctoral Researcher ([university profile](https://www.jyu.fi/en/people/brian-kootte)).\n- **Miikka Winter** — Doctoral Researcher ([university profile](https://www.jyu.fi/fi/henkilot/miikka-winter)).\n\n## Former members and continuing collaborators\n\n- **Dr. Marlom Ramalho** — former JYFLTRAP/IGISOL postdoctoral researcher (2024); his [public profile](https://www.nucleonicinsight.com/about.html) lists a subsequent Oskar Huttunen Fellowship at the University of York.\n\n## Teaching\n\n- **FYSS3552** — *Lasers and Traps in Nuclear Physics Studies*, University of Jyväskylä doctoral course.\n\n## Editorial work\n\n- Guest editor, *Sensors* special issue [Detectors and Sensors in Nuclear Physics and Nuclear Astrophysics](https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1).\n\nThe member roles above were checked against public profiles on 3 October 2026. This selected list is not the full IGISOL staff directory; see the [IGISOL group](https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol).",
+        "html": "<p>I work at IGISOL/JYFLTRAP in the University of Jyväskylä Accelerator Laboratory.</p>\n<h2>Members and collaborators</h2>\n<ul>\n<li><strong>Dr. Brian Kootte</strong> — Postdoctoral Researcher (<a href=\"https://www.jyu.fi/en/people/brian-kootte\">university profile</a>).</li>\n<li><strong>Miikka Winter</strong> — Doctoral Researcher (<a href=\"https://www.jyu.fi/fi/henkilot/miikka-winter\">university profile</a>).</li>\n</ul>\n<h2>Former members and continuing collaborators</h2>\n<ul>\n<li><strong>Dr. Marlom Ramalho</strong> — former JYFLTRAP/IGISOL postdoctoral researcher (2024); his <a href=\"https://www.nucleonicinsight.com/about.html\">public profile</a> lists a subsequent Oskar Huttunen Fellowship at the University of York.</li>\n</ul>\n<h2>Teaching</h2>\n<ul>\n<li><strong>FYSS3552</strong> — <em>Lasers and Traps in Nuclear Physics Studies</em>, University of Jyväskylä doctoral course.</li>\n</ul>\n<h2>Editorial work</h2>\n<ul>\n<li>Guest editor, <em>Sensors</em> special issue <a href=\"https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1\">Detectors and Sensors in Nuclear Physics and Nuclear Astrophysics</a>.</li>\n</ul>\n<p>The member roles above were checked against public profiles on 3 October 2026. This selected list is not the full IGISOL staff directory; see the <a href=\"https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol\">IGISOL group</a>.</p>\n"
+      },
+      "cv": {
+        "title": "CV",
+        "markdown": "## Current position\n\n- **2023–** Academy Research Fellow (Principal Investigator), Department of Physics, University of Jyväskylä, Finland\n\n## Previous positions\n\n- **2021–2023** Postdoctoral Researcher, FRS/Super-FRS group, GSI Helmholtz Centre for Heavy Ion Research, Darmstadt, Germany\n- **2019–2021** Postdoctoral Researcher, Department of Physics, University of Jyväskylä, Finland (JYFLTRAP)\n- **2018–2019** Research Assistant, Institute of Modern Physics, Chinese Academy of Sciences, China\n- **2018** Senior Visiting Scientist, RIKEN, Japan\n- **2015–2018** International Program Associate, RIKEN Nishina Center for Accelerator-Based Science, Japan\n\n## Education\n\n- **PhD (2018)**, Saitama University and RIKEN Nishina Center, Japan — *Time- and position-sensitive foil-MCP detector for mass measurements at the Rare-RI Ring: study of IMS and Bρ-TOF methods*\n- **PhD (2019)**, University of Chinese Academy of Sciences and Institute of Modern Physics, CAS, China — *Design and test of high-resolution beam-line systems and mass measurements of N = Z nuclei*\n- **BSc (2012)**, Nuclear Science and Technology, Xi'an Jiaotong University, China\n\n## Fellowships and funding\n\n- **2023–2027** Academy Research Fellowship and project MASSPASS (PI), Research Council of Finland\n- **2023** WINNINGNormandy Fellowship, GANIL — EU Horizon 2020 Marie Skłodowska-Curie Actions\n- **2018–2021** Senior Visiting Scientist, RIKEN RI Beam Factory, Japan\n\n## Teaching and supervision\n\n- Supervision and collaboration with early-career researchers (see [Group](../group/)).\n- Lecturer, FYSS3552 *Lasers and Traps in Nuclear Physics Studies*\n\n## Service\n\n- Guest editor, *Sensors* special issue [Detectors & Sensors in Nuclear Physics and Nuclear Astrophysics](https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1)\n\n## Publications and talks\n\nSee [Publications](../publications/) and [Talks](../talks/).\n\n## Identifiers\n\n[ORCID 0000-0001-8586-6134](https://orcid.org/0000-0001-8586-6134) · [Scopus 56915277300](https://www.scopus.com/authid/detail.uri?authorId=56915277300) · [ResearcherID L-1172-2015](https://www.webofscience.com/wos/author/record/1631872) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [ResearchGate](https://www.researchgate.net/profile/Zhuang-Ge)",
+        "html": "<h2>Current position</h2>\n<ul>\n<li><strong>2023–</strong> Academy Research Fellow (Principal Investigator), Department of Physics, University of Jyväskylä, Finland</li>\n</ul>\n<h2>Previous positions</h2>\n<ul>\n<li><strong>2021–2023</strong> Postdoctoral Researcher, FRS/Super-FRS group, GSI Helmholtz Centre for Heavy Ion Research, Darmstadt, Germany</li>\n<li><strong>2019–2021</strong> Postdoctoral Researcher, Department of Physics, University of Jyväskylä, Finland (JYFLTRAP)</li>\n<li><strong>2018–2019</strong> Research Assistant, Institute of Modern Physics, Chinese Academy of Sciences, China</li>\n<li><strong>2018</strong> Senior Visiting Scientist, RIKEN, Japan</li>\n<li><strong>2015–2018</strong> International Program Associate, RIKEN Nishina Center for Accelerator-Based Science, Japan</li>\n</ul>\n<h2>Education</h2>\n<ul>\n<li><strong>PhD (2018)</strong>, Saitama University and RIKEN Nishina Center, Japan — <em>Time- and position-sensitive foil-MCP detector for mass measurements at the Rare-RI Ring: study of IMS and Bρ-TOF methods</em></li>\n<li><strong>PhD (2019)</strong>, University of Chinese Academy of Sciences and Institute of Modern Physics, CAS, China — <em>Design and test of high-resolution beam-line systems and mass measurements of N = Z nuclei</em></li>\n<li><strong>BSc (2012)</strong>, Nuclear Science and Technology, Xi'an Jiaotong University, China</li>\n</ul>\n<h2>Fellowships and funding</h2>\n<ul>\n<li><strong>2023–2027</strong> Academy Research Fellowship and project MASSPASS (PI), Research Council of Finland</li>\n<li><strong>2023</strong> WINNINGNormandy Fellowship, GANIL — EU Horizon 2020 Marie Skłodowska-Curie Actions</li>\n<li><strong>2018–2021</strong> Senior Visiting Scientist, RIKEN RI Beam Factory, Japan</li>\n</ul>\n<h2>Teaching and supervision</h2>\n<ul>\n<li>Supervision and collaboration with early-career researchers (see <a href=\"../group/\">Group</a>).</li>\n<li>Lecturer, FYSS3552 <em>Lasers and Traps in Nuclear Physics Studies</em></li>\n</ul>\n<h2>Service</h2>\n<ul>\n<li>Guest editor, <em>Sensors</em> special issue <a href=\"https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1\">Detectors &amp; Sensors in Nuclear Physics and Nuclear Astrophysics</a></li>\n</ul>\n<h2>Publications and talks</h2>\n<p>See <a href=\"../publications/\">Publications</a> and <a href=\"../talks/\">Talks</a>.</p>\n<h2>Identifiers</h2>\n<p><a href=\"https://orcid.org/0000-0001-8586-6134\">ORCID 0000-0001-8586-6134</a> · <a href=\"https://www.scopus.com/authid/detail.uri?authorId=56915277300\">Scopus 56915277300</a> · <a href=\"https://www.webofscience.com/wos/author/record/1631872\">ResearcherID L-1172-2015</a> · <a href=\"https://inspirehep.net/authors/1988682\">INSPIRE-HEP</a> · <a href=\"https://www.researchgate.net/profile/Zhuang-Ge\">ResearchGate</a></p>\n"
+      },
+      "daily": {
+        "title": "Daily",
+        "markdown": "A running log of my own work plus new papers, news and open positions in nuclear physics and ion-trap techniques. Colours mark the type; click a day to see its entries, or filter and search. New papers and jobs are collected automatically every day.\n\n{{< daily-calendar >}}",
+        "html": "<p>A running log of my own work plus new papers, news and open positions in nuclear physics and ion-trap techniques. Colours mark the type; click a day to see its entries, or filter and search. New papers and jobs are collected automatically every day.</p>\n"
+      },
+      "projects": {
+        "title": "Projects",
+        "markdown": "## MASSPASS — Academy Fellowship (PI), 2023–2027\nMass measurements of exotic *N* = *Z* nuclei up to ¹⁰⁰Sn and the vicinity for nuclear physics and nuclear astrophysics, at IGISOL and RIKEN. Research Council of Finland. [Project page](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)\n\n## Low-Q-value decays for neutrino-mass determination\nPenning-trap Q-value measurements at JYFLTRAP to find and verify ultra-low-Q β⁻ and electron-capture transitions.\n\n## MR-TOF mass spectrometry\nDesign, ion-optical simulation and analysis pipelines for multi-reflection time-of-flight spectrometers.\n\n## RFQ cooler-bunchers and beam preparation\nIon-optical design of radiofrequency quadrupole coolers for cold, bunched radioactive beams.\n\n## Detectors for storage rings\nTiming and position-sensitive MCP detectors for the Rare-RI Ring (RIKEN) and concepts for HIAF.\n\n## Research software\nPenning-trap particle simulation, MR-TOF calibration and 2D MCP position calibration tools in Python.",
+        "html": "<h2>MASSPASS — Academy Fellowship (PI), 2023–2027</h2>\n<p>Mass measurements of exotic <em>N</em> = <em>Z</em> nuclei up to ¹⁰⁰Sn and the vicinity for nuclear physics and nuclear astrophysics, at IGISOL and RIKEN. Research Council of Finland. <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">Project page</a></p>\n<h2>Low-Q-value decays for neutrino-mass determination</h2>\n<p>Penning-trap Q-value measurements at JYFLTRAP to find and verify ultra-low-Q β⁻ and electron-capture transitions.</p>\n<h2>MR-TOF mass spectrometry</h2>\n<p>Design, ion-optical simulation and analysis pipelines for multi-reflection time-of-flight spectrometers.</p>\n<h2>RFQ cooler-bunchers and beam preparation</h2>\n<p>Ion-optical design of radiofrequency quadrupole coolers for cold, bunched radioactive beams.</p>\n<h2>Detectors for storage rings</h2>\n<p>Timing and position-sensitive MCP detectors for the Rare-RI Ring (RIKEN) and concepts for HIAF.</p>\n<h2>Research software</h2>\n<p>Penning-trap particle simulation, MR-TOF calibration and 2D MCP position calibration tools in Python.</p>\n"
+      },
+      "publications": {
+        "title": "Publications",
+        "markdown": "More than 90 peer-reviewed papers. Full lists: [ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)\n\n## First-author papers\n\n{{< pubs role=\"first\" numbered=\"true\" >}}\n\n## Corresponding-author papers\n\n{{< pubs role=\"corresponding\" >}}\n\n## Highlights from co-authored papers\n\n{{< pubs role=\"coauthor\" highlight=\"only\" >}}\n\n## Selected co-authored papers\n\n{{< pubs role=\"coauthor\" highlight=\"exclude\" group=\"year\" >}}",
+        "html": "<p>More than 90 peer-reviewed papers. Full lists: <a href=\"https://orcid.org/0000-0001-8586-6134\">ORCID</a> · <a href=\"https://inspirehep.net/authors/1988682\">INSPIRE-HEP</a> · <a href=\"https://www.scopus.com/authid/detail.uri?authorId=56915277300\">Scopus</a></p>\n<h2>First-author papers</h2>\n<h2>Corresponding-author papers</h2>\n<h2>Highlights from co-authored papers</h2>\n<h2>Selected co-authored papers</h2>\n"
+      },
+      "research": {
+        "title": "Research",
+        "markdown": "I use high-precision ion-trap and storage-ring mass spectrometry to answer questions in neutrino physics, nuclear structure and nuclear astrophysics. Papers under each theme come from the shared publication database; the full list is on the [Publications](../publications/) page.\n\n## Techniques in pictures\n\n{{< gallery >}}\n\n## Exotic N = Z nuclei up to ¹⁰⁰Sn — MASSPASS\n\nAcademy Fellowship project (PI). Mass measurements of exotic *N* = *Z* nuclei up to ¹⁰⁰Sn and their vicinity at IGISOL (Jyväskylä) and RIKEN (Japan), probing shell evolution towards the heaviest self-conjugate doubly magic nucleus and the nuclear physics input to the rp-process. [Project page](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)\n\n{{< pubs theme=\"nz\" >}}\n\n## Q-values for neutrino-mass determination\n\nDirect Penning-trap measurements of decay energies (Q-values) identify ultra-low-Q β⁻ and electron-capture transitions for future direct neutrino-mass experiments, and rule out candidates that do not qualify.\n\n{{< pubs theme=\"neutrino\" >}}\n\n## Atomic masses for isotope-shift studies\n\n{{< pubs theme=\"isotope-shift\" >}}\n\n## Storage rings, MR-TOF and MCP detectors\n\nPhD work at the RIKEN Rare-RI Ring: secondary-ion identification for isochronous mass measurements and timing / position-sensitive micro-channel-plate (MCP) detectors. Later work extends to MR-TOF spectrometers at IGISOL and the FRS Ion Catcher at GSI, and detector concepts for HIAF.\n\n{{< pubs theme=\"detectors\" >}}",
+        "html": "<p>I use high-precision ion-trap and storage-ring mass spectrometry to answer questions in neutrino physics, nuclear structure and nuclear astrophysics. Papers under each theme come from the shared publication database; the full list is on the <a href=\"../publications/\">Publications</a> page.</p>\n<h2>Techniques in pictures</h2>\n<h2>Exotic N = Z nuclei up to ¹⁰⁰Sn — MASSPASS</h2>\n<p>Academy Fellowship project (PI). Mass measurements of exotic <em>N</em> = <em>Z</em> nuclei up to ¹⁰⁰Sn and their vicinity at IGISOL (Jyväskylä) and RIKEN (Japan), probing shell evolution towards the heaviest self-conjugate doubly magic nucleus and the nuclear physics input to the rp-process. <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">Project page</a></p>\n<h2>Q-values for neutrino-mass determination</h2>\n<p>Direct Penning-trap measurements of decay energies (Q-values) identify ultra-low-Q β⁻ and electron-capture transitions for future direct neutrino-mass experiments, and rule out candidates that do not qualify.</p>\n<h2>Atomic masses for isotope-shift studies</h2>\n<h2>Storage rings, MR-TOF and MCP detectors</h2>\n<p>PhD work at the RIKEN Rare-RI Ring: secondary-ion identification for isochronous mass measurements and timing / position-sensitive micro-channel-plate (MCP) detectors. Later work extends to MR-TOF spectrometers at IGISOL and the FRS Ion Catcher at GSI, and detector concepts for HIAF.</p>\n"
+      },
+      "talks": {
+        "title": "Main talks",
+        "markdown": "## Invited talks\n\n{{< talks kind=\"invited\" >}}\n\n## Conference talks\n\n{{< talks kind=\"contributed\" >}}",
+        "html": "<h2>Invited talks</h2>\n<h2>Conference talks</h2>\n"
+      }
+    },
+    "zh": {
+      "_index": {
+        "title": "葛壮",
+        "markdown": "我是芬兰**于韦斯屈莱大学物理系芬兰科学院研究员（Academy Research Fellow）和项目负责人（PI）**，研究方向为**原子核物理与核天体物理**：利用离子阱精确测量奇特原子核的质量、衰变能（Q 值）和衰变性质。\n\n我所在的研究组为奇特原子核与束流（IGISOL）组，使用 JYFLTRAP 彭宁阱和多次反射飞行时间（MR-TOF）质谱仪。作为芬兰科学院项目 [MASSPASS](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear) 的负责人，我在 IGISOL 和日本理化学研究所（RIKEN）开展直至双幻数核 ¹⁰⁰Sn 的 *N* = *Z* 奇特核质量测量。\n\n我分别获得日本埼玉大学/理化学研究所仁科加速器中心和中国科学院大学/中国科学院近代物理研究所的博士学位，曾在 RIKEN、GSI 和近代物理研究所的储存环装置以及 IGISOL 工作：2019–2021 年在 JYFLTRAP 任博士后，2021–2023 年在德国 GSI 的 FRS/Super-FRS 组任博士后，2023 年回到于韦斯屈莱大学担任芬兰科学院研究员。\n\n我讲授博士课程《核物理研究中的激光与离子阱》。公开论文与主要报告见本网站对应栏目；成员与合作者的现状见[团队页面](group/)。\n\n**联系方式：** zhuang.z.ge@jyu.fi\n\n{{< gallery home=\"true\" >}}\n\n\nMASSPASS 项目期为 **2023 年 9 月 1 日至 2027 年 8 月 31 日**，由芬兰研究理事会资助。职位与项目信息依据[大学个人主页](https://www.jyu.fi/en/people/zhuang-ge)及[项目主页](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)，核对日期：2026 年 10 月 3 日。",
+        "html": "<p>我是芬兰<strong>于韦斯屈莱大学物理系芬兰科学院研究员（Academy Research Fellow）和项目负责人（PI）</strong>，研究方向为<strong>原子核物理与核天体物理</strong>：利用离子阱精确测量奇特原子核的质量、衰变能（Q 值）和衰变性质。</p>\n<p>我所在的研究组为奇特原子核与束流（IGISOL）组，使用 JYFLTRAP 彭宁阱和多次反射飞行时间（MR-TOF）质谱仪。作为芬兰科学院项目 <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">MASSPASS</a> 的负责人，我在 IGISOL 和日本理化学研究所（RIKEN）开展直至双幻数核 ¹⁰⁰Sn 的 <em>N</em> = <em>Z</em> 奇特核质量测量。</p>\n<p>我分别获得日本埼玉大学/理化学研究所仁科加速器中心和中国科学院大学/中国科学院近代物理研究所的博士学位，曾在 RIKEN、GSI 和近代物理研究所的储存环装置以及 IGISOL 工作：2019–2021 年在 JYFLTRAP 任博士后，2021–2023 年在德国 GSI 的 FRS/Super-FRS 组任博士后，2023 年回到于韦斯屈莱大学担任芬兰科学院研究员。</p>\n<p>我讲授博士课程《核物理研究中的激光与离子阱》。公开论文与主要报告见本网站对应栏目；成员与合作者的现状见<a href=\"group/\">团队页面</a>。</p>\n<p><strong>联系方式：</strong> zhuang.z.ge@jyu.fi</p>\n<p>MASSPASS 项目期为 <strong>2023 年 9 月 1 日至 2027 年 8 月 31 日</strong>，由芬兰研究理事会资助。职位与项目信息依据<a href=\"https://www.jyu.fi/en/people/zhuang-ge\">大学个人主页</a>及<a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">项目主页</a>，核对日期：2026 年 10 月 3 日。</p>\n"
+      },
+      "group": {
+        "title": "团队",
+        "markdown": "我在于韦斯屈莱大学加速器实验室的 IGISOL/JYFLTRAP 开展研究。\n\n## 成员与合作者\n\n- **Brian Kootte 博士** — 博士后研究员（[大学主页](https://www.jyu.fi/en/people/brian-kootte)）。\n- **Miikka Winter** — 博士研究人员（[大学主页](https://www.jyu.fi/fi/henkilot/miikka-winter)）。\n\n## 原成员与持续合作伙伴\n\n- **Marlom Ramalho 博士** — 曾于 2024 年在 JYFLTRAP/IGISOL 任博士后；其[公开个人主页](https://www.nucleonicinsight.com/about.html)列出随后在约克大学担任 Oskar Huttunen 基金会研究员的经历。\n\n## 教学\n\n- **FYSS3552** —《核物理研究中的激光与离子阱》，于韦斯屈莱大学博士课程。\n\n## 编辑工作\n\n- *Sensors* 期刊特刊 [Detectors and Sensors in Nuclear Physics and Nuclear Astrophysics](https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1) 客座编辑。\n\n上述成员职位于 2026 年 10 月 3 日按公开主页核对。本精选名单并非 IGISOL 全体人员名录；完整信息见 [IGISOL 研究组](https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol)。",
+        "html": "<p>我在于韦斯屈莱大学加速器实验室的 IGISOL/JYFLTRAP 开展研究。</p>\n<h2>成员与合作者</h2>\n<ul>\n<li><strong>Brian Kootte 博士</strong> — 博士后研究员（<a href=\"https://www.jyu.fi/en/people/brian-kootte\">大学主页</a>）。</li>\n<li><strong>Miikka Winter</strong> — 博士研究人员（<a href=\"https://www.jyu.fi/fi/henkilot/miikka-winter\">大学主页</a>）。</li>\n</ul>\n<h2>原成员与持续合作伙伴</h2>\n<ul>\n<li><strong>Marlom Ramalho 博士</strong> — 曾于 2024 年在 JYFLTRAP/IGISOL 任博士后；其<a href=\"https://www.nucleonicinsight.com/about.html\">公开个人主页</a>列出随后在约克大学担任 Oskar Huttunen 基金会研究员的经历。</li>\n</ul>\n<h2>教学</h2>\n<ul>\n<li><strong>FYSS3552</strong> —《核物理研究中的激光与离子阱》，于韦斯屈莱大学博士课程。</li>\n</ul>\n<h2>编辑工作</h2>\n<ul>\n<li><em>Sensors</em> 期刊特刊 <a href=\"https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1\">Detectors and Sensors in Nuclear Physics and Nuclear Astrophysics</a> 客座编辑。</li>\n</ul>\n<p>上述成员职位于 2026 年 10 月 3 日按公开主页核对。本精选名单并非 IGISOL 全体人员名录；完整信息见 <a href=\"https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol\">IGISOL 研究组</a>。</p>\n"
+      },
+      "cv": {
+        "title": "简历",
+        "markdown": "## 现任职位\n\n- **2023–** 芬兰科学院研究员（项目负责人），芬兰于韦斯屈莱大学物理系\n\n## 工作经历\n\n- **2021–2023** 博士后研究员，德国亥姆霍兹重离子研究中心（GSI）FRS/Super-FRS 组\n- **2019–2021** 博士后研究员，芬兰于韦斯屈莱大学物理系（JYFLTRAP）\n- **2018–2019** 研究助理，中国科学院近代物理研究所\n- **2018** 高级访问科学家，日本理化学研究所（RIKEN）\n- **2015–2018** 国际项目研究助理（International Program Associate），日本理化学研究所仁科加速器中心\n\n## 教育背景\n\n- **博士（2018）**，日本埼玉大学与理化学研究所仁科加速器中心——《用于 Rare-RI Ring 质量测量的定时与位置灵敏箔-MCP 探测器：等时性质谱与 Bρ-TOF 方法研究》\n- **博士（2019）**，中国科学院大学、中国科学院近代物理研究所——《高分辨束流线系统的设计与测试及 N = Z 原子核质量测量》\n- **学士（2012）**，西安交通大学核科学与核技术专业\n\n## 人才项目与科研资助\n\n- **2023–2027** 芬兰科学院研究员（Academy Research Fellow）及 MASSPASS 项目（负责人），芬兰研究理事会\n- **2023** WINNINGNormandy 研究员（GANIL），欧盟“地平线 2020”玛丽·居里行动\n- **2018–2021** 日本理化学研究所 RI 束流工厂高级访问科学家\n\n## 教学与指导\n\n- 研究人员指导与合作情况见[团队](../group/)。\n- 讲授 FYSS3552《核物理研究中的激光与离子阱》\n\n## 学术服务\n\n- *Sensors* 期刊特刊 [Detectors & Sensors in Nuclear Physics and Nuclear Astrophysics](https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1) 客座编辑\n\n## 论文与报告\n\n见[论文](../publications/)和[报告](../talks/)。\n\n## 学术标识\n\n[ORCID 0000-0001-8586-6134](https://orcid.org/0000-0001-8586-6134) · [Scopus 56915277300](https://www.scopus.com/authid/detail.uri?authorId=56915277300) · [ResearcherID L-1172-2015](https://www.webofscience.com/wos/author/record/1631872) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [ResearchGate](https://www.researchgate.net/profile/Zhuang-Ge)",
+        "html": "<h2>现任职位</h2>\n<ul>\n<li><strong>2023–</strong> 芬兰科学院研究员（项目负责人），芬兰于韦斯屈莱大学物理系</li>\n</ul>\n<h2>工作经历</h2>\n<ul>\n<li><strong>2021–2023</strong> 博士后研究员，德国亥姆霍兹重离子研究中心（GSI）FRS/Super-FRS 组</li>\n<li><strong>2019–2021</strong> 博士后研究员，芬兰于韦斯屈莱大学物理系（JYFLTRAP）</li>\n<li><strong>2018–2019</strong> 研究助理，中国科学院近代物理研究所</li>\n<li><strong>2018</strong> 高级访问科学家，日本理化学研究所（RIKEN）</li>\n<li><strong>2015–2018</strong> 国际项目研究助理（International Program Associate），日本理化学研究所仁科加速器中心</li>\n</ul>\n<h2>教育背景</h2>\n<ul>\n<li><strong>博士（2018）</strong>，日本埼玉大学与理化学研究所仁科加速器中心——《用于 Rare-RI Ring 质量测量的定时与位置灵敏箔-MCP 探测器：等时性质谱与 Bρ-TOF 方法研究》</li>\n<li><strong>博士（2019）</strong>，中国科学院大学、中国科学院近代物理研究所——《高分辨束流线系统的设计与测试及 N = Z 原子核质量测量》</li>\n<li><strong>学士（2012）</strong>，西安交通大学核科学与核技术专业</li>\n</ul>\n<h2>人才项目与科研资助</h2>\n<ul>\n<li><strong>2023–2027</strong> 芬兰科学院研究员（Academy Research Fellow）及 MASSPASS 项目（负责人），芬兰研究理事会</li>\n<li><strong>2023</strong> WINNINGNormandy 研究员（GANIL），欧盟“地平线 2020”玛丽·居里行动</li>\n<li><strong>2018–2021</strong> 日本理化学研究所 RI 束流工厂高级访问科学家</li>\n</ul>\n<h2>教学与指导</h2>\n<ul>\n<li>研究人员指导与合作情况见<a href=\"../group/\">团队</a>。</li>\n<li>讲授 FYSS3552《核物理研究中的激光与离子阱》</li>\n</ul>\n<h2>学术服务</h2>\n<ul>\n<li><em>Sensors</em> 期刊特刊 <a href=\"https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1\">Detectors &amp; Sensors in Nuclear Physics and Nuclear Astrophysics</a> 客座编辑</li>\n</ul>\n<h2>论文与报告</h2>\n<p>见<a href=\"../publications/\">论文</a>和<a href=\"../talks/\">报告</a>。</p>\n<h2>学术标识</h2>\n<p><a href=\"https://orcid.org/0000-0001-8586-6134\">ORCID 0000-0001-8586-6134</a> · <a href=\"https://www.scopus.com/authid/detail.uri?authorId=56915277300\">Scopus 56915277300</a> · <a href=\"https://www.webofscience.com/wos/author/record/1631872\">ResearcherID L-1172-2015</a> · <a href=\"https://inspirehep.net/authors/1988682\">INSPIRE-HEP</a> · <a href=\"https://www.researchgate.net/profile/Zhuang-Ge\">ResearchGate</a></p>\n"
+      },
+      "daily": {
+        "title": "每日",
+        "markdown": "这里记录我的科研日志，并汇集核物理和离子阱技术方面的新论文、新闻和招聘信息。颜色表示类型；点击日期查看当天记录，也可以按类型筛选或搜索。新论文和职位每天自动收集。\n\n{{< daily-calendar >}}",
+        "html": "<p>这里记录我的科研日志，并汇集核物理和离子阱技术方面的新论文、新闻和招聘信息。颜色表示类型；点击日期查看当天记录，也可以按类型筛选或搜索。新论文和职位每天自动收集。</p>\n"
+      },
+      "projects": {
+        "title": "项目",
+        "markdown": "## MASSPASS——芬兰科学院研究员项目（负责人），2023–2027\n在 IGISOL 和 RIKEN 测量直至 ¹⁰⁰Sn 的 *N* = *Z* 奇特核及其附近核素的质量，服务于原子核物理和核天体物理研究。芬兰研究理事会资助。[项目主页](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)\n\n## 用于确定中微子质量的低 Q 值衰变\n利用 JYFLTRAP 彭宁阱测量 Q 值，寻找并验证超低 Q 值 β⁻ 衰变和电子俘获跃迁。\n\n## 多次反射飞行时间（MR-TOF）质谱\nMR-TOF 谱仪的设计、离子光学模拟和数据分析流程。\n\n## RFQ 冷却聚束器与束流准备\n射频四极（RFQ）冷却聚束器的离子光学设计，为实验提供冷却、聚束的放射性束流。\n\n## 储存环探测器\n为 RIKEN Rare-RI Ring 研制的定时与位置灵敏 MCP 探测器，以及 HIAF 探测器方案。\n\n## 科研软件\n用 Python 编写的彭宁阱粒子模拟、MR-TOF 刻度和二维 MCP 位置刻度工具。",
+        "html": "<h2>MASSPASS——芬兰科学院研究员项目（负责人），2023–2027</h2>\n<p>在 IGISOL 和 RIKEN 测量直至 ¹⁰⁰Sn 的 <em>N</em> = <em>Z</em> 奇特核及其附近核素的质量，服务于原子核物理和核天体物理研究。芬兰研究理事会资助。<a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">项目主页</a></p>\n<h2>用于确定中微子质量的低 Q 值衰变</h2>\n<p>利用 JYFLTRAP 彭宁阱测量 Q 值，寻找并验证超低 Q 值 β⁻ 衰变和电子俘获跃迁。</p>\n<h2>多次反射飞行时间（MR-TOF）质谱</h2>\n<p>MR-TOF 谱仪的设计、离子光学模拟和数据分析流程。</p>\n<h2>RFQ 冷却聚束器与束流准备</h2>\n<p>射频四极（RFQ）冷却聚束器的离子光学设计，为实验提供冷却、聚束的放射性束流。</p>\n<h2>储存环探测器</h2>\n<p>为 RIKEN Rare-RI Ring 研制的定时与位置灵敏 MCP 探测器，以及 HIAF 探测器方案。</p>\n<h2>科研软件</h2>\n<p>用 Python 编写的彭宁阱粒子模拟、MR-TOF 刻度和二维 MCP 位置刻度工具。</p>\n"
+      },
+      "publications": {
+        "title": "论文",
+        "markdown": "已发表经同行评审论文 90 余篇。完整列表：[ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)\n\n## 第一作者论文\n\n{{< pubs role=\"first\" numbered=\"true\" >}}\n\n## 通讯作者论文\n\n{{< pubs role=\"corresponding\" >}}\n\n## 代表性合作论文\n\n{{< pubs role=\"coauthor\" highlight=\"only\" >}}\n\n## 部分合作论文\n\n{{< pubs role=\"coauthor\" highlight=\"exclude\" group=\"year\" >}}",
+        "html": "<p>已发表经同行评审论文 90 余篇。完整列表：<a href=\"https://orcid.org/0000-0001-8586-6134\">ORCID</a> · <a href=\"https://inspirehep.net/authors/1988682\">INSPIRE-HEP</a> · <a href=\"https://www.scopus.com/authid/detail.uri?authorId=56915277300\">Scopus</a></p>\n<h2>第一作者论文</h2>\n<h2>通讯作者论文</h2>\n<h2>代表性合作论文</h2>\n<h2>部分合作论文</h2>\n"
+      },
+      "research": {
+        "title": "研究",
+        "markdown": "我利用高精度离子阱和储存环质谱回答中微子物理、原子核结构和核天体物理中的问题。各研究方向下的论文来自统一的论文数据库，完整列表见[论文](../publications/)页面。\n\n## 图说实验技术\n\n{{< gallery >}}\n\n## 直至 ¹⁰⁰Sn 的 N = Z 奇特核——MASSPASS\n\n芬兰科学院研究员项目（负责人）。在 IGISOL（于韦斯屈莱）和 RIKEN（日本）测量直至 ¹⁰⁰Sn 的 *N* = *Z* 奇特核及其附近核素的质量，研究通向最重自共轭双幻数核的壳演化以及 rp 过程所需的核物理输入。[项目主页](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)\n\n{{< pubs theme=\"nz\" >}}\n\n## 用于确定中微子质量的 Q 值\n\n利用彭宁阱直接测量衰变能（Q 值），寻找可用于未来直接中微子质量实验的超低 Q 值 β⁻ 衰变和电子俘获跃迁，并排除不合适的候选核。\n\n{{< pubs theme=\"neutrino\" >}}\n\n## 用于同位素移位研究的原子质量\n\n{{< pubs theme=\"isotope-shift\" >}}\n\n## 储存环、MR-TOF 与 MCP 探测器\n\n博士阶段在 RIKEN Rare-RI Ring 储存环开展等时性质量测量的次级离子鉴别，以及定时/位置灵敏微通道板（MCP）探测器研制；之后扩展到 IGISOL 和 GSI FRS Ion Catcher 的 MR-TOF 谱仪以及 HIAF 的探测器方案。\n\n{{< pubs theme=\"detectors\" >}}",
+        "html": "<p>我利用高精度离子阱和储存环质谱回答中微子物理、原子核结构和核天体物理中的问题。各研究方向下的论文来自统一的论文数据库，完整列表见<a href=\"../publications/\">论文</a>页面。</p>\n<h2>图说实验技术</h2>\n<h2>直至 ¹⁰⁰Sn 的 N = Z 奇特核——MASSPASS</h2>\n<p>芬兰科学院研究员项目（负责人）。在 IGISOL（于韦斯屈莱）和 RIKEN（日本）测量直至 ¹⁰⁰Sn 的 <em>N</em> = <em>Z</em> 奇特核及其附近核素的质量，研究通向最重自共轭双幻数核的壳演化以及 rp 过程所需的核物理输入。<a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">项目主页</a></p>\n<h2>用于确定中微子质量的 Q 值</h2>\n<p>利用彭宁阱直接测量衰变能（Q 值），寻找可用于未来直接中微子质量实验的超低 Q 值 β⁻ 衰变和电子俘获跃迁，并排除不合适的候选核。</p>\n<h2>用于同位素移位研究的原子质量</h2>\n<h2>储存环、MR-TOF 与 MCP 探测器</h2>\n<p>博士阶段在 RIKEN Rare-RI Ring 储存环开展等时性质量测量的次级离子鉴别，以及定时/位置灵敏微通道板（MCP）探测器研制；之后扩展到 IGISOL 和 GSI FRS Ion Catcher 的 MR-TOF 谱仪以及 HIAF 的探测器方案。</p>\n"
+      },
+      "talks": {
+        "title": "报告",
+        "markdown": "## 邀请报告\n\n{{< talks kind=\"invited\" >}}\n\n## 会议报告\n\n{{< talks kind=\"contributed\" >}}",
+        "html": "<h2>邀请报告</h2>\n<h2>会议报告</h2>\n"
+      }
+    },
+    "fi": {
+      "_index": {
+        "title": "Zhuang Ge",
+        "markdown": "Olen **akatemiatutkija ja vastuullinen johtaja** Jyväskylän yliopiston fysiikan laitoksella. Tutkimusalani on **ydinfysiikka ja ydinastrofysiikka**: mittaan eksoottisten atomiytimien massoja, Q-arvoja ja hajoamisia ioniloukuilla.\n\nTyöskentelen Eksoottiset ytimet ja suihkut (IGISOL) -ryhmässä JYFLTRAP-Penning-loukun ja monikertaheijastavan lentoaikamassaspektrometrian (MR-TOF) parissa. Akatemiahankkeen [MASSPASS](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear) johtajana mittaan eksoottisten *N* = *Z* -ytimien massoja kaksoismaagiseen ¹⁰⁰Sn-ytimeen asti IGISOLissa ja RIKENissä.\n\nOlen väitellyt tohtoriksi Saitaman yliopistossa / RIKEN Nishina Centerissä (Japani) sekä Kiinan tiedeakatemian yliopistossa / Institute of Modern Physicsissä. Olen työskennellyt RIKENin, GSI:n ja IMP:n varastorengaslaitteistoilla sekä IGISOLissa — tutkijatohtorina JYFLTRAPilla (2019–2021) ja GSI:n FRS/Super-FRS-ryhmässä (2021–2023) — ennen paluutani Jyväskylään akatemiatutkijaksi vuonna 2023.\n\n**English fallback:** I teach the doctoral course *Lasers and Traps in Nuclear Physics Studies*. The website lists selected public publications and main talks; see the [Group page](group/) for members and collaborators.\n\n**Yhteystiedot:** zhuang.z.ge@jyu.fi\n\n{{< gallery home=\"true\" >}}\n\n\n**English fallback:** MASSPASS runs from **1 September 2023 to 31 August 2027**, funded by the Research Council of Finland. Position and project information follow the [university profile](https://www.jyu.fi/en/people/zhuang-ge) and [project page](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear), checked on 3 October 2026.",
+        "html": "<p>Olen <strong>akatemiatutkija ja vastuullinen johtaja</strong> Jyväskylän yliopiston fysiikan laitoksella. Tutkimusalani on <strong>ydinfysiikka ja ydinastrofysiikka</strong>: mittaan eksoottisten atomiytimien massoja, Q-arvoja ja hajoamisia ioniloukuilla.</p>\n<p>Työskentelen Eksoottiset ytimet ja suihkut (IGISOL) -ryhmässä JYFLTRAP-Penning-loukun ja monikertaheijastavan lentoaikamassaspektrometrian (MR-TOF) parissa. Akatemiahankkeen <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">MASSPASS</a> johtajana mittaan eksoottisten <em>N</em> = <em>Z</em> -ytimien massoja kaksoismaagiseen ¹⁰⁰Sn-ytimeen asti IGISOLissa ja RIKENissä.</p>\n<p>Olen väitellyt tohtoriksi Saitaman yliopistossa / RIKEN Nishina Centerissä (Japani) sekä Kiinan tiedeakatemian yliopistossa / Institute of Modern Physicsissä. Olen työskennellyt RIKENin, GSI:n ja IMP:n varastorengaslaitteistoilla sekä IGISOLissa — tutkijatohtorina JYFLTRAPilla (2019–2021) ja GSI:n FRS/Super-FRS-ryhmässä (2021–2023) — ennen paluutani Jyväskylään akatemiatutkijaksi vuonna 2023.</p>\n<p><strong>English fallback:</strong> I teach the doctoral course <em>Lasers and Traps in Nuclear Physics Studies</em>. The website lists selected public publications and main talks; see the <a href=\"group/\">Group page</a> for members and collaborators.</p>\n<p><strong>Yhteystiedot:</strong> zhuang.z.ge@jyu.fi</p>\n<p><strong>English fallback:</strong> MASSPASS runs from <strong>1 September 2023 to 31 August 2027</strong>, funded by the Research Council of Finland. Position and project information follow the <a href=\"https://www.jyu.fi/en/people/zhuang-ge\">university profile</a> and <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">project page</a>, checked on 3 October 2026.</p>\n"
+      },
+      "group": {
+        "title": "Ryhmä",
+        "markdown": "**English fallback:** The October 2026 member update is awaiting translation.\n\nI work at IGISOL/JYFLTRAP in the University of Jyväskylä Accelerator Laboratory.\n\n## Members and collaborators\n\n- **Dr. Brian Kootte** — Postdoctoral Researcher ([university profile](https://www.jyu.fi/en/people/brian-kootte)).\n- **Miikka Winter** — Doctoral Researcher ([university profile](https://www.jyu.fi/fi/henkilot/miikka-winter)).\n\n## Former members and continuing collaborators\n\n- **Dr. Marlom Ramalho** — former JYFLTRAP/IGISOL postdoctoral researcher (2024); his [public profile](https://www.nucleonicinsight.com/about.html) lists a subsequent Oskar Huttunen Fellowship at the University of York.\n\n## Teaching\n\n- **FYSS3552** — *Lasers and Traps in Nuclear Physics Studies*, University of Jyväskylä doctoral course.\n\n## Editorial work\n\n- Guest editor, *Sensors* special issue [Detectors and Sensors in Nuclear Physics and Nuclear Astrophysics](https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1).\n\nThe member roles above were checked against public profiles on 3 October 2026. This selected list is not the full IGISOL staff directory; see the [IGISOL group](https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol).",
+        "html": "<p><strong>English fallback:</strong> The October 2026 member update is awaiting translation.</p>\n<p>I work at IGISOL/JYFLTRAP in the University of Jyväskylä Accelerator Laboratory.</p>\n<h2>Members and collaborators</h2>\n<ul>\n<li><strong>Dr. Brian Kootte</strong> — Postdoctoral Researcher (<a href=\"https://www.jyu.fi/en/people/brian-kootte\">university profile</a>).</li>\n<li><strong>Miikka Winter</strong> — Doctoral Researcher (<a href=\"https://www.jyu.fi/fi/henkilot/miikka-winter\">university profile</a>).</li>\n</ul>\n<h2>Former members and continuing collaborators</h2>\n<ul>\n<li><strong>Dr. Marlom Ramalho</strong> — former JYFLTRAP/IGISOL postdoctoral researcher (2024); his <a href=\"https://www.nucleonicinsight.com/about.html\">public profile</a> lists a subsequent Oskar Huttunen Fellowship at the University of York.</li>\n</ul>\n<h2>Teaching</h2>\n<ul>\n<li><strong>FYSS3552</strong> — <em>Lasers and Traps in Nuclear Physics Studies</em>, University of Jyväskylä doctoral course.</li>\n</ul>\n<h2>Editorial work</h2>\n<ul>\n<li>Guest editor, <em>Sensors</em> special issue <a href=\"https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1\">Detectors and Sensors in Nuclear Physics and Nuclear Astrophysics</a>.</li>\n</ul>\n<p>The member roles above were checked against public profiles on 3 October 2026. This selected list is not the full IGISOL staff directory; see the <a href=\"https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol\">IGISOL group</a>.</p>\n"
+      },
+      "cv": {
+        "title": "CV",
+        "markdown": "## Nykyinen tehtävä\n\n- **2023–** Akatemiatutkija (vastuullinen johtaja), fysiikan laitos, Jyväskylän yliopisto\n\n## Aiemmat tehtävät\n\n- **2021–2023** Tutkijatohtori, FRS/Super-FRS-ryhmä, GSI Helmholtz Centre for Heavy Ion Research, Darmstadt, Saksa\n- **2019–2021** Tutkijatohtori, fysiikan laitos, Jyväskylän yliopisto (JYFLTRAP)\n- **2018–2019** Tutkimusavustaja, Institute of Modern Physics, Kiinan tiedeakatemia\n- **2018** Vieraileva vanhempi tutkija, RIKEN, Japani\n- **2015–2018** International Program Associate, RIKEN Nishina Center, Japani\n\n## Koulutus\n\n- **FT (2018)**, Saitaman yliopisto ja RIKEN Nishina Center, Japani — *Time- and position-sensitive foil-MCP detector for mass measurements at the Rare-RI Ring*\n- **FT (2019)**, Kiinan tiedeakatemian yliopisto ja Institute of Modern Physics — *Design and test of high-resolution beam-line systems and mass measurements of N = Z nuclei*\n- **LuK (2012)**, ydintiede ja -tekniikka, Xi'an Jiaotong University, Kiina\n\n## Apurahat ja rahoitus\n\n- **2023–2027** Akatemiatutkijan tehtävä ja MASSPASS-hanke (johtaja), Suomen Akatemia\n- **2023** WINNINGNormandy-apuraha, GANIL — EU:n Horisontti 2020, Marie Skłodowska-Curie -toimet\n- **2018–2021** Vieraileva vanhempi tutkija, RIKEN RI Beam Factory, Japani\n\n## Opetus ja ohjaus\n\n- **English fallback:** Supervision and collaboration with early-career researchers (see [Group](../group/)).\n- Luennoitsija, FYSS3552 *Lasers and Traps in Nuclear Physics Studies*\n\n## Luottamustehtävät\n\n- Vieraileva toimittaja, *Sensors*-lehden teemanumero [Detectors & Sensors in Nuclear Physics and Nuclear Astrophysics](https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1)\n\n## Julkaisut ja esitelmät\n\nKs. [Julkaisut](../publications/) ja [Esitelmät](../talks/).\n\n## Tunnisteet\n\n[ORCID 0000-0001-8586-6134](https://orcid.org/0000-0001-8586-6134) · [Scopus 56915277300](https://www.scopus.com/authid/detail.uri?authorId=56915277300) · [ResearcherID L-1172-2015](https://www.webofscience.com/wos/author/record/1631872) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [ResearchGate](https://www.researchgate.net/profile/Zhuang-Ge)",
+        "html": "<h2>Nykyinen tehtävä</h2>\n<ul>\n<li><strong>2023–</strong> Akatemiatutkija (vastuullinen johtaja), fysiikan laitos, Jyväskylän yliopisto</li>\n</ul>\n<h2>Aiemmat tehtävät</h2>\n<ul>\n<li><strong>2021–2023</strong> Tutkijatohtori, FRS/Super-FRS-ryhmä, GSI Helmholtz Centre for Heavy Ion Research, Darmstadt, Saksa</li>\n<li><strong>2019–2021</strong> Tutkijatohtori, fysiikan laitos, Jyväskylän yliopisto (JYFLTRAP)</li>\n<li><strong>2018–2019</strong> Tutkimusavustaja, Institute of Modern Physics, Kiinan tiedeakatemia</li>\n<li><strong>2018</strong> Vieraileva vanhempi tutkija, RIKEN, Japani</li>\n<li><strong>2015–2018</strong> International Program Associate, RIKEN Nishina Center, Japani</li>\n</ul>\n<h2>Koulutus</h2>\n<ul>\n<li><strong>FT (2018)</strong>, Saitaman yliopisto ja RIKEN Nishina Center, Japani — <em>Time- and position-sensitive foil-MCP detector for mass measurements at the Rare-RI Ring</em></li>\n<li><strong>FT (2019)</strong>, Kiinan tiedeakatemian yliopisto ja Institute of Modern Physics — <em>Design and test of high-resolution beam-line systems and mass measurements of N = Z nuclei</em></li>\n<li><strong>LuK (2012)</strong>, ydintiede ja -tekniikka, Xi'an Jiaotong University, Kiina</li>\n</ul>\n<h2>Apurahat ja rahoitus</h2>\n<ul>\n<li><strong>2023–2027</strong> Akatemiatutkijan tehtävä ja MASSPASS-hanke (johtaja), Suomen Akatemia</li>\n<li><strong>2023</strong> WINNINGNormandy-apuraha, GANIL — EU:n Horisontti 2020, Marie Skłodowska-Curie -toimet</li>\n<li><strong>2018–2021</strong> Vieraileva vanhempi tutkija, RIKEN RI Beam Factory, Japani</li>\n</ul>\n<h2>Opetus ja ohjaus</h2>\n<ul>\n<li><strong>English fallback:</strong> Supervision and collaboration with early-career researchers (see <a href=\"../group/\">Group</a>).</li>\n<li>Luennoitsija, FYSS3552 <em>Lasers and Traps in Nuclear Physics Studies</em></li>\n</ul>\n<h2>Luottamustehtävät</h2>\n<ul>\n<li>Vieraileva toimittaja, <em>Sensors</em>-lehden teemanumero <a href=\"https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1\">Detectors &amp; Sensors in Nuclear Physics and Nuclear Astrophysics</a></li>\n</ul>\n<h2>Julkaisut ja esitelmät</h2>\n<p>Ks. <a href=\"../publications/\">Julkaisut</a> ja <a href=\"../talks/\">Esitelmät</a>.</p>\n<h2>Tunnisteet</h2>\n<p><a href=\"https://orcid.org/0000-0001-8586-6134\">ORCID 0000-0001-8586-6134</a> · <a href=\"https://www.scopus.com/authid/detail.uri?authorId=56915277300\">Scopus 56915277300</a> · <a href=\"https://www.webofscience.com/wos/author/record/1631872\">ResearcherID L-1172-2015</a> · <a href=\"https://inspirehep.net/authors/1988682\">INSPIRE-HEP</a> · <a href=\"https://www.researchgate.net/profile/Zhuang-Ge\">ResearchGate</a></p>\n"
+      },
+      "daily": {
+        "title": "Päivittäin",
+        "markdown": "Oma tutkimuslokini sekä uudet artikkelit, uutiset ja avoimet paikat ydinfysiikassa ja ioniloukkutekniikoissa. Värit kertovat tyypin; napsauta päivää nähdäksesi merkinnät tai suodata ja hae. Uudet artikkelit ja työpaikat kerätään automaattisesti joka päivä.\n\n{{< daily-calendar >}}",
+        "html": "<p>Oma tutkimuslokini sekä uudet artikkelit, uutiset ja avoimet paikat ydinfysiikassa ja ioniloukkutekniikoissa. Värit kertovat tyypin; napsauta päivää nähdäksesi merkinnät tai suodata ja hae. Uudet artikkelit ja työpaikat kerätään automaattisesti joka päivä.</p>\n"
+      },
+      "projects": {
+        "title": "Projektit",
+        "markdown": "## MASSPASS — akatemiatutkijan hanke (johtaja), 2023–2027\nEksoottisten *N* = *Z* -ytimien massamittaukset ¹⁰⁰Sn:ään asti IGISOLissa ja RIKENissä ydinfysiikan ja ydinastrofysiikan tarpeisiin. Suomen Akatemia. [Hankkeen sivu](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)\n\n## Pienen Q-arvon hajoamiset neutriinon massan määrittämiseen\nQ-arvojen mittaukset JYFLTRAP-Penning-loukulla erittäin pienen Q-arvon siirtymien löytämiseksi ja varmistamiseksi.\n\n## MR-TOF-massaspektrometria\nMonikertaheijastavien lentoaikaspektrometrien suunnittelu, ionioptinen simulointi ja analyysiketjut.\n\n## RFQ-jäähdytin-kasaajat ja suihkun valmistelu\nRadiotaajuisten kvadrupolijäähdyttimien ionioptinen suunnittelu kylmiä, kasattuja radioaktiivisia suihkuja varten.\n\n## Ilmaisimet varastorenkaisiin\nAjoitus- ja paikkaherkät MCP-ilmaisimet Rare-RI Ringille (RIKEN) ja HIAF-konseptit.\n\n## Tutkimusohjelmistot\nPenning-loukun hiukkassimulointi, MR-TOF-kalibrointi ja 2D-MCP-paikkakalibrointi Pythonilla.",
+        "html": "<h2>MASSPASS — akatemiatutkijan hanke (johtaja), 2023–2027</h2>\n<p>Eksoottisten <em>N</em> = <em>Z</em> -ytimien massamittaukset ¹⁰⁰Sn:ään asti IGISOLissa ja RIKENissä ydinfysiikan ja ydinastrofysiikan tarpeisiin. Suomen Akatemia. <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">Hankkeen sivu</a></p>\n<h2>Pienen Q-arvon hajoamiset neutriinon massan määrittämiseen</h2>\n<p>Q-arvojen mittaukset JYFLTRAP-Penning-loukulla erittäin pienen Q-arvon siirtymien löytämiseksi ja varmistamiseksi.</p>\n<h2>MR-TOF-massaspektrometria</h2>\n<p>Monikertaheijastavien lentoaikaspektrometrien suunnittelu, ionioptinen simulointi ja analyysiketjut.</p>\n<h2>RFQ-jäähdytin-kasaajat ja suihkun valmistelu</h2>\n<p>Radiotaajuisten kvadrupolijäähdyttimien ionioptinen suunnittelu kylmiä, kasattuja radioaktiivisia suihkuja varten.</p>\n<h2>Ilmaisimet varastorenkaisiin</h2>\n<p>Ajoitus- ja paikkaherkät MCP-ilmaisimet Rare-RI Ringille (RIKEN) ja HIAF-konseptit.</p>\n<h2>Tutkimusohjelmistot</h2>\n<p>Penning-loukun hiukkassimulointi, MR-TOF-kalibrointi ja 2D-MCP-paikkakalibrointi Pythonilla.</p>\n"
+      },
+      "publications": {
+        "title": "Julkaisut",
+        "markdown": "Yli 90 vertaisarvioitua julkaisua. Täydelliset luettelot: [ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)\n\n## Julkaisut ensimmäisenä kirjoittajana\n\n{{< pubs role=\"first\" numbered=\"true\" >}}\n\n## Julkaisut vastaavana kirjoittajana\n\n{{< pubs role=\"corresponding\" >}}\n\n## Poimintoja yhteisjulkaisuista\n\n{{< pubs role=\"coauthor\" highlight=\"only\" >}}\n\n## Valittuja yhteisjulkaisuja\n\n{{< pubs role=\"coauthor\" highlight=\"exclude\" group=\"year\" >}}",
+        "html": "<p>Yli 90 vertaisarvioitua julkaisua. Täydelliset luettelot: <a href=\"https://orcid.org/0000-0001-8586-6134\">ORCID</a> · <a href=\"https://inspirehep.net/authors/1988682\">INSPIRE-HEP</a> · <a href=\"https://www.scopus.com/authid/detail.uri?authorId=56915277300\">Scopus</a></p>\n<h2>Julkaisut ensimmäisenä kirjoittajana</h2>\n<h2>Julkaisut vastaavana kirjoittajana</h2>\n<h2>Poimintoja yhteisjulkaisuista</h2>\n<h2>Valittuja yhteisjulkaisuja</h2>\n"
+      },
+      "research": {
+        "title": "Tutkimus",
+        "markdown": "Käytän tarkkaa ioniloukku- ja varastorengasmassaspektrometriaa neutriinofysiikan, ydinrakenteen ja ydinastrofysiikan kysymyksiin. Kunkin aiheen julkaisut tulevat yhteisestä julkaisutietokannasta; koko luettelo on [Julkaisut](../publications/)-sivulla.\n\n## Menetelmät kuvina\n\n{{< gallery >}}\n\n## Eksoottiset N = Z -ytimet ¹⁰⁰Sn:ään asti — MASSPASS\n\nAkatemiatutkijan hanke (johtaja). Eksoottisten *N* = *Z* -ytimien ja niiden naapurien massamittaukset ¹⁰⁰Sn:ään asti IGISOLissa (Jyväskylä) ja RIKENissä (Japani): kuorirakenteen kehitys kohti raskainta itsekonjugoitua kaksoismaagista ydintä sekä rp-prosessin ydinfysikaalinen syöte. [Hankkeen sivu](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)\n\n{{< pubs theme=\"nz\" >}}\n\n## Q-arvot neutriinon massan määrittämiseen\n\nHajoamisenergioiden (Q-arvojen) suorat Penning-loukkumittaukset paljastavat erittäin pienen Q-arvon β⁻- ja elektronisieppaussiirtymiä tuleviin neutriinon massan mittauksiin ja sulkevat pois sopimattomat ehdokkaat.\n\n{{< pubs theme=\"neutrino\" >}}\n\n## Atomimassat isotooppisiirtymätutkimuksiin\n\n{{< pubs theme=\"isotope-shift\" >}}\n\n## Varastorenkaat, MR-TOF ja MCP-ilmaisimet\n\nVäitöstyö RIKENin Rare-RI Ringillä: sekundääri-ionien tunnistus isokronisiin massamittauksiin sekä ajoitus- ja paikkaherkät mikrokanavalevyilmaisimet (MCP). Myöhemmin MR-TOF-spektrometrit IGISOLissa ja GSI:n FRS Ion Catcherilla sekä HIAF-ilmaisinkonseptit.\n\n{{< pubs theme=\"detectors\" >}}",
+        "html": "<p>Käytän tarkkaa ioniloukku- ja varastorengasmassaspektrometriaa neutriinofysiikan, ydinrakenteen ja ydinastrofysiikan kysymyksiin. Kunkin aiheen julkaisut tulevat yhteisestä julkaisutietokannasta; koko luettelo on <a href=\"../publications/\">Julkaisut</a>-sivulla.</p>\n<h2>Menetelmät kuvina</h2>\n<h2>Eksoottiset N = Z -ytimet ¹⁰⁰Sn:ään asti — MASSPASS</h2>\n<p>Akatemiatutkijan hanke (johtaja). Eksoottisten <em>N</em> = <em>Z</em> -ytimien ja niiden naapurien massamittaukset ¹⁰⁰Sn:ään asti IGISOLissa (Jyväskylä) ja RIKENissä (Japani): kuorirakenteen kehitys kohti raskainta itsekonjugoitua kaksoismaagista ydintä sekä rp-prosessin ydinfysikaalinen syöte. <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">Hankkeen sivu</a></p>\n<h2>Q-arvot neutriinon massan määrittämiseen</h2>\n<p>Hajoamisenergioiden (Q-arvojen) suorat Penning-loukkumittaukset paljastavat erittäin pienen Q-arvon β⁻- ja elektronisieppaussiirtymiä tuleviin neutriinon massan mittauksiin ja sulkevat pois sopimattomat ehdokkaat.</p>\n<h2>Atomimassat isotooppisiirtymätutkimuksiin</h2>\n<h2>Varastorenkaat, MR-TOF ja MCP-ilmaisimet</h2>\n<p>Väitöstyö RIKENin Rare-RI Ringillä: sekundääri-ionien tunnistus isokronisiin massamittauksiin sekä ajoitus- ja paikkaherkät mikrokanavalevyilmaisimet (MCP). Myöhemmin MR-TOF-spektrometrit IGISOLissa ja GSI:n FRS Ion Catcherilla sekä HIAF-ilmaisinkonseptit.</p>\n"
+      },
+      "talks": {
+        "title": "Esitelmät",
+        "markdown": "## Kutsuesitelmät\n\n{{< talks kind=\"invited\" >}}\n\n## Konferenssiesitelmät\n\n{{< talks kind=\"contributed\" >}}",
+        "html": "<h2>Kutsuesitelmät</h2>\n<h2>Konferenssiesitelmät</h2>\n"
+      }
+    },
+    "de": {
+      "_index": {
+        "title": "Zhuang Ge",
+        "markdown": "Ich bin **Academy Research Fellow und Projektleiter (PI)** am Fachbereich Physik der Universität Jyväskylä, Finnland. Mein Fachgebiet ist **Kernphysik und nukleare Astrophysik**: Ich messe Massen, Q-Werte und Zerfälle exotischer Atomkerne mit Ionenfallen.\n\nIch arbeite in der Gruppe Exotische Kerne und Strahlen (IGISOL) mit der Penning-Falle JYFLTRAP und der Multireflexions-Flugzeit-Massenspektrometrie (MR-TOF). Als Leiter des Akademie-Projekts [MASSPASS](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear) messe ich Massen exotischer *N* = *Z*-Kerne bis zum doppelt magischen ¹⁰⁰Sn an IGISOL und RIKEN.\n\nIch wurde an der Universität Saitama / RIKEN Nishina Center (Japan) sowie an der Universität der Chinesischen Akademie der Wissenschaften / Institute of Modern Physics promoviert. Ich habe an den Speicherring-Anlagen von RIKEN, GSI und IMP sowie an IGISOL gearbeitet — als Postdoc an JYFLTRAP (2019–2021) und in der FRS/Super-FRS-Gruppe der GSI (2021–2023) — bevor ich 2023 als Academy Research Fellow nach Jyväskylä zurückkehrte.\n\n**English fallback:** I teach the doctoral course *Lasers and Traps in Nuclear Physics Studies*. The website lists selected public publications and main talks; see the [Group page](group/) for members and collaborators.\n\n**Kontakt:** zhuang.z.ge@jyu.fi\n\n{{< gallery home=\"true\" >}}\n\n\n**English fallback:** MASSPASS runs from **1 September 2023 to 31 August 2027**, funded by the Research Council of Finland. Position and project information follow the [university profile](https://www.jyu.fi/en/people/zhuang-ge) and [project page](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear), checked on 3 October 2026.",
+        "html": "<p>Ich bin <strong>Academy Research Fellow und Projektleiter (PI)</strong> am Fachbereich Physik der Universität Jyväskylä, Finnland. Mein Fachgebiet ist <strong>Kernphysik und nukleare Astrophysik</strong>: Ich messe Massen, Q-Werte und Zerfälle exotischer Atomkerne mit Ionenfallen.</p>\n<p>Ich arbeite in der Gruppe Exotische Kerne und Strahlen (IGISOL) mit der Penning-Falle JYFLTRAP und der Multireflexions-Flugzeit-Massenspektrometrie (MR-TOF). Als Leiter des Akademie-Projekts <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">MASSPASS</a> messe ich Massen exotischer <em>N</em> = <em>Z</em>-Kerne bis zum doppelt magischen ¹⁰⁰Sn an IGISOL und RIKEN.</p>\n<p>Ich wurde an der Universität Saitama / RIKEN Nishina Center (Japan) sowie an der Universität der Chinesischen Akademie der Wissenschaften / Institute of Modern Physics promoviert. Ich habe an den Speicherring-Anlagen von RIKEN, GSI und IMP sowie an IGISOL gearbeitet — als Postdoc an JYFLTRAP (2019–2021) und in der FRS/Super-FRS-Gruppe der GSI (2021–2023) — bevor ich 2023 als Academy Research Fellow nach Jyväskylä zurückkehrte.</p>\n<p><strong>English fallback:</strong> I teach the doctoral course <em>Lasers and Traps in Nuclear Physics Studies</em>. The website lists selected public publications and main talks; see the <a href=\"group/\">Group page</a> for members and collaborators.</p>\n<p><strong>Kontakt:</strong> zhuang.z.ge@jyu.fi</p>\n<p><strong>English fallback:</strong> MASSPASS runs from <strong>1 September 2023 to 31 August 2027</strong>, funded by the Research Council of Finland. Position and project information follow the <a href=\"https://www.jyu.fi/en/people/zhuang-ge\">university profile</a> and <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">project page</a>, checked on 3 October 2026.</p>\n"
+      },
+      "group": {
+        "title": "Gruppe",
+        "markdown": "**English fallback:** The October 2026 member update is awaiting translation.\n\nI work at IGISOL/JYFLTRAP in the University of Jyväskylä Accelerator Laboratory.\n\n## Members and collaborators\n\n- **Dr. Brian Kootte** — Postdoctoral Researcher ([university profile](https://www.jyu.fi/en/people/brian-kootte)).\n- **Miikka Winter** — Doctoral Researcher ([university profile](https://www.jyu.fi/fi/henkilot/miikka-winter)).\n\n## Former members and continuing collaborators\n\n- **Dr. Marlom Ramalho** — former JYFLTRAP/IGISOL postdoctoral researcher (2024); his [public profile](https://www.nucleonicinsight.com/about.html) lists a subsequent Oskar Huttunen Fellowship at the University of York.\n\n## Teaching\n\n- **FYSS3552** — *Lasers and Traps in Nuclear Physics Studies*, University of Jyväskylä doctoral course.\n\n## Editorial work\n\n- Guest editor, *Sensors* special issue [Detectors and Sensors in Nuclear Physics and Nuclear Astrophysics](https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1).\n\nThe member roles above were checked against public profiles on 3 October 2026. This selected list is not the full IGISOL staff directory; see the [IGISOL group](https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol).",
+        "html": "<p><strong>English fallback:</strong> The October 2026 member update is awaiting translation.</p>\n<p>I work at IGISOL/JYFLTRAP in the University of Jyväskylä Accelerator Laboratory.</p>\n<h2>Members and collaborators</h2>\n<ul>\n<li><strong>Dr. Brian Kootte</strong> — Postdoctoral Researcher (<a href=\"https://www.jyu.fi/en/people/brian-kootte\">university profile</a>).</li>\n<li><strong>Miikka Winter</strong> — Doctoral Researcher (<a href=\"https://www.jyu.fi/fi/henkilot/miikka-winter\">university profile</a>).</li>\n</ul>\n<h2>Former members and continuing collaborators</h2>\n<ul>\n<li><strong>Dr. Marlom Ramalho</strong> — former JYFLTRAP/IGISOL postdoctoral researcher (2024); his <a href=\"https://www.nucleonicinsight.com/about.html\">public profile</a> lists a subsequent Oskar Huttunen Fellowship at the University of York.</li>\n</ul>\n<h2>Teaching</h2>\n<ul>\n<li><strong>FYSS3552</strong> — <em>Lasers and Traps in Nuclear Physics Studies</em>, University of Jyväskylä doctoral course.</li>\n</ul>\n<h2>Editorial work</h2>\n<ul>\n<li>Guest editor, <em>Sensors</em> special issue <a href=\"https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1\">Detectors and Sensors in Nuclear Physics and Nuclear Astrophysics</a>.</li>\n</ul>\n<p>The member roles above were checked against public profiles on 3 October 2026. This selected list is not the full IGISOL staff directory; see the <a href=\"https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol\">IGISOL group</a>.</p>\n"
+      },
+      "cv": {
+        "title": "Lebenslauf",
+        "markdown": "## Aktuelle Position\n\n- **seit 2023** Academy Research Fellow (Projektleiter), Fachbereich Physik, Universität Jyväskylä, Finnland\n\n## Frühere Positionen\n\n- **2021–2023** Postdoc, FRS/Super-FRS-Gruppe, GSI Helmholtzzentrum für Schwerionenforschung, Darmstadt\n- **2019–2021** Postdoc, Fachbereich Physik, Universität Jyväskylä (JYFLTRAP)\n- **2018–2019** Wissenschaftlicher Assistent, Institute of Modern Physics, Chinesische Akademie der Wissenschaften\n- **2018** Senior Visiting Scientist, RIKEN, Japan\n- **2015–2018** International Program Associate, RIKEN Nishina Center, Japan\n\n## Ausbildung\n\n- **Promotion (2018)**, Universität Saitama und RIKEN Nishina Center, Japan — *Time- and position-sensitive foil-MCP detector for mass measurements at the Rare-RI Ring*\n- **Promotion (2019)**, Universität der Chinesischen Akademie der Wissenschaften und Institute of Modern Physics — *Design and test of high-resolution beam-line systems and mass measurements of N = Z nuclei*\n- **Bachelor (2012)**, Kernwissenschaft und Kerntechnik, Xi'an Jiaotong University, China\n\n## Stipendien und Förderung\n\n- **2023–2027** Academy Research Fellowship und Projekt MASSPASS (Leitung), Forschungsrat Finnland\n- **2023** WINNINGNormandy-Fellowship, GANIL — EU Horizont 2020, Marie-Skłodowska-Curie-Maßnahmen\n- **2018–2021** Senior Visiting Scientist, RIKEN RI Beam Factory, Japan\n\n## Lehre und Betreuung\n\n- **English fallback:** Supervision and collaboration with early-career researchers (see [Group](../group/)).\n- Dozent, FYSS3552 *Lasers and Traps in Nuclear Physics Studies*\n\n## Gremien und Dienste\n\n- Gastherausgeber, *Sensors*-Sonderheft [Detectors & Sensors in Nuclear Physics and Nuclear Astrophysics](https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1)\n\n## Publikationen und Vorträge\n\nSiehe [Publikationen](../publications/) und [Vorträge](../talks/).\n\n## Kennungen\n\n[ORCID 0000-0001-8586-6134](https://orcid.org/0000-0001-8586-6134) · [Scopus 56915277300](https://www.scopus.com/authid/detail.uri?authorId=56915277300) · [ResearcherID L-1172-2015](https://www.webofscience.com/wos/author/record/1631872) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [ResearchGate](https://www.researchgate.net/profile/Zhuang-Ge)",
+        "html": "<h2>Aktuelle Position</h2>\n<ul>\n<li><strong>seit 2023</strong> Academy Research Fellow (Projektleiter), Fachbereich Physik, Universität Jyväskylä, Finnland</li>\n</ul>\n<h2>Frühere Positionen</h2>\n<ul>\n<li><strong>2021–2023</strong> Postdoc, FRS/Super-FRS-Gruppe, GSI Helmholtzzentrum für Schwerionenforschung, Darmstadt</li>\n<li><strong>2019–2021</strong> Postdoc, Fachbereich Physik, Universität Jyväskylä (JYFLTRAP)</li>\n<li><strong>2018–2019</strong> Wissenschaftlicher Assistent, Institute of Modern Physics, Chinesische Akademie der Wissenschaften</li>\n<li><strong>2018</strong> Senior Visiting Scientist, RIKEN, Japan</li>\n<li><strong>2015–2018</strong> International Program Associate, RIKEN Nishina Center, Japan</li>\n</ul>\n<h2>Ausbildung</h2>\n<ul>\n<li><strong>Promotion (2018)</strong>, Universität Saitama und RIKEN Nishina Center, Japan — <em>Time- and position-sensitive foil-MCP detector for mass measurements at the Rare-RI Ring</em></li>\n<li><strong>Promotion (2019)</strong>, Universität der Chinesischen Akademie der Wissenschaften und Institute of Modern Physics — <em>Design and test of high-resolution beam-line systems and mass measurements of N = Z nuclei</em></li>\n<li><strong>Bachelor (2012)</strong>, Kernwissenschaft und Kerntechnik, Xi'an Jiaotong University, China</li>\n</ul>\n<h2>Stipendien und Förderung</h2>\n<ul>\n<li><strong>2023–2027</strong> Academy Research Fellowship und Projekt MASSPASS (Leitung), Forschungsrat Finnland</li>\n<li><strong>2023</strong> WINNINGNormandy-Fellowship, GANIL — EU Horizont 2020, Marie-Skłodowska-Curie-Maßnahmen</li>\n<li><strong>2018–2021</strong> Senior Visiting Scientist, RIKEN RI Beam Factory, Japan</li>\n</ul>\n<h2>Lehre und Betreuung</h2>\n<ul>\n<li><strong>English fallback:</strong> Supervision and collaboration with early-career researchers (see <a href=\"../group/\">Group</a>).</li>\n<li>Dozent, FYSS3552 <em>Lasers and Traps in Nuclear Physics Studies</em></li>\n</ul>\n<h2>Gremien und Dienste</h2>\n<ul>\n<li>Gastherausgeber, <em>Sensors</em>-Sonderheft <a href=\"https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1\">Detectors &amp; Sensors in Nuclear Physics and Nuclear Astrophysics</a></li>\n</ul>\n<h2>Publikationen und Vorträge</h2>\n<p>Siehe <a href=\"../publications/\">Publikationen</a> und <a href=\"../talks/\">Vorträge</a>.</p>\n<h2>Kennungen</h2>\n<p><a href=\"https://orcid.org/0000-0001-8586-6134\">ORCID 0000-0001-8586-6134</a> · <a href=\"https://www.scopus.com/authid/detail.uri?authorId=56915277300\">Scopus 56915277300</a> · <a href=\"https://www.webofscience.com/wos/author/record/1631872\">ResearcherID L-1172-2015</a> · <a href=\"https://inspirehep.net/authors/1988682\">INSPIRE-HEP</a> · <a href=\"https://www.researchgate.net/profile/Zhuang-Ge\">ResearchGate</a></p>\n"
+      },
+      "daily": {
+        "title": "Täglich",
+        "markdown": "Mein laufendes Forschungslog sowie neue Artikel, Nachrichten und offene Stellen in der Kernphysik und Ionenfallentechnik. Farben kennzeichnen den Typ; Tag anklicken, um die Einträge zu sehen, oder filtern und suchen. Neue Artikel und Stellen werden täglich automatisch gesammelt.\n\n{{< daily-calendar >}}",
+        "html": "<p>Mein laufendes Forschungslog sowie neue Artikel, Nachrichten und offene Stellen in der Kernphysik und Ionenfallentechnik. Farben kennzeichnen den Typ; Tag anklicken, um die Einträge zu sehen, oder filtern und suchen. Neue Artikel und Stellen werden täglich automatisch gesammelt.</p>\n"
+      },
+      "projects": {
+        "title": "Projekte",
+        "markdown": "## MASSPASS — Academy Research Fellowship (Leitung), 2023–2027\nMassenmessungen exotischer *N* = *Z*-Kerne bis ¹⁰⁰Sn an IGISOL und RIKEN für Kernphysik und nukleare Astrophysik. Forschungsrat Finnland. [Projektseite](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)\n\n## Zerfälle mit kleinem Q-Wert für die Neutrinomasse\nQ-Wert-Messungen an der Penning-Falle JYFLTRAP, um Übergänge mit extrem kleinem Q-Wert zu finden und zu bestätigen.\n\n## MR-TOF-Massenspektrometrie\nEntwurf, ionenoptische Simulation und Auswerteketten für Multireflexions-Flugzeitspektrometer.\n\n## RFQ-Kühler-Bündler und Strahlpräparation\nIonenoptischer Entwurf von Radiofrequenz-Quadrupol-Kühlern für kalte, gebündelte radioaktive Strahlen.\n\n## Detektoren für Speicherringe\nZeit- und ortsauflösende MCP-Detektoren für den Rare-RI Ring (RIKEN) und Konzepte für HIAF.\n\n## Forschungssoftware\nTeilchensimulation für Penning-Fallen, MR-TOF-Kalibrierung und 2D-MCP-Ortskalibrierung in Python.",
+        "html": "<h2>MASSPASS — Academy Research Fellowship (Leitung), 2023–2027</h2>\n<p>Massenmessungen exotischer <em>N</em> = <em>Z</em>-Kerne bis ¹⁰⁰Sn an IGISOL und RIKEN für Kernphysik und nukleare Astrophysik. Forschungsrat Finnland. <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">Projektseite</a></p>\n<h2>Zerfälle mit kleinem Q-Wert für die Neutrinomasse</h2>\n<p>Q-Wert-Messungen an der Penning-Falle JYFLTRAP, um Übergänge mit extrem kleinem Q-Wert zu finden und zu bestätigen.</p>\n<h2>MR-TOF-Massenspektrometrie</h2>\n<p>Entwurf, ionenoptische Simulation und Auswerteketten für Multireflexions-Flugzeitspektrometer.</p>\n<h2>RFQ-Kühler-Bündler und Strahlpräparation</h2>\n<p>Ionenoptischer Entwurf von Radiofrequenz-Quadrupol-Kühlern für kalte, gebündelte radioaktive Strahlen.</p>\n<h2>Detektoren für Speicherringe</h2>\n<p>Zeit- und ortsauflösende MCP-Detektoren für den Rare-RI Ring (RIKEN) und Konzepte für HIAF.</p>\n<h2>Forschungssoftware</h2>\n<p>Teilchensimulation für Penning-Fallen, MR-TOF-Kalibrierung und 2D-MCP-Ortskalibrierung in Python.</p>\n"
+      },
+      "publications": {
+        "title": "Publikationen",
+        "markdown": "Mehr als 90 begutachtete Publikationen. Vollständige Listen: [ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)\n\n## Erstautorschaften\n\n{{< pubs role=\"first\" numbered=\"true\" >}}\n\n## Als korrespondierender Autor\n\n{{< pubs role=\"corresponding\" >}}\n\n## Höhepunkte aus Ko-Autorschaften\n\n{{< pubs role=\"coauthor\" highlight=\"only\" >}}\n\n## Ausgewählte Ko-Autorschaften\n\n{{< pubs role=\"coauthor\" highlight=\"exclude\" group=\"year\" >}}",
+        "html": "<p>Mehr als 90 begutachtete Publikationen. Vollständige Listen: <a href=\"https://orcid.org/0000-0001-8586-6134\">ORCID</a> · <a href=\"https://inspirehep.net/authors/1988682\">INSPIRE-HEP</a> · <a href=\"https://www.scopus.com/authid/detail.uri?authorId=56915277300\">Scopus</a></p>\n<h2>Erstautorschaften</h2>\n<h2>Als korrespondierender Autor</h2>\n<h2>Höhepunkte aus Ko-Autorschaften</h2>\n<h2>Ausgewählte Ko-Autorschaften</h2>\n"
+      },
+      "research": {
+        "title": "Forschung",
+        "markdown": "Mit hochpräziser Ionenfallen- und Speicherring-Massenspektrometrie untersuche ich Fragen der Neutrinophysik, der Kernstruktur und der nuklearen Astrophysik. Die Publikationen zu jedem Thema stammen aus der gemeinsamen Publikationsdatenbank; die vollständige Liste steht unter [Publikationen](../publications/).\n\n## Methoden in Bildern\n\n{{< gallery >}}\n\n## Exotische N = Z-Kerne bis ¹⁰⁰Sn — MASSPASS\n\nProjekt der Academy Research Fellowship (Leitung). Massenmessungen exotischer *N* = *Z*-Kerne und ihrer Nachbarn bis ¹⁰⁰Sn an IGISOL (Jyväskylä) und RIKEN (Japan): Schalenentwicklung hin zum schwersten selbstkonjugierten doppelt magischen Kern und kernphysikalische Eingangsdaten für den rp-Prozess. [Projektseite](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)\n\n{{< pubs theme=\"nz\" >}}\n\n## Q-Werte zur Bestimmung der Neutrinomasse\n\nDirekte Penning-Fallen-Messungen von Zerfallsenergien (Q-Werten) identifizieren β⁻- und Elektroneneinfang-Übergänge mit extrem kleinem Q-Wert für zukünftige direkte Neutrinomassen-Experimente und schließen ungeeignete Kandidaten aus.\n\n{{< pubs theme=\"neutrino\" >}}\n\n## Atommassen für Isotopieverschiebungs-Studien\n\n{{< pubs theme=\"isotope-shift\" >}}\n\n## Speicherringe, MR-TOF und MCP-Detektoren\n\nPromotion am RIKEN Rare-RI Ring: Identifikation von Sekundärionen für isochrone Massenmessungen sowie zeit- und ortsauflösende Mikrokanalplatten-Detektoren (MCP). Später MR-TOF-Spektrometer an IGISOL und am FRS Ion Catcher der GSI sowie Detektorkonzepte für HIAF.\n\n{{< pubs theme=\"detectors\" >}}",
+        "html": "<p>Mit hochpräziser Ionenfallen- und Speicherring-Massenspektrometrie untersuche ich Fragen der Neutrinophysik, der Kernstruktur und der nuklearen Astrophysik. Die Publikationen zu jedem Thema stammen aus der gemeinsamen Publikationsdatenbank; die vollständige Liste steht unter <a href=\"../publications/\">Publikationen</a>.</p>\n<h2>Methoden in Bildern</h2>\n<h2>Exotische N = Z-Kerne bis ¹⁰⁰Sn — MASSPASS</h2>\n<p>Projekt der Academy Research Fellowship (Leitung). Massenmessungen exotischer <em>N</em> = <em>Z</em>-Kerne und ihrer Nachbarn bis ¹⁰⁰Sn an IGISOL (Jyväskylä) und RIKEN (Japan): Schalenentwicklung hin zum schwersten selbstkonjugierten doppelt magischen Kern und kernphysikalische Eingangsdaten für den rp-Prozess. <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">Projektseite</a></p>\n<h2>Q-Werte zur Bestimmung der Neutrinomasse</h2>\n<p>Direkte Penning-Fallen-Messungen von Zerfallsenergien (Q-Werten) identifizieren β⁻- und Elektroneneinfang-Übergänge mit extrem kleinem Q-Wert für zukünftige direkte Neutrinomassen-Experimente und schließen ungeeignete Kandidaten aus.</p>\n<h2>Atommassen für Isotopieverschiebungs-Studien</h2>\n<h2>Speicherringe, MR-TOF und MCP-Detektoren</h2>\n<p>Promotion am RIKEN Rare-RI Ring: Identifikation von Sekundärionen für isochrone Massenmessungen sowie zeit- und ortsauflösende Mikrokanalplatten-Detektoren (MCP). Später MR-TOF-Spektrometer an IGISOL und am FRS Ion Catcher der GSI sowie Detektorkonzepte für HIAF.</p>\n"
+      },
+      "talks": {
+        "title": "Vorträge",
+        "markdown": "## Eingeladene Vorträge\n\n{{< talks kind=\"invited\" >}}\n\n## Konferenzvorträge\n\n{{< talks kind=\"contributed\" >}}",
+        "html": "<h2>Eingeladene Vorträge</h2>\n<h2>Konferenzvorträge</h2>\n"
+      }
+    },
+    "ja": {
+      "_index": {
+        "title": "葛 壮（Zhuang Ge）",
+        "markdown": "フィンランド・**ユヴァスキュラ大学物理学科のアカデミー研究員（Academy Research Fellow）・研究代表者（PI）**です。専門は**原子核物理学と原子核天体物理学**で、イオントラップを用いてエキゾチック原子核の質量・Q 値・崩壊を精密に測定しています。\n\nエキゾチック原子核・ビーム（IGISOL）グループに所属し、ペニングトラップ JYFLTRAP と多重反射飛行時間型（MR-TOF）質量分析を用いています。アカデミー研究員プロジェクト [MASSPASS](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear) の代表として、IGISOL と理化学研究所（RIKEN）で二重魔法数核 ¹⁰⁰Sn までの *N* = *Z* エキゾチック核の質量測定を進めています。\n\n埼玉大学・理化学研究所仁科加速器科学研究センター（日本）と中国科学院大学・中国科学院近代物理研究所で博士号を取得しました。RIKEN、GSI、IMP の蓄積リング施設と IGISOL で研究を行い、JYFLTRAP（2019–2021 年）と GSI の FRS/Super-FRS グループ（2021–2023 年）での博士研究員を経て、2023 年にアカデミー研究員としてユヴァスキュラに戻りました。\n\n**English fallback:** I teach the doctoral course *Lasers and Traps in Nuclear Physics Studies*. The website lists selected public publications and main talks; see the [Group page](group/) for members and collaborators.\n\n**連絡先：** zhuang.z.ge@jyu.fi\n\n{{< gallery home=\"true\" >}}\n\n\n**English fallback:** MASSPASS runs from **1 September 2023 to 31 August 2027**, funded by the Research Council of Finland. Position and project information follow the [university profile](https://www.jyu.fi/en/people/zhuang-ge) and [project page](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear), checked on 3 October 2026.",
+        "html": "<p>フィンランド・<strong>ユヴァスキュラ大学物理学科のアカデミー研究員（Academy Research Fellow）・研究代表者（PI）</strong>です。専門は<strong>原子核物理学と原子核天体物理学</strong>で、イオントラップを用いてエキゾチック原子核の質量・Q 値・崩壊を精密に測定しています。</p>\n<p>エキゾチック原子核・ビーム（IGISOL）グループに所属し、ペニングトラップ JYFLTRAP と多重反射飛行時間型（MR-TOF）質量分析を用いています。アカデミー研究員プロジェクト <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">MASSPASS</a> の代表として、IGISOL と理化学研究所（RIKEN）で二重魔法数核 ¹⁰⁰Sn までの <em>N</em> = <em>Z</em> エキゾチック核の質量測定を進めています。</p>\n<p>埼玉大学・理化学研究所仁科加速器科学研究センター（日本）と中国科学院大学・中国科学院近代物理研究所で博士号を取得しました。RIKEN、GSI、IMP の蓄積リング施設と IGISOL で研究を行い、JYFLTRAP（2019–2021 年）と GSI の FRS/Super-FRS グループ（2021–2023 年）での博士研究員を経て、2023 年にアカデミー研究員としてユヴァスキュラに戻りました。</p>\n<p><strong>English fallback:</strong> I teach the doctoral course <em>Lasers and Traps in Nuclear Physics Studies</em>. The website lists selected public publications and main talks; see the <a href=\"group/\">Group page</a> for members and collaborators.</p>\n<p><strong>連絡先：</strong> zhuang.z.ge@jyu.fi</p>\n<p><strong>English fallback:</strong> MASSPASS runs from <strong>1 September 2023 to 31 August 2027</strong>, funded by the Research Council of Finland. Position and project information follow the <a href=\"https://www.jyu.fi/en/people/zhuang-ge\">university profile</a> and <a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">project page</a>, checked on 3 October 2026.</p>\n"
+      },
+      "group": {
+        "title": "グループ",
+        "markdown": "**English fallback:** The October 2026 member update is awaiting translation.\n\nI work at IGISOL/JYFLTRAP in the University of Jyväskylä Accelerator Laboratory.\n\n## Members and collaborators\n\n- **Dr. Brian Kootte** — Postdoctoral Researcher ([university profile](https://www.jyu.fi/en/people/brian-kootte)).\n- **Miikka Winter** — Doctoral Researcher ([university profile](https://www.jyu.fi/fi/henkilot/miikka-winter)).\n\n## Former members and continuing collaborators\n\n- **Dr. Marlom Ramalho** — former JYFLTRAP/IGISOL postdoctoral researcher (2024); his [public profile](https://www.nucleonicinsight.com/about.html) lists a subsequent Oskar Huttunen Fellowship at the University of York.\n\n## Teaching\n\n- **FYSS3552** — *Lasers and Traps in Nuclear Physics Studies*, University of Jyväskylä doctoral course.\n\n## Editorial work\n\n- Guest editor, *Sensors* special issue [Detectors and Sensors in Nuclear Physics and Nuclear Astrophysics](https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1).\n\nThe member roles above were checked against public profiles on 3 October 2026. This selected list is not the full IGISOL staff directory; see the [IGISOL group](https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol).",
+        "html": "<p><strong>English fallback:</strong> The October 2026 member update is awaiting translation.</p>\n<p>I work at IGISOL/JYFLTRAP in the University of Jyväskylä Accelerator Laboratory.</p>\n<h2>Members and collaborators</h2>\n<ul>\n<li><strong>Dr. Brian Kootte</strong> — Postdoctoral Researcher (<a href=\"https://www.jyu.fi/en/people/brian-kootte\">university profile</a>).</li>\n<li><strong>Miikka Winter</strong> — Doctoral Researcher (<a href=\"https://www.jyu.fi/fi/henkilot/miikka-winter\">university profile</a>).</li>\n</ul>\n<h2>Former members and continuing collaborators</h2>\n<ul>\n<li><strong>Dr. Marlom Ramalho</strong> — former JYFLTRAP/IGISOL postdoctoral researcher (2024); his <a href=\"https://www.nucleonicinsight.com/about.html\">public profile</a> lists a subsequent Oskar Huttunen Fellowship at the University of York.</li>\n</ul>\n<h2>Teaching</h2>\n<ul>\n<li><strong>FYSS3552</strong> — <em>Lasers and Traps in Nuclear Physics Studies</em>, University of Jyväskylä doctoral course.</li>\n</ul>\n<h2>Editorial work</h2>\n<ul>\n<li>Guest editor, <em>Sensors</em> special issue <a href=\"https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1\">Detectors and Sensors in Nuclear Physics and Nuclear Astrophysics</a>.</li>\n</ul>\n<p>The member roles above were checked against public profiles on 3 October 2026. This selected list is not the full IGISOL staff directory; see the <a href=\"https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol\">IGISOL group</a>.</p>\n"
+      },
+      "cv": {
+        "title": "経歴",
+        "markdown": "## 現職\n\n- **2023–** アカデミー研究員（研究代表者）、ユヴァスキュラ大学 物理学科（フィンランド）\n\n## 職歴\n\n- **2021–2023** 博士研究員、GSI ヘルムホルツ重イオン研究所 FRS/Super-FRS グループ（ドイツ・ダルムシュタット）\n- **2019–2021** 博士研究員、ユヴァスキュラ大学 物理学科（JYFLTRAP）\n- **2018–2019** 研究助手、中国科学院近代物理研究所\n- **2018** 上級訪問研究員、理化学研究所（RIKEN）\n- **2015–2018** 国際プログラム・アソシエイト、理化学研究所 仁科加速器科学研究センター\n\n## 学歴\n\n- **博士（2018）**、埼玉大学・理化学研究所仁科加速器科学研究センター — *Time- and position-sensitive foil-MCP detector for mass measurements at the Rare-RI Ring*\n- **博士（2019）**、中国科学院大学・中国科学院近代物理研究所 — *Design and test of high-resolution beam-line systems and mass measurements of N = Z nuclei*\n- **学士（2012）**、西安交通大学 原子核科学・技術専攻（中国）\n\n## フェローシップ・研究費\n\n- **2023–2027** アカデミー研究員および MASSPASS プロジェクト（代表）、フィンランド研究評議会\n- **2023** WINNINGNormandy フェローシップ（GANIL）— EU ホライズン 2020 マリー・スクウォドフスカ＝キュリー・アクション\n- **2018–2021** 理化学研究所 RI ビームファクトリー 上級訪問研究員\n\n## 教育・指導\n\n- **English fallback:** Supervision and collaboration with early-career researchers (see [Group](../group/)).\n- FYSS3552 *Lasers and Traps in Nuclear Physics Studies* 講師\n\n## 学術活動\n\n- *Sensors* 誌特集号 [Detectors & Sensors in Nuclear Physics and Nuclear Astrophysics](https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1) ゲストエディター\n\n## 論文と講演\n\n[論文](../publications/)と[講演](../talks/)をご覧ください。\n\n## 研究者 ID\n\n[ORCID 0000-0001-8586-6134](https://orcid.org/0000-0001-8586-6134) · [Scopus 56915277300](https://www.scopus.com/authid/detail.uri?authorId=56915277300) · [ResearcherID L-1172-2015](https://www.webofscience.com/wos/author/record/1631872) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [ResearchGate](https://www.researchgate.net/profile/Zhuang-Ge)",
+        "html": "<h2>現職</h2>\n<ul>\n<li><strong>2023–</strong> アカデミー研究員（研究代表者）、ユヴァスキュラ大学 物理学科（フィンランド）</li>\n</ul>\n<h2>職歴</h2>\n<ul>\n<li><strong>2021–2023</strong> 博士研究員、GSI ヘルムホルツ重イオン研究所 FRS/Super-FRS グループ（ドイツ・ダルムシュタット）</li>\n<li><strong>2019–2021</strong> 博士研究員、ユヴァスキュラ大学 物理学科（JYFLTRAP）</li>\n<li><strong>2018–2019</strong> 研究助手、中国科学院近代物理研究所</li>\n<li><strong>2018</strong> 上級訪問研究員、理化学研究所（RIKEN）</li>\n<li><strong>2015–2018</strong> 国際プログラム・アソシエイト、理化学研究所 仁科加速器科学研究センター</li>\n</ul>\n<h2>学歴</h2>\n<ul>\n<li><strong>博士（2018）</strong>、埼玉大学・理化学研究所仁科加速器科学研究センター — <em>Time- and position-sensitive foil-MCP detector for mass measurements at the Rare-RI Ring</em></li>\n<li><strong>博士（2019）</strong>、中国科学院大学・中国科学院近代物理研究所 — <em>Design and test of high-resolution beam-line systems and mass measurements of N = Z nuclei</em></li>\n<li><strong>学士（2012）</strong>、西安交通大学 原子核科学・技術専攻（中国）</li>\n</ul>\n<h2>フェローシップ・研究費</h2>\n<ul>\n<li><strong>2023–2027</strong> アカデミー研究員および MASSPASS プロジェクト（代表）、フィンランド研究評議会</li>\n<li><strong>2023</strong> WINNINGNormandy フェローシップ（GANIL）— EU ホライズン 2020 マリー・スクウォドフスカ＝キュリー・アクション</li>\n<li><strong>2018–2021</strong> 理化学研究所 RI ビームファクトリー 上級訪問研究員</li>\n</ul>\n<h2>教育・指導</h2>\n<ul>\n<li><strong>English fallback:</strong> Supervision and collaboration with early-career researchers (see <a href=\"../group/\">Group</a>).</li>\n<li>FYSS3552 <em>Lasers and Traps in Nuclear Physics Studies</em> 講師</li>\n</ul>\n<h2>学術活動</h2>\n<ul>\n<li><em>Sensors</em> 誌特集号 <a href=\"https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1\">Detectors &amp; Sensors in Nuclear Physics and Nuclear Astrophysics</a> ゲストエディター</li>\n</ul>\n<h2>論文と講演</h2>\n<p><a href=\"../publications/\">論文</a>と<a href=\"../talks/\">講演</a>をご覧ください。</p>\n<h2>研究者 ID</h2>\n<p><a href=\"https://orcid.org/0000-0001-8586-6134\">ORCID 0000-0001-8586-6134</a> · <a href=\"https://www.scopus.com/authid/detail.uri?authorId=56915277300\">Scopus 56915277300</a> · <a href=\"https://www.webofscience.com/wos/author/record/1631872\">ResearcherID L-1172-2015</a> · <a href=\"https://inspirehep.net/authors/1988682\">INSPIRE-HEP</a> · <a href=\"https://www.researchgate.net/profile/Zhuang-Ge\">ResearchGate</a></p>\n"
+      },
+      "daily": {
+        "title": "デイリー",
+        "markdown": "自分の研究ログに加え、原子核物理とイオントラップ技術に関する新着論文・ニュース・求人を集めています。色は種類を表し、日付をクリックするとその日の記録が表示されます。種類での絞り込みや検索もできます。新着論文と求人は毎日自動で収集されます。\n\n{{< daily-calendar >}}",
+        "html": "<p>自分の研究ログに加え、原子核物理とイオントラップ技術に関する新着論文・ニュース・求人を集めています。色は種類を表し、日付をクリックするとその日の記録が表示されます。種類での絞り込みや検索もできます。新着論文と求人は毎日自動で収集されます。</p>\n"
+      },
+      "projects": {
+        "title": "プロジェクト",
+        "markdown": "## MASSPASS — アカデミー研究員プロジェクト（代表）、2023–2027\n原子核物理・原子核天体物理のための、IGISOL と RIKEN における ¹⁰⁰Sn までの *N* = *Z* エキゾチック核の質量測定。フィンランド研究評議会。[プロジェクトページ](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)\n\n## ニュートリノ質量決定のための低 Q 値崩壊\nJYFLTRAP ペニングトラップによる Q 値測定で、超低 Q 値遷移を探索・検証します。\n\n## MR-TOF 質量分析\n多重反射飛行時間型分光器の設計、イオン光学シミュレーション、解析パイプライン。\n\n## RFQ クーラー・バンチャーとビーム準備\n冷却・バンチ化された放射性ビームのための高周波四重極（RFQ）クーラーのイオン光学設計。\n\n## 蓄積リング用検出器\nRare-RI Ring（RIKEN）用の時間・位置検出型 MCP 検出器と HIAF 向けの構想。\n\n## 研究用ソフトウェア\nPython によるペニングトラップ粒子シミュレーション、MR-TOF 較正、2 次元 MCP 位置較正ツール。",
+        "html": "<h2>MASSPASS — アカデミー研究員プロジェクト（代表）、2023–2027</h2>\n<p>原子核物理・原子核天体物理のための、IGISOL と RIKEN における ¹⁰⁰Sn までの <em>N</em> = <em>Z</em> エキゾチック核の質量測定。フィンランド研究評議会。<a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">プロジェクトページ</a></p>\n<h2>ニュートリノ質量決定のための低 Q 値崩壊</h2>\n<p>JYFLTRAP ペニングトラップによる Q 値測定で、超低 Q 値遷移を探索・検証します。</p>\n<h2>MR-TOF 質量分析</h2>\n<p>多重反射飛行時間型分光器の設計、イオン光学シミュレーション、解析パイプライン。</p>\n<h2>RFQ クーラー・バンチャーとビーム準備</h2>\n<p>冷却・バンチ化された放射性ビームのための高周波四重極（RFQ）クーラーのイオン光学設計。</p>\n<h2>蓄積リング用検出器</h2>\n<p>Rare-RI Ring（RIKEN）用の時間・位置検出型 MCP 検出器と HIAF 向けの構想。</p>\n<h2>研究用ソフトウェア</h2>\n<p>Python によるペニングトラップ粒子シミュレーション、MR-TOF 較正、2 次元 MCP 位置較正ツール。</p>\n"
+      },
+      "publications": {
+        "title": "論文",
+        "markdown": "査読付き論文 90 編以上。全リスト：[ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)\n\n## 筆頭著者論文\n\n{{< pubs role=\"first\" numbered=\"true\" >}}\n\n## 責任著者論文\n\n{{< pubs role=\"corresponding\" >}}\n\n## 主な共著論文（ハイライト）\n\n{{< pubs role=\"coauthor\" highlight=\"only\" >}}\n\n## 共著論文（抜粋）\n\n{{< pubs role=\"coauthor\" highlight=\"exclude\" group=\"year\" >}}",
+        "html": "<p>査読付き論文 90 編以上。全リスト：<a href=\"https://orcid.org/0000-0001-8586-6134\">ORCID</a> · <a href=\"https://inspirehep.net/authors/1988682\">INSPIRE-HEP</a> · <a href=\"https://www.scopus.com/authid/detail.uri?authorId=56915277300\">Scopus</a></p>\n<h2>筆頭著者論文</h2>\n<h2>責任著者論文</h2>\n<h2>主な共著論文（ハイライト）</h2>\n<h2>共著論文（抜粋）</h2>\n"
+      },
+      "research": {
+        "title": "研究",
+        "markdown": "高精度のイオントラップおよび蓄積リング質量分析により、ニュートリノ物理、原子核構造、原子核天体物理の問題に取り組んでいます。各テーマの論文は共通の論文データベースから表示され、全リストは[論文](../publications/)ページにあります。\n\n## 図で見る実験手法\n\n{{< gallery >}}\n\n## ¹⁰⁰Sn までの N = Z エキゾチック核 — MASSPASS\n\nアカデミー研究員プロジェクト（代表）。IGISOL（ユヴァスキュラ）と RIKEN（日本）で ¹⁰⁰Sn までの *N* = *Z* エキゾチック核とその近傍核の質量を測定し、最も重い自己共役二重魔法数核へ向かう殻構造の変化と rp 過程の核物理入力を調べています。[プロジェクトページ](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)\n\n{{< pubs theme=\"nz\" >}}\n\n## ニュートリノ質量決定のための Q 値\n\nペニングトラップで崩壊エネルギー（Q 値）を直接測定し、将来のニュートリノ質量直接測定実験に向けた超低 Q 値の β⁻ 崩壊・電子捕獲遷移を探索し、適さない候補を除外します。\n\n{{< pubs theme=\"neutrino\" >}}\n\n## 同位体シフト研究のための原子質量\n\n{{< pubs theme=\"isotope-shift\" >}}\n\n## 蓄積リング・MR-TOF・MCP 検出器\n\n博士課程では RIKEN の稀少 RI リング（Rare-RI Ring）で等時性質量測定のための二次イオン識別と、時間・位置検出型マイクロチャンネルプレート（MCP）検出器の開発を行いました。その後、IGISOL と GSI FRS Ion Catcher の MR-TOF 分光器、HIAF 向け検出器構想へと展開しています。\n\n{{< pubs theme=\"detectors\" >}}",
+        "html": "<p>高精度のイオントラップおよび蓄積リング質量分析により、ニュートリノ物理、原子核構造、原子核天体物理の問題に取り組んでいます。各テーマの論文は共通の論文データベースから表示され、全リストは<a href=\"../publications/\">論文</a>ページにあります。</p>\n<h2>図で見る実験手法</h2>\n<h2>¹⁰⁰Sn までの N = Z エキゾチック核 — MASSPASS</h2>\n<p>アカデミー研究員プロジェクト（代表）。IGISOL（ユヴァスキュラ）と RIKEN（日本）で ¹⁰⁰Sn までの <em>N</em> = <em>Z</em> エキゾチック核とその近傍核の質量を測定し、最も重い自己共役二重魔法数核へ向かう殻構造の変化と rp 過程の核物理入力を調べています。<a href=\"https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear\">プロジェクトページ</a></p>\n<h2>ニュートリノ質量決定のための Q 値</h2>\n<p>ペニングトラップで崩壊エネルギー（Q 値）を直接測定し、将来のニュートリノ質量直接測定実験に向けた超低 Q 値の β⁻ 崩壊・電子捕獲遷移を探索し、適さない候補を除外します。</p>\n<h2>同位体シフト研究のための原子質量</h2>\n<h2>蓄積リング・MR-TOF・MCP 検出器</h2>\n<p>博士課程では RIKEN の稀少 RI リング（Rare-RI Ring）で等時性質量測定のための二次イオン識別と、時間・位置検出型マイクロチャンネルプレート（MCP）検出器の開発を行いました。その後、IGISOL と GSI FRS Ion Catcher の MR-TOF 分光器、HIAF 向け検出器構想へと展開しています。</p>\n"
+      },
+      "talks": {
+        "title": "講演",
+        "markdown": "## 招待講演\n\n{{< talks kind=\"invited\" >}}\n\n## 学会発表\n\n{{< talks kind=\"contributed\" >}}",
+        "html": "<h2>招待講演</h2>\n<h2>学会発表</h2>\n"
+      }
+    }
+  },
+  "gallery": {
+    "images": [
+      {
+        "file": "ion-trap-family.webp",
+        "home": true,
+        "wide": true,
+        "caption": {
+          "en": "The family of ion and atom traps used for precision measurements: linear Paul trap, Penning trap, Orbitrap, magneto-optical trap and storage ring.",
+          "zh": "用于精密测量的离子与原子阱家族：线性 Paul 阱、彭宁阱、轨道阱、磁光阱和储存环。",
+          "fi": "Tarkkuusmittauksissa käytettyjen ioni- ja atomiloukkujen perhe: lineaarinen Paul-loukku, Penning-loukku, Orbitrap, magneto-optinen loukku ja varastorengas.",
+          "de": "Die Familie der Ionen- und Atomfallen für Präzisionsmessungen: lineare Paul-Falle, Penning-Falle, Orbitrap, magneto-optische Falle und Speicherring.",
+          "ja": "精密測定に用いられるイオン・原子トラップ：線形パウルトラップ、ペニングトラップ、オービトラップ、磁気光学トラップ、蓄積リング。"
+        }
+      },
+      {
+        "video": "paul-trap-potential.mp4",
+        "poster": "paul-trap-potential-poster.webp",
+        "home": true,
+        "caption": {
+          "en": "Rotating saddle-shaped potential of a Paul trap: the RF field confines an ion that would escape a static saddle.",
+          "zh": "Paul 阱中旋转的马鞍形势：射频场将离子约束在静态鞍点上本会逃逸的位置。",
+          "fi": "Paul-loukun pyörivä satulapotentiaali: radiotaajuinen kenttä vangitsee ionin, joka karkaisi staattisesta satulasta.",
+          "de": "Rotierendes Sattelpotential einer Paul-Falle: das RF-Feld hält ein Ion fest, das aus einem statischen Sattel entweichen würde.",
+          "ja": "パウルトラップの回転する鞍型ポテンシャル：静的な鞍点からは逃げるイオンを高周波電場が閉じ込める。"
+        }
+      },
+      {
+        "file": "jyfltrap-ion-flower.webp",
+        "home": true,
+        "caption": {
+          "en": "\"An ion flow for you\": an ion-position image recorded on the position-sensitive MCP detector at JYFLTRAP.",
+          "zh": "“送你一朵离子花”：在 JYFLTRAP 位置灵敏 MCP 探测器上记录的离子位置图像。",
+          "fi": "”Ionivirta sinulle”: JYFLTRAPin paikkaherkällä MCP-ilmaisimella tallennettu ionien paikkakuva.",
+          "de": "„Ein Ionenfluss für dich“: Ionen-Ortsbild, aufgenommen mit dem ortsauflösenden MCP-Detektor an JYFLTRAP.",
+          "ja": "「あなたにイオンの花を」：JYFLTRAP の位置検出型 MCP 検出器で記録したイオン位置画像。"
+        }
+      },
+      {
+        "file": "mrtof-simion.webp",
+        "home": true,
+        "wide": true,
+        "caption": {
+          "en": "SIMION ion-optics simulation of ion trajectories through a multi-reflection time-of-flight (MR-TOF) mass spectrometer.",
+          "zh": "多次反射飞行时间（MR-TOF）质谱仪中离子轨迹的 SIMION 离子光学模拟。",
+          "fi": "SIMION-ionioptiikkasimulaatio ionien radoista monikertaheijastavassa lentoaikamassaspektrometrissä (MR-TOF).",
+          "de": "SIMION-Simulation der Ionenbahnen in einem Multireflexions-Flugzeit-Massenspektrometer (MR-TOF).",
+          "ja": "多重反射飛行時間型（MR-TOF）質量分析器内のイオン軌道の SIMION シミュレーション。"
+        }
+      },
+      {
+        "video": "paul-saddle.mp4",
+        "poster": "paul-saddle-poster.webp",
+        "caption": {
+          "en": "An ion (cyan) riding the oscillating saddle potential of a Paul trap.",
+          "zh": "离子（青色）在 Paul 阱振荡的鞍形势上运动。",
+          "fi": "Ioni (syaani) Paul-loukun värähtelevällä satulapotentiaalilla.",
+          "de": "Ein Ion (cyan) auf dem oszillierenden Sattelpotential einer Paul-Falle.",
+          "ja": "パウルトラップの振動する鞍型ポテンシャル上のイオン（シアン）。"
+        }
+      },
+      {
+        "file": "jyfltrap-3d-events.webp",
+        "caption": {
+          "en": "3D view of gated events at JYFLTRAP: detector position (x, y) and time of flight.",
+          "zh": "JYFLTRAP 门控事件的三维视图：探测器位置（x, y）与飞行时间。",
+          "fi": "JYFLTRAPin valittujen tapahtumien 3D-näkymä: ilmaisinpaikka (x, y) ja lentoaika.",
+          "de": "3D-Ansicht ausgewählter Ereignisse an JYFLTRAP: Detektorposition (x, y) und Flugzeit.",
+          "ja": "JYFLTRAP のゲート付きイベントの 3 次元表示：検出器位置（x, y）と飛行時間。"
+        }
+      },
+      {
+        "file": "storage-ring-ims.webp",
+        "caption": {
+          "en": "Isochronous mass spectrometry in a storage ring: ions with different m/q and velocity circulate on different orbits and are timed by a TOF detector.",
+          "zh": "储存环等时性质谱：不同质荷比和速度的离子沿不同轨道运行，由飞行时间探测器计时。",
+          "fi": "Isokroninen massaspektrometria varastorenkaassa: eri m/q-arvon ja nopeuden ionit kiertävät eri radoilla, ja TOF-ilmaisin ajoittaa ne.",
+          "de": "Isochrone Massenspektrometrie im Speicherring: Ionen mit unterschiedlichem m/q und Geschwindigkeit laufen auf verschiedenen Bahnen und werden von einem TOF-Detektor gemessen.",
+          "ja": "蓄積リングでの等時性質量分析：m/q と速度の異なるイオンが異なる軌道を周回し、TOF 検出器で時間計測される。"
+        }
+      },
+      {
+        "file": "mirror-mcp-detector.webp",
+        "caption": {
+          "en": "Design of the electrostatic-mirror-type MCP timing detector developed for the Rare-RI Ring at RIKEN.",
+          "zh": "为 RIKEN Rare-RI Ring 研制的静电镜型 MCP 定时探测器设计图。",
+          "fi": "RIKENin Rare-RI Ringille kehitetyn sähköstaattisen peili-MCP-ajoitusilmaisimen rakenne.",
+          "de": "Konstruktion des elektrostatischen Spiegel-MCP-Zeitdetektors für den Rare-RI Ring am RIKEN.",
+          "ja": "RIKEN 稀少 RI リング用に開発した静電ミラー型 MCP 時間検出器の設計図。"
+        },
+        "source": "Z. Ge et al., JPS Conf. Proc. 35, 011023 (2021)",
+        "url": "https://doi.org/10.7566/JPSCP.35.011023"
+      },
+      {
+        "file": "beamline-cad.webp",
+        "wide": true,
+        "caption": {
+          "en": "3D CAD layout of a low-energy radioactive-ion beam line for precision-trap experiments.",
+          "zh": "用于精密离子阱实验的低能放射性离子束线三维 CAD 布局。",
+          "fi": "Tarkkuusloukkukokeiden matalaenergisen radioaktiivisen ionisuihkulinjan 3D-CAD-malli.",
+          "de": "3D-CAD-Layout einer niederenergetischen Strahlführung für radioaktive Ionen und Präzisionsfallen-Experimente.",
+          "ja": "精密トラップ実験用の低エネルギー放射性イオンビームラインの 3 次元 CAD レイアウト。"
+        }
+      },
+      {
+        "file": "mirror-mcp-timing.webp",
+        "caption": {
+          "en": "Mirror-type MCP detector: test set-up, design, and timing resolution versus accelerating voltage (experiment and simulation).",
+          "zh": "镜型 MCP 探测器：测试布局、结构设计以及时间分辨随加速电压的变化（实验与模拟）。",
+          "fi": "Peili-MCP-ilmaisin: testijärjestely, rakenne ja aikaresoluutio kiihdytysjännitteen funktiona (koe ja simulaatio).",
+          "de": "Spiegel-MCP-Detektor: Testaufbau, Konstruktion und Zeitauflösung in Abhängigkeit der Beschleunigungsspannung (Experiment und Simulation).",
+          "ja": "ミラー型 MCP 検出器：試験配置、設計、加速電圧に対する時間分解能（実験とシミュレーション）。"
+        },
+        "source": "Z. Ge et al., RIKEN Accel. Prog. Rep. 51, 152 (2018)",
+        "url": "https://www.nishina.riken.jp/researcher/APR/APR051/pdf/152.pdf"
+      },
+      {
+        "video": "network-light.mp4",
+        "poster": "network-light-poster.webp",
+        "caption": {
+          "en": "Nucleosynthesis network simulation: abundances (mass fraction) evolving on the chart of nuclides, light-element region.",
+          "zh": "核合成网络模拟：核素图上丰度（质量分数）随时间的演化（轻核区）。",
+          "fi": "Nukleosynteesiverkon simulaatio: runsauksien (massaosuus) kehitys nuklidikartalla, kevyiden ytimien alue.",
+          "de": "Simulation eines Nukleosynthese-Netzwerks: zeitliche Entwicklung der Häufigkeiten (Massenanteil) auf der Nuklidkarte, leichter Bereich.",
+          "ja": "元素合成ネットワーク計算：核図表上の存在量（質量分率）の時間発展（軽い核の領域）。"
+        }
+      },
+      {
+        "video": "network-heavy.mp4",
+        "poster": "network-heavy-poster.webp",
+        "wide": true,
+        "caption": {
+          "en": "Nucleosynthesis network simulation up to the heaviest elements: the reaction flow moves across the chart of nuclides.",
+          "zh": "直至最重元素的核合成网络模拟：反应流在核素图上推进。",
+          "fi": "Nukleosynteesiverkon simulaatio raskaimpiin alkuaineisiin asti: reaktiovirta etenee nuklidikartalla.",
+          "de": "Nukleosynthese-Netzwerk bis zu den schwersten Elementen: der Reaktionsfluss wandert über die Nuklidkarte.",
+          "ja": "最も重い元素までの元素合成ネットワーク計算：反応の流れが核図表上を進む。"
+        }
+      }
+    ]
+  }
+}

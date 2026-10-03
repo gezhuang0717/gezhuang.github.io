@@ -103,7 +103,8 @@ jobs:
           path: public
   deploy:
     needs: validate
-    if: always() && github.ref == 'refs/heads/main' && needs.validate.result == 'success' && github.event_name != 'pull_request'
+    # Publish only from the user-site repository (<owner>/<owner>.github.io); copies just validate
+    if: always() && github.repository == format('{0}/{0}.github.io', github.repository_owner) && github.ref == 'refs/heads/main' && needs.validate.result == 'success' && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     permissions:
       pages: write

@@ -1,0 +1,73 @@
+baseURL = "/"
+languageCode = "en"
+title = "Zhuang Ge"
+theme = "hugo-PaperMod"
+enableRobotsTXT = true
+[markup.goldmark.renderer]
+  unsafe = true
+[params]
+  env = "production"
+  defaultTheme = "auto"
+  ShowToc = false
+  hideMeta = true
+  ShowShareButtons = false
+  ShowPostNavLinks = false
+  disableSpecial1stPost = true
+  [params.profileMode]
+    enabled = true
+    title = "Zhuang Ge"
+    subtitle = "Academy Research Fellow & Principal Investigator · Department of Physics, University of Jyväskylä<br>Penning-trap and MR-TOF mass spectrometry of exotic nuclei"
+    imageUrl = "img/zhuang-ge.png"
+    imageWidth = 160
+    imageHeight = 160
+    imageTitle = "Zhuang Ge"
+    [[params.profileMode.buttons]]
+      name = "Research"
+      url = "research/"
+    [[params.profileMode.buttons]]
+      name = "Publications"
+      url = "publications/"
+    [[params.profileMode.buttons]]
+      name = "CV"
+      url = "cv/"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:zhuang.z.ge@jyu.fi"
+  [[params.socialIcons]]
+    name = "orcid"
+    url = "https://orcid.org/0000-0001-8586-6134"
+  [[params.socialIcons]]
+    name = "researchgate"
+    url = "https://www.researchgate.net/profile/Zhuang-Ge"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/zhuang-ge-847898202"
+[menu]
+  [[menu.main]]
+  name = "Research"
+  pageRef = "research"
+  weight = 10
+  [[menu.main]]
+  name = "Publications"
+  pageRef = "publications"
+  weight = 20
+  [[menu.main]]
+  name = "Projects"
+  pageRef = "projects"
+  weight = 30
+  [[menu.main]]
+  name = "Talks"
+  pageRef = "talks"
+  weight = 40
+  [[menu.main]]
+  name = "Mentorship"
+  pageRef = "mentorship"
+  weight = 50
+  [[menu.main]]
+  name = "Blog"
+  pageRef = "posts"
+  weight = 60
+  [[menu.main]]
+  name = "CV"
+  pageRef = "cv"
+  weight = 70

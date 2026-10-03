@@ -1,0 +1,28 @@
+[[main]]
+  name = "Research"
+  pageRef = "research"
+  weight = 10
+[[main]]
+  name = "Publications"
+  pageRef = "publications"
+  weight = 20
+[[main]]
+  name = "Projects"
+  pageRef = "projects"
+  weight = 30
+[[main]]
+  name = "Talks"
+  pageRef = "talks"
+  weight = 40
+[[main]]
+  name = "Mentorship"
+  pageRef = "mentorship"
+  weight = 50
+[[main]]
+  name = "Blog"
+  pageRef = "posts"
+  weight = 60
+[[main]]
+  name = "CV"
+  pageRef = "cv"
+  weight = 70

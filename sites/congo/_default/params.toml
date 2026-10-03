@@ -1,0 +1,22 @@
+colorScheme = "sapphire"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+enableSearch = false
+showAppearanceSwitcher = true
+[header]
+  layout = "basic"
+[footer]
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
+[homepage]
+  layout = "profile"
+  showRecent = false
+[article]
+  showDate = false
+  showReadingTime = false
+  showAuthor = false
+  showBreadcrumbs = false
+  showTableOfContents = false
+[list]
+  showBreadcrumbs = false

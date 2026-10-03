@@ -1,0 +1,8 @@
+baseURL = "/"
+languageCode = "en"
+defaultContentLanguage = "en"
+title = "Zhuang Ge"
+theme = "congo"
+enableRobotsTXT = true
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

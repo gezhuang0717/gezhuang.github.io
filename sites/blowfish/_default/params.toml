@@ -1,0 +1,30 @@
+colorScheme = "ocean"
+defaultAppearance = "dark"
+autoSwitchAppearance = false
+enableSearch = false
+showAppearanceSwitcher = true
+[header]
+  layout = "fixed-gradient"
+[footer]
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
+[homepage]
+  layout = "profile"
+  showRecent = true
+  showRecentItems = 3
+  showMoreLink = true
+  cardView = false
+[article]
+  showDate = false
+  showReadingTime = false
+  showWordCount = false
+  showAuthor = false
+  showBreadcrumbs = false
+  showTableOfContents = true
+  showHero = false
+  showLikes = false
+  showViews = false
+[list]
+  showBreadcrumbs = false
+  showCards = false

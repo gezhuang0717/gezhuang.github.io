@@ -1,0 +1,6 @@
+{{- /* Animated ion-trace hero.  Usage: {{< ion-hero mode="penning" ions="36" >}}
+       Modes: penning | flower | paul | mrtof | ring.  Optional name="…" subtitle="…".
+       PaperMod renders it from layouts/_partials/index_profile.html instead (profile mode hides page content). */ -}}
+{{- if not site.Params.profileMode -}}
+{{ partial "zg/ion-hero.html" (dict "mode" (.Get "mode") "ions" (.Get "ions") "name" (.Get "name") "subtitle" (.Get "subtitle")) }}
+{{- end -}}

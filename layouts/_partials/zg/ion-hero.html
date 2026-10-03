@@ -1,0 +1,39 @@
+{{- /* Animated ion-trace hero.  Partial: (dict "mode" "penning" "ions" "36" "name" "" "subtitle" "")
+       Optional: name="…" subtitle="…" (defaults: site title / language headline). */ -}}
+{{- $lang := site.Language.Lang -}}
+{{- $k := cond (hasPrefix $lang "zh") "zh" $lang -}}
+{{- $L := dict
+  "en" (dict "penning" "Penning" "flower" "PI-ICR flower" "paul" "Paul trap" "mrtof" "MR-TOF" "ring" "Storage ring" "speed" "Speed" "ions" "Ions" "palette" "Colours" "rainbow" "Rainbow" "isotope" "By mass" "mono" "Ice" "trails" "Trails" "play" "Play / pause" "shot" "Save PNG" "hint" "Move the pointer to deflect ions · click to inject a bunch")
+  "zh" (dict "penning" "彭宁阱" "flower" "PI-ICR 花瓣" "paul" "保罗阱" "mrtof" "MR-TOF" "ring" "储存环" "speed" "速度" "ions" "离子数" "palette" "配色" "rainbow" "彩虹" "isotope" "按质量" "mono" "冰蓝" "trails" "轨迹" "play" "播放 / 暂停" "shot" "保存 PNG" "hint" "移动指针偏转离子 · 点击注入一束离子")
+  "fi" (dict "penning" "Penning" "flower" "PI-ICR-kukka" "paul" "Paul-loukku" "mrtof" "MR-TOF" "ring" "Varastorengas" "speed" "Nopeus" "ions" "Ionit" "palette" "Värit" "rainbow" "Sateenkaari" "isotope" "Massan mukaan" "mono" "Jää" "trails" "Jäljet" "play" "Toista / tauko" "shot" "Tallenna PNG" "hint" "Liikuta osoitinta ionien ohjaamiseksi · napsauta lisätäksesi ioneja")
+  "de" (dict "penning" "Penning" "flower" "PI-ICR-Blume" "paul" "Paul-Falle" "mrtof" "MR-TOF" "ring" "Speicherring" "speed" "Tempo" "ions" "Ionen" "palette" "Farben" "rainbow" "Regenbogen" "isotope" "Nach Masse" "mono" "Eis" "trails" "Spuren" "play" "Start / Pause" "shot" "PNG speichern" "hint" "Zeiger lenkt Ionen ab · Klick injiziert ein Ionenpaket")
+  "ja" (dict "penning" "ペニング" "flower" "PI-ICR 花" "paul" "パウル" "mrtof" "MR-TOF" "ring" "蓄積リング" "speed" "速度" "ions" "イオン数" "palette" "配色" "rainbow" "虹" "isotope" "質量別" "mono" "アイス" "trails" "軌跡" "play" "再生 / 停止" "shot" "PNG 保存" "hint" "ポインタでイオンを偏向 · クリックでイオンを入射")
+-}}
+{{- $t := index $L $k | default (index $L "en") -}}
+{{- $sub := dict "en" "Academy Research Fellow · Penning traps & MR-TOF · University of Jyväskylä" "zh" "芬兰科学院研究员 · 彭宁阱与多次反射飞行时间质谱 · 于韦斯屈莱大学" "fi" "Akatemiatutkija · Penning-loukut ja MR-TOF · Jyväskylän yliopisto" "de" "Academy Research Fellow · Penning-Fallen & MR-TOF · Universität Jyväskylä" "ja" "フィンランド・アカデミー研究員 · ペニングトラップと MR-TOF · ユヴァスキュラ大学" -}}
+{{- $mode := .mode | default "penning" -}}
+<link rel="stylesheet" href="{{ "css/ion-hero.css" | relURL }}">
+<section class="ionhero" data-ionhero data-mode="{{ $mode }}" data-ions="{{ .ions | default "36" }}" aria-label="{{ .name | default site.Title }}">
+  <div class="ionhero-stage">
+    <canvas aria-hidden="true"></canvas>
+    <div class="ionhero-text">
+      <p class="ionhero-name">{{ .name | default site.Title }}</p>
+      <p class="ionhero-sub">{{ .subtitle | default (index $sub $k) }}</p>
+    </div>
+  </div>
+  <div class="ionhero-controls" role="group" aria-label="Ion trace controls">
+    <span class="ionhero-modes">
+      {{- range slice "penning" "flower" "paul" "mrtof" "ring" }}
+      <button type="button" data-mode="{{ . }}" aria-pressed="{{ eq . $mode }}">{{ index $t . }}</button>
+      {{- end }}
+    </span>
+    <label>{{ $t.speed }} <input type="range" name="speed" min="0.2" max="3" step="0.1" value="1"></label>
+    <label>{{ $t.ions }} <input type="range" name="ions" min="6" max="160" step="1" value="{{ .ions | default "36" }}"></label>
+    <label>{{ $t.palette }} <select name="palette"><option value="rainbow">{{ $t.rainbow }}</option><option value="isotope">{{ $t.isotope }}</option><option value="mono">{{ $t.mono }}</option></select></label>
+    <button type="button" data-act="trails" aria-pressed="true">{{ $t.trails }}</button>
+    <button type="button" data-act="play" aria-pressed="true" title="{{ $t.play }}">⏯</button>
+    <button type="button" data-act="shot" title="{{ $t.shot }}">⤓ PNG</button>
+  </div>
+  <p class="ionhero-hint">{{ $t.hint }}</p>
+</section>
+<script defer src="{{ "js/ion-hero.js" | relURL }}"></script>

@@ -30,7 +30,7 @@ showDate: false
 
 ## 教学与指导
 
-- 研究人员指导与合作情况见[团队](../group/)。
+- 指导两名博士后和一名博士研究生（见[团队](../group/)）
 - 讲授 FYSS3552《核物理研究中的激光与离子阱》
 
 ## 学术服务
@@ -43,4 +43,4 @@ showDate: false
 
 ## 学术标识
 
-[ORCID 0000-0001-8586-6134](https://orcid.org/0000-0001-8586-6134) · [Scopus 56915277300](https://www.scopus.com/authid/detail.uri?authorId=56915277300) · [ResearcherID L-1172-2015](https://www.webofscience.com/wos/author/record/1631872) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [ResearchGate](https://www.researchgate.net/profile/Zhuang-Ge)
+[ORCID 0000-0001-8586-6134](https://orcid.org/0000-0001-8586-6134) · [Scopus 56915277300](https://www.scopus.com/authid/detail.uri?authorId=56915277300) · [ResearcherID L-1172-2015](https://www.webofscience.com/wos/author/record/1631872) · [INSPIRE-HEP](https://inspirehep.net/authors/2600261) · [ResearchGate](https://www.researchgate.net/profile/Zhuang-Ge)

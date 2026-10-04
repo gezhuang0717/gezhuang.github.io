@@ -7,8 +7,12 @@ showDate: false
 ## MASSPASS — Academy Research Fellowship (Leitung), 2023–2027
 Massenmessungen exotischer *N* = *Z*-Kerne bis ¹⁰⁰Sn an IGISOL und RIKEN für Kernphysik und nukleare Astrophysik. Forschungsrat Finnland. [Projektseite](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)
 
+**Team:** Z. Ge (Leitung); ehemaliger Postdoc Dr. B. Kootte; Doktorand M. Winter.
+
 ## Zerfälle mit kleinem Q-Wert für die Neutrinomasse
 Q-Wert-Messungen an der Penning-Falle JYFLTRAP, um Übergänge mit extrem kleinem Q-Wert zu finden und zu bestätigen.
+
+**Team:** Z. Ge (Sprecher); ehemaliger Postdoc Dr. M. de Oliveira Ramalho (Theorie); Doktorand M. Winter.
 
 ## MR-TOF-Massenspektrometrie
 Entwurf, ionenoptische Simulation und Auswerteketten für Multireflexions-Flugzeitspektrometer.

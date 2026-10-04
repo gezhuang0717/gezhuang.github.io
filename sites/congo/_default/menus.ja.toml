@@ -13,30 +13,26 @@
   pageRef = "talks"
   weight = 30
 [[main]]
-  name = "施設"
-  pageRef = "facilities"
-  weight = 40
-[[main]]
   name = "デイリー"
   pageRef = "daily"
-  weight = 50
+  weight = 40
 [[main]]
   name = "ラボ"
   pageRef = "lab"
-  weight = 60
+  weight = 50
 [[main]]
   name = "プロジェクト"
   pageRef = "projects"
-  weight = 70
+  weight = 60
 [[main]]
   name = "グループ"
   pageRef = "group"
-  weight = 80
+  weight = 70
 [[main]]
   name = "ブログ"
   pageRef = "posts"
-  weight = 90
+  weight = 80
 [[main]]
   name = "経歴"
   pageRef = "cv"
-  weight = 100
+  weight = 90

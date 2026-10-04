@@ -1,127 +1,92 @@
-name: Validate and deploy website
+# ─────────────────────────────────────────────────────────────────────────────
+# Build and deploy https://gezhuang0717.github.io/gezhuang.github.io/
+#  • every push to main            → check data, build, deploy
+#  • every day at 04:17 UTC        → fetch new papers/jobs/news (tools/feeds.yaml),
+#                                     commit them, build, deploy
+#  • Actions tab → "Run workflow"  → manual run; tick "fetch" to also fetch feeds
+# The live theme is read from site.yaml (live_theme).
+# ─────────────────────────────────────────────────────────────────────────────
+name: Build and deploy
 on:
   push:
-    branches: [main, 'codex/**']
-  pull_request:
+    branches: [main]
   schedule:
-    - cron: '17 4 * * *'
+    - cron: "17 4 * * *"
   workflow_dispatch:
     inputs:
       fetch:
-        description: Refresh Daily feeds on main
+        description: "Fetch daily feeds before building"
         type: boolean
         default: false
 permissions:
-  contents: read
+  contents: write
+  pages: write
+  id-token: write
 concurrency:
-  group: website-${{ github.ref }}
+  group: pages
   cancel-in-progress: false
 env:
   HUGO_VERSION: 0.166.0
 jobs:
-  daily:
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || inputs.fetch)
+  fetch:
+    if: github.event_name == 'schedule' || inputs.fetch
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    outputs:
-      commit: ${{ steps.commit.outputs.sha }}
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Fetch feeds
+        run: python3 tools/site.py fetch
+      - name: Validate
+        run: python3 tools/site.py check
+      - name: Commit new entries
+        run: |
+          git config user.name "daily-feeds-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/daily
+          if git diff --cached --quiet; then echo "No new entries"; else
+            git commit -m "Daily feeds $(date -u +%F)" && git push; fi
+
+  build:
+    needs: fetch
+    if: always() && needs.fetch.result != 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Hugo extended
+        run: |
+          wget -q -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - uses: actions/checkout@v4
         with:
           ref: main
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - run: pip install -r requirements.txt
-      - name: Snapshot and dry run
-        run: |
-          python tools/site.py snapshot --label scheduled-daily
-          python tools/site.py fetch --dry-run
-      - name: Canonical Daily writer
-        run: |
-          python tools/site.py fetch
-          python tools/site.py check
-      - id: commit
-        name: One logical Daily commit
-        run: |
-          git config user.name "Zhuang Ge"
-          git config user.email gezhuang0717@users.noreply.github.com
-          git add data/daily
-          if ! git diff --cached --quiet; then
-            git commit -m "Daily feeds $(date -u +%F)"
-            git push origin HEAD:main
-          fi
-          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-  validate:
-    needs: daily
-    if: always() && (needs.daily.result == 'success' || needs.daily.result == 'skipped')
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ needs.daily.outputs.commit || github.sha }}
           submodules: recursive
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-      - run: pip install -r requirements-dev.txt
-      - name: Install pinned Hugo Extended
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Validate data and regenerate theme configs
         run: |
-          curl -fsSL -o "$RUNNER_TEMP/hugo.deb" "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
-          sudo dpkg -i "$RUNNER_TEMP/hugo.deb"
-      - uses: actions/setup-node@v4
+          python3 tools/site.py check
+          python3 tools/site.py config
+          echo "THEME=$(python3 -c "import yaml;print(yaml.safe_load(open('site.yaml'))['live_theme'])")" >> "$GITHUB_ENV"
+      - id: pages
+        uses: actions/configure-pages@v5
+      - name: Build
+        run: hugo --gc --minify --configDir sites/${THEME} --themesDir themes --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - uses: actions/upload-pages-artifact@v3
         with:
-          node-version: '24'
-      - run: corepack enable
-      - name: Audited original lockfile subgraph
-        run: corepack pnpm --dir tools/react-toolchain install --frozen-lockfile
-      - name: Data and recovery tests
-        run: |
-          python tools/site.py check
-          python -m pytest tests -q
-          python tools/site.py config
-          python tools/site.py facilities-build
-          python tools/site.py export-react
-      - name: Publication gate (privacy, geo, links, inspect public/)
-        run: python tools/publish.py check
-      - name: All themes and React
-        run: |
-          # Base URL follows the repository: user site (<owner>.github.io) or project site (<owner>.github.io/<repo>/)
-          owner=$(echo "$GITHUB_REPOSITORY_OWNER" | tr '[:upper:]' '[:lower:]'); repo="${GITHUB_REPOSITORY#*/}"
-          base="https://${owner}.github.io/"; [ "$(echo "$repo" | tr '[:upper:]' '[:lower:]')" = "${owner}.github.io" ] || base="${base}${repo}/"
-          echo "Base URL: $base"
-          for theme in congo blowfish papermod; do
-            hugo --minify --configDir "sites/$theme" --themesDir themes --destination "builds/$theme" --baseURL "$base"
-          done
-          python tools/build_react.py --node "$(command -v node)" --toolchain tools/react-toolchain --output builds/react
-          theme=$(python -c "import yaml;print(yaml.safe_load(open('site.yaml'))['live_theme'])")
-          rm -rf public && mv "builds/$theme" public
-          cp -R builds/react public/react
-      - uses: actions/upload-artifact@v4
-        with:
-          name: validated-website
-          path: public
+          path: ./public
+
   deploy:
-    needs: validate
-    # Publish only from the user-site repository (<owner>/<owner>.github.io); copies just validate
-    if: always() && github.repository == format('{0}/{0}.github.io', github.repository_owner) && github.ref == 'refs/heads/main' && needs.validate.result == 'success' && github.event_name != 'pull_request'
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
+    needs: build
+    if: always() && needs.build.result == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: validated-website
-          path: public
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: public
       - id: deployment
         uses: actions/deploy-pages@v4

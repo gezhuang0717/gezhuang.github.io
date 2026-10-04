@@ -6,6 +6,10 @@
 {{- $lang := .Page.Language.Lang -}}
 {{- $base := index (split $lang "-") 0 -}}
 {{- $items := slice -}}
+{{- $says := slice -}}
+{{- range hugo.Data.clock_notes.notes -}}
+  {{- $says = $says | append (dict "c" .country "t" (or (index .text $lang) (index .text $base) .text.en)) -}}
+{{- end -}}
 {{- range hugo.Data.nuclides.nuclides -}}
   {{- $fact := or (index .fact $lang) (index .fact $base) .fact.en -}}
   {{- $items = $items | append (dict "s" .sym "f" $fact) -}}
@@ -22,6 +26,7 @@
     <div class="zg-clock-time" id="zg-clock-time">--:--</div>
     <p class="zg-clock-date" id="zg-clock-date"></p>
     <p class="zg-clock-note" id="zg-clock-note"></p>
+    <p class="zg-clock-saying" id="zg-clock-saying"></p>
   </section>
 </div>
 <script>
@@ -43,6 +48,12 @@
       var h = +parts.find(function (p) { return p.type === "hour"; }).value, wd = parts.find(function (p) { return p.type === "weekday"; }).value;
       n.textContent = (wd === "Sat" || wd === "Sun") ? notes.weekend : (h >= 8 && h < 17) ? notes.work : (h >= 17 && h < 23) ? notes.evening : notes.night;
     } catch (e) { t.textContent = now.toUTCString().slice(17, 22) + " UTC"; }
+  }
+  var says = {{ $says | jsonify | safeJS }}, flags = { fi: "🇫🇮", cn: "🇨🇳", de: "🇩🇪", jp: "🇯🇵", uk: "🇬🇧" }, sEl = document.getElementById("zg-clock-saying");
+  if (says.length && sEl) {
+    var ymd = new Intl.DateTimeFormat("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()).split("-");
+    var doy = Math.round((Date.UTC(+ymd[0], +ymd[1] - 1, +ymd[2]) - Date.UTC(+ymd[0], 0, 1)) / 864e5);
+    var sv = says[doy % says.length]; sEl.textContent = (flags[sv.c] || "") + " " + sv.t;
   }
   tick(); setInterval(tick, 30000);
 })();

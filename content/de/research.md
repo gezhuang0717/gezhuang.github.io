@@ -31,3 +31,23 @@ Direkte Penning-Fallen-Messungen von Zerfallsenergien (Q-Werten) identifizieren 
 Promotion am RIKEN Rare-RI Ring: Identifikation von Sekundärionen für isochrone Massenmessungen sowie zeit- und ortsauflösende Mikrokanalplatten-Detektoren (MCP). Später MR-TOF-Spektrometer an IGISOL und am FRS Ion Catcher der GSI sowie Detektorkonzepte für HIAF.
 
 {{< pubs theme="detectors" >}}
+
+## Ionenoptik-Design
+
+Ionenoptisches Design von Strahlführungen, Speicherringen und Fallenaufbauten: die Injektionsionenoptik des RIKEN Rare-RI Ring, Simulationsstudien isochroner Massenmessungen und heute RFQ-, MR-TOF- und Penning-Fallen-Strahlführungen mit SIMION.
+
+- Z. Ge, Q. Wang, M. Wang, T. Uesaka, Study of mass-measurement method for *N* = *Z* nuclei with isochronous mass spectrometry, [Nucl. Phys. Rev. 36, 294 (2019)](https://doi.org/10.11804/NuclPhysRev.36.03.294)
+- Z. Ge *et al.*, Online results for the injection ion optics of the Rare RI Ring, [RIKEN Accel. Prog. Rep. 49, 180 (2016)](https://www.nishina.riken.jp/researcher/APR/APR049/pdf/180.pdf)
+
+## Kernphysik
+
+- Schalenentwicklung und magische Zahlen fern der Stabilität – *N* = *Z*-Kerne bis ¹⁰⁰Sn
+- Isospinsymmetrie, Spiegelkerne und Coulomb-Verschiebungsenergien
+- Separationsenergien, Paarung und Isomere aus präzisen Massen
+- Q-Werte seltener Zerfälle für die Neutrinophysik
+
+## Nukleare Astrophysik
+
+- Massen an Wartepunkten des rp- und νp-Prozesses nahe *N* = *Z*
+- Massen neutronenreicher Kerne für r-Prozess-Netzwerkrechnungen
+- Kernphysikalische Eingaben für Röntgenbursts und den Ursprung der Elemente

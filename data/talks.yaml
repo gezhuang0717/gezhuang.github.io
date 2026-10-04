@@ -97,13 +97,6 @@ talks:
   url: https://www.dpg-verhandlungen.de/year/2022/conference/mainz/part/hk?lang=en
   public_status: legacy_public_event_link
 - kind: contributed
-  date: '2021-09-13'
-  title: Search of beta decays with ultra-low Q value for neutrino mass determination
-  event: Euroschool on Exotic Beams 2021
-  place: Leuven, Belgium (online)
-  url: https://lisa-itn.web.cern.ch/node/115
-  public_status: legacy_public_event_link
-- kind: contributed
   date: '2016-08-19'
   title: Mass as inputs in network calculation for modelling of the r-process
   event: 3rd Astrophysical Nuclear Reaction Network School

@@ -254,3 +254,4 @@ header nav > div:first-child { margin-inline-end: 1.2rem; }
 .nc-ptable small{font-size:.5rem;opacity:.85}.nc-ptable b{font-size:.8rem}.nc-ptable i{font-size:.5rem;font-style:normal;opacity:.85}
 .nc-pt-note{font-size:.72rem;opacity:.75;align-self:center}
 @media (max-width:640px){.nc-card{position:static;width:auto;margin-top:.5rem}.nc-ptable b{font-size:.6rem}.nc-ptable small,.nc-ptable i{display:none}}
+.zg-checks{display:flex;flex-wrap:wrap;gap:.4rem 1rem;margin:.4rem 0}.zg-3d .zg-sim-controls output{min-width:2.2em;display:inline-block;font-variant-numeric:tabular-nums}

@@ -17,8 +17,8 @@
 
 Usage
     python3 tools/publish.py check                 # all checks, builds public/, writes gate report
-    python3 tools/publish.py push --approve        # checks again, then pushes public/ as ONE commit
-    python3 tools/publish.py push --approve --dry-run
+    python3 tools/publish.py push --approve        # checks again, then pushes public/ as ONE commit  (two-repository mode only)
+    python3 tools/publish.py push --approve --dry-run  (two-repository mode only)
 Options for push:  --repo URL (default https://github.com/gezhuang0717/gezhuang0717.github.io)
                    --token-env NAME (CI: env var holding a token with contents:write on the public repo)
                    --fresh  (start the public history again with a single commit)

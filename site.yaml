@@ -13,8 +13,6 @@ links:
   url: https://www.researchgate.net/profile/Zhuang-Ge
 - icon: linkedin
   url: https://www.linkedin.com/in/zhuang-ge-847898202
-- icon: github
-  url: https://github.com/gezhuang0717
 - icon: link
   url: https://www.jyu.fi/en/people/zhuang-ge
 languages:
@@ -64,8 +62,8 @@ menu:
     ja: 論文
 - page: talks
   label:
-    en: Main talks
-    zh: 主要报告
+    en: Talks
+    zh: 报告
     fi: Esitelmät
     de: Vorträge
     ja: 講演

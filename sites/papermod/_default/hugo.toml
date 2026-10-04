@@ -28,9 +28,6 @@ enableRobotsTXT = true
   [[params.socialIcons]]
     name = "linkedin"
     url = "https://www.linkedin.com/in/zhuang-ge-847898202"
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/gezhuang0717"
 [languages.en]
   label = "English"
   locale = "en-US"
@@ -66,7 +63,7 @@ enableRobotsTXT = true
     pageRef = "publications"
     weight = 20
   [[languages.en.menu.main]]
-    name = "Main talks"
+    name = "Talks"
     pageRef = "talks"
     weight = 30
   [[languages.en.menu.main]]
@@ -132,7 +129,7 @@ enableRobotsTXT = true
     pageRef = "publications"
     weight = 20
   [[languages.zh.menu.main]]
-    name = "主要报告"
+    name = "报告"
     pageRef = "talks"
     weight = 30
   [[languages.zh.menu.main]]

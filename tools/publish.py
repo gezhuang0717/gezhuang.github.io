@@ -47,7 +47,7 @@ OWNER_NAME, OWNER_EMAIL = "Zhuang Ge", "gezhuang0717@users.noreply.github.com"
 SITE_URL = "https://gezhuang0717.github.io/"
 
 # ── privacy rules ────────────────────────────────────────────────────────────
-ALLOWED_EMAILS = {"zhuang.z.ge@jyu.fi"}
+ALLOWED_EMAILS = {"zhuang.z.ge@jyu.fi", "z.ge@gsi.de", "zhuang@ribf.riken.jp"}  # public on INSPIRE
 PRIVATE_PATTERNS = {  # regex → reason
     r"(?i)co-authored-by|claude-session|generated with \[?claude": "tool attribution",
     r"/Volumes/|/Users/[A-Za-z]|/home/claude|/mnt/user-data|PSSD": "local file path",
@@ -55,6 +55,7 @@ PRIVATE_PATTERNS = {  # regex → reason
     r"(?i)\b(salary|personal identity code|henkilötunnus|passport no)": "personal data",
     r"(?<![\w.])\+\d{1,3}[ -]?\(?\d{1,4}\)?[ -]?\d{2,4}[ -]?\d{3,4}(?![\w.])|[Tt][Ee][Ll]:\+?\d": "phone number",
     r"(?i)(€|eur)\s?\d{1,3}([ ,.]\d{3})+|\d{1,3}([ ,.]\d{3})+\s?(€|eur\b)": "money amount",
+    r"(?i)github\.com/gezhuang0717": "personal GitHub link (keep private)",
     r"(?i)\bCONFIDENTIAL\b|\bDO NOT PUBLISH\b|\bINTERNAL ONLY\b": "confidential marker",
 }
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")

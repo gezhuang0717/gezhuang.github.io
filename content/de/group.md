@@ -8,7 +8,7 @@ Ich leite eine Forschungsgruppe an IGISOL/JYFLTRAP, finanziert durch mein Academ
 
 ## Mitglieder
 
-- **Miikka Winter** — Doktorand unter meiner Betreuung. Penning-Fallen-Messungen von Massen und Q-Werten an JYFLTRAP; Erstautor-Artikel zu ¹²⁹Sb ([Eur. Phys. J. A 62, 123 (2026)](https://doi.org/10.1140/epja/s10050-026-01883-8)). *Projekte:* Zerfälle mit kleinem Q-Wert, MASSPASS.
+- **Miikka Winter** — Doktorand unter meiner Betreuung. Penning-Fallen-Messungen von Massen und Q-Werten an JYFLTRAP; Erstautor-Artikel zu ¹²⁹Sb ([Eur. Phys. J. A 62, 123 (2026)](https://doi.org/10.1140/epja/s10050-026-01883-8)). *Projekte:* beteiligt an Zerfällen mit kleinem Q-Wert und MASSPASS; Hauptprojekt in nuklearer Astrophysik.
 
 ## Ehemalige Mitglieder
 
@@ -39,3 +39,16 @@ Gruppen und Labore, mit denen ich zusammenarbeite oder deren Arbeit unserer am n
 - [Rare-RI Ring — RIKEN](https://www.nishina.riken.jp/ribf/R3/overview.html)
 - [HIAF — Institute of Modern Physics, CAS](https://english.imp.cas.cn/research/facilities/HIAF/)
 - [KATRIN — Karlsruhe Tritium Neutrino Experiment](https://www.katrin.kit.edu/)
+
+## Gruppen und Anlagen der nuklearen Astrophysik
+
+Netzwerke und Labore zum Ursprung der Elemente, nah an unseren Massenmessungen für rp-, νp- und r-Prozess:
+
+- [JINA-CEE — Joint Institute for Nuclear Astrophysics](https://www.jinaweb.org/)
+- [IReNA — International Research Network for Nuclear Astrophysics](https://irenaweb.org/)
+- [ChETEC-INFRA — European nuclear-astrophysics infrastructures](https://www.chetec-infra.eu/)
+- [LUNA — Laboratory for Underground Nuclear Astrophysics, Gran Sasso](https://luna.lngs.infn.it/)
+- [n_TOF — neutron time-of-flight facility, CERN](https://ntof-exp.web.cern.ch/)
+- [DRAGON — recoil separator, TRIUMF](https://dragon.triumf.ca/)
+- [ISNAP — Institute for Structure and Nuclear Astrophysics, Notre Dame](https://isnap.nd.edu/)
+- [ELI-NP — Extreme Light Infrastructure – Nuclear Physics, Romania](https://www.eli-np.ro/)

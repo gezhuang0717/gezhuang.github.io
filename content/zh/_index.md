@@ -14,7 +14,7 @@ description: "芬兰于韦斯屈莱大学芬兰科学院研究员——利用彭
 
 我讲授博士课程《核物理研究中的激光与离子阱》。公开论文与主要报告见本网站对应栏目；成员与合作者的现状见[团队页面](group/)。
 
-**联系方式：** zhuang.z.ge@jyu.fi
+**联系方式：** [zhuang.z.ge@jyu.fi](mailto:zhuang.z.ge@jyu.fi) · [z.ge@gsi.de](mailto:z.ge@gsi.de) · [zhuang@ribf.riken.jp](mailto:zhuang@ribf.riken.jp)
 
 {{< nuclide-of-the-day >}}
 

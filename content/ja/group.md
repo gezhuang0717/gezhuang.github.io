@@ -8,7 +8,7 @@ showDate: false
 
 ## メンバー
 
-- **Miikka Winter** — 私が指導する博士課程学生。JYFLTRAP による質量と Q 値のペニングトラップ測定。¹²⁹Sb に関する筆頭著者論文（[Eur. Phys. J. A 62, 123 (2026)](https://doi.org/10.1140/epja/s10050-026-01883-8)）。*参加プロジェクト：* 低 Q 値崩壊、MASSPASS。
+- **Miikka Winter** — 私が指導する博士課程学生。JYFLTRAP による質量と Q 値のペニングトラップ測定。¹²⁹Sb に関する筆頭著者論文（[Eur. Phys. J. A 62, 123 (2026)](https://doi.org/10.1140/epja/s10050-026-01883-8)）。*参加プロジェクト：* 低 Q 値崩壊と MASSPASS に参加。主プロジェクトは核宇宙物理学研究。
 
 ## 元メンバー
 
@@ -39,3 +39,16 @@ showDate: false
 - [Rare-RI Ring — RIKEN](https://www.nishina.riken.jp/ribf/R3/overview.html)
 - [HIAF — Institute of Modern Physics, CAS](https://english.imp.cas.cn/research/facilities/HIAF/)
 - [KATRIN — Karlsruhe Tritium Neutrino Experiment](https://www.katrin.kit.edu/)
+
+## 原子核宇宙物理の研究グループと施設
+
+元素の起源を探るネットワークと研究施設（rp・νp・r 過程に関わる私たちの質量測定と密接に関連）：
+
+- [JINA-CEE — Joint Institute for Nuclear Astrophysics](https://www.jinaweb.org/)
+- [IReNA — International Research Network for Nuclear Astrophysics](https://irenaweb.org/)
+- [ChETEC-INFRA — European nuclear-astrophysics infrastructures](https://www.chetec-infra.eu/)
+- [LUNA — Laboratory for Underground Nuclear Astrophysics, Gran Sasso](https://luna.lngs.infn.it/)
+- [n_TOF — neutron time-of-flight facility, CERN](https://ntof-exp.web.cern.ch/)
+- [DRAGON — recoil separator, TRIUMF](https://dragon.triumf.ca/)
+- [ISNAP — Institute for Structure and Nuclear Astrophysics, Notre Dame](https://isnap.nd.edu/)
+- [ELI-NP — Extreme Light Infrastructure – Nuclear Physics, Romania](https://www.eli-np.ro/)

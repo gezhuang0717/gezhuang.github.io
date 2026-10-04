@@ -9,7 +9,7 @@
   pageRef = "publications"
   weight = 20
 [[main]]
-  name = "主要报告"
+  name = "报告"
   pageRef = "talks"
   weight = 30
 [[main]]

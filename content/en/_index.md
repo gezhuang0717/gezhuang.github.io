@@ -14,7 +14,7 @@ I received PhDs from Saitama University / RIKEN Nishina Center (Japan) and from 
 
 I teach the doctoral course *Lasers and Traps in Nuclear Physics Studies*. The website lists selected public publications and main talks; see the [Group page](group/) for members and collaborators.
 
-**Contact:** zhuang.z.ge@jyu.fi
+**Contact:** [zhuang.z.ge@jyu.fi](mailto:zhuang.z.ge@jyu.fi) · [z.ge@gsi.de](mailto:z.ge@gsi.de) · [zhuang@ribf.riken.jp](mailto:zhuang@ribf.riken.jp)
 
 {{< nuclide-of-the-day >}}
 

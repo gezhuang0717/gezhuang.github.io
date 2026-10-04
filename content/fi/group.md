@@ -8,7 +8,7 @@ Johdan IGISOL/JYFLTRAP-tutkimusryhmää, jota rahoittavat Suomen Akatemian akate
 
 ## Jäsenet
 
-- **Miikka Winter** — väitöskirjatutkija ohjauksessani. Penning-loukkumittaukset massoista ja Q-arvoista JYFLTRAPilla; ensimmäisen kirjoittajan artikkeli ¹²⁹Sb:stä ([Eur. Phys. J. A 62, 123 (2026)](https://doi.org/10.1140/epja/s10050-026-01883-8)). *Hankkeet:* pienen Q-arvon hajoamiset, MASSPASS.
+- **Miikka Winter** — väitöskirjatutkija ohjauksessani. Penning-loukkumittaukset massoista ja Q-arvoista JYFLTRAPilla; ensimmäisen kirjoittajan artikkeli ¹²⁹Sb:stä ([Eur. Phys. J. A 62, 123 (2026)](https://doi.org/10.1140/epja/s10050-026-01883-8)). *Hankkeet:* mukana pienen Q-arvon hajoamisissa ja MASSPASSissa; päähanke ydinastrofysiikan tutkimuksessa.
 
 ## Entiset jäsenet
 
@@ -39,3 +39,16 @@ Ryhmiä ja laboratorioita, joiden kanssa teen yhteistyötä tai joiden työ on l
 - [Rare-RI Ring — RIKEN](https://www.nishina.riken.jp/ribf/R3/overview.html)
 - [HIAF — Institute of Modern Physics, CAS](https://english.imp.cas.cn/research/facilities/HIAF/)
 - [KATRIN — Karlsruhe Tritium Neutrino Experiment](https://www.katrin.kit.edu/)
+
+## Ydinastrofysiikan ryhmiä ja laitoksia
+
+Alkuaineiden alkuperää tutkivia verkostoja ja laboratorioita, lähellä rp-, νp- ja r-prosessien massamittauksiamme:
+
+- [JINA-CEE — Joint Institute for Nuclear Astrophysics](https://www.jinaweb.org/)
+- [IReNA — International Research Network for Nuclear Astrophysics](https://irenaweb.org/)
+- [ChETEC-INFRA — European nuclear-astrophysics infrastructures](https://www.chetec-infra.eu/)
+- [LUNA — Laboratory for Underground Nuclear Astrophysics, Gran Sasso](https://luna.lngs.infn.it/)
+- [n_TOF — neutron time-of-flight facility, CERN](https://ntof-exp.web.cern.ch/)
+- [DRAGON — recoil separator, TRIUMF](https://dragon.triumf.ca/)
+- [ISNAP — Institute for Structure and Nuclear Astrophysics, Notre Dame](https://isnap.nd.edu/)
+- [ELI-NP — Extreme Light Infrastructure – Nuclear Physics, Romania](https://www.eli-np.ro/)

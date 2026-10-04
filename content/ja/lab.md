@@ -11,3 +11,5 @@ showDate: false
 {{< lab >}}
 
 {{< lab-more >}}
+
+{{< nuclide-chart >}}

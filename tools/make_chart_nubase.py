@@ -57,8 +57,10 @@ def main():
         if k in gs:
             gs[k][11] = v
     rows = sorted(gs.values())
+    import periodictable as pt  # element names (pip install periodictable)
+    elements = [[e.number, e.symbol, e.name.capitalize()] for e in pt.elements if 1 <= e.number <= 118]
     OUT.write_text(json.dumps({"source": "NUBASE2020 (Kondev et al., Chin. Phys. C 45, 030001, 2021) / AME2020 (Wang et al., Chin. Phys. C 45, 030003, 2021)",
-                               "rows": rows}, separators=(",", ":"), ensure_ascii=False))
+                               "elements": elements, "rows": rows}, separators=(",", ":"), ensure_ascii=False))
     print(len(rows), "ground states,", sum(len(v) for v in iso.values()), "isomers,", OUT.stat().st_size // 1024, "kB")
 
 

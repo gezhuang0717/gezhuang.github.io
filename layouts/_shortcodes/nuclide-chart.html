@@ -1,0 +1,56 @@
+{{- /*
+  Interactive chart of nuclides (AME2020 / NUBASE2020) + periodic table.  Usage: {{< nuclide-chart >}}
+  Data: static/data/nubase2020.json (python3 tools/make_chart_nubase.py). Code: static/js/nuclide-chart.js
+*/ -}}
+{{- $lang := site.Language.Lang -}}
+{{- $k := cond (hasPrefix $lang "zh") "zh" $lang -}}
+{{- $en := dict
+  "title" "Chart of nuclides — AME2020 / NUBASE2020" "note" "Scroll or use +/− to zoom, drag to move, click a box to zoom in and see everything about that nucleus. Search e.g. 100Sn or Cs-133. Lines mark the magic numbers and N = Z."
+  "colour" "Colour by" "search" "Search nuclide" "in" "Zoom in" "out" "Zoom out" "fit" "Whole chart" "random" "Surprise me"
+  "pt" "Periodic table — click an element to jump to its isotopes" "ptnote" "Shade = number of known isotopes (darker mulberry = more)."
+  "m_decay" "Decay mode" "m_hl" "Half-life" "m_bea" "Binding energy per nucleon" "m_me" "Mass excess" "m_sn" "Neutron separation energy Sₙ" "m_s2n" "Two-neutron separation energy S₂ₙ" "m_sp" "Proton separation energy Sₚ" "m_qb" "β⁻-decay Q-value" "m_qa" "α-decay Q-value" "m_dme" "Mass uncertainty" "m_est" "Measured or extrapolated mass" "m_year" "Year of discovery" "m_iso" "Number of isomers" "m_eo" "Even / odd Z and N"
+  "stable" "stable" "punst" "particle unstable" "measured" "measured" "extrap" "extrapolated (#)" "hl" "Half-life" "decay" "Decay" "me" "Mass excess" "disc" "Discovered" "isomers" "isomers" "abund" "abundance" "known" "known isotopes" "nuclides" "nuclides" "notfound" "Not found — try e.g. 100Sn"
+  "f_dmagic" "Doubly magic: both Z and N are magic numbers." "f_magic" "Magic {k} — a closed shell." "f_nz" "N = Z: equal numbers of protons and neutrons." "f_mirror" "Its mirror nucleus is {m}." "f_light" "The lightest known isotope of this element." "f_heavy" "The heaviest known isotope of this element." "f_nunb" "Beyond the neutron drip line (Sₙ < 0)." "f_punb" "Beyond the proton drip line (Sₚ < 0)." "f_year" "First identified in {y} — {n} years ago." "f_be" "Total binding energy {e} MeV: the nucleus is {p} % lighter than its free nucleons." "f_left" "Of a sample, {p} % would be left after one day." -}}
+{{- $L := dict "en" $en
+ "zh" (merge $en (dict "title" "核素图 —— AME2020 / NUBASE2020" "note" "滚轮或 +/− 缩放，拖动平移，点击方格放大并查看该核的全部信息。可搜索如 100Sn 或 Cs-133。线条标出幻数与 N = Z。"
+  "colour" "着色方式" "search" "搜索核素" "in" "放大" "out" "缩小" "fit" "全图" "random" "随便看看" "pt" "元素周期表 —— 点击元素跳到它的同位素" "ptnote" "颜色深浅 = 已知同位素数量（桑葚色越深越多）。"
+  "m_decay" "衰变方式" "m_hl" "半衰期" "m_bea" "平均结合能" "m_me" "质量过剩" "m_sn" "中子分离能 Sₙ" "m_s2n" "双中子分离能 S₂ₙ" "m_sp" "质子分离能 Sₚ" "m_qb" "β⁻ 衰变 Q 值" "m_qa" "α 衰变 Q 值" "m_dme" "质量不确定度" "m_est" "实验值或外推值" "m_year" "发现年份" "m_iso" "同核异能态数" "m_eo" "Z 与 N 的奇偶性"
+  "stable" "稳定" "punst" "粒子不稳定" "measured" "实验测量" "extrap" "外推值（#）" "hl" "半衰期" "decay" "衰变" "me" "质量过剩" "disc" "发现" "isomers" "同核异能态" "abund" "丰度" "known" "个已知同位素" "nuclides" "个核素" "notfound" "未找到——试试 100Sn"
+  "f_dmagic" "双幻核：Z 和 N 都是幻数。" "f_magic" "幻数 {k}——满壳层。" "f_nz" "N = Z：质子数与中子数相等。" "f_mirror" "它的镜像核是 {m}。" "f_light" "该元素已知最轻的同位素。" "f_heavy" "该元素已知最重的同位素。" "f_nunb" "位于中子滴线之外（Sₙ < 0）。" "f_punb" "位于质子滴线之外（Sₚ < 0）。" "f_year" "{y} 年首次发现——距今 {n} 年。" "f_be" "总结合能 {e} MeV：原子核比组成它的自由核子轻 {p}%。" "f_left" "一份样品一天后还剩 {p}%。"))
+ "fi" (merge $en (dict "title" "Nuklidikartta — AME2020 / NUBASE2020" "note" "Zoomaa rullalla tai +/−, siirrä vetämällä, napsauta ruutua nähdäksesi kaiken ytimestä. Hae esim. 100Sn tai Cs-133. Viivat: maagiset luvut ja N = Z."
+  "colour" "Väritys" "search" "Hae nuklidia" "in" "Lähemmäs" "out" "Kauemmas" "fit" "Koko kartta" "random" "Yllätä minut" "pt" "Jaksollinen järjestelmä — napsauta alkuainetta" "ptnote" "Sävy = tunnettujen isotooppien määrä (tummempi = enemmän)."
+  "m_decay" "Hajoamistapa" "m_hl" "Puoliintumisaika" "m_bea" "Sidosenergia nukleonia kohden" "m_me" "Massaylijäämä" "m_sn" "Neutronin separaatioenergia Sₙ" "m_s2n" "Kahden neutronin separaatioenergia S₂ₙ" "m_sp" "Protonin separaatioenergia Sₚ" "m_qb" "β⁻-hajoamisen Q-arvo" "m_qa" "α-hajoamisen Q-arvo" "m_dme" "Massan epävarmuus" "m_est" "Mitattu vai ekstrapoloitu" "m_year" "Löytövuosi" "m_iso" "Isomeerien määrä" "m_eo" "Parillinen/pariton Z ja N"
+  "stable" "stabiili" "punst" "hiukkasepästabiili" "measured" "mitattu" "extrap" "ekstrapoloitu (#)" "hl" "Puoliintumisaika" "decay" "Hajoaminen" "me" "Massaylijäämä" "disc" "Löydetty" "isomers" "isomeeriä" "abund" "runsaus" "known" "tunnettua isotooppia" "nuclides" "nuklidia" "notfound" "Ei löytynyt — kokeile 100Sn"
+  "f_dmagic" "Kaksoismaaginen: sekä Z että N ovat maagisia lukuja." "f_magic" "Maaginen {k} — suljettu kuori." "f_nz" "N = Z: yhtä monta protonia ja neutronia." "f_mirror" "Sen peiliydin on {m}." "f_light" "Alkuaineen kevein tunnettu isotooppi." "f_heavy" "Alkuaineen raskain tunnettu isotooppi." "f_nunb" "Neutronien tippumisrajan takana (Sₙ < 0)." "f_punb" "Protonien tippumisrajan takana (Sₚ < 0)." "f_year" "Tunnistettu ensi kerran {y} — {n} vuotta sitten." "f_be" "Kokonaissidosenergia {e} MeV: ydin on {p} % kevyempi kuin vapaat nukleonit." "f_left" "Näytteestä olisi jäljellä {p} % vuorokauden kuluttua."))
+ "de" (merge $en (dict "title" "Nuklidkarte — AME2020 / NUBASE2020" "note" "Mit dem Mausrad oder +/− zoomen, ziehen zum Verschieben, Kästchen anklicken für alle Daten des Kerns. Suche z. B. 100Sn oder Cs-133. Linien: magische Zahlen und N = Z."
+  "colour" "Farbe nach" "search" "Nuklid suchen" "in" "Vergrößern" "out" "Verkleinern" "fit" "Ganze Karte" "random" "Überrasch mich" "pt" "Periodensystem — Element anklicken, um zu seinen Isotopen zu springen" "ptnote" "Farbton = Zahl der bekannten Isotope (dunkler = mehr)."
+  "m_decay" "Zerfallsart" "m_hl" "Halbwertszeit" "m_bea" "Bindungsenergie pro Nukleon" "m_me" "Massenexzess" "m_sn" "Neutronenseparationsenergie Sₙ" "m_s2n" "Zwei-Neutronen-Separationsenergie S₂ₙ" "m_sp" "Protonenseparationsenergie Sₚ" "m_qb" "Q-Wert des β⁻-Zerfalls" "m_qa" "Q-Wert des α-Zerfalls" "m_dme" "Massenunsicherheit" "m_est" "Gemessen oder extrapoliert" "m_year" "Entdeckungsjahr" "m_iso" "Zahl der Isomere" "m_eo" "Gerade/ungerade Z und N"
+  "stable" "stabil" "punst" "teilcheninstabil" "measured" "gemessen" "extrap" "extrapoliert (#)" "hl" "Halbwertszeit" "decay" "Zerfall" "me" "Massenexzess" "disc" "Entdeckt" "isomers" "Isomere" "abund" "Häufigkeit" "known" "bekannte Isotope" "nuclides" "Nuklide" "notfound" "Nicht gefunden – z. B. 100Sn"
+  "f_dmagic" "Doppelt magisch: Z und N sind magische Zahlen." "f_magic" "Magisch {k} – abgeschlossene Schale." "f_nz" "N = Z: gleich viele Protonen und Neutronen." "f_mirror" "Sein Spiegelkern ist {m}." "f_light" "Das leichteste bekannte Isotop dieses Elements." "f_heavy" "Das schwerste bekannte Isotop dieses Elements." "f_nunb" "Jenseits der Neutronen-Abbruchkante (Sₙ < 0)." "f_punb" "Jenseits der Protonen-Abbruchkante (Sₚ < 0)." "f_year" "Erstmals {y} nachgewiesen – vor {n} Jahren." "f_be" "Gesamtbindungsenergie {e} MeV: Der Kern ist {p} % leichter als seine freien Nukleonen." "f_left" "Von einer Probe wären nach einem Tag noch {p} % übrig."))
+ "ja" (merge $en (dict "title" "核図表 —— AME2020 / NUBASE2020" "note" "ホイールまたは +/− で拡大縮小、ドラッグで移動、マスをクリックするとその原子核の詳細を表示。100Sn や Cs-133 で検索できます。線は魔法数と N = Z。"
+  "colour" "色分け" "search" "核種を検索" "in" "拡大" "out" "縮小" "fit" "全体表示" "random" "おまかせ" "pt" "周期表 —— 元素をクリックで同位体へ移動" "ptnote" "色の濃さ = 既知の同位体の数（濃い桑の実色ほど多い）。"
+  "m_decay" "崩壊様式" "m_hl" "半減期" "m_bea" "核子あたりの結合エネルギー" "m_me" "質量超過" "m_sn" "中性子分離エネルギー Sₙ" "m_s2n" "2中性子分離エネルギー S₂ₙ" "m_sp" "陽子分離エネルギー Sₚ" "m_qb" "β⁻ 崩壊の Q 値" "m_qa" "α 崩壊の Q 値" "m_dme" "質量の不確かさ" "m_est" "実測値か外挿値か" "m_year" "発見年" "m_iso" "アイソマーの数" "m_eo" "Z と N の偶奇"
+  "stable" "安定" "punst" "粒子非束縛" "measured" "実測" "extrap" "外挿値（#）" "hl" "半減期" "decay" "崩壊" "me" "質量超過" "disc" "発見" "isomers" "アイソマー" "abund" "存在比" "known" "既知の同位体" "nuclides" "核種" "notfound" "見つかりません——例：100Sn"
+  "f_dmagic" "二重魔法核：Z も N も魔法数。" "f_magic" "魔法数 {k}——閉殻。" "f_nz" "N = Z：陽子数と中性子数が等しい。" "f_mirror" "鏡像核は {m}。" "f_light" "この元素の既知で最も軽い同位体。" "f_heavy" "この元素の既知で最も重い同位体。" "f_nunb" "中性子ドリップラインの外（Sₙ < 0）。" "f_punb" "陽子ドリップラインの外（Sₚ < 0）。" "f_year" "{y} 年に初めて同定——{n} 年前。" "f_be" "全結合エネルギー {e} MeV：原子核は自由な核子より {p}% 軽い。" "f_left" "試料は1日後に {p}% 残ります。"))
+-}}
+{{- $t := index $L $k | default $en -}}
+<section class="zg-card nc" data-nuclide-chart data-src="{{ "data/nubase2020.json" | relURL }}" data-labels="{{ $t | jsonify }}">
+  <h2>{{ $t.title }}</h2>
+  <p class="zg-muted">{{ $t.note }} <span class="nc-count"></span></p>
+  <div class="nc-bar">
+    <label>{{ $t.colour }} <select name="nc-colour"></select></label>
+    <input type="search" name="nc-search" placeholder="{{ $t.search }} (100Sn)" aria-label="{{ $t.search }}">
+    <button type="button" class="zg-btn" data-nc="in" aria-label="{{ $t.in }}">＋</button>
+    <button type="button" class="zg-btn" data-nc="out" aria-label="{{ $t.out }}">−</button>
+    <button type="button" class="zg-btn zg-btn-ghost" data-nc="fit">{{ $t.fit }}</button>
+    <button type="button" class="zg-btn zg-btn-ghost" data-nc="random">🎲 {{ $t.random }}</button>
+  </div>
+  <div class="nc-stage">
+    <canvas class="nc-canvas" width="960" height="600" aria-label="{{ $t.title }}"></canvas>
+    <aside class="nc-card" hidden></aside>
+  </div>
+  <p class="nc-legend"></p>
+  <h3>{{ $t.pt }}</h3>
+  <div class="nc-ptable"></div>
+</section>
+<script defer src="{{ "js/nuclide-chart.js" | relURL }}"></script>

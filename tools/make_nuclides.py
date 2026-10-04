@@ -196,7 +196,7 @@ if __name__ == "__main__" and "--chart" not in __import__("sys").argv:
 
 
 def chart():
-    """Write static/data/nuclide-chart.json for the Lab chart of nuclides."""
+    """(Legacy) small ICRP-107 chart; the Lab now uses tools/make_chart_nubase.py (AME2020/NUBASE2020)."""
     import json
     rows = {}
     for nuc in rd.DEFAULTDATA.nuclides:

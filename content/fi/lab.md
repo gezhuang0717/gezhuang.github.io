@@ -11,3 +11,5 @@ Pieniä interaktiivisia työkaluja arkityöstäni Penning-loukkujen ja MR-TOF:n 
 {{< lab >}}
 
 {{< lab-more >}}
+
+{{< nuclide-chart >}}

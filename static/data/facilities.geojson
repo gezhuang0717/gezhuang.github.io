@@ -6,19 +6,19 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.14569,
-          46.20222
+          6.0556,
+          46.233
         ]
       },
       "properties": {
         "id": "cern-isolde",
         "name": {
-          "en": "CERN ISOLDE",
-          "zh": "CERN ISOLDE"
+          "en": "CERN ISOLDE (ISOLTRAP, MR-TOF)",
+          "zh": "CERN ISOLDE (ISOLTRAP, MR-TOF)"
         },
         "country": "Switzerland",
         "country_code": "CH",
-        "city": "Geneva",
+        "city": "Meyrin",
         "categories": [
           "core-nuclear",
           "rare-isotope",
@@ -27,7 +27,8 @@
         ],
         "techniques": [
           "penning-trap",
-          "mr-tof"
+          "mr-tof",
+          "isol"
         ],
         "capabilities": [],
         "status": "source-reported",
@@ -39,27 +40,28 @@
         "source_urls": [
           "https://isolde.cern/"
         ],
-        "source_checked": "2026-10-03",
-        "coordinate_precision": "city_approx",
-        "verification_status": "verified_cross_source",
+        "source_checked": "2026-10-04",
+        "coordinate_precision": "campus_exact",
+        "verification_status": "verified_primary",
         "coordinate_verified": true,
-        "latitude": 46.20222,
-        "longitude": 6.14569,
+        "latitude": 46.233,
+        "longitude": 6.0556,
         "machines": [],
         "instruments": [],
         "description": {
-          "en": "Public nuclear-physics facility. City-level location is shown for orientation; follow official visitor information for the campus address.",
-          "zh": "公开核物理设施。地图仅以城市级位置帮助了解地理分布；园区地址请查阅官方访客信息。"
+          "en": "Nuclear-physics facility (penning-trap, mr-tof, isol). Map point: campus exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（penning-trap, mr-tof, isol）。地图位置：园区级位置（来源见下）。"
         },
         "daily_aliases": [
-          "ISOLDE"
+          "ISOLDE",
+          "ISOLTRAP"
         ],
         "coordinate_source": [
-          "https://isolde.cern/",
-          "https://www.geonames.org/2660646/"
+          "https://en.wikipedia.org/wiki/CERN"
         ],
-        "last_coordinate_check": "2026-10-03",
-        "continent": "Europe"
+        "last_coordinate_check": "2026-10-04",
+        "continent": "Europe",
+        "coordinate_method": "wikipedia_infobox"
       }
     },
     {
@@ -67,24 +69,28 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -84.48387,
-          42.73698
+          -84.47383,
+          42.72478
         ]
       },
       "properties": {
         "id": "frib",
         "name": {
-          "en": "Facility for Rare Isotope Beams",
-          "zh": "稀有同位素束设施 FRIB"
+          "en": "Facility for Rare Isotope Beams (LEBIT)",
+          "zh": "Facility for Rare Isotope Beams (LEBIT)"
         },
         "country": "United States",
         "country_code": "US",
         "city": "East Lansing",
         "categories": [
           "core-nuclear",
-          "rare-isotope"
+          "rare-isotope",
+          "penning-trap"
         ],
-        "techniques": [],
+        "techniques": [
+          "penning-trap",
+          "fragmentation"
+        ],
         "capabilities": [],
         "status": "source-reported",
         "site_id": "frib-campus",
@@ -93,29 +99,31 @@
           "official:frib"
         ],
         "source_urls": [
+          "https://frib.msu.edu/",
           "https://frib.msu.edu/about/visit-frib"
         ],
-        "source_checked": "2026-10-03",
-        "coordinate_precision": "city_approx",
-        "verification_status": "verified_cross_source",
+        "source_checked": "2026-10-04",
+        "coordinate_precision": "facility_exact",
+        "verification_status": "verified_primary",
         "coordinate_verified": true,
-        "latitude": 42.73698,
-        "longitude": -84.48387,
+        "latitude": 42.72478,
+        "longitude": -84.47383,
         "machines": [],
         "instruments": [],
         "description": {
-          "en": "Public nuclear-physics facility. City-level location is shown for orientation; follow official visitor information for the campus address.",
-          "zh": "公开核物理设施。地图仅以城市级位置帮助了解地理分布；园区地址请查阅官方访客信息。"
+          "en": "Nuclear-physics facility (penning-trap, fragmentation). Map point: facility exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（penning-trap, fragmentation）。地图位置：设施级位置（来源见下）。"
         },
         "daily_aliases": [
-          "FRIB"
+          "FRIB",
+          "LEBIT"
         ],
         "coordinate_source": [
-          "https://frib.msu.edu/about/visit-frib",
-          "https://www.geonames.org/4991640/"
+          "https://en.wikipedia.org/wiki/Facility_for_Rare_Isotope_Beams"
         ],
-        "last_coordinate_check": "2026-10-03",
-        "continent": "North America"
+        "last_coordinate_check": "2026-10-04",
+        "continent": "North America",
+        "coordinate_method": "wikipedia_infobox"
       }
     },
     {
@@ -107491,15 +107499,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          139.62333,
-          35.78944
+          139.6126,
+          35.7805
         ]
       },
       "properties": {
         "id": "riken-ribf",
         "name": {
-          "en": "RIKEN RI Beam Factory",
-          "zh": "理化学研究所放射性同位素束工厂"
+          "en": "RIKEN RI Beam Factory (Rare-RI Ring, ZD MRTOF, KISS)",
+          "zh": "RIKEN RI Beam Factory (Rare-RI Ring, ZD MRTOF, KISS)"
         },
         "country": "Japan",
         "country_code": "JP",
@@ -107507,12 +107515,14 @@
         "categories": [
           "core-nuclear",
           "rare-isotope",
+          "cyclotron",
           "storage-ring",
-          "cyclotron"
+          "mr-tof"
         ],
         "techniques": [
           "storage-ring",
-          "cyclotron"
+          "mr-tof",
+          "fragmentation"
         ],
         "capabilities": [],
         "status": "source-reported",
@@ -107522,30 +107532,33 @@
           "official:riken-ribf"
         ],
         "source_urls": [
+          "https://www.nishina.riken.jp/ribf/",
           "https://www.riken.jp/en/access/wako-map/index.html"
         ],
-        "source_checked": "2026-10-03",
-        "coordinate_precision": "city_approx",
-        "verification_status": "verified_cross_source",
+        "source_checked": "2026-10-04",
+        "coordinate_precision": "facility_exact",
+        "verification_status": "verified_primary",
         "coordinate_verified": true,
-        "latitude": 35.78944,
-        "longitude": 139.62333,
+        "latitude": 35.7805,
+        "longitude": 139.6126,
         "machines": [],
         "instruments": [],
         "description": {
-          "en": "Public nuclear-physics facility. City-level location is shown for orientation; follow official visitor information for the campus address.",
-          "zh": "公开核物理设施。地图仅以城市级位置帮助了解地理分布；园区地址请查阅官方访客信息。"
+          "en": "Nuclear-physics facility (storage-ring, mr-tof, fragmentation). Map point: facility exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（storage-ring, mr-tof, fragmentation）。地图位置：设施级位置（来源见下）。"
         },
         "daily_aliases": [
-          "RIKEN",
-          "RIBF"
+          "RIBF",
+          "Rare-RI Ring",
+          "KISS",
+          "SLOWRI"
         ],
         "coordinate_source": [
-          "https://www.riken.jp/en/access/wako-map/index.html",
-          "https://www.geonames.org/1907300/"
+          "https://en.wikipedia.org/wiki/Radioactive_Isotope_Beam_Factory"
         ],
-        "last_coordinate_check": "2026-10-03",
-        "continent": "Asia"
+        "last_coordinate_check": "2026-10-04",
+        "continent": "Asia",
+        "coordinate_method": "wikipedia_infobox"
       }
     },
     {
@@ -107553,15 +107566,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -123.11934,
-          49.24966
+          -123.2306,
+          49.24779
         ]
       },
       "properties": {
         "id": "triumf-isac",
         "name": {
-          "en": "TRIUMF / ISAC",
-          "zh": "TRIUMF / ISAC"
+          "en": "TRIUMF / ISAC (TITAN)",
+          "zh": "TRIUMF / ISAC (TITAN)"
         },
         "country": "Canada",
         "country_code": "CA",
@@ -107569,12 +107582,14 @@
         "categories": [
           "core-nuclear",
           "rare-isotope",
+          "cyclotron",
           "penning-trap",
-          "cyclotron"
+          "mr-tof"
         ],
         "techniques": [
           "penning-trap",
-          "cyclotron"
+          "mr-tof",
+          "isol"
         ],
         "capabilities": [],
         "status": "source-reported",
@@ -107584,30 +107599,1256 @@
           "official:triumf-isac"
         ],
         "source_urls": [
+          "https://www.triumf.ca/",
           "https://triumf.ca/contact-triumf/"
         ],
-        "source_checked": "2026-10-03",
-        "coordinate_precision": "city_approx",
-        "verification_status": "verified_cross_source",
+        "source_checked": "2026-10-04",
+        "coordinate_precision": "facility_exact",
+        "verification_status": "verified_primary",
         "coordinate_verified": true,
-        "latitude": 49.24966,
-        "longitude": -123.11934,
+        "latitude": 49.24779,
+        "longitude": -123.2306,
         "machines": [],
         "instruments": [],
         "description": {
-          "en": "Public nuclear-physics facility. City-level location is shown for orientation; follow official visitor information for the campus address.",
-          "zh": "公开核物理设施。地图仅以城市级位置帮助了解地理分布；园区地址请查阅官方访客信息。"
+          "en": "Nuclear-physics facility (penning-trap, mr-tof, isol). Map point: facility exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（penning-trap, mr-tof, isol）。地图位置：设施级位置（来源见下）。"
         },
         "daily_aliases": [
           "TRIUMF",
-          "ISAC"
+          "TITAN",
+          "ISAC",
+          "DRAGON"
         ],
         "coordinate_source": [
-          "https://triumf.ca/contact-triumf/",
-          "https://www.geonames.org/6173331/"
+          "https://en.wikipedia.org/wiki/TRIUMF"
         ],
-        "last_coordinate_check": "2026-10-03",
-        "continent": "North America"
+        "last_coordinate_check": "2026-10-04",
+        "continent": "North America",
+        "coordinate_method": "wikipedia_infobox"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0556,
+          46.233
+        ]
+      },
+      "properties": {
+        "id": "cern-ad-base",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:cern-ad-base"
+        ],
+        "site_id": "cern-ad-base-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "CERN Antiproton Decelerator (BASE Penning trap)",
+          "zh": "CERN Antiproton Decelerator (BASE Penning trap)"
+        },
+        "country": "Switzerland",
+        "country_code": "CH",
+        "city": "Meyrin",
+        "continent": "Europe",
+        "categories": [
+          "core-nuclear",
+          "penning-trap"
+        ],
+        "techniques": [
+          "penning-trap"
+        ],
+        "daily_aliases": [
+          "BASE",
+          "Antiproton Decelerator"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://base.web.cern.ch/"
+        ],
+        "latitude": 46.233,
+        "longitude": 6.0556,
+        "coordinate_precision": "campus_exact",
+        "verification_status": "verified_primary",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://en.wikipedia.org/wiki/CERN"
+        ],
+        "coordinate_method": "wikipedia_infobox",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (penning-trap). Map point: campus exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（penning-trap）。地图位置：园区级位置（来源见下）。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0556,
+          46.233
+        ]
+      },
+      "properties": {
+        "id": "cern-ntof",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:cern-ntof"
+        ],
+        "site_id": "cern-ntof-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "CERN n_TOF",
+          "zh": "CERN n_TOF"
+        },
+        "country": "Switzerland",
+        "country_code": "CH",
+        "city": "Meyrin",
+        "continent": "Europe",
+        "categories": [
+          "core-nuclear",
+          "neutron",
+          "accelerator-neutron"
+        ],
+        "techniques": [
+          "neutron-time-of-flight"
+        ],
+        "daily_aliases": [
+          "n_TOF"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://ntof-exp.web.cern.ch/"
+        ],
+        "latitude": 46.233,
+        "longitude": 6.0556,
+        "coordinate_precision": "campus_exact",
+        "verification_status": "verified_primary",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://en.wikipedia.org/wiki/CERN"
+        ],
+        "coordinate_method": "wikipedia_infobox",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (neutron-time-of-flight). Map point: campus exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（neutron-time-of-flight）。地图位置：园区级位置（来源见下）。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.67917,
+          49.93139
+        ]
+      },
+      "properties": {
+        "id": "gsi-fair",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:gsi-fair"
+        ],
+        "site_id": "gsi-fair-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "GSI / FAIR (ESR, CRYRING, SHIPTRAP, FRS Ion Catcher)",
+          "zh": "GSI / FAIR (ESR, CRYRING, SHIPTRAP, FRS Ion Catcher)"
+        },
+        "country": "Germany",
+        "country_code": "DE",
+        "city": "Darmstadt",
+        "continent": "Europe",
+        "categories": [
+          "core-nuclear",
+          "rare-isotope",
+          "storage-ring",
+          "penning-trap",
+          "mr-tof"
+        ],
+        "techniques": [
+          "storage-ring",
+          "penning-trap",
+          "mr-tof",
+          "fragmentation"
+        ],
+        "daily_aliases": [
+          "GSI",
+          "FAIR",
+          "ESR",
+          "CRYRING",
+          "SHIPTRAP",
+          "FRS Ion Catcher"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://www.gsi.de/"
+        ],
+        "latitude": 49.93139,
+        "longitude": 8.67917,
+        "coordinate_precision": "campus_exact",
+        "verification_status": "verified_primary",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://de.wikipedia.org/wiki/GSI_Helmholtzzentrum_f%C3%BCr_Schwerionenforschung"
+        ],
+        "coordinate_method": "wikipedia_infobox",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (storage-ring, penning-trap, mr-tof, fragmentation). Map point: campus exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（storage-ring, penning-trap, mr-tof, fragmentation）。地图位置：园区级位置（来源见下）。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.982,
+          41.70917
+        ]
+      },
+      "properties": {
+        "id": "anl-atlas",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:anl-atlas"
+        ],
+        "site_id": "anl-atlas-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "Argonne ATLAS (CPT, CARIBU, N = 126 Factory)",
+          "zh": "Argonne ATLAS (CPT, CARIBU, N = 126 Factory)"
+        },
+        "country": "United States",
+        "country_code": "US",
+        "city": "Lemont",
+        "continent": "North America",
+        "categories": [
+          "core-nuclear",
+          "rare-isotope",
+          "penning-trap",
+          "mr-tof"
+        ],
+        "techniques": [
+          "penning-trap",
+          "mr-tof"
+        ],
+        "daily_aliases": [
+          "ATLAS",
+          "CPT",
+          "CARIBU"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://www.anl.gov/atlas"
+        ],
+        "latitude": 41.70917,
+        "longitude": -87.982,
+        "coordinate_precision": "campus_exact",
+        "verification_status": "verified_primary",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://de.wikipedia.org/wiki/Argonne_National_Laboratory"
+        ],
+        "coordinate_method": "wikipedia_infobox",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (penning-trap, mr-tof). Map point: campus exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（penning-trap, mr-tof）。地图位置：园区级位置（来源见下）。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.70917,
+          49.38778
+        ]
+      },
+      "properties": {
+        "id": "mpik-heidelberg",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:mpik-heidelberg"
+        ],
+        "site_id": "mpik-heidelberg-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "Max Planck Institute for Nuclear Physics (PENTATRAP, ALPHATRAP)",
+          "zh": "Max Planck Institute for Nuclear Physics (PENTATRAP, ALPHATRAP)"
+        },
+        "country": "Germany",
+        "country_code": "DE",
+        "city": "Heidelberg",
+        "continent": "Europe",
+        "categories": [
+          "core-nuclear",
+          "penning-trap"
+        ],
+        "techniques": [
+          "penning-trap"
+        ],
+        "daily_aliases": [
+          "MPIK",
+          "PENTATRAP",
+          "ALPHATRAP"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://www.mpi-hd.mpg.de/"
+        ],
+        "latitude": 49.38778,
+        "longitude": 8.70917,
+        "coordinate_precision": "facility_exact",
+        "verification_status": "verified_primary",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://de.wikipedia.org/wiki/Max-Planck-Institut_f%C3%BCr_Kernphysik"
+        ],
+        "coordinate_method": "wikipedia_infobox",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (penning-trap). Map point: facility exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（penning-trap）。地图位置：设施级位置（来源见下）。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.51642,
+          42.42056
+        ]
+      },
+      "properties": {
+        "id": "lngs-luna",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:lngs-luna"
+        ],
+        "site_id": "lngs-luna-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "Gran Sasso National Laboratory (LUNA)",
+          "zh": "Gran Sasso National Laboratory (LUNA)"
+        },
+        "country": "Italy",
+        "country_code": "IT",
+        "city": "Assergi",
+        "continent": "Europe",
+        "categories": [
+          "core-nuclear",
+          "nuclear-rd"
+        ],
+        "techniques": [
+          "underground-accelerator"
+        ],
+        "daily_aliases": [
+          "LNGS",
+          "LUNA"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://luna.lngs.infn.it/"
+        ],
+        "latitude": 42.42056,
+        "longitude": 13.51642,
+        "coordinate_precision": "campus_exact",
+        "verification_status": "verified_primary",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://de.wikipedia.org/wiki/Laboratori_Nazionali_del_Gran_Sasso"
+        ],
+        "coordinate_method": "wikipedia_infobox",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (underground-accelerator). Map point: campus exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（underground-accelerator）。地图位置：园区级位置（来源见下）。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.43611,
+          49.09572
+        ]
+      },
+      "properties": {
+        "id": "kit-katrin",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:kit-katrin"
+        ],
+        "site_id": "kit-katrin-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "KATRIN, KIT Campus North",
+          "zh": "KATRIN, KIT Campus North"
+        },
+        "country": "Germany",
+        "country_code": "DE",
+        "city": "Eggenstein-Leopoldshafen",
+        "continent": "Europe",
+        "categories": [
+          "core-nuclear",
+          "nuclear-rd"
+        ],
+        "techniques": [
+          "beta-spectrometer"
+        ],
+        "daily_aliases": [
+          "KATRIN"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://www.katrin.kit.edu/"
+        ],
+        "latitude": 49.09572,
+        "longitude": 8.43611,
+        "coordinate_precision": "facility_exact",
+        "verification_status": "verified_primary",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://de.wikipedia.org/wiki/KATRIN"
+        ],
+        "coordinate_method": "wikipedia_infobox",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (beta-spectrometer). Map point: facility exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（beta-spectrometer）。地图位置：设施级位置（来源见下）。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.18944,
+          56.74639
+        ]
+      },
+      "properties": {
+        "id": "jinr-flnr",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:jinr-flnr"
+        ],
+        "site_id": "jinr-flnr-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "JINR Flerov Laboratory of Nuclear Reactions",
+          "zh": "JINR Flerov Laboratory of Nuclear Reactions"
+        },
+        "country": "Russia",
+        "country_code": "RU",
+        "city": "Dubna",
+        "continent": "Europe",
+        "categories": [
+          "core-nuclear",
+          "rare-isotope",
+          "cyclotron"
+        ],
+        "techniques": [
+          "fusion-evaporation"
+        ],
+        "daily_aliases": [
+          "FLNR",
+          "JINR"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://flerovlab.jinr.ru/"
+        ],
+        "latitude": 56.74639,
+        "longitude": 37.18944,
+        "coordinate_precision": "campus_exact",
+        "verification_status": "verified_primary",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://en.wikipedia.org/wiki/Joint_Institute_for_Nuclear_Research"
+        ],
+        "coordinate_method": "wikipedia_infobox",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (fusion-evaporation). Map point: campus exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（fusion-evaporation）。地图位置：园区级位置（来源见下）。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.71611,
+          -34.025
+        ]
+      },
+      "properties": {
+        "id": "ithemba",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:ithemba"
+        ],
+        "site_id": "ithemba-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "iThemba LABS",
+          "zh": "iThemba LABS"
+        },
+        "country": "South Africa",
+        "country_code": "ZA",
+        "city": "Faure",
+        "continent": "Africa",
+        "categories": [
+          "core-nuclear",
+          "cyclotron"
+        ],
+        "techniques": [
+          "cyclotron"
+        ],
+        "daily_aliases": [
+          "iThemba"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://tlabs.ac.za/"
+        ],
+        "latitude": -34.025,
+        "longitude": 18.71611,
+        "coordinate_precision": "campus_exact",
+        "verification_status": "verified_primary",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://en.wikipedia.org/wiki/IThemba_LABS"
+        ],
+        "coordinate_method": "wikipedia_infobox",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (cyclotron). Map point: campus exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（cyclotron）。地图位置：园区级位置（来源见下）。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1205,
+          -35.2778
+        ]
+      },
+      "properties": {
+        "id": "anu-hiaf",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:anu-hiaf"
+        ],
+        "site_id": "anu-hiaf-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "ANU Heavy Ion Accelerator Facility",
+          "zh": "ANU Heavy Ion Accelerator Facility"
+        },
+        "country": "Australia",
+        "country_code": "AU",
+        "city": "Canberra",
+        "continent": "Oceania",
+        "categories": [
+          "core-nuclear",
+          "electrostatic"
+        ],
+        "techniques": [
+          "electrostatic"
+        ],
+        "daily_aliases": [
+          "HIAF ANU"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://physics.anu.edu.au/nuclear/hiaf/"
+        ],
+        "latitude": -35.2778,
+        "longitude": 149.1205,
+        "coordinate_precision": "campus_exact",
+        "verification_status": "verified_primary",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://en.wikipedia.org/wiki/Australian_National_University"
+        ],
+        "coordinate_method": "wikipedia_infobox",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (electrostatic). Map point: campus exact — site of the laboratory or host campus.",
+          "zh": "核物理设施（electrostatic）。地图位置：园区级位置（来源见下）。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.83987,
+          36.05701
+        ]
+      },
+      "properties": {
+        "id": "imp-lanzhou",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:imp-lanzhou"
+        ],
+        "site_id": "imp-lanzhou-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "Institute of Modern Physics, CAS (HIRFL-CSR, CSRe, Lanzhou Penning Trap)",
+          "zh": "Institute of Modern Physics, CAS (HIRFL-CSR, CSRe, Lanzhou Penning Trap)"
+        },
+        "country": "China",
+        "country_code": "CN",
+        "city": "Lanzhou",
+        "continent": "Asia",
+        "categories": [
+          "core-nuclear",
+          "rare-isotope",
+          "storage-ring",
+          "penning-trap"
+        ],
+        "techniques": [
+          "storage-ring",
+          "penning-trap"
+        ],
+        "daily_aliases": [
+          "IMP",
+          "HIRFL",
+          "CSRe",
+          "LPT"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://english.imp.cas.cn/"
+        ],
+        "latitude": 36.05701,
+        "longitude": 103.83987,
+        "coordinate_precision": "city_approx",
+        "verification_status": "verified_cross_source",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://english.imp.cas.cn/",
+          "https://www.geonames.org/1804430/"
+        ],
+        "coordinate_method": "gazetteer_city_match",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (storage-ring, penning-trap). Map point: city approx — city centre, not the exact site.",
+          "zh": "核物理设施（storage-ring, penning-trap）。地图位置：城市近似位置。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.41523,
+          23.11147
+        ]
+      },
+      "properties": {
+        "id": "hiaf-huizhou",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:hiaf-huizhou"
+        ],
+        "site_id": "hiaf-huizhou-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "HIAF — High Intensity heavy-ion Accelerator Facility (SRing)",
+          "zh": "HIAF — High Intensity heavy-ion Accelerator Facility (SRing)"
+        },
+        "country": "China",
+        "country_code": "CN",
+        "city": "Huizhou",
+        "continent": "Asia",
+        "categories": [
+          "core-nuclear",
+          "rare-isotope",
+          "storage-ring"
+        ],
+        "techniques": [
+          "storage-ring",
+          "fragmentation"
+        ],
+        "daily_aliases": [
+          "HIAF",
+          "SRing"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://english.imp.cas.cn/research/facilities/HIAF/"
+        ],
+        "latitude": 23.11147,
+        "longitude": 114.41523,
+        "coordinate_precision": "city_approx",
+        "verification_status": "verified_cross_source",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://english.imp.cas.cn/research/facilities/HIAF/",
+          "https://www.geonames.org/1806776/"
+        ],
+        "coordinate_method": "gazetteer_city_match",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (storage-ring, fragmentation). Map point: city approx — city centre, not the exact site.",
+          "zh": "核物理设施（storage-ring, fragmentation）。地图位置：城市近似位置。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.39723,
+          39.9075
+        ]
+      },
+      "properties": {
+        "id": "ciae-brif",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:ciae-brif"
+        ],
+        "site_id": "ciae-brif-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "CIAE Beijing Radioactive Ion-beam Facility (BRIF)",
+          "zh": "CIAE Beijing Radioactive Ion-beam Facility (BRIF)"
+        },
+        "country": "China",
+        "country_code": "CN",
+        "city": "Beijing",
+        "continent": "Asia",
+        "categories": [
+          "core-nuclear",
+          "rare-isotope",
+          "cyclotron"
+        ],
+        "techniques": [
+          "isol"
+        ],
+        "daily_aliases": [
+          "BRIF",
+          "CIAE"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "http://www.ciae.ac.cn/"
+        ],
+        "latitude": 39.9075,
+        "longitude": 116.39723,
+        "coordinate_precision": "city_approx",
+        "verification_status": "verified_cross_source",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "http://www.ciae.ac.cn/",
+          "https://www.geonames.org/1816670/"
+        ],
+        "coordinate_method": "gazetteer_city_match",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (isol). Map point: city approx — city centre, not the exact site.",
+          "zh": "核物理设施（isol）。地图位置：城市近似位置。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.28008,
+          49.98185
+        ]
+      },
+      "properties": {
+        "id": "mainz-trigatrap",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:mainz-trigatrap"
+        ],
+        "site_id": "mainz-trigatrap-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "TRIGA Mainz (TRIGA-TRAP)",
+          "zh": "TRIGA Mainz (TRIGA-TRAP)"
+        },
+        "country": "Germany",
+        "country_code": "DE",
+        "city": "Mainz",
+        "continent": "Europe",
+        "categories": [
+          "core-nuclear",
+          "penning-trap",
+          "research-reactor"
+        ],
+        "techniques": [
+          "penning-trap"
+        ],
+        "daily_aliases": [
+          "TRIGA-TRAP"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://www.triga.uni-mainz.de/"
+        ],
+        "latitude": 49.98185,
+        "longitude": 8.28008,
+        "coordinate_precision": "city_approx",
+        "verification_status": "verified_cross_source",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://www.triga.uni-mainz.de/",
+          "https://www.geonames.org/2874225/"
+        ],
+        "coordinate_method": "gazetteer_city_match",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (penning-trap). Map point: city approx — city centre, not the exact site.",
+          "zh": "核物理设施（penning-trap）。地图位置：城市近似位置。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65101,
+          48.24896
+        ]
+      },
+      "properties": {
+        "id": "mll-garching",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:mll-garching"
+        ],
+        "site_id": "mll-garching-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "Maier-Leibnitz-Laboratorium (MLLTRAP)",
+          "zh": "Maier-Leibnitz-Laboratorium (MLLTRAP)"
+        },
+        "country": "Germany",
+        "country_code": "DE",
+        "city": "Garching",
+        "continent": "Europe",
+        "categories": [
+          "core-nuclear",
+          "electrostatic",
+          "penning-trap"
+        ],
+        "techniques": [
+          "penning-trap"
+        ],
+        "daily_aliases": [
+          "MLL",
+          "MLLTRAP"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://www.mll-muenchen.de/"
+        ],
+        "latitude": 48.24896,
+        "longitude": 11.65101,
+        "coordinate_precision": "city_approx",
+        "verification_status": "verified_cross_source",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://www.mll-muenchen.de/",
+          "https://www.geonames.org/2922582/"
+        ],
+        "coordinate_method": "gazetteer_city_match",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (penning-trap). Map point: city approx — city centre, not the exact site.",
+          "zh": "核物理设施（penning-trap）。地图位置：城市近似位置。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.35912,
+          49.18585
+        ]
+      },
+      "properties": {
+        "id": "ganil-spiral2",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:ganil-spiral2"
+        ],
+        "site_id": "ganil-spiral2-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "GANIL / SPIRAL2 (DESIR, PIPERADE)",
+          "zh": "GANIL / SPIRAL2 (DESIR, PIPERADE)"
+        },
+        "country": "France",
+        "country_code": "FR",
+        "city": "Caen",
+        "continent": "Europe",
+        "categories": [
+          "core-nuclear",
+          "rare-isotope",
+          "cyclotron",
+          "penning-trap",
+          "mr-tof"
+        ],
+        "techniques": [
+          "penning-trap",
+          "mr-tof",
+          "isol"
+        ],
+        "daily_aliases": [
+          "GANIL",
+          "SPIRAL2",
+          "DESIR",
+          "PIPERADE"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://www.ganil-spiral2.eu/"
+        ],
+        "latitude": 49.18585,
+        "longitude": -0.35912,
+        "coordinate_precision": "city_approx",
+        "verification_status": "verified_cross_source",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://www.ganil-spiral2.eu/",
+          "https://www.geonames.org/3029241/"
+        ],
+        "coordinate_method": "gazetteer_city_match",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (penning-trap, mr-tof, isol). Map point: city approx — city centre, not the exact site.",
+          "zh": "核物理设施（penning-trap, mr-tof, isol）。地图位置：城市近似位置。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.28073,
+          30.43826
+        ]
+      },
+      "properties": {
+        "id": "fsu-penning",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:fsu-penning"
+        ],
+        "site_id": "fsu-penning-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "Florida State University Penning trap (Fox Accelerator Laboratory)",
+          "zh": "Florida State University Penning trap (Fox Accelerator Laboratory)"
+        },
+        "country": "United States",
+        "country_code": "US",
+        "city": "Tallahassee",
+        "continent": "North America",
+        "categories": [
+          "core-nuclear",
+          "penning-trap"
+        ],
+        "techniques": [
+          "penning-trap"
+        ],
+        "daily_aliases": [
+          "FSU trap"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://fsunuc.physics.fsu.edu/"
+        ],
+        "latitude": 30.43826,
+        "longitude": -84.28073,
+        "coordinate_precision": "city_approx",
+        "verification_status": "verified_cross_source",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://fsunuc.physics.fsu.edu/",
+          "https://www.geonames.org/4174715/"
+        ],
+        "coordinate_method": "gazetteer_city_match",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (penning-trap). Map point: city approx — city centre, not the exact site.",
+          "zh": "核物理设施（penning-trap）。地图位置：城市近似位置。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.25001,
+          41.68338
+        ]
+      },
+      "properties": {
+        "id": "notre-dame-nsl",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:notre-dame-nsl"
+        ],
+        "site_id": "notre-dame-nsl-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "Notre Dame Nuclear Science Laboratory (ISNAP)",
+          "zh": "Notre Dame Nuclear Science Laboratory (ISNAP)"
+        },
+        "country": "United States",
+        "country_code": "US",
+        "city": "South Bend",
+        "continent": "North America",
+        "categories": [
+          "core-nuclear",
+          "electrostatic",
+          "mr-tof"
+        ],
+        "techniques": [
+          "electrostatic",
+          "mr-tof"
+        ],
+        "daily_aliases": [
+          "ISNAP",
+          "NSL"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://isnap.nd.edu/"
+        ],
+        "latitude": 41.68338,
+        "longitude": -86.25001,
+        "coordinate_precision": "city_approx",
+        "verification_status": "verified_cross_source",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://isnap.nd.edu/",
+          "https://www.geonames.org/4926563/"
+        ],
+        "coordinate_method": "gazetteer_city_match",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (electrostatic, mr-tof). Map point: city approx — city centre, not the exact site.",
+          "zh": "核物理设施（electrostatic, mr-tof）。地图位置：城市近似位置。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.33441,
+          30.62798
+        ]
+      },
+      "properties": {
+        "id": "tamu-cyclotron",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:tamu-cyclotron"
+        ],
+        "site_id": "tamu-cyclotron-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "Texas A&M Cyclotron Institute",
+          "zh": "Texas A&M Cyclotron Institute"
+        },
+        "country": "United States",
+        "country_code": "US",
+        "city": "College Station",
+        "continent": "North America",
+        "categories": [
+          "core-nuclear",
+          "rare-isotope",
+          "cyclotron"
+        ],
+        "techniques": [
+          "cyclotron"
+        ],
+        "daily_aliases": [
+          "TAMU"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://cyclotron.tamu.edu/"
+        ],
+        "latitude": 30.62798,
+        "longitude": -96.33441,
+        "coordinate_precision": "city_approx",
+        "verification_status": "verified_cross_source",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://cyclotron.tamu.edu/",
+          "https://www.geonames.org/4682464/"
+        ],
+        "coordinate_method": "gazetteer_city_match",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (cyclotron). Map point: city approx — city centre, not the exact site.",
+          "zh": "核物理设施（cyclotron）。地图位置：城市近似位置。"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.38493,
+          36.34913
+        ]
+      },
+      "properties": {
+        "id": "ibs-raon",
+        "machines": [],
+        "instruments": [],
+        "capabilities": [],
+        "status": "source-reported",
+        "source_records": [
+          "official:ibs-raon"
+        ],
+        "site_id": "ibs-raon-campus",
+        "site_mapping_status": "confirmed",
+        "name": {
+          "en": "RAON, Institute for Basic Science",
+          "zh": "RAON, Institute for Basic Science"
+        },
+        "country": "South Korea",
+        "country_code": "KR",
+        "city": "Daejeon",
+        "continent": "Asia",
+        "categories": [
+          "core-nuclear",
+          "rare-isotope",
+          "mr-tof"
+        ],
+        "techniques": [
+          "isol",
+          "fragmentation",
+          "mr-tof"
+        ],
+        "daily_aliases": [
+          "RAON",
+          "IRIS"
+        ],
+        "source_checked": "2026-10-04",
+        "source_urls": [
+          "https://www.ibs.re.kr/"
+        ],
+        "latitude": 36.34913,
+        "longitude": 127.38493,
+        "coordinate_precision": "city_approx",
+        "verification_status": "verified_cross_source",
+        "coordinate_verified": true,
+        "coordinate_source": [
+          "https://www.ibs.re.kr/",
+          "https://www.geonames.org/1835235/"
+        ],
+        "coordinate_method": "gazetteer_city_match",
+        "last_coordinate_check": "2026-10-04",
+        "description": {
+          "en": "Nuclear-physics facility (isol, fragmentation, mr-tof). Map point: city approx — city centre, not the exact site.",
+          "zh": "核物理设施（isol, fragmentation, mr-tof）。地图位置：城市近似位置。"
+        }
       }
     }
   ]

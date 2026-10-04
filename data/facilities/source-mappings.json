@@ -13193,6 +13193,138 @@
       "facility_id": "nupecc-ssf2017-lisbon",
       "machine_id": null,
       "decision": "reviewed official or historical NuPECC program association"
+    },
+    {
+      "source_id": "official:cern-ad-base",
+      "facility_id": "cern-ad-base",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:cern-ntof",
+      "facility_id": "cern-ntof",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:gsi-fair",
+      "facility_id": "gsi-fair",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:anl-atlas",
+      "facility_id": "anl-atlas",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:mpik-heidelberg",
+      "facility_id": "mpik-heidelberg",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:lngs-luna",
+      "facility_id": "lngs-luna",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:kit-katrin",
+      "facility_id": "kit-katrin",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:jinr-flnr",
+      "facility_id": "jinr-flnr",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:ithemba",
+      "facility_id": "ithemba",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:anu-hiaf",
+      "facility_id": "anu-hiaf",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:imp-lanzhou",
+      "facility_id": "imp-lanzhou",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:hiaf-huizhou",
+      "facility_id": "hiaf-huizhou",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:ciae-brif",
+      "facility_id": "ciae-brif",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:mainz-trigatrap",
+      "facility_id": "mainz-trigatrap",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:mll-garching",
+      "facility_id": "mll-garching",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:ganil-spiral2",
+      "facility_id": "ganil-spiral2",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:fsu-penning",
+      "facility_id": "fsu-penning",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:notre-dame-nsl",
+      "facility_id": "notre-dame-nsl",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:tamu-cyclotron",
+      "facility_id": "tamu-cyclotron",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:ibs-raon",
+      "facility_id": "ibs-raon",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:lnl-spes",
+      "facility_id": "lnl-spes",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
+    },
+    {
+      "source_id": "official:eli-np",
+      "facility_id": "eli-np",
+      "machine_id": null,
+      "decision": "official facility website + Wikipedia/GeoNames coordinate (2026-10-04)"
     }
   ]
 }

@@ -97,7 +97,7 @@ jobs:
           done
           python tools/build_react.py --node "$(command -v node)" --toolchain tools/react-toolchain --output builds/react
           theme=$(python -c "import yaml;print(yaml.safe_load(open('site.yaml'))['live_theme'])")
-          mv "builds/$theme" public
+          rm -rf public && mv "builds/$theme" public
           cp -R builds/react public/react
       - uses: actions/upload-artifact@v4
         with:

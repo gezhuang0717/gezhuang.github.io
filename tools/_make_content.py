@@ -12,7 +12,7 @@ MASSPASS = "https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei
 IDS = ("[ORCID 0000-0001-8586-6134](https://orcid.org/0000-0001-8586-6134) · "
        "[Scopus 56915277300](https://www.scopus.com/authid/detail.uri?authorId=56915277300) · "
        "[ResearcherID L-1172-2015](https://www.webofscience.com/wos/author/record/1631872) · "
-       "[INSPIRE-HEP](https://inspirehep.net/authors/1988682) · "
+       "[INSPIRE-HEP](https://inspirehep.net/authors/2600261) · "
        "[ResearchGate](https://www.researchgate.net/profile/Zhuang-Ge)")
 SENSORS = "https://www.mdpi.com/journal/sensors/special_issues/8I8CN6PDV1"
 
@@ -71,7 +71,7 @@ description: "First-author, corresponding-author and selected co-authored papers
 showDate: false
 ---
 
-More than 90 peer-reviewed papers. Full lists: [ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)
+More than 90 peer-reviewed papers. Full lists: [ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/2600261) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)
 
 ## First-author papers
 
@@ -275,7 +275,7 @@ description: "第一作者、通讯作者及部分合作论文。"
 showDate: false
 ---
 
-已发表经同行评审论文 90 余篇。完整列表：[ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)
+已发表经同行评审论文 90 余篇。完整列表：[ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/2600261) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)
 
 ## 第一作者论文
 
@@ -479,7 +479,7 @@ description: "Julkaisut ensimmäisenä ja vastaavana kirjoittajana sekä valittu
 showDate: false
 ---
 
-Yli 90 vertaisarvioitua julkaisua. Täydelliset luettelot: [ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)
+Yli 90 vertaisarvioitua julkaisua. Täydelliset luettelot: [ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/2600261) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)
 
 ## Julkaisut ensimmäisenä kirjoittajana
 
@@ -683,7 +683,7 @@ description: "Erstautor-, korrespondierende und ausgewählte Ko-Autor-Publikatio
 showDate: false
 ---
 
-Mehr als 90 begutachtete Publikationen. Vollständige Listen: [ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)
+Mehr als 90 begutachtete Publikationen. Vollständige Listen: [ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/2600261) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)
 
 ## Erstautorschaften
 
@@ -887,7 +887,7 @@ description: "筆頭著者・責任著者論文と主な共著論文。"
 showDate: false
 ---
 
-査読付き論文 90 編以上。全リスト：[ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)
+査読付き論文 90 編以上。全リスト：[ORCID](https://orcid.org/0000-0001-8586-6134) · [INSPIRE-HEP](https://inspirehep.net/authors/2600261) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=56915277300)
 
 ## 筆頭著者論文
 

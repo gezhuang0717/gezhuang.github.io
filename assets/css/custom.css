@@ -210,3 +210,10 @@ article h1, .post-title, .profile_inner h1, main h1 {
 .zg-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 .zg-table th, .zg-table td { padding: .35rem .5rem; border-bottom: 1px solid var(--zg-line); text-align: start; }
 .zg-table th { width: 9rem; color: var(--zg-muted); font-weight: 600; }
+
+.zg-invited { font-weight: 600; color: var(--zg-violet); white-space: nowrap; }
+
+/* keep the site title on one line and tighten the menu on mid-size screens */
+header nav a[rel="me"] { white-space: nowrap; }
+header nav > div:first-child { margin-inline-end: 1.2rem; }
+@media (min-width: 640px) and (max-width: 1279px) { header nav ul > li.group { margin-inline-end: 1.1rem !important; } }

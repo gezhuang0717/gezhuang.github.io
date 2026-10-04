@@ -1,5 +1,7 @@
 {{- /*
-  List talks from data/talks.yaml.   {{< talks kind="invited" >}}  or  kind="contributed"
+  List talks from data/talks.yaml, newest first.
+  {{< talks >}} = all talks in one list; invited ones end with "(invited talk)" (i18n zg_invited_tag).
+  {{< talks kind="invited" >}} or kind="contributed" still filters.
 */ -}}
 {{- $kind := .Get "kind" -}}
 {{- $list := slice -}}
@@ -9,7 +11,7 @@
   <li class="zg-talk">
     <span class="zg-date">{{ substr (string .date) 0 4 }}</span>
     <span class="zg-talk-body"><em>{{ .title | markdownify }}</em>.
-      {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .event }}</a>{{ else }}{{ .event }}{{ end }}{{ with .place }}, {{ . }}{{ end }}</span>
+      {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .event }}</a>{{ else }}{{ .event }}{{ end }}{{ with .place }}, {{ . }}{{ end }}{{ if eq .kind "invited" }} <span class="zg-invited">{{ i18n "zg_invited_tag" | default "(invited talk)" }}</span>{{ end }}</span>
   </li>
 {{- end }}
 </ul>

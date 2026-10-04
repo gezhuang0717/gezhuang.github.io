@@ -6,6 +6,7 @@
     highlight = only | exclude                            (co-authored highlights)
     group     = year                                      (sub-heading per year)
     numbered  = true                                      (numbered list)
+    main      = only | exclude   main papers = first/corresponding author or 2nd author
   Examples:  {{< pubs role="first" numbered="true" >}}
              {{< pubs theme="neutrino" >}}
              {{< pubs role="coauthor" highlight="exclude" group="year" >}}
@@ -15,6 +16,7 @@
 {{- $hl := .Get "highlight" -}}
 {{- $group := .Get "group" -}}
 {{- $numbered := eq (.Get "numbered") "true" -}}
+{{- $main := .Get "main" -}}
 {{- $list := slice -}}
 {{- range hugo.Data.publications.papers -}}
   {{- $ok := true -}}
@@ -22,6 +24,9 @@
   {{- if and $theme (not (in (.themes | default slice) $theme)) }}{{ $ok = false }}{{ end -}}
   {{- if and (eq $hl "only") (not .highlight) }}{{ $ok = false }}{{ end -}}
   {{- if and (eq $hl "exclude") .highlight }}{{ $ok = false }}{{ end -}}
+  {{- $isMain := or (ne .role "coauthor") (eq (.position | default 0) 2) -}}
+  {{- if and (eq $main "only") (not $isMain) }}{{ $ok = false }}{{ end -}}
+  {{- if and (eq $main "exclude") $isMain }}{{ $ok = false }}{{ end -}}
   {{- if $ok }}{{ $list = $list | append . }}{{ end -}}
 {{- end -}}
 {{- $list = sort $list "year" "desc" -}}

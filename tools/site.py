@@ -415,7 +415,7 @@ def cmd_fetch(a):
 
 
 # ───────────────────────────── publications / talks ──────────────────────────
-PUB_ORDER = ["role", "highlight", "year", "authors", "title", "journal", "volume", "pages",
+PUB_ORDER = ["role", "position", "highlight", "year", "authors", "title", "journal", "volume", "pages",
              "doi", "arxiv", "url", "note", "themes"]
 
 
@@ -430,6 +430,8 @@ def clean_pub(raw: dict) -> dict:
         p["year"] = int(p.get("year"))
     except (TypeError, ValueError):
         raise ValueError("year must be a number") from None
+    if "position" in p:
+        p["position"] = int(p["position"])
     for key in ("volume", "pages", "doi", "arxiv"):
         if key in p:
             p[key] = str(p[key]).strip()

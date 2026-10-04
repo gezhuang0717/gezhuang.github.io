@@ -7,8 +7,12 @@ showDate: false
 ## MASSPASS — akatemiatutkijan hanke (johtaja), 2023–2027
 Eksoottisten *N* = *Z* -ytimien massamittaukset ¹⁰⁰Sn:ään asti IGISOLissa ja RIKENissä ydinfysiikan ja ydinastrofysiikan tarpeisiin. Suomen Akatemia. [Hankkeen sivu](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)
 
+**Tiimi:** Z. Ge (johtaja); entinen tutkijatohtori FT B. Kootte; väitöskirjatutkija M. Winter.
+
 ## Pienen Q-arvon hajoamiset neutriinon massan määrittämiseen
 Q-arvojen mittaukset JYFLTRAP-Penning-loukulla erittäin pienen Q-arvon siirtymien löytämiseksi ja varmistamiseksi.
+
+**Tiimi:** Z. Ge (yhteyshenkilö); entinen tutkijatohtori FT M. de Oliveira Ramalho (teoria); väitöskirjatutkija M. Winter.
 
 ## MR-TOF-massaspektrometria
 Monikertaheijastavien lentoaikaspektrometrien suunnittelu, ionioptinen simulointi ja analyysiketjut.

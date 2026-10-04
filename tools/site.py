@@ -59,7 +59,7 @@ TALKS = DATA / "talks.yaml"
 SITE = ROOT / "site.yaml"
 FEEDS = ROOT / "tools" / "feeds.yaml"
 
-TYPES = ["log", "news", "paper", "job", "event"]
+TYPES = ["log", "news", "paper", "preprint", "job", "event"]
 ROLES = ["first", "corresponding", "coauthor"]
 THEMES = ["congo", "blowfish", "papermod"]
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")

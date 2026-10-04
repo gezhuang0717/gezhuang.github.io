@@ -52,7 +52,7 @@
 .dc-day.today b{text-decoration:underline 2px;text-underline-offset:3px}
 .dc-day:not(.has){opacity:.55}
 .dc-legend em,.dc-day em,.dr-item::before{display:inline-block;width:.5rem;height:.5rem;border-radius:50%}
-.dc-log,.dr-log{--c:#8b6cff}.dc-news,.dr-news{--c:#47c8ff}.dc-paper,.dr-paper{--c:#2fd47a}.dc-job,.dr-job{--c:#f5a524}.dc-event,.dr-event{--c:#ff5f6d}
+.dc-log,.dr-log{--c:#8b6cff}.dc-preprint,.dr-preprint{--c:#14b8a6}.dc-news,.dr-news{--c:#47c8ff}.dc-paper,.dr-paper{--c:#2fd47a}.dc-job,.dr-job{--c:#f5a524}.dc-event,.dr-event{--c:#ff5f6d}
 .dc-legend em,.dc-day em{background:var(--c,#999)}
 .daily-results{list-style:none;padding:0}
 .dr-group{margin:0 0 1.1rem;list-style:none}

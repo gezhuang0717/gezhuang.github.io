@@ -167,7 +167,7 @@ def item_identity(e):
 
 
 def validate_daily(e, facility_ids=None):
-    if e.get("type") not in ("log", "news", "paper", "job", "event") or not str(e.get("title", "")).strip():
+    if e.get("type") not in ("log", "news", "paper", "preprint", "job", "event") or not str(e.get("title", "")).strip():
         raise ValueError("Daily entry requires valid type and title")
     dt.date.fromisoformat(str(e.get("date", "")))
     for key in ("published", "event_start", "event_end", "deadline"):

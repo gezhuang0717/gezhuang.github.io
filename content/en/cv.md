@@ -30,7 +30,7 @@ showDate: false
 
 ## Teaching and supervision
 
-- Supervision and collaboration with early-career researchers (see [Group](../group/)).
+- Supervision of two postdoctoral researchers and one PhD student (see [Group](../group/))
 - Lecturer, FYSS3552 *Lasers and Traps in Nuclear Physics Studies*
 
 ## Service

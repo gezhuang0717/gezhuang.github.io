@@ -30,7 +30,7 @@ showDate: false
 
 ## 教育・指導
 
-- **English fallback:** Supervision and collaboration with early-career researchers (see [Group](../group/)).
+- 博士研究員 2 名・博士課程学生 1 名の指導（[グループ](../group/)参照）
 - FYSS3552 *Lasers and Traps in Nuclear Physics Studies* 講師
 
 ## 学術活動

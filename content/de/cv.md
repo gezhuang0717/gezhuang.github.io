@@ -30,7 +30,7 @@ showDate: false
 
 ## Lehre und Betreuung
 
-- **English fallback:** Supervision and collaboration with early-career researchers (see [Group](../group/)).
+- Betreuung von zwei Postdocs und einem Doktoranden (siehe [Gruppe](../group/))
 - Dozent, FYSS3552 *Lasers and Traps in Nuclear Physics Studies*
 
 ## Gremien und Dienste

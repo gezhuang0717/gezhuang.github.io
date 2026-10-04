@@ -1,4 +1,4 @@
-# gezhuang0717.github.io
+# gezhuang.github.io
 
 Personal academic site of Zhuang Ge, built with [Hugo](https://gohugo.io/). One set of content, three interchangeable themes.
 
@@ -10,7 +10,7 @@ Personal academic site of Zhuang Ge, built with [Hugo](https://gohugo.io/). One 
 
 The website manual is kept locally (not in this public repository).
 
-Live site: <https://gezhuang0717.github.io>
+Live site: <https://gezhuang0717.github.io/gezhuang.github.io/>
 
 ## Structure
 
@@ -40,7 +40,7 @@ Open http://localhost:1313.
 
 ## Deploy to GitHub Pages
 
-1. This repository is already connected: pushes to `main` deploy to https://gezhuang0717.github.io.
+1. Pushes to `main` deploy to https://gezhuang0717.github.io/gezhuang.github.io/ (GitHub project site).
 2. Repository → Settings → Pages → Source: **GitHub Actions**.
 3. Every push rebuilds the site. To switch theme, change `THEME:` in `.github/workflows/hugo.yml`.
 

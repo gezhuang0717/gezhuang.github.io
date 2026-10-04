@@ -218,3 +218,13 @@ header nav a[rel="me"] { white-space: nowrap; }
 header nav > div:first-child { margin-inline-end: 1.2rem; }
 @media (min-width: 640px) and (max-width: 1279px) { header nav ul > li.group { margin-inline-end: 1.1rem !important; } }
 .zg-clock-saying{margin:.4rem 0 0;font-style:italic;font-size:.9rem;opacity:.9;border-top:1px dashed rgba(127,127,160,.35);padding-top:.4rem}
+/* Lab: 3D trap, chart of nuclides, body radioactivity */
+.zg-3d canvas,.zg-chart canvas{width:100%;height:auto;max-width:100%;border-radius:12px;background:radial-gradient(circle at 50% 40%,rgba(139,108,255,.08),transparent 70%);touch-action:none;cursor:grab}
+.zg-chart-wrap{overflow-x:auto}
+.zg-chart canvas{min-width:560px;cursor:crosshair}
+.zg-chart-info{font-family:ui-monospace,monospace;font-size:.9rem;margin:.4rem 0}
+.zg-chart-legend{display:flex;flex-wrap:wrap;gap:.7rem;font-size:.8rem}
+.zg-chart-legend span{display:inline-flex;align-items:center;gap:.3rem}
+.zg-chart-legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:3px}
+.zg-hl-bar{display:inline-block;width:8rem;height:.7rem;border-radius:4px;background:linear-gradient(90deg,hsl(280,85%,55%),hsl(210,85%,55%),hsl(140,85%,55%),hsl(60,85%,55%),hsl(0,85%,55%))}
+.zg-body table th{text-align:left;padding-right:1rem}

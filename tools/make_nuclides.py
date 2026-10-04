@@ -191,5 +191,35 @@ def main():
     print(len(doc["nuclides"]), "entries,", sum(1 for x in doc["nuclides"] if x.get("generated")), "generated")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and "--chart" not in __import__("sys").argv:
     main()
+
+
+def chart():
+    """Write static/data/nuclide-chart.json for the Lab chart of nuclides."""
+    import json
+    rows = {}
+    for nuc in rd.DEFAULTDATA.nuclides:
+        el, A, meta = parse(nuc)
+        if meta:
+            continue
+        n = rd.Nuclide(nuc)
+        hl = n.half_life("s")
+        modes = n.decay_modes()
+        rows[(n.Z, A - n.Z)] = [n.Z, A - n.Z, el, round(math.log10(hl), 3) if hl and math.isfinite(hl) and hl > 0 else 99,
+                                MODE.get(modes[0], modes[0]) if modes else "stable"]
+    for e in pt.elements:
+        if e.number < 1:
+            continue
+        for iso in e:
+            if (getattr(iso, "abundance", 0) or 0) > 0 and (e.number, iso.isotope - e.number) not in rows:
+                rows[(e.number, iso.isotope - e.number)] = [e.number, iso.isotope - e.number, e.symbol, 99, "stable"]
+    out = ROOT / "static/data/nuclide-chart.json"
+    out.write_text(json.dumps({"source": "ICRP-107 (radioactivedecay) + IUPAC abundances (periodictable)",
+                               "fields": ["Z", "N", "el", "log10_halflife_s (99 = stable)", "mode"],
+                               "rows": sorted(rows.values())}, separators=(",", ":"), ensure_ascii=False))
+    print(len(rows), "nuclides in chart")
+
+
+if __name__ == "__main__" and "--chart" in __import__("sys").argv:
+    chart()

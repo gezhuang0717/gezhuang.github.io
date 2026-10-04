@@ -9,3 +9,5 @@ Small interactive tools from my everyday work with Penning traps and MR-TOF — 
 *Tip:* type **ion** anywhere on this site.
 
 {{< lab >}}
+
+{{< lab-more >}}

@@ -1,13 +1,7 @@
 ---
 title: "Esitelmät"
-description: "Kutsuesitelmät ja konferenssiesitelmät linkkeineen."
+description: "Kaikki esitelmät uusimmasta alkaen, linkit tapahtumiin."
 showDate: false
 ---
 
-## Kutsuesitelmät
-
-{{< talks kind="invited" >}}
-
-## Konferenssiesitelmät
-
-{{< talks kind="contributed" >}}
+{{< talks >}}

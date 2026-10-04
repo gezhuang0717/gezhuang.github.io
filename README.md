@@ -8,7 +8,7 @@ Personal academic site of Zhuang Ge, built with [Hugo](https://gohugo.io/). One 
 | [Blowfish](https://github.com/nunocoracao/blowfish) | `sites/blowfish` | Dark ocean scheme, gradient header, table of contents, recent posts |
 | [PaperMod](https://github.com/adityatelange/hugo-PaperMod) | `sites/papermod` | Minimal profile card with buttons, auto light/dark |
 
-Full manual: [docs/MANUAL.md](docs/MANUAL.md) (also as [PDF](docs/MANUAL.pdf), [Word](docs/MANUAL.docx) and [LaTeX](docs/MANUAL.tex)). Short guides: [docs/INSTALL.md](docs/INSTALL.md), [docs/EDITING.md](docs/EDITING.md).
+The website manual is kept locally (not in this public repository).
 
 Live site: <https://gezhuang0717.github.io>
 

@@ -1,13 +1,7 @@
 ---
-title: "Main talks"
-description: "Invited talks and conference presentations, with links to the meetings."
+title: "Talks"
+description: "All talks, newest first, with links to the meetings."
 showDate: false
 ---
 
-## Invited talks
-
-{{< talks kind="invited" >}}
-
-## Conference talks
-
-{{< talks kind="contributed" >}}
+{{< talks >}}

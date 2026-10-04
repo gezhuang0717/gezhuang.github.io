@@ -43,4 +43,4 @@ Siehe [Publikationen](../publications/) und [Vorträge](../talks/).
 
 ## Kennungen
 
-[ORCID 0000-0001-8586-6134](https://orcid.org/0000-0001-8586-6134) · [Scopus 56915277300](https://www.scopus.com/authid/detail.uri?authorId=56915277300) · [ResearcherID L-1172-2015](https://www.webofscience.com/wos/author/record/1631872) · [INSPIRE-HEP](https://inspirehep.net/authors/1988682) · [ResearchGate](https://www.researchgate.net/profile/Zhuang-Ge)
+[ORCID 0000-0001-8586-6134](https://orcid.org/0000-0001-8586-6134) · [Scopus 56915277300](https://www.scopus.com/authid/detail.uri?authorId=56915277300) · [ResearcherID L-1172-2015](https://www.webofscience.com/wos/author/record/1631872) · [INSPIRE-HEP](https://inspirehep.net/authors/2600261) · [ResearchGate](https://www.researchgate.net/profile/Zhuang-Ge)

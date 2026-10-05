@@ -1,0 +1,126 @@
+{
+  "entries": [
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "The QICK Box: A Modular RF Front-End System for Quantum Control and Readout",
+      "summary": "L. Arnaldi et al. — The QICK (Quantum Instrumentation Control Kit), first introduced in 2022, is a standalone open source control system for quantum information science. Since then, QICK has been migrated to new hardware platforms, expanded its functionality for applications…",
+      "url": "https://arxiv.org/abs/2610.03609v1",
+      "source": "arXiv — ion traps & mass spectrometry",
+      "tags": [
+        "trap"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Gallium Anomaly May Finally Be Explained",
+      "summary": "Author(s): Ryan Wilkinson A decades-old neutrino mystery might be solved not by undiscovered physics but by improved calculations. [Physics 19, s116] Published Thu Sep 24, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s116",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "A Type-I Superconductor Breaks Time-Reversal Symmetry",
+      "summary": "Author(s): Rachel Berkowitz A hallmark property of unconventional superconductivity has been discovered in a type-I superconductor, whereas it’s normally observed only in type-II materials. [Physics 19, s115] Published Wed Sep 23, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s115",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "How to Tell If Your Excitons Have Condensed",
+      "summary": "Author(s): David Ehrenstein A newly predicted effect should provide a clean way to distinguish between a Bose-Einstein condensate of quasiparticles called excitons and a more mundane collection of these particles. [Physics 19, s124] Published Tue Sep 22, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s124",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "The Turbulent Life of a Vortex Line",
+      "summary": "Author(s): Andrew Baggaley A tabletop experiment using a classical water vortex supports a decades-old theory describing the decay of turbulence in quantum fluids. [Physics 19, 118] Published Mon Sep 21, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.118",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Collimating Positrons with Superconducting Magnets",
+      "summary": "Author(s): Sam Jarman A recent experiment points the way toward making the intense, energetic beams of positrons needed for next-generation electron–positron colliders. [Physics 19, 127] Published Fri Sep 18, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.127",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Giant fluctuations of focused light reveal hidden correlations in opaque materials",
+      "summary": "When light travels through a strongly scattering material, such as biological tissue or other disordered opaque media, it follows many different paths and produces a seemingly random speckle pattern. Wavefront shaping makes it possible to control this complex interference and…",
+      "url": "https://phys.org/news/2026-09-giant-fluctuations-focused-reveal-hidden.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Particle accelerator pioneers won a Nobel Prize 75 years ago",
+      "summary": "While scientists are known for their dedication to their research, crawling on the floor to avoid electrocution for the sake of a measurement seems a little excessive. But this is what British physicist John Cockcroft and Irish physicist Ernest T.S. Walton had to do in the…",
+      "url": "https://phys.org/news/2026-10-physicists-uncovered-particle-honored-nobel.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Protons ride moving waves to reach record energy with long-pulse lasers",
+      "summary": "Imagine a proton catching a wave and surfing it to gain speed. While the imagery may seem wild, the premise of laser-driven ion acceleration has promise as an alternative to conventional accelerators. However, the ultrathin targets used to drive this increase in ion energy are…",
+      "url": "https://phys.org/news/2026-10-protons-energy-pulse-lasers.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "A laser that stays locked without active control",
+      "summary": "EPFL researchers have developed a chip-based laser that keeps a very stable frequency across its tested operating range, without needing active electronic control. Their research is published in the journal Nature Photonics.",
+      "url": "https://phys.org/news/2026-10-laser-stays.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "New method generates nearly indistinguishable photons for quantum communication",
+      "summary": "Working in close collaboration, researchers from Paderborn University, the University of Basel and Ruhr University Bochum have made a breakthrough in quantum communication. In their recently published paper in the journal Physical Review Letters, they demonstrate how special…",
+      "url": "https://phys.org/news/2026-10-method-generates-indistinguishable-photons-quantum.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ]
+    }
+  ],
+  "fetched": "2026-10-05T11:36:47Z"
+}

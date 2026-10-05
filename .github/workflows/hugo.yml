@@ -4,7 +4,16 @@ on:
     branches: [main, 'codex/**']
   pull_request:
   schedule:
-    - cron: '17 4 * * *'
+    # Daily feeds refresh at 00:01 and 08:01 Helsinki time. GitHub cron is UTC and best-effort
+    # (runs can be late or dropped), so both UTC offsets (EEST +3 / EET +2) are listed and three
+    # backup slots catch dropped runs. The "Decide" step below skips runs that are not needed.
+    - cron: '1 21 * * *'
+    - cron: '1 22 * * *'
+    - cron: '1 5 * * *'
+    - cron: '1 6 * * *'
+    - cron: '41 1 * * *'
+    - cron: '41 9 * * *'
+    - cron: '41 15 * * *'
   workflow_dispatch:
     inputs:
       fetch:
@@ -26,19 +35,37 @@ jobs:
       contents: write
     outputs:
       commit: ${{ steps.commit.outputs.sha }}
+      ran: ${{ steps.decide.outputs.run }}
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 50
+      - id: decide
+        name: Decide (Helsinki slot 00:xx / 08:xx, or last update older than 12 h)
+        run: |
+          H=$(TZ=Europe/Helsinki date +%H)
+          LAST=$(git log -1 --format=%ct -- data/daily/feed-health.json || echo 0)
+          AGE=$(( ($(date +%s) - ${LAST:-0}) / 3600 ))
+          RUN=no
+          if [ "${{ github.event_name }}" != "schedule" ]; then RUN=yes; fi
+          case "$H" in 00|01|08|09) RUN=yes ;; esac
+          if [ "$AGE" -ge 12 ]; then RUN=yes; fi
+          echo "Helsinki hour $H, last Daily update ${AGE} h ago -> run=$RUN"
+          echo "run=$RUN" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
+        if: steps.decide.outputs.run == 'yes'
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
+        if: steps.decide.outputs.run == 'yes'
       - name: Snapshot and dry run
+        if: steps.decide.outputs.run == 'yes'
         run: |
           python tools/site.py snapshot --label scheduled-daily
           python tools/site.py fetch --dry-run
       - name: Canonical Daily writer
+        if: steps.decide.outputs.run == 'yes'
         run: |
           python tools/site.py fetch
           python tools/site.py check
@@ -49,13 +76,14 @@ jobs:
           git config user.email gezhuang0717@users.noreply.github.com
           git add data/daily
           if ! git diff --cached --quiet; then
-            git commit -m "Daily feeds $(date -u +%F)"
+            git commit -m "Daily feeds $(TZ=Europe/Helsinki date '+%F %H:%M') Helsinki"
+            git pull --rebase --autostash origin main
             git push origin HEAD:main
           fi
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
   validate:
     needs: daily
-    if: always() && (needs.daily.result == 'success' || needs.daily.result == 'skipped')
+    if: always() && (needs.daily.result == 'success' || needs.daily.result == 'skipped') && needs.daily.outputs.ran != 'no'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

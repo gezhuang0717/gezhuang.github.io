@@ -311,3 +311,4 @@ main section > article.mt-6::before{content:"";position:absolute;left:0;top:12px
 .g-rfq-grid{display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr);gap:.6rem}
 @media (max-width:640px){.g-rfq-grid{grid-template-columns:minmax(0,1fr)}}
 .rfq-leg{display:inline-flex;gap:.8rem}.rfq-leg i{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.25em;vertical-align:middle}
+.daily-upd{font-size:.82rem;color:var(--zg-muted);margin:.2rem 0 .6rem}

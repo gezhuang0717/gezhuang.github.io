@@ -34,7 +34,8 @@
   "f_dmagic" "二重魔法核：Z も N も魔法数。" "f_magic" "魔法数 {k}——閉殻。" "f_nz" "N = Z：陽子数と中性子数が等しい。" "f_mirror" "鏡像核は {m}。" "f_light" "この元素の既知で最も軽い同位体。" "f_heavy" "この元素の既知で最も重い同位体。" "f_nunb" "中性子ドリップラインの外（Sₙ < 0）。" "f_punb" "陽子ドリップラインの外（Sₚ < 0）。" "f_year" "{y} 年に初めて同定——{n} 年前。" "f_be" "全結合エネルギー {e} MeV：原子核は自由な核子より {p}% 軽い。" "f_left" "試料は1日後に {p}% 残ります。" "filter" "表示" "fl_all" "全核種" "fl_meas" "実測質量" "fl_extr" "外挿質量（#）" "fl_stable" "安定核" "fl_hl" "半減期既知" "fl_iso" "アイソマーあり" "fl_magic" "Z か N が魔法数" "p_iso" "同位体系列" "p_isot" "同中性子体系列" "p_isob" "同重体系列" "points" "点" "p_hint" "核図表の原子核をクリックすると系列をプロットします。" "hashnote" "# = 系統性からの外挿値（AME2020/NUBASE2020 と同じ）" "errnote" "導出量の不確かさは二乗和で合成（AME の相関は無視）" "plot" "誤差棒つき系列プロット" "pq" "物理量" "pchain" "系列" "png" "PNG（高解像度）" "csv" "CSV データ" "video" "動画ツアー"))
 -}}
 {{- $t := index $L $k | default $en -}}
-<section class="zg-card nc" data-nuclide-chart data-src="{{ "data/nubase2020.json" | relURL }}" data-labels="{{ $t | jsonify }}">
+{{- with hugo.Data.nuclide_chart_labels }}{{ $t = merge $t (index . "en") (index . $k | default dict) }}{{ end -}}
+<section class="zg-card nc" data-nuclide-chart data-src="{{ "data/nubase2020.json" | relURL }}" data-models="{{ "data/massmodels.json" | relURL }}" data-labels="{{ $t | jsonify }}">
   <h2>{{ $t.title }}</h2>
   <p class="zg-muted">{{ $t.note }} <span class="nc-count"></span></p>
   <div class="nc-bar">
@@ -46,6 +47,20 @@
     <button type="button" class="zg-btn zg-btn-ghost" data-nc="fit">{{ $t.fit }}</button>
     <button type="button" class="zg-btn zg-btn-ghost" data-nc="random">🎲 {{ $t.random }}</button>
   </div>
+  <div class="nc-bar nc-bar2">
+    <label>{{ $t.model }} <select name="nc-model"><option value="ame">AME2020 ({{ $t.mod_exp }})</option><option value="frdm1995">FRDM (1995)</option><option value="hfb17">HFB-17 (Skyrme)</option><option value="hfbd1m">HFB-D1M (Gogny)</option></select></label>
+    <span class="nc-ovl">{{ $t.ovl }}:
+      <label class="nc-chk"><input type="checkbox" data-drip="sn"><i style="border-color:#2563eb;border-style:dashed"></i>Sₙ = 0</label>
+      <label class="nc-chk"><input type="checkbox" data-drip="s2n" checked><i style="border-color:#1e3a8a"></i>S₂ₙ = 0</label>
+      <label class="nc-chk"><input type="checkbox" data-drip="sp"><i style="border-color:#ef4444;border-style:dashed"></i>Sₚ = 0</label>
+      <label class="nc-chk"><input type="checkbox" data-drip="s2p" checked><i style="border-color:#991b1b"></i>S₂ₚ = 0</label>
+      <label class="nc-chk"><input type="checkbox" data-opt="nz" checked><i style="border-color:#8e4ec6;border-style:dashed"></i>N = Z</label>
+      <label class="nc-chk"><input type="checkbox" data-opt="magic" checked><i style="border-color:rgba(127,127,160,.7)"></i>{{ $t.magic_lines }}</label>
+      <label class="nc-chk"><input type="checkbox" data-path="r"><i style="background:#d97706;border-radius:50%"></i>{{ $t.rpath }}</label>
+      <label class="nc-chk"><input type="checkbox" data-path="rp"><i style="background:#db2777;border-radius:50%"></i>{{ $t.rppath }}</label>
+    </span>
+  </div>
+  <p class="nc-mref zg-small zg-muted"></p>
   <div class="nc-stage">
     <canvas class="nc-canvas" width="960" height="600" aria-label="{{ $t.title }}"></canvas>
     <aside class="nc-card" hidden></aside>
@@ -56,11 +71,16 @@
   <div class="nc-bar">
     <label>{{ $t.pq }} <select name="nc-pq"></select></label>
     <label>{{ $t.pchain }} <select name="nc-pchain"><option value="Z">{{ $t.p_iso }}</option><option value="N">{{ $t.p_isot }}</option><option value="A">{{ $t.p_isob }}</option></select></label>
+    <label class="nc-chk"><input type="checkbox" name="nc-lines" checked> {{ $t.p_lines }}</label>
+    <label class="nc-chk"><input type="checkbox" name="nc-err" checked> {{ $t.p_err }}</label>
+    <span class="nc-prange"><label class="nc-chk"><input type="checkbox" name="nc-range"> {{ $t.p_range }}</label>
+      <span class="nc-prange-in" hidden>{{ $t.p_chains }} <input type="number" name="nc-c0" class="nc-num"> – <input type="number" name="nc-c1" class="nc-num"> · {{ $t.p_x }} <input type="number" name="nc-x0" class="nc-num" placeholder="min"> – <input type="number" name="nc-x1" class="nc-num" placeholder="max"></span></span>
     <button type="button" class="zg-btn zg-btn-ghost" data-nc="ppng">⤓ {{ $t.png }}</button><button type="button" class="zg-btn zg-btn-ghost" data-nc="pcsv">⤓ {{ $t.csv }}</button>
   </div>
   <p class="nc-pinfo zg-muted"></p>
   <canvas class="nc-plot" width="960" height="480" aria-label="{{ $t.plot }}"></canvas>
   <p class="zg-muted zg-small"># {{ $t.hashnote }}; {{ $t.errnote }}.</p>
+  <details class="nc-defs"><summary>{{ $t.defs }}</summary><ul>{{ range $t.deflist }}<li>{{ . | safeHTML }}</li>{{ end }}</ul></details>
   <h3>{{ $t.pt }}</h3>
   <div class="nc-ptable"></div>
 </section>

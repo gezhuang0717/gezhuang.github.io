@@ -39,7 +39,7 @@
   function savePNG(cv, paint, name) {
     if (!window.zgExport) return;
     window.zgExport.png(sc => { const c = document.createElement("canvas"); c.width = cv._W * sc; c.height = cv._H * sc;
-      const g = c.getContext("2d"); g.fillStyle = "#fff"; g.fillRect(0, 0, c.width, c.height); g.scale(sc, sc); paint(g, cv._W, cv._H, "#1d2433", true); return c; }, name, 4);
+      const g = c.getContext("2d"); g.fillStyle = "#fff"; g.fillRect(0, 0, c.width, c.height); g.scale(sc, sc); paint(g, cv._W, cv._H, "#1d2433", true); return c; }, name, 6);
   }
   const inkOf = () => getComputedStyle(root).color || "#888";
   const fmtN = v => Math.abs(v) >= 1e4 || (Math.abs(v) < 1e-3 && v !== 0) ? v.toExponential(1) : String(+v.toPrecision(6));
@@ -68,6 +68,8 @@
   const poisson = l => { let k = 0, p = 1; const L = Math.exp(-l); do { k++; p *= Math.random(); } while (p > L); return k - 1; };
   const viridis = t => { t = Math.max(0, Math.min(1, t)); const c = [[68, 1, 84], [59, 82, 139], [33, 145, 140], [94, 201, 98], [253, 231, 37]];
     const i = Math.min(3, Math.floor(t * 4)), f = t * 4 - i, a = c[i], b = c[i + 1]; return `rgb(${a.map((v, j) => Math.round(v + (b[j] - v) * f)).join(",")})`; };
+  /* value ± uncertainty with the uncertainty rounded to 2 significant digits and the value to the same decimal */
+  const fmtU = (v, e, h = "") => { if (!(e > 0)) return v.toFixed(3) + h; const d = Math.max(0, 1 - Math.floor(Math.log10(e))); return `${v.toFixed(d)}${h} ± ${e.toFixed(d)}${h}`; };
   const msg = (box, html) => (box.querySelector(".g-msg").innerHTML = html);
 
   /* ── 2. TOF-ICR resonance hunt ─────────────────────────────────────────
@@ -80,7 +82,18 @@
     const TL = T;
     const box = $("#g-tof"), cv = box.querySelector("canvas"), sl = box.querySelector("input[type=range]");
     const sel = n => box.querySelector(`[name=${n}]`);
-    const NU_REF = 808795.0115, M_CS = 132.905451933, U = 1.66053906660e-27, ME = 9.1093837e-31, QE = 1.602176634e-19, B = 7.0;
+    const U = 1.66053906660e-27, ME = 9.1093837e-31, QE = 1.602176634e-19;
+    /* ion and field are selectable; ν_c = zeB/(2π m_ion), m_ion = M_atom − z·m_e (AME2020 mass) */
+    let NU_REF = 808795.0115, M_CS = 132.905451933, B = 7.0, ZQ = 1, ION = "¹³³Cs⁺", A_ION = 133;
+    function setIon() {
+      B = +sel("bfield").value; ZQ = +sel("zq").value;
+      const t = (sel("ion").value || "").trim().replace(/\s+/g, ""), m1 = t.match(/^(\d+)([A-Za-z]{1,2})$/) || t.match(/^([A-Za-z]{1,2})-?(\d+)$/);
+      let ok = false;
+      if (m1 && rows.length) { const A = +(isNaN(m1[1]) ? m1[2] : m1[1]), sym = (isNaN(m1[1]) ? m1[1] : m1[2]).toLowerCase(), r = rows.find(x => x[2].toLowerCase() === sym && x[0] + x[1] === A);
+        if (r && r[3] != null) { M_CS = A + r[3] / 931494.10242; A_ION = A; ION = sup(A) + r[2] + (ZQ > 1 ? sup(ZQ) : "") + "⁺"; ok = true; } }
+      box.querySelector(".tof-bad").textContent = ok || !rows.length ? "" : TL.rfq_bad;
+      NU_REF = ZQ * QE * B / (2 * Math.PI * (M_CS * U - ZQ * ME));
+    }
     let nuTrue, Trf, scheme, Wd, ions = [], shots = 0, fit = null, reveal = false, step;
     const tofOf = F => 62 + 193 / Math.sqrt(1 + 1.876 * F);          /* µs: 255 µs off resonance, ≈ 175 µs at full conversion */
     function conv(dnu) {
@@ -146,16 +159,16 @@
       if (reveal) { const x = X(nuTrue - NU_REF); g.strokeStyle = "#e5484d"; g.lineWidth = 1; g.beginPath(); g.moveTo(x, P.t); g.lineTo(x, P.b); g.stroke(); }
       g.restore();
       g.fillStyle = ink; g.font = "11px system-ui,sans-serif"; g.textAlign = "right";
-      g.fillText(`¹³³Cs⁺ · B = 7 T · T_rf = ${Trf * 1000} ms (${scheme === "rect" ? "rectangular" : "Ramsey 10–80–10 %"}) · ${ions.length} ions / ${shots} shots`, P.r - 4, P.t + 13);
+      g.fillText(`${ION} · B = ${B} T · ν_c ≈ ${NU_REF.toFixed(1)} Hz · T_rf = ${Trf * 1000} ms (${scheme === "rect" ? "rectangular" : "Ramsey 10–80–10 %"}) · ${ions.length} ions / ${shots} shots`, P.r - 4, P.t + 13);
     }
     const draw = () => { const [g, W, H] = crisp(cv); paint(g, W, H, inkOf(), false); };
     function info() {
       const fw = fwhm(), R = NU_REF / fw;
       box.querySelector(".g-info").innerHTML = `FWHM ≈ ${fw.toFixed(2)} Hz (≈ ${(fw * Trf).toFixed(2)}/T_rf) · R = ν_c/FWHM ≈ ${Math.round(R).toLocaleString()} · ` +
-        `δν = 0.1 Hz ↔ δm/m = ${(0.1 / NU_REF).toExponential(2)} ≈ ${(0.1 / NU_REF * 133 * 931494).toFixed(1)} keV`;
+        `δν = 0.1 Hz ↔ δm/m = ${(0.1 / NU_REF).toExponential(2)} ≈ ${(0.1 / NU_REF * M_CS * 931494.10242).toFixed(2)} keV`;
     }
     function reset() {
-      Trf = +sel("trf").value; scheme = sel("scheme").value; Wd = (scheme === "rect" ? 3.2 : 2.4) / Trf; step = +(Wd / 160).toPrecision(2);
+      setIon(); Trf = +sel("trf").value; scheme = sel("scheme").value; Wd = (scheme === "rect" ? 3.2 : 2.4) / Trf; step = +(Wd / 160).toPrecision(2);
       sl.min = -Wd; sl.max = Wd; sl.step = step; sl.value = 0;
       nuTrue = NU_REF + (Math.random() - 0.5) * 0.9 * Wd; ions = []; shots = 0; fit = null; reveal = false;
       upd(); info(); draw(); msg(box, TL.tof_start);
@@ -165,10 +178,10 @@
       const a = e.target.closest("[data-act]")?.dataset.act; if (!a) return;
       if (a === "shot") { const n = shoot(+sl.value); draw(); msg(box, `${TL.shots}: ${shots} · ${TL.ions_got}: ${n}`); }
       if (a === "scan") { const n0 = 15; for (let i = 0; i < n0; i++) shoot(+(-Wd + 2 * Wd * i / (n0 - 1)).toFixed(4)); draw(); msg(box, `${TL.shots}: ${shots} · ${TL.scan_done}`); }
-      if (a === "fit") { fit = doFit(); draw(); msg(box, fit ? `${TL.fit_res}: ν_c = ${(NU_REF + fit.c).toLocaleString("en", { minimumFractionDigits: 3, maximumFractionDigits: 3 })} ± ${fit.s.toFixed(3)} Hz · χ²/ν = ${fit.chi2.toFixed(2)}` : TL.fit_need); }
+      if (a === "fit") { fit = doFit(); draw(); msg(box, fit ? `${TL.fit_res}: ν_c = ${fmtU(NU_REF + fit.c, fit.s)} Hz (δν/ν = ${(fit.s / NU_REF).toExponential(1)}) · χ²/ν = ${fit.chi2.toFixed(2)}` : TL.fit_need); }
       if (a === "guess") {
         const err = Math.abs(+sl.value - (nuTrue - NU_REF)), fw = fwhm(), sc = Math.max(0, Math.round(100 - 60 * err / fw - shots));
-        const mG = QE * B / (2 * Math.PI * (NU_REF + +sl.value)) / U + ME / U, dm = (mG - M_CS) * 931494.10242;
+        const mG = ZQ * QE * B / (2 * Math.PI * (NU_REF + +sl.value)) / U + ZQ * ME / U, dm = (mG - M_CS) * 931494.10242;
         reveal = true; draw();
         msg(box, `ν_c = ${nuTrue.toLocaleString("en", { minimumFractionDigits: 3, maximumFractionDigits: 3 })} Hz · ${TL.yours}: ${(NU_REF + +sl.value).toLocaleString("en", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} Hz (Δ = ${err.toFixed(3)} Hz = ${(err / fw).toFixed(2)} FWHM)<br>` +
           `m = qB/(2πν_c) → ${mG.toFixed(7)} u (${dm >= 0 ? "+" : ""}${dm.toFixed(1)} keV vs AME2020) · ${TL.score}: <b>${sc}</b> · ${TL.best}: ${best("tof", sc)}`);
@@ -178,7 +191,9 @@
       if (a === "csv" && window.zgExport) window.zgExport.csv(["nu_rf_Hz", "detuning_Hz", "tof_us"], ions.map(([f, t]) => [(NU_REF + f).toFixed(4), f.toFixed(4), t.toFixed(2)]), "tof-icr-ions");
     });
     sl.addEventListener("input", () => { upd(); draw(); });
-    ["trf", "scheme"].forEach(n => sel(n).addEventListener("change", reset));
+    ["trf", "scheme", "bfield", "zq"].forEach(n => sel(n).addEventListener("change", reset));
+    sel("ion").addEventListener("change", reset);
+    const waitRows = () => rows.length ? reset() : setTimeout(waitRows, 250); waitRows();
     ["view", "theory"].forEach(n => sel(n).addEventListener("change", draw));
     addEventListener("resize", draw);
     reset();
@@ -190,178 +205,239 @@
      δ_lap = width added per lap by energy spread / aberrations).  R = t/(2·FWHM); separated when Δt ≥ FWHM. */
   function mrtofGame() {
     const box = $("#g-mr"), [cv, cv2] = box.querySelectorAll("canvas"), sel = n => box.querySelector(`[name=${n}]`);
-    const pairs = [["¹⁰⁰Sn", "¹⁰⁰In", 100, 7030], ["¹³³Cs", "¹³³Xe", 133, 427], ["⁸⁴Rb", "⁸⁴Kr", 84, 2690], ["⁵⁶Ni", "⁵⁶Co", 56, 2133], ["¹²⁹Sb", "¹²⁹Sn", 129, 4040], ["¹⁰¹Sn", "¹⁰¹In", 101, 7300]];
-    let P = pairs[0], hist = null;
+    const TL = T, UKEV = 931494.10242;
+    /* default pairs by name; Δm is computed from NUBASE2020/AME2020 once the data are loaded */
+    const names = [["100Sn", "100In"], ["133Cs", "133Xe"], ["84Rb", "84Kr"], ["56Ni", "56Co"], ["129Sb", "129Sn"], ["101Sn", "101In"], ["94Ag", "94Pd"], ["68Se", "68As"]];
+    let pairs = [], P = null, hist = null;
     const V = n => +sel(n).value;
+    function nuc(lbl) {             /* "100Sn" / "Sn-100" → {label, A, me (keV), e, est} */
+      const t = (lbl || "").trim().replace(/\s+/g, ""), m1 = t.match(/^(\d+)([A-Za-z]{1,2})$/) || t.match(/^([A-Za-z]{1,2})-?(\d+)$/); if (!m1) return null;
+      const A = +(isNaN(m1[1]) ? m1[2] : m1[1]), sym = (isNaN(m1[1]) ? m1[1] : m1[2]).toLowerCase();
+      const r = rows.find(x => x[2].toLowerCase() === sym && x[0] + x[1] === A); if (!r || r[3] == null) return null;
+      return { label: sup(A) + r[2], A, me: r[3], e: r[4] || 0, est: !!r[5] };
+    }
+    function pairOf(a, b) {
+      const x = nuc(a), y = nuc(b); if (!x || !y) return null;
+      const dm = (y.A - x.A) * UKEV + y.me - x.me;          /* M(b) − M(a) in keV (atomic masses) */
+      return { a: x, b: y, m: x.A + x.me / UKEV, dm, e: Math.hypot(x.e, y.e), est: x.est || y.est };
+    }
     function model() {
-      const N = V("laps"), dt0 = V("dt0"), dl = V("dlap") / 1000, A = P[2], s = Math.sqrt(A / 100);
-      const t = (V("t0") + N * V("tlap")) * s * 1000;            /* ns */
-      const dT = t * P[3] / (2 * A * 931494.1), fw = Math.hypot(dt0, N * dl), R = t / (2 * fw), need = A * 931494.1 / P[3];
+      const z = V("z"), N = V("laps"), dt0 = V("dt0"), dl = V("dlap") / 1000, s = Math.sqrt(P.m / z / 100);
+      const t = (V("t0") + N * V("tlap")) * s * 1000;                       /* ns; t ∝ √(m/q) */
+      const dT = t * P.dm / (2 * P.m * UKEV), fw = Math.hypot(dt0, N * dl), R = t / (2 * fw), need = P.m * UKEV / Math.abs(P.dm);
       return { N, t, dT, fw, R, need, dt0, dl, s };
     }
-    function sample(m) { /* counts per bin with Poisson noise; ratio sets the 2nd peak */
-      const n1 = 400, n2 = Math.round(400 * V("ratio")), span = Math.max(4 * m.fw, 1.8 * m.dT + 3 * m.fw), nb = 160, h = new Array(nb).fill(0), x0 = m.dT / 2 - span / 2, sg = m.fw / 2.3548;
+    function sample(m) {            /* counts per bin with Poisson-like sampling; ratio sets the 2nd peak */
+      const n1 = V("counts"), n2 = Math.round(n1 * V("ratio")), lo = Math.min(0, m.dT), hi = Math.max(0, m.dT);
+      const span = Math.max(4 * m.fw, (hi - lo) * 1.8 + 3 * m.fw), nb = 200, h = new Array(nb).fill(0), x0 = (lo + hi) / 2 - span / 2, sg = m.fw / 2.3548;
       for (let i = 0; i < n1; i++) { const b = Math.floor((sg * gauss() - x0) / span * nb); if (b >= 0 && b < nb) h[b]++; }
       for (let i = 0; i < n2; i++) { const b = Math.floor((m.dT + sg * gauss() - x0) / span * nb); if (b >= 0 && b < nb) h[b]++; }
       return { h, x0, span, nb };
     }
     function paint(g, W, H, ink) {
-      const m = model(); hist = hist || sample(m);
-      const { h, x0, span, nb } = hist, mx = Math.max(5, ...h) * 1.15, Pp = { l: 52, t: 12, r: W - 12, b: H - 42 };
-      const [X, Y] = axes(g, Pp, [x0, x0 + span], [0, mx], `TOF − t(${P[0]}) (ns)  ·  t(${P[0]}) = ${(m.t / 1000).toFixed(3)} µs`, "counts", ink, 4);
-      const bw = (Pp.r - Pp.l) / nb, sg = m.fw / 2.3548;
+      if (!P) return; const m = model(); hist = hist || sample(m);
+      const { h, x0, span, nb } = hist, mx = Math.max(5, ...h) * 1.18, Pp = { l: 56, t: 12, r: W - 12, b: H - 42 };
+      const [X, Y] = axes(g, Pp, [x0, x0 + span], [0, mx], `TOF − t(${P.a.label}) (ns)  ·  t(${P.a.label}) = ${(m.t / 1000).toFixed(3)} µs`, "counts / bin", ink, 4);
+      const bw = (Pp.r - Pp.l) / nb, sg = m.fw / 2.3548, n1 = V("counts");
       h.forEach((v, i) => { if (!v) return; const x = X(x0 + i * span / nb), c = x0 + (i + 0.5) * span / nb;
-        g.fillStyle = Math.abs(c) < Math.abs(c - m.dT) ? "rgba(62,99,221,.75)" : "rgba(229,72,77,.75)"; g.fillRect(x, Y(v), Math.max(1, bw - 0.6), Pp.b - Y(v)); });
-      const area = 400 * span / nb / (sg * Math.sqrt(2 * Math.PI));
+        g.fillStyle = Math.abs(c) < Math.abs(c - m.dT) ? "rgba(62,99,221,.75)" : "rgba(229,72,77,.75)"; g.fillRect(x, Y(v), Math.max(1, bw - 0.4), Pp.b - Y(v)); });
+      const area = n1 * span / nb / (sg * Math.sqrt(2 * Math.PI));
       [[0, "#3e63dd", 1], [m.dT, "#e5484d", V("ratio")]].forEach(([mu, col, r]) => { g.strokeStyle = col; g.lineWidth = 1.6; g.beginPath();
-        for (let i = 0; i <= 300; i++) { const x = x0 + span * i / 300, y = Y(r * area * Math.exp(-0.5 * ((x - mu) / sg) ** 2)); i ? g.lineTo(X(x), y) : g.moveTo(X(x), y); } g.stroke(); });
+        for (let i = 0; i <= 400; i++) { const x = x0 + span * i / 400, y = Y(r * area * Math.exp(-0.5 * ((x - mu) / sg) ** 2)); i ? g.lineTo(X(x), y) : g.moveTo(X(x), y); } g.stroke(); });
+      if (sel("sum").checked) { g.strokeStyle = "#8e4ec6"; g.setLineDash([4, 3]); g.beginPath();
+        for (let i = 0; i <= 400; i++) { const x = x0 + span * i / 400, y = Y(area * (Math.exp(-0.5 * (x / sg) ** 2) + V("ratio") * Math.exp(-0.5 * ((x - m.dT) / sg) ** 2))); i ? g.lineTo(X(x), y) : g.moveTo(X(x), y); } g.stroke(); g.setLineDash([]); }
       g.fillStyle = ink; g.font = "600 12px system-ui,sans-serif"; g.textAlign = "center";
-      g.fillText(P[0], X(0), Pp.t + 14); g.fillText(P[1], X(m.dT), Pp.t + 28);
+      g.fillText(P.a.label, X(0), Pp.t + 14); g.fillText(P.b.label, X(m.dT), Pp.t + 28);
       const y = Pp.t + 40; g.strokeStyle = ink; g.lineWidth = 1; g.beginPath(); g.moveTo(X(0), y); g.lineTo(X(m.dT), y); g.stroke();
-      g.font = "11px system-ui,sans-serif"; g.fillText(`Δt = ${m.dT.toFixed(1)} ns`, (X(0) + X(m.dT)) / 2, y - 4);
+      g.font = "11px system-ui,sans-serif"; g.fillText(`Δt = ${m.dT.toFixed(m.dT < 10 ? 2 : 1)} ns · FWHM = ${m.fw.toFixed(m.fw < 10 ? 2 : 1)} ns`, (X(0) + X(m.dT)) / 2, y - 4);
     }
-    function paint2(g, W, H, ink) {           /* resolving power vs laps */
-      const m = model(), Nmax = +sel("laps").max, Pp = { l: 58, t: 10, r: W - 12, b: H - 40 };
+    function paint2(g, W, H, ink) {           /* resolving power vs laps (log scale option) */
+      if (!P) return; const m = model(), Nmax = +sel("laps").max, Pp = { l: 64, t: 10, r: W - 12, b: H - 40 }, logy = sel("logr").checked;
       const Rof = N => (V("t0") + N * V("tlap")) * m.s * 1000 / (2 * Math.hypot(m.dt0, N * m.dl));
-      let top = 0; for (let N = 0; N <= Nmax; N += 10) top = Math.max(top, Rof(N)); top = Math.max(top, m.need) * 1.2;
-      const [X, Y] = axes(g, Pp, [0, Nmax], [0, top], TL.laps, "R = t / (2·FWHM)", ink, 4);
-      g.strokeStyle = "#e5484d"; g.setLineDash([5, 4]); g.beginPath(); g.moveTo(Pp.l, Y(m.need)); g.lineTo(Pp.r, Y(m.need)); g.stroke(); g.setLineDash([]);
-      g.fillStyle = "#e5484d"; g.font = "11px system-ui,sans-serif"; g.textAlign = "left"; g.fillText(`${TL.need}: m/Δm = ${Math.round(m.need).toLocaleString()}`, Pp.l + 6, Y(m.need) - 4);
-      g.strokeStyle = "#8e4ec6"; g.lineWidth = 2; g.beginPath(); for (let i = 0; i <= 200; i++) { const N = Nmax * i / 200, y = Y(Rof(N)); i ? g.lineTo(X(N), y) : g.moveTo(X(N), y); } g.stroke();
-      g.fillStyle = "#f76b15"; g.beginPath(); g.arc(X(m.N), Y(m.R), 5, 0, 6.283); g.fill();
+      let top = 0; for (let N = 0; N <= Nmax; N += Math.max(1, Nmax / 400)) top = Math.max(top, Rof(N)); top = Math.max(top, m.need) * 1.2;
+      const tr = v => logy ? Math.log10(Math.max(1, v)) : v;
+      const [X, Y] = axes(g, Pp, [0, Nmax], [logy ? 2 : 0, tr(top)], TL.laps, logy ? "log₁₀ R" : "R = t / (2·FWHM)", ink, 4);
+      g.strokeStyle = "#e5484d"; g.setLineDash([5, 4]); g.beginPath(); g.moveTo(Pp.l, Y(tr(m.need))); g.lineTo(Pp.r, Y(tr(m.need))); g.stroke(); g.setLineDash([]);
+      g.fillStyle = "#e5484d"; g.font = "11px system-ui,sans-serif"; g.textAlign = "left"; g.fillText(`${TL.need}: m/Δm = ${Math.round(m.need).toLocaleString()}`, Pp.l + 6, Y(tr(m.need)) - 4);
+      g.strokeStyle = "#8e4ec6"; g.lineWidth = 2; g.beginPath(); for (let i = 0; i <= 300; i++) { const N = Nmax * i / 300, y = Y(tr(Rof(N))); i ? g.lineTo(X(N), y) : g.moveTo(X(N), y); } g.stroke();
+      g.fillStyle = "#f76b15"; g.beginPath(); g.arc(X(m.N), Y(tr(m.R)), 5, 0, 6.283); g.fill();
     }
-    const TL = T;
     function draw(resample) {
-      if (resample) hist = null;
+      if (!P) return; if (resample) hist = null;
       const m = model();
       { const [g, W, H] = crisp(cv); paint(g, W, H, inkOf()); }
       { const [g, W, H] = crisp(cv2); paint2(g, W, H, inkOf()); }
-      box.querySelectorAll("output").forEach(o => { const n = o.dataset.for; if (n) o.textContent = { laps: m.N, dt0: m.dt0 + " ns", dlap: V("dlap") + " ps", ratio: "1 : " + V("ratio"), tlap: V("tlap") + " µs", t0: V("t0") + " µs" }[n]; });
-      const ok = m.dT >= m.fw;
-      msg(box, `${P[0]} – ${P[1]}: Δm = ${P[3].toLocaleString()} keV · t = ${(m.t / 1000).toFixed(2)} µs · Δt = ${m.dT.toFixed(1)} ns · FWHM = ${m.fw.toFixed(1)} ns · R ≈ ${Math.round(m.R).toLocaleString()} (${TL.need} ${Math.round(m.need).toLocaleString()}) · ${ok ? "✔ " + TL.separated : "… " + TL.overlap}` +
-        (m.dl > 0 && m.dt0 / m.dl < 1e9 ? ` · ${TL.mr_sat}: N ≈ ${Math.round(m.dt0 / m.dl).toLocaleString()}` : ""));
+      const ok = Math.abs(m.dT) >= m.fw, h = P.est ? "#" : "";
+      msg(box, `${P.a.label} – ${P.b.label}: M(${P.b.label}) − M(${P.a.label}) = ${fmtU(P.dm, P.e, h)} keV (AME2020) · m/q = ${(P.m / V("z")).toFixed(4)} u · t = ${(m.t / 1000).toFixed(3)} µs · Δt = ${m.dT.toFixed(2)} ns · FWHM = ${m.fw.toFixed(2)} ns · R ≈ ${Math.round(m.R).toLocaleString()} (${TL.need} ${Math.round(m.need).toLocaleString()}) · ${ok ? "✔ " + TL.separated : "… " + TL.overlap}` +
+        (m.dl > 0 ? ` · ${TL.mr_sat}: N ≈ ${Math.round(m.dt0 / m.dl).toLocaleString()}` : ""));
     }
     function fillPairs() {
-      sel("pair").innerHTML = pairs.map((p, i) => `<option value="${i}">${p[0]} / ${p[1]} (Δm = ${p[3].toLocaleString()} keV)</option>`).join("");
+      sel("pair").innerHTML = pairs.map((p, i) => `<option value="${i}">${p.a.label} / ${p.b.label} (Δm = ${Math.abs(p.dm).toFixed(0)} keV)</option>`).join("");
     }
     function randomPair() { /* two neighbouring isobars from NUBASE2020 that live ≥ 10 ms */
       const ok = rows.filter(r => r[6] >= -2 && r[5] === 0), by = new Map(); ok.forEach(r => by.set(r[0] + "," + (r[0] + r[1]), r));
       for (let k = 0; k < 500; k++) { const a = rnd(ok), b = by.get((a[0] + 1) + "," + (a[0] + a[1])); if (!b) continue;
-        const d = Math.abs(a[3] - b[3]); if (d < 50) continue; const A = a[0] + a[1];
-        const p = [sup(A) + a[2], sup(A) + b[2], A, Math.round(d)]; pairs.push(p); fillPairs(); sel("pair").value = pairs.length - 1; P = p; draw(true); return; }
+        const A = a[0] + a[1], p = pairOf(A + a[2], A + b[2]); if (!p || Math.abs(p.dm) < 30) continue;
+        pairs.push(p); fillPairs(); sel("pair").value = pairs.length - 1; P = p; draw(true); return; }
     }
-    box.addEventListener("input", e => { if (e.target.name && e.target.name !== "pair") draw(e.target.name !== "laps"); });
-    box.addEventListener("change", e => { if (e.target.name === "pair") { P = pairs[+e.target.value]; draw(true); } });
+    function manual() {
+      const on = sel("manual").checked; box.querySelector(".mr-man").hidden = !on; if (!on) { P = pairs[+sel("pair").value] || pairs[0]; draw(true); return; }
+      const p = pairOf(sel("n1").value, sel("n2").value); box.querySelector(".mr-bad").textContent = p ? "" : TL.rfq_bad;
+      if (p) { P = p; draw(true); }
+    }
+    box.addEventListener("input", e => { const n = e.target.name; if (n === "n1" || n === "n2") return manual(); if (n && n !== "pair") draw(n !== "laps"); });
+    box.addEventListener("change", e => { const n = e.target.name; if (n === "pair") { P = pairs[+e.target.value]; draw(true); } if (n === "manual") manual(); });
     box.addEventListener("click", e => {
       const a = e.target.closest("[data-act]")?.dataset.act; if (!a) return;
-      if (a === "rand") rows.length ? randomPair() : null;
-      if (a === "new") { sel("laps").value = 0; draw(true); }
-      if (a === "png") savePNG(cv, paint, "mrtof-isobars");
+      if (a === "rand" && rows.length) randomPair();
+      if (a === "new") { sel("laps").value = 0; sel("laps").dispatchEvent(new Event("input", { bubbles: true })); }
+      if (a === "auto") { /* smallest number of laps that separates the pair */
+        const z = V("z"), s = Math.sqrt(P.m / z / 100); let N = 0; const mx = +sel("laps").max;
+        for (; N <= mx; N++) { const t = (V("t0") + N * V("tlap")) * s * 1000; if (Math.abs(t * P.dm / (2 * P.m * UKEV)) >= Math.hypot(V("dt0"), N * V("dlap") / 1000)) break; }
+        sel("laps").value = Math.min(N, mx); sel("laps").dispatchEvent(new Event("input", { bubbles: true }));
+      }
+      if (a === "png") savePNG(cv, paint, "mrtof-spectrum");
       if (a === "png2") savePNG(cv2, paint2, "mrtof-resolving-power");
-      if (a === "csv" && window.zgExport && hist) window.zgExport.csv(["tof_minus_t1_ns", "counts"], hist.h.map((v, i) => [(hist.x0 + (i + 0.5) * hist.span / hist.nb).toFixed(3), v]), "mrtof-spectrum");
+      if (a === "csv" && window.zgExport && hist) window.zgExport.csv(["tof_minus_t1_ns", "counts"], hist.h.map((v, i) => [(hist.x0 + (i + 0.5) * hist.span / hist.nb).toFixed(4), v]), "mrtof-spectrum");
     });
-    box.querySelector("[name=laps]").addEventListener("input", () => (hist = null));
-    fillPairs(); addEventListener("resize", () => draw(false)); draw(true);
+    addEventListener("resize", () => draw(false));
+    const init = () => { if (!rows.length) return setTimeout(init, 200);
+      pairs = names.map(([a, b]) => pairOf(a, b)).filter(Boolean); fillPairs(); P = pairs[0]; draw(true); };
+    init();
   }
 
   /* ── 3b. Keep the ions: linear Paul trap / RFQ mass filter ──────────────
      Mathieu equations (ξ = Ωt/2):  x'' + (a − 2q cos 2ξ) x = 0,  y'' − (a − 2q cos 2ξ) y = 0
-     a = 8eU/(m r₀²Ω²), q = 4eV/(m r₀²Ω²);  r₀ = 4.5 mm, Ω/2π = 1 MHz.  Rods: radius 1.145 r₀.
-     An ion is lost when it touches a rod (distance to a rod centre < rod radius) — shown as a spark.   */
+     a = 8zeU/(m r₀²Ω²), q = 4zeV/(m r₀²Ω²). Rods: radius 1.145 r₀. An ion is lost only when it touches a rod.
+     Stability boundaries from the exact characteristic values a₀(q) (ce₀) and b₁(q) (se₁), computed as the
+     lowest eigenvalue of the Hill matrices (Sturm bisection) — the first region ends at q = 0.908046 (a = 0)
+     and has its tip at q = 0.705996, a = 0.236994.                                                          */
+  function eigLow(diag, off) {           /* lowest eigenvalue of a symmetric tridiagonal matrix */
+    const n = diag.length; let lo = Infinity, hi = -Infinity;
+    diag.forEach((d, i) => { const r = Math.abs(off[i - 1] || 0) + Math.abs(off[i] || 0); lo = Math.min(lo, d - r); hi = Math.max(hi, d + r); });
+    const below = x => { let c = 0, d = 1; for (let i = 0; i < n; i++) { d = diag[i] - x - (i ? off[i - 1] * off[i - 1] / d : 0); if (d === 0) d = -1e-300; if (d < 0) c++; } return c; };
+    for (let it = 0; it < 64; it++) { const m = (lo + hi) / 2; below(m) >= 1 ? (hi = m) : (lo = m); }
+    return (lo + hi) / 2;
+  }
+  const MA0 = q => eigLow([...Array(14)].map((_, r) => 4 * r * r), [...Array(13)].map((_, r) => r ? q : Math.SQRT2 * q));
+  const MB1 = q => eigLow([...Array(14)].map((_, r) => r ? (2 * r + 1) ** 2 : 1 - q), [...Array(13)].map(() => q));
+  const Q_EDGE = 0.908046, Q_TIP = 0.705996, A_TIP = 0.236994;
+  const mathieuStable = (a, q) => q > 0 && q < Q_EDGE && a < MB1(q) && a > MA0(q) && -a < MB1(q) && -a > MA0(q);
+
   function rfqGame() {
     const box = $("#g-rfq"); if (!box) return;
+    const TL = T;
     const [cv, cvd] = box.querySelectorAll("canvas"), sel = n => box.querySelector(`[name=${n}]`), V = n => +sel(n).value;
-    const r0 = 4.5e-3, Om = 2 * Math.PI * 1e6, k = 1.602176634e-19 / (1.66053906660e-27 * r0 * r0 * Om * Om), rho = 1.145, Rc = 1 + rho;
-    const cols = ["#3e63dd", "#30a46c", "#e5484d", "#f5b800", "#8e4ec6"];
-    let masses, ions = [], sparks = [], stat, xi = 0, raf = 0, running = true;
-    const aq = A => [8 * k * V("U") / A, 4 * k * V("V") / A];
-    const a0 = q => -q * q / 2 + 7 * q ** 4 / 128 - 29 * q ** 6 / 2304 + 68687 * q ** 8 / 18874368;
-    const b1 = q => 1 - q - q * q / 8 + q ** 3 / 64 - q ** 4 / 1536 - 11 * q ** 5 / 36864;
-    const stable = (a, q) => q < 0.92 && a < b1(q) && a > a0(q) && -a < b1(q) && -a > a0(q);
-    function spawn(i) { const A = masses[i % masses.length], r = 0.12 * Math.sqrt(Math.random()), f = 6.283 * Math.random();
-      return { A, c: cols[masses.indexOf(A)], x: r * Math.cos(f), y: r * Math.sin(f), vx: 0.012 * gauss(), vy: 0.012 * gauss(), age: 0, tr: [] }; }
-    function reset() {
-      const A0 = V("A"); masses = sel("set").value === "near" ? [A0 - 2, A0, A0 + 2] : [Math.round(A0 / 2), A0, A0 * 2];
-      ions = Array.from({ length: 24 }, (_, i) => spawn(i)); ions.forEach(o => (o.age = Math.random() * 40)); sparks = [];
-      stat = Object.fromEntries(masses.map(A => [A, [0, 0]]));
-      box.querySelector(".rfq-leg").innerHTML = masses.map((A, i) => `<span><i style="background:${cols[i]}"></i>A = ${A}${A === A0 ? " ★" : ""}</span>`).join("");
+    const U_KG = 1.66053906660e-27, QE = 1.602176634e-19, ME_U = 5.48579909065e-4, rho = 1.145, Rc = 1 + rho;
+    const cols = ["#3e63dd", "#30a46c", "#e5484d", "#f5b800", "#8e4ec6", "#0894b3", "#d6409f", "#f76b15"];
+    let species = [], ions = [], sparks = [], xi = 0, running = true, target = 1;
+    const kfac = () => QE / (U_KG * (V("r0") / 1000) ** 2 * (2 * Math.PI * V("f") * 1e6) ** 2);
+    const aq = sp => { const k = kfac() * sp.z / sp.m; return [8 * k * V("U"), 4 * k * V("V")]; };
+    /* boundary polygon (cached; depends on nothing but q) */
+    const BND = [...Array(181)].map((_, i) => { const q = Q_EDGE * i / 180; return [q, Math.max(0, Math.min(MB1(q), -MA0(q)))]; });
+    function massOf(lbl) {         /* "100Sn", "Sn-100", "133Cs+2" → {label, m (ion mass in u), z} */
+      const t = lbl.trim().replace(/\s+/g, ""); if (!t) return null;
+      const mz = t.match(/\+(\d)$/), z = mz ? +mz[1] : 1, b = t.replace(/\+\d?$/, "");
+      const m1 = b.match(/^(\d+)([A-Za-z]{1,2})$/) || b.match(/^([A-Za-z]{1,2})-?(\d+)$/); if (!m1) return null;
+      const A = +(isNaN(m1[1]) ? m1[2] : m1[1]), sym = (isNaN(m1[1]) ? m1[1] : m1[2]).toLowerCase();
+      const r = rows.find(x => x[2].toLowerCase() === sym && x[0] + x[1] === A); if (!r || r[3] == null) return null;
+      return { label: `${sup(A)}${r[2]}${z > 1 ? sup(z) + "⁺" : "⁺"}`, m: A + r[3] / 931494.10242 - z * ME_U, z };
     }
-    function acc(o, x, y, s) { const [a, q] = aq(o.A), f = a - 2 * q * Math.cos(2 * s); return [-f * x, f * y]; }
-    function step(o, h) { /* RK4 in ξ */
-      const s = xi, p = [o.x, o.y, o.vx, o.vy];
-      const F = (s1, [x, y, vx, vy]) => { const [ax, ay] = acc(o, x, y, s1); return [vx, vy, ax, ay]; };
+    function reset() {
+      const A0 = V("A");
+      species = (sel("set").value === "near" ? [A0 - 2, A0, A0 + 2] : sel("set").value === "far" ? [Math.max(1, Math.round(A0 / 2)), A0, A0 * 2] : [A0])
+        .map(A => ({ label: "A = " + A, m: A, z: 1 }));
+      if (sel("custom").checked) (sel("ions").value || "").split(/[,;]/).map(massOf).filter(Boolean).forEach(s => species.push(s));
+      species = species.slice(0, 8); species.forEach((s, i) => (s.c = cols[i], s.t = 0, s.l = 0));
+      const tsel = sel("target"), keep = tsel.value; tsel.innerHTML = species.map((s, i) => `<option value="${i}">${s.label}</option>`).join("");
+      target = species[+keep] ? +keep : Math.min(1, species.length - 1); tsel.value = target;
+      ions = Array.from({ length: 30 }, (_, i) => spawn(i)); ions.forEach(o => (o.age = Math.random() * 40)); sparks = [];
+      box.querySelector(".rfq-leg").innerHTML = species.map((s, i) => `<span><i style="background:${s.c}"></i>${s.label}${i === target ? " ★" : ""}</span>`).join("");
+      bad.textContent = sel("custom").checked && (sel("ions").value || "").split(/[,;]/).filter(x => x.trim() && !massOf(x)).length ? TL.rfq_bad : "";
+    }
+    function spawn(i) { const sp = species[i % species.length], r = V("emit") / 100 * Math.sqrt(Math.random()), f = 6.283 * Math.random();
+      return { sp, x: r * Math.cos(f), y: r * Math.sin(f), vx: V("emit") / 1000 * gauss(), vy: V("emit") / 1000 * gauss(), age: 0, tr: [] }; }
+    function step(o, h) {               /* RK4 in ξ */
+      const [a, q] = aq(o.sp), s = xi, p = [o.x, o.y, o.vx, o.vy];
+      const F = (s1, [x, y, vx, vy]) => { const f = a - 2 * q * Math.cos(2 * s1); return [vx, vy, -f * x, f * y]; };
       const k1 = F(s, p), k2 = F(s + h / 2, p.map((v, i) => v + h / 2 * k1[i])), k3 = F(s + h / 2, p.map((v, i) => v + h / 2 * k2[i])), k4 = F(s + h, p.map((v, i) => v + h * k3[i]));
       [o.x, o.y, o.vx, o.vy] = p.map((v, i) => v + h / 6 * (k1[i] + 2 * k2[i] + 2 * k3[i] + k4[i]));
     }
     const hit = o => [[Rc, 0], [-Rc, 0], [0, Rc], [0, -Rc]].some(([cx, cy]) => Math.hypot(o.x - cx, o.y - cy) < rho) || Math.hypot(o.x, o.y) > 3;
-    const LIFE = 60 * Math.PI;  /* 60 RF periods ≈ passage through the filter */
     function tick() {
-      const h = 0.05, n = V("speed");
+      const h = 0.05, n = V("speed"), life = V("cycles") * Math.PI;
       for (let s = 0; s < n; s++) {
         ions.forEach((o, i) => {
           step(o, h); o.age += h;
-          if (hit(o)) { stat[o.A][1]++; sparks.push([o.x, o.y, 1, o.c]); ions[i] = spawn(i); }
-          else if (o.age > LIFE) { stat[o.A][0]++; ions[i] = spawn(i); }
+          if (hit(o)) { o.sp.l++; sparks.push([o.x, o.y, 1, o.sp.c]); ions[i] = spawn(i); }
+          else if (o.age > life) { o.sp.t++; ions[i] = spawn(i); }
         });
         xi += h;
       }
       ions.forEach(o => { o.tr.push([o.x, o.y]); if (o.tr.length > 70) o.tr.shift(); });
     }
-    function paint(g, W, H, ink) {   /* cross-section */
-      const S = Math.min(W, H) / 2 / 2.05 * 1.0, cx = W / 2, cy = H / 2, pol = Math.cos(2 * xi) > 0;
+    function paint(g, W, H, ink) {      /* cross-section */
+      const S = Math.min(W, H) / 2 / 2.05, cx = W / 2, cy = H / 2, pol = Math.cos(2 * xi) > 0;
       [[Rc, 0, 1], [-Rc, 0, 1], [0, Rc, -1], [0, -Rc, -1]].forEach(([x, y, sgn]) => {
         const pos = (sgn > 0) === pol; g.fillStyle = pos ? "rgba(229,72,77,.82)" : "rgba(62,99,221,.82)";
         g.beginPath(); g.arc(cx + x * S, cy + y * S, rho * S, 0, 6.283); g.fill();
         g.fillStyle = "#fff"; g.font = "700 14px system-ui"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(pos ? "+" : "−", cx + x * S * 0.78, cy + y * S * 0.78);
       });
       g.strokeStyle = "rgba(127,127,160,.55)"; g.setLineDash([3, 4]); g.beginPath(); g.arc(cx, cy, S, 0, 6.283); g.stroke(); g.setLineDash([]);
-      g.fillStyle = ink; g.font = "11px system-ui"; g.textAlign = "left"; g.textBaseline = "alphabetic"; g.fillText("r₀ = 4.5 mm", cx + S * 0.72, cy - S * 0.72);
-      ions.forEach(o => { g.strokeStyle = o.c + "66"; g.lineWidth = 1; g.beginPath(); o.tr.forEach(([x, y], i) => i ? g.lineTo(cx + x * S, cy + y * S) : g.moveTo(cx + x * S, cy + y * S)); g.stroke();
-        g.fillStyle = o.c; g.beginPath(); g.arc(cx + o.x * S, cy + o.y * S, 3, 0, 6.283); g.fill(); });
+      g.fillStyle = ink; g.font = "11px system-ui"; g.textAlign = "left"; g.textBaseline = "alphabetic"; g.fillText(`r₀ = ${V("r0")} mm · Ω/2π = ${V("f")} MHz`, 8, 16);
+      ions.forEach(o => { g.strokeStyle = o.sp.c + "66"; g.lineWidth = 1; g.beginPath(); o.tr.forEach(([x, y], i) => i ? g.lineTo(cx + x * S, cy + y * S) : g.moveTo(cx + x * S, cy + y * S)); g.stroke();
+        g.fillStyle = o.sp.c; g.beginPath(); g.arc(cx + o.x * S, cy + o.y * S, 3, 0, 6.283); g.fill(); });
       sparks = sparks.filter(s => (s[2] -= 0.03) > 0);
       sparks.forEach(([x, y, l, c]) => { g.strokeStyle = c; g.globalAlpha = l; g.lineWidth = 2; for (let i = 0; i < 6; i++) { const a = i * 1.047; g.beginPath(); g.moveTo(cx + x * S, cy + y * S); g.lineTo(cx + x * S + 9 * l * Math.cos(a), cy + y * S + 9 * l * Math.sin(a)); g.stroke(); } g.globalAlpha = 1; });
     }
-    function paintD(g, W, H, ink) {  /* a–q stability diagram with scan line and ion working points */
-      const P = { l: 50, t: 10, r: W - 10, b: H - 40 }, [X, Y] = axes(g, P, [0, 1], [-0.3, 0.3], "q = 4eV / (m r₀² Ω²)", "a = 8eU / (m r₀² Ω²)", ink, 6);
-      g.fillStyle = "rgba(48,164,108,.22)"; g.beginPath();
-      const up = [], dn = []; for (let i = 0; i <= 240; i++) { const q = 0.92 * i / 240; up.push([q, Math.min(b1(q), -a0(q))]); dn.push([q, Math.max(a0(q), -b1(q))]); }
-      up.forEach(([q, a], i) => i ? g.lineTo(X(q), Y(Math.min(0.3, a))) : g.moveTo(X(q), Y(a))); dn.reverse().forEach(([q, a]) => g.lineTo(X(q), Y(Math.max(-0.3, a)))); g.closePath(); g.fill();
-      g.strokeStyle = "rgba(48,164,108,.8)"; g.lineWidth = 1.2; g.stroke();
-      const r = V("V") > 0 ? 2 * V("U") / V("V") : 0; g.strokeStyle = ink; g.setLineDash([4, 4]); g.beginPath(); g.moveTo(X(0), Y(0)); g.lineTo(X(1), Y(r * 1)); g.stroke(); g.setLineDash([]);
-      masses.forEach((A, i) => { const [a, q] = aq(A); if (q > 1.02 || Math.abs(a) > 0.32) return; g.fillStyle = cols[i]; g.beginPath(); g.arc(X(q), Y(a), 4.5, 0, 6.283); g.fill();
-        if (A === V("A")) { g.fillStyle = ink; g.font = "600 11px system-ui"; g.textAlign = "right"; g.fillText("★ A = " + A, X(q) - 8, Y(a) + 4); g.textAlign = "left"; } });
-      g.fillStyle = ink; g.font = "11px system-ui"; g.textAlign = "left"; g.fillText(TL.rfq_stable, X(0.05), Y(0.02));
+    function paintD(g, W, H, ink) {     /* a–q stability diagram (exact boundaries), scan line and working points */
+      const P = { l: 54, t: 10, r: W - 10, b: H - 40 }, [X, Y] = axes(g, P, [0, 1], [-0.3, 0.3], "q = 4zeV / (m r₀² Ω²)", "a = 8zeU / (m r₀² Ω²)", ink, 6);
+      g.fillStyle = "rgba(48,164,108,.22)"; g.strokeStyle = "rgba(48,164,108,.85)"; g.lineWidth = 1.3; g.beginPath();
+      BND.forEach(([q, a], i) => i ? g.lineTo(X(q), Y(a)) : g.moveTo(X(q), Y(a)));
+      [...BND].reverse().forEach(([q, a]) => g.lineTo(X(q), Y(-a))); g.closePath(); g.fill(); g.stroke();
+      g.fillStyle = ink; g.font = "10px system-ui"; g.textAlign = "center";
+      g.fillText("0.908", X(Q_EDGE), Y(0) - 6); g.fillText(`tip (${Q_TIP.toFixed(3)}, ${A_TIP.toFixed(3)})`, X(Q_TIP), Y(A_TIP) - 7);
+      g.beginPath(); g.arc(X(Q_TIP), Y(A_TIP), 2.5, 0, 6.283); g.arc(X(Q_EDGE), Y(0), 2.5, 0, 6.283); g.fill();
+      const r = V("V") > 0 ? 2 * V("U") / V("V") : 0; g.strokeStyle = ink; g.setLineDash([4, 4]); g.beginPath(); g.moveTo(X(0), Y(0)); g.lineTo(X(1), Y(Math.min(0.3, r))); g.stroke(); g.setLineDash([]);
+      species.forEach((sp, i) => { const [a, q] = aq(sp); if (q > 1.02 || Math.abs(a) > 0.32) return; g.fillStyle = sp.c; g.beginPath(); g.arc(X(q), Y(a), i === target ? 6 : 4.5, 0, 6.283); g.fill();
+        if (i === target) { g.strokeStyle = ink; g.lineWidth = 1.5; g.stroke(); } });
+      g.fillStyle = ink; g.font = "11px system-ui"; g.textAlign = "left"; g.fillText(TL.rfq_stable, X(0.04), Y(0.02));
     }
-    const TL = T;
     function report() {
-      const A0 = V("A"), [a, q] = aq(A0);
-      box.querySelector(".rfq-out").innerHTML = masses.map((A, i) => { const [t, l] = stat[A], n = t + l, [aa, qq] = aq(A);
-        return `<span style="color:${cols[i]}">A = ${A}: q = ${qq.toFixed(3)}, a = ${aa.toFixed(3)} → ${stable(aa, qq) ? "✔" : "✘"} ${n ? Math.round(100 * t / n) + " %" : "–"}</span>`; }).join(" · ");
-      const T0 = stat[A0][0] / Math.max(1, stat[A0][0] + stat[A0][1]), Tx = Math.max(...masses.filter(A => A !== A0).map(A => stat[A][0] / Math.max(1, stat[A][0] + stat[A][1])));
-      const n = masses.reduce((s, A) => s + stat[A][0] + stat[A][1], 0);
-      msg(box, n > 60 ? `${TL.rfq_score}: <b>${Math.round(100 * T0 * (1 - Tx))}</b> (${TL.rfq_t}: ${Math.round(100 * T0)} %, ${TL.rfq_o}: ${Math.round(100 * Tx)} %) · ${TL.best}: ${best("rfq", Math.round(100 * T0 * (1 - Tx)))}` : TL.rfq_start);
-      box.querySelectorAll("output").forEach(o => { const n = o.dataset.for; if (n) o.textContent = n === "A" ? "A = " + A0 : n === "speed" ? "×" + V(n) : V(n) + " V"; });
+      box.querySelector(".rfq-out").innerHTML = species.map((sp, i) => { const n = sp.t + sp.l, [a, q] = aq(sp);
+        return `<span style="color:${sp.c}">${sp.label} (m = ${sp.m.toFixed(sp.m % 1 ? 4 : 0)} u${sp.z > 1 ? ", z = " + sp.z : ""}): q = ${q.toFixed(4)}, a = ${a.toFixed(4)} → ${mathieuStable(a, q) ? "✔" : "✘"} ${n ? (100 * sp.t / n).toFixed(0) + " %" : "–"}</span>`; }).join("");
+      const tg = species[target], tr = s => s.t / Math.max(1, s.t + s.l), T0 = tr(tg), others = species.filter((_, i) => i !== target), Tx = others.length ? Math.max(...others.map(tr)) : 0;
+      const n = species.reduce((s, sp) => s + sp.t + sp.l, 0), sc = Math.round(100 * T0 * (1 - Tx));
+      msg(box, n > 60 ? `${TL.rfq_score}: <b>${sc}</b> (${TL.rfq_t}: ${(100 * T0).toFixed(0)} %, ${TL.rfq_o}: ${(100 * Tx).toFixed(0)} %) · ${TL.best}: ${best("rfq", sc)}` : TL.rfq_start);
     }
+    const bad = box.querySelector(".rfq-bad") || document.createElement("span");
+    const resetStats = () => species.forEach(s => (s.t = s.l = 0));
     let last = 0;
     function loop(ts) {
-      if (running && box.getBoundingClientRect().bottom > 0 && box.getBoundingClientRect().top < innerHeight) {
+      const r = box.getBoundingClientRect();
+      if (running && r.bottom > 0 && r.top < innerHeight) {
         tick(); { const [g, W, H] = crisp(cv); paint(g, W, H, inkOf()); }
-        if (ts - last > 400) { last = ts; const [g, W, H] = crisp(cvd); paintD(g, W, H, inkOf()); report(); }
+        if (ts - last > 300) { last = ts; const [g, W, H] = crisp(cvd); paintD(g, W, H, inkOf()); report(); }
       }
-      raf = requestAnimationFrame(loop);
+      requestAnimationFrame(loop);
     }
-    box.addEventListener("input", e => { if (["A", "set"].includes(e.target.name)) reset(); else if (["U", "V"].includes(e.target.name)) masses.forEach(A => (stat[A] = [0, 0])); last = 0; });
-    box.addEventListener("change", e => { if (e.target.name === "set") reset(); });
+    const tgt = () => species[target] || { m: V("A"), z: 1 };
+    box.addEventListener("input", e => { const n = e.target.name; if (["A", "set", "ions"].includes(n)) reset(); else if (["U", "V", "r0", "f", "emit", "cycles"].includes(n)) resetStats(); last = 0; });
+    box.addEventListener("change", e => { const n = e.target.name; if (n === "set" || n === "custom") reset(); if (n === "target") { target = +e.target.value; reset(); } });
     box.addEventListener("click", e => {
       const a = e.target.closest("[data-act]")?.dataset.act; if (!a) return;
-      if (a === "cool") { sel("U").value = 0; sel("V").value = Math.round(0.4 * V("A") / (4 * k)); reset(); }
-      if (a === "tip") { sel("V").value = (0.7035 * V("A") / (4 * k)).toFixed(1); sel("U").value = (0.2335 * V("A") / (8 * k)).toFixed(2); reset(); }
+      const t = tgt(), k = kfac() * t.z / t.m, setv = (n, v) => { sel(n).value = v; sel(n).dispatchEvent(new Event("input", { bubbles: true })); };
+      if (a === "cool") { setv("U", 0); setv("V", (0.4 / (4 * k)).toFixed(2)); }
+      if (a === "tip") { setv("V", (0.7035 / (4 * k)).toFixed(2)); setv("U", (0.2335 / (8 * k)).toFixed(3)); }
+      if (a === "edge") { setv("U", 0); setv("V", (0.90 / (4 * k)).toFixed(2)); }
       if (a === "pause") running = !running;
       if (a === "png") savePNG(cv, paint, "rfq-cross-section");
       if (a === "png2") savePNG(cvd, paintD, "rfq-stability-diagram");
-      last = 0;
+      if (a === "video" && window.zgExport) { const b = e.target.closest("[data-act]"); zgExport.record(cv, 8, "rfq-ions", r => { b.disabled = r; b.classList.toggle("is-rec", r); }); }
+      resetStats(); last = 0;
     });
-    reset(); raf = requestAnimationFrame(loop);
+    const waitRows = () => rows.length ? reset() : setTimeout(waitRows, 200);
+    reset(); waitRows(); requestAnimationFrame(loop);
   }
 
   /* ── 4. Magic-number & element quiz ────────────────────────────────── */
@@ -389,4 +465,12 @@
 
   fetch(root.dataset.src).then(r => r.json()).then(d => { rows = d.rows; hlGame(); quiz(d.elements); });
   tofGame(); mrtofGame(); rfqGame();
+  /* number boxes next to sliders: typing a value moves the slider (and widens its range if needed) */
+  root.querySelectorAll(".g-num[data-for]").forEach(n => {
+    const box = n.closest(".g-box"), r = box && box.querySelector(`input[type=range][name="${n.dataset.for}"]`); if (!r) return;
+    const show = () => { n.value = r.value; };
+    r.addEventListener("input", show); show();
+    n.addEventListener("change", () => { const v = +n.value; if (!isFinite(n.value === "" ? NaN : v)) return show();
+      if (v > +r.max) r.max = v; if (v < +r.min) r.min = v; r.value = v; r.dispatchEvent(new Event("input", { bubbles: true })); });
+  });
 })();

@@ -12,7 +12,7 @@
   const stamp = () => new Date().toISOString().slice(0, 16).replace(/[:T]/g, "-");
   window.zgExport = {
     save, stamp,
-    png(render, name, scale = 3) {
+    png(render, name, scale = 4) {
       const c = typeof render === "function" ? render(scale) : render;
       c.toBlob(b => save(b, `${name}-${stamp()}.png`), "image/png");
     },
@@ -25,7 +25,7 @@
       if (!canvas.captureStream || !window.MediaRecorder) { alert("Video recording is not supported in this browser."); return; }
       const types = ["video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm", "video/mp4"];
       const type = types.find(t => MediaRecorder.isTypeSupported(t)) || "";
-      const rec = new MediaRecorder(canvas.captureStream(60), { mimeType: type, videoBitsPerSecond: 8e6 }), parts = [];
+      const rec = new MediaRecorder(canvas.captureStream(60), { mimeType: type, videoBitsPerSecond: 25e6 }), parts = [];
       rec.ondataavailable = e => e.data.size && parts.push(e.data);
       rec.onstop = () => { save(new Blob(parts, { type: type || "video/webm" }), `${name}-${stamp()}.${type.includes("mp4") ? "mp4" : "webm"}`); onState && onState(false); };
       rec.start(); onState && onState(true);

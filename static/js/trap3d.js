@@ -6,6 +6,7 @@
   const root = document.querySelector("[data-trap3d]");
   if (!root) return;
   const cv = root.querySelector("canvas"), g = cv.getContext("2d");
+  const LW = () => cv._w || cv.width, LH = () => cv._h || cv.height;   /* logical (CSS) size */
   const q = n => root.querySelector(`[name="${n}"]`);
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const ink = (getComputedStyle(document.documentElement).getPropertyValue("--zg-ink") || "").trim() || "#1d2433";
@@ -22,8 +23,8 @@
   function P(x, y, z) {
     const cy = Math.cos(yaw), sy = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
     const x1 = x * cy - y * sy, y1 = x * sy + y * cy, y2 = y1 * cp - z * sp, z2 = y1 * sp + z * cp;
-    const d = 5 / (5 + y2), s = Math.min(cv.width, cv.height * 1.3) / 5.6 * zoom * d;
-    return [cv.width / 2 + x1 * s, cv.height / 2 - z2 * s];
+    const d = 5 / (5 + y2), s = Math.min(LW(), LH() * 1.3) / 5.6 * zoom * d;
+    return [LW() / 2 + x1 * s, LH() / 2 - z2 * s];
   }
   /* electrode meshes: ring r²/2 − z² = z0², caps z² − r²/2 = z0² */
   const mesh = [];
@@ -62,7 +63,7 @@
     t += dt;
   }
   function draw() {
-    g.clearRect(0, 0, cv.width, cv.height);
+    g.setTransform(cv.width / LW(), 0, 0, cv.height / LH(), 0, 0); g.clearRect(0, 0, LW(), LH());
     if (q("auto").checked && !drag && !reduce) yaw += 0.004;
     if (q("electrodes").checked) mesh.forEach(([k, pts]) => line(pts, k === "ring" ? "rgba(214,140,40,.5)" : "rgba(90,120,220,.45)"));
     if (q("field").checked) for (let i = 0; i < 8; i++) { const a = i / 8 * 6.283; line([[1.9 * Math.cos(a), 1.9 * Math.sin(a), -1.9], [1.9 * Math.cos(a), 1.9 * Math.sin(a), 1.9]], "rgba(120,120,140,.35)"); }
@@ -95,13 +96,20 @@
     if (a === "side") { pitch = 0; q("auto").checked = false; }
     if (a === "iso") { pitch = 0.35; yaw = 0.6; }
     if (a === "png" && window.zgExport) {            /* 3× resolution still */
-      const w = cv.width, h = cv.height; cv.width = w * 3; cv.height = h * 3; g.fillStyle = "#fff"; g.fillRect(0, 0, cv.width, cv.height);
-      g.lineWidth = 3; draw(); zgExport.png(cv, "penning-trap-3d"); cv.width = w; cv.height = h;
+      const w = cv.width, h = cv.height; cv.width = LW() * 6; cv.height = LH() * 6;     /* 6× still on white */
+      draw(); g.globalCompositeOperation = "destination-over"; g.fillStyle = "#fff"; g.fillRect(0, 0, LW(), LH()); g.globalCompositeOperation = "source-over";
+      zgExport.png(cv, "penning-trap-3d"); cv.width = w; cv.height = h; draw();
     }
-    if (a === "video" && window.zgExport) { const b = e.target.closest("[data-act]"); zgExport.record(cv, 10, "penning-trap-3d", r => { b.disabled = r; b.classList.toggle("is-rec", r); }); }
+    if (a === "video" && window.zgExport) {          /* recorded at 3× the displayed size */
+      const b = e.target.closest("[data-act]"), w = cv.width, h = cv.height; cv.width = LW() * 3; cv.height = LH() * 3;
+      zgExport.record(cv, 10, "penning-trap-3d", r => { b.disabled = r; b.classList.toggle("is-rec", r); if (!r) { cv.width = w; cv.height = h; } });
+    }
   });
   ["ions", "spread", "rp", "rm", "az"].forEach(n => q(n).addEventListener("input", makeIons));
   root.querySelectorAll("input[type=range]").forEach(r => { const o = r.parentElement.querySelector("output"); if (o) { const u = () => (o.textContent = r.value); r.addEventListener("input", u); u(); } });
-  new ResizeObserver(() => { const w = Math.round(cv.getBoundingClientRect().width); if (w && Math.abs(w - cv.width) > 4) { cv.width = w; cv.height = Math.round(w * 0.78); } }).observe(cv);
+  /* logical size follows the card width (height ≤ 80 % of the window); backing store at ≥ 2× for sharp lines */
+  const fitCanvas = () => { const w = Math.round(cv.getBoundingClientRect().width), h = Math.round(Math.min(w * 0.78, innerHeight * 0.8)), k = Math.min(3, Math.max(2, devicePixelRatio || 1));
+    if (w && (Math.abs(w - LW()) > 2 || Math.abs(h - LH()) > 2)) { cv._w = w; cv._h = h; cv.width = w * k; cv.height = h * k; cv.style.aspectRatio = `${w} / ${h}`; } };
+  new ResizeObserver(fitCanvas).observe(cv); addEventListener("resize", fitCanvas);
   makeIons(); requestAnimationFrame(loop);
 })();

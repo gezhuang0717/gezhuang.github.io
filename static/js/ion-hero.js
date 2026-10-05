@@ -64,7 +64,7 @@
     };
 
     function size() {
-      const r = cv.getBoundingClientRect(); dpr = Math.min(2, devicePixelRatio || 1);
+      const r = cv.getBoundingClientRect(); dpr = Math.min(3, Math.max(2, devicePixelRatio || 1));
       W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
 
@@ -114,14 +114,18 @@
     on("[name=palette]", "change", e => { S.palette = e.target.value; if (!S.playing) still(); });
     on("[data-act=trails]", "click", e => { S.trails = !S.trails; e.currentTarget.setAttribute("aria-pressed", String(S.trails)); });
     on("[data-act=play]", "click", () => play(!S.playing));
-    on("[data-act=shot]", "click", () => {           /* high-res PNG: render 3 extra frames at 3× */
-      const oW = cv.width, oH = cv.height, oD = dpr; dpr = 3; cv.width = W * 3; cv.height = H * 3; ctx.setTransform(3, 0, 0, 3, 0, 0);
+    on("[data-act=shot]", "click", () => {           /* high-res PNG: render 90 extra steps at 5× */
+      const oW = cv.width, oH = cv.height, oD = dpr; dpr = 5; cv.width = W * 5; cv.height = H * 5; ctx.setTransform(5, 0, 0, 5, 0, 0);
       ctx.fillStyle = "#070912"; ctx.fillRect(0, 0, W, H); for (let k = 0; k < 90; k++) step(1 / 60);
       const done = () => { dpr = oD; cv.width = oW; cv.height = oH; ctx.setTransform(oD, 0, 0, oD, 0, 0); };
       if (window.zgExport) zgExport.png(cv, "ion-trace"); else { const a = document.createElement("a"); a.download = "ion-trace.png"; a.href = cv.toDataURL("image/png"); a.click(); }
       setTimeout(done, 50);
     });
-    on("[data-act=video]", "click", e => { const b = e.currentTarget; if (!S.playing) play(true); window.zgExport && zgExport.record(cv, 8, "ion-trace-" + S.mode, r => { b.disabled = r; b.classList.toggle("is-rec", r); }); });
+    on("[data-act=video]", "click", e => {          /* WebM video recorded at 3× the displayed size */
+      const b = e.currentTarget; if (!S.playing) play(true); if (!window.zgExport) return;
+      const oW = cv.width, oH = cv.height, oD = dpr; dpr = 3; cv.width = W * 3; cv.height = H * 3; ctx.setTransform(3, 0, 0, 3, 0, 0);
+      zgExport.record(cv, 8, "ion-trace-" + S.mode, r => { b.disabled = r; b.classList.toggle("is-rec", r); if (!r) { dpr = oD; cv.width = oW; cv.height = oH; ctx.setTransform(oD, 0, 0, oD, 0, 0); } });
+    });
     const stage = root.querySelector(".ionhero-stage");
     stage.addEventListener("pointermove", e => { const r = cv.getBoundingClientRect(); ptr = [e.clientX - r.left, e.clientY - r.top]; });
     stage.addEventListener("pointerleave", () => { ptr = null; });

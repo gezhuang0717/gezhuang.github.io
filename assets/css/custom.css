@@ -321,3 +321,22 @@ main section > article.mt-6::before{content:"";position:absolute;left:0;top:12px
 .zg-trapzoo .g-trap canvas{width:100%;height:auto;border-radius:10px;background:linear-gradient(135deg,rgba(71,200,255,.06),rgba(139,108,255,.08))}
 .zg-trapzoo figcaption{font-size:.8rem;line-height:1.4;margin-top:.35rem}.zg-trapzoo figcaption b{display:block;font-size:.9rem;margin-bottom:.15rem}
 .zg-trapzoo figcaption span{color:var(--zg-muted)}
+
+/* chart of nuclides: theory masses and lines */
+.nc-bar2{font-size:.85rem}.nc-ovl{display:inline-flex;flex-wrap:wrap;gap:.2rem .7rem;align-items:center}
+.nc-chk{display:inline-flex;align-items:center;gap:.25rem;white-space:nowrap}.nc-chk i{display:inline-block;width:1.1rem;height:.7rem;border-bottom:2.5px solid transparent}
+.nc-chk i[style*="border-radius"]{width:.6rem;height:.6rem;border:0}
+.nc-ramp-div{background:linear-gradient(90deg,hsl(220,80%,46%),hsl(220,80%,96%),hsl(0,80%,96%),hsl(0,80%,46%))}
+.nc-mnote{color:var(--zg-muted);font-style:italic}.nc-mref{margin:.2rem 0}.nc-mref a{color:var(--zg-blue)}
+.nc-card tr.nc-mrow th{color:#16a34a;padding-top:.5rem;text-align:left}
+.nc-defs{font-size:.85rem;margin:.4rem 0 1rem}.nc-defs summary{cursor:pointer;font-weight:600}.nc-defs li{margin:.3rem 0}
+
+/* games v3: number boxes, text inputs */
+.g-slider .g-num{width:6.2em;padding:.1rem .3rem;border:1px solid var(--zg-line);border-radius:6px;background:var(--zg-card);color:inherit;font-variant-numeric:tabular-nums;text-align:right}
+.g-unit{min-width:2.6em;font-size:.8rem;color:var(--zg-muted)}
+.g-text{padding:.15rem .45rem;border:1px solid var(--zg-line);border-radius:8px;background:var(--zg-card);color:inherit;min-width:14em}.g-text.g-short{min-width:5.5em;width:6.5em}
+.g-warn{color:#e5484d;font-size:.8rem}
+.rfq-out span{display:block}
+.nc-num{width:5em;padding:.1rem .3rem;border:1px solid var(--zg-line);border-radius:6px;background:var(--zg-card);color:inherit}
+.nc-prange{display:inline-flex;flex-wrap:wrap;gap:.3rem;align-items:center}
+.g-slider .g-num{flex:0 0 6.8em;width:6.8em}

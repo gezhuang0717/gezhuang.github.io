@@ -40,6 +40,14 @@ jobs:
             models) python tools/net_tools.py models --out tools/data/massmodels | tee reports/models.txt ;;
           esac
           { echo '```'; tail -c 60000 reports/*.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Publish report to branch net-reports (not deployed)
+        run: |
+          mkdir -p /tmp/rep && cp -r reports/. /tmp/rep/
+          git config user.name "Zhuang Ge"; git config user.email gezhuang0717@users.noreply.github.com
+          git fetch origin net-reports || true
+          git checkout --orphan net-reports-tmp && git rm -rf -q . && rm -rf ./*
+          cp -r /tmp/rep/. . && rm -rf probe/*_ 2>/dev/null; find . -size +3M -not -path './.git/*' -delete
+          git add -A && git commit -q -m "report ${{ github.run_id }}" && git push -f origin HEAD:net-reports
       - uses: actions/upload-artifact@v4
         with:
           name: net-tools-report

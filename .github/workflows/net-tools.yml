@@ -17,6 +17,9 @@ on:
         default: false
   schedule:
     - cron: '23 3 * * 1'        # weekly link check, Monday 06:23 Helsinki (summer)
+  push:                          # editing one of these files on main runs the matching task
+    branches: [main]
+    paths: ['tools/data/net-probe.txt', 'tools/data/massmodels/sources.json']
 permissions:
   contents: read
 jobs:
@@ -26,6 +29,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -34,9 +39,14 @@ jobs:
         run: |
           mkdir -p reports
           TASK="${{ github.event.inputs.task || 'links' }}"
+          URLS="${{ github.event.inputs.urls }}"
+          if [ "${{ github.event_name }}" = "push" ]; then
+            if git diff --name-only HEAD~1 HEAD | grep -q massmodels/sources.json; then TASK=models; else TASK=probe; URLS="$(grep -v '^#' tools/data/net-probe.txt | tr '\n' ' ')"; fi
+          fi
+          echo "TASK=$TASK" >> "$GITHUB_ENV"
           case "$TASK" in
             links)  python tools/net_tools.py links --out reports/linkcheck.csv | tee reports/linkcheck.txt ;;
-            probe)  python tools/net_tools.py probe ${{ github.event.inputs.urls }} --out reports/probe | tee reports/probe.txt ;;
+            probe)  python tools/net_tools.py probe $URLS --out reports/probe | tee reports/probe.txt ;;
             models) python tools/net_tools.py models --out tools/data/massmodels | tee reports/models.txt ;;
           esac
           { echo '```'; tail -c 60000 reports/*.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
@@ -46,18 +56,17 @@ jobs:
           path: reports/
           retention-days: 14
       - name: Commit model tables
-        if: github.event.inputs.task == 'models' && github.event.inputs.commit == 'true'
+        if: env.TASK == 'models' && (github.event_name == 'push' || github.event.inputs.commit == 'true')
         run: |
           python tools/make_mass_models.py
           git config user.name "Zhuang Ge"
           git config user.email gezhuang0717@users.noreply.github.com
           git add tools/data/massmodels static/data/massmodels.json
           if ! git diff --cached --quiet; then git commit -m "Theory mass tables updated by Network tools"; git pull --rebase --autostash origin main; git push origin HEAD:main; fi
-      - name: Publish report to branch net-reports (not deployed)
+      - name: Publish report to branch net-reports (not deployed; one folder per task, older reports kept)
         run: |
-          mkdir -p /tmp/rep && cp -r reports/. /tmp/rep/
           git config user.name "Zhuang Ge"; git config user.email gezhuang0717@users.noreply.github.com
-          git fetch origin net-reports || true
-          git checkout --orphan net-reports-tmp && git rm -rf -q . && rm -rf ./*
-          cp -r /tmp/rep/. . && rm -rf probe/*_ 2>/dev/null; find . -size +3M -not -path './.git/*' -delete
-          git add -A && git commit -q -m "report ${{ github.run_id }}" && git push -f origin HEAD:net-reports
+          rm -rf reports/probe/*_ 2>/dev/null; find reports -size +3M -delete
+          if git fetch -q origin net-reports; then git worktree add -q /tmp/nr origin/net-reports; else git worktree add -q --detach /tmp/nr && (cd /tmp/nr && git rm -rq . ); fi
+          mkdir -p "/tmp/nr/$TASK" && rm -rf "/tmp/nr/$TASK"/* && cp -r reports/. "/tmp/nr/$TASK/"
+          cd /tmp/nr && git add -A && git commit -q -m "report $TASK ${{ github.run_id }}" && git push origin HEAD:net-reports || echo "nothing to publish"

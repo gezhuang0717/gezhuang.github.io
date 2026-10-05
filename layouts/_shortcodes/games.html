@@ -39,7 +39,7 @@
    "new" "もう一度" "score" "得点" "best" "最高" "right" "正解！" "wrong" "おしい。" "yours" "あなたの答え")) -}}
 {{- $t := index $L $k | default $en -}}
 {{- with hugo.Data.games_labels }}{{ $t = merge $t (index . "en") (index . $k | default dict) }}{{ end -}}
-<div class="zg-games" data-games data-src="{{ "data/nubase2020.json" | relURL }}" data-labels="{{ $t | jsonify }}">
+<div class="zg-games" data-games data-src="{{ "data/nubase2020.json" | relURL }}" data-ame="{{ "data/ame2020.json" | relURL }}" data-labels="{{ $t | jsonify }}">
   <section class="zg-card g-box" id="g-hl"><h2>⏳ {{ $t.hl }}</h2><p class="zg-muted">{{ $t.hl_n }}</p>
     <div class="g-pair"></div>
     <div class="zg-row"><button type="button" class="zg-btn" data-pick="a">◀ A</button><button type="button" class="zg-btn" data-pick="b">B ▶</button></div>
@@ -63,23 +63,39 @@
     <details class="g-hints"><summary>💡 {{ $t.hints }}</summary><ul><li>{{ $t.h1 }}</li><li>{{ $t.h2 }}</li><li>{{ $t.h3 }}</li><li>{{ $t.h4 }}</li></ul></details></section>
   <section class="zg-card g-box" id="g-pi"><h2>🌀 {{ $t.pi }}</h2><p class="zg-muted">{{ $t.pi_n }}</p>
     <div class="g-opts-row">
-      <label>{{ $t.iso_pick }} <select name="iso"></select></label>
-      <button type="button" class="zg-btn zg-btn-ghost" data-act="rand">🎲</button>
+      <span class="pi-single"><label>{{ $t.iso_pick }} <select name="iso"></select></label>
+      <button type="button" class="zg-btn zg-btn-ghost" data-act="rand">🎲</button></span>
+      <label class="g-chk"><input type="checkbox" name="multi"> {{ $t.pi_multi }}</label>
+      <label>{{ $t.pi_mtab }} <select name="mtab"><option value="ame" selected>AME2020</option><option value="nubase">NUBASE2020</option></select></label>
       <label>B <select name="B"><option value="3">3 T</option><option value="7" selected>7 T</option><option value="9.4">9.4 T</option><option value="11.7">11.7 T</option></select></label>
       <label>{{ $t.counts }} <select name="nshot"><option>20</option><option selected>100</option><option>500</option><option>2000</option></select></label>
       <label class="g-chk"><input type="checkbox" name="pix"> {{ $t.v_pix }}</label>
       <label class="g-chk"><input type="checkbox" name="ref" checked> {{ $t.pi_ref }}</label>
     </div>
+    <div class="pi-man" hidden>
+      <label class="pi-ions">{{ $t.pi_ions }} <input type="text" name="ions" class="g-text" value="84Sr, 84Rb, 84Kr" spellcheck="false"></label>
+      <span class="pi-bad g-warn"></span>
+      <div class="zg-row pi-presets"><span class="zg-muted">{{ $t.pi_presets }}:</span>
+        <button type="button" class="zg-btn zg-btn-ghost" data-act="preset" data-ions="84Sr, 84Rb, 84Kr">A = 84</button>
+        <button type="button" class="zg-btn zg-btn-ghost" data-act="preset" data-ions="100Sn, 100In, 100Cd, 100Ag">A = 100</button>
+        <button type="button" class="zg-btn zg-btn-ghost" data-act="preset" data-ions="129Sb, 129mSb, 129Sn, 129mSn">¹²⁹Sb/Sn + m</button>
+        <button type="button" class="zg-btn zg-btn-ghost" data-act="preset" data-ions="133Cs, 133Xe, 12C11">¹³³Cs, ¹²C₁₁</button>
+        <button type="button" class="zg-btn zg-btn-ghost" data-act="preset" data-ions="85Rb, 170Yb+2, 87Rb:0.3">q = 1, 2</button></div>
+      <p class="zg-muted zg-small">{{ $t.pi_syntax }}</p>
+    </div>
     <div class="g-rfq-grid"><canvas width="420" height="420"></canvas><canvas width="420" height="420"></canvas></div>
+    <div class="pi-freq"></div>
     <div class="g-sliders">
       <label class="g-slider">t_acc <input type="range" name="tacc" min="1" max="2000" step="1" value="50"> <input type="number" class="g-num" data-for="tacc" step="any"><span class="g-unit">ms</span></label>
       <label class="g-slider">{{ $t.pi_spot }} <input type="range" name="spot" min="1" max="30" step="0.5" value="6"> <input type="number" class="g-num" data-for="spot" step="any"><span class="g-unit">0.1 mm</span></label>
       <label class="g-slider">{{ $t.pi_ratio }} <input type="range" name="ratio" min="0" max="90" step="1" value="30"> <input type="number" class="g-num" data-for="ratio" step="any"><span class="g-unit">%</span></label>
       <label class="g-slider">{{ $t.pi_cfrac }} <input type="range" name="cfrac" min="0" max="50" step="1" value="10"> <input type="number" class="g-num" data-for="cfrac" step="any"><span class="g-unit">%</span></label>
+      <label class="g-slider">U₀ <input type="range" name="u0" min="0.1" max="200" step="0.1" value="10"> <input type="number" class="g-num" data-for="u0" step="any"><span class="g-unit">V</span></label>
+      <label class="g-slider">d <input type="range" name="dch" min="1" max="50" step="0.1" value="10"> <input type="number" class="g-num" data-for="dch" step="any"><span class="g-unit">mm</span></label>
     </div>
-    <div class="zg-row"><button type="button" class="zg-btn" data-act="shot">{{ $t.shot }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="auto">{{ $t.pi_auto }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="clear">{{ $t.new }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="png">⤓ {{ $t.png }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="png2">⤓ {{ $t.png }} (φ)</button><button type="button" class="zg-btn zg-btn-ghost" data-act="csv">⤓ {{ $t.csv }}</button></div>
+    <div class="zg-row"><button type="button" class="zg-btn" data-act="shot">{{ $t.shot }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="auto">{{ $t.pi_auto }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="clear">{{ $t.new }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="png">⤓ {{ $t.png }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="png2">⤓ {{ $t.png }} (φ)</button><button type="button" class="zg-btn zg-btn-ghost" data-act="csv">⤓ {{ $t.csv }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="fcsv">⤓ ν {{ $t.csv }}</button></div>
     <p class="g-msg" aria-live="polite"></p>
-    <details class="g-hints"><summary>💡 {{ $t.hints }}</summary><p>{{ $t.pi_h }}</p></details></section>
+    <details class="g-hints"><summary>💡 {{ $t.hints }}</summary><p>{{ $t.pi_h }}</p><p>{{ $t.pi_fh }}</p></details></section>
   <section class="zg-card g-box" id="g-mr"><h2>🪞 {{ $t.mr }}</h2><p class="zg-muted">{{ $t.mr_n }}</p>
     <div class="g-opts-row">
       <label>{{ $t.pair }} <select name="pair"></select></label>

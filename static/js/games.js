@@ -448,34 +448,109 @@
   function piicrGame() {
     const box = $("#g-pi"); if (!box) return;
     const TL = T, [cv, cvh] = box.querySelectorAll("canvas"), sel = n => box.querySelector(`[name=${n}]`), V = n => +sel(n).value;
-    const UKEV = 931494.10242, QE = 1.602176634e-19, U = 1.66053906660e-27, ME = 9.1093837e-31, UNIT = { ys: 1e-24, zs: 1e-21, as: 1e-18, fs: 1e-15, ps: 1e-12, ns: 1e-9, us: 1e-6, "μs": 1e-6, ms: 1e-3, s: 1, m: 60, h: 3600, d: 86400, y: 3.156e7, ky: 3.156e10, My: 3.156e13, Gy: 3.156e16 };
+    /* CODATA 2018 / AME2020 constants */
+    const UKEV = 931494.10242, QE = 1.602176634e-19, U = 1.66053906660e-27, MEU = 5.48579909065e-4, UNIT = { ys: 1e-24, zs: 1e-21, as: 1e-18, fs: 1e-15, ps: 1e-12, ns: 1e-9, us: 1e-6, "μs": 1e-6, ms: 1e-3, s: 1, m: 60, h: 3600, d: 86400, y: 3.156e7, ky: 3.156e10, My: 3.156e13, Gy: 3.156e16 };
+    const COL = ["#3e63dd", "#e5484d", "#30a46c", "#f76b15", "#8e4ec6", "#0090ff", "#d6409f", "#978365", "#12a594", "#ffb224"];
     const hl = t => { const m = String(t || "").replace("#", "").match(/^([\d.]+)\s*([a-zA-Zμ]+)/); return m && UNIT[m[2]] ? +m[1] * UNIT[m[2]] : t === "stable" ? Infinity : null; };
-    let list = [], S = null, hits = [];
+    let list = [], S = null, hits = [], ame = null, multi = [], bad = [];
+    fetch(root.dataset.ame).then(r => r.json()).then(d => { ame = new Map(d.rows.map(r => [r[2].toLowerCase() + r[1], r])); if (sel("multi").checked) parse(); }).catch(() => {});
     function build() {         /* isomers from NUBASE2020 with E_x known and T½ ≥ 50 ms */
       list = [];
       rows.forEach(r => (r[11] || []).forEach(i => { const ex = i[1], t = hl(i[2]); if (ex > 5 && t >= 0.05 && r[3] != null && r[6] !== -98)
-        list.push({ label: `${sup(r[0] + r[1])}${r[2]} / ${sup(r[0] + r[1])}${i[0]}${r[2]}`, A: r[0] + r[1], me: r[3], ex, gt: r[7], it: i[2] }); }));
+        list.push({ label: `${sup(r[0] + r[1])}${r[2]} / ${sup(r[0] + r[1])}${i[0]}${r[2]}`, A: r[0] + r[1], me: r[3], ex, gt: r[7], it: i[2], sym: r[2] }); }));
       list.sort((a, b) => a.A - b.A);
       const pref = ["⁹⁷Ag", "¹³⁰In", "¹³¹Sn", "²⁴⁴Am", "⁹⁴Ag", "¹⁰⁰Nb", "⁴⁵Sc"];
       sel("iso").innerHTML = list.map((x, i) => `<option value="${i}">${x.label} (Eₓ = ${x.ex.toFixed(x.ex < 100 ? 1 : 0)} keV, T½ = ${x.it})</option>`).join("");
       const j = list.findIndex(x => pref.some(p => x.label.startsWith(p))); sel("iso").value = Math.max(0, j); pick();
     }
     function pick() { S = list[+sel("iso").value]; hits = []; draw(); }
-    function phys() {
-      const B = V("B"), t = V("tacc") / 1000, m = (S.A + S.me / UKEV) * U - ME, nu = QE * B / (2 * Math.PI * m);
-      const dnu = nu * S.ex / ((S.A + S.me / UKEV) * UKEV), sig = Math.hypot(V("spot") / 10 / 6, 2 * Math.PI * nu * t * 1e-10);
-      const ph = x => ((x % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-      const pg = ph(2 * Math.PI * nu * t), pm = ph(2 * Math.PI * (nu - dnu) * t);
-      let d = Math.abs(pg - pm); d = Math.min(d, 2 * Math.PI - d);
-      return { B, t, nu, dnu, sig, pg, pm, d, R: 2 * Math.PI * nu * t / (2.3548 * sig), n: Math.floor(nu * t), sep: d / sig };
+
+    /* ── mass lookup (as PyMassScanner's ame.add_ion_details): atom, molecule "12C16O2", isomer "45Scm"/"45mSc", charge "+2", weight ":0.5" ── */
+    function nubaseRow(sym, A) { return rows.find(x => x[2].toLowerCase() === sym && x[0] + x[1] === A); }
+    function atom(A, sym, iso) {     /* → {me keV, e keV, Z, ex keV, src} */
+      const nb = nubaseRow(sym, A), am = ame && ame.get(sym + A), useAme = sel("mtab").value === "ame" && am;
+      if (!nb && !am) return null;
+      let me = useAme ? am[3] : nb[3], e = useAme ? am[4] : (nb[4] || 0), ex = 0, src = useAme ? "AME2020" : "NUBASE2020", est = useAme ? !!am[5] : !!nb[5];
+      if (me == null) return null;
+      if (iso) { const st = nb && (nb[11] || [])[iso - 1]; if (!st || st[1] == null) return null; ex = st[1]; src += " + NUBASE2020 Eₓ"; }
+      return { me, e, ex, Z: nb ? nb[0] : am[0], src, est, sym: nb ? nb[2] : am[2] };
     }
-    /* hit types: 0 ground-state cyclotron spot, 1 isomer, 2 centre spot (ions without radial motion), 3 magnetron reference spot */
-    function shoot(n) { const p = phys(); for (let i = 0; i < n; i++) {
+    function mol(s, iso) {          /* "84Rb", "12C16O2", "133cs" → mass sum (u) etc., or null */
+      const splits = t => {          /* all readings of "12C16O2": a count is followed by the next mass number or the end */
+        if (!t) return [[]];
+        const m = t.match(/^(\d+)([A-Z][a-z]?|[a-z]{1,2})(\d*)/); if (!m) return [];
+        const out = [];
+        for (let k = m[3].length; k >= 0; k--) splits(t.slice(m[1].length + m[2].length + k)).forEach(r => out.push([[null, m[1], m[2], m[3].slice(0, k)], ...r]));
+        return out;
+      };
+      for (const parts of splits(s)) { const r = molOf(parts, iso); if (r) return r; }
+      return null;
+    }
+    function molOf(parts, iso) {
+      let M = 0, e2 = 0, ex = 0, Z = 0, A = 0, src = "", est = false, label = "";
+      for (const [, a, el, n] of parts) {
+        const k = +(n || 1), x = atom(+a, el.toLowerCase(), parts.length === 1 ? iso : 0); if (!x) return null;
+        M += k * (+a + x.me / UKEV); e2 += (k * x.e) ** 2; ex += x.ex; Z += k * x.Z; A += k * +a; src = x.src; est = est || x.est;
+        label += sup(a) + (x.ex ? "ᵐ" + (iso > 1 ? sup(iso) : "") : "") + x.sym + (k > 1 ? String(k).replace(/\d/g, d => "₀₁₂₃₄₅₆₇₈₉"[d]) : "");
+      }
+      return { M: M + ex / UKEV, e: Math.sqrt(e2), ex, Z, A, src, est, label };
+    }
+    function ion(txt) {             /* "133Cs+2", "133Cs2+", "45Scm", "45mSc", "45Sc*", "Rb-84", "12C16O2", "84Rb:0.5" */
+      let s = txt.trim().replace(/\s+/g, ""); if (!s) return null;
+      let w = 1, q = 1, m, iso = 0;
+      if ((m = s.match(/:([\d.]+)$/))) { w = +m[1]; s = s.slice(0, m.index); }
+      if ((m = s.match(/\+(\d+)$/))) { q = +m[1] || 1; s = s.slice(0, m.index); }
+      else if ((m = s.match(/^(.*?)(\d+)\+$/)) && /^\d+(m\d?)?[A-Za-z]{1,2}(m\d?|\*)?$/.test(m[1])) { q = +m[2] || 1; s = m[1]; }
+      else s = s.replace(/\+$/, "");
+      if ((m = s.match(/^([A-Za-z]{1,2})-?(\d+)$/))) s = m[2] + m[1];
+      let r = null;
+      if ((m = s.match(/^(\d+)m(\d?)([A-Za-z]{1,2})$/))) { iso = +(m[2] || 1); r = mol(m[1] + m[3], iso); }
+      if (!r) { iso = 0; r = mol(s, 0); }
+      if (!r && (m = s.match(/^(\d+[A-Za-z]{1,2})(?:m(\d?)|\*)$/))) { iso = +(m[2] || 1); r = mol(m[1], iso); }
+      if (!r || q < 1 || q > 100) return null;
+      return { ...r, label: r.label + (q > 1 ? sup(q) : "") + "⁺", q, w, txt: txt.trim() };
+    }
+    function parse() {
+      multi = []; bad = [];
+      sel("ions").value.split(/[,;\n]+/).forEach(t => { if (!t.trim()) return; const x = ion(t); x ? multi.push(x) : bad.push(t.trim()); });
+      multi = multi.slice(0, COL.length);
+      box.querySelector(".pi-bad").textContent = bad.length ? `${TL.pi_bad}: ${bad.join(", ")}` : "";
+      hits = []; draw();
+    }
+    const isMulti = () => sel("multi").checked && multi.length > 0;
+    /* species list → each with ion mass (u), charge, weight, colour */
+    function species() {
+      if (isMulti()) return multi.map((x, i) => ({ ...x, col: COL[i] }));
+      const Mg = S.A + S.me / UKEV, r = V("ratio") / 100;
+      return [{ label: TL.pi_gs, M: Mg, q: 1, w: 1 - r, col: COL[0], ex: 0, txt: S.label.split(" / ")[0] },
+              { label: TL.pi_is, M: Mg + S.ex / UKEV, q: 1, w: r, col: COL[1], ex: S.ex, txt: S.label.split(" / ")[1] }];
+    }
+    /* ideal Penning trap: ν_c = qB/(2πm), ν_z = √(qU₀/(m d²))/(2π), ν± = ν_c/2 ± √(ν_c²/4 − ν_z²/2) */
+    function freqs(sp) {
+      const B = V("B"), U0 = V("u0"), d = V("dch") / 1000;
+      const m = (sp.M - sp.q * MEU) * U, q = sp.q * QE;
+      const nc = q * B / (2 * Math.PI * m), nz = Math.sqrt(q * U0 / (m * d * d)) / (2 * Math.PI), disc = nc * nc / 4 - nz * nz / 2;
+      const r = disc > 0 ? Math.sqrt(disc) : NaN;
+      return { nc, nz, np: nc / 2 + r, nm: nc / 2 - r, stable: disc > 0 };
+    }
+    const ph = x => ((x % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+    const adist = (a, b) => { let d = Math.abs(a - b) % (2 * Math.PI); return Math.min(d, 2 * Math.PI - d); };
+    function phys() {
+      const t = V("tacc") / 1000, sp = species().map(s => { const f = freqs(s); return { ...s, ...f, phi: ph(2 * Math.PI * f.nc * t), n: Math.floor(f.nc * t) }; });
+      const nu = sp[0].nc, sig = Math.hypot(V("spot") / 10 / 6, 2 * Math.PI * nu * t * 1e-10);
+      let minsep = Infinity, pair = null;
+      for (let i = 0; i < sp.length; i++) for (let j = i + 1; j < sp.length; j++) { const d = adist(sp[i].phi, sp[j].phi); if (d < minsep) { minsep = d; pair = [i, j]; } }
+      return { B: V("B"), t, sp, nu, sig, d: minsep, pair, sep: sp.length > 1 ? minsep / sig : Infinity, R: 2 * Math.PI * nu * t / (2.3548 * sig) };
+    }
+    /* hit types: 2 centre spot (no radial motion), 3 magnetron reference, 10+i species i */
+    function shoot(n) { const p = phys(), W = p.sp.reduce((a, s) => a + s.w, 0) || 1; for (let k = 0; k < n; k++) {
       const u = Math.random();
       if (u < V("cfrac") / 100) { hits.push([0.035 * gauss(), 0.035 * gauss(), 2]); continue; }
       if (sel("ref").checked && u < V("cfrac") / 100 + 0.15) { const a = Math.PI / 2 + p.sig * gauss(), r = 0.62 + 0.05 * gauss(); hits.push([r * Math.cos(a), r * Math.sin(a), 3]); continue; }
-      const iso = Math.random() < V("ratio") / 100, a = (iso ? p.pm : p.pg) + p.sig * gauss(), r = 0.62 + 0.05 * gauss();
-      hits.push([r * Math.cos(a) + 0.02 * gauss(), r * Math.sin(a) + 0.02 * gauss(), iso ? 1 : 0]); } }
+      let x = Math.random() * W, i = 0; while (i < p.sp.length - 1 && (x -= p.sp[i].w) > 0) i++;
+      const a = p.sp[i].phi + p.sig * gauss(), r = 0.62 + 0.05 * gauss();
+      hits.push([r * Math.cos(a) + 0.02 * gauss(), r * Math.sin(a) + 0.02 * gauss(), 10 + i]); } }
+    const hitCol = (k, sp) => k === 2 ? "rgba(30,30,40,.55)" : k === 3 ? "rgba(127,127,160,.6)" : ((sp[k - 10] || {}).col || "#888") + "8c";
     function paint(g, W, H, ink) {      /* detector view */
       const p = phys(), R = Math.min(W, H) / 2 - 18, cx = W / 2, cy = H / 2;
       g.fillStyle = "rgba(127,127,160,.08)"; g.beginPath(); g.arc(cx, cy, R, 0, 6.283); g.fill(); g.strokeStyle = "rgba(127,127,160,.6)"; g.lineWidth = 1.2; g.stroke();
@@ -484,43 +559,73 @@
         const n = 72, hgrid = new Array(n * n).fill(0); let mx = 0;
         hits.forEach(([x, y]) => { const i = Math.floor((x + 1) / 2 * n), j = Math.floor((1 - y) / 2 * n); if (i >= 0 && i < n && j >= 0 && j < n) mx = Math.max(mx, ++hgrid[j * n + i]); });
         const c = 2 * R / n; for (let j = 0; j < n; j++) for (let i = 0; i < n; i++) { const v = hgrid[j * n + i]; if (v) { g.fillStyle = viridis(0.15 + 0.85 * Math.sqrt(v / mx)); g.fillRect(cx - R + i * c, cy - R + j * c, Math.ceil(c), Math.ceil(c)); } }
-      } else hits.forEach(([x, y, k]) => { g.fillStyle = ["rgba(62,99,221,.55)", "rgba(229,72,77,.55)", "rgba(30,30,40,.55)", "rgba(127,127,160,.6)"][k]; g.beginPath(); g.arc(cx + x * R, cy - y * R, 1.8, 0, 6.283); g.fill(); });
+      } else hits.forEach(([x, y, k]) => { g.fillStyle = hitCol(k, p.sp); g.beginPath(); g.arc(cx + x * R, cy - y * R, 1.8, 0, 6.283); g.fill(); });
       g.strokeStyle = "rgba(30,30,40,.6)"; g.lineWidth = 1; g.beginPath(); g.arc(cx, cy, 6, 0, 6.283); g.stroke();    /* centre spot */
       g.fillStyle = ink; g.font = "11px system-ui"; g.textAlign = "left"; g.fillText(TL.pi_center, cx + 9, cy + 14);
       g.fillStyle = "rgba(127,127,160,.9)"; g.beginPath(); g.arc(cx, cy - 0.62 * R, 5, 0, 6.283); g.fill();   /* magnetron reference spot */
       g.font = "11px system-ui"; g.textAlign = "center"; g.fillStyle = ink; g.fillText(TL.pi_ref, cx, cy - 0.62 * R - 10);
-      [[p.pg, "#3e63dd", TL.pi_gs], [p.pm, "#e5484d", TL.pi_is]].forEach(([a, col, l]) => { const x = cx + 0.62 * R * Math.cos(a), y = cy - 0.62 * R * Math.sin(a);
-        g.strokeStyle = col; g.lineWidth = 1.5; g.beginPath(); g.arc(x, y, Math.max(6, 0.62 * R * p.sig * 2), 0, 6.283); g.stroke(); g.fillStyle = col; g.fillText(l, x, y - Math.max(10, 0.62 * R * p.sig * 2) - 4); });
-      g.textAlign = "left"; g.fillStyle = ink; g.fillText(`t_acc = ${V("tacc")} ms · B = ${p.B} T · ν_c = ${p.nu.toFixed(3)} Hz · n = ${p.n.toLocaleString()} turns`, 8, 14);
+      const rr = Math.max(6, 0.62 * R * p.sig * 2);
+      p.sp.forEach((s, i) => { const x = cx + 0.62 * R * Math.cos(s.phi), y = cy - 0.62 * R * Math.sin(s.phi);
+        g.strokeStyle = s.col; g.lineWidth = 1.5; g.beginPath(); g.arc(x, y, rr, 0, 6.283); g.stroke();
+        const lx = cx + (0.62 * R + rr + 14) * Math.cos(s.phi), ly = cy - (0.62 * R + rr + 14) * Math.sin(s.phi) + 4 + (i % 2 ? 11 : 0) * (p.sp.length > 3 ? 1 : 0);
+        g.fillStyle = s.col; g.font = "bold 11px system-ui"; g.fillText(s.label, Math.max(24, Math.min(W - 24, lx)), Math.max(12, Math.min(H - 4, ly))); });
+      g.textAlign = "left"; g.font = "11px system-ui"; g.fillStyle = ink; g.fillText(`t_acc = ${V("tacc")} ms · B = ${p.B} T · ν_c(${p.sp[0].label}) = ${p.nu.toFixed(3)} Hz · n = ${p.sp[0].n.toLocaleString()} turns`, 8, 14);
     }
     function paintH(g, W, H, ink) {     /* angle histogram */
-      const P = { l: 48, t: 10, r: W - 10, b: H - 36 }, nb = 120, h = new Array(nb).fill(0);
+      const p = phys(), P = { l: 48, t: 10, r: W - 10, b: H - 36 }, nb = 120, h = new Array(nb).fill(0);
       hits.forEach(([x, y, k]) => { if (k === 2) return; const a = (Math.atan2(y, x) + 2 * Math.PI) % (2 * Math.PI); h[Math.min(nb - 1, Math.floor(a / (2 * Math.PI) * nb))]++; });
       const mx = Math.max(4, ...h) * 1.1, [X, Y] = axes(g, P, [0, 360], [0, mx], TL.pi_angle, "counts", ink, 4), bw = (P.r - P.l) / nb;
       h.forEach((v, i) => { if (v) { g.fillStyle = "rgba(142,78,198,.75)"; g.fillRect(X(i * 360 / nb), Y(v), Math.max(1, bw - 0.4), P.b - Y(v)); } });
-      const p = phys(); [[p.pg, "#3e63dd"], [p.pm, "#e5484d"]].forEach(([a, c]) => { g.strokeStyle = c; g.setLineDash([4, 3]); g.beginPath(); g.moveTo(X(a * 180 / Math.PI), P.t); g.lineTo(X(a * 180 / Math.PI), P.b); g.stroke(); g.setLineDash([]); });
+      p.sp.forEach((s, i) => { g.strokeStyle = s.col; g.setLineDash([4, 3]); g.beginPath(); g.moveTo(X(s.phi * 180 / Math.PI), P.t); g.lineTo(X(s.phi * 180 / Math.PI), P.b); g.stroke(); g.setLineDash([]);
+        g.fillStyle = s.col; g.font = "10px system-ui"; g.textAlign = "center"; g.fillText(s.label, X(s.phi * 180 / Math.PI), P.t + 10 + 11 * (i % 3)); });
     }
+    const f3 = v => isFinite(v) ? v.toLocaleString("en-US", { minimumFractionDigits: 3, maximumFractionDigits: 3 }) : "—";
+    function table(p) {      /* eigenfrequencies of every species (ideal trap, masses from AME2020 / NUBASE2020) */
+      const ref = p.sp[0];
+      const rowsH = p.sp.map(s => `<tr><td><span class="pi-dot" style="background:${s.col}"></span>${s.label}</td><td>${s.q}</td><td>${(s.M - s.q * MEU).toFixed(6)}</td>` +
+        `<td>${f3(s.nc)}</td><td>${f3(s.np)}</td><td>${f3(s.nm)}</td><td>${f3(s.nz)}</td><td>${(s.phi * 180 / Math.PI).toFixed(1)}°</td>` +
+        `<td>${s === ref ? "—" : ((s.nc - ref.nc) >= 0 ? "+" : "") + (s.nc - ref.nc).toFixed(4) + " Hz / " + (adist(s.phi, ref.phi) * 180 / Math.PI).toFixed(1) + "°"}</td>` +
+        `<td class="zg-muted">${s.src || "NUBASE2020"}${s.est ? " (#)" : ""}</td></tr>`).join("");
+      box.querySelector(".pi-freq").innerHTML = `<table class="zg-table pi-tab"><thead><tr><th>${TL.ion}</th><th>q</th><th>m_ion (u)</th><th>ν_c (Hz)</th><th>ν₊ (Hz)</th><th>ν₋ (Hz)</th><th>ν_z (Hz)</th><th>φ_c</th><th>Δν_c / Δφ</th><th>${TL.pi_mtab}</th></tr></thead><tbody>${rowsH}</tbody></table>` +
+        `<p class="zg-muted pi-inv">ν₊ + ν₋ = ν_c · ν₊² + ν₋² + ν_z² = ν_c² · ν₋ ≈ U₀/(4πB d²) (${TL.pi_mindep}) ${p.sp.some(s => !s.stable) ? " · ⚠ " + TL.pi_unstable : ""}</p>`;
+    }
+    const mq = s => (s.M - s.q * MEU) / s.q;
     function draw() {
       if (!S) return; const p = phys();
       { const [g, W, H] = crisp(cv); paint(g, W, H, inkOf()); }
       { const [g, W, H] = crisp(cvh); paintH(g, W, H, inkOf()); }
+      table(p);
       const ok = p.sep >= 3;
-      msg(box, `${S.label}: Eₓ = ${S.ex.toFixed(1)} keV → Δν_c = ${p.dnu.toExponential(3)} Hz · Δφ = ${(p.d * 180 / Math.PI).toFixed(1)}° · σ_φ = ${(p.sig * 180 / Math.PI).toFixed(1)}° · ` +
+      if (isMulti()) {
+        const [i, j] = p.pair || [0, 0], a = p.sp[i], b = p.sp[j];
+        msg(box, p.sp.length < 2 ? `${a.label}: ν_c = ${f3(a.nc)} Hz` :
+          `${p.sp.length} ${TL.pi_species} · ${TL.pi_closest}: ${a.label} / ${b.label} · Δφ = ${(p.d * 180 / Math.PI).toFixed(1)}° · σ_φ = ${(p.sig * 180 / Math.PI).toFixed(1)}° · Δφ/σ_φ = ${p.sep.toFixed(1)} · R ≈ ${p.R.toExponential(2)} (${TL.need} m/Δm = ${mq(a) === mq(b) ? "∞" : (mq(a) / Math.abs(mq(a) - mq(b))).toExponential(2)}) · ${ok ? "✔ " + TL.separated : "… " + TL.overlap}`);
+        return;
+      }
+      const g = p.sp[0], m = p.sp[1], dnu = g.nc - m.nc;
+      msg(box, `${S.label}: Eₓ = ${S.ex.toFixed(1)} keV → Δν_c = ${dnu.toExponential(3)} Hz · Δφ = ${(p.d * 180 / Math.PI).toFixed(1)}° · σ_φ = ${(p.sig * 180 / Math.PI).toFixed(1)}° · ` +
         `Δφ/σ_φ = ${p.sep.toFixed(1)} · R ≈ ${p.R.toExponential(2)} (${TL.need} m/Δm = ${((S.A + S.me / UKEV) * UKEV / S.ex).toExponential(2)}) · ${ok ? "✔ " + TL.separated : "… " + TL.overlap}`);
     }
-    box.addEventListener("input", e => { if (["tacc", "B", "spot", "ratio", "cfrac"].includes(e.target.name)) { hits = []; draw(); } });
-    box.addEventListener("change", e => { if (e.target.name === "iso") pick(); if (e.target.name === "pix" || e.target.name === "ref") draw(); });
+    box.addEventListener("input", e => { const n = e.target.name; if (["tacc", "B", "spot", "ratio", "cfrac", "u0", "dch"].includes(n)) { if (n !== "u0" && n !== "dch") hits = []; draw(); } });
+    let tId = 0;
+    box.addEventListener("input", e => { if (e.target.name === "ions") { clearTimeout(tId); tId = setTimeout(parse, 350); } });
+    box.addEventListener("change", e => { const n = e.target.name;
+      if (n === "iso") pick(); if (n === "pix" || n === "ref") draw();
+      if (n === "multi") { box.querySelector(".pi-man").hidden = !e.target.checked; box.querySelector(".pi-single").hidden = e.target.checked; e.target.checked ? parse() : (hits = [], draw()); }
+      if (n === "mtab") { sel("multi").checked ? parse() : draw(); } });
     box.addEventListener("click", e => {
       const a = e.target.closest("[data-act]")?.dataset.act; if (!a || !S) return;
       if (a === "shot") { shoot(V("nshot")); draw(); }
       if (a === "clear") { hits = []; draw(); }
       if (a === "rand") { sel("iso").value = Math.floor(Math.random() * list.length); pick(); }
-      if (a === "auto") { /* shortest t_acc with Δφ ≥ 3σ_φ (and not wrapped back) */
+      if (a === "preset") { sel("ions").value = e.target.closest("[data-ions]").dataset.ions; parse(); }
+      if (a === "auto") { /* shortest t_acc with every pair of spots ≥ 3σ_φ apart (angles wrap every 2π) */
         const el = sel("tacc"); let best = null; for (let ms = 1; ms <= 5000; ms++) { el.value = ms; if (phys().sep >= 3) { best = ms; break; } }
         el.max = Math.max(+el.max, best || 5000); el.value = best || el.value; el.dispatchEvent(new Event("input", { bubbles: true })); shoot(V("nshot")); draw(); }
       if (a === "png") { savePNG(cv, paint, "pi-icr-detector"); }
       if (a === "png2") savePNG(cvh, paintH, "pi-icr-angle");
-      if (a === "csv" && window.zgExport) window.zgExport.csv(["x_rel", "y_rel", "angle_deg", "state"], hits.map(([x, y, k]) => [x.toFixed(4), y.toFixed(4), k === 2 ? "" : ((Math.atan2(y, x) * 180 / Math.PI + 360) % 360).toFixed(2), ["ground", "isomer", "centre", "magnetron-reference"][k]]), "pi-icr-hits");
+      if (a === "csv" && window.zgExport) { const sp = phys().sp; window.zgExport.csv(["x_rel", "y_rel", "angle_deg", "state"], hits.map(([x, y, k]) => [x.toFixed(4), y.toFixed(4), k === 2 ? "" : ((Math.atan2(y, x) * 180 / Math.PI + 360) % 360).toFixed(2), k === 2 ? "centre" : k === 3 ? "magnetron-reference" : (sp[k - 10] || {}).txt || "?"]), "pi-icr-hits"); }
+      if (a === "fcsv" && window.zgExport) { const p = phys(); window.zgExport.csv(["ion", "q", "m_ion_u", "nu_c_Hz", "nu_plus_Hz", "nu_minus_Hz", "nu_z_Hz", "phi_c_deg", "mass_table", "B_T", "U0_V", "d_mm", "t_acc_ms"], p.sp.map(s => [s.txt, s.q, (s.M - s.q * MEU).toFixed(8), s.nc.toFixed(4), s.np.toFixed(4), s.nm.toFixed(4), s.nz.toFixed(4), (s.phi * 180 / Math.PI).toFixed(2), s.src || "NUBASE2020", p.B, V("u0"), V("dch"), V("tacc")]), "pi-icr-frequencies"); }
     });
     const init = () => rows.length ? build() : setTimeout(init, 200); init();
   }

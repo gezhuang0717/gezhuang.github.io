@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-04T10:34:47+00:00",
+  "checked_at": "2026-10-04T21:21:43+00:00",
   "feeds": [
     {
       "source": "arXiv — ion traps & mass spectrometry",
@@ -30,6 +30,80 @@
       "status": "PASS",
       "matched": 30,
       "new": 5
+    },
+    {
+      "source": "Physical Review Letters — Nuclear Physics",
+      "status": "PASS",
+      "matched": 30,
+      "new": 8
+    },
+    {
+      "source": "Physical Review Letters — traps, masses & astrophysics",
+      "status": "PASS",
+      "matched": 0,
+      "new": 0
+    },
+    {
+      "source": "Physical Review C",
+      "status": "PASS",
+      "matched": 10,
+      "new": 8
+    },
+    {
+      "source": "Nature Physics",
+      "status": "PASS",
+      "matched": 6,
+      "new": 3
+    },
+    {
+      "source": "Nature — nuclear physics",
+      "status": "FAILED",
+      "error": "not well-formed (invalid token): line 14, column 4"
+    },
+    {
+      "source": "Nature — nuclear astrophysics",
+      "status": "FAILED",
+      "error": "not well-formed (invalid token): line 14, column 4"
+    },
+    {
+      "source": "MDPI Atoms",
+      "status": "FAILED",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "TRIUMF news",
+      "status": "PASS",
+      "matched": 10,
+      "new": 3
+    },
+    {
+      "source": "GANIL news",
+      "status": "PASS",
+      "matched": 10,
+      "new": 3
+    },
+    {
+      "source": "ECT* news & workshops",
+      "status": "PASS",
+      "matched": 10,
+      "new": 3
+    },
+    {
+      "source": "MSU Today — FRIB & nuclear science",
+      "status": "FAILED",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source": "IAEA — nuclear science news",
+      "status": "PASS",
+      "matched": 2,
+      "new": 2
+    },
+    {
+      "source": "Ion Traps Newsletter (iontraps.net)",
+      "status": "PASS",
+      "matched": 10,
+      "new": 2
     }
   ]
 }

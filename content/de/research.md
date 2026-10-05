@@ -10,6 +10,8 @@ Mit hochpräziser Ionenfallen- und Speicherring-Massenspektrometrie untersuche i
 
 {{< gallery >}}
 
+{{< trap-zoo >}}
+
 ## Exotische N = Z-Kerne bis ¹⁰⁰Sn — MASSPASS
 
 Projekt der Academy Research Fellowship (Leitung). Massenmessungen exotischer *N* = *Z*-Kerne und ihrer Nachbarn bis ¹⁰⁰Sn an IGISOL (Jyväskylä) und RIKEN (Japan): Schalenentwicklung hin zum schwersten selbstkonjugierten doppelt magischen Kern und kernphysikalische Eingangsdaten für den rp-Prozess. [Projektseite](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)

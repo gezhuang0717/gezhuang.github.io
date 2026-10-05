@@ -10,6 +10,8 @@ I use high-precision ion-trap and storage-ring mass spectrometry to answer quest
 
 {{< gallery >}}
 
+{{< trap-zoo >}}
+
 ## Exotic N = Z nuclei up to ¹⁰⁰Sn — MASSPASS
 
 Academy Fellowship project (PI). Mass measurements of exotic *N* = *Z* nuclei up to ¹⁰⁰Sn and their vicinity at IGISOL (Jyväskylä) and RIKEN (Japan), probing shell evolution towards the heaviest self-conjugate doubly magic nucleus and the nuclear physics input to the rp-process. [Project page](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)

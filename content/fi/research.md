@@ -10,6 +10,8 @@ Käytän tarkkaa ioniloukku- ja varastorengasmassaspektrometriaa neutriinofysiik
 
 {{< gallery >}}
 
+{{< trap-zoo >}}
+
 ## Eksoottiset N = Z -ytimet ¹⁰⁰Sn:ään asti — MASSPASS
 
 Akatemiatutkijan hanke (johtaja). Eksoottisten *N* = *Z* -ytimien ja niiden naapurien massamittaukset ¹⁰⁰Sn:ään asti IGISOLissa (Jyväskylä) ja RIKENissä (Japani): kuorirakenteen kehitys kohti raskainta itsekonjugoitua kaksoismaagista ydintä sekä rp-prosessin ydinfysikaalinen syöte. [Hankkeen sivu](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)

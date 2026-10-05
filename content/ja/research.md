@@ -10,6 +10,8 @@ showDate: false
 
 {{< gallery >}}
 
+{{< trap-zoo >}}
+
 ## ¹⁰⁰Sn までの N = Z エキゾチック核 — MASSPASS
 
 アカデミー研究員プロジェクト（代表）。IGISOL（ユヴァスキュラ）と RIKEN（日本）で ¹⁰⁰Sn までの *N* = *Z* エキゾチック核とその近傍核の質量を測定し、最も重い自己共役二重魔法数核へ向かう殻構造の変化と rp 過程の核物理入力を調べています。[プロジェクトページ](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)

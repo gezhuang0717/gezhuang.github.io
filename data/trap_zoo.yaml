@@ -1,0 +1,96 @@
+# Animated sketches of ion and atom traps (layouts/_shortcodes/trap-zoo.html, static/js/trap-zoo.js).
+# Used on Research ("Techniques in pictures") and on the Games page. Add a trap: new entry here + a draw
+# function with the same key in static/js/trap-zoo.js.
+title:
+  en: "The family of ion and atom traps — how they work"
+  zh: "离子阱与原子阱家族——工作原理"
+  fi: "Ioni- ja atomiloukkujen perhe — miten ne toimivat"
+  de: "Die Familie der Ionen- und Atomfallen — wie sie funktionieren"
+  ja: "イオントラップと原子トラップの仲間たち——しくみ"
+note:
+  en: "Animated sketches, not to scale. Red/blue = electrode polarity (switching with the RF where relevant); the coloured trail is one ion or atom."
+  zh: "动画示意，不按比例。红/蓝 = 电极极性（射频装置中随射频切换）；彩色轨迹为一个离子或原子。"
+  fi: "Animoituja luonnoksia, ei mittakaavassa. Punainen/sininen = elektrodien napaisuus (vaihtuu RF:n mukana); värijälki on yksi ioni tai atomi."
+  de: "Animierte Skizzen, nicht maßstäblich. Rot/Blau = Elektrodenpolarität (wechselt mit der RF, wo zutreffend); die farbige Spur ist ein Ion oder Atom."
+  ja: "アニメーションによる模式図（縮尺は不正確）。赤/青 = 電極の極性（RF 装置では RF とともに反転）；色付きの軌跡は1個のイオンまたは原子。"
+traps:
+  - key: penning
+    name: {en: Hyperbolic Penning trap, zh: 双曲面彭宁阱, fi: Hyperbolinen Penning-loukku, de: Hyperbolische Penning-Falle, ja: 双曲面ペニングトラップ}
+    how:
+      en: "Strong axial magnetic field + weak electric quadrupole. Three eigenmotions: fast cyclotron ν₊, slow magnetron ν₋, axial ν_z; ν₊ + ν₋ = ν_c = qB/(2πm) gives the mass."
+      zh: "强轴向磁场 + 弱电四极场。三种本征运动：快速回旋 ν₊、慢磁控 ν₋、轴向 ν_z；ν₊ + ν₋ = ν_c = qB/(2πm) 给出质量。"
+      fi: "Voimakas aksiaalinen magneettikenttä + heikko sähköinen kvadrupoli. Kolme ominaisliikettä: nopea syklotroni ν₊, hidas magnetroni ν₋, aksiaalinen ν_z; ν₊ + ν₋ = ν_c = qB/(2πm) antaa massan."
+      de: "Starkes axiales Magnetfeld + schwacher elektrischer Quadrupol. Drei Eigenbewegungen: schnelle Zyklotron- ν₊, langsame Magnetron- ν₋, axiale ν_z; ν₊ + ν₋ = ν_c = qB/(2πm) liefert die Masse."
+      ja: "強い軸方向磁場＋弱い電気四重極場。3つの固有運動：速いサイクロトロン ν₊、遅いマグネトロン ν₋、軸方向 ν_z。ν₊ + ν₋ = ν_c = qB/(2πm) から質量が決まる。"
+  - key: cyl
+    name: {en: Cylindrical Penning trap, zh: 圆柱形彭宁阱, fi: Sylinterimäinen Penning-loukku, de: Zylindrische Penning-Falle, ja: 円筒型ペニングトラップ}
+    how:
+      en: "Same principle with stacked open cylinders: easy injection and ejection; correction electrodes make the potential harmonic. Used for purification and precision traps (e.g. JYFLTRAP)."
+      zh: "原理相同，由一串开口圆柱电极组成：便于注入与引出；补偿电极使势阱接近谐振。用于提纯阱与精密阱（如 JYFLTRAP）。"
+      fi: "Sama periaate pinotuilla avoimilla sylintereillä: helppo injektio ja ejektio; korjauselektrodit tekevät potentiaalista harmonisen. Puhdistus- ja tarkkuusloukut (esim. JYFLTRAP)."
+      de: "Gleiches Prinzip mit gestapelten offenen Zylindern: einfache Injektion und Ejektion; Korrekturelektroden machen das Potential harmonisch. Reinigungs- und Präzisionsfallen (z. B. JYFLTRAP)."
+      ja: "同じ原理を開いた円筒電極の積み重ねで実現：入射・取り出しが容易で、補正電極でポテンシャルを調和型にする。精製・精密トラップ（例：JYFLTRAP）に使用。"
+  - key: paul
+    name: {en: Paul (RF) trap, zh: 保罗（射频）阱, fi: Paul-loukku (RF), de: Paul-Falle (RF), ja: パウル（RF）トラップ}
+    how:
+      en: "Only an oscillating (RF) electric quadrupole: the force switches faster than the ion can escape and averages to a confining pseudopotential (Mathieu stability)."
+      zh: "只有振荡的射频电四极场：力的方向切换快于离子逃逸，平均后形成囚禁赝势（Mathieu 稳定性）。"
+      fi: "Pelkkä värähtelevä (RF) sähköinen kvadrupoli: voima vaihtuu nopeammin kuin ioni ehtii karata ja keskiarvoistuu sitovaksi pseudopotentiaaliksi (Mathieu-stabiilisuus)."
+      de: "Nur ein oszillierender (RF) elektrischer Quadrupol: die Kraft wechselt schneller als das Ion entweichen kann und mittelt sich zu einem einschließenden Pseudopotential (Mathieu-Stabilität)."
+      ja: "振動する（RF）電気四重極場のみ：力の向きがイオンの逃げるより速く入れ替わり、平均として閉じ込めの擬ポテンシャルになる（マチュー安定性）。"
+  - key: linear
+    name: {en: Linear Paul trap / RFQ, zh: 线性保罗阱 / RFQ, fi: Lineaarinen Paul-loukku / RFQ, de: Lineare Paul-Falle / RFQ, ja: 線形パウルトラップ / RFQ}
+    how:
+      en: "Four rods with RF give radial confinement (cross-section shown); DC end electrodes trap axially. With buffer gas it cools and bunches beams — the cooler-buncher before every trap."
+      zh: "四根加射频的电极提供径向约束（图为截面）；两端直流电极实现轴向囚禁。加缓冲气体可冷却并聚束——每台离子阱前的冷却聚束器。"
+      fi: "Neljä RF-sauvaa antaa säteittäisen sidonnan (poikkileikkaus); DC-pääteelektrodit sitovat aksiaalisesti. Puskurikaasulla se jäähdyttää ja kimputtaa suihkun — jäähdytin-kimputin ennen jokaista loukkua."
+      de: "Vier Stäbe mit RF schließen radial ein (Querschnitt); DC-Endelektroden axial. Mit Puffergas kühlt und bündelt sie den Strahl — der Kühler-Buncher vor jeder Falle."
+      ja: "RF をかけた4本のロッドで径方向に閉じ込め（断面図）、両端の DC 電極で軸方向に閉じ込める。バッファーガスで冷却・バンチ化——各トラップ手前のクーラー・バンチャー。"
+  - key: mrtof
+    name: {en: MR-TOF mass spectrometer, zh: 多次反射飞行时间质谱仪, fi: MR-TOF-massaspektrometri, de: MR-TOF-Massenspektrometer, ja: MR-TOF 質量分析器}
+    how:
+      en: "Two electrostatic mirrors fold a flight path of kilometres into a metre: TOF ∝ √(m/q), resolving power above 10⁵ within milliseconds; also a fast isobar separator."
+      zh: "两面静电镜把数公里的飞行路径折叠进一米之内：TOF ∝ √(m/q)，毫秒内分辨本领超过 10⁵；也是快速的同量异位素分离器。"
+      fi: "Kaksi sähköstaattista peiliä taittaa kilometrien lentomatkan metriin: TOF ∝ √(m/q), erotuskyky yli 10⁵ millisekunneissa; myös nopea isobaarierotin."
+      de: "Zwei elektrostatische Spiegel falten Kilometer Flugweg auf einen Meter: TOF ∝ √(m/q), Auflösungsvermögen über 10⁵ in Millisekunden; auch ein schneller Isobarenseparator."
+      ja: "2枚の静電ミラーが数 km の飛行経路を1 m に折りたたむ：TOF ∝ √(m/q)、ミリ秒で分解能 10⁵ 超；高速な同重体分離器にもなる。"
+  - key: ring
+    name: {en: Storage ring, zh: 储存环, fi: Varastorengas, de: Speicherring, ja: 蓄積リング}
+    how:
+      en: "Dipole magnets bend and quadrupoles focus the circulating ions; the revolution frequency gives m/q (isochronous or Schottky mass spectrometry), even for a single ion."
+      zh: "二极磁铁偏转、四极磁铁聚焦回旋的离子；回旋频率给出 m/q（等时性或肖特基质谱），甚至单个离子即可测量。"
+      fi: "Dipolimagneetit taivuttavat ja kvadrupolit fokusoivat kiertäviä ioneja; kierrostaajuus antaa m/q:n (isokroninen tai Schottky-massaspektrometria), jopa yhdestä ionista."
+      de: "Dipolmagnete lenken ab, Quadrupole fokussieren die umlaufenden Ionen; die Umlauffrequenz liefert m/q (isochrone oder Schottky-Massenspektrometrie), sogar für ein einzelnes Ion."
+      ja: "偏向電磁石で曲げ、四重極電磁石で収束させて周回させる。周回周波数から m/q が分かる（等時性・ショットキー質量分析）、イオン1個でも可能。"
+  - key: ebit
+    name: {en: Electron-beam ion trap (EBIT), zh: 电子束离子阱 EBIT, fi: Elektronisuihkuioniloukku (EBIT), de: Elektronenstrahl-Ionenfalle (EBIT), ja: 電子ビームイオントラップ（EBIT）}
+    how:
+      en: "A dense electron beam ionises ions step by step and holds them radially by its space charge; drift-tube potentials trap them axially — source of highly charged ions."
+      zh: "高密度电子束逐级电离离子，并以空间电荷在径向束缚它们；漂移管电势提供轴向囚禁——高电荷态离子源。"
+      fi: "Tiheä elektronisuihku ionisoi ioneja askel askeleelta ja pitää ne säteittäin avaruusvarauksellaan; ajoputkien potentiaalit sitovat aksiaalisesti — korkeasti varattujen ionien lähde."
+      de: "Ein dichter Elektronenstrahl ionisiert schrittweise und hält die Ionen radial durch seine Raumladung; Driftröhrenpotentiale fangen axial — Quelle hochgeladener Ionen."
+      ja: "高密度の電子ビームが段階的にイオン化し、その空間電荷で径方向に保持；ドリフトチューブの電位で軸方向に閉じ込める——多価イオン源。"
+  - key: orbi
+    name: {en: Orbitrap, zh: 轨道阱 Orbitrap, fi: Orbitrap, de: Orbitrap, ja: オービトラップ}
+    how:
+      en: "Ions orbit a spindle electrode inside a barrel and oscillate along it with ω_z = √(k·q/m); the Fourier transform of the image current gives the mass spectrum."
+      zh: "离子绕纺锤形中心电极旋转，并沿轴向以 ω_z = √(k·q/m) 振荡；对感应电流做傅里叶变换得到质谱。"
+      fi: "Ionit kiertävät värttinäelektrodia ja värähtelevät sen suunnassa taajuudella ω_z = √(k·q/m); kuvavirran Fourier-muunnos antaa massaspektrin."
+      de: "Ionen kreisen um eine Spindelelektrode und schwingen entlang dieser mit ω_z = √(k·q/m); die Fourier-Transformation des Spiegelstroms liefert das Massenspektrum."
+      ja: "イオンは紡錘形電極のまわりを周回しつつ軸方向に ω_z = √(k·q/m) で振動；誘導電流のフーリエ変換で質量スペクトルを得る。"
+  - key: mot
+    name: {en: Magneto-optical trap (MOT), zh: 磁光阱 MOT, fi: Magneto-optinen loukku (MOT), de: Magneto-optische Falle (MOT), ja: 磁気光学トラップ（MOT）}
+    how:
+      en: "Six red-detuned laser beams slow neutral atoms by Doppler cooling; an anti-Helmholtz quadrupole field makes the scattering force push them to the centre — clouds at µK temperatures."
+      zh: "六束红失谐激光通过多普勒冷却减速中性原子；反亥姆霍兹四极磁场使散射力把原子推向中心——得到 µK 温度的原子云。"
+      fi: "Kuusi punasiirrettyä lasersädettä hidastaa neutraaleja atomeja Doppler-jäähdytyksellä; anti-Helmholtz-kvadrupolikenttä saa sirontavoiman työntämään ne keskelle — µK-lämpöisiä pilviä."
+      de: "Sechs rotverstimmte Laserstrahlen bremsen neutrale Atome durch Dopplerkühlung; ein Anti-Helmholtz-Quadrupolfeld lässt die Streukraft zur Mitte zeigen — Wolken bei µK."
+      ja: "赤方離調した6本のレーザーがドップラー冷却で中性原子を減速し、反ヘルムホルツ四重極磁場により散乱力が中心へ向かう——µK の原子雲。"
+  - key: tweezer
+    name: {en: Optical tweezer / dipole trap, zh: 光镊 / 光偶极阱, fi: Optinen pinsetti / dipoliloukku, de: Optische Pinzette / Dipolfalle, ja: 光ピンセット / 双極子トラップ}
+    how:
+      en: "A tightly focused far-detuned laser beam induces a dipole that is pulled into the intensity maximum (optical dipole force): single atoms held at the focus, arrays for quantum simulation."
+      zh: "紧聚焦的远失谐激光诱导原子偶极矩并把它拉向光强最大处（光偶极力）：在焦点处囚禁单个原子，阵列用于量子模拟。"
+      fi: "Tiukasti fokusoitu, kaukana resonanssista oleva lasersäde indusoi dipolin, joka vetäytyy intensiteetin maksimiin (optinen dipolivoima): yksittäiset atomit polttopisteessä, ryhmät kvanttisimulaatioon."
+      de: "Ein stark fokussierter, weit verstimmter Laserstrahl induziert einen Dipol, der ins Intensitätsmaximum gezogen wird (optische Dipolkraft): einzelne Atome im Fokus, Arrays für Quantensimulation."
+      ja: "強く集光した遠離調レーザーが誘起双極子を光強度の最大点へ引き寄せる（光双極子力）：焦点に単一原子を保持、配列は量子シミュレーションに。"

@@ -10,6 +10,8 @@ showDate: false
 
 {{< gallery >}}
 
+{{< trap-zoo >}}
+
 ## 直至 ¹⁰⁰Sn 的 N = Z 奇特核——MASSPASS
 
 芬兰科学院研究员项目（负责人）。在 IGISOL（于韦斯屈莱）和 RIKEN（日本）测量直至 ¹⁰⁰Sn 的 *N* = *Z* 奇特核及其附近核素的质量，研究通向最重自共轭双幻数核的壳演化以及 rp 过程所需的核物理输入。[项目主页](https://www.jyu.fi/en/projects/mass-measurements-of-exotic-nz-nuclei-up-to-100sn-and-the-vicinity-for-nuclear-physics-and-nuclear)

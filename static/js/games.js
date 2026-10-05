@@ -1,4 +1,4 @@
-/* Games page: four small physics games + an animated gallery of trap types.
+/* Games page: physics games (the trap zoo animation lives in static/js/trap-zoo.js).
    Data: static/data/nubase2020.json (NUBASE2020). Labels: data-labels JSON on [data-games]. */
 (() => {
   const root = document.querySelector("[data-games]");
@@ -387,55 +387,6 @@
     next();
   }
 
-  /* ── 5. Animated trap gallery ──────────────────────────────────────── */
-  function gallery() {
-    const kinds = ["penning", "cyl", "paul", "linear", "mrtof", "ring", "ebit", "orbi"];
-    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    root.querySelectorAll(".g-trap canvas").forEach((cv, idx) => {
-      const g = cv.getContext("2d"), k = kinds[idx], W = cv.width, H = cv.height, cx = W / 2, cy = H / 2; let t = 0, tr = [];
-      const elec = "rgba(214,140,40,.85)", elec2 = "rgba(90,120,220,.85)";
-      function frame() {
-        g.clearRect(0, 0, W, H); g.lineWidth = 3; let x = cx, y = cy;
-        if (k === "penning" || k === "cyl") {
-          g.strokeStyle = elec2;
-          if (k === "penning") { g.beginPath(); g.moveTo(40, 25); g.quadraticCurveTo(cx, 75, W - 40, 25); g.stroke(); g.beginPath(); g.moveTo(40, H - 25); g.quadraticCurveTo(cx, H - 75, W - 40, H - 25); g.stroke(); g.strokeStyle = elec; g.beginPath(); g.moveTo(20, 60); g.quadraticCurveTo(70, cy, 20, H - 60); g.stroke(); g.beginPath(); g.moveTo(W - 20, 60); g.quadraticCurveTo(W - 70, cy, W - 20, H - 60); g.stroke(); }
-          else { [30, 60, 90, 120, 150].forEach((yy, i) => { g.strokeStyle = i === 2 ? elec : elec2; g.strokeRect(30, yy - 12, W - 60, 22); }); }
-          x = cx + 38 * Math.cos(0.3 * t) + 12 * Math.cos(5 * t); y = cy + 25 * Math.cos(1.3 * t) * (k === "cyl" ? 1.6 : 1);
-        } else if (k === "paul" || k === "linear") {
-          if (k === "paul") { g.strokeStyle = elec; g.beginPath(); g.moveTo(25, 40); g.quadraticCurveTo(75, cy, 25, H - 40); g.stroke(); g.beginPath(); g.moveTo(W - 25, 40); g.quadraticCurveTo(W - 75, cy, W - 25, H - 40); g.stroke(); g.strokeStyle = elec2; g.beginPath(); g.moveTo(60, 20); g.quadraticCurveTo(cx, 60, W - 60, 20); g.stroke(); g.beginPath(); g.moveTo(60, H - 20); g.quadraticCurveTo(cx, H - 60, W - 60, H - 20); g.stroke(); }
-          else { /* cross-section: rods (radius 1.145 r₀) on the x and y axes, polarity switching with the RF */
-            const r0 = 30, rho = 1.145 * r0, Rc = r0 + rho, pol = Math.cos(14 * t) > 0;
-            g.save(); g.beginPath(); g.rect(0, 0, W, H); g.clip();
-            [[Rc, 0, 1], [-Rc, 0, 1], [0, Rc, 0], [0, -Rc, 0]].forEach(([a, b, s]) => { g.fillStyle = (s === 1) === pol ? elec : elec2; g.beginPath(); g.arc(cx + a, cy + b, rho, 0, 6.283); g.fill(); });
-            g.restore(); g.strokeStyle = "rgba(127,127,160,.5)"; g.lineWidth = 1; g.setLineDash([3, 3]); g.beginPath(); g.arc(cx, cy, r0, 0, 6.283); g.stroke(); g.setLineDash([]); }
-          /* Mathieu motion, q ≈ 0.4: secular oscillation × (1 − (q/2)·cos Ωt) micromotion, amplitude well inside r₀ */
-          const sc = k === "linear" ? 1 : 1.6, mx = 1 - 0.2 * Math.cos(14 * t), my = 1 + 0.2 * Math.cos(14 * t);
-          x = cx + 17 * sc * Math.cos(1.0 * t) * mx; y = cy + 13 * sc * Math.sin(1.37 * t + 0.6) * my;
-        } else if (k === "mrtof") {
-          g.strokeStyle = elec2; for (let i = 0; i < 4; i++) { g.strokeRect(14 + i * 9, 40, 6, H - 80); g.strokeRect(W - 20 - i * 9, 40, 6, H - 80); }
-          const u = (0.25 * t) % 1, tri = u < 0.5 ? u * 2 : 2 - u * 2; x = 55 + (W - 110) * (0.5 - 0.5 * Math.cos(Math.PI * tri)); y = cy + 8 * Math.sin(6 * t);
-        } else if (k === "ring") {
-          g.strokeStyle = elec2; g.beginPath(); g.ellipse(cx, cy, W * 0.38, H * 0.33, 0, 0, 6.283); g.stroke(); g.fillStyle = elec;
-          for (let i = 0; i < 6; i++) { const a = i / 6 * 6.283; g.fillRect(cx + W * 0.38 * Math.cos(a) - 6, cy + H * 0.33 * Math.sin(a) - 6, 12, 12); }
-          const a = 0.8 * t; x = cx + W * 0.38 * Math.cos(a) + 5 * Math.cos(9 * a) * Math.cos(a); y = cy + H * 0.33 * Math.sin(a) + 5 * Math.cos(9 * a) * Math.sin(a);
-        } else if (k === "ebit") {
-          g.strokeStyle = elec2; [[20, 70], [80, 140], [150, W - 20]].forEach(([a, b], i) => { g.strokeStyle = i === 1 ? elec : elec2; g.strokeRect(a, cy - 28, b - a, 56); });
-          g.strokeStyle = "rgba(255,200,40,.9)"; g.lineWidth = 2; g.beginPath(); g.moveTo(0, cy); g.lineTo(W, cy); g.stroke();
-          x = 110 + 28 * Math.cos(2.2 * t); y = cy + 6 * Math.sin(9 * t);
-        } else {                         /* Orbitrap: spindle + barrel */
-          g.strokeStyle = elec; g.beginPath(); g.ellipse(cx, cy, W * 0.38, 14, 0, 0, 6.283); g.stroke(); g.strokeStyle = elec2; g.strokeRect(cx - W * 0.42, cy - 52, W * 0.84, 104);
-          x = cx + W * 0.3 * Math.sin(1.4 * t); y = cy + 38 * Math.cos(9 * t);
-        }
-        tr.push([x, y]); if (tr.length > 260) tr.shift();
-        for (let i = 1; i < tr.length; i++) { g.strokeStyle = `hsla(${i / tr.length * 300},85%,55%,${i / tr.length})`; g.lineWidth = 1.5; g.beginPath(); g.moveTo(...tr[i - 1]); g.lineTo(...tr[i]); g.stroke(); }
-        g.fillStyle = "#e5484d"; g.beginPath(); g.arc(x, y, 4, 0, 6.283); g.fill();
-        t += 0.03; if (!reduce) requestAnimationFrame(frame);
-      }
-      frame();
-    });
-  }
-
-  gallery();
   fetch(root.dataset.src).then(r => r.json()).then(d => { rows = d.rows; hlGame(); quiz(d.elements); });
   tofGame(); mrtofGame(); rfqGame();
 })();

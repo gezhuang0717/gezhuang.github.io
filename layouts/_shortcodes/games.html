@@ -93,11 +93,7 @@
   <section class="zg-card g-box" id="g-quiz"><h2>🧩 {{ $t.quiz }}</h2><p class="zg-muted">{{ $t.quiz_n }}</p>
     <p class="g-q"></p><div class="g-opts zg-row"></div><p class="g-msg" aria-live="polite"></p></section>
   <section class="zg-card"><h2>🦓 {{ $t.gal }}</h2><p class="zg-muted">{{ $t.gal_n }}</p>
-    <div class="g-gallery">
-      {{- range slice "penning" "cyl" "paul" "linear" "mrtof" "ring" "ebit" "orbi" }}
-      <figure class="g-trap"><canvas width="240" height="180"></canvas><figcaption>{{ index $t (printf "t_%s" .) }}</figcaption></figure>
-      {{- end }}
-    </div></section>
+    {{ partial "zg/trap-zoo.html" (dict "heading" false) }}</section>
 </div>
 <script defer src="{{ "js/zg-export.js" | relURL }}"></script>
 <script defer src="{{ "js/games.js" | relURL }}"></script>

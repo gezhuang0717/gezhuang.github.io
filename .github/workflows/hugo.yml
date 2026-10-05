@@ -29,7 +29,8 @@ env:
   HUGO_VERSION: 0.166.0
 jobs:
   daily:
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || inputs.fetch)
+    # Runs on schedule, on manual request, and on every push to main (a push refreshes Daily only if it is older than 12 h)
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'push' || inputs.fetch)
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -48,8 +49,8 @@ jobs:
           LAST=$(git log -1 --format=%ct -- data/daily/feed-health.json || echo 0)
           AGE=$(( ($(date +%s) - ${LAST:-0}) / 3600 ))
           RUN=no
-          if [ "${{ github.event_name }}" != "schedule" ]; then RUN=yes; fi
-          case "$H" in 00|01|08|09) RUN=yes ;; esac
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then RUN=yes; fi
+          if [ "${{ github.event_name }}" = "schedule" ]; then case "$H" in 00|01|08|09) RUN=yes ;; esac; fi
           if [ "$AGE" -ge 12 ]; then RUN=yes; fi
           echo "Helsinki hour $H, last Daily update ${AGE} h ago -> run=$RUN"
           echo "run=$RUN" >> "$GITHUB_OUTPUT"
@@ -83,7 +84,7 @@ jobs:
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
   validate:
     needs: daily
-    if: always() && (needs.daily.result == 'success' || needs.daily.result == 'skipped') && needs.daily.outputs.ran != 'no'
+    if: always() && (needs.daily.result == 'success' || needs.daily.result == 'skipped') && (needs.daily.outputs.ran != 'no' || github.event_name != 'schedule')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

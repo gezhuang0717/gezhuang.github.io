@@ -469,8 +469,13 @@
       let d = Math.abs(pg - pm); d = Math.min(d, 2 * Math.PI - d);
       return { B, t, nu, dnu, sig, pg, pm, d, R: 2 * Math.PI * nu * t / (2.3548 * sig), n: Math.floor(nu * t), sep: d / sig };
     }
-    function shoot(n) { const p = phys(); for (let i = 0; i < n; i++) { const iso = Math.random() < V("ratio") / 100, a = (iso ? p.pm : p.pg) + p.sig * gauss(), r = 0.62 + 0.05 * gauss();
-      hits.push([r * Math.cos(a) + 0.02 * gauss(), r * Math.sin(a) + 0.02 * gauss(), iso]); } }
+    /* hit types: 0 ground-state cyclotron spot, 1 isomer, 2 centre spot (ions without radial motion), 3 magnetron reference spot */
+    function shoot(n) { const p = phys(); for (let i = 0; i < n; i++) {
+      const u = Math.random();
+      if (u < V("cfrac") / 100) { hits.push([0.035 * gauss(), 0.035 * gauss(), 2]); continue; }
+      if (sel("ref").checked && u < V("cfrac") / 100 + 0.15) { const a = Math.PI / 2 + p.sig * gauss(), r = 0.62 + 0.05 * gauss(); hits.push([r * Math.cos(a), r * Math.sin(a), 3]); continue; }
+      const iso = Math.random() < V("ratio") / 100, a = (iso ? p.pm : p.pg) + p.sig * gauss(), r = 0.62 + 0.05 * gauss();
+      hits.push([r * Math.cos(a) + 0.02 * gauss(), r * Math.sin(a) + 0.02 * gauss(), iso ? 1 : 0]); } }
     function paint(g, W, H, ink) {      /* detector view */
       const p = phys(), R = Math.min(W, H) / 2 - 18, cx = W / 2, cy = H / 2;
       g.fillStyle = "rgba(127,127,160,.08)"; g.beginPath(); g.arc(cx, cy, R, 0, 6.283); g.fill(); g.strokeStyle = "rgba(127,127,160,.6)"; g.lineWidth = 1.2; g.stroke();
@@ -479,7 +484,9 @@
         const n = 72, hgrid = new Array(n * n).fill(0); let mx = 0;
         hits.forEach(([x, y]) => { const i = Math.floor((x + 1) / 2 * n), j = Math.floor((1 - y) / 2 * n); if (i >= 0 && i < n && j >= 0 && j < n) mx = Math.max(mx, ++hgrid[j * n + i]); });
         const c = 2 * R / n; for (let j = 0; j < n; j++) for (let i = 0; i < n; i++) { const v = hgrid[j * n + i]; if (v) { g.fillStyle = viridis(0.15 + 0.85 * Math.sqrt(v / mx)); g.fillRect(cx - R + i * c, cy - R + j * c, Math.ceil(c), Math.ceil(c)); } }
-      } else hits.forEach(([x, y, iso]) => { g.fillStyle = iso ? "rgba(229,72,77,.55)" : "rgba(62,99,221,.55)"; g.beginPath(); g.arc(cx + x * R, cy - y * R, 1.8, 0, 6.283); g.fill(); });
+      } else hits.forEach(([x, y, k]) => { g.fillStyle = ["rgba(62,99,221,.55)", "rgba(229,72,77,.55)", "rgba(30,30,40,.55)", "rgba(127,127,160,.6)"][k]; g.beginPath(); g.arc(cx + x * R, cy - y * R, 1.8, 0, 6.283); g.fill(); });
+      g.strokeStyle = "rgba(30,30,40,.6)"; g.lineWidth = 1; g.beginPath(); g.arc(cx, cy, 6, 0, 6.283); g.stroke();    /* centre spot */
+      g.fillStyle = ink; g.font = "11px system-ui"; g.textAlign = "left"; g.fillText(TL.pi_center, cx + 9, cy + 14);
       g.fillStyle = "rgba(127,127,160,.9)"; g.beginPath(); g.arc(cx, cy - 0.62 * R, 5, 0, 6.283); g.fill();   /* magnetron reference spot */
       g.font = "11px system-ui"; g.textAlign = "center"; g.fillStyle = ink; g.fillText(TL.pi_ref, cx, cy - 0.62 * R - 10);
       [[p.pg, "#3e63dd", TL.pi_gs], [p.pm, "#e5484d", TL.pi_is]].forEach(([a, col, l]) => { const x = cx + 0.62 * R * Math.cos(a), y = cy - 0.62 * R * Math.sin(a);
@@ -488,7 +495,7 @@
     }
     function paintH(g, W, H, ink) {     /* angle histogram */
       const P = { l: 48, t: 10, r: W - 10, b: H - 36 }, nb = 120, h = new Array(nb).fill(0);
-      hits.forEach(([x, y]) => { const a = (Math.atan2(y, x) + 2 * Math.PI) % (2 * Math.PI); h[Math.min(nb - 1, Math.floor(a / (2 * Math.PI) * nb))]++; });
+      hits.forEach(([x, y, k]) => { if (k === 2) return; const a = (Math.atan2(y, x) + 2 * Math.PI) % (2 * Math.PI); h[Math.min(nb - 1, Math.floor(a / (2 * Math.PI) * nb))]++; });
       const mx = Math.max(4, ...h) * 1.1, [X, Y] = axes(g, P, [0, 360], [0, mx], TL.pi_angle, "counts", ink, 4), bw = (P.r - P.l) / nb;
       h.forEach((v, i) => { if (v) { g.fillStyle = "rgba(142,78,198,.75)"; g.fillRect(X(i * 360 / nb), Y(v), Math.max(1, bw - 0.4), P.b - Y(v)); } });
       const p = phys(); [[p.pg, "#3e63dd"], [p.pm, "#e5484d"]].forEach(([a, c]) => { g.strokeStyle = c; g.setLineDash([4, 3]); g.beginPath(); g.moveTo(X(a * 180 / Math.PI), P.t); g.lineTo(X(a * 180 / Math.PI), P.b); g.stroke(); g.setLineDash([]); });
@@ -501,8 +508,8 @@
       msg(box, `${S.label}: Eₓ = ${S.ex.toFixed(1)} keV → Δν_c = ${p.dnu.toExponential(3)} Hz · Δφ = ${(p.d * 180 / Math.PI).toFixed(1)}° · σ_φ = ${(p.sig * 180 / Math.PI).toFixed(1)}° · ` +
         `Δφ/σ_φ = ${p.sep.toFixed(1)} · R ≈ ${p.R.toExponential(2)} (${TL.need} m/Δm = ${((S.A + S.me / UKEV) * UKEV / S.ex).toExponential(2)}) · ${ok ? "✔ " + TL.separated : "… " + TL.overlap}`);
     }
-    box.addEventListener("input", e => { if (["tacc", "B", "spot", "ratio"].includes(e.target.name)) { hits = []; draw(); } });
-    box.addEventListener("change", e => { if (e.target.name === "iso") pick(); if (e.target.name === "pix") draw(); });
+    box.addEventListener("input", e => { if (["tacc", "B", "spot", "ratio", "cfrac"].includes(e.target.name)) { hits = []; draw(); } });
+    box.addEventListener("change", e => { if (e.target.name === "iso") pick(); if (e.target.name === "pix" || e.target.name === "ref") draw(); });
     box.addEventListener("click", e => {
       const a = e.target.closest("[data-act]")?.dataset.act; if (!a || !S) return;
       if (a === "shot") { shoot(V("nshot")); draw(); }
@@ -513,7 +520,7 @@
         el.max = Math.max(+el.max, best || 5000); el.value = best || el.value; el.dispatchEvent(new Event("input", { bubbles: true })); shoot(V("nshot")); draw(); }
       if (a === "png") { savePNG(cv, paint, "pi-icr-detector"); }
       if (a === "png2") savePNG(cvh, paintH, "pi-icr-angle");
-      if (a === "csv" && window.zgExport) window.zgExport.csv(["x_rel", "y_rel", "angle_deg", "state"], hits.map(([x, y, i]) => [x.toFixed(4), y.toFixed(4), ((Math.atan2(y, x) * 180 / Math.PI + 360) % 360).toFixed(2), i ? "isomer" : "ground"]), "pi-icr-hits");
+      if (a === "csv" && window.zgExport) window.zgExport.csv(["x_rel", "y_rel", "angle_deg", "state"], hits.map(([x, y, k]) => [x.toFixed(4), y.toFixed(4), k === 2 ? "" : ((Math.atan2(y, x) * 180 / Math.PI + 360) % 360).toFixed(2), ["ground", "isomer", "centre", "magnetron-reference"][k]]), "pi-icr-hits");
     });
     const init = () => rows.length ? build() : setTimeout(init, 200); init();
   }

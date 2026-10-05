@@ -68,12 +68,14 @@
       <label>B <select name="B"><option value="3">3 T</option><option value="7" selected>7 T</option><option value="9.4">9.4 T</option><option value="11.7">11.7 T</option></select></label>
       <label>{{ $t.counts }} <select name="nshot"><option>20</option><option selected>100</option><option>500</option><option>2000</option></select></label>
       <label class="g-chk"><input type="checkbox" name="pix"> {{ $t.v_pix }}</label>
+      <label class="g-chk"><input type="checkbox" name="ref" checked> {{ $t.pi_ref }}</label>
     </div>
     <div class="g-rfq-grid"><canvas width="420" height="420"></canvas><canvas width="420" height="420"></canvas></div>
     <div class="g-sliders">
       <label class="g-slider">t_acc <input type="range" name="tacc" min="1" max="2000" step="1" value="50"> <input type="number" class="g-num" data-for="tacc" step="any"><span class="g-unit">ms</span></label>
       <label class="g-slider">{{ $t.pi_spot }} <input type="range" name="spot" min="1" max="30" step="0.5" value="6"> <input type="number" class="g-num" data-for="spot" step="any"><span class="g-unit">0.1 mm</span></label>
       <label class="g-slider">{{ $t.pi_ratio }} <input type="range" name="ratio" min="0" max="90" step="1" value="30"> <input type="number" class="g-num" data-for="ratio" step="any"><span class="g-unit">%</span></label>
+      <label class="g-slider">{{ $t.pi_cfrac }} <input type="range" name="cfrac" min="0" max="50" step="1" value="10"> <input type="number" class="g-num" data-for="cfrac" step="any"><span class="g-unit">%</span></label>
     </div>
     <div class="zg-row"><button type="button" class="zg-btn" data-act="shot">{{ $t.shot }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="auto">{{ $t.pi_auto }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="clear">{{ $t.new }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="png">⤓ {{ $t.png }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="png2">⤓ {{ $t.png }} (φ)</button><button type="button" class="zg-btn zg-btn-ghost" data-act="csv">⤓ {{ $t.csv }}</button></div>
     <p class="g-msg" aria-live="polite"></p>

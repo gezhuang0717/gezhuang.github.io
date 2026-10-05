@@ -340,3 +340,5 @@ main section > article.mt-6::before{content:"";position:absolute;left:0;top:12px
 .nc-num{width:5em;padding:.1rem .3rem;border:1px solid var(--zg-line);border-radius:6px;background:var(--zg-card);color:inherit}
 .nc-prange{display:inline-flex;flex-wrap:wrap;gap:.3rem;align-items:center}
 .g-slider .g-num{flex:0 0 6.8em;width:6.8em}
+.zg-word-w{font-size:1.45rem;font-weight:700;background:var(--zg-rainbow);-webkit-background-clip:text;background-clip:text;color:transparent;margin:.2rem 0}
+.zg-word-o{font-size:.8rem;color:var(--zg-muted);margin:0 0 .3rem}.zg-word-s{font-size:.92rem;margin:.2rem 0 .6rem}

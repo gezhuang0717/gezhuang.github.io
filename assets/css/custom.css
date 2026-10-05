@@ -267,3 +267,14 @@ main section > article.mt-6{position:relative;padding:1rem 1.1rem;border-radius:
   background:linear-gradient(135deg,rgba(255,95,109,.06),rgba(255,195,113,.05),rgba(71,200,255,.06),rgba(139,108,255,.07));transition:transform .15s,box-shadow .15s}
 main section > article.mt-6:hover{transform:translateY(-2px);box-shadow:0 10px 26px -14px rgba(90,70,200,.6)}
 main section > article.mt-6::before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:4px;border-radius:4px;background:linear-gradient(180deg,#ff5f6d,#ffc371,#47c8ff,#8b6cff)}
+/* Games page */
+.g-pair{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin:.6rem 0}
+.g-nuc{min-width:8rem;text-align:center;padding:.8rem 1rem;border-radius:16px;color:#fff;background:linear-gradient(135deg,#ff5f6d,#8b6cff);box-shadow:0 8px 20px -10px #5b1146}
+.g-nuc b{display:block;font-size:2rem}.g-nuc small{opacity:.9}
+.g-vs{font-weight:700;opacity:.8}
+.g-box canvas,.g-trap canvas{width:100%;height:auto;border-radius:12px;background:linear-gradient(135deg,rgba(71,200,255,.06),rgba(139,108,255,.08))}
+.g-slider{display:flex;gap:.6rem;align-items:center;margin:.5rem 0}.g-slider input{flex:1}
+.g-msg{font-weight:600;min-height:1.4em}
+.g-q{font-size:1.1rem;font-weight:700}
+.g-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.8rem}
+.g-trap{margin:0;text-align:center;font-size:.85rem}

@@ -79,21 +79,25 @@ enableRobotsTXT = true
     pageRef = "lab"
     weight = 60
   [[languages.en.menu.main]]
+    name = "Games"
+    pageRef = "games"
+    weight = 70
+  [[languages.en.menu.main]]
     name = "Projects"
     pageRef = "projects"
-    weight = 70
+    weight = 80
   [[languages.en.menu.main]]
     name = "Group"
     pageRef = "group"
-    weight = 80
+    weight = 90
   [[languages.en.menu.main]]
     name = "Blog"
     pageRef = "posts"
-    weight = 90
+    weight = 100
   [[languages.en.menu.main]]
     name = "CV"
     pageRef = "cv"
-    weight = 100
+    weight = 110
 [languages.zh]
   label = "中文"
   locale = "zh-CN"
@@ -145,21 +149,25 @@ enableRobotsTXT = true
     pageRef = "lab"
     weight = 60
   [[languages.zh.menu.main]]
+    name = "游戏"
+    pageRef = "games"
+    weight = 70
+  [[languages.zh.menu.main]]
     name = "项目"
     pageRef = "projects"
-    weight = 70
+    weight = 80
   [[languages.zh.menu.main]]
     name = "团队"
     pageRef = "group"
-    weight = 80
+    weight = 90
   [[languages.zh.menu.main]]
     name = "博客"
     pageRef = "posts"
-    weight = 90
+    weight = 100
   [[languages.zh.menu.main]]
     name = "简历"
     pageRef = "cv"
-    weight = 100
+    weight = 110
 [languages.fi]
   label = "Suomi"
   locale = "fi-FI"
@@ -211,21 +219,25 @@ enableRobotsTXT = true
     pageRef = "lab"
     weight = 60
   [[languages.fi.menu.main]]
+    name = "Pelit"
+    pageRef = "games"
+    weight = 70
+  [[languages.fi.menu.main]]
     name = "Projektit"
     pageRef = "projects"
-    weight = 70
+    weight = 80
   [[languages.fi.menu.main]]
     name = "Ryhmä"
     pageRef = "group"
-    weight = 80
+    weight = 90
   [[languages.fi.menu.main]]
     name = "Blogi"
     pageRef = "posts"
-    weight = 90
+    weight = 100
   [[languages.fi.menu.main]]
     name = "CV"
     pageRef = "cv"
-    weight = 100
+    weight = 110
 [languages.de]
   label = "Deutsch"
   locale = "de-DE"
@@ -277,21 +289,25 @@ enableRobotsTXT = true
     pageRef = "lab"
     weight = 60
   [[languages.de.menu.main]]
+    name = "Spiele"
+    pageRef = "games"
+    weight = 70
+  [[languages.de.menu.main]]
     name = "Projekte"
     pageRef = "projects"
-    weight = 70
+    weight = 80
   [[languages.de.menu.main]]
     name = "Gruppe"
     pageRef = "group"
-    weight = 80
+    weight = 90
   [[languages.de.menu.main]]
     name = "Blog"
     pageRef = "posts"
-    weight = 90
+    weight = 100
   [[languages.de.menu.main]]
     name = "Lebenslauf"
     pageRef = "cv"
-    weight = 100
+    weight = 110
 [languages.ja]
   label = "日本語"
   locale = "ja-JP"
@@ -343,18 +359,22 @@ enableRobotsTXT = true
     pageRef = "lab"
     weight = 60
   [[languages.ja.menu.main]]
+    name = "ゲーム"
+    pageRef = "games"
+    weight = 70
+  [[languages.ja.menu.main]]
     name = "プロジェクト"
     pageRef = "projects"
-    weight = 70
+    weight = 80
   [[languages.ja.menu.main]]
     name = "グループ"
     pageRef = "group"
-    weight = 80
+    weight = 90
   [[languages.ja.menu.main]]
     name = "ブログ"
     pageRef = "posts"
-    weight = 90
+    weight = 100
   [[languages.ja.menu.main]]
     name = "経歴"
     pageRef = "cv"
-    weight = 100
+    weight = 110

@@ -88,6 +88,13 @@ menu:
     fi: Labra
     de: Labor
     ja: ラボ
+- page: games
+  label:
+    en: Games
+    zh: 游戏
+    fi: Pelit
+    de: Spiele
+    ja: ゲーム
 - page: projects
   label:
     en: Projects

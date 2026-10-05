@@ -89,28 +89,6 @@ feeds:
     tags: [journal]
     keep: 3
 
-  - name: "Nature — nuclear physics"
-    kind: rss
-    type: paper
-    url: "https://www.nature.com/subjects/nuclear-physics.rss"
-    tags: [nuclear, journal]
-    keep: 4
-
-  - name: "Nature — nuclear astrophysics"
-    kind: rss
-    type: paper
-    url: "https://www.nature.com/subjects/nuclear-astrophysics.rss"
-    tags: [astrophysics, journal]
-    keep: 4
-
-  - name: "MDPI Atoms"
-    kind: rss
-    type: paper
-    url: "https://www.mdpi.com/rss/journal/atoms"
-    include: [trap, ion, mass, highly charged, isotope, hyperfine, storage ring, nucle]
-    tags: [journal]
-    keep: 3
-
   # ── verified facility / community news (checked 2026-10-04) ──────────────
   - name: "TRIUMF news"
     kind: rss
@@ -131,14 +109,6 @@ feeds:
     type: event
     url: "https://www.ectstar.eu/feed/"
     tags: [workshop]
-    keep: 3
-
-  - name: "MSU Today — FRIB & nuclear science"
-    kind: rss
-    type: news
-    url: "https://msutoday.msu.edu/rss"
-    include: [FRIB, nuclear, isotope, rare isotope, accelerator, physics]
-    tags: [facility]
     keep: 3
 
   - name: "IAEA — nuclear science news"

@@ -25,18 +25,22 @@
   pageRef = "lab"
   weight = 60
 [[main]]
+  name = "Games"
+  pageRef = "games"
+  weight = 70
+[[main]]
   name = "Projects"
   pageRef = "projects"
-  weight = 70
+  weight = 80
 [[main]]
   name = "Group"
   pageRef = "group"
-  weight = 80
+  weight = 90
 [[main]]
   name = "Blog"
   pageRef = "posts"
-  weight = 90
+  weight = 100
 [[main]]
   name = "CV"
   pageRef = "cv"
-  weight = 100
+  weight = 110

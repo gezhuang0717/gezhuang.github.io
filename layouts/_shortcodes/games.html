@@ -1,0 +1,65 @@
+{{- /* Games page: {{< games >}} — code in static/js/games.js, data static/data/nubase2020.json */ -}}
+{{- $lang := site.Language.Lang -}}
+{{- $k := cond (hasPrefix $lang "zh") "zh" $lang -}}
+{{- $en := dict "hl" "Which lives longer?" "hl_n" "Two nuclei from NUBASE2020 — pick the one with the longer half-life. Keep the streak going!" "hl_q" "longer half-life?"
+  "tof" "Find the cyclotron resonance (TOF-ICR)" "tof_n" "Set the excitation frequency, take shots and look for the time-of-flight dip. Fewer shots and a closer guess give more points. ¹³³Cs⁺ in a 7 T trap: ν_c ≈ 808.8 kHz." "tof_start" "Scan the frequency — the ions arrive earliest at resonance." "shot" "Take a shot" "guess" "This is ν_c!" "shots" "Shots"
+  "mr" "Separate the isobars (MR-TOF)" "mr_n" "Each lap through the mirrors stretches the flight path. How many laps until the two isobars no longer overlap?" "laps" "Laps" "need" "needed" "separated" "separated" "overlap" "still overlapping"
+  "quiz" "Magic numbers & elements" "quiz_n" "Quick questions about the nuclear landscape." "q_sym" "Which element has Z = {z}?" "q_magic" "Which of these is a magic number?" "q_dmagic" "Which nucleus is doubly magic?"
+  "gal" "Trap zoo" "gal_n" "How different devices hold or guide ions — animated sketches, not to scale."
+  "t_penning" "Hyperbolic Penning trap" "t_cyl" "Cylindrical Penning trap" "t_paul" "Paul (RF) trap" "t_linear" "Linear Paul trap / RFQ" "t_mrtof" "MR-TOF mass spectrometer" "t_ring" "Storage ring" "t_ebit" "EBIT" "t_orbi" "Orbitrap"
+  "new" "New round" "score" "Score" "best" "Best" "right" "Right!" "wrong" "Not quite." "yours" "your guess" -}}
+{{- $L := dict "en" $en
+  "zh" (merge $en (dict "hl" "谁活得更久？" "hl_n" "从 NUBASE2020 中随机选出两个原子核——选出半衰期更长的那个，看你能连对几次！" "hl_q" "半衰期更长？"
+   "tof" "寻找回旋共振（TOF-ICR）" "tof_n" "设置激发频率、发射离子，寻找飞行时间的低谷。次数越少、猜得越准，得分越高。7 T 磁场中的 ¹³³Cs⁺：ν_c ≈ 808.8 kHz。" "tof_start" "扫描频率——共振时离子最早到达。" "shot" "发射一次" "guess" "就是这个 ν_c！" "shots" "次数"
+   "mr" "分离同量异位素（MR-TOF）" "mr_n" "每在两面镜子间往返一圈，飞行路程就更长。需要多少圈，两个同量异位素才不再重叠？" "laps" "圈数" "need" "所需" "separated" "已分开" "overlap" "仍然重叠"
+   "quiz" "幻数与元素" "quiz_n" "关于核素版图的小问答。" "q_sym" "Z = {z} 是哪个元素？" "q_magic" "下面哪个是幻数？" "q_dmagic" "哪个原子核是双幻核？"
+   "gal" "离子阱动物园" "gal_n" "不同装置如何囚禁或引导离子——动画示意，不按比例。"
+   "t_penning" "双曲面彭宁阱" "t_cyl" "圆柱形彭宁阱" "t_paul" "保罗（射频）阱" "t_linear" "线性保罗阱 / RFQ" "t_mrtof" "MR-TOF 质谱仪" "t_ring" "储存环" "t_ebit" "电子束离子阱 EBIT" "t_orbi" "轨道阱 Orbitrap"
+   "new" "再来一局" "score" "得分" "best" "最佳" "right" "答对了！" "wrong" "差一点。" "yours" "你的答案"))
+  "fi" (merge $en (dict "hl" "Kumpi elää pidempään?" "hl_n" "Kaksi ydintä NUBASE2020:stä — valitse se, jonka puoliintumisaika on pidempi. Pidä putki käynnissä!" "hl_q" "pidempi puoliintumisaika?"
+   "tof" "Etsi syklotroniresonanssi (TOF-ICR)" "tof_n" "Säädä viritystaajuus, ammu ioneja ja etsi lentoajan minimi. Vähemmän laukauksia ja tarkempi arvaus antavat enemmän pisteitä. ¹³³Cs⁺ 7 T:n loukussa: ν_c ≈ 808,8 kHz." "tof_start" "Skannaa taajuutta — resonanssissa ionit saapuvat ensimmäisinä." "shot" "Laukaus" "guess" "Tämä on ν_c!" "shots" "Laukauksia"
+   "mr" "Erota isobaarit (MR-TOF)" "mr_n" "Jokainen kierros peilien välillä pidentää lentomatkaa. Montako kierrosta tarvitaan, ettei kaksi isobaaria enää limity?" "laps" "Kierrokset" "need" "tarvitaan" "separated" "erotettu" "overlap" "limittyvät vielä"
+   "quiz" "Maagiset luvut ja alkuaineet" "quiz_n" "Pikakysymyksiä nuklidikartasta." "q_sym" "Mikä alkuaine on Z = {z}?" "q_magic" "Mikä näistä on maaginen luku?" "q_dmagic" "Mikä ydin on kaksoismaaginen?"
+   "gal" "Loukkueläintarha" "gal_n" "Miten eri laitteet pitävät tai ohjaavat ioneja — animoituja luonnoksia, ei mittakaavassa."
+   "t_penning" "Hyperbolinen Penning-loukku" "t_cyl" "Sylinterimäinen Penning-loukku" "t_paul" "Paul-loukku (RF)" "t_linear" "Lineaarinen Paul-loukku / RFQ" "t_mrtof" "MR-TOF-massaspektrometri" "t_ring" "Varastorengas" "t_ebit" "EBIT" "t_orbi" "Orbitrap"
+   "new" "Uusi kierros" "score" "Pisteet" "best" "Paras" "right" "Oikein!" "wrong" "Ei aivan." "yours" "arvauksesi"))
+  "de" (merge $en (dict "hl" "Wer lebt länger?" "hl_n" "Zwei Kerne aus NUBASE2020 – wähle den mit der längeren Halbwertszeit. Halte die Serie!" "hl_q" "längere Halbwertszeit?"
+   "tof" "Finde die Zyklotronresonanz (TOF-ICR)" "tof_n" "Stelle die Anregungsfrequenz ein, schieße Ionen und suche das Minimum der Flugzeit. Weniger Schüsse und ein genauerer Tipp geben mehr Punkte. ¹³³Cs⁺ in einer 7-T-Falle: ν_c ≈ 808,8 kHz." "tof_start" "Frequenz scannen – bei Resonanz kommen die Ionen am frühesten an." "shot" "Schuss" "guess" "Das ist ν_c!" "shots" "Schüsse"
+   "mr" "Trenne die Isobare (MR-TOF)" "mr_n" "Jede Runde zwischen den Spiegeln verlängert den Flugweg. Wie viele Runden, bis sich die beiden Isobare nicht mehr überlappen?" "laps" "Runden" "need" "nötig" "separated" "getrennt" "overlap" "überlappen noch"
+   "quiz" "Magische Zahlen & Elemente" "quiz_n" "Kurze Fragen zur Nuklidlandschaft." "q_sym" "Welches Element hat Z = {z}?" "q_magic" "Welche ist eine magische Zahl?" "q_dmagic" "Welcher Kern ist doppelt magisch?"
+   "gal" "Fallen-Zoo" "gal_n" "Wie verschiedene Geräte Ionen speichern oder führen – animierte Skizzen, nicht maßstäblich."
+   "t_penning" "Hyperbolische Penning-Falle" "t_cyl" "Zylindrische Penning-Falle" "t_paul" "Paul-Falle (RF)" "t_linear" "Lineare Paul-Falle / RFQ" "t_mrtof" "MR-TOF-Massenspektrometer" "t_ring" "Speicherring" "t_ebit" "EBIT" "t_orbi" "Orbitrap"
+   "new" "Neue Runde" "score" "Punkte" "best" "Bestwert" "right" "Richtig!" "wrong" "Knapp daneben." "yours" "dein Tipp"))
+  "ja" (merge $en (dict "hl" "どちらが長生き？" "hl_n" "NUBASE2020 から選んだ2つの原子核——半減期が長いほうを選んでください。連続正解を目指そう！" "hl_q" "半減期が長いのは？"
+   "tof" "サイクロトロン共鳴を探せ（TOF-ICR）" "tof_n" "励起周波数を設定してイオンを打ち、飛行時間の谷を探します。打つ回数が少なく、推定が正確なほど高得点。7 T トラップ中の ¹³³Cs⁺：ν_c ≈ 808.8 kHz。" "tof_start" "周波数を走査しよう——共鳴時にイオンが最も早く到着します。" "shot" "1回打つ" "guess" "これが ν_c！" "shots" "回数"
+   "mr" "同重体を分離せよ（MR-TOF）" "mr_n" "ミラー間を1周するたびに飛行距離が伸びます。2つの同重体が重ならなくなるまで何周必要？" "laps" "周回数" "need" "必要" "separated" "分離成功" "overlap" "まだ重なっている"
+   "quiz" "魔法数と元素" "quiz_n" "核図表についてのクイズ。" "q_sym" "Z = {z} の元素は？" "q_magic" "魔法数はどれ？" "q_dmagic" "二重魔法核はどれ？"
+   "gal" "トラップ動物園" "gal_n" "さまざまな装置がイオンを閉じ込め・導く様子のアニメーション（縮尺は不正確）。"
+   "t_penning" "双曲面ペニングトラップ" "t_cyl" "円筒型ペニングトラップ" "t_paul" "パウル（RF）トラップ" "t_linear" "線形パウルトラップ / RFQ" "t_mrtof" "MR-TOF 質量分析器" "t_ring" "蓄積リング" "t_ebit" "EBIT" "t_orbi" "オービトラップ"
+   "new" "もう一度" "score" "得点" "best" "最高" "right" "正解！" "wrong" "おしい。" "yours" "あなたの答え")) -}}
+{{- $t := index $L $k | default $en -}}
+<div class="zg-games" data-games data-src="{{ "data/nubase2020.json" | relURL }}" data-labels="{{ $t | jsonify }}">
+  <section class="zg-card g-box" id="g-hl"><h2>⏳ {{ $t.hl }}</h2><p class="zg-muted">{{ $t.hl_n }}</p>
+    <div class="g-pair"></div>
+    <div class="zg-row"><button type="button" class="zg-btn" data-pick="a">◀ A</button><button type="button" class="zg-btn" data-pick="b">B ▶</button></div>
+    <p class="g-msg" aria-live="polite"></p></section>
+  <section class="zg-card g-box" id="g-tof"><h2>🎯 {{ $t.tof }}</h2><p class="zg-muted">{{ $t.tof_n }}</p>
+    <canvas width="600" height="220"></canvas>
+    <label class="g-slider">ν_rf <input type="range" min="808780" max="808810" step="0.5" value="808795"> <output>808,795 Hz</output></label>
+    <div class="zg-row"><button type="button" class="zg-btn" data-act="shot">{{ $t.shot }}</button><button type="button" class="zg-btn" data-act="guess">{{ $t.guess }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="new">{{ $t.new }}</button></div>
+    <p class="g-msg" aria-live="polite"></p></section>
+  <section class="zg-card g-box" id="g-mr"><h2>🪞 {{ $t.mr }}</h2><p class="zg-muted">{{ $t.mr_n }}</p>
+    <canvas width="600" height="160"></canvas>
+    <label class="g-slider">{{ $t.laps }} <input type="range" min="1" max="2000" step="1" value="1"> <output></output></label>
+    <div class="zg-row"><button type="button" class="zg-btn zg-btn-ghost" data-act="new">{{ $t.new }}</button></div>
+    <p class="g-msg" aria-live="polite"></p></section>
+  <section class="zg-card g-box" id="g-quiz"><h2>🧩 {{ $t.quiz }}</h2><p class="zg-muted">{{ $t.quiz_n }}</p>
+    <p class="g-q"></p><div class="g-opts zg-row"></div><p class="g-msg" aria-live="polite"></p></section>
+  <section class="zg-card"><h2>🦓 {{ $t.gal }}</h2><p class="zg-muted">{{ $t.gal_n }}</p>
+    <div class="g-gallery">
+      {{- range slice "penning" "cyl" "paul" "linear" "mrtof" "ring" "ebit" "orbi" }}
+      <figure class="g-trap"><canvas width="240" height="180"></canvas><figcaption>{{ index $t (printf "t_%s" .) }}</figcaption></figure>
+      {{- end }}
+    </div></section>
+</div>
+<script defer src="{{ "js/games.js" | relURL }}"></script>

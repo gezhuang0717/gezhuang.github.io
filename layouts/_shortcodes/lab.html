@@ -24,6 +24,8 @@
   </div>
   <div class="zg-row">
     <button type="button" class="zg-btn" id="zg-convert">{{ i18n "zg_lab_convert" | default "Quadrupole excitation at ν_c (π pulse)" }}</button>
+    <button type="button" class="zg-btn zg-btn-ghost" id="zg-sim-png">⤓ PNG</button>
+    <button type="button" class="zg-btn zg-btn-ghost" id="zg-sim-video">⏺ Video</button>
     <button type="button" class="zg-btn zg-btn-ghost" id="zg-clear">{{ i18n "zg_lab_clear" | default "Clear trail" }}</button>
   </div>
   <p class="zg-muted zg-small">{{ i18n "zg_lab_convert_note" | default "The π pulse converts magnetron motion into cyclotron motion — the trick behind TOF-ICR, where the converted ions gain radial energy and arrive earlier at the detector." }}</p>
@@ -73,6 +75,7 @@
 </section>
 
 </div>
+<script src="{{ "js/zg-export.js" | relURL }}"></script>
 <script>
 (function () {
   var U_KEV = 931494.10242, U_KG = 1.66053906892e-27, ME_U = 5.485799090441e-4, E = 1.602176634e-19;
@@ -95,6 +98,8 @@
     var ui = { ratio: $("zg-ratio"), rp: $("zg-rp"), rm: $("zg-rm"), speed: $("zg-speed") };
     Object.keys(ui).forEach(function (k) { ui[k].addEventListener("input", function () { $("zg-" + k + "-o").textContent = ui[k].value; }); });
     $("zg-clear").onclick = function () { trail = []; };
+    $("zg-sim-png").onclick = function () { window.zgExport && zgExport.png(top, "penning-trap-orbit"); };
+    $("zg-sim-video").onclick = function () { var b = this; window.zgExport && zgExport.record(top, 10, "penning-trap-orbit", function (r) { b.disabled = r; b.classList.toggle("is-rec", r); }); };
     $("zg-convert").onclick = function () { pulse = { t0: t, rp0: +ui.rp.value, rm0: +ui.rm.value }; };
     var css = getComputedStyle(document.documentElement);
     function col(v, f) { return (css.getPropertyValue(v) || "").trim() || f; }

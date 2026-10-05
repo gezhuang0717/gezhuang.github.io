@@ -1,0 +1,232 @@
+# Glossary for the explanation pop-ups (layouts/_partials/zg/glossary.html, static/js/glossary.js).
+# Each term: name.<lang> (shown as pop-up title and searched on Wikipedia of that language),
+# match.<lang> (words/stems that are underlined in page text; first occurrence per page),
+# text.<lang> (one or two sentences), src (extra English sources: [label, url]).
+# Links built automatically: Wikipedia in the page language, English Wikipedia, and Baidu Baike for 中文.
+terms:
+  - id: penning-trap
+    name: {en: Penning trap, zh: 彭宁阱, fi: Penning-loukku, de: Penning-Falle, ja: ペニングトラップ}
+    match: {en: [Penning trap, Penning-trap], zh: [彭宁阱], fi: [Penning-loukku, Penning-loukun, Penning-loukut, Penning-loukuilla, Penning-loukussa], de: [Penning-Falle, Penning-Fallen], ja: [ペニングトラップ]}
+    text:
+      en: "Stores charged particles with a strong homogeneous magnetic field and a weak electric quadrupole field. Measuring the ion's cyclotron frequency ν_c = qB/(2πm) gives its mass with relative precision down to 10⁻⁹ and beyond."
+      zh: "用强均匀磁场加弱电四极场囚禁带电粒子。测量离子的回旋频率 ν_c = qB/(2πm) 即可得到其质量，相对精度可达 10⁻⁹ 甚至更高。"
+      fi: "Säilöö varattuja hiukkasia voimakkaan tasaisen magneettikentän ja heikon sähköisen kvadrupolikentän avulla. Ionin syklotronitaajuudesta ν_c = qB/(2πm) saadaan sen massa jopa 10⁻⁹:n suhteellisella tarkkuudella."
+      de: "Speichert geladene Teilchen in einem starken homogenen Magnetfeld und einem schwachen elektrischen Quadrupolfeld. Aus der Zyklotronfrequenz ν_c = qB/(2πm) folgt die Masse mit einer relativen Genauigkeit bis 10⁻⁹ und besser."
+      ja: "強い一様磁場と弱い電気四重極場で荷電粒子を閉じ込める装置。イオンのサイクロトロン周波数 ν_c = qB/(2πm) を測ると、10⁻⁹ 以上の相対精度で質量が決まります。"
+  - id: paul-trap
+    name: {en: Paul trap, zh: 保罗阱, fi: Paul-loukku, de: Paul-Falle, ja: パウルトラップ}
+    match: {en: [Paul trap, RF trap], zh: [保罗阱, Paul 阱, Paul阱], fi: [Paul-loukku, Paul-loukun], de: [Paul-Falle], ja: [パウルトラップ]}
+    text:
+      en: "An ion trap that confines ions with oscillating radio-frequency electric fields only. Linear versions (RFQs) cool and bunch radioactive ions before precision measurements."
+      zh: "仅用射频振荡电场囚禁离子的离子阱。其线性形式（RFQ）用于在精密测量前对放射性离子进行冷却与聚束。"
+      fi: "Ioniloukku, joka pitää ionit pelkillä radiotaajuisilla sähkökentillä. Lineaariset versiot (RFQ) jäähdyttävät ja kimputtavat radioaktiiviset ionit ennen tarkkuusmittauksia."
+      de: "Ionenfalle, die Ionen nur mit hochfrequenten elektrischen Wechselfeldern einschließt. Lineare Varianten (RFQ) kühlen und bündeln radioaktive Ionen vor Präzisionsmessungen."
+      ja: "高周波電場だけでイオンを閉じ込めるイオントラップ。線形型（RFQ）は精密測定の前に放射性イオンを冷却・バンチ化します。"
+  - id: mr-tof
+    name: {en: Multi-reflection time-of-flight mass spectrometer, zh: 多次反射飞行时间质谱仪, fi: Monikertaheijastava lentoaikamassaspektrometri, de: Multireflexions-Flugzeit-Massenspektrometer, ja: 多重反射型飛行時間質量分析器}
+    match: {en: [MR-TOF, multi-reflection], zh: [MR-TOF, 多次反射飞行时间], fi: [MR-TOF], de: [MR-TOF], ja: [MR-TOF]}
+    wiki: {en: Time-of-flight mass spectrometry, zh: 飞行时间质谱法, fi: Massaspektrometria, de: Flugzeitmassenspektrometer, ja: 飛行時間型質量分析計}
+    text:
+      en: "Ions bounce hundreds of times between two electrostatic mirrors; the long flight path separates masses with resolving powers above 10⁵ within milliseconds — fast enough for very short-lived nuclei and to purify beams for Penning traps."
+      zh: "离子在两面静电镜之间往返数百次，长飞行路径在毫秒内实现超过 10⁵ 的质量分辨本领——足以测量极短寿命核，并为彭宁阱提纯束流。"
+      fi: "Ionit heijastuvat satoja kertoja kahden sähköstaattisen peilin välillä; pitkä lentomatka erottaa massat yli 10⁵:n erotuskyvyllä millisekunneissa — tarpeeksi nopeasti hyvin lyhytikäisille ytimille."
+      de: "Ionen pendeln hunderte Male zwischen zwei elektrostatischen Spiegeln; der lange Flugweg trennt Massen mit Auflösungsvermögen über 10⁵ in Millisekunden – schnell genug für sehr kurzlebige Kerne."
+      ja: "イオンが2枚の静電ミラーの間を数百回往復し、長い飛行距離によりミリ秒で 10⁵ を超える質量分解能を実現します。非常に短寿命の原子核の測定やビーム純化に用いられます。"
+  - id: storage-ring
+    name: {en: Storage ring, zh: 储存环, fi: Varastorengas, de: Speicherring, ja: 蓄積リング}
+    match: {en: [storage ring, storage-ring], zh: [储存环], fi: [varastoren], de: [Speicherring], ja: [蓄積リング]}
+    text:
+      en: "A circular accelerator in which ions circulate for long times. In isochronous mode the revolution time of exotic ions gives their masses from just a few ions, even for half-lives of tens of microseconds."
+      zh: "离子可在其中长时间回旋的环形装置。在等时性模式下，只需少量离子即可由回旋周期得到奇特核质量，甚至适用于几十微秒的半衰期。"
+      fi: "Rengasmainen kiihdytin, jossa ionit kiertävät pitkään. Isokronisessa tilassa kiertoajasta saadaan eksoottisten ionien massat jo muutamasta ionista."
+      de: "Ringbeschleuniger, in dem Ionen lange umlaufen. Im isochronen Modus liefert die Umlaufzeit die Massen exotischer Ionen schon aus wenigen Ionen."
+      ja: "イオンを長時間周回させる円形加速器。等時性モードでは周回時間から、わずかなイオン数で短寿命核の質量が得られます。"
+  - id: tof-icr
+    name: {en: TOF-ICR, zh: TOF-ICR, fi: TOF-ICR, de: TOF-ICR, ja: TOF-ICR}
+    match: {en: [TOF-ICR], zh: [TOF-ICR], fi: [TOF-ICR], de: [TOF-ICR], ja: [TOF-ICR]}
+    wiki: {en: Ion cyclotron resonance, zh: 离子回旋共振, fi: Penning-loukku, de: Ionenzyklotronresonanz, ja: イオンサイクロトロン共鳴}
+    text:
+      en: "Time-of-flight ion-cyclotron-resonance: a quadrupole excitation at ν_c converts magnetron into cyclotron motion; resonant ions gain radial energy and reach the detector faster, so the time-of-flight dip marks ν_c."
+      zh: "飞行时间离子回旋共振：在 ν_c 处施加四极激发，把磁控运动转换为回旋运动；共振离子获得径向能量、更快到达探测器，飞行时间低谷即对应 ν_c。"
+      fi: "Lentoaika-ionisyklotroniresonanssi: kvadrupoliviritys taajuudella ν_c muuntaa magnetroniliikkeen syklotroniliikkeeksi; resonanssissa ionit saapuvat ilmaisimelle nopeammin."
+      de: "Flugzeit-Ionenzyklotronresonanz: Eine Quadrupolanregung bei ν_c wandelt Magnetron- in Zyklotronbewegung um; resonante Ionen erreichen den Detektor schneller."
+      ja: "飛行時間イオンサイクロトロン共鳴法：ν_c の四重極励起でマグネトロン運動をサイクロトロン運動に変換し、共鳴したイオンは速く検出器に到達します。"
+  - id: pi-icr
+    name: {en: PI-ICR, zh: PI-ICR, fi: PI-ICR, de: PI-ICR, ja: PI-ICR}
+    match: {en: [PI-ICR], zh: [PI-ICR], fi: [PI-ICR], de: [PI-ICR], ja: [PI-ICR]}
+    wiki: {en: Ion cyclotron resonance, zh: 离子回旋共振, fi: Penning-loukku, de: Ionenzyklotronresonanz, ja: イオンサイクロトロン共鳴}
+    text:
+      en: "Phase-imaging ion-cyclotron-resonance: the ions' motion is projected onto a position-sensitive detector and ν_c is read from the accumulated phase. About 40 times faster and more resolving than TOF-ICR — it separates isomers only tens of keV apart."
+      zh: "相位成像离子回旋共振：把离子运动投影到位置灵敏探测器上，由累积相位读出 ν_c。比 TOF-ICR 快约 40 倍、分辨率更高，可分开仅相差数十 keV 的同核异能态。"
+      fi: "Vaihekuvantava ionisyklotroniresonanssi: ionien liike projisoidaan paikkaherkälle ilmaisimelle ja ν_c luetaan kertyneestä vaiheesta. Erottaa jopa muutaman kymmenen keV:n päässä olevat isomeerit."
+      de: "Phase-Imaging-Ionenzyklotronresonanz: Die Ionenbewegung wird auf einen ortsauflösenden Detektor projiziert, ν_c folgt aus der Phase. Trennt Isomere mit nur einigen zehn keV Abstand."
+      ja: "位相イメージング・イオンサイクロトロン共鳴法：イオン運動を位置敏感検出器に投影し、蓄積した位相から ν_c を求めます。数十 keV しか離れていないアイソマーも分離できます。"
+  - id: q-value
+    name: {en: Q value, zh: Q 值, fi: Q-arvo, de: Q-Wert, ja: Q 値}
+    match: {en: [Q-value, Q value], zh: [Q 值, Q值], fi: [Q-arvo], de: [Q-Wert], ja: [Q 値, Q値]}
+    wiki: {en: Q value (nuclear science), zh: Q值, fi: Q-arvo, de: Q-Wert, ja: Q値}
+    text:
+      en: "The energy released in a nuclear decay or reaction, equal to the mass difference between initial and final states (times c²). Penning traps measure it directly as a mass difference."
+      zh: "核衰变或核反应释放的能量，等于初态与末态的质量差（乘以 c²）。彭宁阱可直接以质量差的形式测量它。"
+      fi: "Ydinhajoamisessa tai -reaktiossa vapautuva energia, alku- ja lopputilan massaero kertaa c². Penning-loukku mittaa sen suoraan massaerona."
+      de: "Die bei einem Kernzerfall oder einer Reaktion freigesetzte Energie, gleich der Massendifferenz von Anfangs- und Endzustand (mal c²). Penning-Fallen messen sie direkt."
+      ja: "核崩壊や核反応で放出されるエネルギーで、始状態と終状態の質量差（× c²）に等しい。ペニングトラップは質量差として直接測定します。"
+  - id: neutrino-mass
+    name: {en: Neutrino mass, zh: 中微子质量, fi: Neutriinon massa, de: Neutrinomasse, ja: ニュートリノ質量}
+    match: {en: [neutrino mass, neutrino-mass], zh: [中微子质量], fi: [neutriinon mass, neutriinomass], de: [Neutrinomasse], ja: [ニュートリノ質量]}
+    wiki: {en: Neutrino, zh: 中微子, fi: Neutriino, de: Neutrino, ja: ニュートリノ}
+    text:
+      en: "Neutrinos are known to be massive from oscillations, but the absolute mass scale is unknown. Beta and electron-capture decays with very small Q-values are the most sensitive laboratory probes; their Q-values must be known precisely."
+      zh: "振荡实验表明中微子有质量，但其绝对质量尺度仍未知。Q 值极小的 β 衰变和电子俘获是最灵敏的实验室探针，需要精确的 Q 值。"
+      fi: "Oskillaatiot osoittavat neutriinoilla olevan massa, mutta absoluuttinen massaskaala on tuntematon. Hyvin pienen Q-arvon beeta- ja elektronikaappaushajoamiset ovat herkimpiä laboratoriokoettimia."
+      de: "Oszillationen zeigen, dass Neutrinos Masse haben, die absolute Skala ist aber unbekannt. Beta- und Elektroneneinfangzerfälle mit sehr kleinem Q-Wert sind die empfindlichsten Laborsonden."
+      ja: "振動実験からニュートリノに質量があることは分かっていますが、絶対質量は未知です。Q 値の非常に小さい β 崩壊・電子捕獲が最も感度の高い実験室での手段です。"
+  - id: beta-decay
+    name: {en: Beta decay, zh: β衰变, fi: Beetahajoaminen, de: Betazerfall, ja: ベータ崩壊}
+    match: {en: [beta decay, β decay, β-decay, beta-decay], zh: [β 衰变, β衰变], fi: [beetahajo], de: [Betazerfall, β-Zerfall], ja: [β 崩壊, ベータ崩壊]}
+    text:
+      en: "A weak-interaction decay in which a neutron turns into a proton (β⁻) or a proton into a neutron (β⁺ or electron capture), emitting an electron or positron and a neutrino."
+      zh: "一种弱相互作用衰变：中子变为质子（β⁻）或质子变为中子（β⁺ 或电子俘获），同时放出电子或正电子以及中微子。"
+      fi: "Heikon vuorovaikutuksen hajoaminen, jossa neutroni muuttuu protoniksi (β⁻) tai protoni neutroniksi (β⁺ tai elektronikaappaus) ja syntyy elektroni tai positroni sekä neutriino."
+      de: "Zerfall der schwachen Wechselwirkung, bei dem ein Neutron in ein Proton (β⁻) oder ein Proton in ein Neutron (β⁺ oder Elektroneneinfang) übergeht."
+      ja: "弱い相互作用による崩壊で、中性子が陽子に（β⁻）、または陽子が中性子に（β⁺・電子捕獲）変わり、電子または陽電子とニュートリノを放出します。"
+  - id: isomer
+    name: {en: Nuclear isomer, zh: 同核异能素, fi: Ydinisomeeri, de: Kernisomer, ja: 核異性体}
+    match: {en: [isomer], zh: [同核异能], fi: [isomeer], de: [Isomer], ja: [アイソマー, 核異性体]}
+    text:
+      en: "A long-lived excited state of a nucleus. Isomers can live from nanoseconds to longer than the age of the Universe (¹⁸⁰ᵐTa); precision traps must separate them from the ground state."
+      zh: "原子核的长寿命激发态，寿命从纳秒到超过宇宙年龄（¹⁸⁰ᵐTa）不等；精密离子阱需要把它们与基态分开。"
+      fi: "Ytimen pitkäikäinen viritystila; elinaika voi olla nanosekunneista maailmankaikkeuden ikää pidempään (¹⁸⁰ᵐTa)."
+      de: "Ein langlebiger angeregter Kernzustand; Lebensdauern reichen von Nanosekunden bis über das Alter des Universums (¹⁸⁰ᵐTa)."
+      ja: "原子核の長寿命の励起状態。寿命はナノ秒から宇宙年齢以上（¹⁸⁰ᵐTa）までさまざまで、精密トラップでは基底状態と分離する必要があります。"
+  - id: magic-number
+    name: {en: Magic number, zh: 幻数, fi: Maaginen luku, de: Magische Zahl, ja: 魔法数}
+    match: {en: [magic number, doubly magic], zh: [幻数, 双幻], fi: [maagi], de: [magisch], ja: [魔法数, 二重魔法]}
+    wiki: {en: Magic number (physics), zh: 幻数 (物理学), fi: Maaginen luku (fysiikka), de: Magische Zahl (Physik), ja: 魔法数 (物理学)}
+    text:
+      en: "Proton or neutron numbers 2, 8, 20, 28, 50, 82, 126 that fill nuclear shells and give extra stability. Nuclei magic in both, such as ¹⁰⁰Sn or ²⁰⁸Pb, are doubly magic."
+      zh: "使核壳层填满、带来额外稳定性的质子数或中子数：2、8、20、28、50、82、126。两者皆为幻数的核（如 ¹⁰⁰Sn、²⁰⁸Pb）称为双幻核。"
+      fi: "Protoni- tai neutroniluvut 2, 8, 20, 28, 50, 82, 126, jotka täyttävät ydinkuoret ja tuovat lisävakautta. Molemmissa maagiset ytimet (¹⁰⁰Sn, ²⁰⁸Pb) ovat kaksoismaagisia."
+      de: "Protonen- oder Neutronenzahlen 2, 8, 20, 28, 50, 82, 126, die Schalen abschließen und zusätzliche Stabilität bringen. In beiden magische Kerne wie ¹⁰⁰Sn oder ²⁰⁸Pb sind doppelt magisch."
+      ja: "殻を満たして余分な安定性を与える陽子数・中性子数 2, 8, 20, 28, 50, 82, 126。両方が魔法数の核（¹⁰⁰Sn、²⁰⁸Pb など）は二重魔法核です。"
+  - id: rp-process
+    name: {en: rp-process, zh: rp过程, fi: rp-prosessi, de: rp-Prozess, ja: rp過程}
+    match: {en: [rp-process, rp- and νp-process], zh: [rp 过程, rp过程], fi: [rp-prosess], de: [rp-Prozess], ja: [rp 過程, rp過程]}
+    wiki: {en: Rp-process, zh: rp过程, fi: rp-prosessi, de: rp-Prozess, ja: rp過程}
+    text:
+      en: "Rapid proton capture in hot hydrogen-rich environments such as type-I X-ray bursts on neutron stars. It runs along N ≈ Z nuclei up to the tin region, so their masses set the reaction path and energy output."
+      zh: "在高温富氢环境（如中子星上的 I 型 X 射线暴）中发生的快速质子俘获过程，沿 N ≈ Z 核一直到锡区，这些核的质量决定反应路径与能量释放。"
+      fi: "Nopea protonikaappaus kuumissa vetypitoisissa ympäristöissä, kuten neutronitähtien röntgenpurkauksissa. Kulkee N ≈ Z -ytimiä pitkin tinan alueelle asti."
+      de: "Schneller Protoneneinfang in heißen, wasserstoffreichen Umgebungen wie Röntgenbursts auf Neutronensternen; verläuft entlang N ≈ Z bis in die Zinnregion."
+      ja: "中性子星表面の I 型 X 線バーストなど高温・水素豊富な環境での速い陽子捕獲過程。N ≈ Z 核に沿ってスズ領域まで進み、その質量が反応経路を決めます。"
+  - id: r-process
+    name: {en: r-process, zh: r过程, fi: r-prosessi, de: r-Prozess, ja: r過程}
+    match: {en: [r-process], zh: [r 过程, r过程], fi: [r-prosess], de: [r-Prozess], ja: [r 過程, r過程]}
+    wiki: {en: R-process, zh: r-过程, fi: r-prosessi, de: r-Prozess, ja: r過程}
+    text:
+      en: "Rapid neutron capture that makes about half of the elements heavier than iron, e.g. in neutron-star mergers. Masses of very neutron-rich nuclei decide where the process runs."
+      zh: "快速中子俘获过程，产生约一半比铁重的元素，例如在中子星并合中。极丰中子核的质量决定该过程的路径。"
+      fi: "Nopea neutronikaappaus, joka tuottaa noin puolet rautaa raskaammista alkuaineista, esim. neutronitähtien törmäyksissä."
+      de: "Schneller Neutroneneinfang, der etwa die Hälfte der Elemente schwerer als Eisen erzeugt, z. B. in Neutronenstern-Verschmelzungen."
+      ja: "鉄より重い元素の約半分をつくる速い中性子捕獲過程（中性子星合体など）。非常に中性子過剰な核の質量が経路を決めます。"
+  - id: binding-energy
+    name: {en: Nuclear binding energy, zh: 结合能, fi: Sidosenergia, de: Bindungsenergie, ja: 結合エネルギー}
+    match: {en: [binding energy, binding energies], zh: [结合能], fi: [sidosenergia], de: [Bindungsenergie], ja: [結合エネルギー]}
+    wiki: {en: Nuclear binding energy, zh: 结合能, fi: Sidosenergia, de: Bindungsenergie, ja: 結合エネルギー}
+    text:
+      en: "The energy needed to split a nucleus into free protons and neutrons; it makes the nucleus lighter than its parts. Measured masses give binding energies directly."
+      zh: "把原子核拆成自由质子和中子所需的能量，它使原子核比组成部分更轻。测得的质量直接给出结合能。"
+      fi: "Energia, joka tarvitaan ytimen hajottamiseen vapaiksi protoneiksi ja neutroneiksi; siksi ydin on osiaan kevyempi."
+      de: "Die Energie, die nötig ist, um einen Kern in freie Protonen und Neutronen zu zerlegen; deshalb ist der Kern leichter als seine Bausteine."
+      ja: "原子核を自由な陽子と中性子に分けるのに必要なエネルギー。そのため原子核は構成要素の和より軽くなります。"
+  - id: mass-excess
+    name: {en: Mass excess, zh: 质量过剩, fi: Massaylijäämä, de: Massenexzess, ja: 質量超過}
+    match: {en: [mass excess], zh: [质量过剩], fi: [massaylijäämä], de: [Massenexzess], ja: [質量超過]}
+    wiki: {en: Mass excess, zh: 质量过剩, fi: Massavaje, de: Massenexzess, ja: 質量超過}
+    text:
+      en: "The difference between an atom's mass and its mass number A (in u), usually given in keV. AME2020 lists it for about 3 500 nuclides."
+      zh: "原子质量与其质量数 A（以 u 计）之差，通常以 keV 表示。AME2020 给出约 3500 个核素的质量过剩。"
+      fi: "Atomin massan ja massaluvun A (u-yksiköissä) erotus, yleensä keV:nä. AME2020 antaa sen noin 3 500 nuklidille."
+      de: "Differenz zwischen Atommasse und Massenzahl A (in u), meist in keV angegeben. AME2020 enthält ihn für etwa 3 500 Nuklide."
+      ja: "原子の質量と質量数 A（u 単位）との差で、通常 keV で表します。AME2020 は約3500核種について与えています。"
+  - id: separation-energy
+    name: {en: Separation energy, zh: 分离能, fi: Separaatioenergia, de: Separationsenergie, ja: 分離エネルギー}
+    match: {en: [separation energy, separation energies], zh: [分离能], fi: [separaatioenergia], de: [Separationsenergie], ja: [分離エネルギー]}
+    wiki: {en: Separation energy, zh: 分离能, fi: Separaatioenergia, de: Separationsenergie, ja: 分離エネルギー}
+    text:
+      en: "Energy needed to remove one or two neutrons (Sₙ, S₂ₙ) or protons (Sₚ, S₂ₚ). Sudden drops along an isotopic chain reveal shell closures; where it becomes negative is the drip line."
+      zh: "移去一个或两个中子（Sₙ、S₂ₙ）或质子（Sₚ、S₂ₚ）所需的能量。沿同位素链的骤降揭示壳层闭合；变为负值处即滴线。"
+      fi: "Energia yhden tai kahden neutronin (Sₙ, S₂ₙ) tai protonin (Sₚ, S₂ₚ) irrottamiseen. Äkilliset pudotukset paljastavat kuorten sulkeutumisen."
+      de: "Energie zum Entfernen von ein oder zwei Neutronen (Sₙ, S₂ₙ) oder Protonen (Sₚ, S₂ₚ). Plötzliche Abfälle zeigen Schalenabschlüsse; wo sie negativ wird, liegt die Abbruchkante."
+      ja: "中性子（Sₙ、S₂ₙ）や陽子（Sₚ、S₂ₚ）を1個または2個取り除くのに必要なエネルギー。同位体系列での急な低下は殻閉鎖を示し、負になる所がドリップラインです。"
+  - id: half-life
+    name: {en: Half-life, zh: 半衰期, fi: Puoliintumisaika, de: Halbwertszeit, ja: 半減期}
+    match: {en: [half-life, half-lives], zh: [半衰期], fi: [puoliintumisai], de: [Halbwertszeit], ja: [半減期]}
+    text:
+      en: "The time after which half of the nuclei in a sample have decayed. Known half-lives range from below 10⁻²¹ s to above 10²⁴ years."
+      zh: "样品中一半原子核发生衰变所需的时间。已知半衰期从不足 10⁻²¹ 秒到超过 10²⁴ 年。"
+      fi: "Aika, jonka kuluttua puolet näytteen ytimistä on hajonnut. Tunnetut puoliintumisajat ulottuvat alle 10⁻²¹ sekunnista yli 10²⁴ vuoteen."
+      de: "Die Zeit, nach der die Hälfte der Kerne einer Probe zerfallen ist; bekannte Werte reichen von unter 10⁻²¹ s bis über 10²⁴ Jahre."
+      ja: "試料中の原子核の半分が崩壊するまでの時間。既知の半減期は 10⁻²¹ 秒未満から 10²⁴ 年超までにわたります。"
+  - id: igisol
+    name: {en: IGISOL, zh: IGISOL, fi: IGISOL, de: IGISOL, ja: IGISOL}
+    match: {en: [IGISOL], zh: [IGISOL], fi: [IGISOL], de: [IGISOL], ja: [IGISOL]}
+    wiki: {en: Isotope separation on line, zh: 在线同位素分离, fi: IGISOL, de: Isotope Separator On Line, ja: オンライン同位体分離}
+    src: [[IGISOL group, "https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol"]]
+    text:
+      en: "Ion Guide Isotope Separator On-Line at the University of Jyväskylä: reaction products stop in helium gas and are extracted within milliseconds, independent of chemistry — ideal for refractory elements. Home of JYFLTRAP."
+      zh: "于韦斯屈莱大学的离子导向在线同位素分离器：反应产物在氦气中停止并在毫秒内引出，与化学性质无关，特别适合难熔元素。JYFLTRAP 所在地。"
+      fi: "Jyväskylän yliopiston ionijohdin-isotooppiseparaattori: reaktiotuotteet pysähtyvät heliumkaasuun ja irrotetaan millisekunneissa kemiasta riippumatta. JYFLTRAPin koti."
+      de: "Ion-Guide-Isotopenseparator der Universität Jyväskylä: Reaktionsprodukte werden in Helium gestoppt und unabhängig von der Chemie in Millisekunden extrahiert. Heimat von JYFLTRAP."
+      ja: "ユヴァスキュラ大学のイオンガイド型オンライン同位体分離装置。反応生成物をヘリウムガス中で止め、化学的性質によらずミリ秒で引き出します。JYFLTRAP の拠点です。"
+  - id: jyfltrap
+    name: {en: JYFLTRAP, zh: JYFLTRAP, fi: JYFLTRAP, de: JYFLTRAP, ja: JYFLTRAP}
+    match: {en: [JYFLTRAP], zh: [JYFLTRAP], fi: [JYFLTRAP], de: [JYFLTRAP], ja: [JYFLTRAP]}
+    wiki: {en: Penning trap, zh: 彭宁阱, fi: Penning-loukku, de: Penning-Falle, ja: ペニングトラップ}
+    src: [[IGISOL group, "https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol"]]
+    text:
+      en: "The double Penning-trap mass spectrometer at IGISOL, Jyväskylä: a purification trap followed by a precision trap in a 7 T magnet, used for masses, Q-values and isobarically pure beams."
+      zh: "于韦斯屈莱 IGISOL 的双彭宁阱质谱仪：7 T 磁体中依次为提纯阱和精密阱，用于质量、Q 值测量及提供同量异位素纯净的束流。"
+      fi: "IGISOLin kaksoispenning-loukkumassaspektrometri: puhdistusloukku ja tarkkuusloukku 7 T:n magneetissa; massat, Q-arvot ja isobaaripuhtaat suihkut."
+      de: "Das Doppel-Penning-Fallen-Massenspektrometer an IGISOL: Reinigungs- und Präzisionsfalle in einem 7-T-Magneten für Massen, Q-Werte und isobarenreine Strahlen."
+      ja: "IGISOL の二重ペニングトラップ質量分析器。7 T 磁石内の精製トラップと精密トラップから成り、質量・Q 値測定と同重体純化ビームに用いられます。"
+  - id: ame
+    name: {en: Atomic Mass Evaluation (AME), zh: 原子质量评估（AME）, fi: Atomimassojen arviointi (AME), de: Atomic Mass Evaluation (AME), ja: 原子質量評価（AME）}
+    match: {en: [AME2020], zh: [AME2020], fi: [AME2020], de: [AME2020], ja: [AME2020]}
+    wiki: {en: Atomic mass, zh: 原子质量, fi: Atomimassa, de: Atommasse, ja: 原子質量}
+    src: [[AMDC (IAEA), "https://www-nds.iaea.org/amdc/"]]
+    text:
+      en: "The internationally recommended table of atomic masses, combining all mass measurements; NUBASE2020 is its companion for half-lives, spins and decay modes. Values marked # come from systematics."
+      zh: "国际推荐的原子质量表，综合所有质量测量；NUBASE2020 是其姊妹表，给出半衰期、自旋和衰变方式。带 # 的数值来自系统学外推。"
+      fi: "Kansainvälisesti suositeltu atomimassataulukko, joka yhdistää kaikki massamittaukset; NUBASE2020 antaa puoliintumisajat, spinit ja hajoamistavat. #-merkityt arvot ovat systematiikasta."
+      de: "Die international empfohlene Tabelle der Atommassen aus allen Messungen; NUBASE2020 ergänzt Halbwertszeiten, Spins und Zerfallsarten. Mit # markierte Werte stammen aus der Systematik."
+      ja: "すべての質量測定を統合した国際推奨の原子質量表。NUBASE2020 は半減期・スピン・崩壊様式を与える姉妹表です。# 付きの値は系統性による推定値です。"
+  - id: nz
+    name: {en: N = Z nucleus, zh: N = Z 原子核, fi: N = Z -ydin, de: N = Z-Kern, ja: N = Z 核}
+    match: {en: [N = Z], zh: [N = Z], fi: [N = Z], de: [N = Z], ja: [N = Z]}
+    wiki: {en: Mirror nuclei, zh: 镜像核, fi: Isospin, de: Spiegelkern, ja: 鏡像核}
+    text:
+      en: "Nuclei with equal numbers of protons and neutrons. Heavy N = Z nuclei towards ¹⁰⁰Sn test isospin symmetry and proton–neutron pairing, and lie on the rp-process path."
+      zh: "质子数与中子数相等的原子核。趋近 ¹⁰⁰Sn 的重 N = Z 核可检验同位旋对称性与质子-中子对关联，并位于 rp 过程路径上。"
+      fi: "Ytimet, joissa on yhtä monta protonia ja neutronia. Raskaat N = Z -ytimet kohti ¹⁰⁰Sn:ää testaavat isospinsymmetriaa ja ovat rp-prosessin polulla."
+      de: "Kerne mit gleich vielen Protonen und Neutronen; schwere N = Z-Kerne bis ¹⁰⁰Sn testen Isospinsymmetrie und liegen auf dem rp-Prozesspfad."
+      ja: "陽子数と中性子数が等しい原子核。¹⁰⁰Sn に向かう重い N = Z 核はアイソスピン対称性や陽子・中性子対相関の検証に使われ、rp 過程の経路上にあります。"
+  - id: ion-optics
+    name: {en: Ion optics, zh: 离子光学, fi: Ionioptiikka, de: Ionenoptik, ja: イオン光学}
+    match: {en: [ion optics, ion-optical], zh: [离子光学], fi: [ionioptii, ionioptinen], de: [Ionenoptik, ionenoptisch], ja: [イオン光学]}
+    wiki: {en: Charged particle beam, zh: 带电粒子束, fi: Hiukkassuihku, de: Teilchenstrahl, ja: 荷電粒子ビーム}
+    text:
+      en: "Design of electric and magnetic fields that guide, focus and transport ion beams — the 'lenses' of beam lines, traps and storage rings, simulated with codes such as SIMION."
+      zh: "设计引导、聚焦和输运离子束的电场与磁场——束流线、离子阱和储存环中的'透镜'，常用 SIMION 等程序模拟。"
+      fi: "Ionisuihkuja ohjaavien, fokusoivien ja kuljettavien sähkö- ja magneettikenttien suunnittelu — suihkulinjojen ja loukkujen 'linssit', simuloidaan esim. SIMIONilla."
+      de: "Auslegung elektrischer und magnetischer Felder, die Ionenstrahlen führen und fokussieren – die 'Linsen' von Strahlführungen, Fallen und Speicherringen, simuliert z. B. mit SIMION."
+      ja: "イオンビームを導き、集束し、輸送する電場・磁場の設計。ビームライン、トラップ、蓄積リングの「レンズ」で、SIMION などで計算します。"
+  - id: nucleosynthesis
+    name: {en: Nucleosynthesis, zh: 核合成, fi: Nukleosynteesi, de: Nukleosynthese, ja: 元素合成}
+    match: {en: [nucleosynthesis, origin of the elements], zh: [核合成, 元素起源], fi: [nukleosyntee, alkuaineiden alkupe], de: [Nukleosynthese, Ursprung der Elemente], ja: [元素合成, 元素の起源]}
+    text:
+      en: "The creation of atomic nuclei in the Big Bang, in stars and in explosive events. Nuclear masses, half-lives and reaction rates are the key inputs to its models."
+      zh: "在大爆炸、恒星和爆发事件中产生原子核的过程。原子核的质量、半衰期和反应率是其模型的关键输入。"
+      fi: "Atomiytimien synty alkuräjähdyksessä, tähdissä ja räjähdyksissä. Ydinmassat, puoliintumisajat ja reaktionopeudet ovat mallien tärkeimmät syötteet."
+      de: "Die Entstehung der Atomkerne im Urknall, in Sternen und Explosionen; Kernmassen, Halbwertszeiten und Reaktionsraten sind die wichtigsten Eingaben der Modelle."
+      ja: "ビッグバン、恒星、爆発現象で原子核がつくられる過程。核質量・半減期・反応率がモデルの主要な入力です。"

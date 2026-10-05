@@ -33,7 +33,9 @@
     <button type="button" data-act="trails" aria-pressed="true">{{ $t.trails }}</button>
     <button type="button" data-act="play" aria-pressed="true" title="{{ $t.play }}">⏯</button>
     <button type="button" data-act="shot" title="{{ $t.shot }}">⤓ PNG</button>
+    <button type="button" data-act="video" title="Video (8 s)">⏺ Video</button>
   </div>
   <p class="ionhero-hint">{{ $t.hint }}</p>
 </section>
+<script defer src="{{ "js/zg-export.js" | relURL }}"></script>
 <script defer src="{{ "js/ion-hero.js" | relURL }}"></script>

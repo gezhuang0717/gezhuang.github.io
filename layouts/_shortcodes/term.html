@@ -1,0 +1,4 @@
+{{- /* Explanation pop-up for a glossary term (data/glossary.yaml).
+       {{< term "penning-trap" />}}                  → the term's name in the page language
+       {{< term "penning-trap" >}}traps{{< /term >}} → custom text                           */ -}}
+<span class="zg-term" data-term="{{ .Get 0 }}">{{ with .Inner }}{{ $.Page.RenderString . }}{{ end }}</span>

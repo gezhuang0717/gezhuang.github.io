@@ -3,11 +3,11 @@
 locale = "zh-CN"
 label = "中文"
 weight = 2
-title = "Zhuang Ge"
+title = "葛壮（Ge Zhuang）"
 contentDir = "content/zh"
 [params]
 [params.author]
-  name = "Zhuang Ge"
+  name = "葛壮（Ge Zhuang）"
   image = "img/zhuang-ge.png"
   headline = "芬兰科学院研究员 · 彭宁阱与多次反射飞行时间质谱 · 于韦斯屈莱大学"
   bio = "利用离子阱精确测量奇特原子核质量"

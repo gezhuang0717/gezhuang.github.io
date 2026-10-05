@@ -94,6 +94,11 @@
     if (a === "top") { pitch = 1.5; q("auto").checked = false; }
     if (a === "side") { pitch = 0; q("auto").checked = false; }
     if (a === "iso") { pitch = 0.35; yaw = 0.6; }
+    if (a === "png" && window.zgExport) {            /* 3× resolution still */
+      const w = cv.width, h = cv.height; cv.width = w * 3; cv.height = h * 3; g.fillStyle = "#fff"; g.fillRect(0, 0, cv.width, cv.height);
+      g.lineWidth = 3; draw(); zgExport.png(cv, "penning-trap-3d"); cv.width = w; cv.height = h;
+    }
+    if (a === "video" && window.zgExport) { const b = e.target.closest("[data-act]"); zgExport.record(cv, 10, "penning-trap-3d", r => { b.disabled = r; b.classList.toggle("is-rec", r); }); }
   });
   ["ions", "spread", "rp", "rm", "az"].forEach(n => q(n).addEventListener("input", makeIons));
   root.querySelectorAll("input[type=range]").forEach(r => { const o = r.parentElement.querySelector("output"); if (o) { const u = () => (o.textContent = r.value); r.addEventListener("input", u); u(); } });

@@ -103,7 +103,7 @@ enableRobotsTXT = true
   locale = "zh-CN"
   weight = 2
   contentDir = "content/zh"
-  title = "Zhuang Ge"
+  title = "葛壮（Ge Zhuang）"
   [languages.zh.params.profileMode]
     enabled = true
     title = "Zhuang Ge"

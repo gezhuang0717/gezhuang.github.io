@@ -624,13 +624,13 @@ def gen_congo_like(cfg: dict, theme: str):
                 f'locale = {toml_value(lang["locale"])}',
                 f'label = {toml_value(lang["name"])}',
                 f"weight = {i}",
-                f'title = {toml_value(cfg["title"])}',
+                f'title = {toml_value(lang.get("display_name", cfg["title"]))}',
                 f'contentDir = "content/{lang["code"]}"',
                 "[params]"]
         if theme == "blowfish":
             body += [f'  displayName = {toml_value(lang["code"].upper())}', f'  isoCode = {toml_value(lang["locale"])}',
                      "  rtl = false", '  dateFormat = "2006-01-02"']
-        body += ["[params.author]", f'  name = {toml_value(cfg["author"])}', f'  image = {toml_value(cfg["image"])}',
+        body += ["[params.author]", f'  name = {toml_value(lang.get("display_name", cfg["author"]))}', f'  image = {toml_value(cfg["image"])}',
                  f'  headline = {toml_value(lang["headline"])}', f'  bio = {toml_value(lang["bio"])}',
                  "  links = [", *links, "  ]"]
         (out / f"languages.{key}.toml").write_text("\n".join(body) + "\n", encoding="utf-8")
@@ -665,7 +665,7 @@ def gen_papermod(cfg: dict):
     for i, lang in enumerate(cfg["languages"], 1):
         k = lang_key(lang, "papermod")
         L += [f"[languages.{k}]", f'  label = {toml_value(lang["name"])}', f'  locale = {toml_value(lang["locale"])}', f"  weight = {i}",
-              f'  contentDir = "content/{lang["code"]}"', f'  title = {toml_value(cfg["title"])}',
+              f'  contentDir = "content/{lang["code"]}"', f'  title = {toml_value(lang.get("display_name", cfg["title"]))}',
               f"  [languages.{k}.params.profileMode]", "    enabled = true",
               f'    title = {toml_value(cfg["author"])}', f'    subtitle = {toml_value(lang["headline"] + "<br>" + lang["bio"])}',
               f'    imageUrl = {toml_value(cfg["image"])}', "    imageWidth = 160", "    imageHeight = 160",

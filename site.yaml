@@ -24,6 +24,7 @@ languages:
 - code: zh
   name: 中文
   locale: zh-CN
+  display_name: 葛壮（Ge Zhuang）
   theme_keys:
     congo: zh-hans
     blowfish: zh-cn

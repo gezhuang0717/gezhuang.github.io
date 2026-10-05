@@ -283,3 +283,20 @@ main section > article.mt-6::before{content:"";position:absolute;left:0;top:12px
 .nc-cbtn{display:flex;flex-wrap:wrap;gap:.3rem;margin:.5rem 0}.nc-cbtn .zg-btn{font-size:.75rem;padding:.2rem .55rem}
 .zg-btn.is-rec{background:#e5484d!important;color:#fff!important;animation:zg-blink 1s infinite}
 @keyframes zg-blink{50%{opacity:.6}}
+
+/* ── glossary pop-ups (static/js/glossary.js, data/glossary.yaml) ───────── */
+.zg-term { cursor: help; text-decoration: underline dotted var(--zg-blue); text-decoration-thickness: 1.5px; text-underline-offset: 3px; border-radius: 3px; transition: background .15s; }
+.zg-term:hover, .zg-term.on, .zg-term:focus-visible { background: color-mix(in srgb, var(--zg-blue) 12%, transparent); text-decoration-color: var(--zg-violet); outline: none; }
+.zg-gloss-pop { position: absolute; z-index: 1000; max-width: calc(100vw - 24px); padding: 14px 16px 12px; border-radius: 12px;
+  background: var(--zg-card); color: var(--zg-ink); border: 1px solid var(--zg-line); box-shadow: 0 12px 32px rgba(15,23,42,.18);
+  font-size: .9rem; line-height: 1.5; animation: zg-gloss-in .14s ease-out; }
+.zg-gloss-pop::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; border-radius: 12px 12px 0 0; background: var(--zg-rainbow); }
+.zg-gloss-h { font-weight: 700; font-size: 1rem; padding-right: 22px; }
+.zg-gloss-en { display: block; font-weight: 500; font-size: .8rem; color: var(--zg-muted); }
+.zg-gloss-t { margin: .45em 0 .6em; }
+.zg-gloss-l { display: flex; flex-wrap: wrap; gap: 6px; }
+.zg-gloss-l a { font-size: .78rem; padding: 2px 9px; border-radius: 999px; background: var(--zg-soft); border: 1px solid var(--zg-line); color: var(--zg-blue); text-decoration: none; }
+.zg-gloss-l a:hover { border-color: var(--zg-blue); }
+.zg-gloss-x { position: absolute; top: 8px; right: 10px; border: 0; background: none; font-size: 1.2rem; line-height: 1; color: var(--zg-muted); cursor: pointer; }
+@keyframes zg-gloss-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .zg-gloss-pop { animation: none; } }

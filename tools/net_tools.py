@@ -13,6 +13,38 @@ import requests
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15 gezhuang0717.github.io-linkcheck"}
+
+
+class _Resp:                     # minimal response object for the legacy-TLS fallback
+    def __init__(self, url, status, content, ctype):
+        self.url, self.status_code, self.content, self.headers = url, status, content, {"content-type": ctype}
+        self.text = content.decode("utf-8", "replace")
+    def raise_for_status(self):
+        if self.status_code >= 400:
+            raise RuntimeError(f"HTTP {self.status_code}")
+
+
+def fetch(url, timeout=60):
+    """requests.get, with a fallback for old servers (e.g. t2.lanl.gov) that only accept legacy TLS settings."""
+    try:
+        return requests.get(url, headers=UA, timeout=timeout, allow_redirects=True)
+    except requests.exceptions.SSLError:
+        import ssl, urllib.request
+        ctx = ssl.create_default_context()
+        ctx.set_ciphers("DEFAULT:@SECLEVEL=0")
+        ctx.options |= getattr(ssl, "OP_LEGACY_SERVER_CONNECT", 0x4)
+        ctx.minimum_version = ssl.TLSVersion.TLSv1
+        req = urllib.request.Request(url, headers=UA)
+        try:
+            with urllib.request.urlopen(req, context=ctx, timeout=timeout) as r:
+                return _Resp(r.geturl(), r.status, r.read(), r.headers.get("content-type", ""))
+        except Exception:  # noqa: BLE001 — last resort: curl with legacy ciphers
+            import subprocess
+            out = subprocess.run(["curl", "-sSL", "--max-time", str(timeout), "--ciphers", "DEFAULT@SECLEVEL=0", "-A", UA["User-Agent"], url],
+                                 capture_output=True, check=True).stdout
+            return _Resp(url, 200, out, "text/html" if out.lstrip()[:1] == b"<" else "text/plain")
+
+
 URL_RE = re.compile(r"https?://[^\s\"'<>()\]\[{}|\\^`]+")
 
 
@@ -71,11 +103,11 @@ def cmd_probe(a):
     out = pathlib.Path(a.out); out.mkdir(parents=True, exist_ok=True)
     for i, url in enumerate(a.urls):
         try:
-            r = requests.get(url, headers=UA, timeout=60, allow_redirects=True)
+            r = fetch(url, 60)
             name = f"{i:02d}_" + re.sub(r"[^A-Za-z0-9._-]+", "_", urllib.parse.urlparse(r.url).path.strip("/") or "index")[-80:]
             (out / name).write_bytes(r.content)
             head = r.content[:600].decode("utf-8", "replace").replace("\n", "⏎")
-            hrefs = sorted(set(re.findall(r'href="([^"]+)"', r.text)))[:80] if "html" in r.headers.get("content-type", "") else []
+            hrefs = sorted(set(re.findall(r'href="([^"]+)"', r.text)))[:120] if "html" in r.headers.get("content-type", "") else []
             print(f"== {url} → {r.status_code} {r.url} {len(r.content)} B {r.headers.get('content-type')}\n   {head[:400]}\n   links: {hrefs}")
         except Exception as e:  # noqa: BLE001
             print(f"== {url} → ERROR {e}")
@@ -100,7 +132,7 @@ def cmd_models(a):
     spec = json.loads((ROOT / "tools/data/massmodels/sources.json").read_text())
     for m in spec:
         try:
-            r = requests.get(m["url"], headers=UA, timeout=120)
+            r = fetch(m["url"], 120)
             r.raise_for_status()
             text = r.text
             if m.get("pre"):                         # data inside <pre> … </pre> of an HTML page

@@ -277,3 +277,8 @@ main section > article.mt-6::before{content:"";position:absolute;left:0;top:12px
 .g-q{font-size:1.1rem;font-weight:700}
 .g-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.8rem}
 .g-trap{margin:0;text-align:center;font-size:.85rem}
+.nc-export{display:flex;flex-wrap:wrap;gap:.4rem;margin:.3rem 0 .8rem}
+.nc-plot{width:100%;height:auto;border-radius:14px;cursor:crosshair;background:linear-gradient(135deg,rgba(71,200,255,.05),rgba(139,108,255,.07))}
+.nc-cbtn{display:flex;flex-wrap:wrap;gap:.3rem;margin:.5rem 0}.nc-cbtn .zg-btn{font-size:.75rem;padding:.2rem .55rem}
+.zg-btn.is-rec{background:#e5484d!important;color:#fff!important;animation:zg-blink 1s infinite}
+@keyframes zg-blink{50%{opacity:.6}}

@@ -168,7 +168,7 @@
         `δν = 0.1 Hz ↔ δm/m = ${(0.1 / NU_REF).toExponential(2)} ≈ ${(0.1 / NU_REF * M_CS * 931494.10242).toFixed(2)} keV`;
     }
     function reset() {
-      setIon(); Trf = +sel("trf").value; scheme = sel("scheme").value; Wd = (scheme === "rect" ? 3.2 : 2.4) / Trf; step = +(Wd / 160).toPrecision(2);
+      setIon(); Trf = +sel("trf").value; scheme = sel("scheme").value; Wd = (scheme === "rect" ? 3.6 : 4.0) / Trf;   /* rectangular: central dip + 3 side minima each side; Ramsey (fringe spacing 1/T_wait = 1.25/T_rf): central + 3 fringes each side */ step = +(Wd / 160).toPrecision(2);
       sl.min = -Wd; sl.max = Wd; sl.step = step; sl.value = 0;
       nuTrue = NU_REF + (Math.random() - 0.5) * 0.9 * Wd; ions = []; shots = 0; fit = null; reveal = false;
       upd(); info(); draw(); msg(box, TL.tof_start);
@@ -440,6 +440,84 @@
     reset(); waitRows(); requestAnimationFrame(loop);
   }
 
+  /* ── 3c. Phase-imaging (PI-ICR): resolve an isomer from its ground state ─────────────────────
+     After an accumulation time t_acc the reduced-cyclotron phase φ = 2π ν t_acc (mod 2π) is projected onto a
+     position-sensitive MCP. Ground state and isomer (heavier by E_x/c²) differ by Δν_c = ν_c · E_x/(m c²),
+     so their spots are Δφ = 2π Δν_c t_acc apart (mod 2π). Spot width σ_φ ≈ σ_r / R_spot. Resolving power
+     R = ν_c/Δν_FWHM = 2π ν_c t_acc / (2.355 σ_φ) (Eliseev et al., PRL 110, 082501 (2013); Nesterenko et al., EPJA 54, 154 (2018)). */
+  function piicrGame() {
+    const box = $("#g-pi"); if (!box) return;
+    const TL = T, [cv, cvh] = box.querySelectorAll("canvas"), sel = n => box.querySelector(`[name=${n}]`), V = n => +sel(n).value;
+    const UKEV = 931494.10242, QE = 1.602176634e-19, U = 1.66053906660e-27, ME = 9.1093837e-31, UNIT = { ys: 1e-24, zs: 1e-21, as: 1e-18, fs: 1e-15, ps: 1e-12, ns: 1e-9, us: 1e-6, "μs": 1e-6, ms: 1e-3, s: 1, m: 60, h: 3600, d: 86400, y: 3.156e7, ky: 3.156e10, My: 3.156e13, Gy: 3.156e16 };
+    const hl = t => { const m = String(t || "").replace("#", "").match(/^([\d.]+)\s*([a-zA-Zμ]+)/); return m && UNIT[m[2]] ? +m[1] * UNIT[m[2]] : t === "stable" ? Infinity : null; };
+    let list = [], S = null, hits = [];
+    function build() {         /* isomers from NUBASE2020 with E_x known and T½ ≥ 50 ms */
+      list = [];
+      rows.forEach(r => (r[11] || []).forEach(i => { const ex = i[1], t = hl(i[2]); if (ex > 5 && t >= 0.05 && r[3] != null && r[6] !== -98)
+        list.push({ label: `${sup(r[0] + r[1])}${r[2]} / ${sup(r[0] + r[1])}${i[0]}${r[2]}`, A: r[0] + r[1], me: r[3], ex, gt: r[7], it: i[2] }); }));
+      list.sort((a, b) => a.A - b.A);
+      const pref = ["⁹⁷Ag", "¹³⁰In", "¹³¹Sn", "²⁴⁴Am", "⁹⁴Ag", "¹⁰⁰Nb", "⁴⁵Sc"];
+      sel("iso").innerHTML = list.map((x, i) => `<option value="${i}">${x.label} (Eₓ = ${x.ex.toFixed(x.ex < 100 ? 1 : 0)} keV, T½ = ${x.it})</option>`).join("");
+      const j = list.findIndex(x => pref.some(p => x.label.startsWith(p))); sel("iso").value = Math.max(0, j); pick();
+    }
+    function pick() { S = list[+sel("iso").value]; hits = []; draw(); }
+    function phys() {
+      const B = V("B"), t = V("tacc") / 1000, m = (S.A + S.me / UKEV) * U - ME, nu = QE * B / (2 * Math.PI * m);
+      const dnu = nu * S.ex / ((S.A + S.me / UKEV) * UKEV), sig = Math.hypot(V("spot") / 10 / 6, 2 * Math.PI * nu * t * 1e-10);
+      const ph = x => ((x % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+      const pg = ph(2 * Math.PI * nu * t), pm = ph(2 * Math.PI * (nu - dnu) * t);
+      let d = Math.abs(pg - pm); d = Math.min(d, 2 * Math.PI - d);
+      return { B, t, nu, dnu, sig, pg, pm, d, R: 2 * Math.PI * nu * t / (2.3548 * sig), n: Math.floor(nu * t), sep: d / sig };
+    }
+    function shoot(n) { const p = phys(); for (let i = 0; i < n; i++) { const iso = Math.random() < V("ratio") / 100, a = (iso ? p.pm : p.pg) + p.sig * gauss(), r = 0.62 + 0.05 * gauss();
+      hits.push([r * Math.cos(a) + 0.02 * gauss(), r * Math.sin(a) + 0.02 * gauss(), iso]); } }
+    function paint(g, W, H, ink) {      /* detector view */
+      const p = phys(), R = Math.min(W, H) / 2 - 18, cx = W / 2, cy = H / 2;
+      g.fillStyle = "rgba(127,127,160,.08)"; g.beginPath(); g.arc(cx, cy, R, 0, 6.283); g.fill(); g.strokeStyle = "rgba(127,127,160,.6)"; g.lineWidth = 1.2; g.stroke();
+      g.setLineDash([3, 4]); g.beginPath(); g.moveTo(cx - R, cy); g.lineTo(cx + R, cy); g.moveTo(cx, cy - R); g.lineTo(cx, cy + R); g.stroke(); g.setLineDash([]);
+      if (sel("pix").checked) {           /* 2D histogram (pixels) */
+        const n = 72, hgrid = new Array(n * n).fill(0); let mx = 0;
+        hits.forEach(([x, y]) => { const i = Math.floor((x + 1) / 2 * n), j = Math.floor((1 - y) / 2 * n); if (i >= 0 && i < n && j >= 0 && j < n) mx = Math.max(mx, ++hgrid[j * n + i]); });
+        const c = 2 * R / n; for (let j = 0; j < n; j++) for (let i = 0; i < n; i++) { const v = hgrid[j * n + i]; if (v) { g.fillStyle = viridis(0.15 + 0.85 * Math.sqrt(v / mx)); g.fillRect(cx - R + i * c, cy - R + j * c, Math.ceil(c), Math.ceil(c)); } }
+      } else hits.forEach(([x, y, iso]) => { g.fillStyle = iso ? "rgba(229,72,77,.55)" : "rgba(62,99,221,.55)"; g.beginPath(); g.arc(cx + x * R, cy - y * R, 1.8, 0, 6.283); g.fill(); });
+      g.fillStyle = "rgba(127,127,160,.9)"; g.beginPath(); g.arc(cx, cy - 0.62 * R, 5, 0, 6.283); g.fill();   /* magnetron reference spot */
+      g.font = "11px system-ui"; g.textAlign = "center"; g.fillStyle = ink; g.fillText(TL.pi_ref, cx, cy - 0.62 * R - 10);
+      [[p.pg, "#3e63dd", TL.pi_gs], [p.pm, "#e5484d", TL.pi_is]].forEach(([a, col, l]) => { const x = cx + 0.62 * R * Math.cos(a), y = cy - 0.62 * R * Math.sin(a);
+        g.strokeStyle = col; g.lineWidth = 1.5; g.beginPath(); g.arc(x, y, Math.max(6, 0.62 * R * p.sig * 2), 0, 6.283); g.stroke(); g.fillStyle = col; g.fillText(l, x, y - Math.max(10, 0.62 * R * p.sig * 2) - 4); });
+      g.textAlign = "left"; g.fillStyle = ink; g.fillText(`t_acc = ${V("tacc")} ms · B = ${p.B} T · ν_c = ${p.nu.toFixed(3)} Hz · n = ${p.n.toLocaleString()} turns`, 8, 14);
+    }
+    function paintH(g, W, H, ink) {     /* angle histogram */
+      const P = { l: 48, t: 10, r: W - 10, b: H - 36 }, nb = 120, h = new Array(nb).fill(0);
+      hits.forEach(([x, y]) => { const a = (Math.atan2(y, x) + 2 * Math.PI) % (2 * Math.PI); h[Math.min(nb - 1, Math.floor(a / (2 * Math.PI) * nb))]++; });
+      const mx = Math.max(4, ...h) * 1.1, [X, Y] = axes(g, P, [0, 360], [0, mx], TL.pi_angle, "counts", ink, 4), bw = (P.r - P.l) / nb;
+      h.forEach((v, i) => { if (v) { g.fillStyle = "rgba(142,78,198,.75)"; g.fillRect(X(i * 360 / nb), Y(v), Math.max(1, bw - 0.4), P.b - Y(v)); } });
+      const p = phys(); [[p.pg, "#3e63dd"], [p.pm, "#e5484d"]].forEach(([a, c]) => { g.strokeStyle = c; g.setLineDash([4, 3]); g.beginPath(); g.moveTo(X(a * 180 / Math.PI), P.t); g.lineTo(X(a * 180 / Math.PI), P.b); g.stroke(); g.setLineDash([]); });
+    }
+    function draw() {
+      if (!S) return; const p = phys();
+      { const [g, W, H] = crisp(cv); paint(g, W, H, inkOf()); }
+      { const [g, W, H] = crisp(cvh); paintH(g, W, H, inkOf()); }
+      const ok = p.sep >= 3;
+      msg(box, `${S.label}: Eₓ = ${S.ex.toFixed(1)} keV → Δν_c = ${p.dnu.toExponential(3)} Hz · Δφ = ${(p.d * 180 / Math.PI).toFixed(1)}° · σ_φ = ${(p.sig * 180 / Math.PI).toFixed(1)}° · ` +
+        `Δφ/σ_φ = ${p.sep.toFixed(1)} · R ≈ ${p.R.toExponential(2)} (${TL.need} m/Δm = ${((S.A + S.me / UKEV) * UKEV / S.ex).toExponential(2)}) · ${ok ? "✔ " + TL.separated : "… " + TL.overlap}`);
+    }
+    box.addEventListener("input", e => { if (["tacc", "B", "spot", "ratio"].includes(e.target.name)) { hits = []; draw(); } });
+    box.addEventListener("change", e => { if (e.target.name === "iso") pick(); if (e.target.name === "pix") draw(); });
+    box.addEventListener("click", e => {
+      const a = e.target.closest("[data-act]")?.dataset.act; if (!a || !S) return;
+      if (a === "shot") { shoot(V("nshot")); draw(); }
+      if (a === "clear") { hits = []; draw(); }
+      if (a === "rand") { sel("iso").value = Math.floor(Math.random() * list.length); pick(); }
+      if (a === "auto") { /* shortest t_acc with Δφ ≥ 3σ_φ (and not wrapped back) */
+        const el = sel("tacc"); let best = null; for (let ms = 1; ms <= 5000; ms++) { el.value = ms; if (phys().sep >= 3) { best = ms; break; } }
+        el.max = Math.max(+el.max, best || 5000); el.value = best || el.value; el.dispatchEvent(new Event("input", { bubbles: true })); shoot(V("nshot")); draw(); }
+      if (a === "png") { savePNG(cv, paint, "pi-icr-detector"); }
+      if (a === "png2") savePNG(cvh, paintH, "pi-icr-angle");
+      if (a === "csv" && window.zgExport) window.zgExport.csv(["x_rel", "y_rel", "angle_deg", "state"], hits.map(([x, y, i]) => [x.toFixed(4), y.toFixed(4), ((Math.atan2(y, x) * 180 / Math.PI + 360) % 360).toFixed(2), i ? "isomer" : "ground"]), "pi-icr-hits");
+    });
+    const init = () => rows.length ? build() : setTimeout(init, 200); init();
+  }
+
   /* ── 4. Magic-number & element quiz ────────────────────────────────── */
   function quiz(els) {
     const box = $("#g-quiz"); let score = 0, ans;
@@ -464,7 +542,7 @@
   }
 
   fetch(root.dataset.src).then(r => r.json()).then(d => { rows = d.rows; hlGame(); quiz(d.elements); });
-  tofGame(); mrtofGame(); rfqGame();
+  tofGame(); mrtofGame(); rfqGame(); piicrGame();
   /* number boxes next to sliders: typing a value moves the slider (and widens its range if needed) */
   root.querySelectorAll(".g-num[data-for]").forEach(n => {
     const box = n.closest(".g-box"), r = box && box.querySelector(`input[type=range][name="${n.dataset.for}"]`); if (!r) return;

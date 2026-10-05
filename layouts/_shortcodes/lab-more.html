@@ -32,14 +32,14 @@
   <p class="zg-muted">{{ $t.n3d }} {{ $t.n3d2 }}</p>
   <canvas width="640" height="440" aria-label="{{ $t.t3d }}"></canvas>
   <div class="zg-sim-controls">
-    <label>{{ $t.ratio }} <input type="range" name="ratio" min="4" max="60" value="21"><output></output></label>
-    <label>{{ $t.speed }} <input type="range" name="speed" min="1" max="12" value="4"><output></output></label>
+    <label>{{ $t.ratio }} <input type="range" name="ratio" min="2" max="200" value="21"><output></output></label>
+    <label>{{ $t.speed }} <input type="range" name="speed" min="1" max="50" value="4"><output></output></label>
     <label>{{ $t.rp }} <input type="range" name="rp" min="0" max="100" value="25"><output></output></label>
     <label>{{ $t.rm }} <input type="range" name="rm" min="0" max="100" value="65"><output></output></label>
     <label>{{ $t.az }} <input type="range" name="az" min="0" max="100" value="45"><output></output></label>
-    <label>{{ $t.trail }} <input type="range" name="trail" min="100" max="4000" step="100" value="1400"><output></output></label>
-    <label>{{ $t.ions }} <input type="range" name="ions" min="1" max="12" value="1"><output></output></label>
-    <label>{{ $t.spread }} <input type="range" name="spread" min="0" max="20" value="4"><output></output></label>
+    <label>{{ $t.trail }} <input type="range" name="trail" min="100" max="20000" step="100" value="1400"><output></output></label>
+    <label>{{ $t.ions }} <input type="range" name="ions" min="1" max="60" value="1"><output></output></label>
+    <label>{{ $t.spread }} <input type="range" name="spread" min="0" max="50" value="4"><output></output></label>
   </div>
   <div class="zg-row zg-checks">
     <label><input type="checkbox" name="auto" checked> {{ $t.auto }}</label>

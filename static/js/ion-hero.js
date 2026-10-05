@@ -132,7 +132,7 @@
     stage.addEventListener("click", e => {          // inject a bunch of new ions at the click point
       if (e.target.closest("a,button")) return;
       const r = cv.getBoundingClientRect(), at = [e.clientX - r.left, e.clientY - r.top];
-      for (let k = 0; k < 6 && ions.length < 160; k++) ions.push(mkIon(ions.length, at));
+      for (let k = 0; k < 6 && ions.length < 400; k++) ions.push(mkIon(ions.length, at));
       const s = root.querySelector("[name=ions]"); if (s) s.value = S.count = ions.length;
       if (!S.playing) still();
     });

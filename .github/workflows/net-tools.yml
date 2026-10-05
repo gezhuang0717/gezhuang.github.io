@@ -1,0 +1,55 @@
+name: Network tools
+# Manual helpers that need open internet (link check, data downloads). Reports are artifacts, never published.
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "links | probe | models"
+        required: true
+        default: links
+      urls:
+        description: "URLs for probe (space separated)"
+        required: false
+        default: ""
+      commit:
+        description: "models: commit the downloaded tables"
+        type: boolean
+        default: false
+  schedule:
+    - cron: '23 3 * * 1'        # weekly link check, Monday 06:23 Helsinki (summer)
+permissions:
+  contents: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests pyyaml
+      - name: Run
+        run: |
+          mkdir -p reports
+          TASK="${{ github.event.inputs.task || 'links' }}"
+          case "$TASK" in
+            links)  python tools/net_tools.py links --out reports/linkcheck.csv | tee reports/linkcheck.txt ;;
+            probe)  python tools/net_tools.py probe ${{ github.event.inputs.urls }} --out reports/probe | tee reports/probe.txt ;;
+            models) python tools/net_tools.py models --out tools/data/massmodels | tee reports/models.txt ;;
+          esac
+          { echo '```'; tail -c 60000 reports/*.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: net-tools-report
+          path: reports/
+          retention-days: 14
+      - name: Commit model tables
+        if: github.event.inputs.task == 'models' && github.event.inputs.commit == 'true'
+        run: |
+          python tools/make_mass_models.py
+          git config user.name "Zhuang Ge"
+          git config user.email gezhuang0717@users.noreply.github.com
+          git add tools/data/massmodels static/data/massmodels.json
+          if ! git diff --cached --quiet; then git commit -m "Theory mass tables updated by Network tools"; git pull --rebase --autostash origin main; git push origin HEAD:main; fi

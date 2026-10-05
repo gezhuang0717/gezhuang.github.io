@@ -17,10 +17,10 @@
     <canvas id="zg-sim-side" width="140" height="420" aria-label="side view, axial motion"></canvas>
   </div>
   <div class="zg-sim-controls">
-    <label>ν₊ / ν₋ <input type="range" id="zg-ratio" min="4" max="60" value="18"><output id="zg-ratio-o">18</output></label>
+    <label>ν₊ / ν₋ <input type="range" id="zg-ratio" min="2" max="200" value="18"><output id="zg-ratio-o">18</output></label>
     <label>r₊ <input type="range" id="zg-rp" min="0" max="100" value="25"><output id="zg-rp-o">25</output></label>
     <label>r₋ <input type="range" id="zg-rm" min="0" max="100" value="70"><output id="zg-rm-o">70</output></label>
-    <label>{{ i18n "zg_lab_speed" | default "Speed" }} <input type="range" id="zg-speed" min="1" max="20" value="6"><output id="zg-speed-o">6</output></label>
+    <label>{{ i18n "zg_lab_speed" | default "Speed" }} <input type="range" id="zg-speed" min="1" max="60" value="6"><output id="zg-speed-o">6</output></label>
   </div>
   <div class="zg-row">
     <button type="button" class="zg-btn" id="zg-convert">{{ i18n "zg_lab_convert" | default "Quadrupole excitation at ν_c (π pulse)" }}</button>
@@ -122,12 +122,12 @@
         if (f >= 1) pulse = null;
       }
       var rp = +ui.rp.value / 100 * 0.45, rm = +ui.rm.value / 100 * 0.55;
-      var steps = reduce ? 1 : 6;
+      var steps = reduce ? 1 : Math.max(6, Math.ceil(wp * dt * 6 / 0.25)); if (!reduce) dt = dt * 6 / steps;   /* keep fast ν₊ loops smooth */
       for (var k = 0; k < steps; k++) {
         t += dt;
         var x = cx + R * (rm * Math.cos(wm * t) + rp * Math.cos(wp * t));
         var y = cy - R * (rm * Math.sin(wm * t) + rp * Math.sin(wp * t));
-        trail.push([x, y]); if (trail.length > 1600) trail.shift();
+        trail.push([x, y]); if (trail.length > 6000) trail.shift();
       }
       var ink = col("--zg-ink", "#1d2433"), line = col("--zg-line", "#e3e7ef");
       gt.clearRect(0, 0, W, H);

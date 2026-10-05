@@ -27,8 +27,8 @@
       <button type="button" data-mode="{{ . }}" aria-pressed="{{ eq . $mode }}">{{ index $t . }}</button>
       {{- end }}
     </span>
-    <label>{{ $t.speed }} <input type="range" name="speed" min="0.2" max="3" step="0.1" value="1"></label>
-    <label>{{ $t.ions }} <input type="range" name="ions" min="6" max="160" step="1" value="{{ .ions | default "36" }}"></label>
+    <label>{{ $t.speed }} <input type="range" name="speed" min="0.1" max="6" step="0.1" value="1"></label>
+    <label>{{ $t.ions }} <input type="range" name="ions" min="1" max="400" step="1" value="{{ .ions | default "36" }}"></label>
     <label>{{ $t.palette }} <select name="palette"><option value="rainbow">{{ $t.rainbow }}</option><option value="isotope">{{ $t.isotope }}</option><option value="mono">{{ $t.mono }}</option></select></label>
     <button type="button" data-act="trails" aria-pressed="true">{{ $t.trails }}</button>
     <button type="button" data-act="play" aria-pressed="true" title="{{ $t.play }}">⏯</button>

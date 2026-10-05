@@ -54,9 +54,10 @@
         const f = Math.min(1, (t - pulse.t0) / 8), eff = Math.exp(-Math.pow((o.m - 1) * 30, 2)), th = f * Math.PI / 2 * eff;
         o.rmN = o.m0 * Math.cos(th); o.rpN = Math.sqrt(o.p0 * o.p0 + Math.pow(o.m0 * Math.sin(th), 2));
       }
-      const rp = o.rpN * 0.35, rm = o.rmN * 0.8;
-      const x = rm * Math.cos(wm * t + o.ph) + rp * Math.cos(wp * t), y = rm * Math.sin(wm * t + o.ph) + rp * Math.sin(wp * t), z = o.az * Math.cos(wz * t + o.phz);
-      o.trail.push([x, y, z]); const L = +q("trail").value; while (o.trail.length > L) o.trail.shift();
+      const rp = o.rpN * 0.35, rm = o.rmN * 0.8, ns = Math.max(1, Math.ceil(wp * dt / 0.3));   /* sub-steps keep fast cyclotron loops smooth at large ν₊/ν₋ */
+      for (let k = 1; k <= ns; k++) { const tt = t + dt * (k / ns - 1);
+        o.trail.push([rm * Math.cos(wm * tt + o.ph) + rp * Math.cos(wp * tt), rm * Math.sin(wm * tt + o.ph) + rp * Math.sin(wp * tt), o.az * Math.cos(wz * tt + o.phz)]); }
+      const L = +q("trail").value; while (o.trail.length > L) o.trail.shift();
     });
     if (pulse && t - pulse.t0 > 8) { pulse = null; ions.forEach(o => { delete o.p0; delete o.m0; }); }
     if (dip > 0) dip -= dt;

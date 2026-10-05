@@ -300,3 +300,15 @@ main section > article.mt-6::before{content:"";position:absolute;left:0;top:12px
 .zg-gloss-x { position: absolute; top: 8px; right: 10px; border: 0; background: none; font-size: 1.2rem; line-height: 1; color: var(--zg-muted); cursor: pointer; }
 @keyframes zg-gloss-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .zg-gloss-pop { animation: none; } }
+
+/* games v2: option rows, hints, RFQ grid */
+.g-opts-row{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;margin:.4rem 0 .6rem;font-size:.85rem}
+.g-opts-row select{padding:.15rem .4rem;border-radius:8px;border:1px solid var(--zg-line);background:var(--zg-card);color:inherit}
+.g-chk{display:inline-flex;gap:.3rem;align-items:center}
+.g-sliders{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 1.2rem;font-size:.85rem}
+.g-sliders output{min-width:5.5em;text-align:right;font-variant-numeric:tabular-nums}
+.g-hints{margin-top:.4rem;font-size:.88rem}.g-hints summary{cursor:pointer;font-weight:600}.g-hints li{margin:.3rem 0}
+.g-info{font-size:.82rem}.rfq-out{font-size:.85rem;display:flex;flex-wrap:wrap;gap:.2rem .8rem}
+.g-rfq-grid{display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr);gap:.6rem}
+@media (max-width:640px){.g-rfq-grid{grid-template-columns:minmax(0,1fr)}}
+.rfq-leg{display:inline-flex;gap:.8rem}.rfq-leg i{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.25em;vertical-align:middle}

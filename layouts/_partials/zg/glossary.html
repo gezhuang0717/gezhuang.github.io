@@ -7,7 +7,7 @@
 */ -}}
 {{- $lang := site.Language.Lang -}}
 {{- $k := cond (hasPrefix $lang "zh") "zh" $lang -}}
-{{- with site.Data.glossary -}}
+{{- with hugo.Data.glossary -}}
 {{- $list := slice -}}
 {{- range .terms -}}
   {{- $name := index .name $k | default (index .name "en") -}}

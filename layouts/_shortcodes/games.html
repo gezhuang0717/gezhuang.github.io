@@ -38,21 +38,58 @@
    "t_penning" "双曲面ペニングトラップ" "t_cyl" "円筒型ペニングトラップ" "t_paul" "パウル（RF）トラップ" "t_linear" "線形パウルトラップ / RFQ" "t_mrtof" "MR-TOF 質量分析器" "t_ring" "蓄積リング" "t_ebit" "EBIT" "t_orbi" "オービトラップ"
    "new" "もう一度" "score" "得点" "best" "最高" "right" "正解！" "wrong" "おしい。" "yours" "あなたの答え")) -}}
 {{- $t := index $L $k | default $en -}}
+{{- with hugo.Data.games_labels }}{{ $t = merge $t (index . "en") (index . $k | default dict) }}{{ end -}}
 <div class="zg-games" data-games data-src="{{ "data/nubase2020.json" | relURL }}" data-labels="{{ $t | jsonify }}">
   <section class="zg-card g-box" id="g-hl"><h2>⏳ {{ $t.hl }}</h2><p class="zg-muted">{{ $t.hl_n }}</p>
     <div class="g-pair"></div>
     <div class="zg-row"><button type="button" class="zg-btn" data-pick="a">◀ A</button><button type="button" class="zg-btn" data-pick="b">B ▶</button></div>
     <p class="g-msg" aria-live="polite"></p></section>
   <section class="zg-card g-box" id="g-tof"><h2>🎯 {{ $t.tof }}</h2><p class="zg-muted">{{ $t.tof_n }}</p>
-    <canvas width="600" height="220"></canvas>
-    <label class="g-slider">ν_rf <input type="range" min="808780" max="808810" step="0.5" value="808795"> <output>808,795 Hz</output></label>
-    <div class="zg-row"><button type="button" class="zg-btn" data-act="shot">{{ $t.shot }}</button><button type="button" class="zg-btn" data-act="guess">{{ $t.guess }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="new">{{ $t.new }}</button></div>
-    <p class="g-msg" aria-live="polite"></p></section>
+    <div class="g-opts-row">
+      <label>{{ $t.trf }} <select name="trf"><option value="0.1">100 ms</option><option value="0.2" selected>200 ms</option><option value="0.4">400 ms</option><option value="0.8">800 ms</option></select></label>
+      <label>{{ $t.scheme }} <select name="scheme"><option value="rect">{{ $t.rect }}</option><option value="ramsey">{{ $t.ramsey }}</option></select></label>
+      <label>{{ $t.ions }} <select name="ions"><option>1</option><option selected>3</option><option>6</option><option>12</option></select></label>
+      <label>{{ $t.view }} <select name="view"><option value="pts">{{ $t.v_pts }}</option><option value="pix">{{ $t.v_pix }}</option></select></label>
+      <label class="g-chk"><input type="checkbox" name="theory"> {{ $t.theory }}</label>
+    </div>
+    <canvas width="720" height="330"></canvas>
+    <label class="g-slider">ν_rf <input type="range" min="-16" max="16" step="0.1" value="0"> <output></output></label>
+    <div class="zg-row"><button type="button" class="zg-btn" data-act="shot">{{ $t.shot }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="scan">{{ $t.scan }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="fit">{{ $t.fit }}</button><button type="button" class="zg-btn" data-act="guess">{{ $t.guess }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="new">{{ $t.new }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="png">⤓ {{ $t.png }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="csv">⤓ {{ $t.csv }}</button></div>
+    <p class="g-msg" aria-live="polite"></p><p class="g-info zg-muted"></p>
+    <details class="g-hints"><summary>💡 {{ $t.hints }}</summary><ul><li>{{ $t.h1 }}</li><li>{{ $t.h2 }}</li><li>{{ $t.h3 }}</li><li>{{ $t.h4 }}</li></ul></details></section>
   <section class="zg-card g-box" id="g-mr"><h2>🪞 {{ $t.mr }}</h2><p class="zg-muted">{{ $t.mr_n }}</p>
-    <canvas width="600" height="160"></canvas>
-    <label class="g-slider">{{ $t.laps }} <input type="range" min="1" max="2000" step="1" value="1"> <output></output></label>
-    <div class="zg-row"><button type="button" class="zg-btn zg-btn-ghost" data-act="new">{{ $t.new }}</button></div>
-    <p class="g-msg" aria-live="polite"></p></section>
+    <div class="g-opts-row">
+      <label>{{ $t.pair }} <select name="pair"></select></label>
+      <button type="button" class="zg-btn zg-btn-ghost" data-act="rand">🎲 {{ $t.rand }}</button>
+      <label>{{ $t.ratio }} <select name="ratio"><option value="1" selected>1 : 1</option><option value="0.2">1 : 0.2</option><option value="5">1 : 5</option><option value="0.05">1 : 0.05</option></select></label>
+    </div>
+    <canvas width="720" height="260"></canvas>
+    <div class="g-sliders">
+      <label class="g-slider">{{ $t.laps }} <input type="range" name="laps" min="0" max="2000" step="1" value="0"> <output data-for="laps"></output></label>
+      <label class="g-slider">{{ $t.dt0 }} <input type="range" name="dt0" min="2" max="200" step="1" value="20"> <output data-for="dt0"></output></label>
+      <label class="g-slider">{{ $t.dlap }} <input type="range" name="dlap" min="0" max="100" step="1" value="20"> <output data-for="dlap"></output></label>
+      <label class="g-slider">{{ $t.tlap }} <input type="range" name="tlap" min="2" max="20" step="0.5" value="8"> <output data-for="tlap"></output></label>
+      <label class="g-slider">{{ $t.t0 }} <input type="range" name="t0" min="2" max="40" step="1" value="10"> <output data-for="t0"></output></label>
+    </div>
+    <canvas width="720" height="200"></canvas>
+    <div class="zg-row"><button type="button" class="zg-btn zg-btn-ghost" data-act="new">{{ $t.new }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="png">⤓ {{ $t.png }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="png2">⤓ {{ $t.png }} (R)</button><button type="button" class="zg-btn zg-btn-ghost" data-act="csv">⤓ {{ $t.csv }}</button></div>
+    <p class="g-msg" aria-live="polite"></p>
+    <details class="g-hints"><summary>💡 {{ $t.hints }}</summary><p>{{ $t.mr_h }}</p></details></section>
+  <section class="zg-card g-box" id="g-rfq"><h2>🧲 {{ $t.rfq }}</h2><p class="zg-muted">{{ $t.rfq_n }}</p>
+    <div class="g-opts-row">
+      <label>{{ $t.set }} <select name="set"><option value="near">{{ $t.set_near }}</option><option value="far">{{ $t.set_far }}</option></select></label>
+      <span class="rfq-leg"></span>
+    </div>
+    <div class="g-rfq-grid"><canvas width="360" height="360"></canvas><canvas width="420" height="360"></canvas></div>
+    <div class="g-sliders">
+      <label class="g-slider">{{ $t.a }} <input type="range" name="A" min="10" max="240" step="1" value="100"> <output data-for="A"></output></label>
+      <label class="g-slider">{{ $t.v }} <input type="range" name="V" min="0" max="400" step="0.5" value="83"> <output data-for="V"></output></label>
+      <label class="g-slider">{{ $t.u }} <input type="range" name="U" min="0" max="60" step="0.05" value="0"> <output data-for="U"></output></label>
+      <label class="g-slider">{{ $t.speed }} <input type="range" name="speed" min="1" max="12" step="1" value="4"> <output data-for="speed"></output></label>
+    </div>
+    <div class="zg-row"><button type="button" class="zg-btn zg-btn-ghost" data-act="cool">{{ $t.cool }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="tip">{{ $t.tip }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="pause">⏯ {{ $t.pause }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="png">⤓ {{ $t.png }}</button><button type="button" class="zg-btn zg-btn-ghost" data-act="png2">⤓ {{ $t.png }} (a–q)</button></div>
+    <p class="rfq-out"></p><p class="g-msg" aria-live="polite"></p>
+    <details class="g-hints"><summary>💡 {{ $t.hints }}</summary><p>{{ $t.rfq_h }}</p></details></section>
   <section class="zg-card g-box" id="g-quiz"><h2>🧩 {{ $t.quiz }}</h2><p class="zg-muted">{{ $t.quiz_n }}</p>
     <p class="g-q"></p><div class="g-opts zg-row"></div><p class="g-msg" aria-live="polite"></p></section>
   <section class="zg-card"><h2>🦓 {{ $t.gal }}</h2><p class="zg-muted">{{ $t.gal_n }}</p>
@@ -62,4 +99,5 @@
       {{- end }}
     </div></section>
 </div>
+<script defer src="{{ "js/zg-export.js" | relURL }}"></script>
 <script defer src="{{ "js/games.js" | relURL }}"></script>

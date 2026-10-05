@@ -16,6 +16,8 @@ description: "ユヴァスキュラ大学 フィンランド・アカデミー�
 
 **連絡先：** [zhuang.z.ge@jyu.fi](mailto:zhuang.z.ge@jyu.fi) · [z.ge@gsi.de](mailto:z.ge@gsi.de) · [zhuang@ribf.riken.jp](mailto:zhuang@ribf.riken.jp)
 
+**ご意見・訂正:** [zhuang.z.ge@jyu.fi](mailto:zhuang.z.ge@jyu.fi) · [gezhuang0717@gmail.com](mailto:gezhuang0717@gmail.com) · [gezhuang2020@gmail.com](mailto:gezhuang2020@gmail.com)
+
 {{< nuclide-of-the-day >}}
 
 {{< gallery home="true" >}}

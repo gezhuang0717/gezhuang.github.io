@@ -47,7 +47,8 @@ OWNER_NAME, OWNER_EMAIL = "Zhuang Ge", "gezhuang0717@users.noreply.github.com"
 SITE_URL = "https://gezhuang0717.github.io/"
 
 # ── privacy rules ────────────────────────────────────────────────────────────
-ALLOWED_EMAILS = {"zhuang.z.ge@jyu.fi", "z.ge@gsi.de", "zhuang@ribf.riken.jp"}  # public on INSPIRE
+ALLOWED_EMAILS = {"zhuang.z.ge@jyu.fi", "z.ge@gsi.de", "zhuang@ribf.riken.jp",  # public on INSPIRE
+                  "gezhuang0717@gmail.com", "gezhuang2020@gmail.com"}  # owner: feedback & corrections
 PRIVATE_PATTERNS = {  # regex → reason
     r"(?i)co-authored-by|claude-session|generated with \[?claude": "tool attribution",
     r"/Volumes/|/Users/[A-Za-z]|/home/claude|/mnt/user-data|PSSD": "local file path",

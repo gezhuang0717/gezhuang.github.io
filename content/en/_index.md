@@ -16,6 +16,8 @@ I teach the doctoral course *Lasers and Traps in Nuclear Physics Studies*. The w
 
 **Contact:** [zhuang.z.ge@jyu.fi](mailto:zhuang.z.ge@jyu.fi) · [z.ge@gsi.de](mailto:z.ge@gsi.de) · [zhuang@ribf.riken.jp](mailto:zhuang@ribf.riken.jp)
 
+**Feedback & corrections:** [zhuang.z.ge@jyu.fi](mailto:zhuang.z.ge@jyu.fi) · [gezhuang0717@gmail.com](mailto:gezhuang0717@gmail.com) · [gezhuang2020@gmail.com](mailto:gezhuang2020@gmail.com)
+
 {{< nuclide-of-the-day >}}
 
 {{< gallery home="true" >}}

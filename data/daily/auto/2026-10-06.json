@@ -343,7 +343,147 @@
       "published": "2024-12-31",
       "collected_at": "2026-10-06",
       "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "job",
+      "title": "Tenure-Track Faculty Position in Astrophysics — McGill U., Montreal (main)",
+      "summary": "North America · deadline 2026-11-15 · SENIOR. The Department of Physics at McGill University invites applications for a tenure-track appointment at the rank of Assistant Professor in the fields of Transient Astrophysics, Astroparticle Physics, and/or Multi-Messenger…",
+      "url": "https://inspirehep.net/jobs/3211736",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "deadline": "2026-11-15",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "job",
+      "title": "Assistant Professor (E) / Reader (F) in High Energy Physics — Bhubaneswar, Inst. Phys.",
+      "summary": "Asia · deadline 2026-11-14 · SENIOR/JUNIOR. The Institute of Physics (IoP), Bhubaneswar, India, an autonomous research institution of the Department of Atomic Energy, Government of India, invites applications for faculty positions at the level of Assistant Professor (E) /…",
+      "url": "https://inspirehep.net/jobs/3211733",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "deadline": "2026-11-14",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "job",
+      "title": "Postdoctoral researcher in scattered light calibration for gravitational wave detectors — U. Antwerp (main)",
+      "summary": "Europe · deadline 2026-11-15 · POSTDOC. The Particle Physics group of the University of Antwerp invites applications for a postdoctoral position in gravitational wave instrumentation, with a focus on a novel calibration technique for Advanced Virgo+ Phase 2 (O5). The group is…",
+      "url": "https://inspirehep.net/jobs/3211697",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "deadline": "2026-11-15",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "job",
+      "title": "Electronics Design Engineer for Instrumentation Design Lab — U. Kansas, Lawrence",
+      "summary": "North America · deadline 2027-01-04 · JUNIOR. Applications are invited for an Electronics Design Engineer (EDE) in the Instrumentation Design Lab (IDL) at the Dept. of Physics &amp; Astronomy at the University of Kansas beginning as early as February 1, 2027. High school/GED…",
+      "url": "https://inspirehep.net/jobs/3211346",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "deadline": "2027-01-04",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "news",
+      "title": "Elucidating Superconductivity with Ultrasound",
+      "summary": "Author(s): Charles Day Researchers measured a crystal’s elastic modulus and sound attenuation to infer the properties of two superconducting states. [Physics 19, s122] Published Tue Oct 06, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s122",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "news",
+      "title": "Heavy fermions emerge at an atomic-layer interface, unlocking new ways to design quantum materials",
+      "summary": "A research team led by the University of Osaka has directly observed, for the first time, an unusual heavy-fermion state forming at the boundary between a one-atom-thick material and a metal. Such states are closely linked to exotic quantum phenomena, including unconventional…",
+      "url": "https://phys.org/news/2026-10-heavy-fermions-emerge-atomic-layer.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "news",
+      "title": "Can a passing black hole disturbance leave a trace in Hawking radiation?",
+      "summary": "Black holes, despite their extreme nature, are described by surprisingly few basic parameters: their mass, charge and spin. Two black holes may have formed for completely different reasons and passed through very different histories, yet still end up in the same final state.…",
+      "url": "https://phys.org/news/2026-10-black-hole-disturbance-hawking.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "news",
+      "title": "Francis Halzen wins Nobel Prize in physics for work on mysterious ghost particles called neutrinos",
+      "summary": "Francis Halzen won the Nobel Prize in physics on Tuesday for his efforts to demystify a rare group of neutrinos, tiny cosmic particles that scientists believe offer clues to how the universe evolved.",
+      "url": "https://phys.org/news/2026-10-francis-halzen-nobel-prize-physics.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "paper",
+      "title": "Deformation-driven intruder states in light island-of-inversion nuclei",
+      "summary": "Author(s): Calvin W. Johnson, Mark A. Caprio, and Shwetha L. Vittal Islands of inversion occur when the nuclear ground state is dominated by intruder configurations, specifically particle-hole excitations across shell gaps, rather than by the naive spherical shell-model…",
+      "url": "http://link.aps.org/doi/10.1103/csgd-ncnj",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
     }
   ],
-  "fetched": "2026-10-06T02:08:03+00:00"
+  "fetched": "2026-10-06T16:11:47+00:00"
 }

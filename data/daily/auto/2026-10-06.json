@@ -252,7 +252,98 @@
       "published": "2026-01-20",
       "collected_at": "2026-10-06",
       "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "paper",
+      "title": "Nuclear Polarization by Intense Laser Pulses",
+      "summary": "Author(s): Hanxu Zhang, Tao Li, and Xu Wang Nuclear polarization plays an essential role in precision measurements, symmetry tests, and emerging quantum technologies, yet efficient polarization of heavy nuclei remains a major challenge. We propose an efficient,…",
+      "url": "http://link.aps.org/doi/10.1103/p7k8-mjn7",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "paper",
+      "title": "Hyperbolic wave attractors",
+      "summary": "Nature Physics, Published online: 28 September 2026; doi:10.1038/s41567-026-03453-7 Wave propagation in irregular cavities made from conventional isotropic media is typically chaotic. Now odd-shaped cavities made from hyperbolic metamaterials are shown to suppress chaotic wave…",
+      "url": "https://www.nature.com/articles/s41567-026-03453-7",
+      "source": "Nature Physics",
+      "tags": [
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-28",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "paper",
+      "title": "A universal speed limit for collective decay in quantum systems",
+      "summary": "Nature Physics, Published online: 25 September 2026; doi:10.1038/s41567-026-03445-7 Quantum systems composed of many particles can decay much faster than the sum of their individual decay rates. Now, a universal speed limit of many-body decay has been revealed, providing bounds…",
+      "url": "https://www.nature.com/articles/s41567-026-03445-7",
+      "source": "Nature Physics",
+      "tags": [
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-25",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "paper",
+      "title": "Quantum field theory dynamics in trapped ions",
+      "summary": "Nature Physics, Published online: 25 September 2026; doi:10.1038/s41567-026-03401-5 Computing the real-time dynamics of quantum field theories is intractable for classical devices. Now, the dynamics of two quantum field theories have been observed using hybrid trapped-ion…",
+      "url": "https://www.nature.com/articles/s41567-026-03401-5",
+      "source": "Nature Physics",
+      "tags": [
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-25",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "news",
+      "title": "ITN Newsletter – January 2025",
+      "summary": "Foreword Dear Ion Trappers, 2025 has been officially declared the International Year of Quantum Science and Technology by the United Nations, marking the centenary of quantum mechanics and celebrating its transformative impact. We’re eager to hear about your projects and events…",
+      "url": "https://iontraps.net/itn-newsletter-january-2025/",
+      "source": "Ion Traps Newsletter (iontraps.net)",
+      "tags": [
+        "trap"
+      ],
+      "lang": "en",
+      "published": "2025-01-31",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-06",
+      "type": "news",
+      "title": "ITN Newsletter – December 2024",
+      "summary": "Foreword Dear Ion Trappers, As we wrap up 2024, we’d like to thank all our members for staying in touch and sharing their news, events, publications, and opportunities with us throughout the year. Your contributions are what make this newsletter a vibrant hub for our community.…",
+      "url": "https://iontraps.net/itn-newsletter-december-2024/",
+      "source": "Ion Traps Newsletter (iontraps.net)",
+      "tags": [
+        "trap"
+      ],
+      "lang": "en",
+      "published": "2024-12-31",
+      "collected_at": "2026-10-06",
+      "verification_status": "feed-collected"
     }
   ],
-  "fetched": "2026-10-06T02:00:53+00:00"
+  "fetched": "2026-10-06T02:08:03+00:00"
 }

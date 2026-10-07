@@ -24,3 +24,4 @@
 
 .zg-sci-output span{white-space:normal;overflow-wrap:anywhere}.zg-sci-folder p{overflow-wrap:anywhere}
 @media(min-width:1500px){.zg-science-playground{position:relative;left:50%;transform:translateX(-50%);margin-inline:0;box-sizing:border-box}}
+@media(min-width:1500px){.prose:has(.zg-science-playground){display:block}.prose:has(.zg-science-playground)>.max-w-prose{max-width:none;width:100%}}

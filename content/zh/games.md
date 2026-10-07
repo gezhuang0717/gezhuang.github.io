@@ -7,3 +7,5 @@ showDate: false
 束流停机时玩一玩。最高分只保存在你的浏览器中。
 
 {{< games >}}
+
+{{< science-playground mode="game" >}}

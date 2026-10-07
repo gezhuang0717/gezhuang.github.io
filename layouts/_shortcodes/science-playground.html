@@ -1,0 +1,15 @@
+{{- $lang := site.Language.Lang -}}
+{{- $mode := .Get "mode" | default "lab" -}}
+{{- $T := dict
+ "en" (dict "title" "Interactive science workbench" "lab" "Reproducible Lab" "games" "Research & teaching challenges" "note" "Public educational models with explicit units, tables, CSV export and responsive plots. Presets are not operating settings.")
+ "zh" (dict "title" "互动科学工作台" "lab" "可复现实验室" "games" "科研与教学挑战" "note" "公开教育模型：单位、表格、CSV 导出和自适应绘图均明确展示。预设值不是设备运行参数。")
+ "fi" (dict "title" "Interaktiivinen tiedetyöpöytä" "lab" "Toistettava laboratorio" "games" "Tutkimus- ja opetushaasteet" "note" "Julkiset opetusmallit sisältävät yksiköt, taulukot, CSV-viennin ja responsiiviset kuvaajat. Esiasetukset eivät ole käyttöarvoja.")
+ "de" (dict "title" "Interaktive Wissenschafts-Workbench" "lab" "Reproduzierbares Labor" "games" "Forschungs- und Lehrchallenges" "note" "Öffentliche Lehrmodelle mit Einheiten, Tabellen, CSV-Export und responsiven Diagrammen. Voreinstellungen sind keine Betriebswerte.")
+ "ja" (dict "title" "インタラクティブ科学ワークベンチ" "lab" "再現可能ラボ" "games" "研究・教育チャレンジ" "note" "単位・表・CSV出力・レスポンシブ図を備えた公開教育モデルです。プリセットは運転設定ではありません。") -}}
+{{- $k := cond (hasPrefix $lang "zh") "zh" $lang -}}{{- $t := index $T $k | default (index $T "en") -}}
+<section class="zg-science-playground" data-science-playground data-lang="{{ $k }}" data-mode="{{ $mode }}" data-src="{{ "data/science_simulations.json" | relURL }}">
+  <div class="zg-sci-head"><div><h2>{{ $t.title }} — {{ index $t (cond (eq $mode "game") "games" "lab") }}</h2><p class="zg-muted zg-sci-scope">{{ $t.note }}</p></div></div>
+  <div class="zg-sci-grid" data-cards><p class="zg-muted">Loading…</p></div>
+</section>
+<link rel="stylesheet" href="{{ "css/zg-science-playground.css" | relURL }}">
+<script defer src="{{ "js/zg-export.js" | relURL }}"></script><script defer src="{{ "js/science-playground.js" | relURL }}"></script>

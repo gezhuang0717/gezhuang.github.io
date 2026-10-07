@@ -12,4 +12,6 @@ Kleine interaktive Werkzeuge aus meiner täglichen Arbeit mit Penning-Fallen und
 
 {{< lab-more >}}
 
+{{< science-playground mode="lab" >}}
+
 {{< nuclide-chart >}}

@@ -1,0 +1,854 @@
+{
+  "schema_version": "4.0",
+  "release_date": "2026-10-06",
+  "simulations": [
+    {
+      "id": "cyclotron_sweep",
+      "mode": "lab",
+      "engine": "cyclotron",
+      "status": "implemented",
+      "scope": "educational_formula",
+      "difficulty": "Introductory",
+      "inputs": [
+        "mass_u",
+        "charge",
+        "B_T"
+      ],
+      "outputs": [
+        "nu_c_Hz",
+        "m_over_q"
+      ],
+      "python": "plot_penning_frequencies.py",
+      "note": "Classical cyclotron relation.",
+      "title_en": "Cyclotron-frequency sweeper",
+      "title_zh": "回旋频率扫描器",
+      "title_fi": "Syklotronitaajuuden pyyhkäisy",
+      "title_de": "Zyklotronfrequenz-Sweep",
+      "title_ja": "サイクロトロン周波数スイープ",
+      "description_en": "Explore how mass, charge and magnetic field set the cyclotron frequency.",
+      "description_zh": "探索质量、电荷态和磁场如何决定回旋频率。",
+      "description_fi": "Tutki massan, varauksen ja magneettikentän vaikutusta syklotronitaajuuteen.",
+      "description_de": "Untersuche, wie Masse, Ladung und Magnetfeld die Zyklotronfrequenz bestimmen.",
+      "description_ja": "質量・電荷・磁場がサイクロトロン周波数をどう決めるか調べます。",
+      "input_keys": [
+        "mass_u",
+        "charge",
+        "B_T"
+      ],
+      "output_keys": [
+        "nu_c_Hz",
+        "m_over_q"
+      ],
+      "python_script": "plot_penning_frequencies.py",
+      "source_note": "Classical cyclotron relation.",
+      "presets": [
+        {
+          "id": "cs133_7t",
+          "label_en": "133Cs+ at 7 T",
+          "label_zh": "7 T 下的 133Cs+",
+          "params": {
+            "mass_u": {
+              "value": 132.90545196
+            },
+            "charge": {
+              "value": 1
+            },
+            "B_T": {
+              "value": 7
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "penning_modes",
+      "mode": "lab",
+      "engine": "penning",
+      "status": "implemented",
+      "scope": "educational_formula",
+      "difficulty": "Research",
+      "inputs": [
+        "penning_mode",
+        "mass_u",
+        "charge",
+        "B_T",
+        "U0_V",
+        "d_mode",
+        "d_mm",
+        "rho0_mm",
+        "z0_mm",
+        "C2",
+        "nu_c_cal_Hz",
+        "nu_minus_cal_Hz"
+      ],
+      "outputs": [
+        "nu_c_Hz",
+        "nu_z_Hz",
+        "nu_plus_Hz",
+        "nu_minus_Hz",
+        "d_used_mm",
+        "d_geometry_mm",
+        "stability_ratio",
+        "sum_residual_mHz",
+        "stable"
+      ],
+      "python": "simulate_penning_calibration_v4.py",
+      "note": "Calibration preset is a public teaching reference, not an operating configuration.",
+      "title_en": "Penning frequencies & calibration",
+      "title_zh": "彭宁阱频率与校准",
+      "title_fi": "Penning-taajuudet ja kalibrointi",
+      "title_de": "Penning-Frequenzen und Kalibrierung",
+      "title_ja": "ペニングトラップ周波数と較正",
+      "description_en": "Switch between a sanitized PyMassScanner-style frequency calibration and an ideal-geometry calculation.",
+      "description_zh": "在经过公开化处理的 PyMassScanner 风格频率校准与理想几何计算之间切换。",
+      "description_fi": "Vaihda julkiseen käyttöön siistityn PyMassScanner-tyylisen kalibroinnin ja ideaaligeometrian välillä.",
+      "description_de": "Wechsle zwischen einer öffentlich bereinigten PyMassScanner-Kalibrierung und einer Idealgeometrie-Rechnung.",
+      "description_ja": "公開用に整理した PyMassScanner 型較正と理想形状計算を切り替えます。",
+      "input_keys": [
+        "penning_mode",
+        "mass_u",
+        "charge",
+        "B_T",
+        "U0_V",
+        "d_mode",
+        "d_mm",
+        "rho0_mm",
+        "z0_mm",
+        "C2",
+        "nu_c_cal_Hz",
+        "nu_minus_cal_Hz"
+      ],
+      "output_keys": [
+        "nu_c_Hz",
+        "nu_z_Hz",
+        "nu_plus_Hz",
+        "nu_minus_Hz",
+        "d_used_mm",
+        "d_geometry_mm",
+        "stability_ratio",
+        "sum_residual_mHz",
+        "stable"
+      ],
+      "python_script": "simulate_penning_calibration_v4.py",
+      "source_note": "Calibration preset is a public teaching reference; ideal geometry can use direct d or d derived from rho0/z0 with explicit C2.",
+      "presets": [
+        {
+          "id": "pymassscanner_public_cal",
+          "label_en": "PyMassScanner-style calibration example",
+          "label_zh": "PyMassScanner 风格校准示例",
+          "params": {
+            "penning_mode": {
+              "value": "calibration"
+            },
+            "mass_u": {
+              "value": 100.0
+            },
+            "charge": {
+              "value": 1
+            },
+            "B_T": {
+              "value": 7.0
+            },
+            "U0_V": {
+              "value": 100.0
+            },
+            "d_mm": {
+              "value": 37.116
+            },
+            "nu_c_cal_Hz": {
+              "value": 1051126.2
+            },
+            "nu_minus_cal_Hz": {
+              "value": 1664.828
+            },
+            "d_mode": {
+              "value": "direct"
+            },
+            "rho0_mm": {
+              "value": 30.0
+            },
+            "z0_mm": {
+              "value": 48.0
+            },
+            "C2": {
+              "value": 1.0
+            }
+          }
+        },
+        {
+          "id": "jyfltrap_like_geometry",
+          "label_en": "JYFLTRAP-like public geometry example",
+          "label_zh": "JYFLTRAP 风格公开几何示例",
+          "params": {
+            "penning_mode": {
+              "value": "ideal_geometry"
+            },
+            "mass_u": {
+              "value": 100.0
+            },
+            "charge": {
+              "value": 1
+            },
+            "B_T": {
+              "value": 7.0
+            },
+            "U0_V": {
+              "value": 100.0
+            },
+            "d_mm": {
+              "value": 37.116
+            },
+            "nu_c_cal_Hz": {
+              "value": 1051126.2
+            },
+            "nu_minus_cal_Hz": {
+              "value": 1653.0
+            },
+            "d_mode": {
+              "value": "direct"
+            },
+            "rho0_mm": {
+              "value": 30.0
+            },
+            "z0_mm": {
+              "value": 48.0
+            },
+            "C2": {
+              "value": 1.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "picr_phase",
+      "mode": "lab",
+      "engine": "picr",
+      "status": "implemented",
+      "scope": "educational_formula",
+      "difficulty": "Research",
+      "inputs": [
+        "mass1_u",
+        "mass2_u",
+        "charge",
+        "B_T",
+        "tacc_ms",
+        "phase_radius_mm",
+        "spot_sigma_mm",
+        "ions_per_spot",
+        "spatial_systematic_mm"
+      ],
+      "outputs": [
+        "delta_nu_Hz",
+        "delta_phase_deg",
+        "wrap_phase_deg",
+        "spot_separation_mm",
+        "centroid_sigma_mm",
+        "phase_sigma_deg",
+        "frequency_sigma_mHz",
+        "separation_sigma_spatial",
+        "resolving_power_1sigma",
+        "resolving_power_fwhm"
+      ],
+      "python": "plot_picr_phase_separation.py",
+      "note": "Ideal frequency-to-phase mapping.",
+      "title_en": "PI-ICR accumulation-time studio",
+      "title_zh": "PI-ICR 累积时间工作室",
+      "title_fi": "PI-ICR-kertymäajan työtila",
+      "title_de": "PI-ICR-Akkumulationszeit-Studio",
+      "title_ja": "PI-ICR 蓄積時間スタジオ",
+      "description_en": "Use 0.01 ms accumulation-time precision and inspect unwrapped and wrapped phase separation.",
+      "description_zh": "以 0.01 ms 精度设置累积时间，并查看展开与绕回后的相位分离。",
+      "description_fi": "Aseta kertymäaika 0,01 ms tarkkuudella ja tarkastele vaihe-eroa.",
+      "description_de": "Stelle die Akkumulationszeit mit 0,01 ms Auflösung ein und untersuche die Phasentrennung.",
+      "description_ja": "0.01 ms 分解能で蓄積時間を設定し、位相分離を確認します。",
+      "input_keys": [
+        "mass1_u",
+        "mass2_u",
+        "charge",
+        "B_T",
+        "tacc_ms",
+        "phase_radius_mm",
+        "spot_sigma_mm",
+        "ions_per_spot",
+        "spatial_systematic_mm"
+      ],
+      "output_keys": [
+        "delta_nu_Hz",
+        "delta_phase_deg",
+        "wrap_phase_deg",
+        "spot_separation_mm",
+        "centroid_sigma_mm",
+        "phase_sigma_deg",
+        "frequency_sigma_mHz",
+        "separation_sigma_spatial",
+        "resolving_power_1sigma",
+        "resolving_power_fwhm"
+      ],
+      "python_script": "plot_picr_phase_separation.py",
+      "source_note": "Ideal frequency-to-phase mapping plus a simplified detector-imaging uncertainty model; resolving-power outputs are phase-imaging limits only.",
+      "presets": [
+        {
+          "id": "a100_demo",
+          "label_en": "A=100 phase demo",
+          "label_zh": "A=100 相位演示",
+          "params": {
+            "mass1_u": {
+              "value": 100.0
+            },
+            "mass2_u": {
+              "value": 100.00005
+            },
+            "charge": {
+              "value": 1
+            },
+            "B_T": {
+              "value": 7.0
+            },
+            "tacc_ms": {
+              "value": 500.0
+            },
+            "phase_radius_mm": {
+              "value": 11.0
+            },
+            "spot_sigma_mm": {
+              "value": 1.0
+            },
+            "ions_per_spot": {
+              "value": 50
+            },
+            "spatial_systematic_mm": {
+              "value": 0.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "mrtof_laps",
+      "mode": "lab",
+      "engine": "mrtof",
+      "status": "implemented",
+      "scope": "educational_model",
+      "difficulty": "Graduate",
+      "inputs": [
+        "mass1_u",
+        "mass2_u",
+        "laps",
+        "t0_us",
+        "tlap_us",
+        "sigma0_ns",
+        "broadening_ps_per_lap"
+      ],
+      "outputs": [
+        "dt_ns",
+        "sigma_ns",
+        "separation_sigma",
+        "resolving_power"
+      ],
+      "python": "plot_mrtof_separation.py",
+      "note": "Simplified square-root mass scaling and configurable broadening.",
+      "title_en": "MR-TOF lap optimizer",
+      "title_zh": "MR-TOF 圈数优化器",
+      "title_fi": "MR-TOF-kierrosoptimoija",
+      "title_de": "MR-TOF-Rundenoptimierer",
+      "title_ja": "MR-TOF ラップ最適化",
+      "description_en": "Explore separation, timing width and resolving power versus lap count.",
+      "description_zh": "探索圈数对分离度、时间宽度和分辨本领的影响。",
+      "description_fi": "Tutki erotusta, aikaleveyttä ja erotuskykyä kierrosluvun funktiona.",
+      "description_de": "Untersuche Trennung, Zeitbreite und Auflösungsvermögen gegen Rundenzahl.",
+      "description_ja": "ラップ数に対する分離度・時間幅・分解能を調べます。",
+      "input_keys": [
+        "mass1_u",
+        "mass2_u",
+        "laps",
+        "t0_us",
+        "tlap_us",
+        "sigma0_ns",
+        "broadening_ps_per_lap"
+      ],
+      "output_keys": [
+        "dt_ns",
+        "sigma_ns",
+        "separation_sigma",
+        "resolving_power"
+      ],
+      "python_script": "plot_mrtof_separation.py",
+      "source_note": "Simplified square-root mass scaling and configurable broadening.",
+      "presets": [
+        {
+          "id": "a100_demo",
+          "label_en": "A=100 MR-TOF demo",
+          "label_zh": "A=100 MR-TOF 演示",
+          "params": {
+            "mass1_u": {
+              "value": 100.0
+            },
+            "mass2_u": {
+              "value": 100.001
+            },
+            "laps": {
+              "value": 1000
+            },
+            "t0_us": {
+              "value": 10.0
+            },
+            "tlap_us": {
+              "value": 8.0
+            },
+            "sigma0_ns": {
+              "value": 20.0
+            },
+            "broadening_ps_per_lap": {
+              "value": 0.03
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "rfq_pseudo",
+      "mode": "lab",
+      "engine": "rfq",
+      "status": "implemented",
+      "scope": "educational_formula",
+      "difficulty": "Graduate",
+      "inputs": [
+        "mass_u",
+        "charge",
+        "Vrf_V",
+        "voltage_convention",
+        "freq_kHz",
+        "r0_mm",
+        "rod_radius_mm",
+        "length_mm",
+        "geometry_factor",
+        "scan_param"
+      ],
+      "outputs": [
+        "effective_Vrf_V",
+        "q_mathieu",
+        "depth_eV",
+        "secular_Hz",
+        "rod_ratio",
+        "length_over_r0",
+        "stable"
+      ],
+      "python": "simulate_rfq_geometry_scan_v4.py",
+      "note": "Ideal small-q radial model with explicit voltage convention; geometry length is descriptive.",
+      "title_en": "RFQ frequency & geometry explorer",
+      "title_zh": "RFQ 频率与几何尺寸探索",
+      "title_fi": "RFQ-taajuus- ja geometriaexploraattori",
+      "title_de": "RFQ-Frequenz- und Geometrie-Explorer",
+      "title_ja": "RFQ 周波数・形状エクスプローラ",
+      "description_en": "Vary RF frequency, amplitude, r0, rod size, active length and voltage convention; choose the scan axis.",
+      "description_zh": "可改变 RF 频率、幅度、r0、杆半径、有效长度和电压定义，并选择扫描变量。",
+      "description_fi": "Muuta RF-taajuutta, amplitudia, r0:aa, sauvageometriaa, pituutta ja jännitekonventiota.",
+      "description_de": "Variiere RF-Frequenz, Amplitude, r0, Stabradius, Länge und Spannungskonvention.",
+      "description_ja": "RF 周波数・振幅・r0・ロッド半径・長さ・電圧定義を変更し、走査軸を選べます。",
+      "input_keys": [
+        "mass_u",
+        "charge",
+        "Vrf_V",
+        "voltage_convention",
+        "freq_kHz",
+        "r0_mm",
+        "rod_radius_mm",
+        "length_mm",
+        "geometry_factor",
+        "scan_param"
+      ],
+      "output_keys": [
+        "effective_Vrf_V",
+        "q_mathieu",
+        "depth_eV",
+        "secular_Hz",
+        "rod_ratio",
+        "length_over_r0",
+        "stable"
+      ],
+      "python_script": "simulate_rfq_geometry_scan_v4.py",
+      "source_note": "Ideal small-q radial model with explicit voltage convention; geometry length is descriptive.",
+      "presets": [
+        {
+          "id": "compact_2mhz",
+          "label_en": "Compact 2 MHz example",
+          "label_zh": "紧凑型 2 MHz 示例",
+          "params": {
+            "mass_u": {
+              "value": 100
+            },
+            "charge": {
+              "value": 1
+            },
+            "Vrf_V": {
+              "value": 300
+            },
+            "voltage_convention": {
+              "value": "differential_zp"
+            },
+            "freq_kHz": {
+              "value": 2000.0
+            },
+            "r0_mm": {
+              "value": 3.5
+            },
+            "rod_radius_mm": {
+              "value": 3.96
+            },
+            "length_mm": {
+              "value": 300.0
+            },
+            "geometry_factor": {
+              "value": 1.0
+            },
+            "scan_param": {
+              "value": "freq_kHz"
+            }
+          }
+        },
+        {
+          "id": "wide_700khz",
+          "label_en": "Wide 700 kHz example",
+          "label_zh": "宽孔径 700 kHz 示例",
+          "params": {
+            "mass_u": {
+              "value": 100
+            },
+            "charge": {
+              "value": 1
+            },
+            "Vrf_V": {
+              "value": 300
+            },
+            "voltage_convention": {
+              "value": "differential_zp"
+            },
+            "freq_kHz": {
+              "value": 700.0
+            },
+            "r0_mm": {
+              "value": 10.0
+            },
+            "rod_radius_mm": {
+              "value": 11.3
+            },
+            "length_mm": {
+              "value": 500.0
+            },
+            "geometry_factor": {
+              "value": 1.0
+            },
+            "scan_param": {
+              "value": "r0_mm"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "radioactive_race",
+      "mode": "game",
+      "engine": "decay",
+      "status": "implemented",
+      "scope": "educational_formula",
+      "difficulty": "Introductory",
+      "inputs": [
+        "half_life_s",
+        "elapsed_s",
+        "N0"
+      ],
+      "outputs": [
+        "survival_fraction",
+        "remaining",
+        "decays"
+      ],
+      "python": "plot_decay_statistics.py",
+      "note": "Exponential decay law.",
+      "title_en": "Half-life race",
+      "title_zh": "半衰期竞赛",
+      "title_fi": "Puoliintumisaikakilpa",
+      "title_de": "Halbwertszeit-Rennen",
+      "title_ja": "半減期レース",
+      "description_en": "Predict the surviving fraction after an elapsed time.",
+      "description_zh": "预测经过给定时间后的存活比例。",
+      "description_fi": "Ennusta jäljellä oleva osuus tietyn ajan jälkeen.",
+      "description_de": "Bestimme den verbleibenden Anteil nach einer Zeitspanne.",
+      "description_ja": "経過時間後の残存割合を予測します。",
+      "input_keys": [
+        "half_life_s",
+        "elapsed_s",
+        "N0"
+      ],
+      "output_keys": [
+        "survival_fraction",
+        "remaining",
+        "decays"
+      ],
+      "python_script": "plot_decay_statistics.py",
+      "source_note": "Exponential decay law.",
+      "presets": [
+        {
+          "id": "half10",
+          "label_en": "10 s half-life",
+          "label_zh": "10 秒半衰期",
+          "params": {
+            "half_life_s": {
+              "value": 10
+            },
+            "elapsed_s": {
+              "value": 25
+            },
+            "N0": {
+              "value": 10000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "uncertainty_detective",
+      "mode": "game",
+      "engine": "uncertainty",
+      "status": "implemented",
+      "scope": "educational_formula",
+      "difficulty": "Graduate",
+      "inputs": [
+        "u_stat",
+        "u_cal",
+        "u_drift",
+        "u_model"
+      ],
+      "outputs": [
+        "u_total",
+        "dominant_fraction"
+      ],
+      "python": "plot_uncertainty_budget.py",
+      "note": "Independent Gaussian components; covariance requires a separate model.",
+      "title_en": "Uncertainty-budget detective",
+      "title_zh": "不确定度预算侦探",
+      "title_fi": "Epävarmuusbudjetin etsivä",
+      "title_de": "Unsicherheitsbudget-Detektiv",
+      "title_ja": "不確かさ予算ディテクティブ",
+      "description_en": "Combine independent terms and identify the dominant variance contribution.",
+      "description_zh": "组合独立不确定度项并识别主导方差贡献。",
+      "description_fi": "Yhdistä riippumattomat epävarmuudet ja tunnista suurin varianssiosuus.",
+      "description_de": "Kombiniere unabhängige Beiträge und finde den dominanten Varianzanteil.",
+      "description_ja": "独立な不確かさを合成し、支配的な分散寄与を特定します。",
+      "input_keys": [
+        "u_stat",
+        "u_cal",
+        "u_drift",
+        "u_model"
+      ],
+      "output_keys": [
+        "u_total",
+        "dominant_fraction"
+      ],
+      "python_script": "plot_uncertainty_budget.py",
+      "source_note": "Independent Gaussian components; covariance requires a separate model.",
+      "presets": [
+        {
+          "id": "balanced",
+          "label_en": "Balanced budget",
+          "label_zh": "均衡预算",
+          "params": {
+            "u_stat": {
+              "value": 0.3
+            },
+            "u_cal": {
+              "value": 0.2
+            },
+            "u_drift": {
+              "value": 0.25
+            },
+            "u_model": {
+              "value": 0.1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "picr_challenge",
+      "mode": "game",
+      "engine": "picr_game",
+      "status": "implemented",
+      "scope": "synthetic_challenge",
+      "difficulty": "Research",
+      "inputs": [
+        "mass1_u",
+        "mass2_u",
+        "charge",
+        "B_T",
+        "tacc_ms",
+        "phase_radius_mm",
+        "spot_sigma_mm",
+        "ions_per_spot",
+        "spatial_systematic_mm"
+      ],
+      "outputs": [
+        "delta_phase_deg",
+        "wrap_phase_deg",
+        "spot_separation_mm",
+        "separation_sigma_spatial",
+        "resolving_power_fwhm",
+        "score"
+      ],
+      "python": "plot_picr_phase_separation.py",
+      "note": "Synthetic scoring on the ideal PI-ICR mapping.",
+      "title_en": "Choose PI-ICR accumulation time",
+      "title_zh": "选择 PI-ICR 累积时间",
+      "title_fi": "Valitse PI-ICR-kertymäaika",
+      "title_de": "PI-ICR-Akkumulationszeit wählen",
+      "title_ja": "PI-ICR 蓄積時間を選ぶ",
+      "description_en": "Balance angular separation against phase wrapping using 0.01 ms timing.",
+      "description_zh": "以 0.01 ms 时间精度在角分离与相位绕回之间权衡。",
+      "description_fi": "Tasapainota vaihe-ero ja kieroutuminen 0,01 ms ajoituksella.",
+      "description_de": "Balanciere Winkeltrennung und Phasenwicklung mit 0,01-ms-Timing.",
+      "description_ja": "0.01 ms タイミングで角度分離と位相ラップを両立させます。",
+      "input_keys": [
+        "mass1_u",
+        "mass2_u",
+        "charge",
+        "B_T",
+        "tacc_ms",
+        "phase_radius_mm",
+        "spot_sigma_mm",
+        "ions_per_spot",
+        "spatial_systematic_mm"
+      ],
+      "output_keys": [
+        "delta_phase_deg",
+        "wrap_phase_deg",
+        "spot_separation_mm",
+        "separation_sigma_spatial",
+        "resolving_power_fwhm",
+        "score"
+      ],
+      "python_script": "plot_picr_phase_separation.py",
+      "source_note": "Synthetic scoring on the ideal PI-ICR mapping.",
+      "presets": [
+        {
+          "id": "a100_game",
+          "label_en": "A=100 timing challenge",
+          "label_zh": "A=100 时间挑战",
+          "params": {
+            "mass1_u": {
+              "value": 100.0
+            },
+            "mass2_u": {
+              "value": 100.00005
+            },
+            "charge": {
+              "value": 1
+            },
+            "B_T": {
+              "value": 7.0
+            },
+            "tacc_ms": {
+              "value": 500.0
+            },
+            "phase_radius_mm": {
+              "value": 11.0
+            },
+            "spot_sigma_mm": {
+              "value": 1.0
+            },
+            "ions_per_spot": {
+              "value": 50
+            },
+            "spatial_systematic_mm": {
+              "value": 0.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "mathieu_stability",
+      "mode": "game",
+      "engine": "mathieu",
+      "status": "implemented",
+      "scope": "synthetic_challenge",
+      "difficulty": "Graduate",
+      "inputs": [
+        "mass_u",
+        "charge",
+        "Vrf_V",
+        "voltage_convention",
+        "freq_kHz",
+        "r0_mm",
+        "geometry_factor",
+        "q_target"
+      ],
+      "outputs": [
+        "q_mathieu",
+        "stable",
+        "score"
+      ],
+      "python": "simulate_rfq_geometry_scan_v4.py",
+      "note": "Synthetic challenge; not an operating stability certification.",
+      "title_en": "Mathieu-q stability challenge",
+      "title_zh": "Mathieu q 稳定性挑战",
+      "title_fi": "Mathieu-q-vakaushaaste",
+      "title_de": "Mathieu-q-Stabilitätschallenge",
+      "title_ja": "Mathieu q 安定性チャレンジ",
+      "description_en": "Tune frequency, amplitude and r0 into a stated educational q band.",
+      "description_zh": "调节频率、幅度和 r0，使 q 落入明确给出的教学区间。",
+      "description_fi": "Säädä taajuus, amplitudi ja r0 annettuun q-alueeseen.",
+      "description_de": "Stimme Frequenz, Amplitude und r0 auf einen angegebenen q-Bereich ab.",
+      "description_ja": "周波数・振幅・r0 を調整して指定 q 範囲に入れます。",
+      "input_keys": [
+        "mass_u",
+        "charge",
+        "Vrf_V",
+        "voltage_convention",
+        "freq_kHz",
+        "r0_mm",
+        "geometry_factor",
+        "q_target"
+      ],
+      "output_keys": [
+        "q_mathieu",
+        "stable",
+        "score"
+      ],
+      "python_script": "simulate_rfq_geometry_scan_v4.py",
+      "source_note": "Synthetic challenge; not an operating stability certification.",
+      "presets": [
+        {
+          "id": "q_game",
+          "label_en": "RFQ q challenge",
+          "label_zh": "RFQ q 挑战",
+          "params": {
+            "mass_u": {
+              "value": 100
+            },
+            "charge": {
+              "value": 1
+            },
+            "Vrf_V": {
+              "value": 300
+            },
+            "voltage_convention": {
+              "value": "differential_zp"
+            },
+            "freq_kHz": {
+              "value": 2000.0
+            },
+            "r0_mm": {
+              "value": 3.5
+            },
+            "geometry_factor": {
+              "value": 1.0
+            },
+            "q_target": {
+              "value": 0.35
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

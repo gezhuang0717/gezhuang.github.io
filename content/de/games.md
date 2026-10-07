@@ -7,3 +7,5 @@ showDate: false
 Spielen, während der Strahl aus ist. Bestwerte werden nur in deinem Browser gespeichert.
 
 {{< games >}}
+
+{{< science-playground mode="game" >}}

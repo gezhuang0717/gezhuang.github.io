@@ -346,9 +346,3 @@ main section > article.mt-6::before{content:"";position:absolute;left:0;top:12px
 .pi-presets{flex-wrap:wrap;gap:.3rem;align-items:center;margin:.3rem 0}.pi-presets .zg-btn{padding:.15rem .5rem;font-size:.8rem}
 .pi-freq{overflow-x:auto;margin:.4rem 0}.pi-tab{font-size:.8rem;white-space:nowrap}.pi-tab th{width:auto}.pi-tab td,.pi-tab th{padding:.2rem .45rem}
 .pi-dot{display:inline-block;width:.65rem;height:.65rem;border-radius:50%;margin-right:.35rem;vertical-align:-.05rem}.pi-inv{font-size:.78rem;margin:.2rem 0}
-
-/* Keep the translated navigation within its available header width. */
-header nav{flex-wrap:wrap;gap:.75rem}
-.zg-nav-right{min-width:0;max-width:100%;flex:1 1 30rem;justify-content:flex-end;flex-wrap:wrap;gap:.65rem}
-.zg-nav-right>ul{min-width:0;flex-wrap:wrap;justify-content:flex-end;row-gap:.5rem}
-.zg-controls{flex-shrink:0}

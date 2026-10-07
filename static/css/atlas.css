@@ -64,7 +64,3 @@
 .dr-item h3{margin:.15rem 0;font-size:1rem}
 @media (max-width:560px){.dc-day{min-height:2.5rem;padding:.15rem}.dc-day small{display:none}.dc-legend{margin-left:0}}
 .daily-filters select,.daily-filters input{max-width:100%}
-
-/* Long feed-source names must not set the phone filter width. */
-.daily-filters label{min-width:0;max-width:100%;flex:1 1 160px}
-.daily-filters select,.daily-filters input{width:100%;min-width:0}

@@ -1,0 +1,96 @@
+{
+  "entries": [
+    {
+      "date": "2026-10-07",
+      "type": "news",
+      "title": "Nobel Prize: Neutrinos from Far, Far Away",
+      "summary": "Author(s): Michael Schirber Neutrino astronomy and the effort to build a cubic-kilometer-sized detector at the South Pole are recognized by the 2026 Nobel Prize in Physics. [Physics 19, 138] Published Tue Oct 06, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.138",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "collected_at": "2026-10-07",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "news",
+      "title": "Nobel winner Halzen says years of October 'misery' finally over",
+      "summary": "Physicist Francis Halzen has an impressively long list of academic accolades—but every October, as the Nobel Prize rolled around, his failure to bag the biggest award of them all left him \"miserable,\" he admits.",
+      "url": "https://phys.org/news/2026-10-nobel-winner-halzen-years-october.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "collected_at": "2026-10-07",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "news",
+      "title": "Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years",
+      "summary": "Four decades after the 1986 nuclear disaster, researchers at Leibniz University Hannover and the Helmholtz-Zentrum Dresden-Rossendorf (HZDR) examined six tiny, highly radioactive fragments that were released from the destroyed reactor in Ukraine in the wake of the incident.…",
+      "url": "https://phys.org/news/2026-10-chernobyl-particles-reveal-unexpectedly-stable.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "collected_at": "2026-10-07",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "news",
+      "title": "X-ray technique reveals how quantum materials respond to laser pulses in real time",
+      "summary": "Creating a quantum device often begins by intentionally damaging a crystal. Scientists fire an ultrafast laser pulse into a material, knocking atoms out of place and leaving behind tiny imperfections called vacancies. Far from being flaws, these vacancies can behave as…",
+      "url": "https://phys.org/news/2026-10-ray-technique-reveals-quantum-materials.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "collected_at": "2026-10-07",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "news",
+      "title": "New chip-based frequency combs demonstrate potential for portable atomic clocks",
+      "summary": "The world would look radically different without rulers and measuring tapes that fit into a pocket. Carpenters, fashion designers and engineers rely on these trusty tools to check the size of everything from a wooden board to a fabric swatch. But physicists who work with light…",
+      "url": "https://phys.org/news/2026-10-chip-based-frequency-potential-portable.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "collected_at": "2026-10-07",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "paper",
+      "title": "Momentum distributions and spatial signatures of proton halos in the $sd$ shell",
+      "summary": "Author(s): Taslima S. C. Diba, Carlos A. Bertulani, and Ronaldo V. Lobato We perform a theoretical study of intermediate-energy quasifree one-proton knockout reactions on proton targets. Single-particle wave functions constrained by the experimental proton separation energies…",
+      "url": "http://link.aps.org/doi/10.1103/b9lc-dkp9",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-10-06",
+      "collected_at": "2026-10-07",
+      "verification_status": "feed-collected"
+    }
+  ],
+  "fetched": "2026-10-07T07:41:50+00:00"
+}

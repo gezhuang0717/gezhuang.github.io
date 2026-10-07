@@ -23,3 +23,4 @@
 @media(min-width:1500px){.zg-science-playground{width:min(calc(100vw - 2rem),1900px)}.zg-sci-grid{grid-template-columns:repeat(auto-fit,minmax(620px,1fr))}}
 
 .zg-sci-output span{white-space:normal;overflow-wrap:anywhere}.zg-sci-folder p{overflow-wrap:anywhere}
+@media(min-width:1500px){.zg-science-playground{position:relative;left:50%;transform:translateX(-50%);margin-inline:0;box-sizing:border-box}}

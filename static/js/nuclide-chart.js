@@ -30,16 +30,16 @@
   const sizeCanvas = (c, w, h) => { const k = DPR(); c._cw = w; c._ch = h; c.width = Math.round(w * k); c.height = Math.round(h * k); c.style.aspectRatio = `${w} / ${h}`; };
 
   /* ---------- physics with uncertainties (keV); est = any input from systematics (#) ---------- */
-  const get = (Z, N) => { const r = M.get(key(Z, N)); return r && r[3] != null ? { v: r[3], e: r[4] == null ? null : r[4], est: !!r[5] } : null; };
+  const get = (Z, N) => { const r = M.get(key(Z, N)); return r && r[3] != null ? { v: r[3], e: r[4] || 0, est: !!r[5] } : null; };
   let MEn = { v: 8071.3181, e: 0.0004, est: false }, MEH = { v: 7288.971064, e: 0.000013, est: false }, MEa = { v: 2424.91587, e: 0.00015, est: false };
   /* combine a·x + b·y + … ; uncertainties in quadrature (AME correlations neglected) */
   const comb = (...terms) => {
     if (terms.some(([c, x]) => x == null)) return null;
-    return { v: terms.reduce((s, [c, x]) => s + c * x.v, 0), e: terms.some(([, x]) => x.e == null) ? null : Math.sqrt(terms.reduce((s, [c, x]) => s + (c * x.e) ** 2, 0)), est: terms.some(([, x]) => x.est) };
+    return { v: terms.reduce((s, [c, x]) => s + c * x.v, 0), e: Math.sqrt(terms.reduce((s, [c, x]) => s + (c * x.e) ** 2, 0)), est: terms.some(([, x]) => x.est) };
   };
   const K = c => ({ v: c, e: 0, est: false });
   const memo = new Map();
-  const getM = (s, Z, N) => { const v = MOD[s] && MOD[s].map.get(key(Z, N)); return v ? { v: v[0], e: null, est: false } : null; };
+  const getM = (s, Z, N) => { const v = MOD[s] && MOD[s].map.get(key(Z, N)); return v ? { v: v[0], e: 0, est: false } : null; };
   const getter = s => s === "ame" ? get : (Z, N) => getM(s, Z, N);
   const derived = r => derivedZN(r[0], r[1], "ame");
   function derivedZN(Z, N, s = "ame") {
@@ -47,7 +47,7 @@
     const get = getter(s), A = Z + N, m = get(Z, N);
     const BE = comb([Z, MEH], [N, MEn], [-1, m]);
     const out = {
-      A, me: m, BE, BEA: BE && A > 0 ? { v: BE.v / A, e: BE.e == null ? null : BE.e / A, est: BE.est } : null,
+      A, me: m, BE, BEA: BE && A > 0 ? { v: BE.v / A, e: BE.e / A, est: BE.est } : null,
       sn: comb([1, get(Z, N - 1)], [1, MEn], [-1, m]), s2n: comb([1, get(Z, N - 2)], [2, MEn], [-1, m]),
       sp: comb([1, get(Z - 1, N)], [1, MEH], [-1, m]), s2p: comb([1, get(Z - 2, N)], [2, MEH], [-1, m]),
       qbm: comb([1, m], [-1, get(Z + 1, N - 1)]), qec: comb([1, m], [-1, get(Z - 1, N + 1)]), qa: comb([1, m], [-1, get(Z - 2, N - 2)], [-1, MEa]),
@@ -70,7 +70,7 @@
       : !ze && !ne ? comb([1, B(Z, N)], [-1, B(Z, N - 1)], [-1, B(Z - 1, N)], [1, B(Z - 1, N - 1)])
       : ze ? comb([0.5, B(Z, N)], [-0.5, B(Z, N - 1)], [-0.5, B(Z - 2, N)], [0.5, B(Z - 2, N - 1)])
       : comb([0.5, B(Z, N)], [-0.5, B(Z, N - 2)], [-0.5, B(Z - 1, N)], [0.5, B(Z - 1, N - 2)]);
-    out.beta2 = s !== "ame" && MOD[s] && MOD[s].map.get(key(Z, N)) ? { v: MOD[s].map.get(key(Z, N))[1], e: null, est: false } : null;   /* β2 × 1000 */
+    out.beta2 = s !== "ame" && MOD[s] && MOD[s].map.get(key(Z, N)) ? { v: MOD[s].map.get(key(Z, N))[1], e: 0, est: false } : null;   /* β2 × 1000 */
     /* Wigner-energy indicator (as in the Mulberry code): W = δVpn(N) − ½[δVpn(N+2) + δVpn(N−2)]; peaks at N = Z.
        Lazy getter: neighbours only need their δVpn, so there is no recursion chain. */
     let wig;
@@ -275,13 +275,11 @@
   }
   const fmtTick = v => { const a = Math.abs(v); return a === 0 ? "0" : a >= 1e4 || a < 1e-3 ? v.toExponential(1) : String(+v.toPrecision(5)); };
   function fmtU(v, e) {           /* → [value string, uncertainty string] */
-    if (e == null) { const d = Math.abs(v) >= 100 ? 1 : 3; return [v.toFixed(d), "?"]; }
     if (!(e > 0)) { const d = Math.abs(v) >= 100 ? 1 : 3; return [v.toFixed(d), "0"]; }
     const dec = Math.max(0, 1 - Math.floor(Math.log10(e)));
     return [v.toFixed(dec), e.toFixed(dec)];
   }
   const fv = (o, d = 3, f = 1000, u = " MeV") => { if (o == null) return "—"; const h = o.est ? "#" : "";
-    if (o.e == null) return `${(o.v / f).toFixed(d)}${h} ± ?${u}`;
     if (!(o.e > 0)) return `${(o.v / f).toFixed(d)}${h}${u}`;
     const [a, b] = fmtU(o.v / f, o.e / f); return `${a}${h} ± ${b}${h}${u}`; };
   const DM = { "B-": "β⁻", "B+": "β⁺", "EC": "EC", "A": "α", "IT": "IT", "SF": "SF", "p": "p", "2p": "2p", "n": "n", "2n": "2n", "B-n": "β⁻n", "B-2n": "β⁻2n", "B+p": "β⁺p", "e+": "e⁺", "2B-": "2β⁻", "2B+": "2β⁺", "IS": T.abund };
@@ -349,7 +347,7 @@
     for (let c = Math.min(cfrom, cto); c <= Math.max(cfrom, cto) && c - Math.min(cfrom, cto) < 40; c++) {
       rows.filter(x => ch === "Z" ? x[0] === c : ch === "N" ? x[1] === c : x[0] + x[1] === c).forEach(x => {
         const v = q[1](derived(x), x), xv = ch === "Z" ? x[1] : x[0];
-        if (v && (xlo == null || xv >= xlo) && (xhi == null || xv <= xhi)) plotPts.push({ r: x, x: xv, y: v.v / 1000, e: v.e == null ? null : v.e / 1000, est: v.est, g: c });
+        if (v && (xlo == null || xv >= xlo) && (xhi == null || xv <= xhi)) plotPts.push({ r: x, x: xv, y: v.v / 1000, e: v.e / 1000, est: v.est, g: c });
       });
     }
     plotPts.sort((a, b) => a.g - b.g || a.x - b.x);
@@ -371,7 +369,7 @@
     if (c === pg) pg.setTransform(pc.width / pc._cw, 0, 0, pc.height / pc._ch, 0, 0);
     c.clearRect(0, 0, Wd, Hd); c.fillStyle = sc > 1 ? "#fff" : "transparent"; if (sc > 1) c.fillRect(0, 0, Wd, Hd);
     if (!plotPts.length && !modPts.length) { c.fillStyle = "#888"; c.font = `${13 * sc}px system-ui`; c.fillText(T.p_hint, 20 * sc, 30 * sc); return; }
-    const L = 62 * sc, R = 16 * sc, Tp = 18 * sc, B = 42 * sc, xs = plotPts.map(p => p.x).concat(modPts.map(p => p.x)), ys = plotPts.flatMap(p => p.e == null ? [p.y] : [p.y - p.e, p.y + p.e]).concat(modPts.map(p => p.y));
+    const L = 62 * sc, R = 16 * sc, Tp = 18 * sc, B = 42 * sc, xs = plotPts.map(p => p.x).concat(modPts.map(p => p.x)), ys = plotPts.flatMap(p => [p.y - p.e, p.y + p.e]).concat(modPts.map(p => p.y));
     let x0 = Math.min(...xs) - 1, x1 = Math.max(...xs) + 1, y0 = Math.min(...ys), y1 = Math.max(...ys); const pad = (y1 - y0) * 0.08 || 1; y0 -= pad; y1 += pad;
     const px = x => L + (x - x0) / (x1 - x0) * (Wd - L - R), py = y => Hd - B - (y - y0) / (y1 - y0) * (Hd - B - Tp);
     c.strokeStyle = "rgba(127,127,160,.45)"; c.lineWidth = sc; c.strokeRect(L, Tp, Wd - L - R, Hd - B - Tp);
@@ -455,10 +453,10 @@
   root.querySelector("[data-nc=ppng]").onclick = () => X.png(sc => { const o = document.createElement("canvas"); o.width = pc._cw * sc; o.height = pc._ch * sc; drawPlot(o.getContext("2d"), o.width, o.height, sc); return o; }, "chain-" + pq.value, 6);
   root.querySelector("[data-nc=pcsv]").onclick = () => {
     if ((plotPts.groups || []).length > 1) return X.csv(["chain (" + pchain.value + ")", "Z", "N", "A", "El", PQ[pq.value][0] + " (" + (PQ[pq.value][2] || "-") + ")", "uncertainty", "flag"],
-      plotPts.map(p => [p.g, p.r[0], p.r[1], p.r[0] + p.r[1], p.r[2], p.y.toFixed(6), p.e == null ? "" : p.e.toFixed(6), p.est ? "#" : ""]), "chains-" + pq.value);
+      plotPts.map(p => [p.g, p.r[0], p.r[1], p.r[0] + p.r[1], p.r[2], p.y.toFixed(6), p.e.toFixed(6), p.est ? "#" : ""]), "chains-" + pq.value);
     const mm = new Map(modPts.map(p => [p.x, p.y])), xsAll = [...new Set(plotPts.map(p => p.x).concat(modPts.map(p => p.x)))].sort((a, b) => a - b), pm = new Map(plotPts.map(p => [p.x, p]));
     X.csv(["x (" + (pchain.value === "Z" ? "N" : "Z") + ")", "El", PQ[pq.value][0] + " AME2020 (" + (PQ[pq.value][2] || "-") + ")", "uncertainty", "flag", ...(modPts.length ? [modPts.name] : [])],
-      xsAll.map(x => { const p = pm.get(x); return [x, p ? p.r[2] : "", p ? p.y.toFixed(6) : "", p && p.e != null ? p.e.toFixed(6) : "", p && p.est ? "#" : "", ...(modPts.length ? [mm.has(x) ? mm.get(x).toFixed(6) : ""] : [])]; }), "chain-" + pq.value + (modPts.length ? "-" + modelKey() : ""));
+      xsAll.map(x => { const p = pm.get(x); return [x, p ? p.r[2] : "", p ? p.y.toFixed(6) : "", p ? p.e.toFixed(6) : "", p && p.est ? "#" : "", ...(modPts.length ? [mm.has(x) ? mm.get(x).toFixed(6) : ""] : [])]; }), "chain-" + pq.value + (modPts.length ? "-" + modelKey() : ""));
   };
 
   /* ---------- events ---------- */

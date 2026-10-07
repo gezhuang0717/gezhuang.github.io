@@ -12,6 +12,4 @@ showDate: false
 
 {{< lab-more >}}
 
-{{< science-playground mode="lab" >}}
-
 {{< nuclide-chart >}}

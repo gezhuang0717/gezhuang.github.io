@@ -9,3 +9,7 @@ showDate: false
 *小提示：* 在本站任意位置键入 **ion** 试试。
 
 {{< lab >}}
+
+{{< lab-more >}}
+
+{{< nuclide-chart >}}

@@ -13,26 +13,34 @@
   pageRef = "talks"
   weight = 30
 [[main]]
+  name = "Anlagen"
+  pageRef = "facilities"
+  weight = 40
+[[main]]
   name = "Täglich"
   pageRef = "daily"
-  weight = 40
+  weight = 50
 [[main]]
   name = "Labor"
   pageRef = "lab"
-  weight = 50
+  weight = 60
+[[main]]
+  name = "Spiele"
+  pageRef = "games"
+  weight = 70
 [[main]]
   name = "Projekte"
   pageRef = "projects"
-  weight = 60
+  weight = 80
 [[main]]
   name = "Gruppe"
   pageRef = "group"
-  weight = 70
+  weight = 90
 [[main]]
   name = "Blog"
   pageRef = "posts"
-  weight = 80
+  weight = 100
 [[main]]
   name = "Lebenslauf"
   pageRef = "cv"
-  weight = 90
+  weight = 110

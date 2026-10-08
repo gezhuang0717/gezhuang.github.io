@@ -1,0 +1,2931 @@
+# Daily line under the Jyväskylä clock — one per day of year (1..366).
+# country: fi | cn | de | jp | uk     kind: proverb | joke | fact
+notes:
+  - country: fi
+    kind: proverb
+    text:
+      en: "Learning never pushes you into a ditch."
+      zh: "学习永远不会把人推进沟里。"
+      fi: "Ei oppi ojaan kaada."
+      de: "Lernen hat noch niemanden in den Graben gestoßen."
+      ja: "学びが人を溝に落とすことはない。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "A journey of a thousand miles begins with a single step. (Laozi)"
+      zh: "千里之行，始于足下。"
+      fi: "Tuhannen mailin matka alkaa yhdestä askeleesta."
+      de: "Auch eine Reise von tausend Meilen beginnt mit dem ersten Schritt."
+      ja: "千里の道も一歩から。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Practice makes the master."
+      zh: "熟能生巧。"
+      fi: "Harjoitus tekee mestarin."
+      de: "Übung macht den Meister."
+      ja: "練習が名人を作る。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Fall seven times, get up eight."
+      zh: "跌倒七次，第八次站起来。"
+      fi: "Kaadu seitsemän kertaa, nouse kahdeksan."
+      de: "Siebenmal hinfallen, achtmal aufstehen."
+      ja: "七転び八起き。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Every cloud has a silver lining."
+      zh: "每朵乌云都镶着银边。"
+      fi: "Jokaisella pilvellä on hopeareunus."
+      de: "Jede Wolke hat einen Silberstreif."
+      ja: "どんな雲にも銀の裏地がある。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Your own land is a strawberry, other lands are blueberries."
+      zh: "自己的土地是草莓，别人的土地只是蓝莓。"
+      fi: "Oma maa mansikka, muu maa mustikka."
+      de: "Das eigene Land ist eine Erdbeere, andere Länder sind Heidelbeeren."
+      ja: "自分の国はイチゴ、よその国はブルーベリー。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "When three walk together, one of them can be my teacher. (Confucius)"
+      zh: "三人行，必有我师焉。"
+      fi: "Kun kolme kulkee yhdessä, yksi heistä on varmasti opettajani."
+      de: "Wenn drei zusammen gehen, ist gewiss einer mein Lehrer."
+      ja: "三人行えば必ず我が師あり。"
+  - country: de
+    kind: proverb
+    text:
+      en: "All's well that ends well."
+      zh: "结局好，一切都好。"
+      fi: "Kaikki hyvin, kun loppu hyvin."
+      de: "Ende gut, alles gut."
+      ja: "終わりよければすべてよし。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Even monkeys fall from trees."
+      zh: "猴子也会从树上掉下来。"
+      fi: "Apinakin putoaa puusta."
+      de: "Auch Affen fallen mal vom Baum."
+      ja: "猿も木から落ちる。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Many hands make light work."
+      zh: "人多好办事。"
+      fi: "Monta kättä keventää työn."
+      de: "Viele Hände machen der Arbeit ein schnelles Ende."
+      ja: "手が多ければ仕事は軽くなる。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Good things come slowly."
+      zh: "好东西要慢慢来。"
+      fi: "Hiljaa hyvä tulee."
+      de: "Das Gute kommt langsam."
+      ja: "よいものはゆっくりやって来る。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Review the old to learn the new."
+      zh: "温故而知新。"
+      fi: "Kertaa vanhaa, niin opit uutta."
+      de: "Das Alte wiederholen, um Neues zu erkennen."
+      ja: "故きを温ねて新しきを知る。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Order is half of life."
+      zh: "秩序是生活的一半。"
+      fi: "Järjestys on puoli elämää."
+      de: "Ordnung ist das halbe Leben."
+      ja: "整理整頓は人生の半分。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Three years on a stone: perseverance warms even a cold stone."
+      zh: "在石头上坐三年，石头也会变暖。"
+      fi: "Kolme vuotta kivellä: sinnikkyys lämmittää kylmänkin kiven."
+      de: "Drei Jahre auf einem Stein: Ausdauer wärmt selbst kalten Stein."
+      ja: "石の上にも三年。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "A stitch in time saves nine."
+      zh: "及时缝一针，省得缝九针。"
+      fi: "Ajoissa tehty pisto säästää yhdeksän."
+      de: "Ein Stich zur rechten Zeit erspart neun."
+      ja: "適時の一針は九針の手間を省く。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Sisu: the Finnish word for the stubborn courage that keeps you going when things get tough."
+      zh: "“Sisu”是芬兰语，指在艰难时刻坚持到底的顽强勇气。"
+      fi: "Sisu: suomalainen sana sitkeälle rohkeudelle, joka kantaa vaikeinakin hetkinä."
+      de: "„Sisu“: das finnische Wort für zähen Mut, der einen auch in schweren Zeiten weitermachen lässt."
+      ja: "「シス」は、苦しい時にも前へ進ませる粘り強い勇気を表すフィンランド語。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Give someone a fish and they eat for a day; teach them to fish and they eat for life."
+      zh: "授人以鱼，不如授人以渔。"
+      fi: "Anna kala, ja ruokit päivän; opeta kalastamaan, ja ruokit koko elämän."
+      de: "Gib jemandem einen Fisch, und er isst einen Tag; lehre ihn fischen, und er isst ein Leben lang."
+      ja: "魚を与えるより、釣り方を教えよ。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Whoever rests, rusts."
+      zh: "停下来就会生锈。"
+      fi: "Joka lepää, se ruostuu."
+      de: "Wer rastet, der rostet."
+      ja: "休む者は錆びる。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "If you're in a hurry, take the long way round."
+      zh: "越是着急，越要走稳妥的远路。"
+      fi: "Jos on kiire, kulje kiertotietä."
+      de: "Hast du es eilig, nimm den Umweg."
+      ja: "急がば回れ。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Rome wasn't built in a day."
+      zh: "罗马不是一天建成的。"
+      fi: "Roomaa ei rakennettu päivässä."
+      de: "Rom wurde nicht an einem Tag erbaut."
+      ja: "ローマは一日にして成らず。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "He who asks will not lose his way."
+      zh: "爱问路的人不会迷路。"
+      fi: "Ei kysyvä tieltä eksy."
+      de: "Wer fragt, verirrt sich nicht."
+      ja: "尋ねる者は道に迷わない。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "An inch of time is worth an inch of gold."
+      zh: "一寸光阴一寸金。"
+      fi: "Tuuma aikaa on tuuman kultaa arvoinen."
+      de: "Ein Zoll Zeit ist einen Zoll Gold wert."
+      ja: "一寸の光陰は一寸の金。"
+  - country: de
+    kind: proverb
+    text:
+      en: "The morning hour has gold in its mouth."
+      zh: "清晨时光贵如金。"
+      fi: "Aamuhetki kullan kallis."
+      de: "Morgenstund hat Gold im Mund."
+      ja: "朝の時間は口に金をくわえている。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "One time, one meeting: treasure each encounter, for it will never come again."
+      zh: "一期一会：珍惜每一次相遇，因为它不会再来。"
+      fi: "Yksi kerta, yksi kohtaaminen: vaali jokaista tapaamista, sillä se ei toistu."
+      de: "Einmal, eine Begegnung: Schätze jedes Treffen, denn es kommt nie wieder."
+      ja: "一期一会。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Actions speak louder than words."
+      zh: "行动胜于言语。"
+      fi: "Teot puhuvat enemmän kuin sanat."
+      de: "Taten sagen mehr als Worte."
+      ja: "行動は言葉よりも雄弁である。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Finland has roughly three million saunas for about 5.6 million people."
+      zh: "芬兰约有三百万个桑拿房，而人口约五百六十万。"
+      fi: "Suomessa on noin kolme miljoonaa saunaa ja noin 5,6 miljoonaa asukasta."
+      de: "Finnland hat rund drei Millionen Saunas bei etwa 5,6 Millionen Einwohnern."
+      ja: "フィンランドには人口約560万人に対し、サウナがおよそ300万ある。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Dripping water wears through stone."
+      zh: "滴水穿石。"
+      fi: "Pisara pisaralta vesi kovertaa kiven."
+      de: "Steter Tropfen höhlt den Stein."
+      ja: "雨垂れ石を穿つ。"
+  - country: de
+    kind: proverb
+    text:
+      en: "What you can do today, don't put off until tomorrow."
+      zh: "今日事，今日毕。"
+      fi: "Mitä voit tehdä tänään, älä lykkää huomiseen."
+      de: "Was du heute kannst besorgen, das verschiebe nicht auf morgen."
+      ja: "今日できることを明日に延ばすな。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Even dust, piled up, becomes a mountain."
+      zh: "积尘成山。"
+      fi: "Pölystäkin kasautuu vuori."
+      de: "Auch Staub wird, angehäuft, zum Berg."
+      ja: "塵も積もれば山となる。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "The proof of the pudding is in the eating."
+      zh: "布丁好不好，吃了才知道。"
+      fi: "Vanukkaan laadun näkee vasta syömällä."
+      de: "Ob der Pudding gut ist, zeigt sich beim Essen."
+      ja: "プディングの味は食べてみなければわからない。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Whoever reaches for the spruce top tumbles into the juniper."
+      zh: "想够云杉树梢的人，反倒摔进杜松丛。"
+      fi: "Joka kuuseen kurkottaa, se katajaan kapsahtaa."
+      de: "Wer nach der Fichte greift, stürzt in den Wacholder."
+      ja: "トウヒに手を伸ばす者は、ネズの茂みに転げ落ちる。"
+  - country: cn
+    kind: fact
+    text:
+      en: "Chinese astronomers recorded the supernova of 1054 AD; its remnant is today's Crab Nebula."
+      zh: "中国天文学家记录了公元1054年的超新星，其遗迹就是今天的蟹状星云。"
+      fi: "Kiinalaiset tähtitieteilijät kirjasivat vuoden 1054 supernovan, jonka jäänne on Rapusumu."
+      de: "Chinesische Astronomen verzeichneten die Supernova von 1054, deren Überrest heute Krebsnebel heißt."
+      ja: "中国の天文学者は1054年の超新星を記録した。その残骸が今のかに星雲だ。"
+  - country: de
+    kind: proverb
+    text:
+      en: "The early bird catches the worm."
+      zh: "早起的鸟儿有虫吃。"
+      fi: "Aikainen lintu madon nappaa."
+      de: "Der frühe Vogel fängt den Wurm."
+      ja: "早起きの鳥は虫を捕まえる。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Doing it is easier than worrying about it."
+      zh: "做起来比担心要容易。"
+      fi: "Tekeminen on helpompaa kuin murehtiminen."
+      de: "Tun ist leichter als sich zu sorgen."
+      ja: "案ずるより産むが易し。"
+  - country: uk
+    kind: fact
+    text:
+      en: "Britons drink around 100 million cups of tea every day."
+      zh: "英国人每天大约喝一亿杯茶。"
+      fi: "Britit juovat noin sata miljoonaa kupillista teetä päivässä."
+      de: "Die Briten trinken täglich rund 100 Millionen Tassen Tee."
+      ja: "イギリス人は毎日約1億杯の紅茶を飲む。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "The forest answers the way you shout into it."
+      zh: "你怎样对森林喊，森林就怎样回应你。"
+      fi: "Niin metsä vastaa kuin sinne huudetaan."
+      de: "Wie man in den Wald hineinruft, so schallt es heraus."
+      ja: "森は呼びかけたとおりに答える。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Seeing once is better than hearing a hundred times."
+      zh: "百闻不如一见。"
+      fi: "Kerran nähty on parempi kuin sata kertaa kuultu."
+      de: "Einmal sehen ist besser als hundertmal hören."
+      ja: "百聞は一見に如かず。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Everything has an end — only the sausage has two."
+      zh: "凡事皆有尽头，只有香肠有两头。"
+      fi: "Kaikella on loppunsa, paitsi makkaralla, jolla on kaksi."
+      de: "Alles hat ein Ende, nur die Wurst hat zwei."
+      ja: "何事にも終わりはある。ソーセージだけは終わりが二つ。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Dumplings over flowers: substance over style."
+      zh: "花不如团子：实惠胜过风雅。"
+      fi: "Nyytit ennen kukkia: sisältö ennen tyyliä."
+      de: "Klöße statt Blüten: Nutzen vor Schönheit."
+      ja: "花より団子。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Absence makes the heart grow fonder."
+      zh: "离别使人更加思念。"
+      fi: "Poissaolo kasvattaa kaipausta."
+      de: "Abwesenheit lässt die Zuneigung wachsen."
+      ja: "会えない時間が想いを深める。"
+  - country: fi
+    kind: joke
+    text:
+      en: "An introverted Finn looks at his own shoes when talking to you; an extroverted Finn looks at yours."
+      zh: "内向的芬兰人和你说话时看自己的鞋，外向的芬兰人看你的鞋。"
+      fi: "Introvertti suomalainen katsoo puhuessaan omia kenkiään, ekstrovertti sinun kenkiäsi."
+      de: "Ein introvertierter Finne schaut beim Reden auf seine Schuhe, ein extrovertierter auf deine."
+      ja: "内向的なフィンランド人は話す時に自分の靴を見る。外向的な人はあなたの靴を見る。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "The old man lost his horse — who knows if it isn't a blessing?"
+      zh: "塞翁失马，焉知非福。"
+      fi: "Vanhus menetti hevosensa – kuka tietää, ettei se ollut onni?"
+      de: "Der alte Mann verlor sein Pferd – wer weiß, ob es nicht ein Glück ist?"
+      ja: "塞翁が馬。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Everyone is the blacksmith of their own fortune."
+      zh: "每个人都是自己幸福的铁匠。"
+      fi: "Jokainen on oman onnensa seppä."
+      de: "Jeder ist seines Glückes Schmied."
+      ja: "誰もが自分の幸福の鍛冶屋である。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Japan's Shinkansen trains have an average delay of under one minute."
+      zh: "日本新干线列车的平均延误不到一分钟。"
+      fi: "Japanin Shinkansen-junien keskimääräinen myöhästyminen on alle minuutin."
+      de: "Der japanische Shinkansen ist im Schnitt weniger als eine Minute verspätet."
+      ja: "新幹線の1列車あたりの平均遅延は1分未満。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "An apple a day keeps the doctor away."
+      zh: "一天一苹果，医生远离我。"
+      fi: "Omena päivässä pitää lääkärin loitolla."
+      de: "Ein Apfel am Tag hält den Doktor fern."
+      ja: "一日一個のリンゴで医者いらず。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "The work praises its maker."
+      zh: "好作品自会称赞它的制作者。"
+      fi: "Työ tekijäänsä kiittää."
+      de: "Die Arbeit lobt ihren Meister."
+      ja: "仕事がその作り手をほめる。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Want it too fast and you won't get there."
+      zh: "欲速则不达。"
+      fi: "Liika kiire estää perille pääsyn."
+      de: "Wer zu schnell ans Ziel will, kommt nicht an."
+      ja: "速さを求めれば、かえって達せず。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Whoever says A must also say B."
+      zh: "说了A，就得说B。"
+      fi: "Joka sanoo A, sen on sanottava myös B."
+      de: "Wer A sagt, muss auch B sagen."
+      ja: "Aと言った者はBとも言わねばならない。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "After the rain, the ground hardens."
+      zh: "雨后地更坚实。"
+      fi: "Sateen jälkeen maa kovettuu."
+      de: "Nach dem Regen wird der Boden fest."
+      ja: "雨降って地固まる。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Better safe than sorry."
+      zh: "安全第一，免得后悔。"
+      fi: "Parempi katsoa kuin katua."
+      de: "Vorsicht ist besser als Nachsicht."
+      ja: "後悔するより安全策を。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "The morning is wiser than the evening."
+      zh: "早晨比夜晚更有智慧。"
+      fi: "Aamu on iltaa viisaampi."
+      de: "Der Morgen ist klüger als der Abend."
+      ja: "朝は夜より賢い。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Sharpening the axe doesn't delay the woodcutting."
+      zh: "磨刀不误砍柴工。"
+      fi: "Kirveen teroittaminen ei hidasta puiden hakkuuta."
+      de: "Das Schärfen der Axt hält das Holzhacken nicht auf."
+      ja: "刃を研ぐ時間は薪割りの遅れにならない。"
+  - country: de
+    kind: fact
+    text:
+      en: "Wolfgang Paul of Bonn shared the 1989 Nobel Prize in Physics for the ion trap that bears his name."
+      zh: "波恩的沃尔夫冈·保罗因以他命名的离子阱分享了1989年诺贝尔物理学奖。"
+      fi: "Bonnin Wolfgang Paul sai jaetun fysiikan Nobelin 1989 hänen mukaansa nimetystä ioniloukusta."
+      de: "Wolfgang Paul aus Bonn erhielt 1989 anteilig den Physik-Nobelpreis für die nach ihm benannte Ionenfalle."
+      ja: "ボンのヴォルフガング・パウルは、自らの名を冠したイオントラップで1989年ノーベル物理学賞を共同受賞した。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Getting up early is worth three coins."
+      zh: "早起有三文钱的好处。"
+      fi: "Aamuvirkku saa kolme kolikkoa."
+      de: "Früh aufstehen bringt drei Münzen."
+      ja: "早起きは三文の徳。"
+  - country: uk
+    kind: joke
+    text:
+      en: "British weather: four seasons in one day, and an umbrella for each."
+      zh: "英国天气：一天四季，每季一把伞。"
+      fi: "Brittiläinen sää: neljä vuodenaikaa päivässä ja sateenvarjo jokaiseen."
+      de: "Britisches Wetter: vier Jahreszeiten an einem Tag – und für jede einen Schirm."
+      ja: "イギリスの天気：一日に四季があり、季節ごとに傘が要る。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Finns drink more coffee per person than almost anyone on Earth: around ten kilos a year."
+      zh: "芬兰人均咖啡消费量几乎世界第一，每年约十公斤。"
+      fi: "Suomalaiset juovat kahvia henkeä kohden lähes eniten maailmassa, noin kymmenen kiloa vuodessa."
+      de: "Finnen trinken pro Kopf fast den meisten Kaffee der Welt – rund zehn Kilo im Jahr."
+      ja: "フィンランド人の一人当たりコーヒー消費量は世界トップ級で、年に約10キロ。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Failure is the mother of success."
+      zh: "失败是成功之母。"
+      fi: "Epäonnistuminen on menestyksen äiti."
+      de: "Misserfolg ist die Mutter des Erfolgs."
+      ja: "失敗は成功のもと。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Small livestock makes manure too: little things add up."
+      zh: "小牲口也积肥：积少成多。"
+      fi: "Pienistäkin eläimistä kertyy lantaa: vähästä kertyy paljon."
+      de: "Kleinvieh macht auch Mist."
+      ja: "小さな家畜も肥やしになる。小さなことも積み重なる。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "The clever hawk hides its claws."
+      zh: "能干的鹰把爪子藏起来。"
+      fi: "Taitava haukka kätkee kyntensä."
+      de: "Der kluge Falke verbirgt seine Krallen."
+      ja: "能ある鷹は爪を隠す。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Birds of a feather flock together."
+      zh: "物以类聚，人以群分。"
+      fi: "Vakka kantensa valitsee."
+      de: "Gleich und gleich gesellt sich gern."
+      ja: "類は友を呼ぶ。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Diligence beats even hard luck."
+      zh: "勤奋能战胜坏运气。"
+      fi: "Ahkeruus kovankin onnen voittaa."
+      de: "Fleiß besiegt selbst das härteste Pech."
+      ja: "勤勉は不運にさえ打ち勝つ。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Three cobblers together outwit the strategist Zhuge Liang."
+      zh: "三个臭皮匠，赛过诸葛亮。"
+      fi: "Kolme suutaria yhdessä voittaa viisaan Zhuge Liangin."
+      de: "Drei Schuster zusammen sind klüger als der weise Zhuge Liang."
+      ja: "三人の靴屋が集まれば諸葛孔明に勝る。"
+  - country: de
+    kind: fact
+    text:
+      en: "\"Ich verstehe nur Bahnhof\" — \"I only understand train station\" — means \"It's all Greek to me\"."
+      zh: "德语“我只听懂了火车站”意思是“我完全听不懂”。"
+      fi: "”Ich verstehe nur Bahnhof” – ”ymmärrän vain rautatieaseman” – tarkoittaa ”en ymmärrä mitään”."
+      de: "„Ich verstehe nur Bahnhof“ heißt: Ich verstehe überhaupt nichts."
+      ja: "ドイツ語「駅しかわからない」は「さっぱりわからない」という意味。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Element 113, nihonium, was discovered at RIKEN — the first element found in Asia."
+      zh: "113号元素鉨（nihonium）在日本理化学研究所被发现，是首个在亚洲发现的元素。"
+      fi: "Alkuaine 113, nihonium, löydettiin RIKENissä – ensimmäinen Aasiassa löydetty alkuaine."
+      de: "Element 113, Nihonium, wurde am RIKEN entdeckt – das erste in Asien gefundene Element."
+      ja: "113番元素ニホニウムは理研で発見された。アジアで初めて見つかった元素だ。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Don't put all your eggs in one basket."
+      zh: "别把所有鸡蛋放在一个篮子里。"
+      fi: "Älä laita kaikkia munia samaan koriin."
+      de: "Setz nicht alles auf eine Karte."
+      ja: "すべての卵を一つのかごに盛るな。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "When you plaster, it splashes."
+      zh: "抹灰泥，难免溅一身。"
+      fi: "Rapatessa roiskuu."
+      de: "Beim Verputzen spritzt es."
+      ja: "漆喰を塗れば、しぶきは飛ぶもの。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "When everyone adds firewood, the flames rise high."
+      zh: "众人拾柴火焰高。"
+      fi: "Kun kaikki tuovat puita, liekit nousevat korkealle."
+      de: "Wenn alle Holz sammeln, lodert das Feuer hoch."
+      ja: "皆で薪を集めれば炎は高く燃える。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Nothing ventured, nothing gained."
+      zh: "不冒险，就不会有收获。"
+      fi: "Joka ei yritä, ei voita."
+      de: "Wer nicht wagt, der nicht gewinnt."
+      ja: "挑戦しない者は勝てない。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Fortune comes to the house where people laugh."
+      zh: "笑口常开，福自来。"
+      fi: "Onni tulee taloon, jossa nauretaan."
+      de: "Das Glück kommt in das Haus, in dem gelacht wird."
+      ja: "笑う門には福来る。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Fortune favours the bold."
+      zh: "天佑勇者。"
+      fi: "Onni suosii rohkeaa."
+      de: "Dem Mutigen gehört die Welt."
+      ja: "幸運は勇者に味方する。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Jyväskylä has more buildings by architect Alvar Aalto than any other city in the world."
+      zh: "于韦斯屈莱拥有的阿尔瓦·阿尔托设计建筑比世界上任何城市都多。"
+      fi: "Jyväskylässä on enemmän Alvar Aallon suunnittelemia rakennuksia kuin missään muussa kaupungissa."
+      de: "Jyväskylä hat mehr Bauten von Alvar Aalto als jede andere Stadt der Welt."
+      ja: "ユヴァスキュラには、アルヴァ・アアルト設計の建物が世界のどの都市よりも多い。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Without piling up small steps, you cannot reach a thousand miles. (Xunzi)"
+      zh: "不积跬步，无以至千里。"
+      fi: "Ilman pieniä askelia ei pääse tuhannen mailin päähän."
+      de: "Ohne kleine Schritte gelangt man nicht tausend Meilen weit."
+      ja: "小さな一歩を積み重ねなければ千里には至らない。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Lies have short legs."
+      zh: "谎言腿短，跑不远。"
+      fi: "Valheella on lyhyet jäljet."
+      de: "Lügen haben kurze Beine."
+      ja: "嘘の足は短い。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Persistence is power."
+      zh: "坚持就是力量。"
+      fi: "Sinnikkyys on voimaa."
+      de: "Beharrlichkeit ist Kraft."
+      ja: "継続は力なり。"
+  - country: uk
+    kind: fact
+    text:
+      en: "In 1687, Isaac Newton published the Principia, setting out his laws of motion and gravitation."
+      zh: "1687年，牛顿出版《自然哲学的数学原理》，提出运动定律和万有引力定律。"
+      fi: "Isaac Newton julkaisi Principian vuonna 1687 ja esitti liikelait ja painovoimalain."
+      de: "1687 veröffentlichte Isaac Newton die Principia mit seinen Bewegungsgesetzen und der Gravitation."
+      ja: "1687年、ニュートンは『プリンキピア』を出版し、運動の法則と万有引力を示した。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Whoever has luck should hide it."
+      zh: "有好运的人，最好把它藏起来。"
+      fi: "Kell' onni on, se onnen kätkeköön."
+      de: "Wer Glück hat, der soll es verbergen."
+      ja: "幸運を持つ者は、それを隠しておけ。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Blue comes from indigo yet is bluer than it: the student surpasses the master."
+      zh: "青出于蓝而胜于蓝。"
+      fi: "Sininen tulee indigokasvista mutta on sitä sinisempi: oppilas ylittää mestarinsa."
+      de: "Das Blau stammt vom Indigo und ist doch blauer: Der Schüler übertrifft den Meister."
+      ja: "青は藍より出でて藍より青し。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Too many cooks spoil the porridge."
+      zh: "厨师太多，粥就煮坏了。"
+      fi: "Liian monta kokkia pilaa sopan."
+      de: "Viele Köche verderben den Brei."
+      ja: "料理人が多すぎると粥がだめになる。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Be prepared and you have nothing to fear."
+      zh: "有备无患。"
+      fi: "Kun on varautunut, ei tarvitse huolehtia."
+      de: "Wer vorbereitet ist, braucht sich nicht zu sorgen."
+      ja: "備えあれば憂いなし。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Honesty is the best policy."
+      zh: "诚实为上策。"
+      fi: "Rehellisyys maan perii."
+      de: "Ehrlich währt am längsten."
+      ja: "正直は最善の策。"
+  - country: fi
+    kind: joke
+    text:
+      en: "Finnish small talk: \"Nice weather.\" \"Mm.\" Conversation complete, everyone satisfied."
+      zh: "芬兰式寒暄：“天气不错。”“嗯。”对话结束，皆大欢喜。"
+      fi: "Suomalainen small talk: ”Hieno ilma.” ”Mm.” Keskustelu käyty, kaikki tyytyväisiä."
+      de: "Finnischer Smalltalk: „Schönes Wetter.“ – „Mm.“ Gespräch beendet, alle zufrieden."
+      ja: "フィンランド流の世間話：「いい天気だね」「うん」。会話終了、全員満足。"
+  - country: cn
+    kind: fact
+    text:
+      en: "In 132 AD, Zhang Heng built a seismoscope that signalled earthquakes by dropping a bronze ball."
+      zh: "公元132年，张衡制成地动仪，以铜球落下报告地震。"
+      fi: "Zhang Heng rakensi vuonna 132 maanjäristysilmaisimen, joka ilmoitti järistyksestä pudottamalla pronssipallon."
+      de: "132 n. Chr. baute Zhang Heng ein Seismoskop, das Erdbeben durch eine fallende Bronzekugel anzeigte."
+      ja: "西暦132年、張衡は青銅の玉を落として地震を知らせる地動儀を作った。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Still waters are deep."
+      zh: "静水流深。"
+      fi: "Tyynet vedet ovat syviä."
+      de: "Stille Wasser sind tief."
+      ja: "静かな水は深い。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Ten people, ten colours: everyone is different."
+      zh: "十个人，十种颜色：人各不同。"
+      fi: "Kymmenen ihmistä, kymmenen väriä."
+      de: "Zehn Menschen, zehn Farben."
+      ja: "十人十色。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "If at first you don't succeed, try, try again."
+      zh: "一次不成功，就再试一次，再试一次。"
+      fi: "Jos et heti onnistu, yritä yhä uudelleen."
+      de: "Wenn es nicht gleich klappt, versuch es wieder und wieder."
+      ja: "最初にうまくいかなくても、何度でも挑戦せよ。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "The sauna is the poor man's pharmacy."
+      zh: "桑拿是穷人的药房。"
+      fi: "Sauna on köyhän apteekki."
+      de: "Die Sauna ist die Apotheke der Armen."
+      ja: "サウナは貧しい者の薬局。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Knowledge from paper stays shallow; to truly know, you must do it yourself. (Lu You)"
+      zh: "纸上得来终觉浅，绝知此事要躬行。"
+      fi: "Kirjoista opittu jää pinnalliseksi; todellinen tieto vaatii omaa tekemistä."
+      de: "Aus Büchern Gelerntes bleibt seicht; wahres Wissen erfordert eigenes Tun."
+      ja: "紙の上で得た知識は浅い。真に知るには自ら行うべし。"
+  - country: de
+    kind: proverb
+    text:
+      en: "A good thing takes its time."
+      zh: "好事需要时间。"
+      fi: "Hyvä asia vie aikansa."
+      de: "Gut Ding will Weile haben."
+      ja: "良いことには時間がかかる。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "What you love, you become good at."
+      zh: "喜欢的事就能做好。"
+      fi: "Mitä rakastaa, siinä tulee taitavaksi."
+      de: "Was man liebt, darin wird man gut."
+      ja: "好きこそ物の上手なれ。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "It never rains but it pours."
+      zh: "不雨则已，一雨倾盆。"
+      fi: "Kun sataa, niin kaatamalla."
+      de: "Wenn es regnet, dann gleich in Strömen."
+      ja: "降れば必ず土砂降り。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "No one is born a blacksmith."
+      zh: "没有人生来就是铁匠。"
+      fi: "Ei kukaan ole seppä syntyessään."
+      de: "Niemand wird als Schmied geboren."
+      ja: "生まれながらの鍛冶屋はいない。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Diligence is the path up the mountain of books; hard work, the boat on the sea of learning."
+      zh: "书山有路勤为径，学海无涯苦作舟。"
+      fi: "Kirjavuorelle vie ahkeruuden polku, oppimisen merellä kantaa sinnikkyyden vene."
+      de: "Fleiß ist der Pfad auf den Bücherberg, Mühe das Boot auf dem Meer des Lernens."
+      ja: "書の山には勤勉の道があり、学びの海には努力の舟がある。"
+  - country: de
+    kind: proverb
+    text:
+      en: "What little Hans doesn't learn, big Hans never will."
+      zh: "小汉斯学不会的，大汉斯永远学不会。"
+      fi: "Mitä pikku-Hannu ei opi, sitä Hannu ei opi koskaan."
+      de: "Was Hänschen nicht lernt, lernt Hans nimmermehr."
+      ja: "小さなハンスが学ばないことを、大きなハンスは決して学ばない。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Get used to it rather than study it."
+      zh: "与其学，不如多练习惯。"
+      fi: "Totu ennemmin kuin opiskele."
+      de: "Gewöhn dich lieber daran, als es zu lernen."
+      ja: "習うより慣れよ。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Laughter is the best medicine."
+      zh: "笑是最好的良药。"
+      fi: "Nauru on paras lääke."
+      de: "Lachen ist die beste Medizin."
+      ja: "笑いは最高の薬。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Finland is called the land of a thousand lakes, but it actually has about 188,000."
+      zh: "芬兰号称“千湖之国”，实际上约有十八万八千个湖泊。"
+      fi: "Suomea kutsutaan tuhansien järvien maaksi, ja järviä on noin 188 000."
+      de: "Finnland heißt Land der tausend Seen, hat aber tatsächlich rund 188.000."
+      ja: "フィンランドは「千の湖の国」と呼ばれるが、実際には約18万8千の湖がある。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Do not do to others what you would not want done to yourself. (Confucius)"
+      zh: "己所不欲，勿施于人。"
+      fi: "Älä tee toisille sitä, mitä et haluaisi itsellesi tehtävän."
+      de: "Was du nicht willst, das man dir tu, das füg auch keinem andern zu."
+      ja: "己の欲せざる所は人に施すなかれ。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Time brings counsel."
+      zh: "时间会带来办法。"
+      fi: "Aika tuo neuvon."
+      de: "Kommt Zeit, kommt Rat."
+      ja: "時が来れば知恵も来る。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Chase two rabbits and you catch neither."
+      zh: "追两只兔子的人，一只也抓不到。"
+      fi: "Joka jahtaa kahta jänistä, ei saa kumpaakaan."
+      de: "Wer zwei Hasen jagt, fängt keinen."
+      ja: "二兎を追う者は一兎をも得ず。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Little strokes fell great oaks."
+      zh: "小斧头也能砍倒大橡树。"
+      fi: "Pienet iskut kaatavat suuret tammet."
+      de: "Viele kleine Schläge fällen große Eichen."
+      ja: "小さな一撃の積み重ねが大きな樫の木を倒す。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "One talks most about what one lacks."
+      zh: "人们总爱谈论自己缺少的东西。"
+      fi: "Siitä puhe, mistä puute."
+      de: "Man spricht am meisten über das, was einem fehlt."
+      ja: "人は自分に足りないものの話をする。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Is it not a joy to have friends come from afar? (Confucius)"
+      zh: "有朋自远方来，不亦乐乎？"
+      fi: "Eikö ole ilo, kun ystäviä saapuu kaukaa?"
+      de: "Ist es nicht eine Freude, wenn Freunde aus der Ferne kommen?"
+      ja: "朋あり遠方より来る、また楽しからずや。"
+  - country: de
+    kind: fact
+    text:
+      en: "In 1895, Wilhelm Röntgen discovered X-rays in Würzburg; the first image showed his wife's hand."
+      zh: "1895年，伦琴在维尔茨堡发现X射线；第一张X光片拍的是他妻子的手。"
+      fi: "Wilhelm Röntgen löysi röntgensäteet Würzburgissa 1895; ensimmäisessä kuvassa oli hänen vaimonsa käsi."
+      de: "1895 entdeckte Wilhelm Röntgen in Würzburg die X-Strahlen; das erste Bild zeigte die Hand seiner Frau."
+      ja: "1895年、レントゲンはヴュルツブルクでX線を発見。最初のX線写真は妻の手だった。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Super-Kamiokande watches for neutrinos in 50,000 tonnes of ultrapure water, 1,000 m underground."
+      zh: "超级神冈探测器在地下1000米、五万吨超纯水中观测中微子。"
+      fi: "Super-Kamiokande etsii neutriinoja 50 000 tonnista erittäin puhdasta vettä kilometrin syvyydessä."
+      de: "Super-Kamiokande sucht in 50.000 t Reinstwasser, 1.000 m unter der Erde, nach Neutrinos."
+      ja: "スーパーカミオカンデは地下1000mの5万トンの超純水でニュートリノを観測している。"
+  - country: uk
+    kind: joke
+    text:
+      en: "A Briton will happily join a queue first and ask what it's for later."
+      zh: "英国人会先高高兴兴排上队，然后再问这是排什么的。"
+      fi: "Britti liittyy mielellään jonoon ja kysyy vasta sitten, mitä jonotetaan."
+      de: "Ein Brite stellt sich gern erst an und fragt dann, wofür die Schlange ist."
+      ja: "イギリス人は喜んで列に並び、何の列かは後で聞く。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "The sun shines even on a pile of brushwood."
+      zh: "阳光也会照到柴堆上。"
+      fi: "Paistaa se päivä risukasaankin."
+      de: "Auch auf den Reisighaufen scheint einmal die Sonne."
+      ja: "柴の山にもいつか日は差す。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "The sea takes in a hundred rivers; its openness makes it great."
+      zh: "海纳百川，有容乃大。"
+      fi: "Meri ottaa vastaan sata jokea; avaruus tekee siitä suuren."
+      de: "Das Meer nimmt hundert Flüsse auf; seine Weite macht es groß."
+      ja: "海は百川を受け入れ、その包容力ゆえに大きい。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Once is never."
+      zh: "一次不算数。"
+      fi: "Kerran ei ole kertaakaan."
+      de: "Einmal ist keinmal."
+      ja: "一度は数のうちに入らない。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "One stone, two birds."
+      zh: "一石二鸟。"
+      fi: "Kaksi kärpästä yhdellä iskulla."
+      de: "Zwei Fliegen mit einer Klappe."
+      ja: "一石二鳥。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Make hay while the sun shines."
+      zh: "趁太阳好，赶紧晒干草。"
+      fi: "Tee heinää, kun aurinko paistaa."
+      de: "Man muss das Heu machen, solange die Sonne scheint."
+      ja: "日の照るうちに干し草を作れ。"
+  - country: fi
+    kind: joke
+    text:
+      en: "Finland has four seasons: almost winter, winter, still winter, and road works."
+      zh: "芬兰有四季：快到冬天、冬天、还是冬天，以及修路季。"
+      fi: "Suomessa on neljä vuodenaikaa: melkein talvi, talvi, yhä talvi ja tietyöt."
+      de: "Finnland hat vier Jahreszeiten: Fast-Winter, Winter, Immer-noch-Winter und Baustelle."
+      ja: "フィンランドの四季：ほぼ冬、冬、まだ冬、そして道路工事。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Three feet of ice do not form in a single day of cold."
+      zh: "冰冻三尺，非一日之寒。"
+      fi: "Kolmen jalan jää ei synny yhden päivän pakkasesta."
+      de: "Drei Fuß dickes Eis entsteht nicht an einem einzigen kalten Tag."
+      ja: "三尺の氷は一日の寒さでは張らない。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Double-stitched holds better."
+      zh: "双线缝得更牢。"
+      fi: "Kahdesti ommeltu kestää paremmin."
+      de: "Doppelt genäht hält besser."
+      ja: "二重に縫えばもっと丈夫。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Eat until eight parts full and you won't need a doctor."
+      zh: "吃八分饱，不用找医生。"
+      fi: "Syö vain kahdeksan kymmenesosaa täyteen, niin et tarvitse lääkäriä."
+      de: "Iss dich zu acht Zehnteln satt, und du brauchst keinen Arzt."
+      ja: "腹八分目に医者いらず。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Measure twice, cut once."
+      zh: "量两次，剪一次。"
+      fi: "Mittaa kahdesti, leikkaa kerran."
+      de: "Zweimal messen, einmal schneiden."
+      ja: "二度測って一度で切れ。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Small brooks make a great river."
+      zh: "小溪汇成大河。"
+      fi: "Pienistä puroista syntyy suuri virta."
+      de: "Aus kleinen Bächen entsteht ein großer Strom."
+      ja: "小さな小川が集まって大河となる。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "To do good work, first sharpen your tools. (Confucius)"
+      zh: "工欲善其事，必先利其器。"
+      fi: "Hyvä työ vaatii ensin hyvät työkalut."
+      de: "Wer gute Arbeit leisten will, muss zuerst sein Werkzeug schärfen."
+      ja: "工その事を善くせんと欲すれば、必ず先ずその器を利くす。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Speech is silver, silence is gold."
+      zh: "雄辩是银，沉默是金。"
+      fi: "Puhuminen on hopeaa, vaikeneminen kultaa."
+      de: "Reden ist Silber, Schweigen ist Gold."
+      ja: "雄弁は銀、沈黙は金。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "It's darkest at the foot of the lighthouse."
+      zh: "灯下黑。"
+      fi: "Majakan juurella on pimeintä."
+      de: "Am Fuß des Leuchtturms ist es am dunkelsten."
+      ja: "灯台下暗し。"
+  - country: uk
+    kind: fact
+    text:
+      en: "\"Mind the gap\" has been announced on the London Underground since 1968."
+      zh: "自1968年起，伦敦地铁就开始播报“小心空隙”。"
+      fi: "”Mind the gap” on kuulutettu Lontoon metrossa vuodesta 1968."
+      de: "„Mind the gap“ wird in der Londoner U-Bahn seit 1968 durchgesagt."
+      ja: "「ギャップにご注意」は1968年からロンドン地下鉄でアナウンスされている。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Home is as dear as gold."
+      zh: "自己的家贵如黄金。"
+      fi: "Oma koti kullan kallis."
+      de: "Das eigene Heim ist so wertvoll wie Gold."
+      ja: "わが家は黄金のように尊い。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "The year's plan is made in spring."
+      zh: "一年之计在于春。"
+      fi: "Vuoden suunnitelma tehdään keväällä."
+      de: "Den Plan fürs Jahr macht man im Frühling."
+      ja: "一年の計画は春に立てる。"
+  - country: de
+    kind: proverb
+    text:
+      en: "The axe in the house saves calling the carpenter. (Schiller)"
+      zh: "家里有斧头，就省得请木匠。"
+      fi: "Kirves talossa säästää kirvesmiehen."
+      de: "Die Axt im Haus erspart den Zimmermann."
+      ja: "家に斧があれば大工はいらない。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Leaving it unsaid is the flower."
+      zh: "不说出来才是美。"
+      fi: "Sanomatta jättäminen on kukka."
+      de: "Ungesagt ist es am schönsten."
+      ja: "言わぬが花。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Strike while the iron is hot."
+      zh: "趁热打铁。"
+      fi: "Takoa pitää, kun rauta on kuumaa."
+      de: "Man muss das Eisen schmieden, solange es heiß ist."
+      ja: "鉄は熱いうちに打て。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Traditionally, Finns built the sauna first and only then the house."
+      zh: "按照传统，芬兰人先建桑拿房，再盖住宅。"
+      fi: "Perinteisesti suomalaiset rakensivat ensin saunan ja vasta sitten talon."
+      de: "Traditionell bauten Finnen zuerst die Sauna und erst danach das Haus."
+      ja: "伝統的に、フィンランド人はまずサウナを建て、それから家を建てた。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "One fall into a pit, one gain in wit."
+      zh: "吃一堑，长一智。"
+      fi: "Joka kuoppaan kompastuu, se viisastuu."
+      de: "Durch Schaden wird man klug."
+      ja: "一つの失敗が一つの知恵になる。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Hunger is the best cook."
+      zh: "饥饿是最好的厨师。"
+      fi: "Nälkä on paras kokki."
+      de: "Hunger ist der beste Koch."
+      ja: "空腹は最高の料理人。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "The mouth is the source of trouble."
+      zh: "祸从口出。"
+      fi: "Suu on onnettomuuden lähde."
+      de: "Der Mund ist die Quelle des Unheils."
+      ja: "口は災いの元。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Slow and steady wins the race."
+      zh: "稳扎稳打才能赢得比赛。"
+      fi: "Hitaasti mutta varmasti voittaa kisan."
+      de: "Langsam, aber stetig gewinnt das Rennen."
+      ja: "ゆっくり着実が勝負に勝つ。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Many a cake is pretty only on top."
+      zh: "很多蛋糕只是表面好看。"
+      fi: "Moni kakku päältä kaunis."
+      de: "Mancher Kuchen ist nur von oben schön."
+      ja: "多くのケーキは上だけがきれい。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "On a hundred-mile journey, ninety miles is only halfway."
+      zh: "行百里者半九十。"
+      fi: "Sadan mailin matkalla yhdeksänkymmentä mailia on vasta puolivälissä."
+      de: "Auf einem Weg von hundert Meilen sind neunzig erst die Hälfte."
+      ja: "百里を行く者は九十を半ばとす。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Need makes you inventive."
+      zh: "需要使人善于发明。"
+      fi: "Hätä keinon keksii."
+      de: "Not macht erfinderisch."
+      ja: "必要は発明の母。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Do your best, then wait for good fortune while you sleep."
+      zh: "尽力之后，好运就躺着等吧。"
+      fi: "Tee parhaasi ja odota onnea nukkuen."
+      de: "Gib dein Bestes und warte im Schlaf auf das Glück."
+      ja: "果報は寝て待て。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Patience is a virtue."
+      zh: "耐心是一种美德。"
+      fi: "Kärsivällisyys on hyve."
+      de: "Geduld ist eine Tugend."
+      ja: "忍耐は美徳である。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "A good bell is heard far, a bad one even farther."
+      zh: "好钟声传得远，坏钟声传得更远。"
+      fi: "Hyvä kello kauas kuuluu, paha vielä kauemmas."
+      de: "Eine gute Glocke hört man weit, eine schlechte noch weiter."
+      ja: "良い鐘は遠くまで響くが、悪い鐘はもっと遠くまで響く。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "A goose feather sent a thousand miles: the gift is light, the friendship deep."
+      zh: "千里送鹅毛，礼轻情意重。"
+      fi: "Hanhen sulka tuhannen mailin takaa: lahja on kevyt, mutta ystävyys syvä."
+      de: "Eine Gänsefeder aus tausend Meilen Ferne: Das Geschenk ist leicht, die Freundschaft tief."
+      ja: "千里の鵞毛、礼は軽くとも情は重し。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Clothes make the person."
+      zh: "人靠衣装，马靠鞍。"
+      fi: "Vaatteet tekevät miehen."
+      de: "Kleider machen Leute."
+      ja: "馬子にも衣装。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Japanese railways issue delay certificates so late passengers can show them at work or school."
+      zh: "日本铁路会发放“延误证明”，供迟到的乘客交给公司或学校。"
+      fi: "Japanin rautatiet antavat myöhästymistodistuksia, joita voi näyttää töissä tai koulussa."
+      de: "Japanische Bahnen stellen Verspätungsbescheinigungen aus, die man im Büro oder in der Schule vorzeigt."
+      ja: "日本の鉄道は、職場や学校に見せるための「遅延証明書」を発行する。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Two heads are better than one."
+      zh: "两个脑袋胜过一个。"
+      fi: "Kaksi päätä on parempi kuin yksi."
+      de: "Zwei Köpfe sind besser als einer."
+      ja: "二つの頭は一つに勝る。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Finland hosts the Wife Carrying World Championships in Sonkajärvi every summer."
+      zh: "芬兰松卡耶尔维每年夏天举办“背妻世界锦标赛”。"
+      fi: "Sonkajärvellä kisataan joka kesä eukonkannon MM-kisat."
+      de: "Im finnischen Sonkajärvi findet jeden Sommer die Weltmeisterschaft im Frauentragen statt."
+      ja: "フィンランドのソンカヤルヴィでは毎夏「奥様運び世界選手権」が開かれる。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "A long road tests a horse's strength; time reveals a person's heart."
+      zh: "路遥知马力，日久见人心。"
+      fi: "Pitkä tie paljastaa hevosen voiman, aika ihmisen sydämen."
+      de: "Ein langer Weg zeigt die Kraft des Pferdes, die Zeit das Herz des Menschen."
+      ja: "道が遠ければ馬の力がわかり、日が経てば人の心がわかる。"
+  - country: de
+    kind: fact
+    text:
+      en: "GSI in Darmstadt discovered six elements, 107 to 112; one is named darmstadtium."
+      zh: "达姆施塔特的GSI发现了107至112号六种元素，其中110号元素以该城市命名。"
+      fi: "Darmstadtin GSI löysi kuusi alkuainetta, 107–112; yksi niistä on nimeltään darmstadtium."
+      de: "Die GSI in Darmstadt entdeckte sechs Elemente, 107 bis 112; eines heißt Darmstadtium."
+      ja: "ダルムシュタットのGSIは107〜112番の6元素を発見し、その一つはダームスタチウムと名付けられた。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "A frog's child is a frog."
+      zh: "青蛙的孩子还是青蛙。"
+      fi: "Sammakon lapsi on sammakko."
+      de: "Das Kind eines Frosches ist ein Frosch."
+      ja: "蛙の子は蛙。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Waste not, want not."
+      zh: "不浪费，就不匮乏。"
+      fi: "Joka ei tuhlaa, se ei puutetta näe."
+      de: "Wer nicht verschwendet, leidet keine Not."
+      ja: "無駄にしなければ、不足もしない。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Accidents don't come wearing a bell."
+      zh: "意外不会挂着铃铛来。"
+      fi: "Vahinko ei tule kello kaulassa."
+      de: "Ein Unglück kommt nicht mit einer Glocke um den Hals."
+      ja: "災難は首に鈴をつけてはやって来ない。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Plant melons, get melons; plant beans, get beans."
+      zh: "种瓜得瓜，种豆得豆。"
+      fi: "Kylvä melonia, saat melonia; kylvä papuja, saat papuja."
+      de: "Wer Melonen sät, erntet Melonen; wer Bohnen sät, erntet Bohnen."
+      ja: "瓜を植えれば瓜がなり、豆を植えれば豆がなる。"
+  - country: de
+    kind: proverb
+    text:
+      en: "He who laughs last laughs best."
+      zh: "笑到最后的人笑得最好。"
+      fi: "Joka viimeksi nauraa, se parhaiten nauraa."
+      de: "Wer zuletzt lacht, lacht am besten."
+      ja: "最後に笑う者が最もよく笑う。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "A dog that walks around bumps into a stick: go out and you'll meet luck or trouble."
+      zh: "狗出门走走，总会碰上棍子：出门就有机遇或麻烦。"
+      fi: "Kuljeskeleva koira törmää keppiin: liikkeellä kohtaa onnea tai harmia."
+      de: "Ein Hund, der umherläuft, stößt auf einen Stock: Wer losgeht, findet Glück oder Pech."
+      ja: "犬も歩けば棒に当たる。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "You can lead a horse to water, but you can't make it drink."
+      zh: "你可以把马牵到水边，但不能强迫它喝水。"
+      fi: "Hevosen voi viedä veden ääreen, mutta juomaan sitä ei voi pakottaa."
+      de: "Man kann ein Pferd zum Wasser führen, aber nicht zum Trinken zwingen."
+      ja: "馬を水辺に連れて行けても、水を飲ませることはできない。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Empty barrels rattle the loudest."
+      zh: "空桶响声最大。"
+      fi: "Tyhjät tynnyrit kolisevat eniten."
+      de: "Leere Fässer klappern am lautesten."
+      ja: "空き樽は音が高い。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Drawing legs on a snake: spoiling something by overdoing it."
+      zh: "画蛇添足。"
+      fi: "Piirtää käärmeelle jalat: pilata liialla yrittämisellä."
+      de: "Der Schlange Beine malen: durch Übertreiben verderben."
+      ja: "蛇足。"
+  - country: de
+    kind: proverb
+    text:
+      en: "It's the tone that makes the music."
+      zh: "说话的语气决定一切。"
+      fi: "Sävy ratkaisee."
+      de: "Der Ton macht die Musik."
+      ja: "音色が音楽を作る（言い方が大事）。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Gold coins to a cat: wasted on one who can't value them."
+      zh: "给猫金币：给不识货的人毫无价值。"
+      fi: "Kultakolikoita kissalle: hukkaan menee, jos ei arvosteta."
+      de: "Goldmünzen für die Katze: verschwendet an jemanden, der sie nicht schätzt."
+      ja: "猫に小判。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "A watched pot never boils."
+      zh: "盯着的锅永远烧不开。"
+      fi: "Katsottu kattila ei koskaan kiehu."
+      de: "Ein beobachteter Topf kocht nie."
+      ja: "見つめる鍋は煮え立たない。"
+  - country: fi
+    kind: joke
+    text:
+      en: "Finnish weather forecast: snow, then more snow, then sauna."
+      zh: "芬兰天气预报：下雪，接着继续下雪，然后蒸桑拿。"
+      fi: "Suomen sääennuste: lunta, sitten lisää lunta, sitten saunaan."
+      de: "Finnische Wettervorhersage: Schnee, dann mehr Schnee, dann Sauna."
+      ja: "フィンランドの天気予報：雪、さらに雪、そしてサウナ。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Waiting by the tree stump for another rabbit to run into it."
+      zh: "守株待兔。"
+      fi: "Odottaa kannon vieressä, että jänis taas juoksee siihen."
+      de: "Am Baumstumpf warten, dass wieder ein Hase dagegenläuft."
+      ja: "株を守りて兎を待つ。"
+  - country: de
+    kind: proverb
+    text:
+      en: "After rain comes sunshine."
+      zh: "雨过天晴。"
+      fi: "Sateen jälkeen paistaa aurinko."
+      de: "Auf Regen folgt Sonnenschein."
+      ja: "雨の後には晴れが来る。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "An iron club for the ogre: strength added to strength."
+      zh: "给鬼加铁棒：如虎添翼。"
+      fi: "Peikolle rautanuija: vahva vahvistuu entisestään."
+      de: "Dem Oger eine Eisenkeule: Stärke zu Stärke."
+      ja: "鬼に金棒。"
+  - country: uk
+    kind: fact
+    text:
+      en: "In 1911, Ernest Rutherford announced the atomic nucleus, based on experiments in Manchester."
+      zh: "1911年，卢瑟福根据在曼彻斯特的实验提出了原子核。"
+      fi: "Ernest Rutherford esitteli atomiytimen vuonna 1911 Manchesterin kokeiden pohjalta."
+      de: "1911 stellte Ernest Rutherford aufgrund von Experimenten in Manchester den Atomkern vor."
+      ja: "1911年、ラザフォードはマンチェスターでの実験から原子核の存在を発表した。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Don't lick it before it drips."
+      zh: "没滴下来之前别先舔。"
+      fi: "Ei pidä nuolaista ennen kuin tipahtaa."
+      de: "Man soll nicht lecken, bevor es tropft."
+      ja: "垂れる前になめてはいけない。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Mending the pen after a sheep is lost is still not too late."
+      zh: "亡羊补牢，犹未为晚。"
+      fi: "Aitauksen korjaaminen lampaan karattua ei ole vielä liian myöhäistä."
+      de: "Den Pferch zu flicken, nachdem ein Schaf fehlt, ist noch nicht zu spät."
+      ja: "羊を失ってから囲いを直しても、まだ遅くはない。"
+  - country: de
+    kind: proverb
+    text:
+      en: "No master has ever fallen from the sky."
+      zh: "没有人生来就是大师。"
+      fi: "Mestariksi ei synnytä valmiina."
+      de: "Es ist noch kein Meister vom Himmel gefallen."
+      ja: "天から名人が降ってきたことはない。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Too many captains and the ship climbs the mountain."
+      zh: "船夫多了，船就开到山上去了。"
+      fi: "Liian monta kapteenia, ja laiva nousee vuorelle."
+      de: "Zu viele Kapitäne, und das Schiff fährt auf den Berg."
+      ja: "船頭多くして船山に上る。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Don't cross the bridge till you come to it."
+      zh: "还没走到桥边，就别急着过桥。"
+      fi: "Älä ylitä siltaa ennen kuin tulet sille."
+      de: "Über die Brücke geht man erst, wenn man dort ist."
+      ja: "橋に着くまで橋を渡るな（取り越し苦労をするな）。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Better one grouse in the hand than ten on the branch."
+      zh: "一只松鸡在手，胜过十只在枝头。"
+      fi: "Parempi pyy pivossa kuin kymmenen oksalla."
+      de: "Besser ein Haselhuhn in der Hand als zehn auf dem Ast."
+      ja: "枝の上の十羽より、手の中の一羽のエゾライチョウ。"
+  - country: cn
+    kind: fact
+    text:
+      en: "Tea was first cultivated in China; legend says the herbalist Shennong discovered it."
+      zh: "茶最早在中国种植；相传是神农发现了茶。"
+      fi: "Teetä viljeltiin ensimmäisenä Kiinassa; tarun mukaan sen löysi yrttitietäjä Shennong."
+      de: "Tee wurde zuerst in China angebaut; der Legende nach entdeckte ihn der Kräuterkundige Shennong."
+      ja: "茶は中国で初めて栽培された。伝説では神農が発見したという。"
+  - country: de
+    kind: fact
+    text:
+      en: "In 1938, Otto Hahn and Fritz Strassmann found nuclear fission in Berlin; Lise Meitner explained it."
+      zh: "1938年，哈恩和斯特拉斯曼在柏林发现核裂变，莉泽·迈特纳给出了解释。"
+      fi: "Otto Hahn ja Fritz Strassmann havaitsivat fission Berliinissä 1938; Lise Meitner selitti sen."
+      de: "1938 fanden Otto Hahn und Fritz Straßmann in Berlin die Kernspaltung; Lise Meitner erklärte sie."
+      ja: "1938年、ハーンとシュトラスマンはベルリンで核分裂を発見し、リーゼ・マイトナーがそれを説明した。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Awake you need half a mat; asleep, just one."
+      zh: "醒着只需半张榻榻米，睡下也不过一张。"
+      fi: "Hereillä tarvitset puoli tatamia, nukkuessa yhden."
+      de: "Wach braucht man eine halbe Matte, schlafend eine ganze."
+      ja: "起きて半畳寝て一畳。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Every dog has its day."
+      zh: "人人都有得意时。"
+      fi: "Jokaisella koiralla on päivänsä."
+      de: "Jeder Hund hat seinen Tag."
+      ja: "どんな犬にも良き日がある。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Oulu has hosted the Air Guitar World Championships since 1996."
+      zh: "奥卢自1996年起举办“空气吉他世界锦标赛”。"
+      fi: "Oulussa on järjestetty ilmakitaran MM-kisat vuodesta 1996."
+      de: "In Oulu finden seit 1996 die Luftgitarren-Weltmeisterschaften statt."
+      ja: "オウルでは1996年からエアギター世界選手権が開かれている。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Playing the lute to a cow."
+      zh: "对牛弹琴。"
+      fi: "Soittaa luuttua lehmälle."
+      de: "Einer Kuh die Laute vorspielen."
+      ja: "牛に琴を弾いて聞かせる。"
+  - country: de
+    kind: proverb
+    text:
+      en: "People in glass houses shouldn't throw stones."
+      zh: "住在玻璃房里的人不该扔石头。"
+      fi: "Lasitalossa asuvan ei pidä heitellä kiviä."
+      de: "Wer im Glashaus sitzt, sollte nicht mit Steinen werfen."
+      ja: "ガラスの家に住む者は石を投げてはいけない。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Wherever you live becomes your capital."
+      zh: "住惯了，哪里都是好地方。"
+      fi: "Missä asut, siitä tulee pääkaupunkisi."
+      de: "Wo man wohnt, wird zur Hauptstadt."
+      ja: "住めば都。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Great minds think alike."
+      zh: "英雄所见略同。"
+      fi: "Suuret mielet ajattelevat samoin."
+      de: "Große Geister denken gleich."
+      ja: "賢者は皆同じように考える。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "A cat lives on thanks."
+      zh: "猫靠一句谢谢过活。"
+      fi: "Kissa kiitoksella elää."
+      de: "Die Katze lebt vom Dank."
+      ja: "猫は感謝で生きる。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "A frog at the bottom of a well thinks the sky is as big as the opening."
+      zh: "井底之蛙。"
+      fi: "Kaivon pohjan sammakko luulee taivaan olevan kaivon suun kokoinen."
+      de: "Ein Frosch im Brunnen hält den Himmel für so groß wie die Brunnenöffnung."
+      ja: "井の中の蛙大海を知らず。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Many roads lead to Rome."
+      zh: "条条大路通罗马。"
+      fi: "Monta tietä vie Roomaan."
+      de: "Viele Wege führen nach Rom."
+      ja: "多くの道はローマに通ず。"
+  - country: jp
+    kind: fact
+    text:
+      en: "The Tokaido Shinkansen opened in 1964, just before the Tokyo Olympics."
+      zh: "东海道新干线于1964年开通，正值东京奥运会前夕。"
+      fi: "Tokaidon Shinkansen avattiin vuonna 1964, juuri ennen Tokion olympialaisia."
+      de: "Der Tokaido-Shinkansen wurde 1964 eröffnet, kurz vor den Olympischen Spielen in Tokio."
+      ja: "東海道新幹線は東京オリンピック直前の1964年に開業した。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Half a loaf is better than no bread."
+      zh: "半块面包总比没有好。"
+      fi: "Puolikas leipä on parempi kuin ei leipää lainkaan."
+      de: "Ein halbes Brot ist besser als keins."
+      ja: "半分のパンでも無いよりまし。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Don't judge a dog by its fur."
+      zh: "看狗不能只看毛。"
+      fi: "Ei koiraa karvoihin katsominen."
+      de: "Einen Hund soll man nicht nach seinem Fell beurteilen."
+      ja: "犬を毛並みで判断してはいけない。"
+  - country: cn
+    kind: joke
+    text:
+      en: "A classic Chinese remedy for almost anything: \"Drink more hot water.\""
+      zh: "“多喝热水”——几乎包治百病的中国式关怀。"
+      fi: "Kiinalainen lääke lähes kaikkeen: ”Juo enemmän kuumaa vettä.”"
+      de: "Das chinesische Hausmittel für fast alles: „Trink mehr heißes Wasser.“"
+      ja: "中国流のほぼ万能の処方：「お湯をたくさん飲んで」。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Misfortune seldom comes alone."
+      zh: "祸不单行。"
+      fi: "Harvoin onnettomuus yksin tulee."
+      de: "Ein Unglück kommt selten allein."
+      ja: "泣きっ面に蜂。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Try, and it can be done; don't, and nothing can."
+      zh: "只要去做就能成功，不做则一事无成。"
+      fi: "Kun yrität, se onnistuu; jos et yritä, mikään ei onnistu."
+      de: "Wer es versucht, schafft es; wer es nicht tut, schafft nichts."
+      ja: "為せば成る、為さねば成らぬ何事も。"
+  - country: uk
+    kind: joke
+    text:
+      en: "Put the kettle on: the traditional British first step in solving any crisis."
+      zh: "先烧壶水泡茶：英国人解决任何危机的传统第一步。"
+      fi: "Laita vesi kiehumaan: perinteinen brittiläinen ensiaskel minkä tahansa kriisin ratkaisemiseen."
+      de: "Erst mal Wasser aufsetzen: der traditionelle britische erste Schritt bei jeder Krise."
+      ja: "まずはお湯を沸かす。どんな危機にも使えるイギリス伝統の第一歩。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Kaamos is the polar night: in northern Lapland the sun stays below the horizon for weeks."
+      zh: "“Kaamos”指极夜：在拉普兰北部，太阳会连续数周不升起。"
+      fi: "Kaamos on aika, jolloin Pohjois-Lapissa aurinko ei nouse viikkoihin."
+      de: "Kaamos ist die Polarnacht: In Nordlappland bleibt die Sonne wochenlang unter dem Horizont."
+      ja: "「カーモス」は極夜のこと。ラップランド北部では何週間も太陽が昇らない。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Keep carving without stopping, and even metal and stone can be engraved."
+      zh: "锲而不舍，金石可镂。"
+      fi: "Kun veistää lakkaamatta, metalli ja kivikin antavat periksi."
+      de: "Wer unermüdlich schnitzt, kann selbst Metall und Stein gravieren."
+      ja: "刻んで止まなければ、金石にも彫れる。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Hurry with care."
+      zh: "忙中要从容。"
+      fi: "Kiirehdi hitaasti."
+      de: "Eile mit Weile."
+      ja: "急ぐ時こそ落ち着いて。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Never forget the beginner's mind. (Zeami)"
+      zh: "勿忘初心。"
+      fi: "Älä koskaan unohda aloittelijan mieltä."
+      de: "Vergiss nie den Geist des Anfängers."
+      ja: "初心忘るべからず。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Look before you leap."
+      zh: "跳之前先看清楚。"
+      fi: "Katso ennen kuin hyppäät."
+      de: "Erst schauen, dann springen."
+      ja: "跳ぶ前に見よ。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "No use crying at the market."
+      zh: "在集市上哭也没用。"
+      fi: "Ei auta itku markkinoilla."
+      de: "Weinen auf dem Markt hilft nichts."
+      ja: "市場で泣いても仕方がない。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Without long-range thinking, near-term worries soon arrive."
+      zh: "人无远虑，必有近忧。"
+      fi: "Joka ei katso kauas, saa pian huolia."
+      de: "Wer nicht vorausdenkt, hat bald Sorgen."
+      ja: "遠き慮りなければ、必ず近き憂いあり。"
+  - country: de
+    kind: proverb
+    text:
+      en: "In brevity lies the spice."
+      zh: "言贵简洁。"
+      fi: "Lyhyt ja ytimekäs on parasta."
+      de: "In der Kürze liegt die Würze."
+      ja: "簡潔さにこそ味がある。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Hiding the head but not the tail."
+      zh: "藏头露尾。"
+      fi: "Pää piilossa, häntä näkyvissä."
+      de: "Den Kopf versteckt, den Hintern nicht."
+      ja: "頭隠して尻隠さず。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "No news is good news."
+      zh: "没有消息就是好消息。"
+      fi: "Ei uutisia, hyviä uutisia."
+      de: "Keine Nachrichten sind gute Nachrichten."
+      ja: "便りのないのはよい便り。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Who will lift the cat's tail if not the cat itself?"
+      zh: "猫不自己翘尾巴，谁替它翘？"
+      fi: "Kuka kissan hännän nostaa, jollei kissa itse."
+      de: "Wer hebt den Schwanz der Katze, wenn nicht die Katze selbst?"
+      ja: "猫のしっぽを上げるのは、猫自身でなければ誰？"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Grind an iron rod long enough and it becomes a needle."
+      zh: "只要功夫深，铁杵磨成针。"
+      fi: "Kun hioo tarpeeksi kauan, rautakangesta tulee neula."
+      de: "Wer lange genug schleift, macht aus einer Eisenstange eine Nadel."
+      ja: "鉄の杵も磨けば針になる。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Shared sorrow is half sorrow; shared joy is double joy."
+      zh: "分担的痛苦减半，分享的快乐加倍。"
+      fi: "Jaettu suru on puolikas suru, jaettu ilo kaksinkertainen ilo."
+      de: "Geteiltes Leid ist halbes Leid, geteilte Freude ist doppelte Freude."
+      ja: "分かち合った悲しみは半分に、分かち合った喜びは倍になる。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "A sparrow never forgets its dance, even at a hundred."
+      zh: "麻雀到了一百岁也不会忘记跳舞。"
+      fi: "Varpunen ei unohda tanssiaan sataan ikävuoteenkaan."
+      de: "Ein Spatz vergisst sein Tanzen nicht, selbst mit hundert."
+      ja: "雀百まで踊り忘れず。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "One good turn deserves another."
+      zh: "善有善报，礼尚往来。"
+      fi: "Hyvä teko ansaitsee toisen."
+      de: "Eine gute Tat ist eine andere wert."
+      ja: "一つの親切には親切で返すべし。"
+  - country: fi
+    kind: joke
+    text:
+      en: "At −30 °C, a Finnish physicist simply calls it free cryogenics."
+      zh: "零下三十度时，芬兰物理学家管这叫“免费低温技术”。"
+      fi: "Kolmenkymmenen asteen pakkasessa suomalainen fyysikko puhuu ilmaisesta kryotekniikasta."
+      de: "Bei −30 °C nennt ein finnischer Physiker das einfach kostenlose Kryotechnik."
+      ja: "氷点下30度を、フィンランドの物理学者は「無料の極低温技術」と呼ぶ。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "How can you catch tiger cubs without entering the tiger's den?"
+      zh: "不入虎穴，焉得虎子。"
+      fi: "Kuinka saada tiikerinpentu menemättä tiikerin luolaan?"
+      de: "Wie fängt man Tigerjunge, ohne in die Tigerhöhle zu gehen?"
+      ja: "虎穴に入らずんば虎子を得ず。"
+  - country: de
+    kind: fact
+    text:
+      en: "Max Planck introduced the quantum of energy in 1900 — and launched quantum physics."
+      zh: "1900年，普朗克提出能量量子，开启了量子物理。"
+      fi: "Max Planck esitteli energiakvantin vuonna 1900 ja käynnisti kvanttifysiikan."
+      de: "Max Planck führte 1900 das Energiequantum ein – der Beginn der Quantenphysik."
+      ja: "1900年、プランクはエネルギー量子を導入し、量子物理学が始まった。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Kindness is not only for others: it comes back to you."
+      zh: "善待他人，终会回到自己身上。"
+      fi: "Ystävällisyys ei ole vain toisia varten: se palaa sinulle."
+      de: "Freundlichkeit ist nicht nur für andere: Sie kommt zu dir zurück."
+      ja: "情けは人の為ならず。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "The pen is mightier than the sword."
+      zh: "笔胜于剑。"
+      fi: "Kynä on miekkaa mahtavampi."
+      de: "Die Feder ist mächtiger als das Schwert."
+      ja: "ペンは剣よりも強し。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "A bark does not make a wound."
+      zh: "狗叫咬不伤人。"
+      fi: "Ei haukku haavaa tee."
+      de: "Bellen reißt keine Wunde."
+      ja: "吠え声では傷はできない。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "When entering a village, follow its customs."
+      zh: "入乡随俗。"
+      fi: "Kylään tullessa noudata kylän tapoja."
+      de: "Andere Länder, andere Sitten."
+      ja: "郷に入っては郷に従え。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Trying beats studying."
+      zh: "动手试试胜过埋头研究。"
+      fi: "Kokeilu voittaa opiskelun."
+      de: "Probieren geht über Studieren."
+      ja: "研究するより試してみよ。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Good medicine tastes bitter."
+      zh: "良药苦口。"
+      fi: "Hyvä lääke maistuu karvaalta."
+      de: "Gute Medizin schmeckt bitter."
+      ja: "良薬は口に苦し。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Time and tide wait for no man."
+      zh: "岁月不待人。"
+      fi: "Aika ja vuorovesi eivät odota ketään."
+      de: "Zeit und Gezeiten warten auf niemanden."
+      ja: "歳月人を待たず。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "A beloved child has many names."
+      zh: "心爱的孩子有很多名字。"
+      fi: "Rakkaalla lapsella on monta nimeä."
+      de: "Ein geliebtes Kind hat viele Namen."
+      ja: "かわいい子には名前がたくさんある。"
+  - country: cn
+    kind: fact
+    text:
+      en: "Paper, printing, the compass and gunpowder are known as China's Four Great Inventions."
+      zh: "造纸术、印刷术、指南针和火药被称为中国古代四大发明。"
+      fi: "Paperi, kirjapaino, kompassi ja ruuti tunnetaan Kiinan neljänä suurena keksintönä."
+      de: "Papier, Buchdruck, Kompass und Schießpulver gelten als Chinas Vier Große Erfindungen."
+      ja: "紙、印刷術、羅針盤、火薬は中国の四大発明と呼ばれる。"
+  - country: de
+    kind: proverb
+    text:
+      en: "The wiser one gives in."
+      zh: "聪明人懂得让步。"
+      fi: "Viisaampi antaa periksi."
+      de: "Der Klügere gibt nach."
+      ja: "賢い者が譲る。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Time flies like an arrow."
+      zh: "光阴似箭。"
+      fi: "Aika kiitää kuin nuoli."
+      de: "Die Zeit fliegt wie ein Pfeil."
+      ja: "光陰矢の如し。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "You can't have your cake and eat it."
+      zh: "鱼与熊掌不可兼得。"
+      fi: "Kakkua ei voi sekä säästää että syödä."
+      de: "Man kann den Kuchen nicht behalten und zugleich essen."
+      ja: "ケーキを持っていながら食べることはできない。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Everyman's right lets anyone roam Finnish forests and pick berries and mushrooms freely."
+      zh: "根据“每个人的权利”，任何人都可以在芬兰森林漫步、采摘浆果和蘑菇。"
+      fi: "Jokamiehenoikeuksien ansiosta kuka tahansa saa liikkua metsässä ja poimia marjoja ja sieniä."
+      de: "Das Jedermannsrecht erlaubt jedem, in Finnlands Wäldern zu wandern und Beeren und Pilze zu sammeln."
+      ja: "「自然享受権」により、誰でもフィンランドの森を歩き、ベリーやキノコを摘める。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Where there is determination, the task gets done."
+      zh: "有志者事竟成。"
+      fi: "Missä on tahtoa, siellä asiat toteutuvat."
+      de: "Wo ein Wille ist, ist auch ein Weg."
+      ja: "志ある者は事竟に成る。"
+  - country: de
+    kind: proverb
+    text:
+      en: "What takes long turns out well in the end."
+      zh: "好事多磨，终有好结果。"
+      fi: "Mikä kauan kestää, siitä tulee lopulta hyvä."
+      de: "Was lange währt, wird endlich gut."
+      ja: "時間がかかるものは、最後にはうまくいく。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "The strong one beneath the floor: the unsung helper who holds everything up."
+      zh: "地板下的大力士：默默支撑一切的无名英雄。"
+      fi: "Lattian alla oleva voimamies: näkymätön auttaja, joka kannattelee kaikkea."
+      de: "Der Starke unter dem Fußboden: der stille Helfer, der alles trägt."
+      ja: "縁の下の力持ち。"
+  - country: uk
+    kind: fact
+    text:
+      en: "\"Keep Calm and Carry On\" was printed in 1939 but barely used; a copy found in 2000 made it famous."
+      zh: "“保持冷静，继续前行”海报印于1939年，却几乎没用上；2000年被重新发现后才走红。"
+      fi: "”Keep Calm and Carry On” painettiin 1939 mutta tuskin käytettiin; vuonna 2000 löydetty kappale teki siitä kuuluisan."
+      de: "„Keep Calm and Carry On“ wurde 1939 gedruckt, kaum genutzt und erst durch einen Fund im Jahr 2000 berühmt."
+      ja: "「Keep Calm and Carry On」は1939年に印刷されたがほぼ使われず、2000年の発見で有名になった。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Don't go beyond the sea to fish."
+      zh: "不必跑到海那边去钓鱼。"
+      fi: "Ei pidä mennä merta edemmäs kalaan."
+      de: "Man soll nicht übers Meer hinaus fischen gehen."
+      ja: "海の向こうまで魚を釣りに行くな。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "The day's plan is made in the morning."
+      zh: "一日之计在于晨。"
+      fi: "Päivän suunnitelma tehdään aamulla."
+      de: "Den Plan für den Tag macht man am Morgen."
+      ja: "一日の計は朝にあり。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Afterwards, one is always wiser."
+      zh: "事后诸葛亮。"
+      fi: "Jälkikäteen on helppo olla viisas."
+      de: "Hinterher ist man immer klüger."
+      ja: "後になれば誰でも賢い。"
+  - country: jp
+    kind: fact
+    text:
+      en: "In 1949, Hideki Yukawa became Japan's first Nobel laureate, for predicting the meson."
+      zh: "1949年，汤川秀树因预言介子成为日本第一位诺贝尔奖得主。"
+      fi: "Hideki Yukawa sai 1949 Japanin ensimmäisen Nobelin palkinnon mesonin ennustamisesta."
+      de: "1949 wurde Hideki Yukawa für die Vorhersage des Mesons Japans erster Nobelpreisträger."
+      ja: "1949年、湯川秀樹は中間子の予言で日本初のノーベル賞受賞者となった。"
+  - country: uk
+    kind: fact
+    text:
+      en: "James Chadwick discovered the neutron in 1932 at the Cavendish Laboratory in Cambridge."
+      zh: "1932年，查德威克在剑桥卡文迪许实验室发现了中子。"
+      fi: "James Chadwick löysi neutronin 1932 Cambridgen Cavendish-laboratoriossa."
+      de: "James Chadwick entdeckte 1932 am Cavendish-Laboratorium in Cambridge das Neutron."
+      ja: "1932年、チャドウィックはケンブリッジのキャベンディッシュ研究所で中性子を発見した。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "What comes singing goes whistling."
+      zh: "唱着来的，吹着口哨就走了。"
+      fi: "Mikä laulaen tulee, se viheltäen menee."
+      de: "Was singend kommt, geht pfeifend."
+      ja: "歌いながら来たものは、口笛を吹きながら去る。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Live until old, learn until old."
+      zh: "活到老，学到老。"
+      fi: "Elä vanhaksi ja opi vanhaksi."
+      de: "Man lernt nie aus."
+      ja: "生きている限り学び続けよ。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Don't praise the day before the evening."
+      zh: "不到傍晚，别夸这一天。"
+      fi: "Älä kehu päivää ennen iltaa."
+      de: "Man soll den Tag nicht vor dem Abend loben."
+      ja: "夕方になる前に一日をほめるな。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "To lose is to win."
+      zh: "以退为进，输即是赢。"
+      fi: "Häviäminen on voittamista."
+      de: "Verlieren ist Gewinnen."
+      ja: "負けるが勝ち。"
+  - country: uk
+    kind: fact
+    text:
+      en: "J. J. Thomson discovered the electron in 1897, also at the Cavendish Laboratory."
+      zh: "1897年，J. J. 汤姆孙同样在卡文迪许实验室发现了电子。"
+      fi: "J. J. Thomson löysi elektronin 1897, samoin Cavendish-laboratoriossa."
+      de: "J. J. Thomson entdeckte 1897 das Elektron – ebenfalls am Cavendish-Laboratorium."
+      ja: "1897年、J・J・トムソンも同じくキャベンディッシュ研究所で電子を発見した。"
+  - country: fi
+    kind: joke
+    text:
+      en: "Finns stand two metres apart at bus stops — and that's the crowded version."
+      zh: "芬兰人等公交时彼此相隔两米——这还算拥挤的。"
+      fi: "Suomalaiset seisovat bussipysäkillä kahden metrin välein – ja se on ruuhkaversio."
+      de: "Finnen stehen an der Bushaltestelle zwei Meter auseinander – und das ist die volle Version."
+      ja: "フィンランド人はバス停で2メートル間隔に並ぶ。これでも混雑時だ。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Nothing in the world is hard for one who sets their heart on it."
+      zh: "世上无难事，只怕有心人。"
+      fi: "Mikään ei ole maailmassa vaikeaa sille, joka todella paneutuu."
+      de: "Nichts auf der Welt ist schwer für den, der sich ganz einsetzt."
+      ja: "志さえあれば、世に難しいことはない。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Without diligence, no prize."
+      zh: "没有勤奋，就没有回报。"
+      fi: "Ilman ahkeruutta ei palkintoa."
+      de: "Ohne Fleiß kein Preis."
+      ja: "努力なくして報酬なし。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "A rice cake falling off the shelf: unexpected good luck."
+      zh: "天上掉馅饼：意外的好运。"
+      fi: "Riisikakku putoaa hyllyltä: odottamaton onni."
+      de: "Ein Reiskuchen fällt vom Regal: unverhofftes Glück."
+      ja: "棚からぼたもち。"
+  - country: uk
+    kind: fact
+    text:
+      en: "In 1932, Cockcroft and Walton split the nucleus using a particle accelerator, a world first."
+      zh: "1932年，考克饶夫和沃尔顿首次用粒子加速器实现了人工核裂变反应。"
+      fi: "Cockcroft ja Walton halkaisivat 1932 atomiytimen ensimmäisinä hiukkaskiihdyttimellä."
+      de: "1932 spalteten Cockcroft und Walton als Erste einen Atomkern mit einem Teilchenbeschleuniger."
+      ja: "1932年、コッククロフトとウォルトンは加速器で世界で初めて原子核を人工的に壊変させた。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Old salt still makes you thirsty: old flames are hard to forget."
+      zh: "旧盐依旧让人口渴：旧情难忘。"
+      fi: "Vanha suola janottaa."
+      de: "Altes Salz macht immer noch durstig: Alte Liebe rostet nicht."
+      ja: "古い塩はまだ喉を渇かせる（昔の恋は忘れがたい）。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Every beginning is hard."
+      zh: "万事开头难。"
+      fi: "Kaikki alku on vaikeaa."
+      de: "Aller Anfang ist schwer."
+      ja: "何事も始めが難しい。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Better an end with terror than terror without end."
+      zh: "长痛不如短痛。"
+      fi: "Parempi kauhea loppu kuin loputon kauhu."
+      de: "Lieber ein Ende mit Schrecken als ein Schrecken ohne Ende."
+      ja: "終わりなき恐怖より、恐怖を伴う終わりの方がよい。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Once it's past the throat, the heat is forgotten."
+      zh: "好了伤疤忘了疼。"
+      fi: "Kun se on mennyt kurkusta alas, kuumuus unohtuu."
+      de: "Ist es erst die Kehle hinunter, ist die Hitze vergessen."
+      ja: "喉元過ぎれば熱さを忘れる。"
+  - country: uk
+    kind: fact
+    text:
+      en: "James Clerk Maxwell unified electricity, magnetism and light in his equations of the 1860s."
+      zh: "麦克斯韦在19世纪60年代用方程统一了电、磁和光。"
+      fi: "James Clerk Maxwell yhdisti sähkön, magnetismin ja valon yhtälöissään 1860-luvulla."
+      de: "James Clerk Maxwell vereinte in den 1860er-Jahren Elektrizität, Magnetismus und Licht in seinen Gleichungen."
+      ja: "マクスウェルは1860年代に方程式で電気・磁気・光を統一した。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Harmony makes room."
+      zh: "和睦让空间变宽。"
+      fi: "Sopu sijaa antaa."
+      de: "Eintracht schafft Platz."
+      ja: "和があれば場所はできる。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "The clumsy bird sets off early."
+      zh: "笨鸟先飞。"
+      fi: "Kömpelö lintu lähtee lentoon ajoissa."
+      de: "Der ungeschickte Vogel fliegt früh los."
+      ja: "不器用な鳥は早く飛び立つ。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Not seeing the forest for all the trees."
+      zh: "只见树木，不见森林。"
+      fi: "Ei näe metsää puilta."
+      de: "Den Wald vor lauter Bäumen nicht sehen."
+      ja: "木を見て森を見ず。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "The eyes speak as much as the mouth."
+      zh: "眼睛和嘴巴一样会说话。"
+      fi: "Silmät puhuvat yhtä paljon kuin suu."
+      de: "Die Augen sprechen so viel wie der Mund."
+      ja: "目は口ほどに物を言う。"
+  - country: uk
+    kind: fact
+    text:
+      en: "Michael Faraday started the Royal Institution's Christmas Lectures for young people in 1825."
+      zh: "法拉第于1825年为年轻人开创了英国皇家研究院圣诞讲座。"
+      fi: "Michael Faraday aloitti Royal Institutionin joululuennot nuorille vuonna 1825."
+      de: "Michael Faraday begründete 1825 die Weihnachtsvorlesungen der Royal Institution für junge Leute."
+      ja: "ファラデーは1825年、王立研究所で若者向けのクリスマス・レクチャーを始めた。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Finnish sauna culture was added to UNESCO's list of intangible cultural heritage in 2020."
+      zh: "芬兰桑拿文化于2020年被列入联合国教科文组织非物质文化遗产名录。"
+      fi: "Suomalainen saunaperinne lisättiin Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2020."
+      de: "Die finnische Saunakultur wurde 2020 in die UNESCO-Liste des immateriellen Kulturerbes aufgenommen."
+      ja: "フィンランドのサウナ文化は2020年にユネスコ無形文化遺産に登録された。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Think three times, then act."
+      zh: "三思而后行。"
+      fi: "Ajattele kolmesti, toimi sitten."
+      de: "Dreimal überlegen, dann handeln."
+      ja: "三度考えてから行え。"
+  - country: de
+    kind: proverb
+    text:
+      en: "The eye eats too."
+      zh: "眼睛也在吃饭：菜要好看。"
+      fi: "Myös silmä syö."
+      de: "Das Auge isst mit."
+      ja: "目でも食べる（見た目も大事）。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Hear one, understand ten."
+      zh: "闻一知十。"
+      fi: "Kuule yksi, ymmärrä kymmenen."
+      de: "Eins hören, zehn verstehen."
+      ja: "一を聞いて十を知る。"
+  - country: uk
+    kind: fact
+    text:
+      en: "Paul Dirac's 1928 equation predicted antimatter before anyone had seen it."
+      zh: "狄拉克1928年的方程在人们观测到反物质之前就预言了它。"
+      fi: "Paul Diracin vuoden 1928 yhtälö ennusti antiaineen ennen kuin kukaan oli havainnut sitä."
+      de: "Paul Diracs Gleichung von 1928 sagte Antimaterie voraus, bevor jemand sie gesehen hatte."
+      ja: "ディラックの1928年の方程式は、反物質を観測される前に予言した。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Well planned is half done."
+      zh: "计划周全，事成一半。"
+      fi: "Hyvin suunniteltu on puoliksi tehty."
+      de: "Gut geplant ist halb getan."
+      ja: "よく計画すれば半分終わったも同然。"
+  - country: cn
+    kind: fact
+    text:
+      en: "The number 8 is lucky in China because \"bā\" sounds like \"fā\", to prosper."
+      zh: "在中国，“八”是吉利数字，因为它的发音像“发”。"
+      fi: "Kahdeksan on Kiinassa onnennumero, koska ”bā” kuulostaa sanalta ”fā”, menestyä."
+      de: "Die 8 gilt in China als Glückszahl, weil „bā“ wie „fā“ (gedeihen) klingt."
+      ja: "中国で8が縁起のいい数字なのは、「八(bā)」が「発(fā)」に似ているから。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Love goes through the stomach."
+      zh: "要抓住一个人的心，先抓住他的胃。"
+      fi: "Tie sydämeen käy vatsan kautta."
+      de: "Liebe geht durch den Magen."
+      ja: "愛は胃袋を通る。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Tap the stone bridge before you cross it."
+      zh: "过石桥也要先敲一敲。"
+      fi: "Koputa kivisiltaa ennen kuin ylität sen."
+      de: "Klopf die Steinbrücke ab, bevor du sie überquerst."
+      ja: "石橋を叩いて渡る。"
+  - country: uk
+    kind: fact
+    text:
+      en: "Big Ben is the name of the great bell; the tower is the Elizabeth Tower."
+      zh: "“大本钟”是那口大钟的名字，钟楼叫伊丽莎白塔。"
+      fi: "Big Ben on suuren kellon nimi; torni on Elizabeth Tower."
+      de: "Big Ben ist der Name der großen Glocke; der Turm heißt Elizabeth Tower."
+      ja: "ビッグ・ベンは大鐘の名前で、塔はエリザベス・タワーという。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "It's hard to make something out of nothing."
+      zh: "无中难生有。"
+      fi: "Ei tyhjästä ole hyvä nyhjäistä."
+      de: "Aus nichts lässt sich schlecht etwas machen."
+      ja: "無から何かを作るのは難しい。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "A famous teacher produces brilliant students."
+      zh: "名师出高徒。"
+      fi: "Kuuluisa opettaja kasvattaa loistavia oppilaita."
+      de: "Ein berühmter Lehrer bringt hervorragende Schüler hervor."
+      ja: "名師は高弟を出す。"
+  - country: de
+    kind: proverb
+    text:
+      en: "Anticipation is the greatest joy."
+      zh: "期待是最美的快乐。"
+      fi: "Odotus on paras ilo."
+      de: "Vorfreude ist die schönste Freude."
+      ja: "待つ楽しみこそ最高の楽しみ。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Wait, and fair weather will come for the voyage."
+      zh: "耐心等待，自有顺风。"
+      fi: "Odota, niin purjehdukselle tulee suotuisa sää."
+      de: "Wer wartet, bekommt gutes Wetter für die Seefahrt."
+      ja: "待てば海路の日和あり。"
+  - country: uk
+    kind: fact
+    text:
+      en: "The London Underground, opened in 1863, is the world's oldest underground railway."
+      zh: "伦敦地铁于1863年开通，是世界上最古老的地铁。"
+      fi: "Vuonna 1863 avattu Lontoon metro on maailman vanhin maanalainen rautatie."
+      de: "Die 1863 eröffnete Londoner U-Bahn ist die älteste der Welt."
+      ja: "1863年開業のロンドン地下鉄は、世界最古の地下鉄だ。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Löyly is the Finnish word for the wave of steam that rises when water hits the sauna stones."
+      zh: "“Löyly”是芬兰语，指水泼在桑拿石上时腾起的那股热气。"
+      fi: "Löyly on höyry, joka nousee, kun vettä heitetään kiukaalle."
+      de: "„Löyly“ ist das finnische Wort für den Dampfstoß, wenn Wasser auf die Saunasteine trifft."
+      ja: "「ロウリュ」は、サウナストーンに水をかけた時に立ち上る蒸気を表すフィンランド語。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Good timing counts less than good ground; good ground, less than human harmony. (Mencius)"
+      zh: "天时不如地利，地利不如人和。"
+      fi: "Hyvä ajoitus ei voita hyvää maastoa, eikä maasto ihmisten yksimielisyyttä."
+      de: "Günstige Zeit zählt weniger als günstiges Gelände, Gelände weniger als menschliche Eintracht."
+      ja: "天の時は地の利に如かず、地の利は人の和に如かず。"
+  - country: de
+    kind: fact
+    text:
+      en: "\"Fingerspitzengefühl\", literally \"fingertip feeling\", means fine intuition and tact."
+      zh: "“Fingerspitzengefühl”字面意为“指尖的感觉”，指敏锐的直觉和分寸感。"
+      fi: "”Fingerspitzengefühl”, sanatarkasti ”sormenpäätuntuma”, tarkoittaa hienovaraista vaistoa."
+      de: "„Fingerspitzengefühl“ bedeutet feines Gespür und Taktgefühl."
+      ja: "「指先の感覚」を意味するFingerspitzengefühlは、鋭い直感と気配りのこと。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Watch how others behave and correct your own behaviour."
+      zh: "看别人的举止，改正自己的行为。"
+      fi: "Katso muiden käytöstä ja korjaa omaasi."
+      de: "Sieh, wie andere sich verhalten, und bessere dein eigenes Verhalten."
+      ja: "人の振り見て我が振り直せ。"
+  - country: uk
+    kind: fact
+    text:
+      en: "The Stockton and Darlington Railway of 1825 was the first public railway to use steam locomotives."
+      zh: "1825年开通的斯托克顿—达灵顿铁路是第一条使用蒸汽机车的公共铁路。"
+      fi: "Vuonna 1825 avattu Stocktonin–Darlingtonin rata oli ensimmäinen höyryvetureita käyttänyt yleinen rautatie."
+      de: "Die Stockton-and-Darlington-Bahn von 1825 war die erste öffentliche Eisenbahn mit Dampflokomotiven."
+      ja: "1825年のストックトン・アンド・ダーリントン鉄道は、蒸気機関車を使った最初の公共鉄道だ。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Who learns young, knows it when old."
+      zh: "少时学会，老来能用。"
+      fi: "Joka nuorena oppii, se vanhana taitaa."
+      de: "Wer jung lernt, der kann es im Alter."
+      ja: "若い時に学んだ者は、年老いてもできる。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "A foot has its shortcomings; an inch has its strengths."
+      zh: "尺有所短，寸有所长。"
+      fi: "Kyynärälläkin on puutteensa, tuumallakin vahvuutensa."
+      de: "Auch eine Elle hat ihre Schwächen, auch ein Zoll seine Stärken."
+      ja: "尺も短き所あり、寸も長き所あり。"
+  - country: de
+    kind: fact
+    text:
+      en: "An \"Ohrwurm\" — an \"ear worm\" — is a tune you can't get out of your head."
+      zh: "“Ohrwurm”（耳虫）指在脑中挥之不去的旋律。"
+      fi: "”Ohrwurm” eli korvamato on sävelmä, joka ei lähde päästä."
+      de: "Ein „Ohrwurm“ ist eine Melodie, die einem nicht aus dem Kopf geht."
+      ja: "「耳の虫」Ohrwurmは、頭から離れないメロディーのこと。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Kintsugi repairs broken pottery with gold lacquer, making the cracks part of its beauty."
+      zh: "金缮用金漆修补破损的陶瓷，让裂痕成为美的一部分。"
+      fi: "Kintsugissa rikkoutunut keramiikka korjataan kultalakalla, ja halkeamista tulee osa kauneutta."
+      de: "Kintsugi repariert zerbrochene Keramik mit Goldlack und macht die Risse zum Teil der Schönheit."
+      ja: "金継ぎは割れた器を金の漆で直し、ひびを美しさの一部にする。"
+  - country: uk
+    kind: fact
+    text:
+      en: "Since 1884, the Prime Meridian at Greenwich has marked zero degrees longitude."
+      zh: "自1884年起，格林尼治本初子午线标记着经度零度。"
+      fi: "Greenwichin nollameridiaani on merkinnyt pituusastetta nolla vuodesta 1884."
+      de: "Seit 1884 markiert der Nullmeridian in Greenwich den Längengrad null."
+      ja: "1884年以来、グリニッジの本初子午線が経度0度を示している。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "There is no two without a three."
+      zh: "有了第二次，就会有第三次。"
+      fi: "Ei kahta ilman kolmatta."
+      de: "Aller guten Dinge sind drei."
+      ja: "二度あることは三度ある。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "A sword's edge comes from grinding; plum blossoms' scent comes from bitter cold."
+      zh: "宝剑锋从磨砺出，梅花香自苦寒来。"
+      fi: "Miekan terä syntyy hionnasta, luumunkukan tuoksu kovasta pakkasesta."
+      de: "Die Schärfe des Schwerts kommt vom Schleifen, der Duft der Pflaumenblüte von bitterer Kälte."
+      ja: "宝剣の鋭さは研ぎから、梅の香りは厳しい寒さから生まれる。"
+  - country: de
+    kind: fact
+    text:
+      en: "\"Kummerspeck\" — literally \"grief bacon\" — is weight gained from comfort eating."
+      zh: "“Kummerspeck”字面是“忧愁培根”，指因情绪性进食而长的肉。"
+      fi: "”Kummerspeck” eli ”surupekoni” tarkoittaa lohtusyömisestä kertyneitä kiloja."
+      de: "„Kummerspeck“ nennt man die Pfunde vom Frustessen."
+      ja: "「悲しみのベーコン」Kummerspeckは、やけ食いで増えた体重のこと。"
+  - country: jp
+    kind: fact
+    text:
+      en: "\"Tsundoku\" is the Japanese word for buying books and letting them pile up unread."
+      zh: "日语“積ん読”指买了书却堆着不读。"
+      fi: "Tsundoku on japanin sana kirjojen ostamiselle ja lukemattomina kasaamiselle."
+      de: "„Tsundoku“ heißt auf Japanisch, Bücher zu kaufen und ungelesen zu stapeln."
+      ja: "「積ん読」とは、本を買って読まずに積んでおくこと。"
+  - country: uk
+    kind: fact
+    text:
+      en: "Afternoon tea is credited to Anna, Duchess of Bedford, who grew peckish around 4 p.m. in the 1840s."
+      zh: "下午茶据说源于19世纪40年代的贝德福德公爵夫人安娜，她每到下午四点就饿了。"
+      fi: "Iltapäiväteen keksijänä pidetään Bedfordin herttuatar Annaa, jolle tuli 1840-luvulla nälkä neljän aikaan."
+      de: "Der Afternoon Tea geht auf Anna, Herzogin von Bedford, zurück, die in den 1840ern gegen 16 Uhr Hunger bekam."
+      ja: "アフタヌーンティーは、1840年代に午後4時頃お腹がすいたベッドフォード公爵夫人アンナが始めたとされる。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "A foolish head makes the whole body suffer."
+      zh: "脑袋糊涂，全身受苦。"
+      fi: "Tyhmästä päästä kärsii koko ruumis."
+      de: "Unter einem dummen Kopf leidet der ganze Körper."
+      ja: "愚かな頭のせいで体中が苦労する。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Near vermilion you turn red; near ink you turn black."
+      zh: "近朱者赤，近墨者黑。"
+      fi: "Punaisen lähellä muuttuu punaiseksi, musteen lähellä mustaksi."
+      de: "Wer neben Zinnober steht, wird rot; wer neben Tinte steht, wird schwarz."
+      ja: "朱に交われば赤くなる。"
+  - country: de
+    kind: fact
+    text:
+      en: "\"Fernweh\" is the opposite of homesickness: an ache for faraway places."
+      zh: "“Fernweh”与思乡相反，指对远方的渴望。"
+      fi: "”Fernweh” on koti-ikävän vastakohta: kaipuu kauas."
+      de: "„Fernweh“ ist das Gegenteil von Heimweh: die Sehnsucht nach der Ferne."
+      ja: "Fernwehは郷愁の反対で、遠い場所への憧れのこと。"
+  - country: jp
+    kind: fact
+    text:
+      en: "\"Komorebi\" is sunlight filtering through the leaves of trees."
+      zh: "日语“木漏れ日”指透过树叶洒下的阳光。"
+      fi: "Komorebi tarkoittaa puiden lehtien läpi siivilöityvää auringonvaloa."
+      de: "„Komorebi“ ist Sonnenlicht, das durch das Laub der Bäume fällt."
+      ja: "「木漏れ日」とは、木々の葉の間から差し込む日の光。"
+  - country: uk
+    kind: fact
+    text:
+      en: "The sandwich is named after the 4th Earl of Sandwich, who liked to eat without leaving the table."
+      zh: "三明治以第四代三明治伯爵命名，据说他喜欢吃饭时不离开桌子。"
+      fi: "Voileipä eli sandwich on nimetty Sandwichin neljännen jaarlin mukaan, joka söi pöydästä nousematta."
+      de: "Das Sandwich ist nach dem 4. Earl of Sandwich benannt, der essen wollte, ohne den Tisch zu verlassen."
+      ja: "サンドイッチは、席を立たずに食べたがった第4代サンドイッチ伯爵にちなむ。"
+  - country: fi
+    kind: joke
+    text:
+      en: "The Finnish word \"no\" means roughly \"well\", so \"no niin\" can mean almost anything."
+      zh: "芬兰语的“no”大致是“嗯/好吧”的意思，所以“no niin”几乎可以表示任何意思。"
+      fi: "Suomen ”no” on suunnilleen englannin ”well”, joten ”no niin” voi tarkoittaa melkein mitä tahansa."
+      de: "Das finnische „no“ heißt etwa „na ja“, daher kann „no niin“ fast alles bedeuten."
+      ja: "フィンランド語の「no」は「さて」くらいの意味。だから「no niin」はほぼ何でも意味しうる。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Know the other side and know yourself, and a hundred contests hold no danger. (Sun Tzu)"
+      zh: "知己知彼，百战不殆。"
+      fi: "Tunne vastapuoli ja itsesi, niin sata koitosta ei tuo vaaraa."
+      de: "Kenne den Gegner und dich selbst, und hundert Kämpfe bergen keine Gefahr."
+      ja: "彼を知り己を知れば百戦殆うからず。"
+  - country: de
+    kind: joke
+    text:
+      en: "\"Verschlimmbessern\" means making something worse by trying to improve it. Every lab knows it."
+      zh: "“Verschlimmbessern”意思是越改越糟——每个实验室都深有体会。"
+      fi: "”Verschlimmbessern” tarkoittaa asian pahentamista parantamalla. Jokainen laboratorio tuntee sen."
+      de: "„Verschlimmbessern“: etwas durch Verbessern schlimmer machen. Jedes Labor kennt das."
+      ja: "Verschlimmbessernは「良くしようとして悪くする」こと。どの研究室にも覚えがある。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Emoji were created in Japan in 1999 by Shigetaka Kurita: \"e\" means picture, \"moji\" character."
+      zh: "表情符号（emoji）由栗田穣崇于1999年在日本创造，“e”意为图，“moji”意为字。"
+      fi: "Emojit loi Shigetaka Kurita Japanissa 1999; ”e” tarkoittaa kuvaa ja ”moji” merkkiä."
+      de: "Emoji erfand Shigetaka Kurita 1999 in Japan; „e“ heißt Bild, „moji“ Schriftzeichen."
+      ja: "絵文字は1999年に栗田穣崇が日本で作った。「絵」と「文字」から成る言葉だ。"
+  - country: uk
+    kind: fact
+    text:
+      en: "The Penny Black of 1840 was the world's first adhesive postage stamp."
+      zh: "1840年发行的“黑便士”是世界上第一枚背胶邮票。"
+      fi: "Vuoden 1840 Penny Black oli maailman ensimmäinen liimattava postimerkki."
+      de: "Die Penny Black von 1840 war die erste aufklebbare Briefmarke der Welt."
+      ja: "1840年のペニー・ブラックは世界初の糊付き郵便切手だ。"
+  - country: fi
+    kind: fact
+    text:
+      en: "The Moomins were created by Finnish author and artist Tove Jansson in 1945."
+      zh: "姆明一族由芬兰作家兼画家托芙·扬松于1945年创作。"
+      fi: "Muumit loi suomalainen kirjailija ja taiteilija Tove Jansson vuonna 1945."
+      de: "Die Mumins wurden 1945 von der finnischen Autorin und Künstlerin Tove Jansson erschaffen."
+      ja: "ムーミンは1945年、フィンランドの作家・画家トーベ・ヤンソンが生み出した。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Don't fear going slowly; fear only standing still."
+      zh: "不怕慢，就怕站。"
+      fi: "Älä pelkää hitautta, pelkää vain paikallaan seisomista."
+      de: "Fürchte nicht, langsam zu gehen, fürchte nur, stehen zu bleiben."
+      ja: "遅いのを恐れず、立ち止まるのを恐れよ。"
+  - country: de
+    kind: fact
+    text:
+      en: "In German, a light bulb is a \"Glühbirne\" — a glowing pear."
+      zh: "德语中灯泡叫“Glühbirne”，意思是“发光的梨”。"
+      fi: "Saksaksi hehkulamppu on ”Glühbirne”, hehkuva päärynä."
+      de: "Die Glühbirne ist wörtlich eine glühende Birne."
+      ja: "ドイツ語で電球は「Glühbirne」、光る洋ナシ。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Momofuku Ando invented instant noodles in 1958, in a shed behind his house near Osaka."
+      zh: "1958年，安藤百福在大阪附近自家后院的小屋里发明了方便面。"
+      fi: "Momofuku Ando keksi pikanuudelit 1958 kotinsa takapihan vajassa Osakan lähellä."
+      de: "Momofuku Ando erfand 1958 in einem Schuppen hinter seinem Haus bei Osaka die Instantnudeln."
+      ja: "1958年、安藤百福は大阪の自宅裏の小屋でインスタントラーメンを発明した。"
+  - country: uk
+    kind: fact
+    text:
+      en: "Shakespeare is credited with the first recorded use of words like \"eyeball\" and \"bedroom\"."
+      zh: "莎士比亚被认为最早使用了“eyeball”（眼球）和“bedroom”（卧室）等词。"
+      fi: "Shakespearen katsotaan käyttäneen ensimmäisenä sanoja kuten ”eyeball” ja ”bedroom”."
+      de: "Shakespeare gilt als Erster, der Wörter wie „eyeball“ und „bedroom“ schriftlich verwendete."
+      ja: "シェイクスピアは「eyeball」「bedroom」などの語を最初に使ったとされる。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Linux began in 1991 as a hobby project by Helsinki student Linus Torvalds."
+      zh: "Linux起源于1991年赫尔辛基大学学生林纳斯·托瓦兹的业余项目。"
+      fi: "Linux sai alkunsa vuonna 1991 helsinkiläisen opiskelijan Linus Torvaldsin harrastusprojektina."
+      de: "Linux begann 1991 als Hobbyprojekt des Helsinkier Studenten Linus Torvalds."
+      ja: "Linuxは1991年、ヘルシンキの学生リーナス・トーバルズの趣味のプロジェクトとして始まった。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "You can't get fat from a single bite."
+      zh: "一口吃不成胖子。"
+      fi: "Yhdellä suupalalla ei liho."
+      de: "Von einem Bissen wird man nicht dick."
+      ja: "一口で太ることはできない。"
+  - country: de
+    kind: fact
+    text:
+      en: "A glove in German is a \"Handschuh\": a hand shoe."
+      zh: "德语的手套叫“Handschuh”，即“手鞋”。"
+      fi: "Hansikas on saksaksi ”Handschuh”, käsikenkä."
+      de: "Der Handschuh ist wörtlich ein Schuh für die Hand."
+      ja: "ドイツ語で手袋は「Handschuh」、手の靴。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Karaoke means \"empty orchestra\" in Japanese."
+      zh: "“卡拉OK”在日语里意思是“空的管弦乐队”。"
+      fi: "Karaoke tarkoittaa japaniksi ”tyhjää orkesteria”."
+      de: "Karaoke bedeutet auf Japanisch „leeres Orchester“."
+      ja: "「カラオケ」は「空のオーケストラ」という意味。"
+  - country: uk
+    kind: fact
+    text:
+      en: "Teaching at Oxford dates back to at least 1096."
+      zh: "牛津大学的教学活动至少可以追溯到1096年。"
+      fi: "Oxfordissa on opetettu ainakin vuodesta 1096."
+      de: "In Oxford wird seit mindestens 1096 gelehrt."
+      ja: "オックスフォードでの教育は少なくとも1096年にさかのぼる。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "The people know."
+      zh: "老百姓心里有数。"
+      fi: "Kyllä kansa tietää."
+      de: "Das Volk weiß Bescheid."
+      ja: "民衆は知っている。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "When the boat reaches the bridge, it straightens by itself."
+      zh: "船到桥头自然直。"
+      fi: "Kun vene tulee sillalle, se oikenee itsestään."
+      de: "Wenn das Boot die Brücke erreicht, richtet es sich von selbst aus."
+      ja: "船は橋のたもとに着けば自然とまっすぐになる。"
+  - country: de
+    kind: fact
+    text:
+      en: "All German nouns are capitalised, so even a humble \"Löffel\" (spoon) gets a capital letter."
+      zh: "德语所有名词首字母都大写，连“勺子”（Löffel）也不例外。"
+      fi: "Saksassa kaikki substantiivit kirjoitetaan isolla, myös vaatimaton ”Löffel” eli lusikka."
+      de: "Im Deutschen werden alle Nomen großgeschrieben – sogar der bescheidene Löffel."
+      ja: "ドイツ語の名詞はすべて大文字で始まる。ささやかな「Löffel（スプーン）」さえも。"
+  - country: jp
+    kind: fact
+    text:
+      en: "A 2023 survey counted more than 14,000 islands in Japan."
+      zh: "2023年的调查统计出日本有一万四千多个岛屿。"
+      fi: "Vuoden 2023 laskennassa Japanista löytyi yli 14 000 saarta."
+      de: "Eine Zählung von 2023 ergab über 14.000 Inseln in Japan."
+      ja: "2023年の調査で、日本の島は1万4千以上と数えられた。"
+  - country: uk
+    kind: fact
+    text:
+      en: "British computer scientist Tim Berners-Lee proposed the World Wide Web at CERN in 1989."
+      zh: "英国计算机科学家蒂姆·伯纳斯-李于1989年在欧洲核子研究中心提出了万维网。"
+      fi: "Brittiläinen tietojenkäsittelytieteilijä Tim Berners-Lee ehdotti World Wide Webiä CERNissä 1989."
+      de: "Der britische Informatiker Tim Berners-Lee schlug 1989 am CERN das World Wide Web vor."
+      ja: "英国の計算機科学者ティム・バーナーズ＝リーは1989年、CERNでWWWを提案した。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "Good things are worth waiting for."
+      zh: "好东西值得等待。"
+      fi: "Hyvää kannattaa odottaa."
+      de: "Auf Gutes lohnt es sich zu warten."
+      ja: "よいものは待つ価値がある。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "When you drink water, remember those who dug the well."
+      zh: "吃水不忘挖井人。"
+      fi: "Kun juot vettä, muista kaivon kaivajia."
+      de: "Wer Wasser trinkt, vergesse nicht die, die den Brunnen gruben."
+      ja: "水を飲む時は井戸を掘った人を忘れるな。"
+  - country: de
+    kind: joke
+    text:
+      en: "German punctuality is legendary — which is why everyone is amazed when the train is on time too."
+      zh: "德国人的守时举世闻名——所以火车也准点时，大家反而会吃惊。"
+      fi: "Saksalainen täsmällisyys on legendaarista – siksi kaikki hämmästyvät, kun junakin on ajoissa."
+      de: "Deutsche Pünktlichkeit ist legendär – deshalb staunen alle, wenn auch der Zug pünktlich ist."
+      ja: "ドイツ人の時間厳守は伝説的。だから列車まで定刻だと皆が驚く。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Mount Fuji, at 3,776 metres, is Japan's highest peak."
+      zh: "富士山海拔3776米，是日本最高峰。"
+      fi: "Fuji-vuori on 3 776 metrin korkeudellaan Japanin korkein huippu."
+      de: "Der Fuji ist mit 3.776 Metern Japans höchster Berg."
+      ja: "富士山は標高3776m、日本の最高峰だ。"
+  - country: uk
+    kind: fact
+    text:
+      en: "Ada Lovelace wrote what is often called the first computer program, for Babbage's Analytical Engine."
+      zh: "艾达·洛芙莱斯为巴贝奇的分析机编写了常被称为第一个计算机程序的算法。"
+      fi: "Ada Lovelace kirjoitti Babbagen analyyttiselle koneelle niin sanotun ensimmäisen tietokoneohjelman."
+      de: "Ada Lovelace schrieb für Babbages Analytical Engine das oft so genannte erste Computerprogramm."
+      ja: "エイダ・ラブレスはバベッジの解析機関のために、最初のプログラムと呼ばれるものを書いた。"
+  - country: fi
+    kind: fact
+    text:
+      en: "In avantouinti, Finns dip into a hole cut in lake ice, then warm up in the sauna."
+      zh: "芬兰人冬泳时会跳进湖面凿开的冰洞，再回桑拿房取暖。"
+      fi: "Avantouinnissa pulahdetaan järven jäähän tehtyyn avantoon ja lämmitellään sitten saunassa."
+      de: "Beim Eisschwimmen tauchen Finnen in ein Loch im Seeeis und wärmen sich dann in der Sauna auf."
+      ja: "フィンランド人は湖の氷に開けた穴で泳ぎ、サウナで温まる。これを「アヴァントウインティ」と言う。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Listen to all sides and you see clearly; heed only one and you stay in the dark."
+      zh: "兼听则明，偏信则暗。"
+      fi: "Kuuntele kaikkia, niin näet selvästi; usko yhtä, niin jäät pimeään."
+      de: "Wer alle Seiten hört, sieht klar; wer nur einer glaubt, bleibt im Dunkeln."
+      ja: "広く聞けば明らかになり、偏って信じれば暗くなる。"
+  - country: de
+    kind: joke
+    text:
+      en: "In Germany there is a form for everything — including a form to request the form."
+      zh: "在德国，一切都有表格可填——包括申请表格的表格。"
+      fi: "Saksassa kaikkeen on lomake – myös lomakkeen tilaamiseen."
+      de: "In Deutschland gibt es für alles ein Formular – auch eines, um das Formular zu beantragen."
+      ja: "ドイツには何にでも書類がある。書類を申請するための書類まで。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Japanese uses three scripts together: kanji, hiragana and katakana."
+      zh: "日语同时使用三种文字：汉字、平假名和片假名。"
+      fi: "Japanissa käytetään kolmea kirjoitusjärjestelmää: kanjeja, hiraganaa ja katakanaa."
+      de: "Japanisch nutzt drei Schriften zugleich: Kanji, Hiragana und Katakana."
+      ja: "日本語は漢字・ひらがな・カタカナの三つの文字を併用する。"
+  - country: uk
+    kind: joke
+    text:
+      en: "British understatement: \"not bad\" means excellent, and \"a bit of a problem\" means total disaster."
+      zh: "英式轻描淡写：“还不错”意思是好极了，“有点小问题”意思是彻底完蛋。"
+      fi: "Brittiläinen vähättely: ”ei hassumpi” tarkoittaa erinomaista ja ”pieni ongelma” täyttä katastrofia."
+      de: "Britisches Understatement: „nicht schlecht“ heißt hervorragend, „ein kleines Problem“ heißt Katastrophe."
+      ja: "英国流の控えめ表現：「悪くない」は最高、「ちょっとした問題」は大惨事のこと。"
+  - country: fi
+    kind: proverb
+    text:
+      en: "It's not the one who asks who's foolish, but the one who gives."
+      zh: "傻的不是开口要的人，而是给的人。"
+      fi: "Ei se ole hullu, joka pyytää, vaan se, joka antaa."
+      de: "Nicht wer bittet, ist verrückt, sondern wer gibt."
+      ja: "頼む者が愚かなのではない、与える者が愚かなのだ。"
+  - country: cn
+    kind: fact
+    text:
+      en: "In 1956–57, Chien-Shiung Wu showed by experiment that nature tells left from right: parity violation."
+      zh: "1956至1957年，吴健雄用实验证明自然界能区分左右——宇称不守恒。"
+      fi: "Chien-Shiung Wu osoitti kokeellaan 1956–57, että luonto erottaa vasemman oikeasta: pariteetti ei säily."
+      de: "1956/57 zeigte Chien-Shiung Wu im Experiment, dass die Natur links und rechts unterscheidet: Paritätsverletzung."
+      ja: "1956〜57年、呉健雄は自然が左右を区別すること（パリティ非保存）を実験で示した。"
+  - country: de
+    kind: fact
+    text:
+      en: "Germans sort rubbish into several bins and recycle about two thirds of household waste."
+      zh: "德国人把垃圾分到好几个桶里，约三分之二的生活垃圾得到回收。"
+      fi: "Saksalaiset lajittelevat jätteet moneen astiaan ja kierrättävät noin kaksi kolmasosaa kotitalousjätteestä."
+      de: "Deutsche trennen Müll in mehrere Tonnen und recyceln rund zwei Drittel des Haushaltsabfalls."
+      ja: "ドイツ人はごみを何種類にも分別し、家庭ごみの約3分の2をリサイクルしている。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Pupils in Japan clean their own classrooms every day."
+      zh: "日本学生每天亲自打扫自己的教室。"
+      fi: "Japanissa oppilaat siivoavat luokkansa itse joka päivä."
+      de: "In Japan putzen Schüler ihre Klassenzimmer jeden Tag selbst."
+      ja: "日本の児童・生徒は毎日自分たちで教室を掃除する。"
+  - country: uk
+    kind: joke
+    text:
+      en: "Britons talk about the weather so much because there is always so much of it."
+      zh: "英国人老是谈论天气，因为天气总是那么“丰富”。"
+      fi: "Britit puhuvat säästä paljon, koska sitä on aina niin paljon."
+      de: "Briten reden so viel übers Wetter, weil es immer so viel davon gibt."
+      ja: "イギリス人が天気の話ばかりするのは、天気がいつもたっぷりあるから。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Finnish has 15 grammatical cases, so one word can have dozens of forms."
+      zh: "芬兰语有15个格，一个词可以有几十种形式。"
+      fi: "Suomen kielessä on 15 sijamuotoa, joten yhdellä sanalla voi olla kymmeniä muotoja."
+      de: "Finnisch hat 15 grammatische Fälle – ein Wort kann Dutzende Formen haben."
+      ja: "フィンランド語には15の格があり、一つの単語に何十もの形がある。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "Shown one corner, infer the other three."
+      zh: "举一反三。"
+      fi: "Kun näet yhden kulman, päättele kolme muuta."
+      de: "Aus einer Ecke die anderen drei erschließen."
+      ja: "一を挙げて三を反す。"
+  - country: de
+    kind: fact
+    text:
+      en: "\"Kaffee und Kuchen\" — coffee and cake in the afternoon — is a cherished German ritual."
+      zh: "“咖啡配蛋糕”的下午时光是德国人钟爱的传统。"
+      fi: "”Kaffee und Kuchen” – iltapäiväkahvi ja kakku – on rakas saksalainen perinne."
+      de: "Kaffee und Kuchen am Nachmittag ist eine geliebte deutsche Tradition."
+      ja: "午後の「コーヒーとケーキ」はドイツ人が大切にする習慣。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Shinkansen cleaning crews turn a whole train around in about seven minutes."
+      zh: "新干线清洁团队大约七分钟就能清扫完整列列车。"
+      fi: "Shinkansenin siivoojat siistivät koko junan noin seitsemässä minuutissa."
+      de: "Shinkansen-Reinigungsteams machen einen ganzen Zug in etwa sieben Minuten fertig."
+      ja: "新幹線の清掃チームは、約7分で一編成を丸ごと清掃する。"
+  - country: uk
+    kind: joke
+    text:
+      en: "Bump into a Briton and they will apologise to you."
+      zh: "你撞到英国人，对方反而会向你说“对不起”。"
+      fi: "Jos törmäät brittiin, hän pyytää sinulta anteeksi."
+      de: "Rempelt man einen Briten an, entschuldigt er sich bei einem."
+      ja: "イギリス人にぶつかると、相手の方が「ごめんなさい」と言う。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Finnish has no grammatical gender: \"hän\" means both \"he\" and \"she\"."
+      zh: "芬兰语没有语法性别，“hän”既指“他”也指“她”。"
+      fi: "Suomen kielessä ei ole kieliopillista sukua: ”hän” viittaa keneen tahansa."
+      de: "Finnisch kennt kein grammatisches Geschlecht: „hän“ heißt sowohl „er“ als auch „sie“."
+      ja: "フィンランド語には文法上の性がなく、「hän」は「彼」も「彼女」も意味する。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "An error of a hair's breadth leads you a thousand miles astray."
+      zh: "差之毫厘，谬以千里。"
+      fi: "Hiuksen hienon virheen takia voi erehtyä tuhat mailia."
+      de: "Ein Fehler um Haaresbreite führt tausend Meilen in die Irre."
+      ja: "毫釐の差が千里の誤りとなる。"
+  - country: de
+    kind: fact
+    text:
+      en: "German bread culture, with over 3,000 registered varieties, is listed as intangible cultural heritage."
+      zh: "德国面包文化拥有三千多个注册品种，已被列为非物质文化遗产。"
+      fi: "Saksalainen leipäkulttuuri, yli 3 000 rekisteröityä lajiketta, on aineetonta kulttuuriperintöä."
+      de: "Die deutsche Brotkultur mit über 3.000 registrierten Sorten ist immaterielles Kulturerbe."
+      ja: "3000種以上が登録されたドイツのパン文化は、無形文化遺産になっている。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Before eating, people in Japan say \"itadakimasu\", giving thanks for the meal."
+      zh: "日本人饭前会说“我开动了”，以表达对食物的感谢。"
+      fi: "Ennen ateriaa japanilaiset sanovat ”itadakimasu” ja kiittävät ruoasta."
+      de: "Vor dem Essen sagt man in Japan „itadakimasu“ und dankt für das Mahl."
+      ja: "日本では食事の前に「いただきます」と言い、食事に感謝する。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "The grass is always greener on the other side of the fence."
+      zh: "篱笆那边的草总是更绿。"
+      fi: "Ruoho on aina vihreämpää aidan toisella puolella."
+      de: "Das Gras auf der anderen Seite des Zauns ist immer grüner."
+      ja: "隣の芝生は青い。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Finland has two official languages: Finnish and Swedish."
+      zh: "芬兰有两种官方语言：芬兰语和瑞典语。"
+      fi: "Suomella on kaksi virallista kieltä: suomi ja ruotsi."
+      de: "Finnland hat zwei Amtssprachen: Finnisch und Schwedisch."
+      ja: "フィンランドの公用語はフィンランド語とスウェーデン語の二つ。"
+  - country: cn
+    kind: proverb
+    text:
+      en: "A thousand-mile dike can collapse because of an ant hole."
+      zh: "千里之堤，溃于蚁穴。"
+      fi: "Tuhannen mailin pato voi sortua muurahaisen kolon takia."
+      de: "Ein tausend Meilen langer Deich kann an einem Ameisenloch brechen."
+      ja: "千里の堤も蟻の一穴から崩れる。"
+  - country: de
+    kind: fact
+    text:
+      en: "The Brothers Grimm collected more than 200 fairy tales, including Snow White and Hansel and Gretel."
+      zh: "格林兄弟收集了两百多篇童话，包括《白雪公主》和《汉赛尔与格莱特》。"
+      fi: "Grimmin veljekset keräsivät yli 200 satua, kuten Lumikin sekä Hannun ja Kertun."
+      de: "Die Brüder Grimm sammelten über 200 Märchen, darunter Schneewittchen und Hänsel und Gretel."
+      ja: "グリム兄弟は『白雪姫』『ヘンゼルとグレーテル』など200以上の童話を集めた。"
+  - country: jp
+    kind: joke
+    text:
+      en: "\"Mottainai\" expresses regret over waste — the perfect motto for liquid helium."
+      zh: "“もったいない”表达对浪费的惋惜——用来对待液氦再合适不过。"
+      fi: "”Mottainai” ilmaisee harmia tuhlauksesta – täydellinen motto nestemäiselle heliumille."
+      de: "„Mottainai“ drückt Bedauern über Verschwendung aus – das perfekte Motto für flüssiges Helium."
+      ja: "「もったいない」は無駄を惜しむ言葉。液体ヘリウムにぴったりの標語だ。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Out of sight, out of mind."
+      zh: "眼不见，心不念。"
+      fi: "Poissa silmistä, poissa mielestä."
+      de: "Aus den Augen, aus dem Sinn."
+      ja: "去る者は日々に疎し。"
+  - country: fi
+    kind: fact
+    text:
+      en: "At Midsummer (juhannus) the sun barely sets, and Finns head to lakeside cottages."
+      zh: "仲夏节时太阳几乎不落，芬兰人纷纷前往湖边小屋。"
+      fi: "Juhannuksena aurinko tuskin laskee, ja suomalaiset lähtevät mökeille."
+      de: "Zu Mittsommer (Juhannus) geht die Sonne kaum unter, und die Finnen fahren in ihre Hütten am See."
+      ja: "夏至祭（ユハンヌス）には太陽はほとんど沈まず、フィンランド人は湖畔のコテージへ向かう。"
+  - country: cn
+    kind: fact
+    text:
+      en: "Lanzhou's HIRFL-CSR storage rings are used to weigh short-lived exotic nuclei."
+      zh: "兰州重离子加速器冷却储存环（HIRFL-CSR）被用来测量短寿命奇特核的质量。"
+      fi: "Lanzhoun HIRFL-CSR-varastorenkaissa punnitaan lyhytikäisiä eksoottisia ytimiä."
+      de: "Mit den Speicherringen HIRFL-CSR in Lanzhou werden kurzlebige exotische Kerne gewogen."
+      ja: "蘭州のHIRFL-CSR蓄積リングでは、短寿命のエキゾチック核の質量が測られている。"
+  - country: de
+    kind: fact
+    text:
+      en: "Around 1450 in Mainz, Johannes Gutenberg developed printing with movable metal type."
+      zh: "约1450年，古登堡在美因茨发展了金属活字印刷术。"
+      fi: "Johannes Gutenberg kehitti Mainzissa noin 1450 painotekniikan irtokirjakkeilla."
+      de: "Um 1450 entwickelte Johannes Gutenberg in Mainz den Buchdruck mit beweglichen Metalllettern."
+      ja: "1450年頃、グーテンベルクはマインツで金属活字による印刷術を開発した。"
+  - country: jp
+    kind: joke
+    text:
+      en: "In Japan, a train once left 20 seconds early — and the railway formally apologised."
+      zh: "在日本，曾有列车提前20秒发车，铁路公司为此正式道歉。"
+      fi: "Japanissa juna lähti kerran 20 sekuntia etuajassa – ja rautatieyhtiö pyysi virallisesti anteeksi."
+      de: "In Japan fuhr einmal ein Zug 20 Sekunden zu früh ab – und die Bahn entschuldigte sich offiziell."
+      ja: "日本である列車が20秒早く発車し、鉄道会社が正式に謝罪した。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Hope for the best, prepare for the worst."
+      zh: "抱最好的希望，做最坏的准备。"
+      fi: "Toivo parasta, varaudu pahimpaan."
+      de: "Hoffe das Beste, rechne mit dem Schlimmsten."
+      ja: "最善を望み、最悪に備えよ。"
+  - country: fi
+    kind: joke
+    text:
+      en: "Savonlinna has held mobile-phone throwing championships. Nokia not required."
+      zh: "萨翁林纳举办过“扔手机锦标赛”，不一定非得用诺基亚。"
+      fi: "Savonlinnassa on kisattu kännykänheiton MM-kisoja. Nokiaa ei vaadita."
+      de: "In Savonlinna gab es Weltmeisterschaften im Handy-Weitwurf. Nokia nicht vorgeschrieben."
+      ja: "サヴォンリンナでは携帯電話投げの選手権が開かれてきた。ノキアでなくてもいい。"
+  - country: cn
+    kind: fact
+    text:
+      en: "China Jinping Underground Laboratory lies under about 2,400 m of rock, among the deepest on Earth."
+      zh: "中国锦屏地下实验室位于约2400米岩层之下，是世界最深的实验室之一。"
+      fi: "Kiinan Jinpingin maanalainen laboratorio on noin 2 400 metrin kallion alla, maailman syvimpiä."
+      de: "Das chinesische Jinping-Untergrundlabor liegt unter etwa 2.400 m Fels – eines der tiefsten der Welt."
+      ja: "中国錦屏地下実験室は約2400mの岩盤の下にあり、世界有数の深さだ。"
+  - country: de
+    kind: fact
+    text:
+      en: "\"Feierabend\" is the cosy moment the working day ends — with a celebration built into the word."
+      zh: "“Feierabend”指一天工作结束的惬意时刻，字面里就带着“庆祝”。"
+      fi: "”Feierabend” on hetki, jolloin työpäivä päättyy – sanassa on juhla sisäänrakennettuna."
+      de: "Feierabend: der schöne Moment, wenn die Arbeit endet – das Feiern steckt schon im Wort."
+      ja: "「Feierabend」は仕事が終わるくつろぎの時。言葉の中に「祝う」が入っている。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Each spring, Japanese forecasters track the \"cherry blossom front\" as it moves north."
+      zh: "每年春天，日本气象部门追踪自南向北推进的“樱花前线”。"
+      fi: "Japanin sääennustajat seuraavat keväisin pohjoiseen etenevää ”kirsikankukkarintamaa”."
+      de: "Jeden Frühling verfolgen japanische Meteorologen die nach Norden ziehende „Kirschblütenfront“."
+      ja: "毎年春、日本の気象情報は北上する「桜前線」を追いかける。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Red sky at night, shepherd's delight; red sky in the morning, shepherd's warning."
+      zh: "晚霞红，牧人喜；朝霞红，牧人忧。"
+      fi: "Iltarusko lupaa poutaa, aamurusko sadetta."
+      de: "Abendrot – Schönwetterbot'; Morgenrot – schlecht Wetter droht."
+      ja: "夕焼けは晴れ、朝焼けは雨のしるし。"
+  - country: fi
+    kind: fact
+    text:
+      en: "The Kalevala, Finland's national epic, was compiled by Elias Lönnrot from folk poems."
+      zh: "芬兰民族史诗《卡勒瓦拉》由埃利亚斯·伦罗特根据民间诗歌编纂而成。"
+      fi: "Kansalliseepoksen Kalevalan kokosi Elias Lönnrot kansanrunoista."
+      de: "Das Kalevala, Finnlands Nationalepos, wurde von Elias Lönnrot aus Volksliedern zusammengestellt."
+      ja: "フィンランドの国民叙事詩『カレワラ』は、エリアス・リョンロートが民間詩から編纂した。"
+  - country: cn
+    kind: fact
+    text:
+      en: "FAST, the 500-metre radio telescope in Guizhou, is the largest single-dish telescope on Earth."
+      zh: "贵州的500米口径球面射电望远镜（FAST）是世界最大的单口径射电望远镜。"
+      fi: "Guizhoun 500-metrinen FAST on maailman suurin yksiantenninen radioteleskooppi."
+      de: "FAST, das 500-Meter-Radioteleskop in Guizhou, ist das größte Einzelschüssel-Teleskop der Erde."
+      ja: "貴州の500m電波望遠鏡FASTは、世界最大の単一口径望遠鏡だ。"
+  - country: de
+    kind: fact
+    text:
+      en: "Kindergarten is a German word, coined by Friedrich Fröbel in 1840."
+      zh: "“Kindergarten”（幼儿园）是德语词，由福禄贝尔于1840年创造。"
+      fi: "Kindergarten on saksalainen sana, jonka Friedrich Fröbel keksi vuonna 1840."
+      de: "Das Wort Kindergarten prägte Friedrich Fröbel im Jahr 1840."
+      ja: "「キンダーガルテン（幼稚園）」は1840年にフレーベルが作ったドイツ語。"
+  - country: jp
+    kind: fact
+    text:
+      en: "Bashō's most famous haiku: an old pond — a frog jumps in — the sound of water."
+      zh: "芭蕉最著名的俳句：古池塘，青蛙跳入，水声响。"
+      fi: "Bashōn kuuluisin haiku: vanha lampi – sammakko hyppää – veden ääni."
+      de: "Bashōs berühmtestes Haiku: Der alte Teich – ein Frosch springt hinein – das Geräusch des Wassers."
+      ja: "芭蕉の最も有名な句：古池や蛙飛び込む水の音。"
+  - country: uk
+    kind: proverb
+    text:
+      en: "Many a mickle makes a muckle. (Scottish)"
+      zh: "积少成多。"
+      fi: "Monesta pienestä tulee paljon."
+      de: "Viele Kleinigkeiten ergeben viel."
+      ja: "小さなものも集まれば大きくなる。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Karelian pies — rye crusts filled with rice porridge — are best with egg butter."
+      zh: "卡累利阿馅饼是黑麦皮裹米粥，配鸡蛋黄油最好吃。"
+      fi: "Karjalanpiirakat ovat parhaimmillaan munavoin kanssa."
+      de: "Karelische Piroggen – Roggenteig mit Milchreis – schmecken am besten mit Eierbutter."
+      ja: "カレリアパイ（ライ麦生地に米粥）は、卵バターを添えるのが一番。"
+  - country: cn
+    kind: fact
+    text:
+      en: "\"Jiāyóu\" (加油), the Chinese cheer of encouragement, literally means \"add oil\"."
+      zh: "中文里打气用的“加油”，字面意思是“添加燃油”。"
+      fi: "Kiinan kannustushuuto ”jiāyóu” tarkoittaa kirjaimellisesti ”lisää öljyä”."
+      de: "„Jiāyóu“ (加油), der chinesische Anfeuerungsruf, heißt wörtlich „Öl nachgießen“."
+      ja: "中国語の応援の言葉「加油（ジャーヨウ）」は、文字通りには「油を足せ」。"
+  - country: de
+    kind: fact
+    text:
+      en: "In 1817, Karl Drais rode his \"running machine\" in Mannheim: the ancestor of the bicycle."
+      zh: "1817年，德莱斯在曼海姆骑着他的“跑步机”，这是自行车的前身。"
+      fi: "Karl Drais ajoi 1817 Mannheimissa ”juoksukoneellaan”, polkupyörän esi-isällä."
+      de: "1817 fuhr Karl Drais in Mannheim mit seiner Laufmaschine – dem Urahn des Fahrrads."
+      ja: "1817年、ドライスはマンハイムで「走る機械」に乗った。自転車の祖先である。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Fuji first, hawk second, eggplant third: the luckiest things to dream of at New Year."
+      zh: "一富士，二鹰，三茄子：新年初梦里最吉利的东西。"
+      fi: "Ensin Fuji, sitten haukka, sitten munakoiso: onnekkaimmat uudenvuoden unet."
+      de: "Erst Fuji, dann Falke, dann Aubergine: die glücksbringendsten Neujahrsträume."
+      ja: "一富士二鷹三茄子。"
+  - country: uk
+    kind: fact
+    text:
+      en: "Henry Cavendish \"weighed the Earth\" in 1798 with a delicate torsion balance."
+      zh: "1798年，卡文迪许用精巧的扭秤“称量了地球”。"
+      fi: "Henry Cavendish ”punnitsi maapallon” vuonna 1798 herkällä vääntövaa'alla."
+      de: "Henry Cavendish „wog die Erde“ 1798 mit einer empfindlichen Drehwaage."
+      ja: "1798年、キャヴェンディッシュは精密なねじれ秤で「地球の重さを量った」。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Finland has topped the World Happiness Report as the happiest country many years in a row."
+      zh: "芬兰在《世界幸福报告》中连续多年排名第一。"
+      fi: "Suomi on ollut World Happiness Report -raportin mukaan maailman onnellisin maa monena vuonna peräkkäin."
+      de: "Finnland wurde im World Happiness Report viele Jahre in Folge zum glücklichsten Land gekürt."
+      ja: "フィンランドは「世界幸福度報告」で何年も連続して1位に選ばれている。"
+  - country: cn
+    kind: fact
+    text:
+      en: "Mandarin has four tones: mā (mother), má (hemp), mǎ (horse), mà (scold)."
+      zh: "普通话有四个声调：妈、麻、马、骂。"
+      fi: "Mandariinikiinassa on neljä sävyä: mā (äiti), má (hamppu), mǎ (hevonen), mà (torua)."
+      de: "Mandarin hat vier Töne: mā (Mutter), má (Hanf), mǎ (Pferd), mà (schimpfen)."
+      ja: "中国語には四声がある：mā（媽）、má（麻）、mǎ（馬）、mà（罵）。"
+  - country: de
+    kind: fact
+    text:
+      en: "Heinrich Hertz demonstrated radio waves in 1887; the unit of frequency is named after him."
+      zh: "1887年，赫兹用实验证明了电磁波的存在，频率单位以他命名。"
+      fi: "Heinrich Hertz osoitti radioaallot 1887; taajuuden yksikkö on nimetty hänen mukaansa."
+      de: "Heinrich Hertz wies 1887 Radiowellen nach; die Einheit der Frequenz trägt seinen Namen."
+      ja: "ヘルツは1887年に電波の存在を実証し、周波数の単位に名を残した。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "The soul of a three-year-old lasts until a hundred."
+      zh: "三岁看老。"
+      fi: "Kolmivuotiaan sielu säilyy sataan vuoteen."
+      de: "Die Seele eines Dreijährigen bleibt bis hundert."
+      ja: "三つ子の魂百まで。"
+  - country: uk
+    kind: fact
+    text:
+      en: "Peter Higgs of Edinburgh predicted the Higgs boson in 1964; it was found at CERN in 2012."
+      zh: "爱丁堡的希格斯于1964年预言希格斯玻色子，2012年在欧洲核子研究中心被发现。"
+      fi: "Edinburghin Peter Higgs ennusti Higgsin bosonin 1964; se löydettiin CERNissä 2012."
+      de: "Peter Higgs aus Edinburgh sagte 1964 das Higgs-Boson voraus; 2012 wurde es am CERN gefunden."
+      ja: "エディンバラのヒッグスは1964年にヒッグス粒子を予言し、2012年にCERNで発見された。"
+  - country: fi
+    kind: fact
+    text:
+      en: "Many Finns celebrate their name day as well as their birthday."
+      zh: "许多芬兰人除了过生日，还过“命名日”。"
+      fi: "Moni suomalainen viettää syntymäpäivän lisäksi nimipäiväänsä."
+      de: "Viele Finnen feiern neben dem Geburtstag auch ihren Namenstag."
+      ja: "多くのフィンランド人は誕生日だけでなく「名前の日」も祝う。"
+  - country: cn
+    kind: fact
+    text:
+      en: "The Spring Festival travel rush brings billions of trips: the largest annual migration on Earth."
+      zh: "春运期间出行达数十亿人次，是地球上规模最大的年度迁徙。"
+      fi: "Kiinalaisen uudenvuoden matkasesonkina tehdään miljardeja matkoja – maailman suurin vuotuinen muutto."
+      de: "Zum Frühlingsfest werden Milliarden Reisen unternommen – die größte jährliche Wanderung der Welt."
+      ja: "春節の帰省ラッシュでは延べ数十億回の移動があり、世界最大の年中行事の移動となる。"
+  - country: de
+    kind: fact
+    text:
+      en: "PTB's atomic clocks in Braunschweig set Germany's legal time, broadcast by the DCF77 radio signal."
+      zh: "位于不伦瑞克的PTB原子钟确定德国法定时间，并通过DCF77电波播发。"
+      fi: "Braunschweigin PTB:n atomikellot määräävät Saksan virallisen ajan, jota DCF77-signaali lähettää."
+      de: "Die Atomuhren der PTB in Braunschweig bestimmen die gesetzliche Zeit, verbreitet über DCF77."
+      ja: "ブラウンシュヴァイクのPTBの原子時計がドイツの法定時刻を決め、DCF77電波で送信している。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "Evidence beats argument."
+      zh: "事实胜于雄辩。"
+      fi: "Todiste voittaa väittelyn."
+      de: "Beweise zählen mehr als Argumente."
+      ja: "論より証拠。"
+  - country: uk
+    kind: fact
+    text:
+      en: "Each spring, people chase a wheel of Double Gloucester cheese down Cooper's Hill."
+      zh: "每年春天，人们追着一轮双格洛斯特奶酪冲下库珀山。"
+      fi: "Joka kevät ihmiset jahtaavat Double Gloucester -juustokiekkoa Cooper's Hillin rinnettä alas."
+      de: "Jedes Frühjahr jagen Menschen einen Laib Double-Gloucester-Käse den Cooper's Hill hinunter."
+      ja: "毎年春、人々はクーパーズ・ヒルの坂でダブル・グロスター・チーズの丸い塊を追いかける。"
+  - country: fi
+    kind: joke
+    text:
+      en: "In Finland, personal space is measured in metres — in the countryside, in kilometres of forest."
+      zh: "在芬兰，个人空间以米计算；在乡下，则以几公里的森林计算。"
+      fi: "Suomessa henkilökohtainen tila mitataan metreissä – maalla kilometreissä metsää."
+      de: "In Finnland misst man persönlichen Freiraum in Metern – auf dem Land in Kilometern Wald."
+      ja: "フィンランドではパーソナルスペースはメートル単位。田舎では森の何キロ単位。"
+  - country: cn
+    kind: fact
+    text:
+      en: "At the Mid-Autumn Festival, families share mooncakes under the full moon."
+      zh: "中秋节时，家人在圆月下分享月饼。"
+      fi: "Kuunjuhlana perheet jakavat kuukakkuja täysikuun alla."
+      de: "Zum Mondfest teilen Familien Mondkuchen unter dem Vollmond."
+      ja: "中秋節には、家族が満月の下で月餅を分け合う。"
+  - country: de
+    kind: fact
+    text:
+      en: "\"Ich drück dir die Daumen\" — \"I'll press my thumbs for you\" — is how Germans wish good luck."
+      zh: "德国人说“我为你按住大拇指”，意思是祝你好运。"
+      fi: "Saksalaiset toivottavat onnea ”painamalla peukaloita” – suomeksi pidetään peukkuja."
+      de: "„Ich drück dir die Daumen“ – so wünscht man in Deutschland Glück."
+      ja: "ドイツでは「親指を握っててあげる」が「幸運を祈る」の意味。"
+  - country: jp
+    kind: proverb
+    text:
+      en: "To ask is a moment's shame; not to ask is a lifetime's shame."
+      zh: "问是一时之耻，不问是一生之耻。"
+      fi: "Kysyminen on hetken häpeä, kysymättä jättäminen elinikäinen."
+      de: "Fragen ist eine kurze Schande, nicht fragen eine lebenslange."
+      ja: "聞くは一時の恥、聞かぬは一生の恥。"
+  - country: uk
+    kind: fact
+    text:
+      en: "At Wimbledon, around two million strawberries are served with cream each year."
+      zh: "温布尔登网球赛每年供应约两百万颗配奶油的草莓。"
+      fi: "Wimbledonissa tarjoillaan vuosittain noin kaksi miljoonaa mansikkaa kerman kanssa."
+      de: "In Wimbledon werden jedes Jahr rund zwei Millionen Erdbeeren mit Sahne serviert."
+      ja: "ウィンブルドンでは毎年約200万粒のイチゴがクリーム添えで出される。"
+  - country: fi
+    kind: fact
+    text:
+      en: "In Lapland, the northern lights can be seen on up to about 200 nights a year."
+      zh: "在拉普兰，一年中多达约200个夜晚可以看到北极光。"
+      fi: "Lapissa revontulia voi nähdä jopa noin 200 yönä vuodessa."
+      de: "In Lappland sind Polarlichter in bis zu etwa 200 Nächten im Jahr zu sehen."
+      ja: "ラップランドでは、年に最大約200夜オーロラが見られる。"

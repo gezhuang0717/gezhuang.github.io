@@ -8,12 +8,12 @@ showDate: false
 
 ## 成员
 
-- **Miikka Winter**——在我指导下的博士研究生。利用 JYFLTRAP 进行彭宁阱质量与 Q 值测量；以第一作者发表 ¹²⁹Sb 论文（[Eur. Phys. J. A 62, 123 (2026)](https://doi.org/10.1140/epja/s10050-026-01883-8)）。*参与项目：* 低 Q 值衰变、MASSPASS。
+- **Miikka Winter**——在我指导下的博士研究生。利用 JYFLTRAP 进行彭宁阱质量与 Q 值测量；以第一作者发表 ¹²⁹Sb 论文（[Eur. Phys. J. A 62, 123 (2026)](https://doi.org/10.1140/epja/s10050-026-01883-8)）。*参与项目：* 参与低 Q 值衰变与 MASSPASS 项目；主要项目为核天体物理研究。
 
 ## 已离组成员
 
-- **Brian Kootte 博士**——曾是本组博士后研究员，由我的项目经费资助。*参与项目：* MASSPASS——*N* = *Z* 核的质量测量。（[主页](https://www.jyu.fi/en/people/brian-koote)）
-- **Marlom de Oliveira Ramalho 博士**——曾是本组博士后研究员，由我的项目经费资助；从事稀有和低 Q 值 β 衰变的核结构理论研究。*参与项目：* 用于中微子质量的低 Q 值衰变。（[主页](https://www.jyu.fi/en/people/marlom-de-oliveira-ramalho)）
+- **Brian Kootte 博士**——曾是本组博士后研究员，由我的项目经费资助。*参与项目：* MASSPASS——*N* = *Z* 核的质量测量。
+- **Marlom de Oliveira Ramalho 博士**——曾是本组博士后研究员，由我的项目经费资助；从事稀有和低 Q 值 β 衰变的核结构理论研究。*参与项目：* 用于中微子质量的低 Q 值衰变。
 
 ## 教学
 
@@ -27,15 +27,28 @@ showDate: false
 
 与我合作或研究方向最接近的研究组和实验室：
 
-- [IGISOL / JYFLTRAP — University of Jyväskylä](https://www.jyu.fi/en/science/accelerator-laboratory/facilities-and-instruments-at-the-accelerator-laboratory/nuclear-physics-facilities)
-- [ISOLTRAP — CERN ISOLDE](https://isoltrap.web.cern.ch/)
-- [ISOLDE — CERN](https://isolde.web.cern.ch/)
+- [IGISOL / JYFLTRAP — University of Jyväskylä](https://www.jyu.fi/en/science/accelerator-laboratory/facilities-and-instruments/nuclear-physics-facilities)
+- [ISOLTRAP — CERN ISOLDE](https://www.mpi-hd.mpg.de/mpi/en/research/scientific-divisions-and-groups/stored-and-cooled-ions/research/isoltrap-cern)
+- [ISOLDE — CERN](https://isolde.cern/)
 - [TITAN — TRIUMF](https://titan.triumf.ca/)
 - [LEBIT — FRIB](https://frib.msu.edu/user-facilities/frib/instruments/lebit)
 - [FRS Ion Catcher — GSI/FAIR](https://www-windows.gsi.de/frs-ion-catcher/)
 - [FAIR — Facility for Antiproton and Ion Research](https://fair-center.eu/)
-- [Stored and Cooled Ions (PENTATRAP) — MPIK Heidelberg](https://www.mpi-hd.mpg.de/blaum/)
+- [Stored and Cooled Ions (PENTATRAP) — MPIK Heidelberg](https://www.mpi-hd.mpg.de/mpi/en/research/scientific-divisions-and-groups/stored-and-cooled-ions)
 - [RI Beam Factory — RIKEN Nishina Center](https://www.nishina.riken.jp/ribf/)
 - [Rare-RI Ring — RIKEN](https://www.nishina.riken.jp/ribf/R3/overview.html)
 - [HIAF — Institute of Modern Physics, CAS](https://english.imp.cas.cn/research/facilities/HIAF/)
 - [KATRIN — Karlsruhe Tritium Neutrino Experiment](https://www.katrin.kit.edu/)
+
+## 核天体物理研究组与装置
+
+研究元素起源的合作网络与实验室，与我们面向 rp、νp 和 r 过程的质量测量密切相关：
+
+- [JINA-CEE — Joint Institute for Nuclear Astrophysics](https://www.jinaweb.org/)
+- [IReNA — International Research Network for Nuclear Astrophysics](https://irenaweb.org/)
+- [ChETEC-INFRA — European nuclear-astrophysics infrastructures](https://chetec-infra.eu/)
+- [LUNA — Laboratory for Underground Nuclear Astrophysics, Gran Sasso](https://luna.lngs.infn.it/)
+- [n_TOF — neutron time-of-flight facility, CERN](https://home.cern/science/experiments/n_tof)
+- [DRAGON — recoil separator, TRIUMF](https://dragon.triumf.ca/)
+- [ISNAP — Institute for Structure and Nuclear Astrophysics, Notre Dame](https://isnap.nd.edu/)
+- [ELI-NP — Extreme Light Infrastructure – Nuclear Physics, Romania](https://www.eli-np.ro/)

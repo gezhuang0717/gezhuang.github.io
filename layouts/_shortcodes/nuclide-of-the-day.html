@@ -6,6 +6,19 @@
 {{- $lang := .Page.Language.Lang -}}
 {{- $base := index (split $lang "-") 0 -}}
 {{- $items := slice -}}
+{{- $says := slice -}}
+{{- range hugo.Data.clock_notes.notes -}}
+  {{- $says = $says | append (dict "c" .country "t" (or (index .text $lang) (index .text $base) .text.en)) -}}
+{{- end -}}
+{{- $words := slice -}}
+{{- range hugo.Data.fun_words.words -}}
+  {{- $words = $words | append (dict "w" .word "o" .from "s" (or (index .say $lang) (index .say $base) .say.en)) -}}
+{{- end -}}
+{{- $status := dict -}}
+{{- range $k, $v := hugo.Data.clock_status -}}
+  {{- $l := slice -}}{{- range $v -}}{{- $l = $l | append (or (index . $lang) (index . $base) .en) -}}{{- end -}}
+  {{- $status = merge $status (dict $k $l) -}}
+{{- end -}}
 {{- range hugo.Data.nuclides.nuclides -}}
   {{- $fact := or (index .fact $lang) (index .fact $base) .fact.en -}}
   {{- $items = $items | append (dict "s" .sym "f" $fact) -}}
@@ -22,6 +35,14 @@
     <div class="zg-clock-time" id="zg-clock-time">--:--</div>
     <p class="zg-clock-date" id="zg-clock-date"></p>
     <p class="zg-clock-note" id="zg-clock-note"></p>
+    <p class="zg-clock-saying" id="zg-clock-saying"></p>
+  </section>
+  <section class="zg-card zg-word">
+    <div class="zg-card-label">💬 {{ i18n "zg_word" | default (index (dict "en" "Word of the day" "zh" "每日一词" "fi" "Päivän sana" "de" "Wort des Tages" "ja" "今日のことば") $base | default "Word of the day") }}</div>
+    <div class="zg-word-w" id="zg-word-w"></div>
+    <p class="zg-word-o" id="zg-word-o"></p>
+    <p class="zg-word-s" id="zg-word-s"></p>
+    <button type="button" class="zg-btn" id="zg-word-next">{{ i18n "zg_another" | default "Another one" }} ↻</button>
   </section>
 </div>
 <script>
@@ -41,8 +62,24 @@
       d.textContent = now.toLocaleDateString(lang, { timeZone: tz, weekday: "long", day: "numeric", month: "long" });
       var parts = new Intl.DateTimeFormat("en-GB", { timeZone: tz, hour: "numeric", hour12: false, weekday: "short" }).formatToParts(now);
       var h = +parts.find(function (p) { return p.type === "hour"; }).value, wd = parts.find(function (p) { return p.type === "weekday"; }).value;
-      n.textContent = (wd === "Sat" || wd === "Sun") ? notes.weekend : (h >= 8 && h < 17) ? notes.work : (h >= 17 && h < 23) ? notes.evening : notes.night;
+      var cat = (wd === "Sat" || wd === "Sun") ? "weekend" : (h >= 8 && h < 17) ? "work" : (h >= 17 && h < 23) ? "evening" : "night", lst = status[cat];
+      var dn = Math.floor(now.getTime() / 864e5);   /* a different line every day */
+      n.textContent = lst && lst.length ? lst[dn % lst.length] : notes[cat];
     } catch (e) { t.textContent = now.toUTCString().slice(17, 22) + " UTC"; }
+  }
+  var words = {{ $words | jsonify | safeJS }}, status = {{ $status | jsonify | safeJS }};
+  (function () {      /* word of the day: same for everybody on a given day (Helsinki date); ↻ shows another */
+    if (!words.length) return;
+    var ymd = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Helsinki", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()).split("-");
+    var k = Math.round(Date.UTC(+ymd[0], +ymd[1] - 1, +ymd[2]) / 864e5) % words.length;
+    function show() { var w = words[k % words.length]; document.getElementById("zg-word-w").textContent = w.w; document.getElementById("zg-word-o").textContent = w.o; document.getElementById("zg-word-s").textContent = w.s; }
+    show(); var b = document.getElementById("zg-word-next"); if (b) b.onclick = function () { k = (k + 1 + Math.floor(Math.random() * (words.length - 1))) % words.length; show(); };
+  })();
+  var says = {{ $says | jsonify | safeJS }}, flags = { fi: "🇫🇮", cn: "🇨🇳", de: "🇩🇪", jp: "🇯🇵", uk: "🇬🇧" }, sEl = document.getElementById("zg-clock-saying");
+  if (says.length && sEl) {
+    var ymd = new Intl.DateTimeFormat("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()).split("-");
+    var doy = Math.round((Date.UTC(+ymd[0], +ymd[1] - 1, +ymd[2]) - Date.UTC(+ymd[0], 0, 1)) / 864e5);
+    var sv = says[doy % says.length]; sEl.textContent = (flags[sv.c] || "") + " " + sv.t;
   }
   tick(); setInterval(tick, 30000);
 })();

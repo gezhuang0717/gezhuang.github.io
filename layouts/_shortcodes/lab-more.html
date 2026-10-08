@@ -1,0 +1,91 @@
+{{- /*
+  More Lab tools — {{< lab-more >}} after {{< lab >}} in content/<lang>/lab.md
+    5. 3D Penning trap (rotatable hyperbolic electrodes + full 3D ion orbit)
+    (6. chart of nuclides moved to {{< nuclide-chart >}}, AME2020/NUBASE2020)
+    7. "You are radioactive" — ⁴⁰K and ¹⁴C activity of a human body
+  Labels for all five languages are in the dictionary below.
+*/ -}}
+{{- $lang := site.Language.Lang -}}
+{{- $k := cond (hasPrefix $lang "zh") "zh" $lang -}}
+{{- $L := dict
+ "en" (dict "t3d" "3D Penning trap" "n3d" "Drag to rotate, scroll to zoom. Ring electrode and two end caps are hyperboloids of revolution; the ion combines axial oscillation (ν_z), slow magnetron (ν₋) and fast reduced-cyclotron (ν₊) motion." "auto" "Auto-rotate" "rp" "Cyclotron radius" "rm" "Magnetron radius" "az" "Axial amplitude" "pulse" "π pulse (ν₋ → ν₊)" "reset" "Reset view" "ratio" "ν₊ / ν₋" "speed" "Speed" "trail" "Trail length" "ions" "Ions" "spread" "Mass spread" "cool" "Buffer-gas cooling" "dipole" "Dipole kick (ν₋)" "electrodes" "Electrodes" "field" "Field lines" "detector" "Detector projection" "top" "Top" "side" "Side" "iso" "3D" "n3d2" "The π pulse is resonant only at the reference mass — with a mass spread, other ions convert only partly, which is how PI-ICR and TOF-ICR separate isobars."
+   "tchart" "Chart of nuclides" "nchart" "Hover a square for its half-life and decay mode; click to pin it. Lines mark the magic numbers and N = Z. Data: ICRP-107 decay data and natural abundances (a selection of about 1 260 nuclides)." "bymode" "Colour by decay mode" "byhl" "Colour by half-life" "stable" "stable" "hl" "half-life"
+   "tbody" "You are radioactive" "nbody" "Your body contains potassium-40 and carbon-14. Enter your mass to see how many of them decay inside you every second." "mass" "Body mass (kg)" "k40" "⁴⁰K decays per second" "c14" "¹⁴C decays per second" "total" "Total" "banana" "≈ bananas" "day" "Decays per day" "bnote" "Estimates: 2 g potassium and 230 g carbon per kg of body mass; ⁴⁰K ≈ 31 Bq per g K, ¹⁴C ≈ 0.23 Bq per g C, one banana ≈ 15 Bq. Perfectly normal and harmless.")
+ "zh" (dict "t3d" "三维彭宁阱" "n3d" "拖动旋转，滚轮缩放。环电极与两个端盖电极均为旋转双曲面；离子同时进行轴向振荡（ν_z）、慢磁控运动（ν₋）和快约化回旋运动（ν₊）。" "auto" "自动旋转" "rp" "回旋半径" "rm" "磁控半径" "az" "轴向振幅" "pulse" "π 脉冲（ν₋ → ν₊）" "reset" "重置视角" "ratio" "ν₊ / ν₋" "speed" "速度" "trail" "轨迹长度" "ions" "离子数" "spread" "质量差异" "cool" "缓冲气体冷却" "dipole" "偶极激发（ν₋）" "electrodes" "电极" "field" "磁力线" "detector" "探测器投影" "top" "俯视" "side" "侧视" "iso" "三维" "n3d2" "π 脉冲只对参考质量共振——存在质量差异时，其他离子只部分转换，这正是 PI-ICR 和 TOF-ICR 区分同量异位素的原理。"
+   "tchart" "核素图" "nchart" "鼠标悬停查看半衰期与衰变方式，点击固定。线条标出幻数和 N = Z。数据：ICRP-107 衰变数据与天然丰度（约 1260 个核素的选集）。" "bymode" "按衰变方式着色" "byhl" "按半衰期着色" "stable" "稳定" "hl" "半衰期"
+   "tbody" "你也是放射性的" "nbody" "人体含有钾-40 和碳-14。输入体重，看看每秒有多少个原子核在你体内衰变。" "mass" "体重（kg）" "k40" "⁴⁰K 每秒衰变数" "c14" "¹⁴C 每秒衰变数" "total" "合计" "banana" "≈ 香蕉数" "day" "每天衰变数" "bnote" "估算：每千克体重含钾 2 g、碳 230 g；⁴⁰K 约 31 Bq/g 钾，¹⁴C 约 0.23 Bq/g 碳，一根香蕉约 15 Bq。完全正常且无害。")
+ "fi" (dict "t3d" "Penning-loukku 3D:nä" "n3d" "Vedä kääntääksesi, rullaa zoomataksesi. Rengaselektrodi ja kaksi päätykantta ovat pyörähdyshyperboloideja; ioni yhdistää aksiaalisen värähtelyn (ν_z), hitaan magnetroniliikkeen (ν₋) ja nopean redusoidun syklotroniliikkeen (ν₊)." "auto" "Automaattinen kierto" "rp" "Syklotronisäde" "rm" "Magnetronisäde" "az" "Aksiaalinen amplitudi" "pulse" "π-pulssi (ν₋ → ν₊)" "reset" "Palauta näkymä" "ratio" "ν₊ / ν₋" "speed" "Nopeus" "trail" "Jäljen pituus" "ions" "Ionit" "spread" "Massaero" "cool" "Puskurikaasujäähdytys" "dipole" "Dipoliviritys (ν₋)" "electrodes" "Elektrodit" "field" "Kenttäviivat" "detector" "Ilmaisinprojektio" "top" "Ylhäältä" "side" "Sivulta" "iso" "3D" "n3d2" "π-pulssi on resonanssissa vain referenssimassalla — massaerolla muut ionit muuntuvat vain osittain; näin PI-ICR ja TOF-ICR erottavat isobaarit."
+   "tchart" "Nuklidikartta" "nchart" "Vie hiiri ruudun päälle nähdäksesi puoliintumisajan ja hajoamistavan; napsauta kiinnittääksesi. Viivat merkitsevät maagisia lukuja ja N = Z. Data: ICRP-107-hajoamisdata ja luonnolliset runsaudet (noin 1 260 nuklidin valikoima)." "bymode" "Väritä hajoamistavan mukaan" "byhl" "Väritä puoliintumisajan mukaan" "stable" "stabiili" "hl" "puoliintumisaika"
+   "tbody" "Sinä olet radioaktiivinen" "nbody" "Kehossasi on kalium-40:tä ja hiili-14:ää. Anna massasi, niin näet montako niistä hajoaa sinussa joka sekunti." "mass" "Kehon massa (kg)" "k40" "⁴⁰K-hajoamisia sekunnissa" "c14" "¹⁴C-hajoamisia sekunnissa" "total" "Yhteensä" "banana" "≈ banaaneja" "day" "Hajoamisia vuorokaudessa" "bnote" "Arvio: 2 g kaliumia ja 230 g hiiltä kehon painokiloa kohden; ⁴⁰K ≈ 31 Bq/g K, ¹⁴C ≈ 0,23 Bq/g C, yksi banaani ≈ 15 Bq. Täysin normaalia ja vaaratonta.")
+ "de" (dict "t3d" "Penning-Falle in 3D" "n3d" "Ziehen zum Drehen, Scrollen zum Zoomen. Ringelektrode und die beiden Endkappen sind Rotationshyperboloide; das Ion kombiniert axiale Schwingung (ν_z), langsame Magnetron- (ν₋) und schnelle reduzierte Zyklotronbewegung (ν₊)." "auto" "Automatisch drehen" "rp" "Zyklotronradius" "rm" "Magnetronradius" "az" "Axiale Amplitude" "pulse" "π-Puls (ν₋ → ν₊)" "reset" "Ansicht zurücksetzen" "ratio" "ν₊ / ν₋" "speed" "Tempo" "trail" "Spurlänge" "ions" "Ionen" "spread" "Massenunterschied" "cool" "Puffergaskühlung" "dipole" "Dipolanregung (ν₋)" "electrodes" "Elektroden" "field" "Feldlinien" "detector" "Detektorprojektion" "top" "Oben" "side" "Seite" "iso" "3D" "n3d2" "Der π-Puls ist nur bei der Referenzmasse resonant – bei Massenunterschied werden andere Ionen nur teilweise umgewandelt; so trennen PI-ICR und TOF-ICR Isobare."
+   "tchart" "Nuklidkarte" "nchart" "Fahre über ein Kästchen für Halbwertszeit und Zerfallsart; Klick hält es fest. Linien markieren die magischen Zahlen und N = Z. Daten: ICRP-107-Zerfallsdaten und natürliche Häufigkeiten (Auswahl von etwa 1 260 Nukliden)." "bymode" "Farbe nach Zerfallsart" "byhl" "Farbe nach Halbwertszeit" "stable" "stabil" "hl" "Halbwertszeit"
+   "tbody" "Du bist radioaktiv" "nbody" "Dein Körper enthält Kalium-40 und Kohlenstoff-14. Gib deine Masse ein und sieh, wie viele davon jede Sekunde in dir zerfallen." "mass" "Körpermasse (kg)" "k40" "⁴⁰K-Zerfälle pro Sekunde" "c14" "¹⁴C-Zerfälle pro Sekunde" "total" "Gesamt" "banana" "≈ Bananen" "day" "Zerfälle pro Tag" "bnote" "Schätzung: 2 g Kalium und 230 g Kohlenstoff pro kg Körpermasse; ⁴⁰K ≈ 31 Bq/g K, ¹⁴C ≈ 0,23 Bq/g C, eine Banane ≈ 15 Bq. Völlig normal und harmlos.")
+ "ja" (dict "t3d" "3D ペニングトラップ" "n3d" "ドラッグで回転、スクロールで拡大。リング電極と2つのエンドキャップは回転双曲面です。イオンは軸方向振動（ν_z）、遅いマグネトロン運動（ν₋）、速い修正サイクロトロン運動（ν₊）を同時に行います。" "auto" "自動回転" "rp" "サイクロトロン半径" "rm" "マグネトロン半径" "az" "軸方向振幅" "pulse" "π パルス（ν₋ → ν₊）" "reset" "視点をリセット" "ratio" "ν₊ / ν₋" "speed" "速度" "trail" "軌跡の長さ" "ions" "イオン数" "spread" "質量差" "cool" "バッファーガス冷却" "dipole" "双極励起（ν₋）" "electrodes" "電極" "field" "磁力線" "detector" "検出器への投影" "top" "上から" "side" "横から" "iso" "3D" "n3d2" "π パルスは基準質量でのみ共鳴します——質量差があると他のイオンは一部しか変換されず、これが PI-ICR と TOF-ICR による同重体分離の原理です。"
+   "tchart" "核図表" "nchart" "マスを指すと半減期と崩壊様式を表示、クリックで固定。線は魔法数と N = Z を示します。データ：ICRP-107 崩壊データと天然存在比（約1260核種の抜粋）。" "bymode" "崩壊様式で色分け" "byhl" "半減期で色分け" "stable" "安定" "hl" "半減期"
+   "tbody" "あなたも放射性" "nbody" "体内にはカリウム40と炭素14が含まれています。体重を入れると、毎秒いくつ崩壊しているかが分かります。" "mass" "体重（kg）" "k40" "⁴⁰K の毎秒崩壊数" "c14" "¹⁴C の毎秒崩壊数" "total" "合計" "banana" "≈ バナナ本数" "day" "1日あたりの崩壊数" "bnote" "推定値：体重1 kgあたりカリウム 2 g、炭素 230 g；⁴⁰K ≈ 31 Bq/g K、¹⁴C ≈ 0.23 Bq/g C、バナナ1本 ≈ 15 Bq。まったく正常で無害です。")
+-}}
+{{- $t := index $L $k | default (index $L "en") -}}
+<div class="zg-lab zg-lab-more" data-root="{{ strings.TrimSuffix "zg-root" ("zg-root" | relURL) }}">
+
+<section class="zg-card zg-3d" data-trap3d>
+  <h2>{{ $t.t3d }}</h2>
+  <p class="zg-muted">{{ $t.n3d }} {{ $t.n3d2 }}</p>
+  <canvas width="640" height="440" aria-label="{{ $t.t3d }}"></canvas>
+  <div class="zg-sim-controls">
+    <label>{{ $t.ratio }} <input type="range" name="ratio" min="2" max="200" value="21"><output></output></label>
+    <label>{{ $t.speed }} <input type="range" name="speed" min="1" max="50" value="4"><output></output></label>
+    <label>{{ $t.rp }} <input type="range" name="rp" min="0" max="100" value="25"><output></output></label>
+    <label>{{ $t.rm }} <input type="range" name="rm" min="0" max="100" value="65"><output></output></label>
+    <label>{{ $t.az }} <input type="range" name="az" min="0" max="100" value="45"><output></output></label>
+    <label>{{ $t.trail }} <input type="range" name="trail" min="100" max="20000" step="100" value="1400"><output></output></label>
+    <label>{{ $t.ions }} <input type="range" name="ions" min="1" max="60" value="1"><output></output></label>
+    <label>{{ $t.spread }} <input type="range" name="spread" min="0" max="50" value="4"><output></output></label>
+  </div>
+  <div class="zg-row zg-checks">
+    <label><input type="checkbox" name="auto" checked> {{ $t.auto }}</label>
+    <label><input type="checkbox" name="cool"> {{ $t.cool }}</label>
+    <label><input type="checkbox" name="electrodes" checked> {{ $t.electrodes }}</label>
+    <label><input type="checkbox" name="field"> {{ $t.field }}</label>
+    <label><input type="checkbox" name="detector"> {{ $t.detector }}</label>
+  </div>
+  <div class="zg-row">
+    <button type="button" class="zg-btn" data-act="pulse">{{ $t.pulse }}</button>
+    <button type="button" class="zg-btn" data-act="dipole">{{ $t.dipole }}</button>
+    <button type="button" class="zg-btn zg-btn-ghost" data-act="top">{{ $t.top }}</button>
+    <button type="button" class="zg-btn zg-btn-ghost" data-act="side">{{ $t.side }}</button>
+    <button type="button" class="zg-btn zg-btn-ghost" data-act="iso">{{ $t.iso }}</button>
+    <button type="button" class="zg-btn zg-btn-ghost" data-act="reset">{{ $t.reset }}</button>
+    <button type="button" class="zg-btn zg-btn-ghost" data-act="png">⤓ PNG</button>
+    <button type="button" class="zg-btn zg-btn-ghost" data-act="video">⏺ Video</button>
+  </div>
+</section>
+<script defer src="{{ "js/zg-export.js" | relURL }}"></script>
+<script defer src="{{ "js/trap3d.js" | relURL }}"></script>
+
+
+
+<section class="zg-card zg-body">
+  <h2>☢ {{ $t.tbody }}</h2>
+  <p class="zg-muted">{{ $t.nbody }}</p>
+  <div class="zg-form"><label>{{ $t.mass }} <input type="number" id="zg-b-m" value="70" min="1" max="300" step="1"></label></div>
+  <table class="zg-table" id="zg-b-out"></table>
+  <p class="zg-muted zg-small">{{ $t.bnote }}</p>
+</section>
+
+</div>
+<script>
+(function () {
+  var T = {{ $t | jsonify | safeJS }}, $ = function (id) { return document.getElementById(id); };
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var css = getComputedStyle(document.documentElement), ink = (css.getPropertyValue("--zg-ink") || "").trim() || "#1d2433";
+
+  /* ── 7. you are radioactive ─────────────────────────────────────────── */
+  function body() {
+    var kg = Math.max(0, +$("zg-b-m").value || 0), k = kg * 2 * 31, c = kg * 230 * 0.23, tot = k + c;
+    var f = function (x) { return Math.round(x).toLocaleString(); };
+    $("zg-b-out").innerHTML = [[T.k40, f(k) + " Bq"], [T.c14, f(c) + " Bq"], [T.total, "<b>" + f(tot) + " Bq</b>"], [T.day, (tot * 86400).toExponential(2)], [T.banana, f(tot / 15) + " 🍌"]]
+      .map(function (r) { return "<tr><th>" + r[0] + "</th><td>" + r[1] + "</td></tr>"; }).join("");
+  }
+  if ($("zg-b-m")) { $("zg-b-m").addEventListener("input", body); body(); }
+})();
+</script>

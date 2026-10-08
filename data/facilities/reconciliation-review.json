@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-03",
+  "possible_related_records": [
+    [
+      "iaea-cyclotron-88",
+      "iaea-cyclotron-89"
+    ],
+    [
+      "iaea-cyclotron-94",
+      "iaea-cyclotron-96"
+    ],
+    [
+      "iaea-cyclotron-301",
+      "iaea-cyclotron-302"
+    ],
+    [
+      "iaea-cyclotron-385",
+      "nupecc-ssf-9"
+    ],
+    [
+      "iaea-cyclotron-837",
+      "iaea-cyclotron-838"
+    ]
+  ],
+  "unresolved_countries": [
+    "iaea-cyclotron-954",
+    "iaea-cyclotron-955",
+    "iaea-cyclotron-956",
+    "iaea-cyclotron-957",
+    "iaea-cyclotron-959",
+    "iaea-cyclotron-960",
+    "iaea-cyclotron-961",
+    "iaea-cyclotron-963",
+    "iaea-cyclotron-966",
+    "iaea-cyclotron-970",
+    "iaea-cyclotron-971",
+    "iaea-cyclotron-1288",
+    "iaea-cyclotron-1309",
+    "iaea-cyclotron-1310",
+    "iaea-cyclotron-1311"
+  ],
+  "decision": "Possible related records are flagged for review, not automatically merged across addresses or collections."
+}

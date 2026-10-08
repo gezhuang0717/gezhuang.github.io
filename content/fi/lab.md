@@ -9,3 +9,7 @@ Pieniä interaktiivisia työkaluja arkityöstäni Penning-loukkujen ja MR-TOF:n 
 *Vinkki:* kirjoita **ion** missä tahansa tällä sivustolla.
 
 {{< lab >}}
+
+{{< lab-more >}}
+
+{{< nuclide-chart >}}

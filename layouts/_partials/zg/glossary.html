@@ -1,0 +1,36 @@
+{{- /*
+  Explanation pop-ups for physics terms (site-wide, loaded from zg/fun.html).
+  Data: data/glossary.yaml  ·  Script: static/js/glossary.js
+  The first occurrence of each term in the page text is underlined; hover or tap shows a short
+  explanation with links to Wikipedia (page language + English) and, on Chinese pages, Baidu Baike.
+  Opt out for a block with  data-noglossary  on any element.
+*/ -}}
+{{- $lang := site.Language.Lang -}}
+{{- $k := cond (hasPrefix $lang "zh") "zh" $lang -}}
+{{- with hugo.Data.glossary -}}
+{{- $list := slice -}}
+{{- range .terms -}}
+  {{- $name := index .name $k | default (index .name "en") -}}
+  {{- $wiki := dict -}}{{- with .wiki -}}{{- $wiki = . -}}{{- end -}}
+  {{- $item := dict
+      "id" .id
+      "n" $name
+      "ne" (index .name "en")
+      "nz" (index .name "zh")
+      "m" (index .match $k | default (index .match "en"))
+      "w" (index $wiki $k | default $name)
+      "we" (index $wiki "en" | default (index .name "en"))
+      "t" (index .text $k | default (index .text "en"))
+      "s" (.src | default slice) -}}
+  {{- $list = $list | append $item -}}
+{{- end -}}
+{{- $L := dict
+    "en" (dict "wiki" "Wikipedia" "wikien" "English Wikipedia" "baike" "百度百科" "close" "Close" "more" "Read more")
+    "zh" (dict "wiki" "维基百科" "wikien" "英文维基百科" "baike" "百度百科" "close" "关闭" "more" "延伸阅读")
+    "fi" (dict "wiki" "Wikipedia (suomi)" "wikien" "Wikipedia (englanti)" "baike" "Baidu Baike" "close" "Sulje" "more" "Lue lisää")
+    "de" (dict "wiki" "Wikipedia (deutsch)" "wikien" "Wikipedia (englisch)" "baike" "Baidu Baike" "close" "Schließen" "more" "Mehr")
+    "ja" (dict "wiki" "ウィキペディア" "wikien" "英語版ウィキペディア" "baike" "百度百科" "close" "閉じる" "more" "参考")
+-}}
+<script type="application/json" id="zg-gloss-data" data-lang="{{ $k }}" data-labels="{{ index $L $k | jsonify }}">{{ $list | jsonify | safeJS }}</script>
+<script src="{{ "js/glossary.js" | relURL }}" defer></script>
+{{- end -}}

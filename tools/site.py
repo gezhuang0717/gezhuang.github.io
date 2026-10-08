@@ -41,14 +41,16 @@ import textwrap
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+import mistune
 from pathlib import Path
 
 try:
     import yaml
+    import maintenance
 except ImportError:  # pragma: no cover
     sys.exit("PyYAML is required:  pip install pyyaml   (or: python3 -m pip install --user pyyaml)")
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = maintenance.ROOT
 DATA = ROOT / "data"
 MANUAL_DIR = DATA / "daily" / "manual"
 AUTO_DIR = DATA / "daily" / "auto"
@@ -57,7 +59,7 @@ TALKS = DATA / "talks.yaml"
 SITE = ROOT / "site.yaml"
 FEEDS = ROOT / "tools" / "feeds.yaml"
 
-TYPES = ["log", "news", "paper", "job", "event"]
+TYPES = ["log", "news", "paper", "preprint", "job", "event"]
 ROLES = ["first", "corresponding", "coauthor"]
 THEMES = ["congo", "blowfish", "papermod"]
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -104,7 +106,7 @@ def header_of(path: Path) -> str:
 def dump_yaml(path: Path, data, header: str = ""):
     path.parent.mkdir(parents=True, exist_ok=True)
     body = yaml.dump(data, Dumper=_Dumper, sort_keys=False, allow_unicode=True, width=1000)
-    path.write_text(header + body, encoding="utf-8")
+    maintenance.transaction({str(path.relative_to(ROOT)): header + body})
 
 
 def today() -> str:
@@ -155,35 +157,16 @@ MONTH_HEADER = (
 
 def save_entries(entries: list[dict]) -> list[str]:
     """Merge entries into the monthly manual files. Returns change messages."""
-    msgs = []
-    by_month: dict[Path, list[dict]] = {}
-    for e in entries:
-        by_month.setdefault(month_file(e["date"]), []).append(e)
-    for path, new in by_month.items():
-        doc = load_yaml(path, {}) or {}
-        current = doc.get("entries", []) or []
-        keys = {(c.get("date"), c.get("title"), c.get("url")) for c in current}
-        added = 0
-        for e in new:
-            k = (e["date"], e["title"], e.get("url"))
-            if k in keys:
-                msgs.append(f"  skip (already present): {e['date']} {e['title']}")
-                continue
-            current.append(e)
-            keys.add(k)
-            added += 1
-        current.sort(key=lambda c: (c.get("date", ""), c.get("title", "")), reverse=True)
-        dump_yaml(path, {"entries": current}, header_of(path) or MONTH_HEADER)
-        msgs.append(f"  {added} entr{'y' if added == 1 else 'ies'} written to {rel(path)}")
-    return msgs
+    report = maintenance.merge_daily(entries, root=ROOT)
+    return [f"  updated {e['path']} ({e['new_sha256'][:12]})" for e in report]
 
 
 def all_entries() -> list[dict]:
     out = []
-    for path in sorted(MANUAL_DIR.glob("*.yaml")):
+    for path in sorted(p for p in MANUAL_DIR.glob("*.yaml") if not p.name.startswith("._")):
         for e in (load_yaml(path, {}) or {}).get("entries", []) or []:
             out.append({**e, "_origin": "manual", "_file": rel(path)})
-    for path in sorted(AUTO_DIR.glob("*.json")):
+    for path in sorted(p for p in AUTO_DIR.glob("*.json") if not p.name.startswith("._")):
         doc = json.loads(path.read_text(encoding="utf-8"))
         for e in doc.get("entries", []):
             out.append({**e, "_origin": "auto", "_file": rel(path)})
@@ -193,9 +176,11 @@ def all_entries() -> list[dict]:
 
 def cmd_add(a):
     e = clean_entry({"date": a.date, "type": a.type, "title": a.title, "summary": a.summary,
-                     "url": a.url, "source": a.source, "tags": a.tags, "lang": a.lang})
-    for m in save_entries([e]):
-        print(m)
+                     "url": a.url, "source": a.source, "tags": a.tags, "lang": a.lang,
+                     "item_id": a.item_id, "facility_ids": a.facility_id,
+                     "published": a.published, "event_start": a.event_start,
+                     "event_end": a.event_end, "deadline": a.deadline})
+    print(json.dumps(maintenance.merge_daily([e], root=ROOT, dry_run=a.dry_run), indent=2))
 
 
 def cmd_remove(a):
@@ -244,16 +229,9 @@ def read_table(path: Path) -> list[dict]:
 
 def cmd_batch(a):
     rows = read_table(Path(a.file))
-    good, bad = [], 0
-    for i, row in enumerate(rows, 1):
-        try:
-            good.append(clean_entry(row))
-        except ValueError as err:
-            bad += 1
-            print(f"  row {i}: {err} → skipped")
-    for m in save_entries(good):
-        print(m)
-    print(f"Batch done: {len(good)} valid, {bad} skipped.")
+    good = [clean_entry(row) for row in rows]
+    report = maintenance.merge_daily(good, root=ROOT, dry_run=a.dry_run)
+    print(json.dumps({"dry_run": a.dry_run, "records": len(good), "changes": report}, indent=2))
 
 
 # ───────────────────────────── automatic feeds ───────────────────────────────
@@ -283,7 +261,7 @@ def _match(text: str, include: list[str], exclude: list[str]) -> bool:
 def fetch_arxiv(feed, day):
     q = urllib.parse.urlencode({"search_query": feed["query"], "sortBy": "submittedDate",
                                 "sortOrder": "descending", "max_results": feed.get("max", 25)})
-    root = ET.fromstring(http_get("http://export.arxiv.org/api/query?" + q))
+    root = ET.fromstring(http_get("https://export.arxiv.org/api/query?" + q))
     ns = {"a": "http://www.w3.org/2005/Atom"}
     since = (dt.date.fromisoformat(day) - dt.timedelta(days=feed.get("days", 3))).isoformat()
     out = []
@@ -300,7 +278,7 @@ def fetch_arxiv(feed, day):
         out.append({"date": day, "type": feed.get("type", "paper"), "title": title,
                     "summary": _short(f"{lead} — {summary}" if lead else summary),
                     "url": _text(item, "a:id", ns).replace("http://", "https://"),
-                    "source": feed["name"], "tags": feed.get("tags", [])})
+                    "source": feed["name"], "tags": feed.get("tags", []), "published": published, "arxiv": _text(item, "a:id", ns).rsplit("/",1)[-1]})
     return out
 
 
@@ -328,7 +306,7 @@ def fetch_inspire_jobs(feed, day):
         out.append({"date": day, "type": "job", "title": f"{position} — {inst}" if inst else position,
                     "summary": _short(f"{extra}. {desc}" if extra else desc),
                     "url": f"https://inspirehep.net/jobs/{md.get('control_number', hit.get('id'))}",
-                    "source": feed["name"], "tags": feed.get("tags", [])})
+                    "source": feed["name"], "tags": feed.get("tags", []), **({"published":created} if created else {}), **({"deadline":md["deadline_date"][:10]} if md.get("deadline_date") else {})})
     return out
 
 
@@ -365,8 +343,19 @@ def fetch_rss(feed, day):
         desc = ctext(item, "description", "summary", "encoded")
         if not title or not _match(title + " " + desc, feed.get("include", []), feed.get("exclude", [])):
             continue
+        published = ctext(item, "pubDate", "published", "date", "updated")
+        if published:
+            try:
+                published = dt.datetime.fromisoformat(published.replace("Z", "+00:00")).date().isoformat()
+            except ValueError:
+                from email.utils import parsedate_to_datetime
+                try:
+                    published = parsedate_to_datetime(published).date().isoformat()
+                except (ValueError, TypeError):
+                    published = ""
         out.append({"date": day, "type": feed.get("type", "news"), "title": _short(title, 300),
-                    "summary": _short(desc), "url": link, "source": feed["name"], "tags": feed.get("tags", [])})
+                    "summary": _short(desc), "url": link, "source": feed["name"], "tags": feed.get("tags", []),
+                    **({"published": published} if published else {})})
     return out
 
 
@@ -379,39 +368,46 @@ def known_urls() -> set[str]:
 
 def cmd_fetch(a):
     day = a.date or today()
+    dt.date.fromisoformat(day)
     cfg = load_yaml(FEEDS, {}) or {}
-    seen = known_urls()
+    seen = {(maintenance.item_identity(e), e.get("lang", "en")) for e in all_entries()}
     collected, report = [], []
+    fs = maintenance.facilities(ROOT)
     for feed in cfg.get("feeds", []):
         if not feed.get("enabled", True):
             continue
         name = feed.get("name", feed.get("kind"))
         try:
             items = FETCHERS[feed["kind"]](feed, day)
-        except Exception as err:  # one failing feed must not stop the others
-            report.append(f"  ✗ {name}: {err}")
-            continue
-        fresh = [i for i in items if i["url"] not in seen]
-        seen.update(i["url"] for i in fresh)
-        limit = feed.get("keep", 10)
-        collected.extend(fresh[:limit])
-        report.append(f"  ✓ {name}: {len(items)} matched, {len(fresh[:limit])} new")
-    print("\n".join(report))
+            fresh = []
+            for e in items:
+                e["lang"] = "en"
+                e["collected_at"] = day
+                e["verification_status"] = "feed-collected"
+                text = (e["title"] + " " + e.get("summary", "")).casefold()
+                e["facility_ids"] = [f["id"] for f in fs if any(re.search(r"\b" + re.escape(alias.casefold()) + r"\b", text) for alias in f.get("daily_aliases", []))]
+                maintenance.validate_daily(e, {f["id"] for f in fs})
+                key = (maintenance.item_identity(e), "en")
+                if key not in seen:
+                    fresh.append(clean_entry(e)); seen.add(key)
+            collected.extend(fresh[:feed.get("keep", 10)])
+            report.append({"source": name, "status": "PASS", "matched": len(items), "new": len(fresh[:feed.get("keep",10)])})
+        except Exception as err:
+            report.append({"source": name, "status": "FAILED", "error": str(err)})
+    health = {"checked_at": maintenance.utc(), "feeds": report}
+    print(json.dumps(health, ensure_ascii=False, indent=2))
     if a.dry_run:
-        for e in collected:
-            print(f"    {e['type']:<6} {e['title']}")
-        print(f"Dry run: {len(collected)} new entries (nothing written).")
-        return
-    if not collected:
-        print("No new entries.")
+        print(f"Dry run: {len(collected)} new entries, no writes.")
         return
     path = AUTO_DIR / f"{day}.json"
-    doc = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"entries": []}
-    doc["fetched"] = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    doc["entries"] = doc.get("entries", []) + [clean_entry(e, day) for e in collected]
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {len(collected)} new entries to {rel(path)}")
+    doc = json.loads(path.read_text()) if path.exists() else {"entries": []}
+    doc["fetched"] = maintenance.utc()
+    doc["entries"] += collected
+    changes = {"data/daily/feed-health.json": maintenance.serialized("x.json", health)}
+    if collected:
+        changes[str(path.relative_to(ROOT))] = maintenance.serialized("x.json", doc)
+    maintenance.transaction(changes, root=ROOT)
+    print(f"Saved source health and {len(collected)} entries.")
 
 
 # ───────────────────────────── publications / talks ──────────────────────────
@@ -486,6 +482,8 @@ def cmd_pub_doi(a):
     me = next((i for i, x in enumerate(authors) if x.get("family", "").lower() == "ge"
                and x.get("given", "").lower().startswith("z")), None)
     role = a.role or ("first" if me == 0 else "coauthor")
+    if me is None:
+        raise ValueError("DOI metadata does not identify Z. Ge; verify collaboration identity before manual import")
     if me is not None:
         names[me] = "**Z. Ge**"
     shown = names[: (me + 1 if me is not None and me < 3 else 1)] if names else []
@@ -503,12 +501,9 @@ def cmd_pub_doi(a):
 
 
 def cmd_pub_batch(a):
-    good = []
-    for i, row in enumerate(read_table(Path(a.file)), 1):
-        try:
-            good.append(clean_pub(row))
-        except ValueError as err:
-            print(f"  row {i}: {err} → skipped")
+    good = [clean_pub(row) for row in read_table(Path(a.file))]
+    if a.dry_run:
+        print(yaml.safe_dump({"papers": good}, allow_unicode=True)); return
     save_pubs(good)
 
 
@@ -517,6 +512,11 @@ def cmd_talk_add(a):
     talks = doc.get("talks", []) or []
     t = {k: v for k, v in {"kind": a.kind, "date": a.date, "title": a.title, "event": a.event,
                            "place": a.place, "url": a.url}.items() if v}
+    if not t.get("url"):
+        raise ValueError("public talk requires a source URL; retain pending records in local audit")
+    if any(x.casefold() in json.dumps(t).casefold() for x in maintenance.PRIVATE):
+        raise ValueError("private PAC talks cannot be published")
+    t["public_status"] = "public_source"
     talks.append(t)
     talks.sort(key=lambda x: (x.get("kind") != "invited", str(x.get("date", ""))), reverse=False)
     inv = sorted([x for x in talks if x.get("kind") == "invited"], key=lambda x: str(x.get("date")), reverse=True)
@@ -581,7 +581,7 @@ def link_icon(icon: str, theme: str) -> str | None:
 def gen_congo_like(cfg: dict, theme: str):
     out = ROOT / "sites" / theme / "_default"
     if out.exists():
-        shutil.rmtree(out)
+        maintenance.remove_tree(out)
     out.mkdir(parents=True)
     tcfg = cfg.get("themes", {}).get(theme, {})
     default = cfg["languages"][0]
@@ -624,13 +624,13 @@ def gen_congo_like(cfg: dict, theme: str):
                 f'locale = {toml_value(lang["locale"])}',
                 f'label = {toml_value(lang["name"])}',
                 f"weight = {i}",
-                f'title = {toml_value(cfg["title"])}',
+                f'title = {toml_value(lang.get("display_name", cfg["title"]))}',
                 f'contentDir = "content/{lang["code"]}"',
                 "[params]"]
         if theme == "blowfish":
             body += [f'  displayName = {toml_value(lang["code"].upper())}', f'  isoCode = {toml_value(lang["locale"])}',
                      "  rtl = false", '  dateFormat = "2006-01-02"']
-        body += ["[params.author]", f'  name = {toml_value(cfg["author"])}', f'  image = {toml_value(cfg["image"])}',
+        body += ["[params.author]", f'  name = {toml_value(lang.get("display_name", cfg["author"]))}', f'  image = {toml_value(cfg["image"])}',
                  f'  headline = {toml_value(lang["headline"])}', f'  bio = {toml_value(lang["bio"])}',
                  "  links = [", *links, "  ]"]
         (out / f"languages.{key}.toml").write_text("\n".join(body) + "\n", encoding="utf-8")
@@ -647,7 +647,7 @@ def gen_congo_like(cfg: dict, theme: str):
 def gen_papermod(cfg: dict):
     out = ROOT / "sites" / "papermod" / "_default"
     if out.exists():
-        shutil.rmtree(out)
+        maintenance.remove_tree(out)
     out.mkdir(parents=True)
     t = cfg.get("themes", {}).get("papermod", {})
     default = cfg["languages"][0]
@@ -665,7 +665,7 @@ def gen_papermod(cfg: dict):
     for i, lang in enumerate(cfg["languages"], 1):
         k = lang_key(lang, "papermod")
         L += [f"[languages.{k}]", f'  label = {toml_value(lang["name"])}', f'  locale = {toml_value(lang["locale"])}', f"  weight = {i}",
-              f'  contentDir = "content/{lang["code"]}"', f'  title = {toml_value(cfg["title"])}',
+              f'  contentDir = "content/{lang["code"]}"', f'  title = {toml_value(lang.get("display_name", cfg["title"]))}',
               f"  [languages.{k}.params.profileMode]", "    enabled = true",
               f'    title = {toml_value(cfg["author"])}', f'    subtitle = {toml_value(lang["headline"] + "<br>" + lang["bio"])}',
               f'    imageUrl = {toml_value(cfg["image"])}', "    imageWidth = 160", "    imageHeight = 160",
@@ -683,7 +683,7 @@ def gen_papermod(cfg: dict):
     return out
 
 
-def cmd_config(a):
+def _cmd_config_direct(a):
     cfg = load_yaml(SITE)
     if cfg.get("live_theme") not in THEMES:
         sys.exit(f"site.yaml: live_theme must be one of {THEMES}")
@@ -715,22 +715,71 @@ def cmd_config(a):
     print(f"Live theme: {cfg['live_theme']} (the GitHub workflow reads it from site.yaml)")
 
 
+def cmd_config(a):
+    global ROOT
+    original = ROOT
+    staging = original / ".maintenance" / ("config-" + __import__("uuid").uuid4().hex[:8])
+    staging.mkdir(parents=True)
+    for item in ["assets/css/extended/zg-rainbow.css", *["i18n/"+l["code"]+".yaml" for l in load_yaml(SITE)["languages"]]]:
+        dest = staging / item
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(original / item, dest)
+    try:
+        ROOT = staging
+        _cmd_config_direct(a)
+        changes = {str(p.relative_to(staging)): p.read_bytes() for p in staging.rglob("*") if p.is_file() and not p.name.startswith("._")}
+        ROOT = original
+        maintenance.transaction(changes, root=original)
+        plain = original / "assets/css/extended/zz-plain.css"
+        if load_yaml(SITE).get("rainbow", True) and plain.exists():
+            plain.unlink()
+    finally:
+        ROOT = original
+        maintenance.remove_tree(staging)
+
+
 # ───────────────────────────── export for React ──────────────────────────────
 def cmd_export_react(a):
     pubs = (load_yaml(PUBS, {}) or {}).get("papers", [])
     talks = (load_yaml(TALKS, {}) or {}).get("talks", [])
+    inline = mistune.create_markdown(renderer=mistune.HTMLRenderer(escape=True))
+    for item in pubs + talks:
+        rendered = inline(item["title"]).removeprefix("<p>").removesuffix("</p>\n").strip()
+        item["title_html"] = re.sub(r"&lt;(/?)(sup|sub|em|strong|i|b)&gt;", r"<\1\2>", rendered)
     entries = [{k: v for k, v in e.items() if not k.startswith("_")} for e in all_entries()]
     cfg = load_yaml(SITE, {})
+    maintenance.strict_check(ROOT)
     out = Path(a.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps({"generated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
-                               "links": cfg.get("links", []), "papers": pubs, "talks": talks, "daily": entries},
-                              ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    pages = {}
+    for lang in cfg["languages"]:
+        local = {}
+        for page in (ROOT / "content" / lang["code"]).glob("*.md"):
+            if page.name.startswith("._"):
+                continue
+            raw = page.read_text()
+            parts = raw.split("---", 2)
+            front = yaml.safe_load(parts[1]) if len(parts) == 3 else {}
+            local[page.stem] = {"title": (front or {}).get("title", page.stem), "markdown": parts[2].strip() if len(parts) == 3 else raw}
+            text = re.sub(r"\{\{[<%].*?[>%]\}\}", "", local[page.stem]["markdown"], flags=re.S)
+            local[page.stem]["html"] = mistune.html(text)
+        pages[lang["code"]] = local
+    fs = maintenance.facilities(ROOT)
+    payload = {"schema_version": 1, "generated": maintenance.utc(), "config": cfg,
+               "links": cfg.get("links", []), "papers": pubs, "talks": talks,
+               "daily": entries, "pages": pages, "gallery": load_yaml(DATA / "gallery.yaml", {})}
+    out.write_text(maintenance.serialized("x.json", payload), encoding="utf-8")
+    associated = {fid for e in entries for fid in e.get("facility_ids", [])}
+    daily = {"entries": entries, "facilities": [{"id": f["id"], "name": f["name"]} for f in fs if f.get("daily_aliases") or f["id"] in associated],
+             "health": maintenance.read(DATA / "daily/feed-health.json", {})}
+    maintenance.transaction({"static/data/daily.json": maintenance.serialized("x.json", daily)}, root=ROOT)
+
     print(f"Wrote {len(pubs)} papers, {len(talks)} talks, {len(entries)} daily entries → {out}")
 
 
 # ───────────────────────────── validation ────────────────────────────────────
 def cmd_check(a):
+    maintenance.strict_check(ROOT)
     problems = []
     for e in all_entries():
         try:
@@ -782,6 +831,11 @@ def main(argv=None):
     s.add_argument("--source")
     s.add_argument("--tags", "-t", help="comma separated, e.g. trap,nuclear")
     s.add_argument("--lang", help="language of the text, e.g. zh (optional)")
+    s.add_argument("--item-id", help="shared stable identity for translations")
+    s.add_argument("--facility-id", action="append", help="repeat for multiple facility associations")
+    for field in ("published", "event-start", "event-end", "deadline"):
+        s.add_argument("--" + field, help="YYYY-MM-DD")
+    s.add_argument("--dry-run", action="store_true")
     s.set_defaults(func=cmd_add)
 
     s = sub.add_parser("remove", help="remove hand-written daily entries")
@@ -797,6 +851,7 @@ def main(argv=None):
 
     s = sub.add_parser("batch", help="import daily entries from CSV/TSV/YAML/JSON")
     s.add_argument("file")
+    s.add_argument("--dry-run", action="store_true")
     s.set_defaults(func=cmd_batch)
 
     s = sub.add_parser("fetch", help="download new papers/jobs/news from tools/feeds.yaml")
@@ -826,6 +881,7 @@ def main(argv=None):
 
     s = sub.add_parser("pub-batch", help="import publications from CSV/YAML/JSON")
     s.add_argument("file")
+    s.add_argument("--dry-run", action="store_true")
     s.set_defaults(func=cmd_pub_batch)
 
     s = sub.add_parser("talk-add", help="add one talk")
@@ -849,14 +905,18 @@ def main(argv=None):
     s.set_defaults(func=cmd_config)
 
     s = sub.add_parser("export-react", help="export data JSON for the React site")
-    s.add_argument("--out", default=str(ROOT.parent / "react_site" / "src" / "data" / "site.json"))
+    s.add_argument("--out", default=str(ROOT / "react" / "src" / "data" / "site.json"))
     s.set_defaults(func=cmd_export_react)
 
     s = sub.add_parser("check", help="validate data files")
     s.set_defaults(func=cmd_check)
 
+    maintenance.register(sub)
     a = p.parse_args(argv)
-    a.func(a)
+    try:
+        a.func(a)
+    except (ValueError, OSError) as error:
+        p.exit(1, f"Validation failed: {error}\n")
 
 
 if __name__ == "__main__":

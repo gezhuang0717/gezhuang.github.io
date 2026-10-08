@@ -1,0 +1,15 @@
+{
+  "original_lockfile_sha256": "bed918bb626cd6cec4f4068787da2777d247a73faa21798325464c841579a562",
+  "selected_direct_dependencies": [
+    "@types/node",
+    "@types/react",
+    "@types/react-dom",
+    "@vitejs/plugin-react",
+    "react",
+    "react-dom",
+    "typescript",
+    "vite"
+  ],
+  "snapshot_count": 52,
+  "reason": "Build toolchain and used React libraries only; unused recent-policy-rejected packages are neither installed nor executed. Full original lockfile is retained unchanged."
+}

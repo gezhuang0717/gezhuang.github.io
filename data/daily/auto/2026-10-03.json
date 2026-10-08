@@ -1,5 +1,5 @@
 {
-  "fetched": "2026-10-03T15:20:00Z",
+  "fetched": "2026-10-03T19:16:58+00:00",
   "note": "Seed sample taken from the INSPIRE-HEP jobs API on 2026-10-03; later files are written automatically by tools/site.py fetch.",
   "entries": [
     {
@@ -9,7 +9,9 @@
       "summary": "North America · deadline 2026-11-15 · categories include nucl-ex, nucl-th, physics.ins-det",
       "url": "https://inspirehep.net/jobs/3209539",
       "source": "INSPIRE-HEP Jobs",
-      "tags": ["nuclear"]
+      "tags": [
+        "nuclear"
+      ]
     },
     {
       "date": "2026-10-03",
@@ -18,7 +20,269 @@
       "summary": "Asia · deadline 2026-11-26 · categories include nucl-ex, nucl-th",
       "url": "https://inspirehep.net/jobs/3208711",
       "source": "INSPIRE-HEP Jobs",
-      "tags": ["nuclear"]
+      "tags": [
+        "nuclear"
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "type": "paper",
+      "title": "Quantitative Interleaved-Pulse Acquisition Extends the Range of Isotope-Ratio Measurements in ToF-SIMS",
+      "summary": "Anton V. Ievlev — Isotope ratios underpin tracer studies of transport in oxides, battery materials, and biological systems, yet time-of-flight secondary ion mass spectrometry (ToF-SIMS) struggles to quantify ratios whose members differ in intensity by orders of magnitude: a…",
+      "url": "https://arxiv.org/abs/2609.37413v1",
+      "source": "arXiv — ion traps & mass spectrometry",
+      "tags": [
+        "trap"
+      ],
+      "lang": "en",
+      "published": "2026-09-29",
+      "arxiv": "2609.37413v1",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "paper",
+      "title": "A magnetic-field insensitive gate set for trapped-ion nuclear spin qubits",
+      "summary": "Jonathan Paul Home et al. — We outline a complete set of operations for manipulating nuclear spin qubits of trapped-ions stored in high magnetic fields such as required for Penning trapping, where the nuclear and electron spins are largely decoupled due to the dominance of the…",
+      "url": "https://arxiv.org/abs/2609.37318v1",
+      "source": "arXiv — ion traps & mass spectrometry",
+      "tags": [
+        "trap"
+      ],
+      "lang": "en",
+      "published": "2026-09-29",
+      "arxiv": "2609.37318v1",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Post-Doc Research Associate — UNC, Chapel Hill",
+      "summary": "North America · deadline 2026-12-01 · POSTDOC. The Department of Physics and Astronomy at the University of North Carolina at Chapel Hill invites applications for a postdoctoral research position in theoretical nuclear and high-energy physics, with emphasis on lattice QCD. The…",
+      "url": "https://inspirehep.net/jobs/3210747",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "deadline": "2026-12-01",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "ICREA 2027 – ICCUB Expression of Interest — ICC, Barcelona U.",
+      "summary": "Europe · deadline 2026-11-01 · SENIOR. The Institute of Cosmos Sciences of the University of Barcelona (ICCUB), a Maria de Maeztu Unit of Excellence, is seeking outstanding established researchers interested in applying for an ICREA Senior position in the 2027 call. The 2027…",
+      "url": "https://inspirehep.net/jobs/3210713",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "deadline": "2026-11-01",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Postdoctoral Researcher in Deep Learning for Particle Physics: DRIFTS Project H/F — IRFU, Saclay",
+      "summary": "Europe · deadline 2026-10-20 · POSTDOC. Postdoctoral Researcher in Deep Learning for Particle Physics: DRIFTS Project H/F Institution: CEA Paris-Saclay, Irfu Location: Gif-sur-Yvette, France Contract: Fixed-term postdoctoral position, 24 months Starting date: 1 January 2027…",
+      "url": "https://inspirehep.net/jobs/3210712",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "deadline": "2026-10-20",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Call for nominations: MITP Senior Postdoctoral Fellowships — Mainz U.",
+      "summary": "Europe · deadline 2026-10-13 · POSTDOC. The Mainz Institute for Theoretical Physics (MITP) invites nominations for the MITP Senior Postdoctoral Fellowships in Theoretical Physics for the period 2027-2030. These 3-year positions target experienced postdoctoral researchers in the…",
+      "url": "https://inspirehep.net/jobs/3209381",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "deadline": "2026-10-13",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Tenure-Track Research Associate Professor Positions — Beijing, Inst. High Energy Phys.",
+      "summary": "Asia · deadline 2027-01-15 · JUNIOR. Tenure-Track Research Associate Professor Positions at Theoretical Physics Division of IHEP The Theoretical Physics Division of the Institute of High Energy Physics (IHEP), Chinese Academy of Sciences, invites applications for one or two…",
+      "url": "https://inspirehep.net/jobs/3208715",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "deadline": "2027-01-15",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "job",
+      "title": "Postdoctoral fellow positions — CCAST World Lab, Beijing",
+      "summary": "Asia · deadline 2026-12-31 · POSTDOC. Postdoctoral fellow positions at China Center of Advanced Science and Technology The China Center of Advanced Science and Technology (CCAST), which was founded by Professor Tsung-Dao Lee and the Chinese Academy of Sciences (CAS) in 1986 and…",
+      "url": "https://inspirehep.net/jobs/3208714",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "deadline": "2026-12-31",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "The Giant Permittivity of Nanoconfined Water",
+      "summary": "Author(s): Marric Stephens Researchers have proposed that long-range molecular dipole correlations alter water’s electrical properties when it’s confined in a gap a few nanometers wide. [Physics 19, s130] Published Thu Oct 01, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s130",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Simulating Particle Creation with Cold Atoms",
+      "summary": "Author(s): Michael Schirber Researchers observe atoms trapped in an optical lattice mimicking particles created in a strong electric field. [Physics 19, s131] Published Thu Oct 01, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s131",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "The Unexpected Ubiquity of the Phonon Thermal Hall Effect",
+      "summary": "Author(s): Kamran Behnia and Zengwei Zhu The discovery of a thermal version of the Hall effect in common semiconductors challenges our understanding of how magnetic fields and heat fluxes interact within solids. [Physics 19, 122] Published Wed Sep 30, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.122",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Quantum Light Reveals How Solvents Affect Molecules",
+      "summary": "Author(s): Ryan Wilkinson Pairs of photons provide a gentle way to measure the impact of a molecule’s environment on its ultrafast dynamics. [Physics 19, s117] Published Wed Sep 30, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s117",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Beware the Funnel: When Simplifying Dynamics Can Mislead",
+      "summary": "Author(s): Thomas Stemler and Michael Small Simplified models of systems with fast and slow dynamics can miss a narrow region of phase space—a “singular funnel”—leading to misleading predictions of the system’s behavior. [Physics 19, 128] Published Mon Sep 28, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.128",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-28",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Reading hidden topology in light, even when energy leaks away",
+      "summary": "When I explain topology to students, I start with a knot in a rope. You can stretch it, twist it or shake it, but the knot stays until you cut the rope. Physicists have found that some materials and devices carry similar \"knots\" in how waves move through them. These are…",
+      "url": "https://phys.org/news/2026-10-hidden-topology-energy-leaks.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-03",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Visible light does not speed up water evaporation, rigorous experiments suggest",
+      "summary": "In recent experiments involving hydrogels and water droplets, researchers have proposed that exposure to visible light could make water evaporate faster without heating it. However, direct evidence that light acts on water itself has proven elusive.",
+      "url": "https://phys.org/news/2026-10-visible-evaporation-rigorous.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-03",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Cooper pairs found above superconducting critical temperature in pair density waves",
+      "summary": "Physicists with the University of Illinois Urbana-Champaign's Grainger College of Engineering have identified a new form of superconducting behavior. Experiments on the metal uranium ditelluride reveal that Cooper pairs, the composite electron units responsible for…",
+      "url": "https://phys.org/news/2026-10-cooper-pairs-superconducting-critical-temperature.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-03",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Scientists discover first type I superconductor that breaks time-reversal symmetry",
+      "summary": "Superconductors are materials that conduct electricity with no resistance and expel magnetic fields when cooled to ultralow temperatures. And depending on their quantum structure, they can also showcase strange properties like magnetic levitation. But now things are getting a…",
+      "url": "https://phys.org/news/2026-10-scientists-superconductor-reversal-symmetry.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "verified_at": "2026-10-03"
+    },
+    {
+      "date": "2026-10-03",
+      "type": "news",
+      "title": "Q&A: How will quantum computers change society?",
+      "summary": "Once called a \"pipe dream,\" quantum computers are now approaching practical use. Companies and research institutes around the world are in fierce competition to develop this technology, which has the potential to rapidly perform some calculations that are extremely difficult…",
+      "url": "https://phys.org/news/2026-10-qa-quantum-society.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "verified_at": "2026-10-03"
     }
   ]
 }

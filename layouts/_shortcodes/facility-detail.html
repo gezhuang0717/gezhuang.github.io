@@ -1,0 +1,17 @@
+{{ $id := .Page.Params.facility_id }}
+{{ $lang := site.Language.Lang }}{{ if strings.HasPrefix $lang "zh" }}{{ $lang = "zh" }}{{ end }}
+{{ with .Page.Params.facility_record }}
+<p>{{ .city }} · {{ .country }} · <strong>{{ .status }}</strong></p>
+{{ if and (ne $lang "en") (ne $lang "zh") }}<p><small>English fallback: facility descriptions await translation.</small></p>{{ end }}
+<p>{{ or (index .description $lang) .description.en }}</p>
+<p><strong>{{ if eq $lang "zh" }}位置证据{{ else }}Location evidence{{ end }}:</strong> {{ .coordinate_precision }} · {{ .verification_status }}
+{{ if eq .coordinate_precision "city_approx" }}<br><strong>{{ if eq $lang "zh" }}城市近似位置，非设施精确坐标{{ else }}City approximation; not an exact facility coordinate{{ end }}</strong>{{ end }}
+{{ if not .coordinate_verified }}<br>{{ if eq $lang "zh" }}坐标未核实，不显示地图标记。{{ else }}Coordinates are unresolved; no map pin is shown.{{ end }}{{ end }}</p>
+<p>{{ if eq $lang "zh" }}类别与用途{{ else }}Categories and capabilities{{ end }}: {{ delimit .categories ", " }}{{ with .capabilities }} · {{ delimit . "; " }}{{ end }}</p>
+<h2>{{ if eq $lang "zh" }}设备与仪器{{ else }}Machines and instruments{{ end }}</h2>
+<ul>{{ range .machines }}<li>{{ or .model .reactor_type .name .id }}{{ with .manufacturer }} · {{ . }}{{ end }}{{ with .proton_energy_mev }} · {{ . }} MeV{{ end }}{{ with .thermal_power_kw }} · {{ . }} kW thermal (source reported){{ end }}</li>{{ end }}</ul>
+<h2>{{ if eq $lang "zh" }}来源{{ else }}Sources{{ end }}</h2>
+<p>{{ if eq $lang "zh" }}来源检查日期{{ else }}Source checked{{ end }}: {{ .source_checked }} · {{ delimit .source_records ", " }}</p>
+<ul>{{ range .source_urls }}<li><a href="{{ . }}" rel="noopener">{{ . }}</a></li>{{ end }}</ul>
+<p><a href="{{ site.Home.RelPermalink }}facilities/?selected={{ .id }}">{{ if eq $lang "zh" }}在设施地图中查看{{ else }}Show in the facility atlas{{ end }}</a> · <a href="{{ site.Home.RelPermalink }}daily/?facility={{ .id }}&amp;period=all">{{ if eq $lang "zh" }}相关每日条目{{ else }}Related Daily entries{{ end }}</a></p>
+{{ end }}

@@ -1,0 +1,51 @@
+{{- /*
+  Link panel under the Daily calendar: journals, facility news, community, job boards.
+  Sources without a usable public feed are linked here instead of being fetched.  Usage: {{< daily-links >}}
+*/ -}}
+{{- $lang := site.Language.Lang -}}
+{{- $k := cond (hasPrefix $lang "zh") "zh" $lang -}}
+{{- $H := dict
+  "en" (dict "t" "More news, papers and jobs" "j" "Journals" "f" "Facilities & collaborations" "c" "Ion-trap & astrophysics community" "w" "Job boards" "n" "Feeds above are collected automatically every day; these sources are one click away.")
+  "zh" (dict "t" "更多新闻、论文与职位" "j" "期刊" "f" "实验装置与合作组织" "c" "离子阱与天体物理社区" "w" "招聘网站" "n" "上方条目每天自动收集；以下来源一键直达。")
+  "fi" (dict "t" "Lisää uutisia, julkaisuja ja työpaikkoja" "j" "Lehdet" "f" "Laitokset ja yhteistyöt" "c" "Ioniloukku- ja astrofysiikkayhteisö" "w" "Työpaikkapalvelut" "n" "Yllä olevat merkinnät kerätään automaattisesti päivittäin; nämä lähteet ovat yhden napsautuksen päässä.")
+  "de" (dict "t" "Mehr Nachrichten, Artikel und Stellen" "j" "Zeitschriften" "f" "Anlagen & Kollaborationen" "c" "Ionenfallen- & Astrophysik-Community" "w" "Stellenbörsen" "n" "Die Einträge oben werden täglich automatisch gesammelt; diese Quellen sind einen Klick entfernt.")
+  "ja" (dict "t" "その他のニュース・論文・求人" "j" "学術誌" "f" "施設と共同研究" "c" "イオントラップ・宇宙物理コミュニティ" "w" "求人サイト" "n" "上の項目は毎日自動で収集されます。以下の情報源へはワンクリックで移動できます。") -}}
+{{- $h := index $H $k | default $H.en -}}
+{{- $groups := slice
+  (dict "k" "j" "i" "📚" "items" (slice
+    (slice "Phys. Rev. Lett." "https://journals.aps.org/prl") (slice "Phys. Rev. C" "https://journals.aps.org/prc")
+    (slice "Eur. Phys. J. A" "https://link.springer.com/journal/10050") (slice "Nucl. Phys. A" "https://www.sciencedirect.com/journal/nuclear-physics-a")
+    (slice "Phys. Lett. B" "https://www.sciencedirect.com/journal/physics-letters-b")
+    (slice "NIM A (instruments: MR-TOF, traps, storage rings)" "https://www.sciencedirect.com/journal/nuclear-instruments-and-methods-in-physics-research-section-a-accelerators-spectrometers-detectors-and-associated-equipment")
+    (slice "NIM B (beams, ion sources, catchers)" "https://www.sciencedirect.com/journal/nuclear-instruments-and-methods-in-physics-research-section-b-beam-interactions-with-materials-and-atoms")
+    (slice "Int. J. Mass Spectrom." "https://www.sciencedirect.com/journal/international-journal-of-mass-spectrometry")
+    (slice "Hyperfine Interactions" "https://link.springer.com/journal/10751") (slice "J. Phys. G" "https://iopscience.iop.org/journal/0954-3899")
+    (slice "Chinese Physics C" "https://iopscience.iop.org/journal/1674-1137") (slice "Astrophys. J." "https://iopscience.iop.org/journal/0004-637X")
+    (slice "Nature — nuclear physics" "https://www.nature.com/subjects/nuclear-physics") (slice "Nature — nuclear astrophysics" "https://www.nature.com/subjects/nuclear-astrophysics")
+    (slice "Atoms (MDPI)" "https://www.mdpi.com/journal/atoms")))
+  (dict "k" "f" "i" "🏛" "items" (slice
+    (slice "FRIB news" "https://frib.msu.edu/news-center/news") (slice "MSU Today" "https://msutoday.msu.edu/") (slice "RIKEN Nishina Center" "https://www.nishina.riken.jp/news/index.html")
+    (slice "GSI / FAIR news" "https://www.gsi.de/en/start/news") (slice "CERN ISOLDE" "https://isolde.cern/")
+    (slice "TRIUMF" "https://www.triumf.ca/") (slice "GANIL / SPIRAL2" "https://www.ganil-spiral2.eu/")
+    (slice "IGISOL / JYFLTRAP" "https://www.jyu.fi/en/research-groups/exotic-nuclei-and-beams-igisol") (slice "Argonne ATLAS" "https://www.anl.gov/atlas")
+    (slice "IMP Lanzhou / HIAF" "https://english.imp.cas.cn/") (slice "NuPECC" "https://www.nupecc.org/")))
+  (dict "k" "c" "i" "✨" "items" (slice
+    (slice "Ion Traps Newsletter" "https://iontraps.net/") (slice "JINA-CEE" "https://www.jinaweb.org/") (slice "IReNA" "https://irenaweb.org/")
+    (slice "ChETEC-INFRA" "https://chetec-infra.eu/") (slice "ECT* Trento" "https://www.ectstar.eu/")))
+  (dict "k" "w" "i" "💼" "items" (slice
+    (slice "INSPIRE-HEP Jobs" "https://inspirehep.net/jobs") (slice "AcademicJobsOnline" "https://academicjobsonline.org/ajo/jobs")
+    (slice "EURAXESS" "https://euraxess.ec.europa.eu/jobs/search") (slice "CERN careers" "https://careers.cern/")
+    (slice "GSI / FAIR jobs" "https://www.gsi.de/en/jobscareer") (slice "FRIB careers" "https://frib.msu.edu/careers")
+    (slice "RIKEN careers" "https://www.riken.jp/en/careers/") (slice "TRIUMF careers" "https://www.triumf.ca/careers"))) -}}
+<section class="zg-links" aria-label="{{ $h.t }}">
+  <h2>{{ $h.t }}</h2>
+  <p class="zg-muted">{{ $h.n }}</p>
+  <div class="zg-links-grid">
+  {{- range $i, $g := $groups }}
+    <div class="zg-links-box" style="--g:{{ mul $i 72 }}">
+      <h3>{{ $g.i }} {{ index $h $g.k }}</h3>
+      <ul>{{ range $g.items }}<li><a href="{{ index . 1 }}" target="_blank" rel="noopener">{{ index . 0 }}</a></li>{{ end }}</ul>
+    </div>
+  {{- end }}
+  </div>
+</section>

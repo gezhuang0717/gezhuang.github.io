@@ -1,0 +1,24 @@
+{{- /* Partial: animated sketches of the ion- and atom-trap family. Call with (dict "heading" true|false).
+       Used by the shortcode trap-zoo.html and by games.html.
+       {{< trap-zoo >}}                  heading + note + all traps (Research → Techniques in pictures)
+       {{< trap-zoo heading="false" >}}  only the grid (Games page has its own heading)
+       Texts: data/trap_zoo.yaml · animation: static/js/trap-zoo.js · CSS: .zg-trapzoo in both stylesheets */ -}}
+{{- $lang := site.Language.Lang -}}
+{{- $k := cond (hasPrefix $lang "zh") "zh" $lang -}}
+{{- with hugo.Data.trap_zoo -}}
+<div class="zg-trapzoo" data-noglossary>
+  {{- if $.heading }}
+  <h3 class="zg-trapzoo-h">{{ index .title $k | default .title.en }}</h3>
+  {{- end }}
+  <p class="zg-muted zg-trapzoo-note">{{ index .note $k | default .note.en }}</p>
+  <div class="zg-trapzoo-grid">
+  {{- range .traps }}
+    <figure class="g-trap" data-kind="{{ .key }}">
+      <canvas width="240" height="180" aria-label="{{ index .name $k | default .name.en }}"></canvas>
+      <figcaption><b>{{ index .name $k | default .name.en }}</b><span>{{ index .how $k | default .how.en }}</span></figcaption>
+    </figure>
+  {{- end }}
+  </div>
+</div>
+<script defer src="{{ "js/trap-zoo.js" | relURL }}"></script>
+{{- end -}}

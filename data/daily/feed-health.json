@@ -1,0 +1,88 @@
+{
+  "checked_at": "2026-10-07T07:41:50+00:00",
+  "feeds": [
+    {
+      "source": "arXiv — ion traps & mass spectrometry",
+      "status": "PASS",
+      "matched": 0,
+      "new": 0
+    },
+    {
+      "source": "arXiv — nuclear masses, Q-values & astrophysics",
+      "status": "PASS",
+      "matched": 0,
+      "new": 0
+    },
+    {
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "status": "PASS",
+      "matched": 10,
+      "new": 0
+    },
+    {
+      "source": "APS Physics — news",
+      "status": "PASS",
+      "matched": 23,
+      "new": 1
+    },
+    {
+      "source": "Phys.org — nuclear physics",
+      "status": "PASS",
+      "matched": 30,
+      "new": 4
+    },
+    {
+      "source": "Physical Review Letters — Nuclear Physics",
+      "status": "PASS",
+      "matched": 30,
+      "new": 0
+    },
+    {
+      "source": "Physical Review Letters — traps, masses & astrophysics",
+      "status": "PASS",
+      "matched": 0,
+      "new": 0
+    },
+    {
+      "source": "Physical Review C",
+      "status": "PASS",
+      "matched": 11,
+      "new": 1
+    },
+    {
+      "source": "Nature Physics",
+      "status": "FAILED",
+      "error": "not well-formed (invalid token): line 14, column 4"
+    },
+    {
+      "source": "TRIUMF news",
+      "status": "PASS",
+      "matched": 10,
+      "new": 0
+    },
+    {
+      "source": "GANIL news",
+      "status": "PASS",
+      "matched": 10,
+      "new": 0
+    },
+    {
+      "source": "ECT* news & workshops",
+      "status": "PASS",
+      "matched": 10,
+      "new": 0
+    },
+    {
+      "source": "IAEA — nuclear science news",
+      "status": "PASS",
+      "matched": 2,
+      "new": 0
+    },
+    {
+      "source": "Ion Traps Newsletter (iontraps.net)",
+      "status": "PASS",
+      "matched": 10,
+      "new": 0
+    }
+  ]
+}

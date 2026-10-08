@@ -2,180 +2,811 @@
   "entries": [
     {
       "date": "2026-10-04",
-      "type": "job",
-      "title": "Post-Doc Research Associate — UNC, Chapel Hill",
-      "summary": "North America · deadline 2026-12-01 · POSTDOC. The Department of Physics and Astronomy at the University of North Carolina at Chapel Hill invites applications for a postdoctoral research position in theoretical nuclear and high-energy physics, with emphasis on lattice QCD. The…",
-      "url": "https://inspirehep.net/jobs/3210747",
-      "source": "INSPIRE-HEP Jobs — nuclear physics",
-      "tags": [
-        "nuclear"
-      ]
-    },
-    {
-      "date": "2026-10-04",
-      "type": "job",
-      "title": "ICREA 2027 – ICCUB Expression of Interest — ICC, Barcelona U.",
-      "summary": "Europe · deadline 2026-11-01 · SENIOR. The Institute of Cosmos Sciences of the University of Barcelona (ICCUB), a Maria de Maeztu Unit of Excellence, is seeking outstanding established researchers interested in applying for an ICREA Senior position in the 2027 call. The 2027…",
-      "url": "https://inspirehep.net/jobs/3210713",
-      "source": "INSPIRE-HEP Jobs — nuclear physics",
-      "tags": [
-        "nuclear"
-      ]
-    },
-    {
-      "date": "2026-10-04",
-      "type": "job",
-      "title": "Postdoctoral Researcher in Deep Learning for Particle Physics: DRIFTS Project H/F — IRFU, Saclay",
-      "summary": "Europe · deadline 2026-10-20 · POSTDOC. Postdoctoral Researcher in Deep Learning for Particle Physics: DRIFTS Project H/F Institution: CEA Paris-Saclay, Irfu Location: Gif-sur-Yvette, France Contract: Fixed-term postdoctoral position, 24 months Starting date: 1 January 2027…",
-      "url": "https://inspirehep.net/jobs/3210712",
-      "source": "INSPIRE-HEP Jobs — nuclear physics",
-      "tags": [
-        "nuclear"
-      ]
-    },
-    {
-      "date": "2026-10-04",
-      "type": "job",
-      "title": "Call for nominations: MITP Senior Postdoctoral Fellowships — Mainz U.",
-      "summary": "Europe · deadline 2026-10-13 · POSTDOC. The Mainz Institute for Theoretical Physics (MITP) invites nominations for the MITP Senior Postdoctoral Fellowships in Theoretical Physics for the period 2027-2030. These 3-year positions target experienced postdoctoral researchers in the…",
-      "url": "https://inspirehep.net/jobs/3209381",
-      "source": "INSPIRE-HEP Jobs — nuclear physics",
-      "tags": [
-        "nuclear"
-      ]
-    },
-    {
-      "date": "2026-10-04",
-      "type": "job",
-      "title": "Tenure-Track Research Associate Professor Positions — Beijing, Inst. High Energy Phys.",
-      "summary": "Asia · deadline 2027-01-15 · JUNIOR. Tenure-Track Research Associate Professor Positions at Theoretical Physics Division of IHEP The Theoretical Physics Division of the Institute of High Energy Physics (IHEP), Chinese Academy of Sciences, invites applications for one or two…",
-      "url": "https://inspirehep.net/jobs/3208715",
-      "source": "INSPIRE-HEP Jobs — nuclear physics",
-      "tags": [
-        "nuclear"
-      ]
-    },
-    {
-      "date": "2026-10-04",
-      "type": "job",
-      "title": "Postdoctoral fellow positions — CCAST World Lab, Beijing",
-      "summary": "Asia · deadline 2026-12-31 · POSTDOC. Postdoctoral fellow positions at China Center of Advanced Science and Technology The China Center of Advanced Science and Technology (CCAST), which was founded by Professor Tsung-Dao Lee and the Chinese Academy of Sciences (CAS) in 1986 and…",
-      "url": "https://inspirehep.net/jobs/3208714",
-      "source": "INSPIRE-HEP Jobs — nuclear physics",
-      "tags": [
-        "nuclear"
-      ]
-    },
-    {
-      "date": "2026-10-04",
       "type": "news",
-      "title": "The Giant Permittivity of Nanoconfined Water",
-      "summary": "Author(s): Marric Stephens Researchers have proposed that long-range molecular dipole correlations alter water’s electrical properties when it’s confined in a gap a few nanometers wide. [Physics 19, s130] Published Thu Oct 01, 2026",
-      "url": "http://link.aps.org/doi/10.1103/Physics.19.s130",
+      "title": "Gallium Anomaly May Finally Be Explained",
+      "summary": "Author(s): Ryan Wilkinson A decades-old neutrino mystery might be solved not by undiscovered physics but by improved calculations. [Physics 19, s116] Published Thu Sep 24, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s116",
       "source": "APS Physics — news",
       "tags": [
         "nuclear"
-      ]
+      ],
+      "lang": "en",
+      "published": "2026-09-24",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
     },
     {
       "date": "2026-10-04",
       "type": "news",
-      "title": "Simulating Particle Creation with Cold Atoms",
-      "summary": "Author(s): Michael Schirber Researchers observe atoms trapped in an optical lattice mimicking particles created in a strong electric field. [Physics 19, s131] Published Thu Oct 01, 2026",
-      "url": "http://link.aps.org/doi/10.1103/Physics.19.s131",
+      "title": "A Type-I Superconductor Breaks Time-Reversal Symmetry",
+      "summary": "Author(s): Rachel Berkowitz A hallmark property of unconventional superconductivity has been discovered in a type-I superconductor, whereas it’s normally observed only in type-II materials. [Physics 19, s115] Published Wed Sep 23, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s115",
       "source": "APS Physics — news",
       "tags": [
         "nuclear"
-      ]
+      ],
+      "lang": "en",
+      "published": "2026-09-23",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
     },
     {
       "date": "2026-10-04",
       "type": "news",
-      "title": "The Unexpected Ubiquity of the Phonon Thermal Hall Effect",
-      "summary": "Author(s): Kamran Behnia and Zengwei Zhu The discovery of a thermal version of the Hall effect in common semiconductors challenges our understanding of how magnetic fields and heat fluxes interact within solids. [Physics 19, 122] Published Wed Sep 30, 2026",
-      "url": "http://link.aps.org/doi/10.1103/Physics.19.122",
+      "title": "How to Tell If Your Excitons Have Condensed",
+      "summary": "Author(s): David Ehrenstein A newly predicted effect should provide a clean way to distinguish between a Bose-Einstein condensate of quasiparticles called excitons and a more mundane collection of these particles. [Physics 19, s124] Published Tue Sep 22, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s124",
       "source": "APS Physics — news",
       "tags": [
         "nuclear"
-      ]
+      ],
+      "lang": "en",
+      "published": "2026-09-22",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
     },
     {
       "date": "2026-10-04",
       "type": "news",
-      "title": "Quantum Light Reveals How Solvents Affect Molecules",
-      "summary": "Author(s): Ryan Wilkinson Pairs of photons provide a gentle way to measure the impact of a molecule’s environment on its ultrafast dynamics. [Physics 19, s117] Published Wed Sep 30, 2026",
-      "url": "http://link.aps.org/doi/10.1103/Physics.19.s117",
+      "title": "The Turbulent Life of a Vortex Line",
+      "summary": "Author(s): Andrew Baggaley A tabletop experiment using a classical water vortex supports a decades-old theory describing the decay of turbulence in quantum fluids. [Physics 19, 118] Published Mon Sep 21, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.118",
       "source": "APS Physics — news",
       "tags": [
         "nuclear"
-      ]
+      ],
+      "lang": "en",
+      "published": "2026-09-21",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
     },
     {
       "date": "2026-10-04",
       "type": "news",
-      "title": "Beware the Funnel: When Simplifying Dynamics Can Mislead",
-      "summary": "Author(s): Thomas Stemler and Michael Small Simplified models of systems with fast and slow dynamics can miss a narrow region of phase space—a “singular funnel”—leading to misleading predictions of the system’s behavior. [Physics 19, 128] Published Mon Sep 28, 2026",
-      "url": "http://link.aps.org/doi/10.1103/Physics.19.128",
+      "title": "Collimating Positrons with Superconducting Magnets",
+      "summary": "Author(s): Sam Jarman A recent experiment points the way toward making the intense, energetic beams of positrons needed for next-generation electron–positron colliders. [Physics 19, 127] Published Fri Sep 18, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.127",
       "source": "APS Physics — news",
       "tags": [
         "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-18",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "Particle accelerator pioneers won a Nobel Prize 75 years ago",
+      "summary": "While scientists are known for their dedication to their research, crawling on the floor to avoid electrocution for the sake of a measurement seems a little excessive. But this is what British physicist John Cockcroft and Irish physicist Ernest T.S. Walton had to do in the…",
+      "url": "https://phys.org/news/2026-10-physicists-uncovered-particle-honored-nobel.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "Protons ride moving waves to reach record energy with long-pulse lasers",
+      "summary": "Imagine a proton catching a wave and surfing it to gain speed. While the imagery may seem wild, the premise of laser-driven ion acceleration has promise as an alternative to conventional accelerators. However, the ultrathin targets used to drive this increase in ion energy are…",
+      "url": "https://phys.org/news/2026-10-protons-energy-pulse-lasers.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "A laser that stays locked without active control",
+      "summary": "EPFL researchers have developed a chip-based laser that keeps a very stable frequency across its tested operating range, without needing active electronic control. Their research is published in the journal Nature Photonics.",
+      "url": "https://phys.org/news/2026-10-laser-stays.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "New method generates nearly indistinguishable photons for quantum communication",
+      "summary": "Working in close collaboration, researchers from Paderborn University, the University of Basel and Ruhr University Bochum have made a breakthrough in quantum communication. In their recently published paper in the journal Physical Review Letters, they demonstrate how special…",
+      "url": "https://phys.org/news/2026-10-method-generates-indistinguishable-photons-quantum.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "Hidden 'funnels' let complex systems slip between stable states",
+      "summary": "Many systems in nature can settle into several different stable states, with the final state depending on their starting conditions. However, the boundaries separating these states are often far more complicated than they first appear.",
+      "url": "https://phys.org/news/2026-09-hidden-funnels-complex-stable-states.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "Nanotube Material Has Perfect Memory",
+      "summary": "Author(s): Michael Schirber A carbon nanotube foam springs back to its initial state, regardless of the speed of the compression, a property that could lead to a new type of shock absorber. [Physics 19, 129] Published Fri Sep 18, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.129",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-18",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "Detecting How Earth Twists Spacetime",
+      "summary": "Author(s): Ryan Wilkinson A proposed lab-based quantum sensor could precisely measure within seconds the warping of spacetime caused by Earth’s rotation. [Physics 19, s112] Published Thu Sep 17, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s112",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-17",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "Bypassing the Speed Limit for Thermally Driven Demagnetization",
+      "summary": "Author(s): Daniel Steil Contrary to expectations, the magnetization dynamics of a ferromagnet can be accelerated by increasing temperature, laser excitation, or magnetic field—a behavior that holds promise for high-speed spintronics. [Physics 19, 124] Published Wed Sep 16, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.124",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-16",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "How to Synchronize a Long-Distance Quantum Network",
+      "summary": "Author(s): Sophia Chen Researchers demonstrate a new quantum memory device that will enable faraway nodes in a network to coordinate in time, a key ingredient for a future quantum Internet. [Physics 19, s120] Published Wed Sep 16, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s120",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-16",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "How Reliable Are Quantum Batteries?",
+      "summary": "Author(s): Marric Stephens Increasing the charging rate of a quantum battery leads to unavoidable fluctuations in the total energy stored. [Physics 19, s114] Published Tue Sep 15, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s114",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-15",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "Giant fluctuations of focused light reveal hidden correlations in opaque materials",
+      "summary": "When light travels through a strongly scattering material, such as biological tissue or other disordered opaque media, it follows many different paths and produces a seemingly random speckle pattern. Wavefront shaping makes it possible to control this complex interference and…",
+      "url": "https://phys.org/news/2026-09-giant-fluctuations-focused-reveal-hidden.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-04",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "Exploring the shapes of exotic nuclei",
+      "summary": "In the conventional diagram of an atom, the center depicts a nucleus—a spherical cluster of protons and neutrons. But that sphere is a simplification: nuclei can deform into exotic shapes that appear more like a pear, football or Frisbee. Understanding why and when nuclei…",
+      "url": "https://phys.org/news/2026-10-exploring-exotic-nuclei.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "Letting light wander through milk—a surprising approach to better imaging",
+      "summary": "Light scattered in tissue usually ceases to be a useful source of information. But what if, instead of forcing it to travel along a single path, we allowed it to wander a little differently each time? Scientists from ICTER tested this seemingly risky idea and showed that a…",
+      "url": "https://phys.org/news/2026-10-approach-imaging.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "New parallel gate entangles diamond qubits 10 times faster at room temperature",
+      "summary": "Quantum technologies rely on qubits, units of information that can exist in combinations of the states 0 and 1 instead of being limited to one or the other like conventional bits. Qubits can become entangled, which means their states become linked in ways that cannot be…",
+      "url": "https://phys.org/news/2026-09-parallel-gate-entangles-diamond-qubits.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "Why do pickles glow? Researcher investigates explosive answer",
+      "summary": "If you mount a pickle on two metal forks and plug it into a socket, one end will light up in a brilliant orange glow. It's a classic K–12 science demonstration, but the exact physics behind the illumination has long remained a mystery.",
+      "url": "https://phys.org/news/2026-10-pickles-explosive.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Spin Teleportation via Bell-Triplet States Emergent from Proton-Proton Scattering",
+      "summary": "Author(s): Z. X. Shen, H. Y. Shang, Y. G. Ma, D. Bai, S. M. Wang, Z. C. Xu, Y. Ayyad, and C. Filgueira Entanglement is a key resource in quantum information science, yet its properties and applications in nuclear systems remain largely unexplored. Here, using proton-proton…",
+      "url": "http://link.aps.org/doi/10.1103/btxt-28ys",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Neutron Drip Line in Calcium Isotopes from a Chiral Interaction",
+      "summary": "Author(s): B. S. Hu, A. Ekström, C. Forssén, G. Hagen, W. G. Jiang, T. Miyagi, and T. Papenbrock Interactions derived from effective field theories of quantum chromodynamics have thus far failed to bind calcium nuclei beyond neutron number $N=40$, while nuclear density…",
+      "url": "http://link.aps.org/doi/10.1103/pz1t-q6v1",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Observation of Nuclear Suppression in Coherent $\\mathrm{ϒ}(1\\mathrm{S})$ Photoproduction off Heavy Nuclei at the LHC",
+      "summary": "Author(s): A. Belyaev et al. (CMS Collaboration) The first measurement of coherent $\\mathrm{ϒ}(1\\mathrm{S})$ meson photoproduction off heavy nuclei is performed using ultraperipheral lead-lead collisions collected by the CMS experiment at a nucleon-nucleon center-of-mass energy…",
+      "url": "http://link.aps.org/doi/10.1103/ll3f-l5xv",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-28",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Nonmonotonicity of Transverse Momentum Correlations in $\\mathrm{Au}+\\text{Au}$ Collisions at RHIC",
+      "summary": "Author(s): B. E. Aboona et al. (STAR Collaboration) Event-by-event transverse momentum correlations are sensitive to the equation of state of strongly interacting matter and are expected to exhibit anomalous fluctuations in the vicinity of the QCD critical point. We report the…",
+      "url": "http://link.aps.org/doi/10.1103/2xsn-rgx3",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-22",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Three Predictions for Partonic Energy Loss from Light to Heavy Ion Collisions",
+      "summary": "Author(s): Wilke van der Schee, Isobel Kolbé, Govert Nijs, Kumail Ruhani, Ishtiaq Ahmed, and Shahin Iqbal In July 2025 the Large Hadron Collider collided $^{16}\\mathrm{O}^{16}\\mathrm{O}$ and $^{20}\\mathrm{Ne}^{20}\\mathrm{Ne}$ isotopes in a quest to understand the physics of…",
+      "url": "http://link.aps.org/doi/10.1103/dzzp-3vhf",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-22",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "First Measurement of the ${K}^{−}$ Escape Cross Section in the $^{12}\\mathrm{C}({K}^{−},p)$ Reaction",
+      "summary": "Author(s): Fumiya Oura et al. (J-PARC E42 Collaboration) We investigated the $\\overline{K}$-nucleus interaction through the simultaneous measurement of the inclusive $^{12}\\mathrm{C}({K}^{−},p)$ and exclusive ${K}^{−}$ escape $^{12}\\mathrm{C}({K}^{−},p{K}_{\\mathrm{esc}}^{−})$…",
+      "url": "http://link.aps.org/doi/10.1103/y6wr-rqjp",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-22",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Investigation of Medium Modifications to $^{12}\\mathrm{C}$ Structure Functions in the Resonance Region",
+      "summary": "Author(s): S. Alsalmi et al. (The JUPITER Collaboration: JLab E02-109 E04-001 E06-009) We present results from a high precision experimental study of the nuclear modification of the longitudinal (${F}_{L}$) to transverse (${F}_{1}$) structure function ratio for bound nucleons…",
+      "url": "http://link.aps.org/doi/10.1103/ps3y-63xb",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-09",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Emergence of Thermal Recoil Jets in High-Energy Heavy-Ion Collisions",
+      "summary": "Author(s): Peng Jing, Yichao Dang, Lejing Zhang, Yang He, Shanshan Cao, Li Yi, and Xin-Nian Wang In the established paradigm of jet quenching in relativistic heavy-ion collisions, jets from initial hard parton scatterings are suppressed due to their interaction with the…",
+      "url": "http://link.aps.org/doi/10.1103/9x1t-b84m",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-04",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Structure of the neutron-rich $N=126$ isotones: A shell model analysis",
+      "summary": "Author(s): Zsolt Podolyák and Callum J. Wilson Shell model calculations for the neutron-rich $N=126^{206}\\mathrm{Hg}\\text{−}^{197}\\mathrm{Lu} (Z=80−71)$ isotones were performed with two different parametrizations. The one refined to explain the isomerism in $^{204}\\mathrm{Pt}$…",
+      "url": "http://link.aps.org/doi/10.1103/sbnc-hccd",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Evolution of octupole deformation in rotating $^{148}\\mathrm{Ba}$ with cranking relativistic density functional theory in 3D lattice space",
+      "summary": "Author(s): F. F. Xu (许方方) The evolution of octupole deformation with rotation and the interleaved positive- and negative-parity bands in the pear-shaped nucleus $^{148}\\mathrm{Ba}$ are investigated using the three-dimensional lattice cranking relativistic density functional…",
+      "url": "http://link.aps.org/doi/10.1103/gvlg-jy84",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Quarkyonic quark-meson coupling model for nuclear and neutron matter",
+      "summary": "Author(s): Koichi Saito, Tsuyoshi Miyatsu, and Myung-Ki Cheoun We have constructed a quark-based nuclear model that extends from low densities into the crossover region where nucleonic matter begins to evolve into quark matter. It combines the quark-meson coupling model with…",
+      "url": "http://link.aps.org/doi/10.1103/s71s-85r5",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Massive Thirring / sine-Gordon model with nonzero current density",
+      "summary": "Author(s): Eric Oevermann and Thomas D. Cohen This paper determines the zero-temperature equation of state for the massive Thirring / sine-Gordon model. This demonstrates recently derived model-independent upper and lower bounds on the zero-temperature equation of state with…",
+      "url": "http://link.aps.org/doi/10.1103/vyq7-6hxx",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Measurement of the Gerasimov-Drell-Hearn integrand for the proton and deuteron from 200 to 1400 MeV",
+      "summary": "Author(s): P. Pedroni et al. (A2 Collaboration at MAMI) The Gerasimov-Drell-Hearn (GDH) sum rule establishes a fundamental link between the total absorption cross section of circularly polarized photons on longitudinally polarized nucleons and nuclei and their static…",
+      "url": "http://link.aps.org/doi/10.1103/smhf-nl99",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-10-01",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Physics-structured cooperative neural network for baseline-free nuclear mass modeling",
+      "summary": "Author(s): Peiwen Zai, Wei Cheng, and Feng-Shou Zhang Machine-learning approaches can improve nuclear mass modeling, but the most accurate strategies often depend on a theoretical mass baseline or hand-crafted physics features. We test whether a modular architecture encoding…",
+      "url": "http://link.aps.org/doi/10.1103/cm8z-l3m8",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-29",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Exploration of mass-asymmetric fission of the sublead nucleus $^{192}\\mathrm{Hg}$",
+      "summary": "Author(s): Pavneet Kaur, Moumita Maiti, Rishabh Kumar, Ankur Singh, Himanshu Sharma, M. V. S. Chandrachud, N. Saneesh, A. Parihari, M. Kumar, K. S. Golda, A. Jhingan, and P. Sugathan Background: The fission fragment mass distribution (FFMD) has been known as one of the most…",
+      "url": "http://link.aps.org/doi/10.1103/sht1-hmfz",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-24",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Skyrme SV density-functional analysis of the $2νββ$ decay in $^{76}\\mathrm{Ge}$",
+      "summary": "Author(s): Jan Miśkiewicz, Jakub Wysocki, and Wojciech Satuła We present a theoretical study of the two-neutrino ${0}^{+}→{0}^{+}$ double beta decay of $^{76}\\mathrm{Ge}$ within the no-core configuration-interaction framework based on the Skyrme SV density functional. We…",
+      "url": "http://link.aps.org/doi/10.1103/d2sg-fv1g",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-24",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Deterministic and programmable fusion for the scalable generation of photonic graph states",
+      "summary": "Nature Physics, Published online: 30 September 2026; doi:10.1038/s41567-026-03471-5 Graph states entangle many photons in a special structure that is useful for several quantum protocols. Making graph states is often probabilistic and inefficient, but now a deterministic…",
+      "url": "https://www.nature.com/articles/s41567-026-03471-5",
+      "source": "Nature Physics",
+      "tags": [
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Fully developed active turbulence defined through a non-equilibrium phase transition",
+      "summary": "Nature Physics, Published online: 30 September 2026; doi:10.1038/s41567-026-03408-y The continuous energy injection in active fluids leads to active turbulence. Now, geometric and mechanical analyses reveal a phase transition that leads to fully developed active turbulence.",
+      "url": "https://www.nature.com/articles/s41567-026-03408-y",
+      "source": "Nature Physics",
+      "tags": [
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "paper",
+      "title": "Multiscale transitional flow in anisotropic nanoparticle suspensions revealed by time-resolved X-ray scatter microscopy",
+      "summary": "Nature Physics, Published online: 29 September 2026; doi:10.1038/s41567-026-03467-1 The trajectories of embedded particles provide a route for probing fluid flow dynamics. An X-ray scatter microscopy approach that enables precise monitoring of non-sphericalnanoparticles now…",
+      "url": "https://www.nature.com/articles/s41567-026-03467-1",
+      "source": "Nature Physics",
+      "tags": [
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-29",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "Allison Selinger awarded the 2026 Alice Wilson Award by the Royal Society of Canada",
+      "summary": "TRIUMF&#8217;s Allison Selinger has been awarded the 2026 Alice Wilson Award by the Royal Society of Canada. Allison is a Natural Sciences and Engineering Research Council postdoctoral fellow in the Life Sciences Division at TRIUMF. The Alice Wilson Award was established by the…",
+      "url": "https://triumf.ca/2026/09/17/allison-selinger-awarded-the-2026-alice-wilson-award-by-the-royal-society-of-canada/",
+      "source": "TRIUMF news",
+      "tags": [
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-09-17",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "triumf-isac"
       ]
     },
     {
       "date": "2026-10-04",
       "type": "news",
-      "title": "Reading hidden topology in light, even when energy leaks away",
-      "summary": "When I explain topology to students, I start with a knot in a rope. You can stretch it, twist it or shake it, but the knot stays until you cut the rope. Physicists have found that some materials and devices carry similar \"knots\" in how waves move through them. These are…",
-      "url": "https://phys.org/news/2026-10-hidden-topology-energy-leaks.html",
-      "source": "Phys.org — nuclear physics",
+      "title": "Highlighting TRIUMF’s 2026 Summer Student Successes",
+      "summary": "Each year, TRIUMF welcomes a number of fellowship and scholar award winners and this post shares and celebrates those winners. The Young Engineers and Scientists (YES!) Fellowship program offers six-week summer research experiences to graduating secondary students in British…",
+      "url": "https://triumf.ca/2026/08/21/summer-2026-student-successes/",
+      "source": "TRIUMF news",
       "tags": [
-        "nuclear"
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-08-21",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "triumf-isac"
       ]
     },
     {
       "date": "2026-10-04",
       "type": "news",
-      "title": "Visible light does not speed up water evaporation, rigorous experiments suggest",
-      "summary": "In recent experiments involving hydrogels and water droplets, researchers have proposed that exposure to visible light could make water evaporate faster without heating it. However, direct evidence that light acts on water itself has proven elusive.",
-      "url": "https://phys.org/news/2026-10-visible-evaporation-rigorous.html",
-      "source": "Phys.org — nuclear physics",
+      "title": "Order of British Columbia awarded to Patrick Kelly",
+      "summary": "Twelve outstanding British Columbians were named to the Order of British Columbia this week, the province&#8217;s highest form of recognition. Among them is, Patrick Kelly (T&#8217;esóts&#8217;en), a valued advisor to TRIUMF on Indigenous Engagement and Reconciliation and a…",
+      "url": "https://triumf.ca/2026/08/10/order-of-british-columbia-awarded-to-patrick-kelly/",
+      "source": "TRIUMF news",
       "tags": [
-        "nuclear"
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-08-10",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "triumf-isac"
       ]
     },
     {
       "date": "2026-10-04",
       "type": "news",
-      "title": "Cooper pairs found above superconducting critical temperature in pair density waves",
-      "summary": "Physicists with the University of Illinois Urbana-Champaign's Grainger College of Engineering have identified a new form of superconducting behavior. Experiments on the metal uranium ditelluride reveal that Cooper pairs, the composite electron units responsible for…",
-      "url": "https://phys.org/news/2026-10-cooper-pairs-superconducting-critical-temperature.html",
-      "source": "Phys.org — nuclear physics",
+      "title": "Le GANIL participe à la Fête de la science",
+      "summary": "Le GANIL sera présent sur le Village des Sciences de Caen le samedi 10 octobre 2026, de 10h à 18h. Physiciens, ingénieurs et doctorants vous accueilleront sur le stand pour vous faire vivre la physique autrement avec au programme des petites expériences et des démonstrations…",
+      "url": "https://www.ganil-spiral2.eu/2026/09/30/le-ganil-participe-a-la-fete-de-la-science-2/",
+      "source": "GANIL news",
       "tags": [
-        "nuclear"
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "ganil-spiral2"
       ]
     },
     {
       "date": "2026-10-04",
       "type": "news",
-      "title": "Scientists discover first type I superconductor that breaks time-reversal symmetry",
-      "summary": "Superconductors are materials that conduct electricity with no resistance and expel magnetic fields when cooled to ultralow temperatures. And depending on their quantum structure, they can also showcase strange properties like magnetic levitation. But now things are getting a…",
-      "url": "https://phys.org/news/2026-10-scientists-superconductor-reversal-symmetry.html",
-      "source": "Phys.org — nuclear physics",
+      "title": "Bertrand Jacquot, winner of the CNRS Crystal Medal",
+      "summary": "Spinning heavy ions in an accelerator is a balancing act between theory and practice. Bertrand Jacquot, a research engineer, has been practising this subtle art for over twenty-five years: calculating the settings for the electromagnets that guide and focus the particle beams,…",
+      "url": "https://www.ganil-spiral2.eu/2026/07/09/bertrand-jacquot-winner-of-the-cnrs-crystal-medal/",
+      "source": "GANIL news",
       "tags": [
-        "nuclear"
-      ]
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-07-09",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
     },
     {
       "date": "2026-10-04",
       "type": "news",
-      "title": "Q&A: How will quantum computers change society?",
-      "summary": "Once called a \"pipe dream,\" quantum computers are now approaching practical use. Companies and research institutes around the world are in fierce competition to develop this technology, which has the potential to rapidly perform some calculations that are extremely difficult…",
-      "url": "https://phys.org/news/2026-10-qa-quantum-society.html",
-      "source": "Phys.org — nuclear physics",
+      "title": "Call for applications 2027 Visiting Scientist at GANIL, France",
+      "summary": "GANIL welcomes international scientists to apply to its visitor program. The objective of this visiting-scientist program is to provide an international venue for research on nuclear physics, interdisciplinary research, accelerator and instrumentation developments. The program…",
+      "url": "https://www.ganil-spiral2.eu/2026/07/01/call-for-applications-2027-visiting-scientist-at-ganil-france/",
+      "source": "GANIL news",
       "tags": [
-        "nuclear"
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-07-01",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "ganil-spiral2"
       ]
+    },
+    {
+      "date": "2026-10-04",
+      "type": "event",
+      "title": "ECT* welcomes new Board member",
+      "summary": "ECT* welcomes new Board member Andreas Juettner of Southampton University and CERN joins the ECT* Scientific Board We are happy to announce that Professor Andreas Juettner of Southampton University and CERN is joining the ECT* Scientific Board for a period of three years.…",
+      "url": "https://www.ectstar.eu/2026/07/30/ect-welcomes-new-board-member/",
+      "source": "ECT* news & workshops",
+      "tags": [
+        "workshop"
+      ],
+      "lang": "en",
+      "published": "2026-07-30",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "event",
+      "title": "ECT*’s Maurizio Dapor becomes an FBK Distinguished Fellow",
+      "summary": "Dr. Maurizio Dapor, ECT* researcher and for many years head of the research unit ECT*-LISC, officially retired on April 30, 2026. His exceptional career spanned 41 years, with many research achievements, particularly on charge transport in solids. The ECT* community…",
+      "url": "https://www.ectstar.eu/2026/05/04/ects-maurizio-dapor-becomes-an-fbk-distinguished-fellow/",
+      "source": "ECT* news & workshops",
+      "tags": [
+        "workshop"
+      ],
+      "lang": "en",
+      "published": "2026-05-04",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "event",
+      "title": "This week at ECT* the workshop The Sign Problem of Fermions: Computational Challenges and Emerging Approaches",
+      "summary": "For more information click HERE For a detailed timetable, click HERE The post This week at ECT* the workshop The Sign Problem of Fermions: Computational Challenges and Emerging Approaches appeared first on FBK ECT* .",
+      "url": "https://www.ectstar.eu/2026/04/15/this-week-at-ect-the-workshop-the-sign-problem-of-fermions-computational-challenges-and-emerging-approaches/",
+      "source": "ECT* news & workshops",
+      "tags": [
+        "workshop"
+      ],
+      "lang": "en",
+      "published": "2026-04-15",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "How Nuclear Science Helps Tackle Food Waste",
+      "url": "http://www.iaea.org/newscenter/news/how-nuclear-science-helps-tackle-food-waste",
+      "source": "IAEA — nuclear science news",
+      "tags": [
+        "facility"
+      ],
+      "lang": "en",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "Türkiye Protects its Citrus Harvests with Nuclear Science",
+      "url": "http://www.iaea.org/newscenter/news/turkiye-protects-its-citrus-harvests-with-nuclear-science",
+      "source": "IAEA — nuclear science news",
+      "tags": [
+        "facility"
+      ],
+      "lang": "en",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "ITN Newsletter – August 2026",
+      "summary": "Foreword Dear Ion Trappers, We would like to thank you for the ongoing engagement from the iontrap community, who keep the conversation lively by sharing their latest news, events, jobs, publications, and editorials. Visit the ITN-Website (https://iontraps.net/) where you can…",
+      "url": "https://iontraps.net/itn-newsletter-august-2026/",
+      "source": "Ion Traps Newsletter (iontraps.net)",
+      "tags": [
+        "trap"
+      ],
+      "lang": "en",
+      "published": "2026-08-20",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "news",
+      "title": "ITN Newsletter – July 2026",
+      "summary": "Foreword Dear Ion Trappers, As summer begins and the temperatures rise, we would like to thank you for the ongoing engagement from the iontrap community, who keep the conversation lively by sharing their latest news, events, jobs, publications, and editorials. Visit the…",
+      "url": "https://iontraps.net/itn-newsletter-july-2026/",
+      "source": "Ion Traps Newsletter (iontraps.net)",
+      "tags": [
+        "trap"
+      ],
+      "lang": "en",
+      "published": "2026-07-29",
+      "collected_at": "2026-10-04",
+      "verification_status": "feed-collected"
     }
   ],
-  "fetched": "2026-10-04T10:34:03Z"
+  "fetched": "2026-10-04T21:21:43+00:00"
 }

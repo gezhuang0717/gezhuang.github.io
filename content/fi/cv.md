@@ -30,7 +30,7 @@ showDate: false
 
 ## Opetus ja ohjaus
 
-- Kahden tutkijatohtorin ja yhden väitöskirjatutkijan ohjaus (ks. [Ryhmä](../group/))
+- **English fallback:** Supervision and collaboration with early-career researchers (see [Group](../group/)).
 - Luennoitsija, FYSS3552 *Lasers and Traps in Nuclear Physics Studies*
 
 ## Luottamustehtävät

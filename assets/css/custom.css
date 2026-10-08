@@ -217,3 +217,133 @@ article h1, .post-title, .profile_inner h1, main h1 {
 header nav a[rel="me"] { white-space: nowrap; }
 header nav > div:first-child { margin-inline-end: 1.2rem; }
 @media (min-width: 640px) and (max-width: 1279px) { header nav ul > li.group { margin-inline-end: 1.1rem !important; } }
+.zg-clock-saying{margin:.4rem 0 0;font-style:italic;font-size:.9rem;opacity:.9;border-top:1px dashed rgba(127,127,160,.35);padding-top:.4rem}
+/* Lab: 3D trap, chart of nuclides, body radioactivity */
+.zg-3d canvas,.zg-chart canvas{width:100%;height:auto;max-width:100%;border-radius:12px;background:radial-gradient(circle at 50% 40%,rgba(139,108,255,.08),transparent 70%);touch-action:none;cursor:grab}
+.zg-chart-wrap{overflow-x:auto}
+.zg-chart canvas{min-width:560px;cursor:crosshair}
+.zg-chart-info{font-family:ui-monospace,monospace;font-size:.9rem;margin:.4rem 0}
+.zg-chart-legend{display:flex;flex-wrap:wrap;gap:.7rem;font-size:.8rem}
+.zg-chart-legend span{display:inline-flex;align-items:center;gap:.3rem}
+.zg-chart-legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:3px}
+.zg-hl-bar{display:inline-block;width:8rem;height:.7rem;border-radius:4px;background:linear-gradient(90deg,hsl(280,85%,55%),hsl(210,85%,55%),hsl(140,85%,55%),hsl(60,85%,55%),hsl(0,85%,55%))}
+.zg-body table th{text-align:left;padding-right:1rem}
+/* Chart of nuclides (AME2020/NUBASE2020) */
+.nc-bar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.5rem 0}
+.nc-bar select,.nc-bar input{font:inherit;padding:.25rem .5rem;border-radius:8px;border:1px solid rgba(127,127,160,.4);background:transparent;color:inherit}
+.nc-stage{position:relative}
+.nc-canvas{width:100%;height:auto;border-radius:14px;cursor:crosshair;touch-action:none;
+  background:linear-gradient(135deg,rgba(255,95,109,.05),rgba(71,200,255,.05),rgba(139,108,255,.07))}
+.nc-card{position:absolute;top:.6rem;right:.6rem;width:min(340px,92%);max-height:calc(100% - 1.2rem);overflow:auto;padding:.8rem 1rem;border-radius:14px;
+  background:rgba(255,255,255,.95);color:#111827;box-shadow:0 12px 32px -12px rgba(60,40,140,.55);border:2px solid transparent;
+  background-clip:padding-box;font-size:.85rem}
+.nc-card::before{content:"";position:absolute;inset:-2px;z-index:-1;border-radius:16px;background:linear-gradient(135deg,#ff5f6d,#ffc371,#47c8ff,#8b6cff)}
+.nc-card table{width:100%;border-collapse:collapse}.nc-card th{text-align:left;padding:.15rem .4rem .15rem 0;white-space:nowrap;color:#6b2a5f}.nc-card td{padding:.15rem 0}
+.nc-head{display:flex;gap:.7rem;align-items:center;margin-bottom:.4rem}
+.nc-sym{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#ff5f6d,#8b6cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nc-close{position:absolute;top:.3rem;right:.5rem;border:0;background:none;font-size:1.3rem;cursor:pointer;color:#6b2a5f}
+.nc-facts{margin:.5rem 0 0;padding-left:1.1rem}.nc-facts li{margin:.15rem 0}
+.nc-src{margin:.4rem 0 0;font-size:.7rem;opacity:.7}
+.nc-legend{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;font-size:.8rem}
+.nc-legend span{display:inline-flex;align-items:center;gap:.3rem}.nc-legend i{width:.8rem;height:.8rem;border-radius:3px;display:inline-block}
+.nc-ramp{display:inline-block;width:9rem;height:.7rem;border-radius:4px;background:linear-gradient(90deg,hsl(270,85%,52%),hsl(200,85%,52%),hsl(130,85%,52%),hsl(60,85%,52%),hsl(0,85%,52%))}
+.nc-ptable{display:grid;grid-template-columns:repeat(18,minmax(0,1fr));gap:3px;margin-top:.5rem}
+.nc-ptable button{aspect-ratio:1;border:0;border-radius:6px;cursor:pointer;padding:1px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;
+  color:#fff;background:color-mix(in srgb,#5b1146 calc(var(--k)*100%),#e8a6c9);transition:transform .12s}
+.nc-ptable button:hover{transform:scale(1.18);z-index:2;box-shadow:0 4px 12px -4px #5b1146}
+.nc-ptable small{font-size:.5rem;opacity:.85}.nc-ptable b{font-size:.8rem}.nc-ptable i{font-size:.5rem;font-style:normal;opacity:.85}
+.nc-pt-note{font-size:.72rem;opacity:.75;align-self:center}
+@media (max-width:640px){.nc-card{position:static;width:auto;margin-top:.5rem}.nc-ptable b{font-size:.6rem}.nc-ptable small,.nc-ptable i{display:none}}
+.zg-checks{display:flex;flex-wrap:wrap;gap:.4rem 1rem;margin:.4rem 0}.zg-3d .zg-sim-controls output{min-width:2.2em;display:inline-block;font-variant-numeric:tabular-nums}
+/* Daily link panel + fancy blog list */
+.zg-links{margin-top:2rem}
+.zg-links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem}
+.zg-links-box{padding:.7rem .9rem;border-radius:14px;border:1px solid rgba(127,127,160,.25);border-top:4px solid hsl(var(--g) 85% 55%);
+  background:linear-gradient(180deg,hsl(var(--g) 90% 60% / .10),transparent)}
+.zg-links-box h3{margin:.1rem 0 .4rem;font-size:1rem}
+.zg-links-box ul{margin:0;padding-left:1rem;font-size:.88rem}.zg-links-box li{margin:.2rem 0}
+/* Blog: rainbow cards for the post list (Congo article-link partial) */
+main section > article.mt-6{position:relative;padding:1rem 1.1rem;border-radius:16px;border:1px solid rgba(127,127,160,.22);
+  background:linear-gradient(135deg,rgba(255,95,109,.06),rgba(255,195,113,.05),rgba(71,200,255,.06),rgba(139,108,255,.07));transition:transform .15s,box-shadow .15s}
+main section > article.mt-6:hover{transform:translateY(-2px);box-shadow:0 10px 26px -14px rgba(90,70,200,.6)}
+main section > article.mt-6::before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:4px;border-radius:4px;background:linear-gradient(180deg,#ff5f6d,#ffc371,#47c8ff,#8b6cff)}
+/* Games page */
+.g-pair{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin:.6rem 0}
+.g-nuc{min-width:8rem;text-align:center;padding:.8rem 1rem;border-radius:16px;color:#fff;background:linear-gradient(135deg,#ff5f6d,#8b6cff);box-shadow:0 8px 20px -10px #5b1146}
+.g-nuc b{display:block;font-size:2rem}.g-nuc small{opacity:.9}
+.g-vs{font-weight:700;opacity:.8}
+.g-box canvas,.g-trap canvas{width:100%;height:auto;border-radius:12px;background:linear-gradient(135deg,rgba(71,200,255,.06),rgba(139,108,255,.08))}
+.g-slider{display:flex;gap:.6rem;align-items:center;margin:.5rem 0}.g-slider input{flex:1}
+.g-msg{font-weight:600;min-height:1.4em}
+.g-q{font-size:1.1rem;font-weight:700}
+.g-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.8rem}
+.g-trap{margin:0;text-align:center;font-size:.85rem}
+.nc-export{display:flex;flex-wrap:wrap;gap:.4rem;margin:.3rem 0 .8rem}
+.nc-plot{width:100%;height:auto;border-radius:14px;cursor:crosshair;background:linear-gradient(135deg,rgba(71,200,255,.05),rgba(139,108,255,.07))}
+.nc-cbtn{display:flex;flex-wrap:wrap;gap:.3rem;margin:.5rem 0}.nc-cbtn .zg-btn{font-size:.75rem;padding:.2rem .55rem}
+.zg-btn.is-rec{background:#e5484d!important;color:#fff!important;animation:zg-blink 1s infinite}
+@keyframes zg-blink{50%{opacity:.6}}
+
+/* ── glossary pop-ups (static/js/glossary.js, data/glossary.yaml) ───────── */
+.zg-term { cursor: help; text-decoration: underline dotted var(--zg-blue); text-decoration-thickness: 1.5px; text-underline-offset: 3px; border-radius: 3px; transition: background .15s; }
+.zg-term:hover, .zg-term.on, .zg-term:focus-visible { background: color-mix(in srgb, var(--zg-blue) 12%, transparent); text-decoration-color: var(--zg-violet); outline: none; }
+.zg-gloss-pop { position: absolute; z-index: 1000; max-width: calc(100vw - 24px); padding: 14px 16px 12px; border-radius: 12px;
+  background: var(--zg-card); color: var(--zg-ink); border: 1px solid var(--zg-line); box-shadow: 0 12px 32px rgba(15,23,42,.18);
+  font-size: .9rem; line-height: 1.5; animation: zg-gloss-in .14s ease-out; }
+.zg-gloss-pop::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; border-radius: 12px 12px 0 0; background: var(--zg-rainbow); }
+.zg-gloss-h { font-weight: 700; font-size: 1rem; padding-right: 22px; }
+.zg-gloss-en { display: block; font-weight: 500; font-size: .8rem; color: var(--zg-muted); }
+.zg-gloss-t { margin: .45em 0 .6em; }
+.zg-gloss-l { display: flex; flex-wrap: wrap; gap: 6px; }
+.zg-gloss-l a { font-size: .78rem; padding: 2px 9px; border-radius: 999px; background: var(--zg-soft); border: 1px solid var(--zg-line); color: var(--zg-blue); text-decoration: none; }
+.zg-gloss-l a:hover { border-color: var(--zg-blue); }
+.zg-gloss-x { position: absolute; top: 8px; right: 10px; border: 0; background: none; font-size: 1.2rem; line-height: 1; color: var(--zg-muted); cursor: pointer; }
+@keyframes zg-gloss-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .zg-gloss-pop { animation: none; } }
+
+/* games v2: option rows, hints, RFQ grid */
+.g-opts-row{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;margin:.4rem 0 .6rem;font-size:.85rem}
+.g-opts-row select{padding:.15rem .4rem;border-radius:8px;border:1px solid var(--zg-line);background:var(--zg-card);color:inherit}
+.g-chk{display:inline-flex;gap:.3rem;align-items:center}
+.g-sliders{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 1.2rem;font-size:.85rem}
+.g-sliders output{min-width:5.5em;text-align:right;font-variant-numeric:tabular-nums}
+.g-hints{margin-top:.4rem;font-size:.88rem}.g-hints summary{cursor:pointer;font-weight:600}.g-hints li{margin:.3rem 0}
+.g-info{font-size:.82rem}.rfq-out{font-size:.85rem;display:flex;flex-wrap:wrap;gap:.2rem .8rem}
+.g-rfq-grid{display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr);gap:.6rem}
+@media (max-width:640px){.g-rfq-grid{grid-template-columns:minmax(0,1fr)}}
+.rfq-leg{display:inline-flex;gap:.8rem}.rfq-leg i{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.25em;vertical-align:middle}
+.daily-upd{font-size:.82rem;color:var(--zg-muted);margin:.2rem 0 .6rem}
+
+/* trap family (layouts/_partials/zg/trap-zoo.html, static/js/trap-zoo.js) */
+.zg-trapzoo{margin:1.6rem 0}.zg-trapzoo-h{margin-bottom:.2rem}.zg-trapzoo-note{font-size:.85rem;margin-top:0}
+.zg-trapzoo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem}
+.zg-trapzoo .g-trap{margin:0;padding:.5rem;border:1px solid var(--zg-line);border-radius:14px;background:var(--zg-card);text-align:left}
+.zg-trapzoo .g-trap canvas{width:100%;height:auto;border-radius:10px;background:linear-gradient(135deg,rgba(71,200,255,.06),rgba(139,108,255,.08))}
+.zg-trapzoo figcaption{font-size:.8rem;line-height:1.4;margin-top:.35rem}.zg-trapzoo figcaption b{display:block;font-size:.9rem;margin-bottom:.15rem}
+.zg-trapzoo figcaption span{color:var(--zg-muted)}
+
+/* chart of nuclides: theory masses and lines */
+.nc-bar2{font-size:.85rem}.nc-ovl{display:inline-flex;flex-wrap:wrap;gap:.2rem .7rem;align-items:center}
+.nc-chk{display:inline-flex;align-items:center;gap:.25rem;white-space:nowrap}.nc-chk i{display:inline-block;width:1.1rem;height:.7rem;border-bottom:2.5px solid transparent}
+.nc-chk i[style*="border-radius"]{width:.6rem;height:.6rem;border:0}
+.nc-ramp-div{background:linear-gradient(90deg,hsl(220,80%,46%),hsl(220,80%,96%),hsl(0,80%,96%),hsl(0,80%,46%))}
+.nc-mnote{color:var(--zg-muted);font-style:italic}.nc-mref{margin:.2rem 0}.nc-mref a{color:var(--zg-blue)}
+.nc-card tr.nc-mrow th{color:#16a34a;padding-top:.5rem;text-align:left}
+.nc-defs{font-size:.85rem;margin:.4rem 0 1rem}.nc-defs summary{cursor:pointer;font-weight:600}.nc-defs li{margin:.3rem 0}
+
+/* games v3: number boxes, text inputs */
+.g-slider .g-num{width:6.2em;padding:.1rem .3rem;border:1px solid var(--zg-line);border-radius:6px;background:var(--zg-card);color:inherit;font-variant-numeric:tabular-nums;text-align:right}
+.g-unit{min-width:2.6em;font-size:.8rem;color:var(--zg-muted)}
+.g-text{padding:.15rem .45rem;border:1px solid var(--zg-line);border-radius:8px;background:var(--zg-card);color:inherit;min-width:14em}.g-text.g-short{min-width:5.5em;width:6.5em}
+.g-warn{color:#e5484d;font-size:.8rem}
+.rfq-out span{display:block}
+.nc-num{width:5em;padding:.1rem .3rem;border:1px solid var(--zg-line);border-radius:6px;background:var(--zg-card);color:inherit}
+.nc-prange{display:inline-flex;flex-wrap:wrap;gap:.3rem;align-items:center}
+.g-slider .g-num{flex:0 0 6.8em;width:6.8em}
+.zg-word-w{font-size:1.45rem;font-weight:700;background:var(--zg-rainbow);-webkit-background-clip:text;background-clip:text;color:transparent;margin:.2rem 0}
+.zg-word-o{font-size:.8rem;color:var(--zg-muted);margin:0 0 .3rem}.zg-word-s{font-size:.92rem;margin:.2rem 0 .6rem}
+/* PI-ICR: several species and eigenfrequency table */
+.pi-man{margin:.4rem 0}.pi-ions{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.pi-ions .g-text{flex:1;min-width:16rem}
+.pi-presets{flex-wrap:wrap;gap:.3rem;align-items:center;margin:.3rem 0}.pi-presets .zg-btn{padding:.15rem .5rem;font-size:.8rem}
+.pi-freq{overflow-x:auto;margin:.4rem 0}.pi-tab{font-size:.8rem;white-space:nowrap}.pi-tab th{width:auto}.pi-tab td,.pi-tab th{padding:.2rem .45rem}
+.pi-dot{display:inline-block;width:.65rem;height:.65rem;border-radius:50%;margin-right:.35rem;vertical-align:-.05rem}.pi-inv{font-size:.78rem;margin:.2rem 0}

@@ -15,7 +15,7 @@
 feeds:
   - name: "arXiv — ion traps & mass spectrometry"
     kind: arxiv
-    type: paper
+    type: preprint
     query: '(cat:nucl-ex OR cat:physics.ins-det OR cat:physics.atom-ph) AND (abs:"Penning trap" OR abs:"ion trap" OR abs:"MR-TOF" OR abs:"multi-reflection" OR abs:"mass spectrometry" OR abs:"cooler-buncher")'
     include: [trap, mass, time-of-flight, buncher, ion]
     tags: [trap]
@@ -25,7 +25,7 @@ feeds:
 
   - name: "arXiv — nuclear masses, Q-values & astrophysics"
     kind: arxiv
-    type: paper
+    type: preprint
     query: '(cat:nucl-ex OR cat:nucl-th) AND (abs:"mass measurement" OR abs:"Q value" OR abs:"Q-value" OR abs:"neutrino mass" OR abs:"rp-process" OR abs:"r-process" OR abs:"isomer")'
     tags: [nuclear]
     days: 4
@@ -55,3 +55,74 @@ feeds:
     url: "https://phys.org/rss-feed/physics-news/nuclear-physics/"
     tags: [nuclear]
     keep: 5
+
+  # ── verified journal feeds (checked 2026-10-04) ──────────────────────────
+  - name: "Physical Review Letters — Nuclear Physics"
+    kind: rss
+    type: paper
+    url: "http://feeds.aps.org/rss/tocsec/PRL-NuclearPhysics.xml"
+    tags: [nuclear, journal]
+    keep: 8
+
+  - name: "Physical Review Letters — traps, masses & astrophysics"
+    kind: rss
+    type: paper
+    url: "http://feeds.aps.org/rss/recent/prl.xml"
+    include: [Penning, ion trap, trapped ion, mass spectrom, storage ring, nucleosynthesis, r-process, rp-process, neutrino mass, isotope shift, nuclear clock]
+    exclude: [Nuclear Physics]
+    tags: [journal]
+    keep: 5
+
+  - name: "Physical Review C"
+    kind: rss
+    type: paper
+    url: "http://feeds.aps.org/rss/recent/prc.xml"
+    include: [mass, Penning, trap, Q value, Q-value, storage ring, isomer, beta decay, β decay, N=Z, N = Z, r-process, rp-process, astrophys, half-li, shell]
+    tags: [nuclear, journal]
+    keep: 8
+
+  - name: "Nature Physics"
+    kind: rss
+    type: paper
+    url: "https://www.nature.com/nphys.rss"
+    include: [nucle, isotope, ion, trap, neutrino, atomic clock, antimatter, mass]
+    tags: [journal]
+    keep: 3
+
+  # ── verified facility / community news (checked 2026-10-04) ──────────────
+  - name: "TRIUMF news"
+    kind: rss
+    type: news
+    url: "https://triumf.ca/feed"
+    tags: [facility]
+    keep: 3
+
+  - name: "GANIL news"
+    kind: rss
+    type: news
+    url: "https://www.ganil-spiral2.eu/feed/"
+    tags: [facility]
+    keep: 3
+
+  - name: "ECT* news & workshops"
+    kind: rss
+    type: event
+    url: "https://www.ectstar.eu/feed/"
+    tags: [workshop]
+    keep: 3
+
+  - name: "IAEA — nuclear science news"
+    kind: rss
+    type: news
+    url: "https://www.iaea.org/feeds/topnews"
+    include: [nuclear data, research reactor, accelerator, isotope, physics, science]
+    tags: [facility]
+    keep: 2
+
+  - name: "Ion Traps Newsletter (iontraps.net)"
+    kind: rss
+    type: news
+    url: "https://iontraps.net/feed/"
+    tags: [trap]
+    keep: 2
+

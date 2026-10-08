@@ -1,0 +1,117 @@
+# "Word of the day" on the homepage (layouts/_shortcodes/nuclide-of-the-day.html). One per day, same for all visitors.
+# word: the word in its own language; from: language; say: meaning in en/zh/fi/de/ja. Add entries freely.
+words:
+  - word: "sisu"
+    from: "Suomi"
+    say: {en: "Stubborn inner strength to keep going when things get hard — the Finnish national virtue.", zh: "在困境中坚持下去的倔强内在力量——芬兰的国民精神。", fi: "Sitkeä sisäinen voima jatkaa, kun on vaikeaa.", de: "Zähe innere Kraft, weiterzumachen, wenn es schwer wird.", ja: "困難でもやり抜く粘り強い内なる力——フィンランドの国民性。"}
+  - word: "kalsarikännit"
+    from: "Suomi"
+    say: {en: "Drinking at home in your underwear with no intention of going out. Finland has an emoji for it.", zh: "穿着内裤在家喝酒、完全不打算出门。芬兰甚至为它做了表情符号。", fi: "Kotona kalsareissa juominen ilman aikomusta lähteä minnekään.", de: "Zu Hause in Unterhose trinken, ohne die Absicht auszugehen. Finnland hat ein Emoji dafür.", ja: "出かける気もなく下着姿で家飲みすること。フィンランドには専用の絵文字がある。"}
+  - word: "Fernweh"
+    from: "Deutsch"
+    say: {en: "The opposite of homesickness: an ache for faraway places.", zh: "与思乡相反：对远方的渴望。", fi: "Koti-ikävän vastakohta: kaipuu kaukaisiin paikkoihin.", de: "Das Gegenteil von Heimweh: Sehnsucht nach der Ferne.", ja: "ホームシックの反対：遠い場所への憧れ。"}
+  - word: "Feierabend"
+    from: "Deutsch"
+    say: {en: "The festive moment when the working day is over.", zh: "下班后的那份轻松时刻。", fi: "Juhlava hetki, kun työpäivä on ohi.", de: "Der Moment, wenn die Arbeit getan ist.", ja: "仕事を終えたあとの、ほっとするひととき。"}
+  - word: "Kopfkino"
+    from: "Deutsch"
+    say: {en: "'Head cinema': the film your imagination plays — e.g. picturing your ion cloud before the beamtime.", zh: "“脑内电影”：想象力自动放映的画面——比如束流时间前想象离子云的样子。", fi: "'Pääteatteri': mielikuvituksen elokuva.", de: "Die Bilder, die die Fantasie abspielt.", ja: "「頭の中の映画」：想像が勝手に上映する場面。"}
+  - word: "木漏れ日 (komorebi)"
+    from: "日本語"
+    say: {en: "Sunlight filtering through the leaves of trees.", zh: "透过树叶洒下的阳光。", fi: "Puiden lehtien läpi siivilöityvä auringonvalo.", de: "Sonnenlicht, das durch die Blätter der Bäume fällt.", ja: "木々の葉の間から差し込む日の光。"}
+  - word: "積ん読 (tsundoku)"
+    from: "日本語"
+    say: {en: "Buying books and letting them pile up unread. Also applies to arXiv tabs.", zh: "买了书却堆着不读。也适用于浏览器里的 arXiv 标签页。", fi: "Kirjojen ostaminen ja pinoaminen lukematta. Koskee myös arXiv-välilehtiä.", de: "Bücher kaufen und ungelesen stapeln. Gilt auch für arXiv-Tabs.", ja: "本を買って読まずに積んでおくこと。arXiv のタブにも当てはまる。"}
+  - word: "改善 (kaizen)"
+    from: "日本語"
+    say: {en: "Continuous small improvement — how a trap reaches 10⁻⁹ precision.", zh: "持续的小改进——离子阱就是这样达到 10⁻⁹ 精度的。", fi: "Jatkuva pieni parantaminen.", de: "Ständige kleine Verbesserung.", ja: "小さな改善の積み重ね——トラップが 10⁻⁹ の精度に至る道。"}
+  - word: "一期一会 (ichigo ichie)"
+    from: "日本語"
+    say: {en: "'One time, one meeting': treasure each encounter, it will never happen the same way again — like every exotic nucleus in the trap.", zh: "一期一会：珍惜每次相遇，因为不会再以同样的方式发生——就像阱里的每一个奇特核。", fi: "Yksi kerta, yksi kohtaaminen: jokainen hetki on ainutlaatuinen.", de: "Einmal, eine Begegnung: jede Begegnung ist einmalig.", ja: "一生に一度の出会い——トラップの中のエキゾチック核のように。"}
+  - word: "加油 (jiāyóu)"
+    from: "中文"
+    say: {en: "'Add oil!' — keep going, you can do it.", zh: "加油！坚持下去，你能行。", fi: "'Lisää öljyä!' — jaksaa, pystyt siihen.", de: "'Gib Öl!' — weiter so, du schaffst das.", ja: "「油を足せ！」——がんばれ。"}
+  - word: "缘分 (yuánfèn)"
+    from: "中文"
+    say: {en: "The fate that brings people together — or two ions into the same trap cycle.", zh: "让人相遇的缘分——或让两个离子进入同一个阱周期。", fi: "Kohtalo, joka tuo ihmiset yhteen.", de: "Das Schicksal, das Menschen zusammenführt.", ja: "人を結びつける縁。"}
+  - word: "画蛇添足"
+    from: "中文"
+    say: {en: "'Drawing legs on a snake': spoiling something by adding what isn't needed — the last fit parameter.", zh: "画蛇添足——多余的那个拟合参数。", fi: "'Jalkojen piirtäminen käärmeelle': turha lisäys.", de: "'Der Schlange Beine malen': Überflüssiges hinzufügen.", ja: "蛇に足を描く——余計な一手。"}
+  - word: "hygge"
+    from: "Dansk"
+    say: {en: "Cosy togetherness with candles and warm drinks.", zh: "烛光与热饮带来的温馨惬意。", fi: "Kodikas yhdessäolo kynttilöiden ja lämpimien juomien äärellä.", de: "Gemütliches Beisammensein bei Kerzenlicht.", ja: "ろうそくと温かい飲み物でくつろぐ心地よさ。"}
+  - word: "lagom"
+    from: "Svenska"
+    say: {en: "Not too much, not too little — just right. Also the ideal buffer-gas pressure.", zh: "不多不少，恰到好处。也是缓冲气体压强的理想状态。", fi: "Ei liikaa, ei liian vähän — juuri sopivasti.", de: "Nicht zu viel, nicht zu wenig — genau richtig.", ja: "多すぎず少なすぎず、ちょうどよい。"}
+  - word: "saudade"
+    from: "Português"
+    say: {en: "A deep longing for something absent that may never return.", zh: "对已逝或远去之物的深切思念。", fi: "Syvä kaipaus johonkin poissaolevaan.", de: "Tiefe Sehnsucht nach etwas Abwesendem.", ja: "失われたものへの深い郷愁。"}
+  - word: "serendipity"
+    from: "English"
+    say: {en: "Finding something good without looking for it — how many isomers were discovered.", zh: "意外发现好东西——很多同核异能态就是这样被发现的。", fi: "Hyvän löytäminen sattumalta.", de: "Zufällig etwas Gutes entdecken.", ja: "思いがけない幸運な発見——多くのアイソマーはこうして見つかった。"}
+  - word: "sobremesa"
+    from: "Español"
+    say: {en: "The time spent talking at the table after a meal.", zh: "饭后在餐桌旁闲聊的时光。", fi: "Aika, joka vietetään juttelemassa ruokapöydässä aterian jälkeen.", de: "Die Zeit nach dem Essen, in der man am Tisch plaudert.", ja: "食後に食卓で語らう時間。"}
+  - word: "Gedankenexperiment"
+    from: "Deutsch"
+    say: {en: "A thought experiment — the cheapest beamtime there is.", zh: "思想实验——最便宜的束流时间。", fi: "Ajatuskoe — halvin mahdollinen säteilyaika.", de: "Das Gedankenexperiment — die billigste Strahlzeit.", ja: "思考実験——いちばん安いビームタイム。"}
+  - word: "Eigenzeit"
+    from: "Deutsch"
+    say: {en: "Proper time — the time on a moving clock. Ions in a storage ring age slower (a little).", zh: "固有时——运动时钟上的时间。储存环里的离子衰老得（稍微）慢一些。", fi: "Ominaisaika — liikkuvan kellon aika.", de: "Die Zeit auf einer bewegten Uhr.", ja: "固有時——動く時計の時間。蓄積リングのイオンは（少しだけ）ゆっくり年をとる。"}
+  - word: "quark"
+    from: "English · James Joyce"
+    say: {en: "Gell-Mann took it from Finnegans Wake: 'Three quarks for Muster Mark!'", zh: "盖尔曼取自乔伊斯《芬尼根的守灵夜》：“给马克检阅者三声夸克！”", fi: "Gell-Mann lainasi sanan Joycen teoksesta Finnegans Wake.", de: "Gell-Mann nahm das Wort aus Joyces Finnegans Wake.", ja: "ゲルマンはジョイスの『フィネガンズ・ウェイク』からこの語を取った。"}
+  - word: "barn"
+    from: "English · physics slang"
+    say: {en: "10⁻²⁸ m²: a nuclear cross-section 'as big as a barn' — named in 1942 as a joke.", zh: "10⁻²⁸ m²：核截面“大得像谷仓”——1942 年的玩笑命名。", fi: "10⁻²⁸ m²: ytimen vaikutusala 'iso kuin lato' — vitsinimi vuodelta 1942.", de: "10⁻²⁸ m²: ein Kernquerschnitt 'so groß wie eine Scheune' — Scherzname von 1942.", ja: "10⁻²⁸ m²：「納屋ほど大きい」核断面積——1942 年の冗談の命名。"}
+  - word: "shake"
+    from: "English · physics slang"
+    say: {en: "10 ns — 'two shakes of a lamb's tail'. A typical MR-TOF bunch is about two shakes wide.", zh: "10 ns——“羊尾巴摇两下”。典型 MR-TOF 束团大约两个 shake 宽。", fi: "10 ns — 'karitsan hännän heilautus'.", de: "10 ns — 'zwei Wackler eines Lämmerschwanzes'.", ja: "10 ns——「子羊のしっぽのひと振り」。"}
+  - word: "jiffy"
+    from: "English"
+    say: {en: "In physics slang, a jiffy is the time light needs to cross one femtometre (≈ 3·10⁻²⁴ s) — shorter than the lifetime of any nuclear state.", zh: "物理俚语中，jiffy 指光走过 1 fm 的时间（≈ 3·10⁻²⁴ s）——比任何原子核状态的寿命都短。", fi: "Aika, jonka valo tarvitsee kulkeakseen femtometrin.", de: "Die Zeit, die Licht für ein Femtometer braucht.", ja: "光が 1 fm 進む時間（≈ 3·10⁻²⁴ s）。"}
+  - word: "Ohrwurm"
+    from: "Deutsch"
+    say: {en: "'Ear worm': a tune stuck in your head — like 808 795 Hz after a TOF-ICR week.", zh: "“耳虫”：在脑中挥之不去的旋律——就像测完一周 TOF-ICR 后的 808 795 Hz。", fi: "'Korvamato': päähän jäävä sävel.", de: "Eine Melodie, die nicht aus dem Kopf geht.", ja: "「耳の虫」：頭から離れない旋律。"}
+  - word: "Schnapsidee"
+    from: "Deutsch"
+    say: {en: "A crazy idea born over schnapps. Some became experiments.", zh: "喝酒时冒出的疯狂点子。有些后来变成了实验。", fi: "Hullu idea, joka syntyi snapsin äärellä.", de: "Eine verrückte Idee nach dem Schnaps. Manche wurden Experimente.", ja: "酒の席で生まれた突飛なアイデア。実験になったものもある。"}
+  - word: "わびさび (wabi-sabi)"
+    from: "日本語"
+    say: {en: "Beauty in imperfection and impermanence — every spectrum has a tail.", zh: "侘寂：不完美与无常之美——每个能谱都有拖尾。", fi: "Epätäydellisyyden ja katoavaisuuden kauneus.", de: "Schönheit im Unvollkommenen und Vergänglichen.", ja: "不完全と無常の美——どのスペクトルにも裾がある。"}
+  - word: "森林浴 (shinrin-yoku)"
+    from: "日本語"
+    say: {en: "Forest bathing — recommended after a 36-hour beamtime.", zh: "森林浴——36 小时束流时间之后强烈推荐。", fi: "Metsäkylpy — suositellaan 36 tunnin säteilyajan jälkeen.", de: "Waldbaden — empfohlen nach 36 Stunden Strahlzeit.", ja: "森林浴——36 時間のビームタイムのあとにおすすめ。"}
+  - word: "kaamos"
+    from: "Suomi"
+    say: {en: "Polar night: the weeks in the north when the sun does not rise.", zh: "极夜：北方太阳不升起的那些星期。", fi: "Kaamos: pohjoisen aurinkoton aika.", de: "Polarnacht: die Wochen, in denen im Norden die Sonne nicht aufgeht.", ja: "極夜：北の地で太陽が昇らない数週間。"}
+  - word: "löyly"
+    from: "Suomi"
+    say: {en: "The steam that rises when water hits the sauna stones — and the spirit of the sauna.", zh: "水浇到桑拿石上升起的蒸汽——也是桑拿的灵魂。", fi: "Löyly: kiukaan höyry ja saunan henki.", de: "Der Dampf, wenn Wasser auf die Saunasteine trifft.", ja: "サウナストーンに水をかけて立ちのぼる蒸気——サウナの魂。"}
+  - word: "jokamiehenoikeus"
+    from: "Suomi"
+    say: {en: "Everyman's right: you may walk, camp and pick berries in any Finnish forest.", zh: "每个人的权利：在芬兰任何森林中都可以散步、露营和采浆果。", fi: "Jokamiehenoikeus: saa liikkua, leiriytyä ja poimia marjoja luonnossa.", de: "Jedermannsrecht: In Finnlands Wäldern darf man wandern, zelten und Beeren sammeln.", ja: "自然享受権：フィンランドの森ではだれでも歩き、キャンプし、ベリーを摘める。"}
+  - word: "眼高手低"
+    from: "中文"
+    say: {en: "'Eyes high, hands low': great ideas, weak execution — the opposite of a good postdoc.", zh: "眼高手低——好的博士后恰恰相反。", fi: "'Silmät korkealla, kädet matalalla': suuria ideoita, heikko toteutus.", de: "'Augen hoch, Hände tief': große Ideen, schwache Umsetzung.", ja: "眼高手低——理想は高いが腕が伴わない。"}
+  - word: "温故知新"
+    from: "中文"
+    say: {en: "Review the old to learn the new — re-evaluating old masses with AME.", zh: "温故而知新——用 AME 重新评估旧的质量数据。", fi: "Kertaa vanhaa oppiaksesi uutta.", de: "Das Alte wiederholen, um Neues zu lernen.", ja: "故きを温ねて新しきを知る。"}
+  - word: "Torschlusspanik"
+    from: "Deutsch"
+    say: {en: "Gate-closing panic: the fear of time running out — e.g. three days before a proposal deadline.", zh: "关门恐慌：时间快用完的焦虑——比如提案截止前三天。", fi: "Portin sulkeutumisen paniikki: pelko ajan loppumisesta.", de: "Die Angst, dass die Zeit davonläuft.", ja: "門が閉まる前のパニック——締切三日前の焦り。"}
+  - word: "Zugzwang"
+    from: "Deutsch"
+    say: {en: "Being forced to move when any move makes things worse — choosing which isotope to drop from the proposal.", zh: "被迫走棋，而每一步都更糟——决定从提案中删掉哪个同位素。", fi: "Siirtopakko: on pakko siirtää, vaikka jokainen siirto huonontaa asemaa.", de: "Der Zwang zu ziehen, obwohl jeder Zug schadet.", ja: "どの手も不利なのに指さなければならない状態。"}
+  - word: "mångata"
+    from: "Svenska"
+    say: {en: "The road-like reflection of the moon on the water.", zh: "月光在水面上铺成的一条路。", fi: "Kuun heijastuksen muodostama tie veden pinnalla.", de: "Der Weg, den der Mond auf das Wasser malt.", ja: "水面に映る月の光の道。"}
+  - word: "commensurability"
+    from: "English · physics"
+    say: {en: "When two frequencies have a rational ratio, orbits close — the flower pattern of PI-ICR is a picture of it.", zh: "两个频率之比为有理数时轨道闭合——PI-ICR 的“花”图样就是它的写照。", fi: "Kun kahden taajuuden suhde on rationaalinen, radat sulkeutuvat.", de: "Bei rationalem Frequenzverhältnis schließen sich die Bahnen.", ja: "二つの周波数の比が有理数のとき軌道は閉じる。"}
+  - word: "ikigai"
+    from: "日本語"
+    say: {en: "A reason for being — what gets you up in the morning.", zh: "生活的意义——让你早上起床的理由。", fi: "Syy olla olemassa — se, mikä saa nousemaan aamulla.", de: "Der Grund zu leben — was einen morgens aufstehen lässt.", ja: "生きがい——朝起きる理由。"}
+  - word: "meraki"
+    from: "Ελληνικά"
+    say: {en: "Doing something with soul, creativity and love — like hand-tuning an RFQ.", zh: "用心、创造力和热爱去做一件事——比如手动调节 RFQ。", fi: "Tehdä jotain sielulla ja rakkaudella.", de: "Etwas mit Seele, Kreativität und Liebe tun.", ja: "魂と創造性と愛情を込めて何かをすること。"}

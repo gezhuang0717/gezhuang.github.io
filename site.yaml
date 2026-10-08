@@ -1,91 +1,140 @@
-# ═════════════════════════════════════════════════════════════════════════════
-#  site.yaml — MASTER SETTINGS for https://gezhuang0717.github.io/gezhuang.github.io/
-#
-#  Batch mode: change anything here, then run
-#        python3 tools/site.py config
-#  which regenerates every theme configuration under sites/ (3 themes ×
-#  5 languages) and the Chinese i18n aliases. Never edit sites/ by hand —
-#  those files are overwritten.
-#
-#  Page TEXT lives in content/<lang>/…  ·  Papers/talks/daily data in data/
-# ═════════════════════════════════════════════════════════════════════════════
-
-# Theme used for the live site: congo | blowfish | papermod
 live_theme: congo
-
-base_url: "https://gezhuang0717.github.io/gezhuang.github.io/"
-title: "Zhuang Ge"
-author: "Zhuang Ge"
-email: "zhuang.z.ge@jyu.fi"
-image: "img/zhuang-ge.png"     # file in assets/img/ (and static/img/ for PaperMod)
-
-# Icons under the name (order = display order). Congo/Blowfish icon names:
-# email, orcid, google-scholar, researchgate, linkedin, github, link, x-twitter, …
+base_url: https://gezhuang0717.github.io/gezhuang.github.io/
+title: Zhuang Ge
+author: Zhuang Ge
+email: zhuang.z.ge@jyu.fi
+image: img/zhuang-ge.png
 links:
-  - {icon: email,        url: "mailto:zhuang.z.ge@jyu.fi"}
-  - {icon: orcid,        url: "https://orcid.org/0000-0001-8586-6134"}
-  - {icon: researchgate, url: "https://www.researchgate.net/profile/Zhuang-Ge"}
-  - {icon: linkedin,     url: "https://www.linkedin.com/in/zhuang-ge-847898202"}
-  - {icon: github,       url: "https://github.com/gezhuang0717"}
-  - {icon: link,         url: "https://www.jyu.fi/en/people/zhuang-ge"}
-
-# Languages. `code` is the folder under content/ and i18n/.
-# Chinese needs a different internal key per theme (theme translation files).
+- icon: email
+  url: mailto:zhuang.z.ge@jyu.fi
+- icon: orcid
+  url: https://orcid.org/0000-0001-8586-6134
+- icon: researchgate
+  url: https://www.researchgate.net/profile/Zhuang-Ge
+- icon: linkedin
+  url: https://www.linkedin.com/in/zhuang-ge-847898202
+- icon: link
+  url: https://www.jyu.fi/en/people/zhuang-ge
 languages:
-  - code: en
-    name: "English"
-    locale: "en-US"
-    headline: "Academy Research Fellow · Penning traps & MR-TOF · University of Jyväskylä"
-    bio: "Mass measurements of exotic nuclei with ion traps"
-  - code: zh
-    name: "中文"
-    locale: "zh-CN"
-    theme_keys: {congo: zh-hans, blowfish: zh-cn, papermod: zh}
-    headline: "芬兰科学院研究员 · 彭宁阱与多次反射飞行时间质谱 · 于韦斯屈莱大学"
-    bio: "利用离子阱精确测量奇特原子核质量"
-  - code: fi
-    name: "Suomi"
-    locale: "fi-FI"
-    headline: "Akatemiatutkija · Penning-loukut ja MR-TOF · Jyväskylän yliopisto"
-    bio: "Eksoottisten ytimien massamittaukset ioniloukuilla"
-  - code: de
-    name: "Deutsch"
-    locale: "de-DE"
-    headline: "Academy Research Fellow · Penning-Fallen & MR-TOF · Universität Jyväskylä"
-    bio: "Massenmessungen exotischer Kerne mit Ionenfallen"
-  - code: ja
-    name: "日本語"
-    locale: "ja-JP"
-    headline: "フィンランド・アカデミー研究員 · ペニングトラップと MR-TOF · ユヴァスキュラ大学"
-    bio: "イオントラップによるエキゾチック原子核の質量測定"
-
-# Main menu. `page` = file name in content/<lang>/ (posts = blog, daily = calendar).
-# `url` instead of `page` makes an external link (e.g. "/cv.pdf").
+- code: en
+  name: English
+  locale: en-US
+  headline: Academy Research Fellow · Penning traps & MR-TOF · University of Jyväskylä
+  bio: Mass measurements of exotic nuclei with ion traps
+- code: zh
+  name: 中文
+  locale: zh-CN
+  display_name: 葛壮（Ge Zhuang）
+  theme_keys:
+    congo: zh-hans
+    blowfish: zh-cn
+    papermod: zh
+  headline: 芬兰科学院研究员 · 彭宁阱与多次反射飞行时间质谱 · 于韦斯屈莱大学
+  bio: 利用离子阱精确测量奇特原子核质量
+- code: fi
+  name: Suomi
+  locale: fi-FI
+  headline: Akatemiatutkija · Penning-loukut ja MR-TOF · Jyväskylän yliopisto
+  bio: Eksoottisten ytimien massamittaukset ioniloukuilla
+- code: de
+  name: Deutsch
+  locale: de-DE
+  headline: Academy Research Fellow · Penning-Fallen & MR-TOF · Universität Jyväskylä
+  bio: Massenmessungen exotischer Kerne mit Ionenfallen
+- code: ja
+  name: 日本語
+  locale: ja-JP
+  headline: フィンランド・アカデミー研究員 · ペニングトラップと MR-TOF · ユヴァスキュラ大学
+  bio: イオントラップによるエキゾチック原子核の質量測定
 menu:
-  - {page: research,     label: {en: Research,     zh: 研究,   fi: Tutkimus,   de: Forschung,     ja: 研究}}
-  - {page: publications, label: {en: Publications, zh: 论文,   fi: Julkaisut,  de: Publikationen, ja: 論文}}
-  - {page: talks,        label: {en: Talks,        zh: 报告,   fi: Esitelmät,  de: Vorträge,      ja: 講演}}
-  - {page: daily,        label: {en: Daily,        zh: 每日,   fi: Päivittäin, de: Täglich,       ja: デイリー}}
-  - {page: lab,          label: {en: Lab,          zh: 实验室, fi: Labra,      de: Labor,         ja: ラボ}}
-  - {page: projects,     label: {en: Projects,     zh: 项目,   fi: Projektit,  de: Projekte,      ja: プロジェクト}}
-  - {page: group,        label: {en: Group,        zh: 团队,   fi: Ryhmä,      de: Gruppe,        ja: グループ}}
-  - {page: posts,        label: {en: Blog,         zh: 博客,   fi: Blogi,      de: Blog,          ja: ブログ}}
-  - {page: cv,           label: {en: CV,           zh: 简历,   fi: CV,         de: Lebenslauf,    ja: 経歴}}
-
-# Per-theme look. Any key here is copied into that theme's params.
+- page: research
+  label:
+    en: Research
+    zh: 研究
+    fi: Tutkimus
+    de: Forschung
+    ja: 研究
+- page: publications
+  label:
+    en: Publications
+    zh: 论文
+    fi: Julkaisut
+    de: Publikationen
+    ja: 論文
+- page: talks
+  label:
+    en: Talks
+    zh: 报告
+    fi: Esitelmät
+    de: Vorträge
+    ja: 講演
+- page: facilities
+  label:
+    en: Facilities
+    zh: 设施
+    fi: Laitokset
+    de: Anlagen
+    ja: 施設
+- page: daily
+  label:
+    en: Daily
+    zh: 每日
+    fi: Päivittäin
+    de: Täglich
+    ja: デイリー
+- page: lab
+  label:
+    en: Lab
+    zh: 实验室
+    fi: Labra
+    de: Labor
+    ja: ラボ
+- page: games
+  label:
+    en: Games
+    zh: 游戏
+    fi: Pelit
+    de: Spiele
+    ja: ゲーム
+- page: projects
+  label:
+    en: Projects
+    zh: 项目
+    fi: Projektit
+    de: Projekte
+    ja: プロジェクト
+- page: group
+  label:
+    en: Group
+    zh: 团队
+    fi: Ryhmä
+    de: Gruppe
+    ja: グループ
+- page: posts
+  label:
+    en: Blog
+    zh: 博客
+    fi: Blogi
+    de: Blog
+    ja: ブログ
+- page: cv
+  label:
+    en: CV
+    zh: 简历
+    fi: CV
+    de: Lebenslauf
+    ja: 経歴
 themes:
   congo:
-    colorScheme: "ocean"          # congo | avocado | cherry | fire | ocean | sapphire | slate
-    defaultAppearance: "light"
+    colorScheme: ocean
+    defaultAppearance: light
     autoSwitchAppearance: true
-    homepage_layout: "profile"    # profile | page
+    homepage_layout: profile
   blowfish:
-    colorScheme: "fire"           # ocean | forest | fire | neon | noir | autumn | princess | terminal | github | marvel | one-light | slate | …
-    defaultAppearance: "light"
+    colorScheme: fire
+    defaultAppearance: light
     autoSwitchAppearance: true
-    homepage_layout: "profile"    # profile | page | hero | card | background | landing
+    homepage_layout: profile
   papermod:
-    defaultTheme: "auto"          # auto | light | dark
-
-# Rainbow accent strip and gradient headings (assets/css/extended/zg-rainbow.css)
+    defaultTheme: auto
 rainbow: true

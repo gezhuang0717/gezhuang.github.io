@@ -3,5 +3,27 @@ public-*/
 resources/
 .hugo_build.lock
 shots/
-docs/
+
+# macOS metadata and reproducible task outputs
+._*
+.DS_Store
 __pycache__/
+*.py[cod]
+.maintenance/
+.env
+node_modules/
+
+# Local release evidence and private maintenance material
+manuals/
+audit/
+qa/
+logs/
+sources/
+runtime/
+cache/
+snapshots/
+builds/
+
+# Manuals stay on the local PSSD only (privacy)
+docs/
+public-gate-report.json

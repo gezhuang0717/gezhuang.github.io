@@ -2,125 +2,1091 @@
   "entries": [
     {
       "date": "2026-10-05",
-      "type": "paper",
+      "type": "preprint",
       "title": "The QICK Box: A Modular RF Front-End System for Quantum Control and Readout",
       "summary": "L. Arnaldi et al. — The QICK (Quantum Instrumentation Control Kit), first introduced in 2022, is a standalone open source control system for quantum information science. Since then, QICK has been migrated to new hardware platforms, expanded its functionality for applications…",
       "url": "https://arxiv.org/abs/2610.03609v1",
       "source": "arXiv — ion traps & mass spectrometry",
       "tags": [
         "trap"
-      ]
+      ],
+      "lang": "en",
+      "published": "2026-10-02",
+      "arxiv": "2610.03609v1",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
     },
     {
       "date": "2026-10-05",
       "type": "news",
-      "title": "Gallium Anomaly May Finally Be Explained",
-      "summary": "Author(s): Ryan Wilkinson A decades-old neutrino mystery might be solved not by undiscovered physics but by improved calculations. [Physics 19, s116] Published Thu Sep 24, 2026",
-      "url": "http://link.aps.org/doi/10.1103/Physics.19.s116",
+      "title": "Cells Put a Price Tag on Sensing Their World",
+      "summary": "Author(s): Tuan Minh Pham A new model shows how cells could optimize biochemical sensing by balancing information gained against energy spent. [Physics 19, 121] Published Mon Sep 14, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.121",
       "source": "APS Physics — news",
       "tags": [
         "nuclear"
-      ]
+      ],
+      "lang": "en",
+      "published": "2026-09-14",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
     },
     {
       "date": "2026-10-05",
       "type": "news",
-      "title": "A Type-I Superconductor Breaks Time-Reversal Symmetry",
-      "summary": "Author(s): Rachel Berkowitz A hallmark property of unconventional superconductivity has been discovered in a type-I superconductor, whereas it’s normally observed only in type-II materials. [Physics 19, s115] Published Wed Sep 23, 2026",
-      "url": "http://link.aps.org/doi/10.1103/Physics.19.s115",
+      "title": "Quantum States Cannot Hide Their Origin",
+      "summary": "Author(s): Klaus Richter Theorists find a persistent signature of a chaotic quantum system’s initial state, implying a memory effect—called a quantum birthmark—that resists thermodynamic equilibration. [Physics 19, 125] Published Thu Sep 10, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.125",
       "source": "APS Physics — news",
       "tags": [
         "nuclear"
-      ]
+      ],
+      "lang": "en",
+      "published": "2026-09-10",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
     },
     {
       "date": "2026-10-05",
       "type": "news",
-      "title": "How to Tell If Your Excitons Have Condensed",
-      "summary": "Author(s): David Ehrenstein A newly predicted effect should provide a clean way to distinguish between a Bose-Einstein condensate of quasiparticles called excitons and a more mundane collection of these particles. [Physics 19, s124] Published Tue Sep 22, 2026",
-      "url": "http://link.aps.org/doi/10.1103/Physics.19.s124",
+      "title": "Tuning Light Polarization with Quantum Geometry",
+      "summary": "Author(s): Michael Schirber A crystal with special geometric properties can be optically driven to produce an output beam with any desired polarization. [Physics 19, s113] Published Thu Sep 10, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s113",
       "source": "APS Physics — news",
       "tags": [
         "nuclear"
-      ]
+      ],
+      "lang": "en",
+      "published": "2026-09-10",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
     },
     {
       "date": "2026-10-05",
       "type": "news",
-      "title": "The Turbulent Life of a Vortex Line",
-      "summary": "Author(s): Andrew Baggaley A tabletop experiment using a classical water vortex supports a decades-old theory describing the decay of turbulence in quantum fluids. [Physics 19, 118] Published Mon Sep 21, 2026",
-      "url": "http://link.aps.org/doi/10.1103/Physics.19.118",
+      "title": "Nonreciprocity Sends Flocks into Chaos",
+      "summary": "Author(s): Sunghan Ro Two intermingled species of active matter can exhibit coherent rotation or disorderly scrambling depending on their mutual interactions. [Physics 19, 115] Published Tue Sep 08, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.115",
       "source": "APS Physics — news",
       "tags": [
         "nuclear"
-      ]
+      ],
+      "lang": "en",
+      "published": "2026-09-08",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
     },
     {
       "date": "2026-10-05",
       "type": "news",
-      "title": "Collimating Positrons with Superconducting Magnets",
-      "summary": "Author(s): Sam Jarman A recent experiment points the way toward making the intense, energetic beams of positrons needed for next-generation electron–positron colliders. [Physics 19, 127] Published Fri Sep 18, 2026",
-      "url": "http://link.aps.org/doi/10.1103/Physics.19.127",
+      "title": "Lab-Based Plasmas Shed Light on Stellar Mystery",
+      "summary": "Author(s): Susan Curtis Using high-power lasers to drive highly magnetized plasmas, researchers have probed the stellar processes that control coronal mass ejections. [Physics 19, 123] Published Fri Sep 04, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.123",
       "source": "APS Physics — news",
       "tags": [
         "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-04",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "3D light fields push electrons into quantum states previously beyond experimental reach",
+      "summary": "By superimposing two ultrashort laser pulses that converge from different directions, a team of physicists at the University of Oldenburg has succeeded in generating three-dimensional light fields.",
+      "url": "https://phys.org/news/2026-09-3d-fields-electrons-quantum-states.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Zinc oxide quantum dots enable faster charge detection, laying groundwork for spin qubits",
+      "summary": "Researchers at Tohoku University, in collaboration with the National Institute for Materials Science (NIMS) and the University of Tokyo, have taken an important step toward semiconductor quantum computing using zinc oxide (ZnO).",
+      "url": "https://phys.org/news/2026-09-zinc-oxide-quantum-dots-enable.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Physicists identify 'octupolar' magnetism, with implications for quantum technologies",
+      "summary": "Most magnets have two poles: north and south, or positive and negative, in a familiar arrangement called a \"dipole.\" But researchers are increasingly uncovering more complex forms of magnetism.",
+      "url": "https://phys.org/news/2026-09-physicists-octupolar-magnetism-implications-quantum.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Laser-made muons produce first images of dense objects",
+      "summary": "Muons are constantly being created as cosmic rays collide with molecules in Earth's upper atmosphere. With their ability to penetrate far into dense, solid materials, these cosmic muons are often used to image the insides of objects that are otherwise hidden from view. However,…",
+      "url": "https://phys.org/news/2026-09-laser-muons-images-dense.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "After 20 years, jet diffusion wakes detected in quark-gluon plasmas",
+      "summary": "Boats passing over smooth water form a pair of diffusion wakes behind them veering off at a certain angle. Turbulence occurs along the line directly behind the boat, but the two diffusion waves are at a theoretical angle of 19.5° from the same line, for deep, ideally smooth…",
+      "url": "https://phys.org/news/2026-09-years-jet-diffusion-quark-gluon.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-30",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Best Reaction Target to Determine Proton Distribution Radii of Atomic Nuclei",
+      "summary": "Author(s): Jun-Yao Xu (徐俊瑶) et al. We found that a heavy target such as Pb is most suitable for determining the proton distribution radii of unstable nuclei through charge-changing cross-section (${σ}_{\\mathrm{cc}}$) measurements. Experimentally, low-$Z$ targets are routinely…",
+      "url": "http://link.aps.org/doi/10.1103/l85h-wzy5",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-04",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Identification of $^{17}\\mathrm{Na}$ Ground State and Mirror Symmetry Violation with $^{17}\\mathrm{C}$",
+      "summary": "Author(s): L. Ni et al. The ground state of the three-proton emitter $^{17}\\mathrm{Na}$ has been identified. Energy correlations between the protons and the $^{14}\\mathrm{O}$ residue indicate that its decay is sequential initiated by the emission of a single proton to the…",
+      "url": "http://link.aps.org/doi/10.1103/3mqd-58tp",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-02",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Ab Initio Short-Range Nuclear Matrix Elements for Neutrinoless Double-Beta Decay",
+      "summary": "Author(s): A. Todd, T. Shickele, A. Belley, L. Jokiniemi, and J. D. Holt We present converged ab initio calculations of short-range neutrinoless double-beta ($0νββ$)-decay nuclear matrix elements for the key experimental isotopes $^{76}\\mathrm{Ge}$, $^{82}\\mathrm{Se}$,…",
+      "url": "http://link.aps.org/doi/10.1103/d2n7-n2c7",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-26",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Adiabatic Hydrodynamization and Quasinormal Modes of Nonthermal Attractors",
+      "summary": "Author(s): Matisse De Lescluze, Michal P. Heller, Aleksas Mazeliauskas, Bruno Scheihing-Hitschfeld, and Clemens Werthmann Nonthermal attractors govern the emergent self-similar dynamics of far-from-equilibrium quantum systems, from ultrarelativistic nuclear collisions to…",
+      "url": "http://link.aps.org/doi/10.1103/262r-xh1p",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-21",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "First $^{94}\\mathrm{Nb}(n,γ)$ Measurement: Constraining the Nucleosynthetic Origin of $^{94}\\mathrm{Mo}$ in Presolar Grains",
+      "summary": "Author(s): J. Balibrea-Correa et al. (n_TOF Collaboration) Isotopic measurements of presolar silicon carbide grains from dying stars have revealed a puzzling overabundance of $^{94}\\mathrm{Mo}$ that stellar nucleosynthesis models have failed to reproduce for two decades. This…",
+      "url": "http://link.aps.org/doi/10.1103/538w-rhqb",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-18",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "cern-ntof"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Evidence of Nuclear Geometry-Driven Anisotropic Flow in $\\mathrm{O}+\\mathrm{O}$ and $\\mathrm{Ne}+\\mathrm{Ne}$ Collisions at $\\sqrt{{s}_{\\mathrm{NN}}}=5.36\\text{ }\\text{ }\\mathrm{TeV}$",
+      "summary": "Author(s): I. J. Abualrob et al. (ALICE Collaboration) Light-ion collisions at the LHC reveal collective hydrodynamic flow with a larger elliptic flow in central Ne-Ne collisions than in OO collisions that might be due to the bowling-pin nuclear shape of 20 Ne. [Phys. Rev.…",
+      "url": "http://link.aps.org/doi/10.1103/gymp-vp87",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-17",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Observation of Long-Range Collective Flow in $\\mathrm{O}+\\mathrm{O}$ and $\\mathrm{Ne}+\\mathrm{Ne}$ Collisions and Implications for Nuclear Structure Studies",
+      "summary": "Author(s): A. Hayrapetyan et al. (CMS Collaboration) Light-ion collisions at the LHC reveal collective hydrodynamic flow with a larger elliptic flow in central Ne-Ne collisions than in OO collisions that might be due to the bowling-pin nuclear shape of 20 Ne. [Phys. Rev. Lett.…",
+      "url": "http://link.aps.org/doi/10.1103/26wx-tg6f",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-17",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Deformation and Magicity in Heavy Actinides: First Observation of the Ground-State Rotational Band of $^{252}\\mathrm{Fm}$",
+      "summary": "Author(s): R. Orlandi et al. Observation of the ground-state rotational band in 252 Fm provides compelling evidence that Z = 100 and N = 152 act as a deformed doubly magic shell closure. [Phys. Rev. Lett. 137, 082501] Published Mon Aug 17, 2026",
+      "url": "http://link.aps.org/doi/10.1103/7gzt-ldn5",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-17",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Role of nuclear shell effects of various nuclear physics ingredients in shaping $r$-process abundance patterns",
+      "summary": "Author(s): Y. W. Hao (郝艺伟), Y. F. Niu (牛一斐), and Z. M. Niu (牛中明) Nuclear shell effects play a crucial role in shaping the solar $r$-process abundance pattern, while the individual contributions of shell effects in various nuclear physics ingredients, including nuclear masses,…",
+      "url": "http://link.aps.org/doi/10.1103/zbfv-zx72",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-24",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "First strength measurements of low-energy resonances in the $^{45}\\mathrm{Sc}(p,γ)^{46}\\mathrm{Ti}$ reaction and its astrophysical implications",
+      "summary": "Author(s): R. S. Sidhu, R. J. deBoer, J. Görres, M. Wiescher, W. N. Catford, C. Dembski, C. R. Jones, Ó. E. López-López, G. Lotay, K. Manukyan, M. Matney, J. O'Neill, J. Rufino, A. T. Sanchez, M. Williams, and L. Zimmer The $^{45}\\mathrm{Sc}(p,γ)^{46}\\mathrm{Ti}$ reaction plays…",
+      "url": "http://link.aps.org/doi/10.1103/9f7j-m4xv",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-09-24",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "A new world leader: TRIUMF’s ultracold neutron source sets global benchmark",
+      "summary": "After more than a decade of development, the TRIUMF Ultracold Advanced Neutron (TUCAN) collaboration has achieved a result that positions TRIUMF as the world&#8217;s leading producer of ultracold neutrons (UCN)&#160;–&#160;a milestone that sets the stage for one of the most…",
+      "url": "https://triumf.ca/2026/07/07/tucan-ultracold-neutron-source-sets-global-benchmark/",
+      "source": "TRIUMF news",
+      "tags": [
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-07-07",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "triumf-isac"
       ]
     },
     {
       "date": "2026-10-05",
       "type": "news",
-      "title": "Giant fluctuations of focused light reveal hidden correlations in opaque materials",
-      "summary": "When light travels through a strongly scattering material, such as biological tissue or other disordered opaque media, it follows many different paths and produces a seemingly random speckle pattern. Wavefront shaping makes it possible to control this complex interference and…",
-      "url": "https://phys.org/news/2026-09-giant-fluctuations-focused-reveal-hidden.html",
-      "source": "Phys.org — nuclear physics",
+      "title": "TRIUMF welcomes President of the Swiss Confederation",
+      "summary": "On Friday, July 3, TRIUMF was pleased to welcome on-site the President of the Swiss Confederation His Excellency Guy Parmelin for a tour and series of discussions. Parmelin was joined by a delegation of academic and industry leaders from Switzerland and guests from UBC and…",
+      "url": "https://triumf.ca/2026/07/06/triumf-welcomes-president-of-the-swiss-confederation/",
+      "source": "TRIUMF news",
       "tags": [
-        "nuclear"
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-07-06",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "triumf-isac"
       ]
     },
     {
       "date": "2026-10-05",
       "type": "news",
-      "title": "Particle accelerator pioneers won a Nobel Prize 75 years ago",
-      "summary": "While scientists are known for their dedication to their research, crawling on the floor to avoid electrocution for the sake of a measurement seems a little excessive. But this is what British physicist John Cockcroft and Irish physicist Ernest T.S. Walton had to do in the…",
-      "url": "https://phys.org/news/2026-10-physicists-uncovered-particle-honored-nobel.html",
-      "source": "Phys.org — nuclear physics",
+      "title": "One Year into the Shelley Page Fellowship",
+      "summary": "The Shelley Page Fellowship, introduced in 2025, is designed to support and empower doctoral students who identify as women and are pursuing research careers in fields connected to TRIUMF’s scientific program, including physics, chemistry, engineering, and related disciplines.…",
+      "url": "https://triumf.ca/2026/06/26/one-year-into-the-shelley-page-fellowship/",
+      "source": "TRIUMF news",
       "tags": [
-        "nuclear"
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-06-26",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "triumf-isac"
       ]
     },
     {
       "date": "2026-10-05",
       "type": "news",
-      "title": "Protons ride moving waves to reach record energy with long-pulse lasers",
-      "summary": "Imagine a proton catching a wave and surfing it to gain speed. While the imagery may seem wild, the premise of laser-driven ion acceleration has promise as an alternative to conventional accelerators. However, the ultrathin targets used to drive this increase in ion energy are…",
-      "url": "https://phys.org/news/2026-10-protons-energy-pulse-lasers.html",
-      "source": "Phys.org — nuclear physics",
+      "title": "IPAC’26: GANIL hosted the global community of accelerator physicians",
+      "summary": "From May 17 to 22, 2026, GANIL hosted the 17th International Particle Accelerator Conference (IPAC’26) in partnership with CEA, CNRS, the EPS Accelerator Group, ESRF, and SOLEIL. Held at the Deauville International Centre in Normandy, the conference brought together more than…",
+      "url": "https://www.ganil-spiral2.eu/2026/06/15/ipac26-ganil-hosted-the-global-community-of-accelerator-physicians/",
+      "source": "GANIL news",
       "tags": [
-        "nuclear"
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-06-15",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "ganil-spiral2"
       ]
     },
     {
       "date": "2026-10-05",
       "type": "news",
-      "title": "A laser that stays locked without active control",
-      "summary": "EPFL researchers have developed a chip-based laser that keeps a very stable frequency across its tested operating range, without needing active electronic control. Their research is published in the journal Nature Photonics.",
-      "url": "https://phys.org/news/2026-10-laser-stays.html",
+      "title": "Decay spectroscopy of heavy and superheavy nuclei",
+      "summary": "The search for next shell closures beyond 208Pb, the location of the so-called ‘‘island of stability of superheavy nuclei’’ is still one of the most prominent challenges in nuclear physics. This paper summarizes the progress made for the heaviest nuclides from 𝑍 = 99…",
+      "url": "https://www.ganil-spiral2.eu/2026/06/12/decay-spectroscopy-of-heavy-and-superheavy-nuclei/",
+      "source": "GANIL news",
+      "tags": [
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-06-12",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "24e COLLOQUE GANIL",
+      "summary": "The next GANIL Colloque will be held in France, in Vosges Moutain. It is co-organized by CEA Saclay and GANIL. Registration at : https://indico.in2p3.fr/event/37719/ Sessions will start on Monday morning, September 21st and end at lunch on Friday, September, 25th. The purpose…",
+      "url": "https://www.ganil-spiral2.eu/2026/04/01/24e-colloque-ganil/",
+      "source": "GANIL news",
+      "tags": [
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-04-01",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "ganil-spiral2"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "event",
+      "title": "Today at ECT* the workshop ISNET-11: Information and Statistics in Nuclear Experiment and Theory",
+      "summary": "For more information, click HERE For a detailed timetable, click HERE The post Today at ECT* the workshop ISNET-11: Information and Statistics in Nuclear Experiment and Theory appeared first on FBK ECT* .",
+      "url": "https://www.ectstar.eu/2025/11/14/today-at-ect-the-workshop-isnet-11-information-and-statistics-in-nuclear-experiment-and-theory-2/",
+      "source": "ECT* news & workshops",
+      "tags": [
+        "workshop"
+      ],
+      "lang": "en",
+      "published": "2025-11-14",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "event",
+      "title": "Today at ECT* the workshop ISNET-11: Information and Statistics in Nuclear Experiment and Theory",
+      "summary": "The post Today at ECT* the workshop ISNET-11: Information and Statistics in Nuclear Experiment and Theory appeared first on FBK ECT* .",
+      "url": "https://www.ectstar.eu/2025/11/14/today-at-ect-the-workshop-isnet-11-information-and-statistics-in-nuclear-experiment-and-theory/",
+      "source": "ECT* news & workshops",
+      "tags": [
+        "workshop"
+      ],
+      "lang": "en",
+      "published": "2025-11-14",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "event",
+      "title": "Today@ECT the workshop ISNET-11: Information and Statistics in Nuclear Experiment and Theory",
+      "summary": "For more information, click HERE For a detailed timetable, click HERE The post Today@ECT the workshop ISNET-11: Information and Statistics in Nuclear Experiment and Theory appeared first on FBK ECT* .",
+      "url": "https://www.ectstar.eu/2025/11/14/todayect-the-workshop-isnet-11-information-and-statistics-in-nuclear-experiment-and-theory/",
+      "source": "ECT* news & workshops",
+      "tags": [
+        "workshop"
+      ],
+      "lang": "en",
+      "published": "2025-11-14",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "ITN Newsletter – June 2026",
+      "summary": "Foreword Dear Ion Trappers, As summer begins and the temperatures rise, we would like to thank you for the ongoing engagement from the iontrap community, who keep the conversation lively by sharing their latest news, events, jobs, publications, and editorials. Visit the…",
+      "url": "https://iontraps.net/itn-newsletter-june-2026/",
+      "source": "Ion Traps Newsletter (iontraps.net)",
+      "tags": [
+        "trap"
+      ],
+      "lang": "en",
+      "published": "2026-06-23",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "ITN Newsletter – May 2026",
+      "summary": "Foreword Dear Ion Trappers, We&#8217;re truly grateful for the ongoing engagement from the iontrap community, who keep the conversation lively by sharing their latest news, events, jobs, publications, and editorials. Visit the ITN-Website (https://iontraps.net/) where you can…",
+      "url": "https://iontraps.net/itn-newsletter-may-2026/",
+      "source": "Ion Traps Newsletter (iontraps.net)",
+      "tags": [
+        "trap"
+      ],
+      "lang": "en",
+      "published": "2026-06-23",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "job",
+      "title": "@NDB Hub Postdoctoral Research Fellow — UNC, Chapel Hill",
+      "summary": "North America · deadline 2026-12-06 · POSTDOC. In 2024, the National Science Foundation inaugurated a Focused Research Hub in Theoretical Physics, \"Advancing the Theory of Nuclear Double Beta-decay (@NDB)”. The @NDB Hub involves theoretical physicists and statisticians at the…",
+      "url": "https://inspirehep.net/jobs/3211335",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "deadline": "2026-12-06",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "job",
+      "title": "Postdoc in QCD Phenomenology/Hadron Structure — Cracow, INP",
+      "summary": "Europe · deadline 2026-11-16 · POSTDOC. The Department of the Theory of Strong Interactions and Many Body Systems of The Henryk Niewodniczański Institute of Nuclear Physics Polish Academy of Sciences invites applications for a postdoctoral research position in the fields of QCD…",
+      "url": "https://inspirehep.net/jobs/3211334",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "deadline": "2026-11-16",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "job",
+      "title": "Postdoctoral Research Position in Experimental Hadron Physics with CBM experiment — Cracow, INP",
+      "summary": "Europe · deadline 2026-11-16 · POSTDOC. The CBM (Compressed Baryonic Matter) group at INP PAS (Institute of Nuclear Physics Polish Academy of Sciences) in Kraków, Poland, invites applications for a postdoctoral researcher in experimental hadron physics. The successful candidate…",
+      "url": "https://inspirehep.net/jobs/3211328",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "deadline": "2026-11-16",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "job",
+      "title": "Multiple PhD Positions in Fundamental Physics and Quantum Dynamics (m/f/d) — Heidelberg, Max Planck Inst., U. Heidelberg (main)",
+      "summary": "Europe · deadline 2026-11-01 · PHD. The International Max Planck Research Schools for Quantum Dynamics (IMPRS-QD) and for Precision Tests of Fundamental Symmetries (IMPRS-PTFS) call for applications of highly qualified and ambitious students. Both IMPRS are a combined effort of…",
+      "url": "https://inspirehep.net/jobs/3211220",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "deadline": "2026-11-01",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "job",
+      "title": "Postdoctoral Positions with the AMS Group — Beijing, Inst. High Energy Phys.",
+      "summary": "Asia · deadline 2027-08-31 · POSTDOC/JUNIOR. The AMS group at the Institute of High Energy Physics (IHEP), Chinese Academy of Sciences , invites applications for postdoctoral positions in detector development and cosmic-ray physics . Join an international space-based experiment…",
+      "url": "https://inspirehep.net/jobs/3210876",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-04",
+      "deadline": "2027-08-31",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "job",
+      "title": "Holographic Principle, Quantum Information and Strongly Correlated Systems — GIST, Gwangju",
+      "summary": "Asia · deadline 2026-12-07 · POSTDOC. The Theoretical Physics Group at the Gwangju Institute of Science and Technology (GIST) in Gwangju, Korea, under the direction of Prof. Keun-Young Kim, invites applications for a postdoctoral fellow position with an anticipated start date…",
+      "url": "https://inspirehep.net/jobs/3210874",
+      "source": "INSPIRE-HEP Jobs — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-03",
+      "deadline": "2026-12-07",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "A Little Noise Helps a Soft Valve Close",
+      "summary": "Author(s): Matteo Pezzulla A simplified model of the heart’s mitral valve shows that flow fluctuations can cause a soft valve to close at about one-tenth the pressure required under steady flow. [Physics 19, 130] Published Mon Oct 05, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.130",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "A Quantum Filter for Improved Spintronics",
+      "summary": "Author(s): Ryan Wilkinson A precisely engineered material interface can host the spin currents needed for practical spin-based electronics. [Physics 19, s108] Published Thu Sep 03, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s108",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-03",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "To Lase or Not to Lase: The Question of Neutrino Superradiance",
+      "summary": "Author(s): Ana Maria Rey, James K. Thompson, and Haoqing Zhang Two studies find that fundamental quantum constraints rule out a previously proposed neutrino-laser scheme. [Physics 19, 120] Published Wed Sep 02, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.120",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-02",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "The Effect of Clouds on Wind Farms",
+      "summary": "Author(s): David Ehrenstein Simulations suggest that clouds can reduce the length of a wind farm’s slow-air wake, potentially increasing power production of neighboring wind farms. [Physics 19, s118] Published Wed Sep 02, 2026",
+      "url": "http://link.aps.org/doi/10.1103/Physics.19.s118",
+      "source": "APS Physics — news",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-09-02",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Atomic motion could help push solar cells beyond conventional limits",
+      "summary": "The bulk photovoltaic effect (BPVE), a photoelectric effect that generates photocurrent without a p–n junction, can persist even when a material's average crystal structure remains centrosymmetric, a study from Institute of Science Tokyo has found. Researchers demonstrated this…",
+      "url": "https://phys.org/news/2026-10-atomic-motion-solar-cells-conventional.html",
       "source": "Phys.org — nuclear physics",
       "tags": [
         "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Quantum systems never quite forget where they came from",
+      "summary": "Even the most chaotic quantum systems keep a permanent mark of their own past—a \"quantum birthmark\"—that never fades. Researchers from Tampere University, Harvard University and TU Dresden discovered the feature in their recent study. Their findings shed new light on the…",
+      "url": "https://phys.org/news/2026-10-quantum.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "A novel path to fusion ignition: Heat first, then add fuel",
+      "summary": "For more than 70 years, fusion energy researchers have used a particular equation to judge whether a plasma would stay hot and dense enough—for long enough—to reach a point where it could sustain itself without any more external power added. While that equation marks the finish…",
+      "url": "https://phys.org/news/2026-10-path-fusion-ignition-fuel.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Lightsaber-like plasma antenna uses laser-ionized air to transmit radio waves",
+      "summary": "Researchers have demonstrated a technique that uses a laser to produce a plasma beam antenna capable of transmitting radio waves. The article, \"Laser-Induced-Plasma-Filament Antenna Transmitting 30 MHz VHF,\" is published in the IEEE Journal of Microwaves.",
+      "url": "https://phys.org/news/2026-10-lightsaber-plasma-antenna-laser-ionized.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Scientists uncover recurrent patterns within chaotic quantum behavior",
+      "summary": "Many complex quantum systems rapidly lose the recognizable patterns of their initial states as their components interact. To describe patterns of regular and chaotic motion in specific systems, physicists can construct a mathematical map called an effective phase space.",
+      "url": "https://phys.org/news/2026-09-scientists-uncover-recurrent-patterns-chaotic.html",
+      "source": "Phys.org — nuclear physics",
+      "tags": [
+        "nuclear"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Dynamics of Density Fluctuations in Atomic Nuclei",
+      "summary": "Author(s): Francesca Bonaiti, Gaute Hagen, and Thomas Papenbrock We study the spatiotemporal patterns of density fluctuations in $^{16,24}\\mathrm{O}$ and $^{48}\\mathrm{Ca}$ using nuclear interactions from chiral effective field theory and the time-dependent coupled-cluster…",
+      "url": "http://link.aps.org/doi/10.1103/xdr8-4tp3",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-13",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Study of Nuclear Effects on Charm Production in Light-Ion Collisions",
+      "summary": "Author(s): R. Aaij et al. (LHCb Collaboration) The onset of nuclear effects in light-ion collisions is studied by measuring the ratio of ${D}^{0}$ meson production between NeNe and OO collisions at a center-of-mass energy per nucleon pair of 5.36 TeV recorded by the LHCb…",
+      "url": "http://link.aps.org/doi/10.1103/yr8h-pd77",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-11",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Radiative Corrections to Two-Neutrino Double-Beta Decay",
+      "summary": "Author(s): Jordy de Vries, Emanuele Mereghetti, Saad el Morabit, and Stefan Sandner We use heavy-nucleus effective field theory to compute radiative corrections to two-neutrino double-$β$ decay ($2νββ$). Our main result is the first derivation of a universal…",
+      "url": "http://link.aps.org/doi/10.1103/gbjc-wsdn",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-11",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Ab Initio Exact Calculation of Strongly Correlated Nucleonic Matter",
+      "summary": "Author(s): R. Z. Hu, S. L. Jin, X. Zhen, H. Y. Shang, J. C. Pei, F. R. Xu, and F. Marino Dense nucleonic matter is of vital importance for understanding compact stars and inferring the transition into deconfined quark phase. We present ab initio exact calculations of infinite…",
+      "url": "http://link.aps.org/doi/10.1103/q4p2-r1bt",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-07",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Exploring the Fluid Behavior in $\\mathrm{p}+\\mathrm{p}$ Collisions at $\\sqrt{s}=13\\text{ }\\text{ }\\mathrm{TeV}$ with Viscous Anisotropic Hydrodynamics",
+      "summary": "Author(s): Shujun Zhao, Yiyang Peng, Ulrich Heinz, and Huichao Song The applicability of hydrodynamics in small collision systems remains controversial due to the small size and short lifetime of the system. In this Letter, we employ viscous anisotropic hydrodynamics ( VAH ),…",
+      "url": "http://link.aps.org/doi/10.1103/yljq-xf9v",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-06",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Mass Measurements of Exotic $^{48−50}\\mathrm{Ar}$ Isotopes: Probing Proton-Neutron Interaction of the Doubly Magic $^{52}\\mathrm{Ca}$ and the Robustness of $N=32$ Subshell",
+      "summary": "Author(s): C. Y. Fu et al. High-precision multireflection time-of-flight mass spectrometry has been applied at BigRIPS-SLOWRI of the Radioactive Isotope Beam Factory (RIBF). The atomic mass of $^{50}\\mathrm{Ar}$ was measured for the first time, and the mass value of…",
+      "url": "http://link.aps.org/doi/10.1103/krq1-t8pr",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-06",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "riken-ribf"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Fusion Suppression in Super Heavy Element $^{263}Bh$ Formation via $^{54}\\mathrm{Cr}+^{209}\\mathrm{Bi}$",
+      "summary": "Author(s): Tathagata Banerjee, Emanuele Vardaci, Antonio Di Nitto, Pia A. Setaro, Giuseppe Alifano, Davide Panico, Simona Di Costanzo, Antonio Vanzanella, D. Kumar, W. H. Trzaska, C. Petrone, S. Calinescu, and C. Borcea The precise quantification of fusion suppression in…",
+      "url": "http://link.aps.org/doi/10.1103/dkm5-xt6d",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-08-04",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Dissecting Jet Modification in the Quark-Gluon Plasma with Multipoint Energy Correlators",
+      "summary": "Author(s): João Barata, Ian Moult, Andrey V. Sadofyev, and João M. Silva Energy correlators have recently attracted significant attention in the study of heavy ion collisions due to their potential to robustly connect experimental measurements with an underlying quantum field…",
+      "url": "http://link.aps.org/doi/10.1103/9jzc-7jcv",
+      "source": "Physical Review Letters — Nuclear Physics",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-07-31",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Proton emission half-lives and shape coexistence for $71≤Z≤83$ odd-$Z$ nuclei",
+      "summary": "Author(s): Yongbeom Choi, Chang-Hwan Lee, and Youngman Kim One-proton emission is a direct probe of nuclear structure near the proton drip line and plays a critical role in understanding exotic decay modes and nucleosynthesis processes. In this study, we investigate the…",
+      "url": "http://link.aps.org/doi/10.1103/3mzz-nycn",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Physics-informed interpretable forms for dipole resonances and quantities relevant for astrophysics",
+      "summary": "Author(s): Gourab Banerjee, Jhilam Sadhukhan, Debasish Mondal, B. K. Agrawal, Chandrani Sen, and S. Mukhopadhyay We have employed Bayesian inference to extract the centroid energies and widths from the isovector giant dipole resonance (IVGDR) data for the IVGDR built on the…",
+      "url": "http://link.aps.org/doi/10.1103/z1l5-g84y",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "paper",
+      "title": "Effect of density dependence of the symmetry energy and effective mass on the liquid-gas phase transition in hot asymmetric nuclear matter",
+      "summary": "Author(s): B. K. Sharma The impact of the density dependence of symmetry energy and effective mass on the properties of the liquid-gas phase transition in hot asymmetric nuclear matter is investigated in the relativistic mean field model using…",
+      "url": "http://link.aps.org/doi/10.1103/3tpn-344s",
+      "source": "Physical Review C",
+      "tags": [
+        "nuclear",
+        "journal"
+      ],
+      "lang": "en",
+      "published": "2026-10-05",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "International Women in Engineering Day 2026",
+      "summary": "International Women in Engineering Day (INWED) is celebrated every year on June 23. The goal of this day is to raise the profile of women in engineering and focus on the outstanding achievements they have attained. This is a global initiative that shines the spotlight on…",
+      "url": "https://triumf.ca/2026/06/22/international-women-in-engineering-day-2026/",
+      "source": "TRIUMF news",
+      "tags": [
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-06-22",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "ALPHA measures tiny energy gap in antimatter with improved precision",
+      "summary": "Researchers with the ALPHA experiment at CERN have achieved a hundredfold improvement in their measurement of a feature of the antimatter counterpart of the hydrogen atom. The result, published this week in Nature, allows a precise comparison of hydrogen and antihydrogen. “This…",
+      "url": "https://triumf.ca/2026/05/28/alpha-measures-tiny-energy-gap-in-antimatter-with-improved-precision/",
+      "source": "TRIUMF news",
+      "tags": [
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-05-28",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Liquid Helium: the unseen enabler of modern science",
+      "summary": "Liquid helium plays a surprisingly central role in modern physics because it lets us access&#160;extreme conditions—especially&#160;very low temperatures—that reveal behaviors you simply can’t see otherwise. Helium is unique because it stays liquid down to incredibly low…",
+      "url": "https://triumf.ca/2026/05/25/liquid-helium-the-unseen-enabler-of-modern-science/",
+      "source": "TRIUMF news",
+      "tags": [
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-05-26",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Vibrations as a Window into Nuclear Shape and Structure",
+      "summary": "Atomic nuclei can vibrate in surprisingly ordered ways. Even when they’re messy, vibrations&#160; played a central role in revealing nature’s fundamental laws, from the swing of a pendulum to the vibrations of atoms in a crystal, to gravitational waves. In this work, a…",
+      "url": "https://www.ganil-spiral2.eu/2026/03/30/vibrations-as-a-window-into-nuclear-shape-and-structure/",
+      "source": "GANIL news",
+      "tags": [
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-03-30",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "Global Physics Photowalk 2025: Two GANIL Photos Awarded",
+      "summary": "GANIL has won the first and second public prizes in the Global Physics Photowalk 2025, an international competition that celebrates physics research through the lens of amateur and professional photographers. The competition results were announced on February 12th during the…",
+      "url": "https://www.ganil-spiral2.eu/2026/02/12/global-physics-photowalk-2025-two-ganil-photos-awarded/",
+      "source": "GANIL news",
+      "tags": [
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2026-02-12",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected",
+      "facility_ids": [
+        "ganil-spiral2"
       ]
     },
     {
       "date": "2026-10-05",
       "type": "news",
-      "title": "New method generates nearly indistinguishable photons for quantum communication",
-      "summary": "Working in close collaboration, researchers from Paderborn University, the University of Basel and Ruhr University Bochum have made a breakthrough in quantum communication. In their recently published paper in the journal Physical Review Letters, they demonstrate how special…",
-      "url": "https://phys.org/news/2026-10-method-generates-indistinguishable-photons-quantum.html",
-      "source": "Phys.org — nuclear physics",
+      "title": "Exploring the behavior of nuclear matter through heavy-ion collisions",
+      "summary": "Nuclear matter is found at the microscopic scale in nuclei, but also on a much larger scale in certain astrophysical scenarios. Understanding the nuclear Equation of State is essential for describing the thermodynamic behavior of nuclear matter, which is in turn a necessary…",
+      "url": "https://www.ganil-spiral2.eu/2025/12/16/exploring-the-behavior-of-nuclear-matter-through-heavy-ion-collisions/",
+      "source": "GANIL news",
       "tags": [
-        "nuclear"
-      ]
+        "facility"
+      ],
+      "lang": "en",
+      "published": "2025-12-16",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "event",
+      "title": "This week at ECT* the workshop Pan-American Few-Body Physics Boot Camp: Fostering Collaboration",
+      "summary": "Fir mode info, click HERE The post This week at ECT* the workshop Pan-American Few-Body Physics Boot Camp: Fostering Collaboration appeared first on FBK ECT* .",
+      "url": "https://www.ectstar.eu/2025/10/10/this-week-at-ect-the-workshop-pan-american-few-body-physics-boot-camp-fostering-collaboration/",
+      "source": "ECT* news & workshops",
+      "tags": [
+        "workshop"
+      ],
+      "lang": "en",
+      "published": "2025-10-10",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "event",
+      "title": "This week at ECT* the workshop Next generation ab initio nuclear theory",
+      "summary": "For more information, click HERE For a detailed timetable, click HERE The post This week at ECT* the workshop Next generation ab initio nuclear theory appeared first on FBK ECT* .",
+      "url": "https://www.ectstar.eu/2025/07/10/this-week-at-ect-the-workshop-next-generation-ab-initio-nuclear-theory/",
+      "source": "ECT* news & workshops",
+      "tags": [
+        "workshop"
+      ],
+      "lang": "en",
+      "published": "2025-07-10",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "event",
+      "title": "This week at ECT* the workshop Universality in strongly-interacting systems: from QCD to atoms",
+      "summary": "For more information, click HERE For a detailed timetable, click HERE The post This week at ECT* the workshop Universality in strongly-interacting systems: from QCD to atoms appeared first on FBK ECT* .",
+      "url": "https://www.ectstar.eu/2025/06/06/this-week-at-ect-the-workshop-universality-in-strongly-interacting-systems-from-qcd-to-atoms/",
+      "source": "ECT* news & workshops",
+      "tags": [
+        "workshop"
+      ],
+      "lang": "en",
+      "published": "2025-06-06",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "ITN Newsletter – April 2026",
+      "summary": "Foreword Dear Ion Trappers, We&#8217;re truly grateful for the ongoing engagement from the iontrap community, who keep the conversation lively by sharing their latest news, events, jobs, publications, and editorials. Visit the ITN-Website (https://iontraps.net/) where you can…",
+      "url": "https://iontraps.net/itn-newsletter-april-2026/",
+      "source": "Ion Traps Newsletter (iontraps.net)",
+      "tags": [
+        "trap"
+      ],
+      "lang": "en",
+      "published": "2026-06-23",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "news",
+      "title": "ITN Newsletter – March 2026",
+      "summary": "Foreword Dear Ion Trappers, We&#8217;re truly grateful for the ongoing engagement from the iontrap community, who keep the conversation lively by sharing their latest news, events, jobs, publications, and editorials. Visit the ITN-Website (https://iontraps.net/) where you can…",
+      "url": "https://iontraps.net/itn-newsletter-march-2026/",
+      "source": "Ion Traps Newsletter (iontraps.net)",
+      "tags": [
+        "trap"
+      ],
+      "lang": "en",
+      "published": "2026-06-23",
+      "collected_at": "2026-10-05",
+      "verification_status": "feed-collected"
     }
   ],
-  "fetched": "2026-10-05T11:36:47Z"
+  "fetched": "2026-10-05T22:10:57+00:00"
 }

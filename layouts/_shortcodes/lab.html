@@ -17,13 +17,15 @@
     <canvas id="zg-sim-side" width="140" height="420" aria-label="side view, axial motion"></canvas>
   </div>
   <div class="zg-sim-controls">
-    <label>ν₊ / ν₋ <input type="range" id="zg-ratio" min="4" max="60" value="18"><output id="zg-ratio-o">18</output></label>
+    <label>ν₊ / ν₋ <input type="range" id="zg-ratio" min="2" max="200" value="18"><output id="zg-ratio-o">18</output></label>
     <label>r₊ <input type="range" id="zg-rp" min="0" max="100" value="25"><output id="zg-rp-o">25</output></label>
     <label>r₋ <input type="range" id="zg-rm" min="0" max="100" value="70"><output id="zg-rm-o">70</output></label>
-    <label>{{ i18n "zg_lab_speed" | default "Speed" }} <input type="range" id="zg-speed" min="1" max="20" value="6"><output id="zg-speed-o">6</output></label>
+    <label>{{ i18n "zg_lab_speed" | default "Speed" }} <input type="range" id="zg-speed" min="1" max="60" value="6"><output id="zg-speed-o">6</output></label>
   </div>
   <div class="zg-row">
     <button type="button" class="zg-btn" id="zg-convert">{{ i18n "zg_lab_convert" | default "Quadrupole excitation at ν_c (π pulse)" }}</button>
+    <button type="button" class="zg-btn zg-btn-ghost" id="zg-sim-png">⤓ PNG</button>
+    <button type="button" class="zg-btn zg-btn-ghost" id="zg-sim-video">⏺ Video</button>
     <button type="button" class="zg-btn zg-btn-ghost" id="zg-clear">{{ i18n "zg_lab_clear" | default "Clear trail" }}</button>
   </div>
   <p class="zg-muted zg-small">{{ i18n "zg_lab_convert_note" | default "The π pulse converts magnetron motion into cyclotron motion — the trick behind TOF-ICR, where the converted ions gain radial energy and arrive earlier at the detector." }}</p>
@@ -73,6 +75,7 @@
 </section>
 
 </div>
+<script src="{{ "js/zg-export.js" | relURL }}"></script>
 <script>
 (function () {
   var U_KEV = 931494.10242, U_KG = 1.66053906892e-27, ME_U = 5.485799090441e-4, E = 1.602176634e-19;
@@ -92,15 +95,22 @@
   var top = $("zg-sim-top"), side = $("zg-sim-side");
   if (top && top.getContext) {
     var gt = top.getContext("2d"), gs = side.getContext("2d"), trail = [], t = 0, pulse = null;
+    /* logical sizes stay 420×420 / 140×420; backing stores at K× for sharp lines (K = 6 for PNG, 3 for video) */
+    var TW = 420, TH = 420, SWL = 140, SHL = 420, K = Math.min(3, Math.max(2, window.devicePixelRatio || 1));
+    function setK(k) { K = k; top.width = TW * k; top.height = TH * k; side.width = SWL * k; side.height = SHL * k; }
+    setK(K);
     var ui = { ratio: $("zg-ratio"), rp: $("zg-rp"), rm: $("zg-rm"), speed: $("zg-speed") };
     Object.keys(ui).forEach(function (k) { ui[k].addEventListener("input", function () { $("zg-" + k + "-o").textContent = ui[k].value; }); });
     $("zg-clear").onclick = function () { trail = []; };
+    $("zg-sim-png").onclick = function () { if (!window.zgExport) return; var k0 = K; setK(6); draw(true); zgExport.png(top, "penning-trap-orbit"); setK(k0); };
+    $("zg-sim-video").onclick = function () { var b = this, k0 = K; if (!window.zgExport) return; setK(3); zgExport.record(top, 10, "penning-trap-orbit", function (r) { b.disabled = r; b.classList.toggle("is-rec", r); if (!r) setK(k0); }); };
     $("zg-convert").onclick = function () { pulse = { t0: t, rp0: +ui.rp.value, rm0: +ui.rm.value }; };
     var css = getComputedStyle(document.documentElement);
     function col(v, f) { return (css.getPropertyValue(v) || "").trim() || f; }
     var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function draw() {
-      var W = top.width, H = top.height, cx = W / 2, cy = H / 2, R = W * 0.45;
+    function draw(once) {
+      var W = TW, H = TH, cx = W / 2, cy = H / 2, R = W * 0.45;
+      gt.setTransform(K, 0, 0, K, 0, 0); gs.setTransform(K, 0, 0, K, 0, 0);
       var wm = 0.25, ratio = +ui.ratio.value, wp = wm * ratio, wz = Math.sqrt(2 * wm * wp);
       var dt = 0.004 * (+ui.speed.value);
       if (pulse) {
@@ -112,12 +122,12 @@
         if (f >= 1) pulse = null;
       }
       var rp = +ui.rp.value / 100 * 0.45, rm = +ui.rm.value / 100 * 0.55;
-      var steps = reduce ? 1 : 6;
+      var steps = reduce ? 1 : Math.max(6, Math.ceil(wp * dt * 6 / 0.25)); if (!reduce) dt = dt * 6 / steps;   /* keep fast ν₊ loops smooth */
       for (var k = 0; k < steps; k++) {
         t += dt;
         var x = cx + R * (rm * Math.cos(wm * t) + rp * Math.cos(wp * t));
         var y = cy - R * (rm * Math.sin(wm * t) + rp * Math.sin(wp * t));
-        trail.push([x, y]); if (trail.length > 1600) trail.shift();
+        trail.push([x, y]); if (trail.length > 6000) trail.shift();
       }
       var ink = col("--zg-ink", "#1d2433"), line = col("--zg-line", "#e3e7ef");
       gt.clearRect(0, 0, W, H);
@@ -131,14 +141,14 @@
       }
       var p = trail[trail.length - 1]; gt.fillStyle = "#e5484d"; gt.beginPath(); gt.arc(p[0], p[1], 5, 0, 6.283); gt.fill();
       /* side view: electrodes + axial oscillation */
-      var SW = side.width, SH = side.height, z = Math.cos(wz * t) * SH * 0.3;
+      var SW = SWL, SH = SHL, z = Math.cos(wz * t) * SH * 0.3;
       gs.clearRect(0, 0, SW, SH); gs.strokeStyle = ink; gs.lineWidth = 3;
       gs.beginPath(); gs.moveTo(15, 20); gs.quadraticCurveTo(SW / 2, 70, SW - 15, 20); gs.stroke();
       gs.beginPath(); gs.moveTo(15, SH - 20); gs.quadraticCurveTo(SW / 2, SH - 70, SW - 15, SH - 20); gs.stroke();
       gs.strokeStyle = line; gs.lineWidth = 1; gs.beginPath(); gs.moveTo(SW / 2, 30); gs.lineTo(SW / 2, SH - 30); gs.stroke();
       gs.fillStyle = "#e5484d"; gs.beginPath(); gs.arc(SW / 2 + (p[0] - cx) * 0.12, SH / 2 + z, 5, 0, 6.283); gs.fill();
       gs.fillStyle = col("--zg-muted", "#5c6577"); gs.font = "12px system-ui"; gs.fillText("z", SW / 2 + 6, 44);
-      requestAnimationFrame(draw);
+      if (once !== true) requestAnimationFrame(draw);
     }
     requestAnimationFrame(draw);
   }

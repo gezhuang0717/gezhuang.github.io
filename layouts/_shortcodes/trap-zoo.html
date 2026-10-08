@@ -1,0 +1,3 @@
+{{- /* {{< trap-zoo >}} heading + note + all traps; {{< trap-zoo heading="false" >}} only note + grid.
+       Content: layouts/_partials/zg/trap-zoo.html, texts data/trap_zoo.yaml, animation static/js/trap-zoo.js */ -}}
+{{- partial "zg/trap-zoo.html" (dict "heading" (ne (.Get "heading") "false")) -}}

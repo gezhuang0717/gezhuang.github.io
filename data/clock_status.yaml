@@ -1,0 +1,18 @@
+# Status line under the Jyväskylä clock: one list per situation; the line changes every day (day of year).
+work:
+  - {en: "Probably at the lab or in the office.", zh: "大概在实验室或办公室。", fi: "Luultavasti labrassa tai toimistolla.", de: "Wahrscheinlich im Labor oder im Büro.", ja: "たぶん実験室かオフィスにいます。"}
+  - {en: "Working hours in Finland — ions are being weighed.", zh: "芬兰工作时间——离子正在称重。", fi: "Työaikaa Suomessa — ioneja punnitaan.", de: "Arbeitszeit in Finnland — Ionen werden gewogen.", ja: "フィンランドは勤務時間——イオンを計量中。"}
+  - {en: "Daytime in Jyväskylä — coffee number three, probably.", zh: "于韦斯屈莱的白天——大概在喝第三杯咖啡。", fi: "Päivä Jyväskylässä — luultavasti kolmas kahvi.", de: "Tag in Jyväskylä — vermutlich Kaffee Nummer drei.", ja: "ユヴァスキュラは昼——たぶん三杯目のコーヒー。"}
+  - {en: "Office hours — the Penning trap is listening.", zh: "办公时间——彭宁阱正在聆听。", fi: "Toimistoaika — Penning-loukku kuuntelee.", de: "Bürozeit — die Penning-Falle hört zu.", ja: "業務時間——ペニングトラップが耳を澄ませています。"}
+evening:
+  - {en: "Evening in Finland — e-mail may wait until tomorrow.", zh: "芬兰的傍晚——邮件也许要等到明天。", fi: "Ilta Suomessa — sähköposti voi odottaa huomiseen.", de: "Abend in Finnland — E-Mails warten vielleicht bis morgen.", ja: "フィンランドは夕方——メールの返事は明日かもしれません。"}
+  - {en: "Evening in Jyväskylä — sauna time is a serious matter.", zh: "于韦斯屈莱的傍晚——桑拿时间可是正事。", fi: "Ilta Jyväskylässä — saunavuoro on vakava asia.", de: "Abend in Jyväskylä — Saunazeit ist ernst gemeint.", ja: "ユヴァスキュラの夕方——サウナの時間は大切です。"}
+  - {en: "Evening — the analysis code runs, the physicist rests.", zh: "傍晚——分析程序在跑，物理学家在休息。", fi: "Ilta — analyysikoodi pyörii, fyysikko lepää.", de: "Abend — der Analysecode läuft, der Physiker ruht.", ja: "夕方——解析コードは走り、物理学者は休みます。"}
+night:
+  - {en: "Night in Finland — ions keep orbiting, people sleep.", zh: "芬兰的夜晚——离子继续旋转，人们已入睡。", fi: "Yö Suomessa — ionit kiertävät, ihmiset nukkuvat.", de: "Nacht in Finnland — Ionen kreisen, Menschen schlafen.", ja: "フィンランドは夜——イオンは回り続け、人は眠ります。"}
+  - {en: "Night shift? Only during beamtime.", zh: "夜班？只有束流时间才有。", fi: "Yövuoro? Vain säteilyaikana.", de: "Nachtschicht? Nur während der Strahlzeit.", ja: "夜勤？ビームタイムのときだけ。"}
+  - {en: "Night in Jyväskylä — maybe northern lights tonight.", zh: "于韦斯屈莱的夜晚——今晚也许有北极光。", fi: "Yö Jyväskylässä — ehkä revontulia tänään.", de: "Nacht in Jyväskylä — vielleicht Nordlichter heute.", ja: "ユヴァスキュラの夜——今夜はオーロラが見えるかも。"}
+weekend:
+  - {en: "Weekend in Finland — maybe at the lake or in the sauna.", zh: "芬兰的周末——也许在湖边或桑拿房。", fi: "Viikonloppu — ehkä järvellä tai saunassa.", de: "Wochenende in Finnland — vielleicht am See oder in der Sauna.", ja: "フィンランドは週末——湖かサウナにいるかも。"}
+  - {en: "Weekend — berry picking under everyman's right.", zh: "周末——凭“每个人的权利”去森林采浆果。", fi: "Viikonloppu — marjassa jokamiehenoikeudella.", de: "Wochenende — Beeren sammeln nach Jedermannsrecht.", ja: "週末——自然享受権でベリー摘み。"}
+  - {en: "Weekend — the trap is cold, the coffee is warm.", zh: "周末——阱是冷的，咖啡是热的。", fi: "Viikonloppu — loukku on kylmä, kahvi lämmintä.", de: "Wochenende — die Falle ist kalt, der Kaffee warm.", ja: "週末——トラップは冷たく、コーヒーは温かい。"}

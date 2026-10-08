@@ -9,3 +9,7 @@ Kleine interaktive Werkzeuge aus meiner täglichen Arbeit mit Penning-Fallen und
 *Tipp:* Tippen Sie irgendwo auf dieser Seite **ion**.
 
 {{< lab >}}
+
+{{< lab-more >}}
+
+{{< nuclide-chart >}}
